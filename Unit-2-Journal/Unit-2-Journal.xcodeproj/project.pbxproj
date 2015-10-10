@@ -17,6 +17,10 @@
 		4DCBE1421BC9943D0075BA2C /* talking_heads.png in Resources */ = {isa = PBXBuildFile; fileRef = 4DCBE1391BC9943D0075BA2C /* talking_heads.png */; settings = {ASSET_TAGS = (); }; };
 		4DCBE1431BC9943D0075BA2C /* true_detective.png in Resources */ = {isa = PBXBuildFile; fileRef = 4DCBE13A1BC9943D0075BA2C /* true_detective.png */; settings = {ASSET_TAGS = (); }; };
 		4DCBE1441BC9943D0075BA2C /* x-files.png in Resources */ = {isa = PBXBuildFile; fileRef = 4DCBE13B1BC9943D0075BA2C /* x-files.png */; settings = {ASSET_TAGS = (); }; };
+		4DCBE1471BC9AD6A0075BA2C /* SearchAPIViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DCBE1461BC9AD6A0075BA2C /* SearchAPIViewController.m */; settings = {ASSET_TAGS = (); }; };
+		4DCBE14A1BC9ADAE0075BA2C /* CreateJournalEntryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DCBE1491BC9ADAE0075BA2C /* CreateJournalEntryViewController.m */; settings = {ASSET_TAGS = (); }; };
+		4DCBE14D1BC9ADE00075BA2C /* WishListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DCBE14C1BC9ADE00075BA2C /* WishListTableViewController.m */; settings = {ASSET_TAGS = (); }; };
+		4DCBE1501BC9BD800075BA2C /* ViewCompletedEntryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DCBE14F1BC9BD800075BA2C /* ViewCompletedEntryViewController.m */; settings = {ASSET_TAGS = (); }; };
 		5A50331A1BC8D0E4001CBA5C /* MainTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A5033191BC8D0E4001CBA5C /* MainTableViewController.m */; settings = {ASSET_TAGS = (); }; };
 		5A50331D1BC8D99D001CBA5C /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A50331C1BC8D99D001CBA5C /* LoginViewController.m */; settings = {ASSET_TAGS = (); }; };
 		5A5033201BC8D9B5001CBA5C /* SignUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A50331F1BC8D9B5001CBA5C /* SignUpViewController.m */; settings = {ASSET_TAGS = (); }; };
@@ -43,6 +47,14 @@
 		4DCBE1391BC9943D0075BA2C /* talking_heads.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = talking_heads.png; sourceTree = "<group>"; };
 		4DCBE13A1BC9943D0075BA2C /* true_detective.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = true_detective.png; sourceTree = "<group>"; };
 		4DCBE13B1BC9943D0075BA2C /* x-files.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "x-files.png"; sourceTree = "<group>"; };
+		4DCBE1451BC9AD6A0075BA2C /* SearchAPIViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchAPIViewController.h; sourceTree = "<group>"; };
+		4DCBE1461BC9AD6A0075BA2C /* SearchAPIViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchAPIViewController.m; sourceTree = "<group>"; };
+		4DCBE1481BC9ADAE0075BA2C /* CreateJournalEntryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CreateJournalEntryViewController.h; sourceTree = "<group>"; };
+		4DCBE1491BC9ADAE0075BA2C /* CreateJournalEntryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CreateJournalEntryViewController.m; sourceTree = "<group>"; };
+		4DCBE14B1BC9ADE00075BA2C /* WishListTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WishListTableViewController.h; sourceTree = "<group>"; };
+		4DCBE14C1BC9ADE00075BA2C /* WishListTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WishListTableViewController.m; sourceTree = "<group>"; };
+		4DCBE14E1BC9BD800075BA2C /* ViewCompletedEntryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewCompletedEntryViewController.h; sourceTree = "<group>"; };
+		4DCBE14F1BC9BD800075BA2C /* ViewCompletedEntryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewCompletedEntryViewController.m; sourceTree = "<group>"; };
 		5A5033181BC8D0E4001CBA5C /* MainTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainTableViewController.h; sourceTree = "<group>"; };
 		5A5033191BC8D0E4001CBA5C /* MainTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainTableViewController.m; sourceTree = "<group>"; };
 		5A50331B1BC8D99D001CBA5C /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
@@ -130,6 +142,14 @@
 				9A2FFC361BC84BF200E880D3 /* Main.storyboard */,
 				4DCBE1301BC98EF90075BA2C /* JournalMainCollectionViewController.h */,
 				4DCBE1311BC98EF90075BA2C /* JournalMainCollectionViewController.m */,
+				4DCBE1451BC9AD6A0075BA2C /* SearchAPIViewController.h */,
+				4DCBE1461BC9AD6A0075BA2C /* SearchAPIViewController.m */,
+				4DCBE1481BC9ADAE0075BA2C /* CreateJournalEntryViewController.h */,
+				4DCBE1491BC9ADAE0075BA2C /* CreateJournalEntryViewController.m */,
+				4DCBE14B1BC9ADE00075BA2C /* WishListTableViewController.h */,
+				4DCBE14C1BC9ADE00075BA2C /* WishListTableViewController.m */,
+				4DCBE14E1BC9BD800075BA2C /* ViewCompletedEntryViewController.h */,
+				4DCBE14F1BC9BD800075BA2C /* ViewCompletedEntryViewController.m */,
 				9A2FFC3C1BC84BF200E880D3 /* Assets.xcassets */,
 				9A2FFC3E1BC84BF200E880D3 /* LaunchScreen.storyboard */,
 				9A2FFC411BC84BF200E880D3 /* Info.plist */,
@@ -272,11 +292,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				9A2FFC321BC84BF200E880D3 /* AppDelegate.m in Sources */,
+				4DCBE14A1BC9ADAE0075BA2C /* CreateJournalEntryViewController.m in Sources */,
 				5A50331D1BC8D99D001CBA5C /* LoginViewController.m in Sources */,
 				4DCBE1321BC98EF90075BA2C /* JournalMainCollectionViewController.m in Sources */,
+				4DCBE1471BC9AD6A0075BA2C /* SearchAPIViewController.m in Sources */,
 				9A2FFC3B1BC84BF200E880D3 /* Unit_2_Journal.xcdatamodeld in Sources */,
+				4DCBE14D1BC9ADE00075BA2C /* WishListTableViewController.m in Sources */,
 				5A50331A1BC8D0E4001CBA5C /* MainTableViewController.m in Sources */,
 				5A5033201BC8D9B5001CBA5C /* SignUpViewController.m in Sources */,
+				4DCBE1501BC9BD800075BA2C /* ViewCompletedEntryViewController.m in Sources */,
 				9A2FFC2F1BC84BF200E880D3 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
