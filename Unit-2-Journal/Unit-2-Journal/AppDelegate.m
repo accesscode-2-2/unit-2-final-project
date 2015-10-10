@@ -9,6 +9,7 @@
 #import "AppDelegate.h"
 #import <FBSDKCoreKit/FBSDKCoreKit.h>
 #import <FBSDKLoginKit/FBSDKLoginButton.h>
+#import <Parse/Parse.h>
 
 @interface AppDelegate ()
 
@@ -16,11 +17,23 @@
 
 @implementation AppDelegate
 
+//- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
+//{
+//    [Parse setApplicationId:@"huGlqbY2KVINDuFfqju1fN0eB2QVANcqqHP0NVpY"
+//                  clientKey:@"aohlSqEhCwaXtZbji5us0j97GNzemWqq3m3EJqwG"];
+//    return YES;
+//}
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
-    return [[FBSDKApplicationDelegate sharedInstance] application:application
-                                    didFinishLaunchingWithOptions:launchOptions];;
+    [[FBSDKApplicationDelegate sharedInstance] application:application
+                             didFinishLaunchingWithOptions:launchOptions];;
+    
+    [Parse setApplicationId:@"huGlqbY2KVINDuFfqju1fN0eB2QVANcqqHP0NVpY"
+                  clientKey:@"aohlSqEhCwaXtZbji5us0j97GNzemWqq3m3EJqwG"];
+
+    
+    return YES;
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {
