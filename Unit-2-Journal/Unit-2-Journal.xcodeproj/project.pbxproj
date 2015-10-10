@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5A50331A1BC8D0E4001CBA5C /* MainTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A5033191BC8D0E4001CBA5C /* MainTableViewController.m */; settings = {ASSET_TAGS = (); }; };
+		5A50331D1BC8D99D001CBA5C /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A50331C1BC8D99D001CBA5C /* LoginViewController.m */; settings = {ASSET_TAGS = (); }; };
+		5A5033201BC8D9B5001CBA5C /* SignUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A50331F1BC8D9B5001CBA5C /* SignUpViewController.m */; settings = {ASSET_TAGS = (); }; };
 		617F8769EFBE79517A02E6D0 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FAF24AD380284C55768010A2 /* libPods.a */; };
 		9A2FFC2F1BC84BF200E880D3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A2FFC2E1BC84BF200E880D3 /* main.m */; };
 		9A2FFC321BC84BF200E880D3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A2FFC311BC84BF200E880D3 /* AppDelegate.m */; };
@@ -20,6 +23,12 @@
 /* Begin PBXFileReference section */
 		1F41A29CEEC52ED6A148CCE5 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		2BC0A6490F88476E5C31E3B1 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		5A5033181BC8D0E4001CBA5C /* MainTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainTableViewController.h; sourceTree = "<group>"; };
+		5A5033191BC8D0E4001CBA5C /* MainTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainTableViewController.m; sourceTree = "<group>"; };
+		5A50331B1BC8D99D001CBA5C /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		5A50331C1BC8D99D001CBA5C /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		5A50331E1BC8D9B5001CBA5C /* SignUpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignUpViewController.h; sourceTree = "<group>"; };
+		5A50331F1BC8D9B5001CBA5C /* SignUpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignUpViewController.m; sourceTree = "<group>"; };
 		9A2FFC2A1BC84BF200E880D3 /* Unit-2-Journal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Unit-2-Journal.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A2FFC2E1BC84BF200E880D3 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		9A2FFC301BC84BF200E880D3 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -63,6 +72,17 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		5AE224801BC8BB4D004AEB77 /* Login/SignUp */ = {
+			isa = PBXGroup;
+			children = (
+				5A50331B1BC8D99D001CBA5C /* LoginViewController.h */,
+				5A50331C1BC8D99D001CBA5C /* LoginViewController.m */,
+				5A50331E1BC8D9B5001CBA5C /* SignUpViewController.h */,
+				5A50331F1BC8D9B5001CBA5C /* SignUpViewController.m */,
+			);
+			name = Login/SignUp;
+			sourceTree = "<group>";
+		};
 		9A2FFC211BC84BF100E880D3 = {
 			isa = PBXGroup;
 			children = (
@@ -84,11 +104,14 @@
 		9A2FFC2C1BC84BF200E880D3 /* Unit-2-Journal */ = {
 			isa = PBXGroup;
 			children = (
+				5AE224801BC8BB4D004AEB77 /* Login/SignUp */,
 				9A2FFC301BC84BF200E880D3 /* AppDelegate.h */,
 				9A2FFC311BC84BF200E880D3 /* AppDelegate.m */,
 				9A2FFC331BC84BF200E880D3 /* ViewController.h */,
 				9A2FFC341BC84BF200E880D3 /* ViewController.m */,
 				9A2FFC361BC84BF200E880D3 /* Main.storyboard */,
+				5A5033181BC8D0E4001CBA5C /* MainTableViewController.h */,
+				5A5033191BC8D0E4001CBA5C /* MainTableViewController.m */,
 				9A2FFC3C1BC84BF200E880D3 /* Assets.xcassets */,
 				9A2FFC3E1BC84BF200E880D3 /* LaunchScreen.storyboard */,
 				9A2FFC411BC84BF200E880D3 /* Info.plist */,
@@ -214,7 +237,10 @@
 			files = (
 				9A2FFC351BC84BF200E880D3 /* ViewController.m in Sources */,
 				9A2FFC321BC84BF200E880D3 /* AppDelegate.m in Sources */,
+				5A50331D1BC8D99D001CBA5C /* LoginViewController.m in Sources */,
 				9A2FFC3B1BC84BF200E880D3 /* Unit_2_Journal.xcdatamodeld in Sources */,
+				5A50331A1BC8D0E4001CBA5C /* MainTableViewController.m in Sources */,
+				5A5033201BC8D9B5001CBA5C /* SignUpViewController.m in Sources */,
 				9A2FFC2F1BC84BF200E880D3 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
