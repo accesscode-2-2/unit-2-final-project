@@ -6,6 +6,8 @@
 //  Copyright © 2015 Jamaal Sedayao. All rights reserved.
 //
 
+// hey youuu guys!!! this is a test note.
+
 #import "ViewController.h"
 #import <FBSDKCoreKit/FBSDKCoreKit.h>
 #import <FBSDKLoginKit/FBSDKLoginKit.h>
