@@ -184,6 +184,9 @@
                                     <constraint firstAttribute="bottom" secondItem="qle-iq-7ST" secondAttribute="bottom" id="pHl-JF-p0c"/>
                                     <constraint firstAttribute="trailing" secondItem="qle-iq-7ST" secondAttribute="trailing" id="vRx-Mn-xec"/>
                                 </constraints>
+                                <connections>
+                                    <segue destination="0x4-Nu-mZ8" kind="show" id="psL-D4-ibn"/>
+                                </connections>
                             </collectionViewCell>
                         </cells>
                         <connections>
@@ -208,23 +211,44 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="uPz-Ba-WOI">
-                                <rect key="frame" x="0.0" y="175" width="600" height="250"/>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vKE-8h-Ban">
+                                <rect key="frame" x="49" y="36" width="60" height="63"/>
+                                <color key="backgroundColor" red="0.82745098039999998" green="0.82745098039999998" blue="0.82745098039999998" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="250" id="Dv1-Jq-UTf"/>
+                                    <constraint firstAttribute="width" constant="50" id="Ta5-89-V0g"/>
+                                    <constraint firstAttribute="height" constant="50" id="XbY-ap-ZtB"/>
                                 </constraints>
-                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
+                                <state key="normal" title="Button"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gl8-t7-8fe">
+                                <rect key="frame" x="176" y="36" width="60" height="63"/>
+                                <color key="backgroundColor" red="0.82745098039999998" green="0.82745098039999998" blue="0.82745098039999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="LRZ-4k-zPJ"/>
+                                    <constraint firstAttribute="width" constant="50" id="dlR-SX-Jcx"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n1i-47-l5w">
+                                <rect key="frame" x="368" y="36" width="60" height="63"/>
+                                <color key="backgroundColor" red="0.82745098039999998" green="0.82745098039999998" blue="0.82745098039999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="0Bz-es-dLs"/>
+                                    <constraint firstAttribute="width" constant="50" id="3Lb-Yz-FrN"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="flq-xd-AXF">
+                                <rect key="frame" x="476" y="36" width="60" height="63"/>
+                                <color key="backgroundColor" red="0.82745098039999998" green="0.82745098039999998" blue="0.82745098039999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="3A2-b3-c5k"/>
+                                    <constraint firstAttribute="width" constant="50" id="axB-X3-FYS"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstAttribute="trailingMargin" secondItem="uPz-Ba-WOI" secondAttribute="trailing" constant="-20" id="GJS-pf-uCT"/>
-                            <constraint firstItem="uPz-Ba-WOI" firstAttribute="leading" secondItem="pfn-eQ-aux" secondAttribute="leadingMargin" constant="-20" id="PRv-Ga-Ld2"/>
-                            <constraint firstItem="uPz-Ba-WOI" firstAttribute="centerX" secondItem="pfn-eQ-aux" secondAttribute="centerX" id="ZPn-hI-c43"/>
-                            <constraint firstItem="uPz-Ba-WOI" firstAttribute="centerY" secondItem="pfn-eQ-aux" secondAttribute="centerY" id="jm9-iJ-17n"/>
-                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jtX-Jk-aNy" userLabel="First Responder" sceneMemberID="firstResponder"/>
