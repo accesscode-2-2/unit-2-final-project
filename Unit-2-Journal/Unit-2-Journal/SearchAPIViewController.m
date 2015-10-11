@@ -10,6 +10,7 @@
 #import <AFNetworking/AFNetworking.h>
 #import "APIManager.h"
 #import "iTunesSearchResult.h"
+#import "CreateJournalEntryViewController.h"
 
 @interface SearchAPIViewController ()
 <
@@ -26,6 +27,7 @@ UITextFieldDelegate
 @property (weak, nonatomic) IBOutlet UIButton *otherButton;
 @property (nonatomic) NSString *media;
 @property (nonatomic) NSMutableArray *searchResults;
+@property (nonatomic) iTunesSearchResult *passSearchResult;
 
 @end
 
@@ -39,8 +41,6 @@ UITextFieldDelegate
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
     self.searchTextField.delegate = self;
-    
-//    iTunesSearchResult *searchResults = [[iTunesSearchResult alloc]init];
     
     
 }
@@ -178,15 +178,26 @@ UITextFieldDelegate
     return cell;
 }
 
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+   
+    iTunesSearchResult *searchResult = self.searchResults[indexPath.row];
+    
+    self.passSearchResult = searchResult;
 
-/*
+    NSLog(@"%@", self.passSearchResult);
+    
+}
+
+
+
  #pragma mark - Navigation
- 
- // In a storyboard-based application, you will often want to do a little preparation before navigation
+
  - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
- // Get the new view controller using [segue destinationViewController].
- // Pass the selected object to the new view controller.
+
+     CreateJournalEntryViewController *viewController = segue.destinationViewController;
+     viewController.postSearchResult = self.passSearchResult;
+     
  }
- */
+ 
 
 @end
