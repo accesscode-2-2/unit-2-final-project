@@ -379,7 +379,6 @@
                         <outlet property="otherButton" destination="kEa-FP-z2a" id="zZJ-KO-l1f"/>
                         <outlet property="searchTextField" destination="zob-sY-qha" id="CSN-S0-Rzp"/>
                         <outlet property="tableView" destination="twc-ko-3Rx" id="4Cw-TH-Ai6"/>
-                        <segue destination="Gih-78-N3X" kind="show" identifier="pushToJournalFromSearch" id="HwW-rI-Qas"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jtX-Jk-aNy" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -610,9 +609,6 @@
                             <outlet property="delegate" destination="WZe-UX-wgc" id="KJE-Pm-bbr"/>
                         </connections>
                     </tableView>
-                    <connections>
-                        <segue destination="Gih-78-N3X" kind="show" identifier="pushtoJournalFromWish" id="Rtf-dd-JWq"/>
-                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vQP-Qq-o7U" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -745,28 +741,6 @@
                                     <constraint firstItem="riX-qw-M2j" firstAttribute="top" secondItem="bI1-9Y-Lhn" secondAttribute="top" constant="5" id="LNA-Mw-l4a"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="x4f-Ym-z1V">
-                                <rect key="frame" x="20" y="485" width="560" height="115"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1br-zx-rKo">
-                                        <rect key="frame" x="258" y="42" width="45" height="30"/>
-                                        <animations/>
-                                        <state key="normal" title="Delete"/>
-                                    </button>
-                                </subviews>
-                                <animations/>
-                                <color key="backgroundColor" red="0.99607843139999996" green="0.79215686269999996" blue="0.086274509799999996" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="100" id="4cP-Gz-KpJ"/>
-                                    <constraint firstItem="1br-zx-rKo" firstAttribute="centerY" secondItem="x4f-Ym-z1V" secondAttribute="centerY" id="PpI-nI-XT1"/>
-                                    <constraint firstItem="1br-zx-rKo" firstAttribute="centerX" secondItem="x4f-Ym-z1V" secondAttribute="centerX" id="kQc-qO-IbZ"/>
-                                </constraints>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="4cP-Gz-KpJ"/>
-                                    </mask>
-                                </variation>
-                            </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ly8-tU-R6b">
                                 <rect key="frame" x="20" y="410" width="560" height="75"/>
                                 <subviews>
@@ -806,6 +780,31 @@
                                     <constraint firstItem="JU3-mC-wxo" firstAttribute="leading" secondItem="M7h-zf-QrN" secondAttribute="trailing" constant="50" id="xSf-tn-Ha9"/>
                                 </constraints>
                             </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="x4f-Ym-z1V">
+                                <rect key="frame" x="20" y="485" width="560" height="115"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1br-zx-rKo">
+                                        <rect key="frame" x="258" y="42" width="45" height="30"/>
+                                        <animations/>
+                                        <state key="normal" title="Delete"/>
+                                        <connections>
+                                            <action selector="deleteButtonTapped:" destination="z1K-z0-Vef" eventType="touchUpInside" id="umA-zo-2bu"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <animations/>
+                                <color key="backgroundColor" red="0.99607843139999996" green="0.79215686269999996" blue="0.086274509799999996" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="4cP-Gz-KpJ"/>
+                                    <constraint firstItem="1br-zx-rKo" firstAttribute="centerY" secondItem="x4f-Ym-z1V" secondAttribute="centerY" id="PpI-nI-XT1"/>
+                                    <constraint firstItem="1br-zx-rKo" firstAttribute="centerX" secondItem="x4f-Ym-z1V" secondAttribute="centerX" id="kQc-qO-IbZ"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="4cP-Gz-KpJ"/>
+                                    </mask>
+                                </variation>
+                            </view>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -836,8 +835,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="HwW-rI-Qas"/>
-        <segue reference="a4i-zx-cvK"/>
         <segue reference="S6k-uR-hRq"/>
+        <segue reference="a4i-zx-cvK"/>
     </inferredMetricsTieBreakers>
 </document>

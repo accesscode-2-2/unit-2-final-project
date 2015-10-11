@@ -35,7 +35,8 @@
         
         CGPoint point = [swipe locationInView:self.tableView];
          NSIndexPath *indexPath = [self.tableView indexPathForRowAtPoint:point];
-        [self performSegueWithIdentifier:@"pushtoJournalFromWish" sender:self];
+        [self dismissViewControllerAnimated:YES completion:nil];
+        //[self performSegueWithIdentifier:@"pushtoJournalFromWish" sender:self];
     }
 }
 

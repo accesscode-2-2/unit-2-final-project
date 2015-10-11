@@ -51,7 +51,8 @@ UITextFieldDelegate
 - (void)userSwipedRight:(UISwipeGestureRecognizer*)swipe
 {
     if (swipe.direction == UISwipeGestureRecognizerDirectionRight) {
-        [self performSegueWithIdentifier:@"pushToJournalFromSearch" sender:self];
+         [self dismissViewControllerAnimated:YES completion:nil];
+       // [self performSegueWithIdentifier:@"pushToJournalFromSearch" sender:self];
     }
 }
 
@@ -133,7 +134,6 @@ UITextFieldDelegate
                                   callbackBlock:^{
                                       [self.tableView reloadData];
                                   }];
-    
     return YES;
 }
 
@@ -145,8 +145,6 @@ UITextFieldDelegate
 }
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"APIResultsIdentifier" forIndexPath:indexPath];
-    
-    
     return cell;
 }
 
