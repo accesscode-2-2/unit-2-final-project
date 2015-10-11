@@ -137,7 +137,7 @@
                         </collectionViewFlowLayout>
                         <cells>
                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Cell" id="KiH-sl-ksa">
-                                <rect key="frame" x="5" y="84" width="80" height="80"/>
+                                <rect key="frame" x="5" y="20" width="80" height="80"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                     <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
@@ -184,13 +184,13 @@
                     </collectionView>
                     <navigationItem key="navigationItem" id="Z1X-J6-1kq"/>
                     <connections>
-                        <segue destination="y19-uS-lMB" kind="show" identifier="pushToWishList" id="7YG-CM-bN7"/>
-                        <segue destination="owV-FY-Vnj" kind="show" identifier="pushToSearch" id="qAI-cx-Qg9"/>
+                        <segue destination="0x4-Nu-mZ8" kind="show" identifier="pushToSearch" id="e8t-DM-qor"/>
+                        <segue destination="WZe-UX-wgc" kind="show" identifier="pushToWishList" id="nBf-zY-MUB"/>
                     </connections>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="blD-s8-5JB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1835" y="1668"/>
+            <point key="canvasLocation" x="1899" y="1678"/>
         </scene>
         <!--Search -->
         <scene sceneID="eAD-0s-cgb">
@@ -294,7 +294,7 @@
                                 <state key="normal" title="Create Journal Entry"/>
                                 <connections>
                                     <action selector="createJournalEntryButtonTapped:" destination="0x4-Nu-mZ8" eventType="touchUpInside" id="tTN-M9-kCZ"/>
-                                    <segue destination="aXS-um-aw2" kind="show" id="a4i-zx-cvK"/>
+                                    <segue destination="aXS-um-aw2" kind="show" identifier="pushToCreateJournalEntry" id="a4i-zx-cvK"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i6F-Oe-4xR">
@@ -307,7 +307,6 @@
                                 <state key="normal" title="Add to Wish List"/>
                                 <connections>
                                     <action selector="addToWishListButtonTapped:" destination="0x4-Nu-mZ8" eventType="touchUpInside" id="pGb-oC-cak"/>
-                                    <segue destination="y19-uS-lMB" kind="show" id="S6k-uR-hRq"/>
                                 </connections>
                             </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="twc-ko-3Rx">
@@ -397,11 +396,12 @@
                         <outlet property="otherButton" destination="kEa-FP-z2a" id="zZJ-KO-l1f"/>
                         <outlet property="searchTextField" destination="zob-sY-qha" id="CSN-S0-Rzp"/>
                         <outlet property="tableView" destination="twc-ko-3Rx" id="4Cw-TH-Ai6"/>
+                        <segue destination="Gih-78-N3X" kind="show" identifier="pushBackHome" id="898-jd-zRS"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jtX-Jk-aNy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4421" y="1696"/>
+            <point key="canvasLocation" x="2643" y="1678"/>
         </scene>
         <!--Create Journal Entry View Controller-->
         <scene sceneID="3xO-3p-x8L">
@@ -415,7 +415,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3Hz-RL-Ugz">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3Hz-RL-Ugz">
                                 <rect key="frame" x="20" y="20" width="560" height="140"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="s1u-o4-hER">
@@ -466,10 +466,10 @@
                                     <constraint firstItem="s1u-o4-hER" firstAttribute="leading" secondItem="3Hz-RL-Ugz" secondAttribute="leading" id="zY8-tn-NjM"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bcK-tE-Fho">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bcK-tE-Fho">
                                 <rect key="frame" x="20" y="160" width="560" height="250"/>
                                 <subviews>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" text="write your jounal entry here" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="vhl-Bh-MN5">
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="write your jounal entry here" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="vhl-Bh-MN5">
                                         <rect key="frame" x="5" y="5" width="550" height="240"/>
                                         <animations/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -582,7 +582,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TK9-37-5bs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1517" y="2736"/>
+            <point key="canvasLocation" x="925" y="2568"/>
         </scene>
         <!--Wish List-->
         <scene sceneID="WUv-ax-PAc">
@@ -595,7 +595,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="WishListIdentifier" rowHeight="64" id="Ej0-R4-rXa">
-                                <rect key="frame" x="0.0" y="92" width="600" height="64"/>
+                                <rect key="frame" x="0.0" y="28" width="600" height="64"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Ej0-R4-rXa" id="ezU-vk-VRT">
                                     <rect key="frame" x="0.0" y="0.0" width="567" height="63.5"/>
@@ -634,10 +634,13 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="wvx-LN-Wn1"/>
+                    <connections>
+                        <segue destination="Gih-78-N3X" kind="show" identifier="pushToHomeList" id="4YM-8W-IJo"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vQP-Qq-o7U" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-151" y="668"/>
+            <point key="canvasLocation" x="9" y="1588"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="Sp1-uX-mf4">
@@ -695,7 +698,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2sS-fd-D0X">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2sS-fd-D0X">
                                 <rect key="frame" x="20" y="20" width="560" height="140"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="P8h-8Q-AZm">
@@ -746,10 +749,10 @@
                                     <constraint firstAttribute="trailing" secondItem="uPb-Kv-PyA" secondAttribute="trailing" id="yeu-We-Dj2"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bI1-9Y-Lhn">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bI1-9Y-Lhn">
                                 <rect key="frame" x="20" y="160" width="560" height="250"/>
                                 <subviews>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="riX-qw-M2j">
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="riX-qw-M2j">
                                         <rect key="frame" x="5" y="5" width="550" height="240"/>
                                         <animations/>
                                         <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
@@ -862,12 +865,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gKL-Ix-enk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="375" y="2806"/>
+            <point key="canvasLocation" x="1841" y="2536"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="IPQ-wM-Z7c">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="rWE-oc-Un1" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="rWE-oc-Un1" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="B2x-Uu-nc9">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -880,47 +883,11 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bGC-Ig-YI6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1071" y="1668"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="dHl-po-e6M">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="owV-FY-Vnj" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="YLN-TD-ODV">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="0x4-Nu-mZ8" kind="relationship" relationship="rootViewController" id="VGq-lD-Cbs"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="iI4-We-BJh" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="3609" y="1696"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="QiZ-Qk-SDo">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="y19-uS-lMB" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="0ke-4S-SdO">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="WZe-UX-wgc" kind="relationship" relationship="rootViewController" id="mIA-J2-rad"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="xA2-BW-f7F" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-923" y="668"/>
+            <point key="canvasLocation" x="931" y="1664"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
+        <segue reference="898-jd-zRS"/>
         <segue reference="a4i-zx-cvK"/>
-        <segue reference="S6k-uR-hRq"/>
     </inferredMetricsTieBreakers>
 </document>

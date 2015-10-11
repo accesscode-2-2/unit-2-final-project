@@ -57,7 +57,10 @@ UITextFieldDelegate
 - (void)userSwipedRight:(UISwipeGestureRecognizer*)swipe
 {
     if (swipe.direction == UISwipeGestureRecognizerDirectionRight) {
-         [self dismissViewControllerAnimated:YES completion:nil];
+        
+        [self performSegueWithIdentifier:@"pushBackHome" sender:self];
+
+        // [self dismissViewControllerAnimated:YES completion:nil];
     }
 }
 
@@ -186,6 +189,8 @@ UITextFieldDelegate
 
     NSLog(@"%@", self.passSearchResult);
     
+    // push view controller
+    
 }
 
 
@@ -193,11 +198,15 @@ UITextFieldDelegate
  #pragma mark - Navigation
 
  - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    
+     if ([[segue identifier]isEqualToString:@"pushToCreateJournalEntry"]) {
+     
+         NSLog(@"segue");
 
      CreateJournalEntryViewController *viewController = segue.destinationViewController;
      viewController.postSearchResult = self.passSearchResult;
+     }
      
  }
- 
 
 @end
