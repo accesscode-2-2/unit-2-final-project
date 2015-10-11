@@ -14,19 +14,29 @@
 
 @implementation WishListTableViewController
 
-- (void)viewDidLoad {
+- (void)viewDidLoad
+{
     [super viewDidLoad];
-    
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
-    
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    [self setUpSwipeGestures];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+#pragma  mark - swipe gestures
+
+- (void)setUpSwipeGestures
+{
+    UISwipeGestureRecognizer *swipeLeft = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(userSwipedLeft:)];
+    swipeLeft.direction = UISwipeGestureRecognizerDirectionLeft;
+    [self.view addGestureRecognizer:swipeLeft];
+}
+
+- (void)userSwipedLeft:(UISwipeGestureRecognizer*)swipe
+{
+    if (swipe.direction == UISwipeGestureRecognizerDirectionLeft) {
+        
+        CGPoint point = [swipe locationInView:self.tableView];
+         NSIndexPath *indexPath = [self.tableView indexPathForRowAtPoint:point];
+        [self performSegueWithIdentifier:@"pushtoJournalFromWish" sender:self];
+    }
 }
 
 #pragma mark - Table view data source
