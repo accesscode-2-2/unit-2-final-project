@@ -197,14 +197,16 @@ UITextFieldDelegate
 
  #pragma mark - Navigation
 
-// - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-//     
-//     NSLog(@"segue");
-//
-////     CreateJournalEntryViewController *viewController = segue.destinationViewController;
-////     viewController.postSearchResult = self.passSearchResult;
-//     
-// }
+ - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    
+     if ([[segue identifier]isEqualToString:@"pushToCreateJournalEntry"]) {
+     
+         NSLog(@"segue");
 
+     CreateJournalEntryViewController *viewController = segue.destinationViewController;
+     viewController.postSearchResult = self.passSearchResult;
+     }
+     
+ }
 
 @end

@@ -294,7 +294,7 @@
                                 <state key="normal" title="Create Journal Entry"/>
                                 <connections>
                                     <action selector="createJournalEntryButtonTapped:" destination="0x4-Nu-mZ8" eventType="touchUpInside" id="tTN-M9-kCZ"/>
-                                    <segue destination="aXS-um-aw2" kind="show" id="a4i-zx-cvK"/>
+                                    <segue destination="aXS-um-aw2" kind="show" identifier="pushToCreateJournalEntry" id="a4i-zx-cvK"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i6F-Oe-4xR">
