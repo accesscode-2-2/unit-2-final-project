@@ -32,38 +32,21 @@ UITextFieldDelegate
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-<<<<<<< HEAD
+    [self setUpSwipeGestures];
+
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
     self.searchTextField.delegate = self;
- 
-    
-}
-
-
-=======
-    [self setUpSwipeGestures];
 }
 
 #pragma mark - setup swipe gestures
 
 - (void)setUpSwipeGestures
 {
-//    UISwipeGestureRecognizer *swipeLeft = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(userSwipedLeft:)];
-//    swipeLeft.direction = UISwipeGestureRecognizerDirectionLeft;
-//    [self.view addGestureRecognizer:swipeLeft];
-    
     UISwipeGestureRecognizer *swipeRight = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(userSwipedRight:)];
     swipeRight.direction = UISwipeGestureRecognizerDirectionRight;
     [self.view addGestureRecognizer:swipeRight];
 }
-
-//- (void)userSwipedLeft:(UISwipeGestureRecognizer*)swipe
-//{
-//    if (swipe.direction == UISwipeGestureRecognizerDirectionLeft) {
-//        [self performSegueWithIdentifier:@"pushToSearch" sender:self];
-//    }
-//}
 
 - (void)userSwipedRight:(UISwipeGestureRecognizer*)swipe
 {
@@ -74,11 +57,11 @@ UITextFieldDelegate
 
 #pragma mark - setup buttons
 
->>>>>>> 608dd30812a12ffaa73e4770234359b9b1564ece
 - (IBAction)mediaButtonTypeSelected:(id)sender {
     self.media = [sender currentTitle];
      NSLog(@"Media: %@",self.media);
 }
+
 - (IBAction)mediaButtonOther:(id)sender {
 }
 
