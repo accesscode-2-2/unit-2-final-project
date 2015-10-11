@@ -7,6 +7,11 @@
 //
 
 #import "AppDelegate.h"
+#import <Parse/Parse.h>
+#import "BBUser.h"
+#import "Habit.h"
+#import "Goal.h"
+#import "Entry.h"
 
 @interface AppDelegate ()
 
@@ -16,7 +21,15 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    
+    [BBUser registerSubclass];
+    [Entry registerSubclass];
+    [Goal registerSubclass];
+    [Habit registerSubclass];
+    [Step registerSubclass];
+    
+    [Parse setApplicationId:@"4OUoEnBvW5xaxzLgWkDtZN31dFJoIduWBvB03o36" clientKey:@"aKDf8JmSXdA8PFp8wNdmi0cxiY6Nf4z7yXIgPjya"];
+    
     return YES;
 }
 

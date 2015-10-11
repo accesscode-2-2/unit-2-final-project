@@ -7,6 +7,13 @@
 //
 
 #import "ViewController.h"
+#import <Parse/Parse.h>
+#import "BBUser.h"
+#import "Habit.h"
+#import "Goal.h"
+#import "Entry.h"
+#import "Step.h"
+
 
 @interface ViewController ()
 
@@ -16,12 +23,69 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    
+    BBUser *user = (BBUser *)[PFUser object];
+    
+    user.email  = @"ab1c@gmail.com";
+    user.password = @"mesfinnotcool";
+    user.username = @"nc3j";
+    
+    
+    Habit *habit = [Habit new];
+    habit.name = @"Smoking";
+    
+    Entry *entry = [Entry new];
+    entry.entryLog = @"Bitting nails";
+    
+    
+    Step *step1 = [Step new];
+    step1.stepDescription = @"1. No pack for a whole day";
+    step1.completed = @YES;
+    
+    Step *step2 = [Step new];
+    step2.stepDescription = @"1. No pack for a whole week";
+    step2.completed = @NO;
+    
+    Goal *goal = [Goal new];
+    goal.name = @"Quit Smoking";
+    goal.steps = [NSMutableArray new];
+    
+    [goal.steps addObject:step1];
+    [goal.steps addObject:step2];
+    
+    
+    habit.entries = [NSMutableArray new];
+    habit.goals = [NSMutableArray new];
+    habit.name = @"Zouf says we need to talk, ...whatever";
+    
+    [habit.entries addObject:entry];
+    [habit.goals addObject:goal];
+    
+    
+    if([user objectForKey:@"habits"]==nil){
+        user.habits = [NSMutableArray new];
+        [user.habits addObject:habit];
+    }
+    
+    [user signUpInBackground];
+    [user saveInBackground];
+    
+    
+    PFQuery *query = [PFQuery queryWithClassName:@"_User"];
+    [query findObjectsInBackgroundWithBlock:^(NSArray * _Nullable objects, NSError * _Nullable error) {
+        ;
+        NSLog(@"%@",objects);
+    }];
+    
+    BBUser *currentUser = (BBUser *)[PFUser currentUser];
+    [currentUser objectForKey:@"habits"];
+    [currentUser fetchIfNeeded];
+    NSLog(@"%@",currentUser.habits);
+    
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
+
+
+
 
 @end
