@@ -8,7 +8,7 @@
 
 #import "CreateJournalEntryViewController.h"
 
-@interface CreateJournalEntryViewController ()
+@interface CreateJournalEntryViewController () <UITextViewDelegate>
 
 @end
 
@@ -40,6 +40,7 @@
 - (IBAction)saveAndAddToCompletedButtonTapped:(id)sender {
     
 }
+
 
 
 @end
