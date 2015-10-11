@@ -33,10 +33,9 @@
 {
     if (swipe.direction == UISwipeGestureRecognizerDirectionLeft) {
         
-        CGPoint point = [swipe locationInView:self.tableView];
-         NSIndexPath *indexPath = [self.tableView indexPathForRowAtPoint:point];
+//        CGPoint point = [swipe locationInView:self.tableView];
+//         NSIndexPath *indexPath = [self.tableView indexPathForRowAtPoint:point];
         [self dismissViewControllerAnimated:YES completion:nil];
-        //[self performSegueWithIdentifier:@"pushtoJournalFromWish" sender:self];
     }
 }
 

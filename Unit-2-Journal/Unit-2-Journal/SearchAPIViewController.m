@@ -52,7 +52,6 @@ UITextFieldDelegate
 {
     if (swipe.direction == UISwipeGestureRecognizerDirectionRight) {
          [self dismissViewControllerAnimated:YES completion:nil];
-       // [self performSegueWithIdentifier:@"pushToJournalFromSearch" sender:self];
     }
 }
 
@@ -71,7 +70,7 @@ UITextFieldDelegate
 }
 
 - (IBAction)addToWishListButtonTapped:(id)sender {
-    
+
 }
 - (void) makeNewiTunesAPIRequestWithSearchTerm:(NSString *)term
                                        inMedia:(NSString *)media

@@ -475,6 +475,7 @@
                                         <animations/>
                                         <state key="normal" title="Save and Add to Completed"/>
                                         <connections>
+                                            <action selector="saveAndAddToCompletedButtonTapped:" destination="aXS-um-aw2" eventType="touchUpInside" id="TOx-Rp-ciC"/>
                                             <segue destination="Gih-78-N3X" kind="show" id="AZL-rD-3yX"/>
                                         </connections>
                                     </button>
@@ -835,7 +836,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="S6k-uR-hRq"/>
-        <segue reference="a4i-zx-cvK"/>
+        <segue reference="7YG-CM-bN7"/>
+        <segue reference="fje-S5-GG0"/>
     </inferredMetricsTieBreakers>
 </document>
