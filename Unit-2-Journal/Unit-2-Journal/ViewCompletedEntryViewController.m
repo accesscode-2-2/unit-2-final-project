@@ -14,15 +14,27 @@
 
 @implementation ViewCompletedEntryViewController
 
-- (void)viewDidLoad {
+- (void)viewDidLoad
+{
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    
 }
 
-- (void)didReceiveMemoryWarning {
+- (void)didReceiveMemoryWarning
+{
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+
 }
+
+#pragma mark - delete item
+
+- (IBAction)deleteButtonTapped:(id)sender
+{
+    // delete item from memory and storyboard
+    
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
 
 /*
 #pragma mark - Navigation

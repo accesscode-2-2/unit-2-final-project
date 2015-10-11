@@ -57,7 +57,7 @@ UITextFieldDelegate
 - (void)userSwipedRight:(UISwipeGestureRecognizer*)swipe
 {
     if (swipe.direction == UISwipeGestureRecognizerDirectionRight) {
-        [self performSegueWithIdentifier:@"pushToJournalFromSearch" sender:self];
+         [self dismissViewControllerAnimated:YES completion:nil];
     }
 }
 
@@ -76,7 +76,7 @@ UITextFieldDelegate
 }
 
 - (IBAction)addToWishListButtonTapped:(id)sender {
-    
+
 }
 - (void) makeNewiTunesAPIRequestWithSearchTerm:(NSString *)term
                                        inMedia:(NSString *)media
@@ -144,7 +144,6 @@ UITextFieldDelegate
                                   callbackBlock:^{
                                       [self.tableView reloadData];
                                   }];
-    
     return YES;
 }
 
@@ -155,7 +154,8 @@ UITextFieldDelegate
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
     return 1;
 }
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+
+-(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"APIResultsIdentifier" forIndexPath:indexPath];
    
     iTunesSearchResult *searchResult = self.searchResults[indexPath.row];
@@ -174,7 +174,7 @@ UITextFieldDelegate
 //    NSLog(@"Image: %@", artworkImage);
     
     cell.imageView.image = artworkImage;
-    
+
     return cell;
 }
 
