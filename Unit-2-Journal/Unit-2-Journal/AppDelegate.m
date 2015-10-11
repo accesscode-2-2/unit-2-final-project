@@ -10,6 +10,7 @@
 #import <FBSDKCoreKit/FBSDKCoreKit.h>
 #import <FBSDKLoginKit/FBSDKLoginButton.h>
 #import <Parse/Parse.h>
+#import "iTunesSearchResult.h"
 
 @interface AppDelegate ()
 
@@ -31,6 +32,8 @@
     
     [Parse setApplicationId:@"huGlqbY2KVINDuFfqju1fN0eB2QVANcqqHP0NVpY"
                   clientKey:@"aohlSqEhCwaXtZbji5us0j97GNzemWqq3m3EJqwG"];
+    
+    [iTunesSearchResult registerSubclass];
 
     
     return YES;

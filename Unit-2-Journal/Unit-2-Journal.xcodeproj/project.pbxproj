@@ -31,6 +31,7 @@
 		9A2FFC3B1BC84BF200E880D3 /* Unit_2_Journal.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9A2FFC391BC84BF200E880D3 /* Unit_2_Journal.xcdatamodeld */; };
 		9A2FFC3D1BC84BF200E880D3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9A2FFC3C1BC84BF200E880D3 /* Assets.xcassets */; };
 		9A2FFC401BC84BF200E880D3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9A2FFC3E1BC84BF200E880D3 /* LaunchScreen.storyboard */; };
+		9A34656D1BCACDF40049337C /* iTunesSearchResult.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A34656C1BCACDF40049337C /* iTunesSearchResult.m */; settings = {ASSET_TAGS = (); }; };
 		9AAB40061BC9FABC00FD7227 /* APIManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AAB40051BC9FABC00FD7227 /* APIManager.m */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
@@ -71,6 +72,8 @@
 		9A2FFC3C1BC84BF200E880D3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9A2FFC3F1BC84BF200E880D3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9A2FFC411BC84BF200E880D3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9A34656B1BCACDF40049337C /* iTunesSearchResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iTunesSearchResult.h; sourceTree = "<group>"; };
+		9A34656C1BCACDF40049337C /* iTunesSearchResult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iTunesSearchResult.m; sourceTree = "<group>"; };
 		9AAB40041BC9FABC00FD7227 /* APIManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APIManager.h; sourceTree = "<group>"; };
 		9AAB40051BC9FABC00FD7227 /* APIManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APIManager.m; sourceTree = "<group>"; };
 		FAF24AD380284C55768010A2 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -193,6 +196,8 @@
 			children = (
 				9AAB40041BC9FABC00FD7227 /* APIManager.h */,
 				9AAB40051BC9FABC00FD7227 /* APIManager.m */,
+				9A34656B1BCACDF40049337C /* iTunesSearchResult.h */,
+				9A34656C1BCACDF40049337C /* iTunesSearchResult.m */,
 			);
 			name = "Classes & Managers";
 			sourceTree = "<group>";
@@ -313,6 +318,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9A2FFC321BC84BF200E880D3 /* AppDelegate.m in Sources */,
+				9A34656D1BCACDF40049337C /* iTunesSearchResult.m in Sources */,
 				4DCBE14A1BC9ADAE0075BA2C /* CreateJournalEntryViewController.m in Sources */,
 				5A50331D1BC8D99D001CBA5C /* LoginViewController.m in Sources */,
 				4DCBE1321BC98EF90075BA2C /* JournalMainCollectionViewController.m in Sources */,

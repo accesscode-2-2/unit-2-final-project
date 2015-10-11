@@ -9,6 +9,7 @@
 #import "SearchAPIViewController.h"
 #import <AFNetworking/AFNetworking.h>
 #import "APIManager.h"
+#import "iTunesSearchResult.h"
 
 @interface SearchAPIViewController ()
 <
@@ -24,6 +25,7 @@ UITextFieldDelegate
 @property (weak, nonatomic) IBOutlet UIButton *booksButton;
 @property (weak, nonatomic) IBOutlet UIButton *otherButton;
 @property (nonatomic) NSString *media;
+@property (nonatomic) NSMutableArray *searchResults;
 
 @end
 
@@ -37,6 +39,10 @@ UITextFieldDelegate
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
     self.searchTextField.delegate = self;
+    
+//    iTunesSearchResult *searchResults = [[iTunesSearchResult alloc]init];
+    
+    
 }
 
 #pragma mark - setup swipe gestures
@@ -97,26 +103,31 @@ UITextFieldDelegate
                         
                         NSLog(@"Results: %@",results);
                         
-                        //self.searchResults = [[NSMutableArray alloc]init];
+                        self.searchResults = [[NSMutableArray alloc]init];
                         
                         
-//                        for (NSDictionary *result in results){
-//                            
-//                            NSString *artistName = [result objectForKey:@"artistName"];
-//                            NSString *albumName = [result objectForKey:@"collectionName"];
-//                            NSString *songName = [result objectForKey:@"trackName"];
-//                            NSURL *songPreview = [NSURL URLWithString:[result objectForKey:@"previewUrl"]];
-//                            
-//                            iTunesMusicResults *musicObject = [[iTunesMusicResults alloc]init];
-//                            musicObject.artist = artistName;
-//                            musicObject.album = albumName;
-//                            musicObject.song = songName;
-//                            musicObject.songURL = songPreview;
-//                            
-//                            //                            self.audioPlayer = musicObject.songPlayer;
-//                            
-//                            [self.searchResults addObject:musicObject];
-//                        }
+                        for (NSDictionary *result in results){
+                            
+                            NSString *artistName = [result objectForKey:@"artistName"];
+                            NSString *albumName = [result objectForKey:@"collectionName"];
+                            NSString *movieName = [result objectForKey:@"trackName"];
+                            NSString *artworkURL =  [result objectForKey:@"artworkUrl100"];
+                            
+                            iTunesSearchResult *resultsObject = [[iTunesSearchResult alloc]init];
+                            
+                            if ([self.media isEqualToString:@"movie"]){
+                                resultsObject.artistName = artistName;
+                                resultsObject.albumOrMovieName = movieName;
+                                resultsObject.artworkURL = artworkURL;
+                            } else if ([self.media isEqualToString:@"music"]){
+                                resultsObject.artistName = artistName;
+                                resultsObject.albumOrMovieName = albumName;
+                                resultsObject.artworkURL = artworkURL;
+
+                            }
+                            
+                            [self.searchResults addObject:resultsObject];
+                        }
                         
                         block();
                     }
@@ -138,14 +149,31 @@ UITextFieldDelegate
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return 1;
+    return self.searchResults.count;
+
 }
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
     return 1;
 }
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"APIResultsIdentifier" forIndexPath:indexPath];
+   
+    iTunesSearchResult *searchResult = self.searchResults[indexPath.row];
     
+    cell.textLabel.text = searchResult.albumOrMovieName;
+    cell.detailTextLabel.text = searchResult.artistName;
+    
+    NSString *artworkString = searchResult.artworkURL;
+    NSURL *artworkURL = [NSURL URLWithString:artworkString];
+    NSData *artworkData = [NSData dataWithContentsOfURL:artworkURL];
+    UIImage *artworkImage = [UIImage imageWithData:artworkData];
+    
+//    NSLog(@"Image String: %@", searchResult.artworkURL);
+//    NSLog(@"Image URL: %@", artworkURL);
+//    NSLog(@"Image Data: %@", artworkData);
+//    NSLog(@"Image: %@", artworkImage);
+    
+    cell.imageView.image = artworkImage;
     
     return cell;
 }
