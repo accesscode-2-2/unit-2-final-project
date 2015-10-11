@@ -209,7 +209,7 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cfG-sQ-zQZ">
                                         <rect key="frame" x="0.0" y="0.0" width="150" height="100"/>
                                         <animations/>
-                                        <state key="normal" title="Music"/>
+                                        <state key="normal" title="music"/>
                                         <connections>
                                             <action selector="mediaButtonTypeSelected:" destination="0x4-Nu-mZ8" eventType="touchUpInside" id="pgn-O1-WAi"/>
                                         </connections>
@@ -217,7 +217,7 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CLE-DE-TTz">
                                         <rect key="frame" x="150" y="0.0" width="150" height="100"/>
                                         <animations/>
-                                        <state key="normal" title="Movies"/>
+                                        <state key="normal" title="movie"/>
                                         <connections>
                                             <action selector="mediaButtonTypeSelected:" destination="0x4-Nu-mZ8" eventType="touchUpInside" id="tdC-rt-Ts9"/>
                                         </connections>
@@ -246,20 +246,20 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6gJ-up-Tie">
                                 <rect key="frame" x="300" y="20" width="300" height="100"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rgg-OH-neT">
-                                        <rect key="frame" x="0.0" y="0.0" width="150" height="100"/>
-                                        <animations/>
-                                        <state key="normal" title="Books"/>
-                                        <connections>
-                                            <action selector="mediaButtonTypeSelected:" destination="0x4-Nu-mZ8" eventType="touchUpInside" id="n38-IM-iTM"/>
-                                        </connections>
-                                    </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kEa-FP-z2a">
                                         <rect key="frame" x="150" y="0.0" width="150" height="100"/>
                                         <animations/>
                                         <state key="normal" title="Other"/>
                                         <connections>
                                             <action selector="mediaButtonOther:" destination="0x4-Nu-mZ8" eventType="touchUpInside" id="XpB-L1-XNH"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rgg-OH-neT">
+                                        <rect key="frame" x="0.0" y="0.0" width="150" height="100"/>
+                                        <animations/>
+                                        <state key="normal" title="Books"/>
+                                        <connections>
+                                            <action selector="mediaButtonTypeSelected:" destination="0x4-Nu-mZ8" eventType="touchUpInside" id="n38-IM-iTM"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -282,27 +282,6 @@
                                         <exclude reference="rEQ-Oo-14p"/>
                                     </mask>
                                 </variation>
-                            </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4h9-oR-C40">
-                                <rect key="frame" x="0.0" y="120" width="600" height="50"/>
-                                <subviews>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Search" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="zob-sY-qha">
-                                        <rect key="frame" x="125" y="10" width="350" height="30"/>
-                                        <animations/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="350" id="FjN-tR-Pz2"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                    </textField>
-                                </subviews>
-                                <animations/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstItem="zob-sY-qha" firstAttribute="centerX" secondItem="4h9-oR-C40" secondAttribute="centerX" id="cbv-OU-esH"/>
-                                    <constraint firstAttribute="height" constant="50" id="fyg-AW-jv6"/>
-                                    <constraint firstItem="zob-sY-qha" firstAttribute="centerY" secondItem="4h9-oR-C40" secondAttribute="centerY" id="x76-Iu-Ldy"/>
-                                </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q0c-Ez-WJB">
                                 <rect key="frame" x="0.0" y="550" width="300" height="50"/>
@@ -335,7 +314,7 @@
                                 <animations/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="oHk-9R-1hr">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="APIResultsIdentifier" id="oHk-9R-1hr">
                                         <rect key="frame" x="0.0" y="28" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="oHk-9R-1hr" id="Q9h-u4-3sZ">
@@ -347,6 +326,27 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4h9-oR-C40">
+                                <rect key="frame" x="0.0" y="120" width="600" height="50"/>
+                                <subviews>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Search" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="zob-sY-qha">
+                                        <rect key="frame" x="125" y="10" width="350" height="30"/>
+                                        <animations/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="350" id="FjN-tR-Pz2"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                                <animations/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="zob-sY-qha" firstAttribute="centerX" secondItem="4h9-oR-C40" secondAttribute="centerX" id="cbv-OU-esH"/>
+                                    <constraint firstAttribute="height" constant="50" id="fyg-AW-jv6"/>
+                                    <constraint firstItem="zob-sY-qha" firstAttribute="centerY" secondItem="4h9-oR-C40" secondAttribute="centerY" id="x76-Iu-Ldy"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
@@ -815,11 +815,11 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gKL-Ix-enk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="365" y="3146"/>
+            <point key="canvasLocation" x="405" y="2710"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="AZL-rD-3yX"/>
+        <segue reference="HwW-rI-Qas"/>
         <segue reference="a4i-zx-cvK"/>
         <segue reference="S6k-uR-hRq"/>
     </inferredMetricsTieBreakers>
