@@ -31,6 +31,7 @@
 		9A2FFC3B1BC84BF200E880D3 /* Unit_2_Journal.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9A2FFC391BC84BF200E880D3 /* Unit_2_Journal.xcdatamodeld */; };
 		9A2FFC3D1BC84BF200E880D3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9A2FFC3C1BC84BF200E880D3 /* Assets.xcassets */; };
 		9A2FFC401BC84BF200E880D3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9A2FFC3E1BC84BF200E880D3 /* LaunchScreen.storyboard */; };
+		9AAB40061BC9FABC00FD7227 /* APIManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AAB40051BC9FABC00FD7227 /* APIManager.m */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -70,6 +71,8 @@
 		9A2FFC3C1BC84BF200E880D3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9A2FFC3F1BC84BF200E880D3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9A2FFC411BC84BF200E880D3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9AAB40041BC9FABC00FD7227 /* APIManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APIManager.h; sourceTree = "<group>"; };
+		9AAB40051BC9FABC00FD7227 /* APIManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APIManager.m; sourceTree = "<group>"; };
 		FAF24AD380284C55768010A2 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -139,17 +142,8 @@
 				5AE224801BC8BB4D004AEB77 /* Login/SignUp */,
 				9A2FFC301BC84BF200E880D3 /* AppDelegate.h */,
 				9A2FFC311BC84BF200E880D3 /* AppDelegate.m */,
-				9A2FFC361BC84BF200E880D3 /* Main.storyboard */,
-				4DCBE1301BC98EF90075BA2C /* JournalMainCollectionViewController.h */,
-				4DCBE1311BC98EF90075BA2C /* JournalMainCollectionViewController.m */,
-				4DCBE1451BC9AD6A0075BA2C /* SearchAPIViewController.h */,
-				4DCBE1461BC9AD6A0075BA2C /* SearchAPIViewController.m */,
-				4DCBE1481BC9ADAE0075BA2C /* CreateJournalEntryViewController.h */,
-				4DCBE1491BC9ADAE0075BA2C /* CreateJournalEntryViewController.m */,
-				4DCBE14B1BC9ADE00075BA2C /* WishListTableViewController.h */,
-				4DCBE14C1BC9ADE00075BA2C /* WishListTableViewController.m */,
-				4DCBE14E1BC9BD800075BA2C /* ViewCompletedEntryViewController.h */,
-				4DCBE14F1BC9BD800075BA2C /* ViewCompletedEntryViewController.m */,
+				9AAB40031BC9ECAA00FD7227 /* Classes & Managers */,
+				9AAB40021BC9EC7300FD7227 /* ViewControllers */,
 				9A2FFC3C1BC84BF200E880D3 /* Assets.xcassets */,
 				9A2FFC3E1BC84BF200E880D3 /* LaunchScreen.storyboard */,
 				9A2FFC411BC84BF200E880D3 /* Info.plist */,
@@ -174,6 +168,33 @@
 				9A2FFC2E1BC84BF200E880D3 /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		9AAB40021BC9EC7300FD7227 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				4DCBE1301BC98EF90075BA2C /* JournalMainCollectionViewController.h */,
+				4DCBE1311BC98EF90075BA2C /* JournalMainCollectionViewController.m */,
+				4DCBE1451BC9AD6A0075BA2C /* SearchAPIViewController.h */,
+				4DCBE1461BC9AD6A0075BA2C /* SearchAPIViewController.m */,
+				4DCBE1481BC9ADAE0075BA2C /* CreateJournalEntryViewController.h */,
+				4DCBE1491BC9ADAE0075BA2C /* CreateJournalEntryViewController.m */,
+				4DCBE14B1BC9ADE00075BA2C /* WishListTableViewController.h */,
+				4DCBE14C1BC9ADE00075BA2C /* WishListTableViewController.m */,
+				4DCBE14E1BC9BD800075BA2C /* ViewCompletedEntryViewController.h */,
+				4DCBE14F1BC9BD800075BA2C /* ViewCompletedEntryViewController.m */,
+				9A2FFC361BC84BF200E880D3 /* Main.storyboard */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		9AAB40031BC9ECAA00FD7227 /* Classes & Managers */ = {
+			isa = PBXGroup;
+			children = (
+				9AAB40041BC9FABC00FD7227 /* APIManager.h */,
+				9AAB40051BC9FABC00FD7227 /* APIManager.m */,
+			);
+			name = "Classes & Managers";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -299,6 +320,7 @@
 				9A2FFC3B1BC84BF200E880D3 /* Unit_2_Journal.xcdatamodeld in Sources */,
 				4DCBE14D1BC9ADE00075BA2C /* WishListTableViewController.m in Sources */,
 				5A50331A1BC8D0E4001CBA5C /* MainTableViewController.m in Sources */,
+				9AAB40061BC9FABC00FD7227 /* APIManager.m in Sources */,
 				5A5033201BC8D9B5001CBA5C /* SignUpViewController.m in Sources */,
 				4DCBE1501BC9BD800075BA2C /* ViewCompletedEntryViewController.m in Sources */,
 				9A2FFC2F1BC84BF200E880D3 /* main.m in Sources */,
