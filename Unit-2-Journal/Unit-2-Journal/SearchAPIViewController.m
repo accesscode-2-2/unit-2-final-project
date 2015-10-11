@@ -21,25 +21,41 @@
 
 @implementation SearchAPIViewController
 
-- (void)viewDidLoad {
+- (void)viewDidLoad
+{
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    [self setUpSwipeGestures];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+#pragma mark - setup swipe gestures
+
+- (void)setUpSwipeGestures
+{
+//    UISwipeGestureRecognizer *swipeLeft = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(userSwipedLeft:)];
+//    swipeLeft.direction = UISwipeGestureRecognizerDirectionLeft;
+//    [self.view addGestureRecognizer:swipeLeft];
+    
+    UISwipeGestureRecognizer *swipeRight = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(userSwipedRight:)];
+    swipeRight.direction = UISwipeGestureRecognizerDirectionRight;
+    [self.view addGestureRecognizer:swipeRight];
 }
 
-/*
-#pragma mark - Navigation
+//- (void)userSwipedLeft:(UISwipeGestureRecognizer*)swipe
+//{
+//    if (swipe.direction == UISwipeGestureRecognizerDirectionLeft) {
+//        [self performSegueWithIdentifier:@"pushToSearch" sender:self];
+//    }
+//}
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (void)userSwipedRight:(UISwipeGestureRecognizer*)swipe
+{
+    if (swipe.direction == UISwipeGestureRecognizerDirectionRight) {
+        [self performSegueWithIdentifier:@"pushToJournalFromSearch" sender:self];
+    }
 }
-*/
+
+#pragma mark - setup buttons
+
 - (IBAction)mediaButtonTypeSelected:(id)sender {
 }
 
