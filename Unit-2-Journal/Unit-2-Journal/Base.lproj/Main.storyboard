@@ -599,6 +599,7 @@
                                         </state>
                                         <connections>
                                             <action selector="logToJournalButtonTapped:" destination="aXS-um-aw2" eventType="touchUpInside" id="bF7-vG-sm2"/>
+                                            <segue destination="WZe-UX-wgc" kind="show" identifier="logToJournalSegue" id="j87-kS-bSt"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -901,11 +902,11 @@
                                     <constraint firstItem="JU3-mC-wxo" firstAttribute="leading" secondItem="M7h-zf-QrN" secondAttribute="trailing" constant="50" id="xSf-tn-Ha9"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="x4f-Ym-z1V">
-                                <rect key="frame" x="20" y="485" width="560" height="115"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="x4f-Ym-z1V">
+                                <rect key="frame" x="20" y="485" width="560" height="66"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1br-zx-rKo">
-                                        <rect key="frame" x="258" y="42" width="45" height="30"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1br-zx-rKo">
+                                        <rect key="frame" x="258" y="18" width="45" height="30"/>
                                         <animations/>
                                         <state key="normal" title="Delete"/>
                                         <connections>
@@ -960,5 +961,6 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="a4i-zx-cvK"/>
+        <segue reference="j87-kS-bSt"/>
     </inferredMetricsTieBreakers>
 </document>

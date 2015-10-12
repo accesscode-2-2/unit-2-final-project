@@ -177,6 +177,10 @@ UITextFieldDelegate
 //    NSLog(@"Image: %@", artworkImage);
     
     cell.imageView.image = artworkImage;
+    
+    cell.imageView.layer.borderWidth = 2.0;
+    cell.imageView.layer.borderColor = [UIColor blackColor].CGColor;
+    cell.imageView.layer.cornerRadius = 3.0;
 
     return cell;
 }
