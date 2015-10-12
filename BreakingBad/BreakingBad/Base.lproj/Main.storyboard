@@ -110,27 +110,93 @@
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VzX-6I-QD0">
                                         <rect key="frame" x="0.0" y="0.0" width="200" height="148"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aJb-kz-3gG">
+                                                <rect key="frame" x="0.0" y="0.0" width="200" height="148"/>
+                                            </button>
+                                        </subviews>
                                         <color key="backgroundColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="aJb-kz-3gG" secondAttribute="bottom" id="0BU-M1-E8Y"/>
+                                            <constraint firstItem="aJb-kz-3gG" firstAttribute="top" secondItem="VzX-6I-QD0" secondAttribute="top" id="Kqc-ni-lJO"/>
+                                            <constraint firstItem="aJb-kz-3gG" firstAttribute="leading" secondItem="VzX-6I-QD0" secondAttribute="leading" id="YVy-GR-XOb"/>
+                                            <constraint firstAttribute="trailing" secondItem="aJb-kz-3gG" secondAttribute="trailing" id="rks-HP-Vnw"/>
+                                        </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YOc-tS-gkT">
                                         <rect key="frame" x="400" y="0.0" width="200" height="148"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vLZ-8r-e8I">
+                                                <rect key="frame" x="0.0" y="0.0" width="200" height="148"/>
+                                            </button>
+                                        </subviews>
                                         <color key="backgroundColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="vLZ-8r-e8I" secondAttribute="bottom" id="2KD-S7-GRf"/>
+                                            <constraint firstItem="vLZ-8r-e8I" firstAttribute="leading" secondItem="YOc-tS-gkT" secondAttribute="leading" id="9aI-m9-lmE"/>
+                                            <constraint firstAttribute="trailing" secondItem="vLZ-8r-e8I" secondAttribute="trailing" id="KS8-4p-mpt"/>
+                                            <constraint firstItem="vLZ-8r-e8I" firstAttribute="top" secondItem="YOc-tS-gkT" secondAttribute="top" id="xUL-v8-I74"/>
+                                        </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="R9C-DW-ata">
                                         <rect key="frame" x="0.0" y="148" width="200" height="148"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LE4-jz-mbF">
+                                                <rect key="frame" x="0.0" y="0.0" width="200" height="148"/>
+                                            </button>
+                                        </subviews>
                                         <color key="backgroundColor" red="0.63035872790000003" green="1" blue="0.51983276099999998" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstItem="LE4-jz-mbF" firstAttribute="top" secondItem="R9C-DW-ata" secondAttribute="top" id="17T-cV-Yfk"/>
+                                            <constraint firstItem="LE4-jz-mbF" firstAttribute="leading" secondItem="R9C-DW-ata" secondAttribute="leading" id="C78-EA-22V"/>
+                                            <constraint firstAttribute="trailing" secondItem="LE4-jz-mbF" secondAttribute="trailing" id="QdN-LN-dET"/>
+                                            <constraint firstAttribute="bottom" secondItem="LE4-jz-mbF" secondAttribute="bottom" id="arE-t5-rV3"/>
+                                        </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1st-C8-SMA">
                                         <rect key="frame" x="200" y="148" width="200" height="148"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Fd-8e-qoR">
+                                                <rect key="frame" x="0.0" y="0.0" width="200" height="148"/>
+                                            </button>
+                                        </subviews>
                                         <color key="backgroundColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstItem="9Fd-8e-qoR" firstAttribute="top" secondItem="1st-C8-SMA" secondAttribute="top" id="4Ko-Va-38o"/>
+                                            <constraint firstAttribute="trailing" secondItem="9Fd-8e-qoR" secondAttribute="trailing" id="Epk-2a-Kn2"/>
+                                            <constraint firstAttribute="bottom" secondItem="9Fd-8e-qoR" secondAttribute="bottom" id="bt6-sE-ykz"/>
+                                            <constraint firstItem="9Fd-8e-qoR" firstAttribute="leading" secondItem="1st-C8-SMA" secondAttribute="leading" id="mv9-0a-aSe"/>
+                                        </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YG9-Ac-g2R">
                                         <rect key="frame" x="200" y="0.0" width="200" height="148"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b7V-Uw-QbN">
+                                                <rect key="frame" x="0.0" y="0.0" width="200" height="148"/>
+                                            </button>
+                                        </subviews>
                                         <color key="backgroundColor" red="0.63035872790000003" green="1" blue="0.51983276099999998" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="b7V-Uw-QbN" secondAttribute="bottom" id="C4f-7D-k5Z"/>
+                                            <constraint firstItem="b7V-Uw-QbN" firstAttribute="top" secondItem="YG9-Ac-g2R" secondAttribute="top" id="Ckv-LV-18k"/>
+                                            <constraint firstItem="b7V-Uw-QbN" firstAttribute="leading" secondItem="YG9-Ac-g2R" secondAttribute="leading" id="cUZ-ZV-uyh"/>
+                                            <constraint firstAttribute="trailing" secondItem="b7V-Uw-QbN" secondAttribute="trailing" id="nwX-cT-bpw"/>
+                                        </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nOk-Mm-niZ">
                                         <rect key="frame" x="400" y="148" width="200" height="148"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7wD-Oz-c9Z">
+                                                <rect key="frame" x="0.0" y="0.0" width="200" height="148"/>
+                                            </button>
+                                        </subviews>
                                         <color key="backgroundColor" red="0.63035872790000003" green="1" blue="0.51983276099999998" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="7wD-Oz-c9Z" secondAttribute="trailing" id="9eS-4T-T6V"/>
+                                            <constraint firstItem="7wD-Oz-c9Z" firstAttribute="top" secondItem="nOk-Mm-niZ" secondAttribute="top" id="bNE-4I-BpO"/>
+                                            <constraint firstAttribute="bottom" secondItem="7wD-Oz-c9Z" secondAttribute="bottom" id="jo8-Ju-3ut"/>
+                                            <constraint firstItem="7wD-Oz-c9Z" firstAttribute="leading" secondItem="nOk-Mm-niZ" secondAttribute="leading" id="pr9-oi-75R"/>
+                                        </constraints>
                                     </view>
                                 </subviews>
                                 <color key="backgroundColor" red="1" green="0.16948668189999999" blue="0.1192984647" alpha="1" colorSpace="calibratedRGB"/>
