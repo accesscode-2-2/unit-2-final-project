@@ -10,6 +10,7 @@
 #import "FoodViewController.h"
 #import "HotelViewController.h"
 #import "ImageTableViewController.h"
+#import "VideoViewController.h"
 
 @interface ViewController ()
 @property (weak, nonatomic) IBOutlet UISearchBar *searchBar;
@@ -89,7 +90,7 @@
                         ];
     
     RNFrostedSidebar *callout = [[RNFrostedSidebar alloc] initWithImages:images selectedIndices:self.optionIndices borderColors:colors];
-    //    RNFrostedSidebar *callout = [[RNFrostedSidebar alloc] initWithImages:images];
+//        RNFrostedSidebar *callout = [[RNFrostedSidebar alloc] initWithImages:images];
     callout.delegate = self;
     //    callout.showFromRight = YES;
     [callout show];
@@ -145,6 +146,18 @@
             [sidebar dismissAnimated:YES completion:^(BOOL finished) {
             }];
     }
+    if (index == 5) { //video
+        
+        VideoViewController * vc = [self.storyboard instantiateViewControllerWithIdentifier:@"VideoID"];
+        [self presentViewController:vc animated:YES completion:nil];
+        
+        [sidebar dismissAnimated:YES completion:^(BOOL finished) {
+        }];
+    }
+    
+    
+    
+    
 }
 
 -(void) EmptySearchBarAlert {

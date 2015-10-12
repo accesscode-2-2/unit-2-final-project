@@ -49,6 +49,7 @@
 		84CF45B61BCB057600EAA3BF /* WelcomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84CF45B51BCB057600EAA3BF /* WelcomeViewController.m */; settings = {ASSET_TAGS = (); }; };
 		84CF45B91BCB0C5900EAA3BF /* HotelViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84CF45B81BCB0C5900EAA3BF /* HotelViewController.m */; settings = {ASSET_TAGS = (); }; };
 		84CF45BC1BCB0E9D00EAA3BF /* ImageTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84CF45BB1BCB0E9D00EAA3BF /* ImageTableViewController.m */; settings = {ASSET_TAGS = (); }; };
+		84CF45CB1BCC51C200EAA3BF /* VideoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84CF45CA1BCC51C200EAA3BF /* VideoViewController.m */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -124,6 +125,8 @@
 		84CF45B81BCB0C5900EAA3BF /* HotelViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HotelViewController.m; sourceTree = "<group>"; };
 		84CF45BA1BCB0E9D00EAA3BF /* ImageTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageTableViewController.h; sourceTree = "<group>"; };
 		84CF45BB1BCB0E9D00EAA3BF /* ImageTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageTableViewController.m; sourceTree = "<group>"; };
+		84CF45C91BCC51C200EAA3BF /* VideoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoViewController.h; sourceTree = "<group>"; };
+		84CF45CA1BCC51C200EAA3BF /* VideoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -191,6 +194,7 @@
 				84CF452C1BCAD0EA00EAA3BF /* AppDelegate.h */,
 				84CF452D1BCAD0EA00EAA3BF /* AppDelegate.m */,
 				84CF45C11BCB4F0300EAA3BF /* NewTrip */,
+				84CF45C81BCC519800EAA3BF /* Video */,
 				84CF45BD1BCB4ECA00EAA3BF /* Food */,
 				84CF45BE1BCB4ED900EAA3BF /* Image */,
 				84CF45BF1BCB4EE700EAA3BF /* Welcome */,
@@ -303,6 +307,15 @@
 				84CF45301BCAD0EA00EAA3BF /* ViewController.m */,
 			);
 			name = NewTrip;
+			sourceTree = "<group>";
+		};
+		84CF45C81BCC519800EAA3BF /* Video */ = {
+			isa = PBXGroup;
+			children = (
+				84CF45C91BCC51C200EAA3BF /* VideoViewController.h */,
+				84CF45CA1BCC51C200EAA3BF /* VideoViewController.m */,
+			);
+			name = Video;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -458,6 +471,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84CF45CB1BCC51C200EAA3BF /* VideoViewController.m in Sources */,
 				84CF45B31BCB049200EAA3BF /* FoodViewController.m in Sources */,
 				84CF45311BCAD0EA00EAA3BF /* ViewController.m in Sources */,
 				84CF456B1BCAD14300EAA3BF /* RNFrostedSidebar.m in Sources */,
@@ -690,6 +704,7 @@
 				84CF45581BCAD0EB00EAA3BF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		84CF45591BCAD0EB00EAA3BF /* Build configuration list for PBXNativeTarget "InControlTests" */ = {
 			isa = XCConfigurationList;
@@ -698,6 +713,7 @@
 				84CF455B1BCAD0EB00EAA3BF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		84CF455C1BCAD0EB00EAA3BF /* Build configuration list for PBXNativeTarget "InControlUITests" */ = {
 			isa = XCConfigurationList;
@@ -706,6 +722,7 @@
 				84CF455E1BCAD0EB00EAA3BF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
