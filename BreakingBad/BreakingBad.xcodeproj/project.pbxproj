@@ -136,8 +136,8 @@
 				5FEAE2631BCB055A00201A0E /* CustomModalViewController.m */,
 				5FEAE26C1BCB125100201A0E /* PresentingAnimationController.h */,
 				5FEAE26D1BCB125A00201A0E /* PresentingAnimationController.m */,
-				5FEAE2701BCB126700201A0E /* DismissingAnimationController.m */,
 				5FEAE26F1BCB126200201A0E /* DismissingAnimationController.h */,
+				5FEAE2701BCB126700201A0E /* DismissingAnimationController.m */,
 			);
 			name = PopAnimation;
 			sourceTree = "<group>";

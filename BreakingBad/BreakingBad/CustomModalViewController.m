@@ -14,7 +14,7 @@
 
 - (IBAction)didClickClose:(id)sender {
     
-    if ([self.passwordTextField isEqual:self.confirmPasswordTextField]) {
+    if ([self.passwordTextField.text isEqualToString:self.confirmPasswordTextField.text] && self.passwordTextField.text.length !=0) {
         PFUser *thisUser = [PFUser user];
         thisUser.email = self.emailTextField.text;
         thisUser.username = self.usernameTextField.text;
@@ -23,16 +23,23 @@
         [thisUser signUpInBackgroundWithBlock:^(BOOL succeeded, NSError * _Nullable error) {
             //add segue here
         }];
-        
+         [self dismissViewControllerAnimated:YES completion:nil];
     } else {
         
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Error" message:@"The two password you entered do not match" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+        UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"Error" message:@"The password field is either empty or does not match the confirm password field" preferredStyle:UIAlertControllerStyleAlert];
         
-        [alert show];
+        UIAlertAction *okAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+            [alertController dismissViewControllerAnimated:YES completion:nil];
+        }];
+        
+        [alertController addAction:okAction];
+        
+        [self presentViewController:alertController animated:YES completion:nil];
+        
         
     }
     
-   [self dismissViewControllerAnimated:YES completion:nil];
+  
     
 }
 

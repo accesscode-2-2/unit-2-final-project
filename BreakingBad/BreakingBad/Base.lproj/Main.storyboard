@@ -45,7 +45,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OTd-aX-ge7">
-                                        <rect key="frame" x="62" y="0.0" width="522" height="174"/>
+                                        <rect key="frame" x="167" y="0.0" width="417" height="174"/>
                                     </pickerView>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oc0-Rq-scI">
                                         <rect key="frame" x="152" y="194" width="440" height="30"/>
@@ -70,7 +70,7 @@
                                     <constraint firstItem="OTd-aX-ge7" firstAttribute="top" secondItem="ZBu-eh-u5R" secondAttribute="top" id="D00-LD-Eom"/>
                                     <constraint firstItem="r70-SD-oxn" firstAttribute="top" secondItem="ZBu-eh-u5R" secondAttribute="top" constant="16" id="Lp4-VQ-31N"/>
                                     <constraint firstItem="6Pa-AS-f5W" firstAttribute="leading" secondItem="ZBu-eh-u5R" secondAttribute="leading" constant="7" id="N9L-BX-RDd"/>
-                                    <constraint firstItem="OTd-aX-ge7" firstAttribute="leading" secondItem="r70-SD-oxn" secondAttribute="trailing" constant="8" id="S2b-Vc-BZ0"/>
+                                    <constraint firstItem="OTd-aX-ge7" firstAttribute="leading" secondItem="r70-SD-oxn" secondAttribute="trailing" constant="113" id="S2b-Vc-BZ0"/>
                                     <constraint firstAttribute="trailingMargin" secondItem="OTd-aX-ge7" secondAttribute="trailing" constant="8" id="deh-By-h5U"/>
                                     <constraint firstAttribute="bottom" secondItem="oc0-Rq-scI" secondAttribute="bottom" constant="16" id="eWC-lQ-vuO"/>
                                     <constraint firstAttribute="trailing" secondItem="oc0-Rq-scI" secondAttribute="trailing" constant="8" id="ioG-2i-9Zi"/>
@@ -264,7 +264,7 @@
                                     <constraint firstAttribute="width" constant="168" id="sgW-P4-0xw"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Confirm password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="09l-WI-JUy">
                                 <rect key="frame" x="216" y="506" width="168" height="30"/>
@@ -272,7 +272,7 @@
                                     <constraint firstAttribute="width" constant="168" id="pHl-96-Gem"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WRB-x9-WKO">
                                 <rect key="frame" x="216" y="405" width="168" height="30"/>
