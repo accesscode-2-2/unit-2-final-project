@@ -17,27 +17,27 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    [self setUpSwipeGestures];
+//    [self setUpSwipeGestures];
 }
 
-#pragma  mark - swipe gestures
-
-- (void)setUpSwipeGestures
-{
-    UISwipeGestureRecognizer *swipeLeft = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(userSwipedLeft:)];
-    swipeLeft.direction = UISwipeGestureRecognizerDirectionLeft;
-    [self.view addGestureRecognizer:swipeLeft];
-}
-
-- (void)userSwipedLeft:(UISwipeGestureRecognizer*)swipe
-{
-    if (swipe.direction == UISwipeGestureRecognizerDirectionLeft) {
-
-        [self performSegueWithIdentifier:@"pushToHomeList" sender:self];
-
-        //[self dismissViewControllerAnimated:YES completion:nil];
-    }
-}
+//#pragma  mark - swipe gestures
+//
+//- (void)setUpSwipeGestures
+//{
+//    UISwipeGestureRecognizer *swipeLeft = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(userSwipedLeft:)];
+//    swipeLeft.direction = UISwipeGestureRecognizerDirectionLeft;
+//    [self.view addGestureRecognizer:swipeLeft];
+//}
+//
+//- (void)userSwipedLeft:(UISwipeGestureRecognizer*)swipe
+//{
+//    if (swipe.direction == UISwipeGestureRecognizerDirectionLeft) {
+//
+//        [self performSegueWithIdentifier:@"pushToHomeList" sender:self];
+//
+//        //[self dismissViewControllerAnimated:YES completion:nil];
+//    }
+//}
 
 #pragma mark - Table view data source
 

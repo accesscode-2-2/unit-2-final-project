@@ -12,6 +12,11 @@
 #import <Parse/Parse.h>
 #import "iTunesSearchResult.h"
 
+//for custom tab bar:
+#import "YALTabBarItem.h" //model
+#import "YALFoldingTabBarController.h" //controller
+#import "YALAnimatingTabBarConstants.h" //helpers
+
 @interface AppDelegate ()
 
 @end
@@ -34,9 +39,53 @@
                   clientKey:@"aohlSqEhCwaXtZbji5us0j97GNzemWqq3m3EJqwG"];
     
     [iTunesSearchResult registerSubclass];
-
+    
+    [self setupYALTabBarController]; // setup tab bar controller
     
     return YES;
+}
+
+#pragma mark - setup custom tab bar
+
+- (void)setupYALTabBarController {
+    YALFoldingTabBarController *tabBarController = (YALFoldingTabBarController *) self.window.rootViewController;
+    
+    //prepare leftBarItems
+    YALTabBarItem *item1 = [[YALTabBarItem alloc] initWithItemImage:[UIImage imageNamed:@"idea"]
+                                                      leftItemImage:nil
+                                                     rightItemImage:nil];
+    
+    
+    YALTabBarItem *item2 = [[YALTabBarItem alloc] initWithItemImage:[UIImage imageNamed:@"add"]
+                                                      leftItemImage:[UIImage imageNamed:@"idea"]
+                                                     rightItemImage:[UIImage imageNamed:@"star"]];
+    
+    tabBarController.leftBarItems = @[item1, item2];
+    
+    //prepare rightBarItems
+    YALTabBarItem *item3 = [[YALTabBarItem alloc] initWithItemImage:[UIImage imageNamed:@"star"]
+                                                      leftItemImage:nil
+                                                     rightItemImage:nil];
+    
+    
+    YALTabBarItem *item4 = [[YALTabBarItem alloc] initWithItemImage:[UIImage imageNamed:@"settings"]
+                                                      leftItemImage:nil
+                                                     rightItemImage:nil];
+    
+    tabBarController.rightBarItems = @[item3, item4];
+    
+    tabBarController.centerButtonImage = [UIImage imageNamed:@"plus"];
+    
+    tabBarController.selectedIndex = 2;
+    
+    //customize tabBarView
+    tabBarController.tabBarView.extraTabBarItemHeight = YALExtraTabBarItemsDefaultHeight;
+    tabBarController.tabBarView.offsetForExtraTabBarItems = YALForExtraTabBarItemsDefaultOffset;
+    tabBarController.tabBarView.backgroundColor = [UIColor colorWithRed:0.0/255.0 green:0.0/255.0 blue:0.0/255.0 alpha:1];
+    tabBarController.tabBarView.tabBarColor = [UIColor colorWithRed:255.0/255.0 green:255.0/255.0 blue:255.0/255.0 alpha:1];
+    tabBarController.tabBarViewHeight = YALTabBarViewDefaultHeight;
+    tabBarController.tabBarView.tabBarViewEdgeInsets = YALTabBarViewHDefaultEdgeInsets;
+    tabBarController.tabBarView.tabBarItemsEdgeInsets = YALTabBarViewItemsDefaultEdgeInsets;
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {

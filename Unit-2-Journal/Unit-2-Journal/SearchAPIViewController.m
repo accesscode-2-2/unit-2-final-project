@@ -36,7 +36,7 @@ UITextFieldDelegate
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    [self setUpSwipeGestures];
+   // [self setUpSwipeGestures];
 
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
@@ -45,24 +45,24 @@ UITextFieldDelegate
     
 }
 
-#pragma mark - setup swipe gestures
-
-- (void)setUpSwipeGestures
-{
-    UISwipeGestureRecognizer *swipeRight = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(userSwipedRight:)];
-    swipeRight.direction = UISwipeGestureRecognizerDirectionRight;
-    [self.view addGestureRecognizer:swipeRight];
-}
-
-- (void)userSwipedRight:(UISwipeGestureRecognizer*)swipe
-{
-    if (swipe.direction == UISwipeGestureRecognizerDirectionRight) {
-        
-        [self performSegueWithIdentifier:@"pushBackHome" sender:self];
-
-        // [self dismissViewControllerAnimated:YES completion:nil];
-    }
-}
+//#pragma mark - setup swipe gestures
+//
+//- (void)setUpSwipeGestures
+//{
+//    UISwipeGestureRecognizer *swipeRight = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(userSwipedRight:)];
+//    swipeRight.direction = UISwipeGestureRecognizerDirectionRight;
+//    [self.view addGestureRecognizer:swipeRight];
+//}
+//
+//- (void)userSwipedRight:(UISwipeGestureRecognizer*)swipe
+//{
+//    if (swipe.direction == UISwipeGestureRecognizerDirectionRight) {
+//        
+//        [self performSegueWithIdentifier:@"pushBackHome" sender:self];
+//
+//        // [self dismissViewControllerAnimated:YES completion:nil];
+//    }
+//}
 
 #pragma mark - setup buttons
 
