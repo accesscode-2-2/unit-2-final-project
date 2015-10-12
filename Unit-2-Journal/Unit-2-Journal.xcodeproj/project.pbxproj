@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4D7FE2941BCC12050036E58E /* TabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D7FE2931BCC12050036E58E /* TabBarViewController.m */; settings = {ASSET_TAGS = (); }; };
 		4DCBE1321BC98EF90075BA2C /* JournalMainCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DCBE1311BC98EF90075BA2C /* JournalMainCollectionViewController.m */; settings = {ASSET_TAGS = (); }; };
 		4DCBE13C1BC9943D0075BA2C /* big_nerd_ranch.png in Resources */ = {isa = PBXBuildFile; fileRef = 4DCBE1331BC9943D0075BA2C /* big_nerd_ranch.png */; settings = {ASSET_TAGS = (); }; };
 		4DCBE13D1BC9943D0075BA2C /* destroyer.png in Resources */ = {isa = PBXBuildFile; fileRef = 4DCBE1341BC9943D0075BA2C /* destroyer.png */; settings = {ASSET_TAGS = (); }; };
@@ -38,6 +39,8 @@
 /* Begin PBXFileReference section */
 		1F41A29CEEC52ED6A148CCE5 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		2BC0A6490F88476E5C31E3B1 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		4D7FE2921BCC12050036E58E /* TabBarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TabBarViewController.h; sourceTree = "<group>"; };
+		4D7FE2931BCC12050036E58E /* TabBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TabBarViewController.m; sourceTree = "<group>"; };
 		4DCBE1301BC98EF90075BA2C /* JournalMainCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JournalMainCollectionViewController.h; sourceTree = "<group>"; };
 		4DCBE1311BC98EF90075BA2C /* JournalMainCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JournalMainCollectionViewController.m; sourceTree = "<group>"; };
 		4DCBE1331BC9943D0075BA2C /* big_nerd_ranch.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = big_nerd_ranch.png; sourceTree = "<group>"; };
@@ -187,6 +190,8 @@
 				4DCBE14C1BC9ADE00075BA2C /* WishListTableViewController.m */,
 				4DCBE14E1BC9BD800075BA2C /* ViewCompletedEntryViewController.h */,
 				4DCBE14F1BC9BD800075BA2C /* ViewCompletedEntryViewController.m */,
+				4D7FE2921BCC12050036E58E /* TabBarViewController.h */,
+				4D7FE2931BCC12050036E58E /* TabBarViewController.m */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -214,6 +219,7 @@
 				9A2FFC271BC84BF100E880D3 /* Frameworks */,
 				9A2FFC281BC84BF100E880D3 /* Resources */,
 				7C374323F34F7199EEEEB87E /* Copy Pods Resources */,
+				9B427652685F9EFC62D0C14E /* Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -310,6 +316,21 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		9B427652685F9EFC62D0C14E /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -319,6 +340,7 @@
 			files = (
 				9A2FFC321BC84BF200E880D3 /* AppDelegate.m in Sources */,
 				9A34656D1BCACDF40049337C /* iTunesSearchResult.m in Sources */,
+				4D7FE2941BCC12050036E58E /* TabBarViewController.m in Sources */,
 				4DCBE14A1BC9ADAE0075BA2C /* CreateJournalEntryViewController.m in Sources */,
 				5A50331D1BC8D99D001CBA5C /* LoginViewController.m in Sources */,
 				4DCBE1321BC98EF90075BA2C /* JournalMainCollectionViewController.m in Sources */,

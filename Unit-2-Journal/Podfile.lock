@@ -19,6 +19,7 @@ PODS:
     - FBSDKCoreKit
   - FBSDKShareKit (4.7.0):
     - FBSDKCoreKit
+  - FoldingTabBar (1.0.1)
   - ISO8601DateFormatterValueTransformer (0.6.1):
     - RKValueTransformers (~> 1.1.0)
   - Parse (1.9.0):
@@ -44,6 +45,7 @@ DEPENDENCIES:
   - FBSDKCoreKit (~> 4.7)
   - FBSDKLoginKit (~> 4.7)
   - FBSDKShareKit (~> 4.7)
+  - FoldingTabBar (~> 1.0.1)
   - Parse
   - RestKit/Testing (~> 0.24.0)
 
@@ -53,6 +55,7 @@ SPEC CHECKSUMS:
   FBSDKCoreKit: eb580bfc2040ad44f4c0b4f4d0befb1d35bce59c
   FBSDKLoginKit: 01bce8dd3f3a26a023b0ba4ffdde7ef5062889fe
   FBSDKShareKit: 1f927bb05e4d36a99d5d5bf2f4b1ff294ce3e15c
+  FoldingTabBar: 3e04c49dbe2b02c529561a4182bf017b928d04d2
   ISO8601DateFormatterValueTransformer: 52da467d6ec899d6aedda8e48280ac92e8ee97e6
   Parse: 712efbc476d4f47b0f96b70db7e53101575753aa
   RestKit: 1987b5efef289c6b27bd980714d6ca48d3871b78
@@ -60,4 +63,4 @@ SPEC CHECKSUMS:
   SOCKit: c7376ac262bea9115b8f749358f762522a47d392
   TransitionKit: 3a14b6acc7cf2d1dd3e454e24dbad1cfab9a1ef1
 
-COCOAPODS: 0.38.2
+COCOAPODS: 0.39.0
