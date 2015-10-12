@@ -106,9 +106,9 @@
 				DC2DC18D1BCAC0A700A627E2 /* Entry.m */,
 				DC2DC18F1BCAE7E600A627E2 /* Step.h */,
 				DC2DC1901BCAE7E600A627E2 /* Step.m */,
-				5FEAE26B1BCB0D7C00201A0E /* PopAnimation */,
 				5F8FF99D1BC9A9CD00855DFB /* ViewController.h */,
 				5F8FF99E1BC9A9CD00855DFB /* ViewController.m */,
+				5FEAE26B1BCB0D7C00201A0E /* PopAnimation */,
 				5F8FF9A01BC9A9CD00855DFB /* Main.storyboard */,
 				5F8FF9A61BC9A9CD00855DFB /* Assets.xcassets */,
 				5F8FF9A81BC9A9CD00855DFB /* LaunchScreen.storyboard */,
@@ -192,6 +192,7 @@
 				TargetAttributes = {
 					5F8FF9931BC9A9CD00855DFB = {
 						CreatedOnToolsVersion = 7.0;
+						DevelopmentTeam = BULEKXRKSR;
 					};
 				};
 			};
@@ -387,10 +388,13 @@
 			baseConfigurationReference = B57E170B6FA09C54334C0536 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = BreakingBad/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = nyc.c4q.zoufishanmehdi.BreakingBad;
+				PRODUCT_BUNDLE_IDENTIFIER = nyc.c4q.mesfin.BreakingBad;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -399,10 +403,13 @@
 			baseConfigurationReference = 27C4A644526FAE35EDE94530 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = BreakingBad/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = nyc.c4q.zoufishanmehdi.BreakingBad;
+				PRODUCT_BUNDLE_IDENTIFIER = nyc.c4q.mesfin.BreakingBad;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};

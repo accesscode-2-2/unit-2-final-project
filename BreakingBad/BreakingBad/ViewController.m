@@ -40,11 +40,11 @@
     
     Step *step1 = [Step new];
     step1.stepDescription = @"1. No pack for a whole day";
-    step1.completed = @YES;
+    step1.completed = 1;
     
     Step *step2 = [Step new];
     step2.stepDescription = @"1. No pack for a whole week";
-    step2.completed = @NO;
+    step2.completed = 0;
     
     Goal *goal = [Goal new];
     goal.name = @"Quit Smoking";
