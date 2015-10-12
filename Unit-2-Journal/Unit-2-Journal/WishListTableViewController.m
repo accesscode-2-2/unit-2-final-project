@@ -7,6 +7,7 @@
 //
 
 #import "WishListTableViewController.h"
+#import "WishListTableViewCell.h"
 
 @interface WishListTableViewController ()
 
@@ -17,7 +18,15 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-//    [self setUpSwipeGestures];
+
+    //    [self setUpSwipeGestures];
+    
+    // set up custom cell .xib
+    UINib *nib = [UINib nibWithNibName:@"WishListTableViewCell" bundle:nil];
+    [self.tableView registerNib:nib forCellReuseIdentifier:@"WishListTableViewCellIdentifier"];
+    
+    self.tableView.rowHeight = UITableViewAutomaticDimension;
+    self.tableView.estimatedRowHeight = 35.0;
 }
 
 //#pragma  mark - swipe gestures
@@ -49,8 +58,9 @@
     return 5;
 }
 
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"WishListIdentifier" forIndexPath:indexPath];
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    WishListTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"WishListTableViewCellIdentifier" forIndexPath:indexPath];
     
     // Configure the cell...
     

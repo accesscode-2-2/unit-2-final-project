@@ -11,6 +11,7 @@
 #import "APIManager.h"
 #import "iTunesSearchResult.h"
 #import "CreateJournalEntryViewController.h"
+#import "SearchAPITableViewCell.h" // add custom cell
 
 @interface SearchAPIViewController ()
 <
@@ -36,33 +37,18 @@ UITextFieldDelegate
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-   // [self setUpSwipeGestures];
 
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
     self.searchTextField.delegate = self;
     
+    // set up custom cell .xib
+    UINib *nib = [UINib nibWithNibName:@"SearchAPITableViewCell" bundle:nil];
+    [self.tableView registerNib:nib forCellReuseIdentifier:@"SearchAPITableViewCellIdentifier"];
     
+    self.tableView.rowHeight = UITableViewAutomaticDimension;
+    self.tableView.estimatedRowHeight = 35.0;
 }
-
-//#pragma mark - setup swipe gestures
-//
-//- (void)setUpSwipeGestures
-//{
-//    UISwipeGestureRecognizer *swipeRight = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(userSwipedRight:)];
-//    swipeRight.direction = UISwipeGestureRecognizerDirectionRight;
-//    [self.view addGestureRecognizer:swipeRight];
-//}
-//
-//- (void)userSwipedRight:(UISwipeGestureRecognizer*)swipe
-//{
-//    if (swipe.direction == UISwipeGestureRecognizerDirectionRight) {
-//        
-//        [self performSegueWithIdentifier:@"pushBackHome" sender:self];
-//
-//        // [self dismissViewControllerAnimated:YES completion:nil];
-//    }
-//}
 
 #pragma mark - setup buttons
 
@@ -150,21 +136,22 @@ UITextFieldDelegate
     return YES;
 }
 
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return self.searchResults.count;
-
-}
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
     return 1;
 }
 
--(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"APIResultsIdentifier" forIndexPath:indexPath];
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+    return self.searchResults.count;
+}
+
+-(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    SearchAPITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"SearchAPITableViewCellIdentifier" forIndexPath:indexPath];
    
     iTunesSearchResult *searchResult = self.searchResults[indexPath.row];
     
-    cell.textLabel.text = searchResult.albumOrMovieName;
-    cell.detailTextLabel.text = searchResult.artistName;
+    cell.titleLabel.text = searchResult.albumOrMovieName;
+    cell.authorArtistDirectorLabel.text = searchResult.artistName;
     
     NSString *artworkString = searchResult.artworkURL;
     NSURL *artworkURL = [NSURL URLWithString:artworkString];
@@ -176,7 +163,7 @@ UITextFieldDelegate
 //    NSLog(@"Image Data: %@", artworkData);
 //    NSLog(@"Image: %@", artworkImage);
     
-    cell.imageView.image = artworkImage;
+    cell.artworkImage.image = artworkImage;
     
     cell.imageView.layer.borderWidth = 2.0;
     cell.imageView.layer.borderColor = [UIColor blackColor].CGColor;
