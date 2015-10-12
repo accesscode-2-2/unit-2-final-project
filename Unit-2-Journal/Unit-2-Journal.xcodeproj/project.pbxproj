@@ -147,6 +147,7 @@
 				9A2FFC311BC84BF200E880D3 /* AppDelegate.m */,
 				9AAB40031BC9ECAA00FD7227 /* Classes & Managers */,
 				9AAB40021BC9EC7300FD7227 /* ViewControllers */,
+				9A2FFC361BC84BF200E880D3 /* Main.storyboard */,
 				9A2FFC3C1BC84BF200E880D3 /* Assets.xcassets */,
 				9A2FFC3E1BC84BF200E880D3 /* LaunchScreen.storyboard */,
 				9A2FFC411BC84BF200E880D3 /* Info.plist */,
@@ -186,7 +187,6 @@
 				4DCBE14C1BC9ADE00075BA2C /* WishListTableViewController.m */,
 				4DCBE14E1BC9BD800075BA2C /* ViewCompletedEntryViewController.h */,
 				4DCBE14F1BC9BD800075BA2C /* ViewCompletedEntryViewController.m */,
-				9A2FFC361BC84BF200E880D3 /* Main.storyboard */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";

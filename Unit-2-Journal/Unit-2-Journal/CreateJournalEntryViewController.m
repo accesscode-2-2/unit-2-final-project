@@ -10,37 +10,87 @@
 
 @interface CreateJournalEntryViewController () <UITextViewDelegate>
 
+@property (strong, nonatomic) IBOutlet UILabel *movieOrAlbumNameLabel;
+@property (strong, nonatomic) IBOutlet UILabel *artistNameLabel;
+@property (strong, nonatomic) IBOutlet UIImageView *artworkImageView;
+@property (strong, nonatomic) IBOutlet UITextView *textView;
+@property (strong, nonatomic) IBOutlet UIButton *doneEditingButton;
+
+@property (strong, nonatomic) IBOutlet UIButton *starButtonOne;
 @end
 
 @implementation CreateJournalEntryViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    self.doneEditingButton.hidden = YES;
+    
+    self.textView.delegate = self;
+    self.textView.text = @"Write your thoughts here...";
+    self.textView.layer.borderWidth = 1.0f;
+    self.textView.layer.cornerRadius = 5.0f;
+    self.textView.layer.borderColor = [UIColor grayColor].CGColor;
    
     NSLog(@"Data has been passed: %@",self.postSearchResult);
-}
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
-
-#pragma mark - save items
-
-- (IBAction)saveAndAddToCompletedButtonTapped:(id)sender {
+    
+    self.movieOrAlbumNameLabel.text = self.postSearchResult.albumOrMovieName;
+    self.artistNameLabel.text = self.postSearchResult.artistName;
+    
+    NSURL *artworkURL = [NSURL URLWithString:self.postSearchResult.artworkURL];
+    NSData *artworkData = [NSData dataWithContentsOfURL:artworkURL];
+    UIImage *artworkImage = [UIImage imageWithData:artworkData];
+    
+    self.artworkImageView.image = artworkImage;
     
 }
 
+//- (void)textViewDidEndEditing:(UITextView *)textView{
+//    [self.textView resignFirstResponder];
+//}
+- (void) textViewDidBeginEditing:(UITextView *)textView{
+    self.textView.text = @"";
+    
+    self.doneEditingButton.hidden = NO;
+}
+
+- (IBAction)doneEditingTapped:(id)sender {
+    
+    self.doneEditingButton.hidden = YES;
+    
+//    if (self.textView.text == nil){
+//        self.textView.text = @"Write your thoughts here...";
+//    }
+//    
+//    [self.textView reloadInputViews];
+    
+    [[[UIApplication sharedApplication] keyWindow] endEditing:YES];
+
+}
+- (IBAction)starButtonTapped:(id)sender {
+    
+    self.starButtonOne.tintColor = [UIColor yellowColor];
+    
+}
+
+
+
+
+#pragma mark - save items
+
+
+- (IBAction)logToJournalButtonTapped:(id)sender {
+}
+
+/*
+ #pragma mark - Navigation
+ 
+ // In a storyboard-based application, you will often want to do a little preparation before navigation
+ - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+ // Get the new view controller using [segue destinationViewController].
+ // Pass the selected object to the new view controller.
+ }
+ */
 
 
 @end

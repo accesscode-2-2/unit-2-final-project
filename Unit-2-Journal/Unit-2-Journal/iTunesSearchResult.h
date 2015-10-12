@@ -15,5 +15,4 @@
 @property (nonatomic) NSString *artworkURL;
 
 
-
 @end
