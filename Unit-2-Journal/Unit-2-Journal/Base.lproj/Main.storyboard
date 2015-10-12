@@ -599,7 +599,7 @@
                                         </state>
                                         <connections>
                                             <action selector="logToJournalButtonTapped:" destination="aXS-um-aw2" eventType="touchUpInside" id="bF7-vG-sm2"/>
-                                            <segue destination="WZe-UX-wgc" kind="show" identifier="logToJournalSegue" id="j87-kS-bSt"/>
+                                            <segue destination="Gih-78-N3X" kind="show" identifier="logToJournalSegue" id="uPF-D8-Ln2"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -961,6 +961,6 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="a4i-zx-cvK"/>
-        <segue reference="j87-kS-bSt"/>
+        <segue reference="uPF-D8-Ln2"/>
     </inferredMetricsTieBreakers>
 </document>

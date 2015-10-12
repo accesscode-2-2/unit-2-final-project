@@ -13,6 +13,7 @@
 @dynamic artistName;
 @dynamic artworkURL;
 @dynamic albumOrMovieName;
+@dynamic addedDate; 
 
 
 +(NSString *)parseClassName {
