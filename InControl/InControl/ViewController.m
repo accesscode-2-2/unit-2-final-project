@@ -102,60 +102,68 @@
 
 - (void)sidebar:(RNFrostedSidebar *)sidebar didTapItemAtIndex:(NSUInteger)index {
     NSLog(@"Tapped item at index %lu",(unsigned long)index);
-    if (index == 0) {
-    
+    if (index == 0) { //search Bar
+        
         self.searchBar.hidden = NO;
         self.goButton.hidden = NO;
         [sidebar dismissAnimated:YES completion:nil];
-
+        
     }
     
-    if (index == 1) {
-        self.budgetView.hidden = NO;
-
-        [sidebar dismissAnimated:YES completion:nil];
+    if (index == 1) { //budget
         
-    }
-    if (index == 2) {
-        NSLog(@"food");
-        
-        FoodViewController * vc = [self.storyboard instantiateViewControllerWithIdentifier:@"FoodID"];
-        [self presentViewController:vc animated:YES completion:nil];
-        [sidebar dismissAnimated:YES completion:^(BOOL finished) {
+//        if ([self.searchBar.text isEqualToString:@""]) {
+//            [self EmptySearchBarAlert];
+//        }
+//        else {
+            self.budgetView.hidden = NO;
             
-         }];
-  
+            [sidebar dismissAnimated:YES completion:nil];
+        //}
     }
-    
-    if (index == 3) {
-        NSLog(@"hotel");
-
-        HotelViewController * vc = [self.storyboard instantiateViewControllerWithIdentifier:@"HotelID"];
-        [self presentViewController:vc animated:YES completion:nil];
-        [sidebar dismissAnimated:YES completion:^(BOOL finished) {
+    if (index == 2) { //food
+        
+            FoodViewController * vc = [self.storyboard instantiateViewControllerWithIdentifier:@"FoodID"];
+            [self presentViewController:vc animated:YES completion:nil];
+            [sidebar dismissAnimated:YES completion:^(BOOL finished) {
+                
+            }];
+    }
+    if (index == 3) { //hotel
+        
+            HotelViewController * vc = [self.storyboard instantiateViewControllerWithIdentifier:@"HotelID"];
+            [self presentViewController:vc animated:YES completion:nil];
+            [sidebar dismissAnimated:YES completion:^(BOOL finished) {
+            }];
+        
+    }
+    if (index == 4) { //image
+        
+            ImageTableViewController * vc = [self.storyboard instantiateViewControllerWithIdentifier:@"ImageID"];
+            [self presentViewController:vc animated:YES completion:nil];
             
-        }];
-
+            [sidebar dismissAnimated:YES completion:^(BOOL finished) {
+            }];
     }
-    if (index == 4) {
-        NSLog(@"image");
-        
-        ImageTableViewController * vc = [self.storyboard instantiateViewControllerWithIdentifier:@"ImageID"];
-        [self presentViewController:vc animated:YES completion:nil];
-//        [self.navigationController pushViewController:vc animated:YES];
-        
-        [sidebar dismissAnimated:YES completion:^(BOOL finished) {
-            
-        }];
-        
-    }
-    
-    
-    
-    
-
-    
 }
+
+-(void) EmptySearchBarAlert {
+    
+    UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"NEW TRIP ? ✈️" message:@"Please tell me your next destination 😉 " preferredStyle: UIAlertControllerStyleAlert];
+    
+    UIAlertAction *okAction = [UIAlertAction
+                               actionWithTitle:NSLocalizedString(@"OK", @"OK action")
+                               style:UIAlertActionStyleDefault
+                               handler:^(UIAlertAction *action)
+                               {
+                                   NSLog(@"OK action");
+                               }];
+    
+    [alert addAction:okAction];
+    [self presentViewController:alert animated:YES completion:nil];
+}
+
+
 - (IBAction)budgetViewButton:(id)sender {
     self.budgetView.hidden=YES;
     [self ShowMenu];
