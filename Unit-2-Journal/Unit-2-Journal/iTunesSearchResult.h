@@ -6,6 +6,7 @@
 //  Copyright © 2015 Jamaal Sedayao. All rights reserved.
 //
 
+#import <Parse/PFObject+Subclass.h>
 #import "PFObject.h"
 
 @interface iTunesSearchResult : PFObject <PFSubclassing>

@@ -24,30 +24,26 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    NSLog(@"Data has been passed: %@",self.postSearchResult);
+    
     self.doneEditingButton.hidden = YES;
     
+    //manage textview
     self.textView.delegate = self;
     self.textView.text = @"Write your thoughts here...";
     self.textView.layer.borderWidth = 1.0f;
     self.textView.layer.cornerRadius = 5.0f;
     self.textView.layer.borderColor = [UIColor grayColor].CGColor;
    
-    NSLog(@"Data has been passed: %@",self.postSearchResult);
-    
+    //populate journal header
     self.movieOrAlbumNameLabel.text = self.postSearchResult.albumOrMovieName;
     self.artistNameLabel.text = self.postSearchResult.artistName;
-    
     NSURL *artworkURL = [NSURL URLWithString:self.postSearchResult.artworkURL];
     NSData *artworkData = [NSData dataWithContentsOfURL:artworkURL];
     UIImage *artworkImage = [UIImage imageWithData:artworkData];
-    
     self.artworkImageView.image = artworkImage;
     
 }
-
-//- (void)textViewDidEndEditing:(UITextView *)textView{
-//    [self.textView resignFirstResponder];
-//}
 - (void) textViewDidBeginEditing:(UITextView *)textView{
     self.textView.text = @"";
     
@@ -58,12 +54,6 @@
     
     self.doneEditingButton.hidden = YES;
     
-//    if (self.textView.text == nil){
-//        self.textView.text = @"Write your thoughts here...";
-//    }
-//    
-//    [self.textView reloadInputViews];
-    
     [[[UIApplication sharedApplication] keyWindow] endEditing:YES];
 
 }
@@ -72,9 +62,6 @@
     self.starButtonOne.tintColor = [UIColor yellowColor];
     
 }
-
-
-
 
 #pragma mark - save items
 
