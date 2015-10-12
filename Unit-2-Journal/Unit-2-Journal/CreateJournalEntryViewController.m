@@ -7,6 +7,7 @@
 //
 
 #import "CreateJournalEntryViewController.h"
+#import "JournalPost.h"
 
 @interface CreateJournalEntryViewController () <UITextViewDelegate>
 
@@ -67,6 +68,14 @@
 
 
 - (IBAction)logToJournalButtonTapped:(id)sender {
+    
+    JournalPost *journalPost = [[JournalPost alloc]init];
+    
+    journalPost.postText = self.textView.text;
+    journalPost.postSubject = self.postSearchResult;
+    
+    NSLog(@"Journal Post: %@",journalPost);
+    
 }
 
 /*

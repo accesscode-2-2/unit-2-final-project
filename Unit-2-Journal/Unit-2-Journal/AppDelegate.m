@@ -11,6 +11,7 @@
 #import <FBSDKLoginKit/FBSDKLoginButton.h>
 #import <Parse/Parse.h>
 #import "iTunesSearchResult.h"
+#import "JournalPost.h"
 
 //for custom tab bar:
 #import "YALTabBarItem.h" //model
@@ -38,7 +39,9 @@
     [Parse setApplicationId:@"huGlqbY2KVINDuFfqju1fN0eB2QVANcqqHP0NVpY"
                   clientKey:@"aohlSqEhCwaXtZbji5us0j97GNzemWqq3m3EJqwG"];
     
+    //registering subclases to parse
     [iTunesSearchResult registerSubclass];
+    [JournalPost registerSubclass];
     
     [self setupYALTabBarController]; // setup tab bar controller
     

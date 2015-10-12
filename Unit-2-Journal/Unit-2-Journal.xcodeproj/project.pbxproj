@@ -26,6 +26,7 @@
 		5A50331D1BC8D99D001CBA5C /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A50331C1BC8D99D001CBA5C /* LoginViewController.m */; settings = {ASSET_TAGS = (); }; };
 		5A5033201BC8D9B5001CBA5C /* SignUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A50331F1BC8D9B5001CBA5C /* SignUpViewController.m */; settings = {ASSET_TAGS = (); }; };
 		617F8769EFBE79517A02E6D0 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FAF24AD380284C55768010A2 /* libPods.a */; };
+		9A2937201BCC26FE00ACEEE0 /* JournalPost.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A29371F1BCC26FE00ACEEE0 /* JournalPost.m */; settings = {ASSET_TAGS = (); }; };
 		9A2FFC2F1BC84BF200E880D3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A2FFC2E1BC84BF200E880D3 /* main.m */; };
 		9A2FFC321BC84BF200E880D3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A2FFC311BC84BF200E880D3 /* AppDelegate.m */; };
 		9A2FFC381BC84BF200E880D3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9A2FFC361BC84BF200E880D3 /* Main.storyboard */; };
@@ -66,6 +67,8 @@
 		5A50331C1BC8D99D001CBA5C /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		5A50331E1BC8D9B5001CBA5C /* SignUpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignUpViewController.h; sourceTree = "<group>"; };
 		5A50331F1BC8D9B5001CBA5C /* SignUpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignUpViewController.m; sourceTree = "<group>"; };
+		9A29371E1BCC26FE00ACEEE0 /* JournalPost.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JournalPost.h; sourceTree = "<group>"; };
+		9A29371F1BCC26FE00ACEEE0 /* JournalPost.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JournalPost.m; sourceTree = "<group>"; };
 		9A2FFC2A1BC84BF200E880D3 /* Unit-2-Journal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Unit-2-Journal.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A2FFC2E1BC84BF200E880D3 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		9A2FFC301BC84BF200E880D3 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -203,6 +206,8 @@
 				9AAB40051BC9FABC00FD7227 /* APIManager.m */,
 				9A34656B1BCACDF40049337C /* iTunesSearchResult.h */,
 				9A34656C1BCACDF40049337C /* iTunesSearchResult.m */,
+				9A29371E1BCC26FE00ACEEE0 /* JournalPost.h */,
+				9A29371F1BCC26FE00ACEEE0 /* JournalPost.m */,
 			);
 			name = "Classes & Managers";
 			sourceTree = "<group>";
@@ -346,6 +351,7 @@
 				4DCBE1321BC98EF90075BA2C /* JournalMainCollectionViewController.m in Sources */,
 				4DCBE1471BC9AD6A0075BA2C /* SearchAPIViewController.m in Sources */,
 				9A2FFC3B1BC84BF200E880D3 /* Unit_2_Journal.xcdatamodeld in Sources */,
+				9A2937201BCC26FE00ACEEE0 /* JournalPost.m in Sources */,
 				4DCBE14D1BC9ADE00075BA2C /* WishListTableViewController.m in Sources */,
 				5A50331A1BC8D0E4001CBA5C /* MainTableViewController.m in Sources */,
 				9AAB40061BC9FABC00FD7227 /* APIManager.m in Sources */,
