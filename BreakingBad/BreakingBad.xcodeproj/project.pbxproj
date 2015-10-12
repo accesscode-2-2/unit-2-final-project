@@ -24,6 +24,7 @@
 		DC2DC18E1BCAC0A700A627E2 /* Entry.m in Sources */ = {isa = PBXBuildFile; fileRef = DC2DC18D1BCAC0A700A627E2 /* Entry.m */; settings = {ASSET_TAGS = (); }; };
 		DC2DC1911BCAE7E600A627E2 /* Step.m in Sources */ = {isa = PBXBuildFile; fileRef = DC2DC1901BCAE7E600A627E2 /* Step.m */; settings = {ASSET_TAGS = (); }; };
 		DC2DC1941BCAEB8D00A627E2 /* BBUser.m in Sources */ = {isa = PBXBuildFile; fileRef = DC2DC1931BCAEB8D00A627E2 /* BBUser.m */; settings = {ASSET_TAGS = (); }; };
+		DC51A76B1BCC4CD60044984B /* HabitList.m in Sources */ = {isa = PBXBuildFile; fileRef = DC51A76A1BCC4CD60044984B /* HabitList.m */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -59,6 +60,8 @@
 		DC2DC1901BCAE7E600A627E2 /* Step.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Step.m; sourceTree = "<group>"; };
 		DC2DC1921BCAEB8D00A627E2 /* BBUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BBUser.h; sourceTree = "<group>"; };
 		DC2DC1931BCAEB8D00A627E2 /* BBUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BBUser.m; sourceTree = "<group>"; };
+		DC51A7691BCC4CD60044984B /* HabitList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HabitList.h; sourceTree = "<group>"; };
+		DC51A76A1BCC4CD60044984B /* HabitList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HabitList.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,18 +99,11 @@
 			children = (
 				5F8FF99A1BC9A9CD00855DFB /* AppDelegate.h */,
 				5F8FF99B1BC9A9CD00855DFB /* AppDelegate.m */,
-				DC2DC1921BCAEB8D00A627E2 /* BBUser.h */,
-				DC2DC1931BCAEB8D00A627E2 /* BBUser.m */,
-				DC2DC1861BCAC00500A627E2 /* Habit.h */,
-				DC2DC1871BCAC00500A627E2 /* Habit.m */,
-				DC2DC1891BCAC08700A627E2 /* Goal.h */,
-				DC2DC18A1BCAC08700A627E2 /* Goal.m */,
-				DC2DC18C1BCAC0A700A627E2 /* Entry.h */,
-				DC2DC18D1BCAC0A700A627E2 /* Entry.m */,
-				DC2DC18F1BCAE7E600A627E2 /* Step.h */,
-				DC2DC1901BCAE7E600A627E2 /* Step.m */,
 				5F8FF99D1BC9A9CD00855DFB /* ViewController.h */,
 				5F8FF99E1BC9A9CD00855DFB /* ViewController.m */,
+				DC51A7691BCC4CD60044984B /* HabitList.h */,
+				DC51A76A1BCC4CD60044984B /* HabitList.m */,
+				DC51A7651BCC1D4A0044984B /* BBModel */,
 				5FEAE26B1BCB0D7C00201A0E /* PopAnimation */,
 				5F8FF9A01BC9A9CD00855DFB /* Main.storyboard */,
 				5F8FF9A61BC9A9CD00855DFB /* Assets.xcassets */,
@@ -157,6 +153,23 @@
 				288369826A80E7C37FA68C71 /* libPods.a */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DC51A7651BCC1D4A0044984B /* BBModel */ = {
+			isa = PBXGroup;
+			children = (
+				DC2DC1921BCAEB8D00A627E2 /* BBUser.h */,
+				DC2DC1931BCAEB8D00A627E2 /* BBUser.m */,
+				DC2DC1861BCAC00500A627E2 /* Habit.h */,
+				DC2DC1871BCAC00500A627E2 /* Habit.m */,
+				DC2DC1891BCAC08700A627E2 /* Goal.h */,
+				DC2DC18A1BCAC08700A627E2 /* Goal.m */,
+				DC2DC18C1BCAC0A700A627E2 /* Entry.h */,
+				DC2DC18D1BCAC0A700A627E2 /* Entry.m */,
+				DC2DC18F1BCAE7E600A627E2 /* Step.h */,
+				DC2DC1901BCAE7E600A627E2 /* Step.m */,
+			);
+			name = BBModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -277,6 +290,7 @@
 				5F8FF9A51BC9A9CD00855DFB /* BreakingBad.xcdatamodeld in Sources */,
 				5FEAE2711BCB126700201A0E /* DismissingAnimationController.m in Sources */,
 				DC2DC1941BCAEB8D00A627E2 /* BBUser.m in Sources */,
+				DC51A76B1BCC4CD60044984B /* HabitList.m in Sources */,
 				5F8FF9991BC9A9CD00855DFB /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

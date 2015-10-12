@@ -3,7 +3,6 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
@@ -44,9 +43,6 @@
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OTd-aX-ge7">
-                                        <rect key="frame" x="167" y="0.0" width="417" height="174"/>
-                                    </pickerView>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oc0-Rq-scI">
                                         <rect key="frame" x="152" y="194" width="440" height="30"/>
                                         <constraints>
@@ -61,25 +57,51 @@
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oUV-eW-sGs">
+                                        <rect key="frame" x="188" y="8" width="225" height="146"/>
+                                        <subviews>
+                                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iGG-eq-J42">
+                                                <rect key="frame" x="0.0" y="0.0" width="225" height="146"/>
+                                            </pickerView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="iGG-eq-J42" secondAttribute="trailing" id="BpN-1N-sGq"/>
+                                            <constraint firstAttribute="width" constant="225" id="DXZ-rs-NTs"/>
+                                            <constraint firstAttribute="height" constant="150" id="TIx-e8-rAW"/>
+                                            <constraint firstAttribute="height" constant="100" id="Z6H-Gy-g7X"/>
+                                            <constraint firstItem="iGG-eq-J42" firstAttribute="leading" secondItem="oUV-eW-sGs" secondAttribute="leading" id="dAF-hY-MbY"/>
+                                            <constraint firstItem="iGG-eq-J42" firstAttribute="top" secondItem="oUV-eW-sGs" secondAttribute="top" id="dZc-zA-glO"/>
+                                            <constraint firstAttribute="bottom" secondItem="iGG-eq-J42" secondAttribute="bottom" id="u27-yD-2cq"/>
+                                        </constraints>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="TIx-e8-rAW"/>
+                                                <exclude reference="Z6H-Gy-g7X"/>
+                                            </mask>
+                                        </variation>
+                                    </view>
                                 </subviews>
                                 <color key="backgroundColor" red="0.88222064389999999" green="0.44719244889999998" blue="0.034063707169999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstItem="oc0-Rq-scI" firstAttribute="top" secondItem="OTd-aX-ge7" secondAttribute="bottom" constant="20" id="07T-ab-HZ4"/>
                                     <constraint firstItem="oc0-Rq-scI" firstAttribute="leading" secondItem="6Pa-AS-f5W" secondAttribute="trailing" constant="1" id="1KQ-W6-Cck"/>
                                     <constraint firstAttribute="bottom" secondItem="6Pa-AS-f5W" secondAttribute="bottom" constant="20" id="2ZN-qg-Tvc"/>
-                                    <constraint firstItem="OTd-aX-ge7" firstAttribute="top" secondItem="ZBu-eh-u5R" secondAttribute="top" id="D00-LD-Eom"/>
+                                    <constraint firstItem="r70-SD-oxn" firstAttribute="leading" secondItem="ZBu-eh-u5R" secondAttribute="leading" constant="8" id="4Av-d2-c0W"/>
                                     <constraint firstItem="r70-SD-oxn" firstAttribute="top" secondItem="ZBu-eh-u5R" secondAttribute="top" constant="16" id="Lp4-VQ-31N"/>
                                     <constraint firstItem="6Pa-AS-f5W" firstAttribute="leading" secondItem="ZBu-eh-u5R" secondAttribute="leading" constant="7" id="N9L-BX-RDd"/>
-                                    <constraint firstItem="OTd-aX-ge7" firstAttribute="leading" secondItem="r70-SD-oxn" secondAttribute="trailing" constant="113" id="S2b-Vc-BZ0"/>
-                                    <constraint firstAttribute="trailingMargin" secondItem="OTd-aX-ge7" secondAttribute="trailing" constant="8" id="deh-By-h5U"/>
+                                    <constraint firstItem="oUV-eW-sGs" firstAttribute="centerX" secondItem="ZBu-eh-u5R" secondAttribute="centerX" id="Y5W-KO-wuY"/>
                                     <constraint firstAttribute="bottom" secondItem="oc0-Rq-scI" secondAttribute="bottom" constant="16" id="eWC-lQ-vuO"/>
                                     <constraint firstAttribute="trailing" secondItem="oc0-Rq-scI" secondAttribute="trailing" constant="8" id="ioG-2i-9Zi"/>
+                                    <constraint firstItem="oUV-eW-sGs" firstAttribute="top" secondItem="ZBu-eh-u5R" secondAttribute="top" constant="8" id="kwu-S3-v5l"/>
+                                    <constraint firstItem="oc0-Rq-scI" firstAttribute="top" secondItem="oUV-eW-sGs" secondAttribute="bottom" constant="36" id="mEa-tL-BcF"/>
                                     <constraint firstItem="r70-SD-oxn" firstAttribute="leading" secondItem="ZBu-eh-u5R" secondAttribute="leading" constant="8" id="mmN-5t-E3f"/>
+                                    <constraint firstItem="oc0-Rq-scI" firstAttribute="top" secondItem="oUV-eW-sGs" secondAttribute="bottom" constant="40" id="phx-Bk-D9a"/>
                                     <constraint firstAttribute="bottom" secondItem="6Pa-AS-f5W" secondAttribute="bottom" constant="20" id="rOd-jG-fYV"/>
                                 </constraints>
                                 <variation key="default">
                                     <mask key="constraints">
+                                        <exclude reference="mmN-5t-E3f"/>
                                         <exclude reference="2ZN-qg-Tvc"/>
+                                        <exclude reference="mEa-tL-BcF"/>
                                     </mask>
                                 </variation>
                             </view>
@@ -187,6 +209,9 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="habitsPickerView" destination="iGG-eq-J42" id="N73-Dy-wTn"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="um1-vB-9fe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

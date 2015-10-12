@@ -14,6 +14,15 @@
 
 - (IBAction)didClickClose:(id)sender {
     
+    PFUser *thisUser = [PFUser user];
+    if(![[thisUser objectForKey:@"emailVerified"] boolValue]){
+        [thisUser fetch];
+    }
+//    if (![[thisUser objectForKey:@"emailVerified"] boolValue]) {
+//        [self redirectWithMessage:@"You must verify your email address for cake"];
+//        return;
+//    }
+    
     if ([self.passwordTextField.text isEqualToString:self.confirmPasswordTextField.text] && self.passwordTextField.text.length !=0) {
         PFUser *thisUser = [PFUser user];
         thisUser.email = self.emailTextField.text;
