@@ -714,7 +714,7 @@
                                 </tableViewCellContentView>
                                 <animations/>
                                 <connections>
-                                    <segue destination="aXS-um-aw2" kind="show" id="fje-S5-GG0"/>
+                                    <segue destination="aXS-um-aw2" kind="show" id="Ggq-sb-ccX"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -960,6 +960,6 @@
         <image name="star" width="24" height="24"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="a4i-zx-cvK"/>
+        <segue reference="Ggq-sb-ccX"/>
     </inferredMetricsTieBreakers>
 </document>
