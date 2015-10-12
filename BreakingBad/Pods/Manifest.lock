@@ -2,12 +2,15 @@ PODS:
   - Bolts/Tasks (1.3.0)
   - Parse (1.9.0):
     - Bolts/Tasks (>= 1.3.0)
+  - pop (1.0.8)
 
 DEPENDENCIES:
   - Parse
+  - pop (~> 1.0)
 
 SPEC CHECKSUMS:
   Bolts: 805a4a87413e49d4a0c2b7d469084cbc46b09342
   Parse: 712efbc476d4f47b0f96b70db7e53101575753aa
+  pop: bb773ae2c791ca2629de13b347e7a8b450fa6a57
 
 COCOAPODS: 0.38.2

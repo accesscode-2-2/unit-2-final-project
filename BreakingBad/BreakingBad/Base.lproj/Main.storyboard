@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="eFl-bJ-oI1">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8164.2" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="eFl-bJ-oI1">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8135.1"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
@@ -26,7 +26,7 @@
         <!--View Controller-->
         <scene sceneID="2XW-uj-uc2">
             <objects>
-                <viewController id="tdt-Sk-XM9" customClass="ViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="openCustomTransition" id="tdt-Sk-XM9" customClass="ViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="HsC-4t-tBN"/>
                         <viewControllerLayoutGuide type="bottom" id="Xoy-hi-v3h"/>
@@ -192,10 +192,10 @@
             </objects>
             <point key="canvasLocation" x="222" y="312"/>
         </scene>
-        <!--View Controller-->
+        <!--CustomVC Transition View Controller-->
         <scene sceneID="RRj-ne-QXh">
             <objects>
-                <viewController id="wYD-HK-GAx" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="customVC" id="wYD-HK-GAx" customClass="CustomVCTransitionViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="wAU-Cr-F1E"/>
                         <viewControllerLayoutGuide type="bottom" id="GLR-Kb-6nY"/>
@@ -209,6 +209,9 @@
                                 <state key="normal" title="Enter">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="didClickEnter:" destination="wYD-HK-GAx" eventType="touchUpInside" id="SEk-kG-Tn3"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.17780689659999999" green="0.28700592250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -222,10 +225,10 @@
             </objects>
             <point key="canvasLocation" x="879" y="312"/>
         </scene>
-        <!--View Controller-->
+        <!--Custom Modal View Controller-->
         <scene sceneID="ZoE-cm-10B">
             <objects>
-                <viewController id="wOd-6P-EI5" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="customModal" useStoryboardIdentifierAsRestorationIdentifier="YES" id="wOd-6P-EI5" customClass="CustomModalViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="2j3-Mt-Qbj"/>
                         <viewControllerLayoutGuide type="bottom" id="o59-vE-pww"/>
@@ -233,13 +236,28 @@
                     <view key="view" contentMode="scaleToFill" id="eNN-80-cCu">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5wc-PF-839" userLabel="Close">
+                                <rect key="frame" x="277" y="285" width="46" height="30"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="didClickClose:" destination="wOd-6P-EI5" eventType="touchUpInside" id="jWT-9z-rIw"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="0.88222064389999999" green="0.18356511040000001" blue="0.25349382860000003" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="tintColor" red="1" green="0.16948668189999999" blue="0.1192984647" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="5wc-PF-839" firstAttribute="centerY" secondItem="eNN-80-cCu" secondAttribute="centerY" id="ERC-5S-cQp"/>
+                            <constraint firstItem="5wc-PF-839" firstAttribute="centerX" secondItem="eNN-80-cCu" secondAttribute="centerX" id="NG2-ef-qdL"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5gF-Rh-BqW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1636" y="-318"/>
+            <point key="canvasLocation" x="1518" y="312"/>
         </scene>
     </scenes>
 </document>

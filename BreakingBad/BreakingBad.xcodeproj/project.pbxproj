@@ -15,6 +15,10 @@
 		5F8FF9A51BC9A9CD00855DFB /* BreakingBad.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5F8FF9A31BC9A9CD00855DFB /* BreakingBad.xcdatamodeld */; };
 		5F8FF9A71BC9A9CD00855DFB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5F8FF9A61BC9A9CD00855DFB /* Assets.xcassets */; };
 		5F8FF9AA1BC9A9CD00855DFB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5F8FF9A81BC9A9CD00855DFB /* LaunchScreen.storyboard */; };
+		5FEAE2611BCB053F00201A0E /* CustomVCTransitionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FEAE2601BCB053F00201A0E /* CustomVCTransitionViewController.m */; };
+		5FEAE2641BCB055A00201A0E /* CustomModalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FEAE2631BCB055A00201A0E /* CustomModalViewController.m */; };
+		5FEAE26E1BCB125A00201A0E /* PresentingAnimationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FEAE26D1BCB125A00201A0E /* PresentingAnimationController.m */; };
+		5FEAE2711BCB126700201A0E /* DismissingAnimationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FEAE2701BCB126700201A0E /* DismissingAnimationController.m */; };
 		DC2DC1881BCAC00500A627E2 /* Habit.m in Sources */ = {isa = PBXBuildFile; fileRef = DC2DC1871BCAC00500A627E2 /* Habit.m */; settings = {ASSET_TAGS = (); }; };
 		DC2DC18B1BCAC08700A627E2 /* Goal.m in Sources */ = {isa = PBXBuildFile; fileRef = DC2DC18A1BCAC08700A627E2 /* Goal.m */; settings = {ASSET_TAGS = (); }; };
 		DC2DC18E1BCAC0A700A627E2 /* Entry.m in Sources */ = {isa = PBXBuildFile; fileRef = DC2DC18D1BCAC0A700A627E2 /* Entry.m */; settings = {ASSET_TAGS = (); }; };
@@ -36,6 +40,14 @@
 		5F8FF9A61BC9A9CD00855DFB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5F8FF9A91BC9A9CD00855DFB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5F8FF9AB1BC9A9CD00855DFB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5FEAE25F1BCB053F00201A0E /* CustomVCTransitionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomVCTransitionViewController.h; sourceTree = "<group>"; };
+		5FEAE2601BCB053F00201A0E /* CustomVCTransitionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomVCTransitionViewController.m; sourceTree = "<group>"; };
+		5FEAE2621BCB055A00201A0E /* CustomModalViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomModalViewController.h; sourceTree = "<group>"; };
+		5FEAE2631BCB055A00201A0E /* CustomModalViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomModalViewController.m; sourceTree = "<group>"; };
+		5FEAE26C1BCB125100201A0E /* PresentingAnimationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PresentingAnimationController.h; sourceTree = "<group>"; };
+		5FEAE26D1BCB125A00201A0E /* PresentingAnimationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PresentingAnimationController.m; sourceTree = "<group>"; };
+		5FEAE26F1BCB126200201A0E /* DismissingAnimationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DismissingAnimationController.h; sourceTree = "<group>"; };
+		5FEAE2701BCB126700201A0E /* DismissingAnimationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DismissingAnimationController.m; sourceTree = "<group>"; };
 		B57E170B6FA09C54334C0536 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		DC2DC1861BCAC00500A627E2 /* Habit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Habit.h; sourceTree = "<group>"; };
 		DC2DC1871BCAC00500A627E2 /* Habit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Habit.m; sourceTree = "<group>"; };
@@ -94,6 +106,7 @@
 				DC2DC18D1BCAC0A700A627E2 /* Entry.m */,
 				DC2DC18F1BCAE7E600A627E2 /* Step.h */,
 				DC2DC1901BCAE7E600A627E2 /* Step.m */,
+				5FEAE26B1BCB0D7C00201A0E /* PopAnimation */,
 				5F8FF99D1BC9A9CD00855DFB /* ViewController.h */,
 				5F8FF99E1BC9A9CD00855DFB /* ViewController.m */,
 				5F8FF9A01BC9A9CD00855DFB /* Main.storyboard */,
@@ -112,6 +125,21 @@
 				5F8FF9981BC9A9CD00855DFB /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		5FEAE26B1BCB0D7C00201A0E /* PopAnimation */ = {
+			isa = PBXGroup;
+			children = (
+				5FEAE25F1BCB053F00201A0E /* CustomVCTransitionViewController.h */,
+				5FEAE2601BCB053F00201A0E /* CustomVCTransitionViewController.m */,
+				5FEAE2621BCB055A00201A0E /* CustomModalViewController.h */,
+				5FEAE2631BCB055A00201A0E /* CustomModalViewController.m */,
+				5FEAE26C1BCB125100201A0E /* PresentingAnimationController.h */,
+				5FEAE26D1BCB125A00201A0E /* PresentingAnimationController.m */,
+				5FEAE2701BCB126700201A0E /* DismissingAnimationController.m */,
+				5FEAE26F1BCB126200201A0E /* DismissingAnimationController.h */,
+			);
+			name = PopAnimation;
 			sourceTree = "<group>";
 		};
 		63F0AFE9BD856CE062BFF317 /* Pods */ = {
@@ -237,12 +265,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				DC2DC1881BCAC00500A627E2 /* Habit.m in Sources */,
+				5FEAE2611BCB053F00201A0E /* CustomVCTransitionViewController.m in Sources */,
 				DC2DC1911BCAE7E600A627E2 /* Step.m in Sources */,
+				5FEAE2641BCB055A00201A0E /* CustomModalViewController.m in Sources */,
 				DC2DC18B1BCAC08700A627E2 /* Goal.m in Sources */,
+				5FEAE26E1BCB125A00201A0E /* PresentingAnimationController.m in Sources */,
 				5F8FF99F1BC9A9CD00855DFB /* ViewController.m in Sources */,
 				DC2DC18E1BCAC0A700A627E2 /* Entry.m in Sources */,
 				5F8FF99C1BC9A9CD00855DFB /* AppDelegate.m in Sources */,
 				5F8FF9A51BC9A9CD00855DFB /* BreakingBad.xcdatamodeld in Sources */,
+				5FEAE2711BCB126700201A0E /* DismissingAnimationController.m in Sources */,
 				DC2DC1941BCAEB8D00A627E2 /* BBUser.m in Sources */,
 				5F8FF9991BC9A9CD00855DFB /* main.m in Sources */,
 			);
