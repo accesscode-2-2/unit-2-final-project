@@ -22,42 +22,16 @@
     
     collectionImages = [NSArray arrayWithObjects:@"destroyer.png", @"drake.png", @"big_nerd_ranch.png", @"talking_heads.png", @"true_detective", @"sleater_kinney.png", @"x-files.png", @"run_the_jewels.png", @"lean_startup.png", nil];
     
-    //[self setUpSwipeGestures];
-    
     self.collectionView.alwaysBounceVertical = YES;
+    
+//    UINib *headerNib = [UINib nibWithNibName:@"CollectionHeaderIdentifier" bundle:nil]; // header nib
+//    [self.collectionView registerNib:headerNib
+//          forCellWithReuseIdentifier:@"CollectionHeaderIdentifier"];
     
   //  [self.collectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:@"Cell"];
 }
 
-//#pragma mark - setup swipe gestures
-//
-//- (void)setUpSwipeGestures
-//{
-//    UISwipeGestureRecognizer *swipeLeft = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(userSwipedLeft:)];
-//    swipeLeft.direction = UISwipeGestureRecognizerDirectionLeft;
-//    [self.view addGestureRecognizer:swipeLeft];
-//    
-//    UISwipeGestureRecognizer *swipeRight = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(userSwipedRight:)];
-//    swipeRight.direction = UISwipeGestureRecognizerDirectionRight;
-//    [self.view addGestureRecognizer:swipeRight];
-//}
-//
-//- (void)userSwipedLeft:(UISwipeGestureRecognizer*)swipe
-//{
-//    if (swipe.direction == UISwipeGestureRecognizerDirectionLeft) {
-//       [self performSegueWithIdentifier:@"pushToSearch" sender:self];
-//    }
-//}
-//
-//- (void)userSwipedRight:(UISwipeGestureRecognizer*)swipe
-//{
-//    if (swipe.direction == UISwipeGestureRecognizerDirectionRight) {
-//         [self performSegueWithIdentifier:@"pushToWishList" sender:self];
-//    }
-//}
-
 #pragma mark - Navigation
-
 
 //- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
 //

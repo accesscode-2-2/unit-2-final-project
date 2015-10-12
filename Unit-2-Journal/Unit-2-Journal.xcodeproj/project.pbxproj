@@ -8,8 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		4D7FE2941BCC12050036E58E /* TabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D7FE2931BCC12050036E58E /* TabBarViewController.m */; settings = {ASSET_TAGS = (); }; };
-		4D7FE2971BCC29210036E58E /* JournalMainHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D7FE2961BCC29210036E58E /* JournalMainHeaderView.m */; settings = {ASSET_TAGS = (); }; };
-		4D7FE2991BCC29650036E58E /* JournalMainHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D7FE2981BCC29650036E58E /* JournalMainHeaderView.xib */; settings = {ASSET_TAGS = (); }; };
+		4D7FE29D1BCC32170036E58E /* SearchAPITableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D7FE29B1BCC32170036E58E /* SearchAPITableViewCell.m */; settings = {ASSET_TAGS = (); }; };
+		4D7FE29E1BCC32170036E58E /* SearchAPITableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D7FE29C1BCC32170036E58E /* SearchAPITableViewCell.xib */; settings = {ASSET_TAGS = (); }; };
+		4D7FE2A51BCC41A00036E58E /* WishListTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D7FE2A31BCC41A00036E58E /* WishListTableViewCell.m */; settings = {ASSET_TAGS = (); }; };
+		4D7FE2A61BCC41A00036E58E /* WishListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D7FE2A41BCC41A00036E58E /* WishListTableViewCell.xib */; settings = {ASSET_TAGS = (); }; };
 		4DCBE1321BC98EF90075BA2C /* JournalMainCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DCBE1311BC98EF90075BA2C /* JournalMainCollectionViewController.m */; settings = {ASSET_TAGS = (); }; };
 		4DCBE13C1BC9943D0075BA2C /* big_nerd_ranch.png in Resources */ = {isa = PBXBuildFile; fileRef = 4DCBE1331BC9943D0075BA2C /* big_nerd_ranch.png */; settings = {ASSET_TAGS = (); }; };
 		4DCBE13D1BC9943D0075BA2C /* destroyer.png in Resources */ = {isa = PBXBuildFile; fileRef = 4DCBE1341BC9943D0075BA2C /* destroyer.png */; settings = {ASSET_TAGS = (); }; };
@@ -43,9 +45,12 @@
 		2BC0A6490F88476E5C31E3B1 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		4D7FE2921BCC12050036E58E /* TabBarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TabBarViewController.h; sourceTree = "<group>"; };
 		4D7FE2931BCC12050036E58E /* TabBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TabBarViewController.m; sourceTree = "<group>"; };
-		4D7FE2951BCC29210036E58E /* JournalMainHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JournalMainHeaderView.h; sourceTree = "<group>"; };
-		4D7FE2961BCC29210036E58E /* JournalMainHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JournalMainHeaderView.m; sourceTree = "<group>"; };
-		4D7FE2981BCC29650036E58E /* JournalMainHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JournalMainHeaderView.xib; sourceTree = "<group>"; };
+		4D7FE29A1BCC32170036E58E /* SearchAPITableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchAPITableViewCell.h; sourceTree = "<group>"; };
+		4D7FE29B1BCC32170036E58E /* SearchAPITableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchAPITableViewCell.m; sourceTree = "<group>"; };
+		4D7FE29C1BCC32170036E58E /* SearchAPITableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SearchAPITableViewCell.xib; sourceTree = "<group>"; };
+		4D7FE2A21BCC41A00036E58E /* WishListTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WishListTableViewCell.h; sourceTree = "<group>"; };
+		4D7FE2A31BCC41A00036E58E /* WishListTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WishListTableViewCell.m; sourceTree = "<group>"; };
+		4D7FE2A41BCC41A00036E58E /* WishListTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WishListTableViewCell.xib; sourceTree = "<group>"; };
 		4DCBE1301BC98EF90075BA2C /* JournalMainCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JournalMainCollectionViewController.h; sourceTree = "<group>"; };
 		4DCBE1311BC98EF90075BA2C /* JournalMainCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JournalMainCollectionViewController.m; sourceTree = "<group>"; };
 		4DCBE1331BC9943D0075BA2C /* big_nerd_ranch.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = big_nerd_ranch.png; sourceTree = "<group>"; };
@@ -187,15 +192,18 @@
 			children = (
 				4DCBE1301BC98EF90075BA2C /* JournalMainCollectionViewController.h */,
 				4DCBE1311BC98EF90075BA2C /* JournalMainCollectionViewController.m */,
-				4D7FE2951BCC29210036E58E /* JournalMainHeaderView.h */,
-				4D7FE2961BCC29210036E58E /* JournalMainHeaderView.m */,
-				4D7FE2981BCC29650036E58E /* JournalMainHeaderView.xib */,
 				4DCBE1451BC9AD6A0075BA2C /* SearchAPIViewController.h */,
 				4DCBE1461BC9AD6A0075BA2C /* SearchAPIViewController.m */,
+				4D7FE29A1BCC32170036E58E /* SearchAPITableViewCell.h */,
+				4D7FE29B1BCC32170036E58E /* SearchAPITableViewCell.m */,
+				4D7FE29C1BCC32170036E58E /* SearchAPITableViewCell.xib */,
 				4DCBE1481BC9ADAE0075BA2C /* CreateJournalEntryViewController.h */,
 				4DCBE1491BC9ADAE0075BA2C /* CreateJournalEntryViewController.m */,
 				4DCBE14B1BC9ADE00075BA2C /* WishListTableViewController.h */,
 				4DCBE14C1BC9ADE00075BA2C /* WishListTableViewController.m */,
+				4D7FE2A21BCC41A00036E58E /* WishListTableViewCell.h */,
+				4D7FE2A31BCC41A00036E58E /* WishListTableViewCell.m */,
+				4D7FE2A41BCC41A00036E58E /* WishListTableViewCell.xib */,
 				4DCBE14E1BC9BD800075BA2C /* ViewCompletedEntryViewController.h */,
 				4DCBE14F1BC9BD800075BA2C /* ViewCompletedEntryViewController.m */,
 				4D7FE2921BCC12050036E58E /* TabBarViewController.h */,
@@ -278,6 +286,8 @@
 			files = (
 				4DCBE13F1BC9943D0075BA2C /* lean_startup.png in Resources */,
 				9A2FFC401BC84BF200E880D3 /* LaunchScreen.storyboard in Resources */,
+				4D7FE2A61BCC41A00036E58E /* WishListTableViewCell.xib in Resources */,
+				4D7FE29E1BCC32170036E58E /* SearchAPITableViewCell.xib in Resources */,
 				4DCBE1441BC9943D0075BA2C /* x-files.png in Resources */,
 				4DCBE13E1BC9943D0075BA2C /* drake.png in Resources */,
 				4DCBE1401BC9943D0075BA2C /* run_the_jewels.png in Resources */,
@@ -287,7 +297,6 @@
 				9A2FFC3D1BC84BF200E880D3 /* Assets.xcassets in Resources */,
 				4DCBE13C1BC9943D0075BA2C /* big_nerd_ranch.png in Resources */,
 				9A2FFC381BC84BF200E880D3 /* Main.storyboard in Resources */,
-				4D7FE2991BCC29650036E58E /* JournalMainHeaderView.xib in Resources */,
 				4DCBE1431BC9943D0075BA2C /* true_detective.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -348,7 +357,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				9A2FFC321BC84BF200E880D3 /* AppDelegate.m in Sources */,
-				4D7FE2971BCC29210036E58E /* JournalMainHeaderView.m in Sources */,
 				9A34656D1BCACDF40049337C /* iTunesSearchResult.m in Sources */,
 				4D7FE2941BCC12050036E58E /* TabBarViewController.m in Sources */,
 				4DCBE14A1BC9ADAE0075BA2C /* CreateJournalEntryViewController.m in Sources */,
@@ -360,8 +368,10 @@
 				5A50331A1BC8D0E4001CBA5C /* MainTableViewController.m in Sources */,
 				9AAB40061BC9FABC00FD7227 /* APIManager.m in Sources */,
 				5A5033201BC8D9B5001CBA5C /* SignUpViewController.m in Sources */,
+				4D7FE2A51BCC41A00036E58E /* WishListTableViewCell.m in Sources */,
 				4DCBE1501BC9BD800075BA2C /* ViewCompletedEntryViewController.m in Sources */,
 				9A2FFC2F1BC84BF200E880D3 /* main.m in Sources */,
+				4D7FE29D1BCC32170036E58E /* SearchAPITableViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
