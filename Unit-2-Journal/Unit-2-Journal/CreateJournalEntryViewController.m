@@ -8,6 +8,7 @@
 
 #import "CreateJournalEntryViewController.h"
 #import "JournalPost.h"
+#import "JournalMainCollectionViewController.h"
 
 @interface CreateJournalEntryViewController () <UITextViewDelegate>
 
@@ -18,12 +19,17 @@
 @property (strong, nonatomic) IBOutlet UIButton *doneEditingButton;
 
 @property (strong, nonatomic) IBOutlet UIButton *starButtonOne;
+@property (nonatomic) JournalPost *journalPost;
+@property (nonatomic) NSMutableArray *journalPostArray;
+
 @end
 
 @implementation CreateJournalEntryViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    self.journalPostArray = [[NSMutableArray alloc]init];
     
     NSLog(@"Data has been passed: %@",self.postSearchResult);
     
@@ -74,19 +80,26 @@
     journalPost.postText = self.textView.text;
     journalPost.postSubject = self.postSearchResult;
     
-    NSLog(@"Journal Post: %@",journalPost);
+    self.journalPost = journalPost;
+    
+    [self.journalPostArray addObject:self.journalPost];
+                               
+    NSLog(@"Journal Post: %@",self.journalPost);
     
 }
 
-/*
  #pragma mark - Navigation
  
- // In a storyboard-based application, you will often want to do a little preparation before navigation
  - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
- // Get the new view controller using [segue destinationViewController].
- // Pass the selected object to the new view controller.
+
+     NSLog(@"Segue");
+     
+     if ([[segue identifier]isEqualToString:@"logToJournalSegue"]) {
+     JournalMainCollectionViewController *viewController = segue.destinationViewController;
+         [viewController.allJournalPosts addObjectsFromArray:self.journalPostArray];
+     }
  }
- */
+
 
 
 @end

@@ -20,7 +20,15 @@
 {
     [super viewDidLoad];
     
-    collectionImages = [NSArray arrayWithObjects:@"destroyer.png", @"drake.png", @"big_nerd_ranch.png", @"talking_heads.png", @"true_detective", @"sleater_kinney.png", @"x-files.png", @"run_the_jewels.png", @"lean_startup.png", nil];
+    if (self.allJournalPosts == nil){
+   self.allJournalPosts = [[NSMutableArray alloc]init];
+    } else {
+        nil;
+    }
+    
+     NSLog(@"All Journal Posts: %@", self.allJournalPosts);
+    
+    collectionImages = [NSMutableArray arrayWithObjects:@"destroyer.png", @"drake.png", @"big_nerd_ranch.png", @"talking_heads.png", @"true_detective", @"sleater_kinney.png", @"x-files.png", @"run_the_jewels.png", @"lean_startup.png", nil];
     
     //[self setUpSwipeGestures];
     

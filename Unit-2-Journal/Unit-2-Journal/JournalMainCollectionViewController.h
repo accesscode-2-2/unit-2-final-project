@@ -7,11 +7,15 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "JournalPost.h"
+#import "CreateJournalEntryViewController.h"
 
 @interface JournalMainCollectionViewController : UICollectionViewController
 {
-    NSArray *collectionImages;
+    NSMutableArray *collectionImages;
 }
 
+@property (nonatomic) NSMutableArray *allJournalPosts;
+@property (nonatomic) JournalPost *journalPostToAdd;
 
 @end
