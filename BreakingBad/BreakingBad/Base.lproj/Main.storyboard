@@ -25,7 +25,7 @@
         <!--View Controller-->
         <scene sceneID="2XW-uj-uc2">
             <objects>
-                <viewController storyboardIdentifier="openCustomTransition" id="tdt-Sk-XM9" customClass="ViewController" sceneMemberID="viewController">
+                <viewController id="tdt-Sk-XM9" customClass="ViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="HsC-4t-tBN"/>
                         <viewControllerLayoutGuide type="bottom" id="Xoy-hi-v3h"/>
@@ -111,7 +111,7 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VzX-6I-QD0">
                                         <rect key="frame" x="0.0" y="0.0" width="200" height="148"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aJb-kz-3gG">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="aJb-kz-3gG">
                                                 <rect key="frame" x="0.0" y="0.0" width="200" height="148"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                 <state key="normal" title="How are you feeling today?"/>
@@ -143,7 +143,7 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YOc-tS-gkT">
                                         <rect key="frame" x="400" y="0.0" width="200" height="148"/>
                                         <subviews>
-                                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vLZ-8r-e8I">
+                                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="vLZ-8r-e8I">
                                                 <rect key="frame" x="0.0" y="0.0" width="200" height="148"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                 <state key="normal" title="What will your mantra be?"/>
@@ -151,7 +151,7 @@
                                                     <action selector="questionButtonTapped:" destination="tdt-Sk-XM9" eventType="touchUpInside" id="eju-Vc-IYY"/>
                                                 </connections>
                                             </button>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IX4-Uf-rCa">
+                                            <label opaque="NO" userInteractionEnabled="NO" tag="2" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IX4-Uf-rCa">
                                                 <rect key="frame" x="18" y="90" width="164" height="50"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="50" id="RpX-ba-7py"/>
@@ -175,7 +175,7 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="R9C-DW-ata">
                                         <rect key="frame" x="0.0" y="148" width="200" height="148"/>
                                         <subviews>
-                                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="LE4-jz-mbF">
+                                            <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="LE4-jz-mbF">
                                                 <rect key="frame" x="0.0" y="0.0" width="200" height="148"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                 <state key="normal" title="What's one road block that you seek to tackle?"/>
@@ -183,7 +183,7 @@
                                                     <action selector="questionButtonTapped:" destination="tdt-Sk-XM9" eventType="touchUpInside" id="CHD-Tb-CcX"/>
                                                 </connections>
                                             </button>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XoU-US-odp">
+                                            <label opaque="NO" userInteractionEnabled="NO" tag="3" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XoU-US-odp">
                                                 <rect key="frame" x="18" y="84" width="164" height="50"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="50" id="CLA-z5-ZDn"/>
@@ -207,7 +207,7 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1st-C8-SMA">
                                         <rect key="frame" x="200" y="148" width="200" height="148"/>
                                         <subviews>
-                                            <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="9Fd-8e-qoR">
+                                            <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="9Fd-8e-qoR">
                                                 <rect key="frame" x="0.0" y="0.0" width="200" height="148"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                 <state key="normal" title="Share a feel good moment from yesterday"/>
@@ -215,7 +215,7 @@
                                                     <action selector="questionButtonTapped:" destination="tdt-Sk-XM9" eventType="touchUpInside" id="EW6-92-3ci"/>
                                                 </connections>
                                             </button>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xGx-0n-Ppy">
+                                            <label opaque="NO" userInteractionEnabled="NO" tag="4" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xGx-0n-Ppy">
                                                 <rect key="frame" x="18" y="90" width="164" height="45"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="45" id="LeL-bD-nrz"/>
@@ -239,7 +239,7 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YG9-Ac-g2R">
                                         <rect key="frame" x="200" y="0.0" width="200" height="148"/>
                                         <subviews>
-                                            <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="b7V-Uw-QbN">
+                                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="b7V-Uw-QbN">
                                                 <rect key="frame" x="0.0" y="0.0" width="200" height="148"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                 <state key="normal" title="What steps will you take to inch closer to your goal?"/>
@@ -247,7 +247,7 @@
                                                     <action selector="questionButtonTapped:" destination="tdt-Sk-XM9" eventType="touchUpInside" id="7XX-hd-II9"/>
                                                 </connections>
                                             </button>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bRm-xU-dLQ">
+                                            <label opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bRm-xU-dLQ">
                                                 <rect key="frame" x="18" y="90" width="164" height="45"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="45" id="fIc-mX-Tl3"/>
@@ -271,7 +271,7 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nOk-Mm-niZ">
                                         <rect key="frame" x="400" y="148" width="200" height="148"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="7wD-Oz-c9Z">
+                                            <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="7wD-Oz-c9Z">
                                                 <rect key="frame" x="0.0" y="0.0" width="200" height="148"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                 <state key="normal" title="Reflect on how you surrounded yourself with positive vibes"/>
@@ -279,7 +279,7 @@
                                                     <action selector="questionButtonTapped:" destination="tdt-Sk-XM9" eventType="touchUpInside" id="L6g-Mj-zHF"/>
                                                 </connections>
                                             </button>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Oi6-EZ-atB">
+                                            <label opaque="NO" userInteractionEnabled="NO" tag="5" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Oi6-EZ-atB">
                                                 <rect key="frame" x="18" y="95" width="164" height="45"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="45" id="kor-qc-AiG"/>
@@ -378,12 +378,6 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="answer1" destination="60k-U9-R58" id="9kr-TK-2vr"/>
-                        <outlet property="answer2" destination="bRm-xU-dLQ" id="WUl-8D-eMy"/>
-                        <outlet property="answer3" destination="IX4-Uf-rCa" id="dPI-DC-a03"/>
-                        <outlet property="answer4" destination="XoU-US-odp" id="5Zv-vd-ZgV"/>
-                        <outlet property="answer5" destination="xGx-0n-Ppy" id="qdd-dO-fDW"/>
-                        <outlet property="answer6" destination="Oi6-EZ-atB" id="ilF-OE-5Ws"/>
                         <outlet property="habitsPickerView" destination="iGG-eq-J42" id="N73-Dy-wTn"/>
                         <outletCollection property="question" destination="aJb-kz-3gG" id="TCC-7o-0e1"/>
                         <outletCollection property="question" destination="b7V-Uw-QbN" id="ZpA-11-cr2"/>

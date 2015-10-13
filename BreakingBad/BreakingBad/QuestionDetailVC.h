@@ -9,10 +9,10 @@
 #import <UIKit/UIKit.h>
 #import "ViewController.h"
 
+@class QuestionDetailVC;
 
-@protocol SecondViewControllerDelegate <NSObject>
-@required
-- (void)dataFromController:(NSString *)data;
+@protocol QuestionDetailVCDelegate <NSObject>
+- (void)finishedAnswering:(QuestionDetailVC *)qvc withAnswer:(NSString *)answer;
 @end
 
 @interface QuestionDetailVC : UIViewController
@@ -23,6 +23,7 @@
 @property (nonatomic) NSString *question;
 
 @property (nonatomic, retain) NSString *data;
-@property (nonatomic, weak) id<SecondViewControllerDelegate> delegate;
+@property (nonatomic, weak) id<QuestionDetailVCDelegate> delegate;
+@property (nonatomic) NSInteger tag;
 
 @end
