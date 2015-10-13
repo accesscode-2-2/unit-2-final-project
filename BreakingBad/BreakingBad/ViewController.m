@@ -14,7 +14,7 @@
 #import "Entry.h"
 #import "Step.h"
 #import "HabitList.h"
-#import "questionDetailVC.h"
+#import "QuestionDetailVC.h"
 
 
 @interface ViewController ()<UIPickerViewDelegate, UIPickerViewDataSource>
@@ -27,16 +27,11 @@
 @implementation ViewController
 
 - (IBAction)questionButtonTapped:(UIButton *)sender {
-
-    
-    [self performSegueWithIdentifier:@"showQDetailSegue" sender:sender];
-    
+    QuestionDetailVC *qvc = (QuestionDetailVC *)[self.storyboard instantiateViewControllerWithIdentifier:@"showQDetailSegue"];
+    qvc.question = sender.titleLabel.text;
+    [self presentViewController:qvc animated:YES completion:nil];
 }
 
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(UIButton *)sender {
-    NSString *title = sender.currentTitle;
-    // do what you need with the title
-}
 
 
 //passing data to a new VC
