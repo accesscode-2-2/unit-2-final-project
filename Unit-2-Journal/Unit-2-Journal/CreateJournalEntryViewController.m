@@ -58,7 +58,7 @@
     NSData *artworkData = [NSData dataWithContentsOfURL:artworkURL];
     UIImage *artworkImage = [UIImage imageWithData:artworkData];
     self.artworkImageView.image = artworkImage;
-        
+    
 }
 - (void) textViewDidBeginEditing:(UITextView *)textView{
     self.textView.text = @"";
@@ -79,15 +79,14 @@
 {
     if (self.userRated == NO) {
         self.userRated = YES; // change to yes
-         [self resetStars];
-        [self.starButtonOne setBackgroundImage:[UIImage imageNamed:@"rating_star_filled.png"] forState:UIControlStateNormal];
-    
+        [self resetStars];
+        [self oneStarRating];
     } else
-    
+        
         if (self.userRated == YES) {
             self.userRated = NO; // change to yes
             [self resetStars];
-            [self.starButtonOne setBackgroundImage:[UIImage imageNamed:@"rating_star_filled.png"] forState:UIControlStateNormal];
+            [self oneStarRating];
         }
 }
 
@@ -95,17 +94,15 @@
 {
     if (self.userRated == NO) {
         self.userRated = YES; // change to yes
-         [self resetStars];
-        [self.starButtonOne setBackgroundImage:[UIImage imageNamed:@"rating_star_filled.png"] forState:UIControlStateNormal];
-        [self.starButtonTwo setBackgroundImage:[UIImage imageNamed:@"rating_star_filled.png"] forState:UIControlStateNormal];
+        [self resetStars];
+        [self twoStarRating];
         
     } else
         
         if (self.userRated == YES) {
             self.userRated = NO; // change to yes
             [self resetStars];
-            [self.starButtonOne setBackgroundImage:[UIImage imageNamed:@"rating_star_filled.png"] forState:UIControlStateNormal];
-            [self.starButtonTwo setBackgroundImage:[UIImage imageNamed:@"rating_star_filled.png"] forState:UIControlStateNormal];
+            [self twoStarRating];
         }
 }
 
@@ -113,19 +110,15 @@
 {
     if (self.userRated == NO) {
         self.userRated = YES; // change to yes
-         [self resetStars];
-        [self.starButtonOne setBackgroundImage:[UIImage imageNamed:@"rating_star_filled.png"] forState:UIControlStateNormal];
-        [self.starButtonTwo setBackgroundImage:[UIImage imageNamed:@"rating_star_filled.png"] forState:UIControlStateNormal];
-        [self.starButtonThree setBackgroundImage:[UIImage imageNamed:@"rating_star_filled.png"] forState:UIControlStateNormal];
+        [self resetStars];
+        [self threeStarRating];
         
     } else
         
         if (self.userRated == YES) {
             self.userRated = NO; // change to yes
             [self resetStars];
-            [self.starButtonOne setBackgroundImage:[UIImage imageNamed:@"rating_star_filled.png"] forState:UIControlStateNormal];
-            [self.starButtonTwo setBackgroundImage:[UIImage imageNamed:@"rating_star_filled.png"] forState:UIControlStateNormal];
-            [self.starButtonThree setBackgroundImage:[UIImage imageNamed:@"rating_star_filled.png"] forState:UIControlStateNormal];
+            [self threeStarRating];
         }
 }
 
@@ -133,45 +126,29 @@
 {
     if (self.userRated == NO) {
         self.userRated = YES; // change to yes
-         [self resetStars];
-        [self.starButtonOne setBackgroundImage:[UIImage imageNamed:@"rating_star_filled.png"] forState:UIControlStateNormal];
-        [self.starButtonTwo setBackgroundImage:[UIImage imageNamed:@"rating_star_filled.png"] forState:UIControlStateNormal];
-        [self.starButtonThree setBackgroundImage:[UIImage imageNamed:@"rating_star_filled.png"] forState:UIControlStateNormal];
-        [self.starButtonFour setBackgroundImage:[UIImage imageNamed:@"rating_star_filled.png"] forState:UIControlStateNormal];
-        
+        [self resetStars];
+        [self fourStarRating];
         
     } else
         
         if (self.userRated == YES) {
             self.userRated = NO; // change to yes
             [self resetStars];
-            [self.starButtonOne setBackgroundImage:[UIImage imageNamed:@"rating_star_filled.png"] forState:UIControlStateNormal];
-            [self.starButtonTwo setBackgroundImage:[UIImage imageNamed:@"rating_star_filled.png"] forState:UIControlStateNormal];
-            [self.starButtonThree setBackgroundImage:[UIImage imageNamed:@"rating_star_filled.png"] forState:UIControlStateNormal];
-            [self.starButtonFour setBackgroundImage:[UIImage imageNamed:@"rating_star_filled.png"] forState:UIControlStateNormal];
+            [self fourStarRating];
         }
 }
 - (IBAction)fiveStarTapped:(id)sender
 {
     if (self.userRated == NO) {
         self.userRated = YES; // change to yes
-        [self.starButtonOne setBackgroundImage:[UIImage imageNamed:@"rating_star_filled.png"] forState:UIControlStateNormal];
-        [self.starButtonTwo setBackgroundImage:[UIImage imageNamed:@"rating_star_filled.png"] forState:UIControlStateNormal];
-        [self.starButtonThree setBackgroundImage:[UIImage imageNamed:@"rating_star_filled.png"] forState:UIControlStateNormal];
-        [self.starButtonFour setBackgroundImage:[UIImage imageNamed:@"rating_star_filled.png"] forState:UIControlStateNormal];
-        [self.starButtonFive setBackgroundImage:[UIImage imageNamed:@"rating_star_filled.png"] forState:UIControlStateNormal];
-        
+        [self fiveStarRating];
         
     } else
         
         if (self.userRated == YES) {
             self.userRated = NO; // change to yes
             [self resetStars];
-            [self.starButtonOne setBackgroundImage:[UIImage imageNamed:@"rating_star_filled.png"] forState:UIControlStateNormal];
-            [self.starButtonTwo setBackgroundImage:[UIImage imageNamed:@"rating_star_filled.png"] forState:UIControlStateNormal];
-            [self.starButtonThree setBackgroundImage:[UIImage imageNamed:@"rating_star_filled.png"] forState:UIControlStateNormal];
-            [self.starButtonFour setBackgroundImage:[UIImage imageNamed:@"rating_star_filled.png"] forState:UIControlStateNormal];
-            [self.starButtonFive setBackgroundImage:[UIImage imageNamed:@"rating_star_filled.png"] forState:UIControlStateNormal];
+            [self fiveStarRating];
         }
 }
 
@@ -183,6 +160,37 @@
     [self.starButtonFour setBackgroundImage:[UIImage imageNamed:@"rating_star.png"] forState:UIControlStateNormal];
     [self.starButtonFive setBackgroundImage:[UIImage imageNamed:@"rating_star.png"] forState:UIControlStateNormal];
 }
+
+- (void)oneStarRating {
+    [self.starButtonOne setBackgroundImage:[UIImage imageNamed:@"rating_star_filled.png"] forState:UIControlStateNormal];
+}
+
+- (void)twoStarRating {
+    [self.starButtonOne setBackgroundImage:[UIImage imageNamed:@"rating_star_filled.png"] forState:UIControlStateNormal];
+    [self.starButtonTwo setBackgroundImage:[UIImage imageNamed:@"rating_star_filled.png"] forState:UIControlStateNormal];
+}
+
+- (void)threeStarRating {
+    [self.starButtonOne setBackgroundImage:[UIImage imageNamed:@"rating_star_filled.png"] forState:UIControlStateNormal];
+    [self.starButtonTwo setBackgroundImage:[UIImage imageNamed:@"rating_star_filled.png"] forState:UIControlStateNormal];
+    [self.starButtonThree setBackgroundImage:[UIImage imageNamed:@"rating_star_filled.png"] forState:UIControlStateNormal];
+}
+
+- (void)fourStarRating {
+    [self.starButtonOne setBackgroundImage:[UIImage imageNamed:@"rating_star_filled.png"] forState:UIControlStateNormal];
+    [self.starButtonTwo setBackgroundImage:[UIImage imageNamed:@"rating_star_filled.png"] forState:UIControlStateNormal];
+    [self.starButtonThree setBackgroundImage:[UIImage imageNamed:@"rating_star_filled.png"] forState:UIControlStateNormal];
+    [self.starButtonFour setBackgroundImage:[UIImage imageNamed:@"rating_star_filled.png"] forState:UIControlStateNormal];
+}
+
+- (void)fiveStarRating {
+    [self.starButtonOne setBackgroundImage:[UIImage imageNamed:@"rating_star_filled.png"] forState:UIControlStateNormal];
+    [self.starButtonTwo setBackgroundImage:[UIImage imageNamed:@"rating_star_filled.png"] forState:UIControlStateNormal];
+    [self.starButtonThree setBackgroundImage:[UIImage imageNamed:@"rating_star_filled.png"] forState:UIControlStateNormal];
+    [self.starButtonFour setBackgroundImage:[UIImage imageNamed:@"rating_star_filled.png"] forState:UIControlStateNormal];
+    [self.starButtonFive setBackgroundImage:[UIImage imageNamed:@"rating_star_filled.png"] forState:UIControlStateNormal];
+}
+
 
 #pragma mark - save items
 
