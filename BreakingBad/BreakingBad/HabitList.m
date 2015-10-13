@@ -15,7 +15,7 @@
     
     
     NSArray *habitList = @[@"Smoking",
-                           @"Bitting your nails",
+                           @"Biting your nails",
                            @"Cocaine Addiction",
                            @"Biting your lips",
                            @"Eating unhealthy",

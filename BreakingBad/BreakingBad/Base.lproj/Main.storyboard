@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="eFl-bJ-oI1">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8164.2" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="eFl-bJ-oI1">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8135.1"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
@@ -113,6 +114,10 @@
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aJb-kz-3gG">
                                                 <rect key="frame" x="0.0" y="0.0" width="200" height="148"/>
+                                                <state key="normal" title="How are you feeling today?"/>
+                                                <connections>
+                                                    <action selector="questionButtonTapped:" destination="tdt-Sk-XM9" eventType="touchUpInside" id="8Lz-EB-VJ2"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -128,6 +133,10 @@
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vLZ-8r-e8I">
                                                 <rect key="frame" x="0.0" y="0.0" width="200" height="148"/>
+                                                <state key="normal" title="What will your mantra be?"/>
+                                                <connections>
+                                                    <action selector="questionButtonTapped:" destination="tdt-Sk-XM9" eventType="touchUpInside" id="eju-Vc-IYY"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -141,8 +150,13 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="R9C-DW-ata">
                                         <rect key="frame" x="0.0" y="148" width="200" height="148"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LE4-jz-mbF">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="LE4-jz-mbF">
                                                 <rect key="frame" x="0.0" y="0.0" width="200" height="148"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <state key="normal" title="What's one road block that you seek to tackle?"/>
+                                                <connections>
+                                                    <action selector="questionButtonTapped:" destination="tdt-Sk-XM9" eventType="touchUpInside" id="CHD-Tb-CcX"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" red="0.63035872790000003" green="1" blue="0.51983276099999998" alpha="1" colorSpace="calibratedRGB"/>
@@ -156,8 +170,13 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1st-C8-SMA">
                                         <rect key="frame" x="200" y="148" width="200" height="148"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Fd-8e-qoR">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="9Fd-8e-qoR">
                                                 <rect key="frame" x="0.0" y="0.0" width="200" height="148"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <state key="normal" title="Share a feel good moment from yesterday"/>
+                                                <connections>
+                                                    <action selector="questionButtonTapped:" destination="tdt-Sk-XM9" eventType="touchUpInside" id="EW6-92-3ci"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -171,8 +190,13 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YG9-Ac-g2R">
                                         <rect key="frame" x="200" y="0.0" width="200" height="148"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b7V-Uw-QbN">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="b7V-Uw-QbN">
                                                 <rect key="frame" x="0.0" y="0.0" width="200" height="148"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <state key="normal" title="What steps will you take to inch closer to your goal?"/>
+                                                <connections>
+                                                    <action selector="questionButtonTapped:" destination="tdt-Sk-XM9" eventType="touchUpInside" id="7XX-hd-II9"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" red="0.63035872790000003" green="1" blue="0.51983276099999998" alpha="1" colorSpace="calibratedRGB"/>
@@ -186,8 +210,13 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nOk-Mm-niZ">
                                         <rect key="frame" x="400" y="148" width="200" height="148"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7wD-Oz-c9Z">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="7wD-Oz-c9Z">
                                                 <rect key="frame" x="0.0" y="0.0" width="200" height="148"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <state key="normal" title="Reflect on how you surrounded yourself with positive vibes"/>
+                                                <connections>
+                                                    <action selector="questionButtonTapped:" destination="tdt-Sk-XM9" eventType="touchUpInside" id="L6g-Mj-zHF"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" red="0.63035872790000003" green="1" blue="0.51983276099999998" alpha="1" colorSpace="calibratedRGB"/>
@@ -277,11 +306,142 @@
                     </navigationItem>
                     <connections>
                         <outlet property="habitsPickerView" destination="iGG-eq-J42" id="N73-Dy-wTn"/>
+                        <outletCollection property="question" destination="aJb-kz-3gG" id="TCC-7o-0e1"/>
+                        <outletCollection property="question" destination="b7V-Uw-QbN" id="ZpA-11-cr2"/>
+                        <outletCollection property="question" destination="vLZ-8r-e8I" id="dme-xb-dK9"/>
+                        <outletCollection property="question" destination="LE4-jz-mbF" id="8PB-Dv-YPZ"/>
+                        <outletCollection property="question" destination="9Fd-8e-qoR" id="H0O-pi-31e"/>
+                        <outletCollection property="question" destination="7wD-Oz-c9Z" id="BQw-ai-1Rz"/>
+                        <segue destination="c4Q-wr-6iF" kind="show" id="lGn-7p-01v"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="um1-vB-9fe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="222" y="312"/>
+            <point key="canvasLocation" x="227" y="324"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="ewc-J0-hbp">
+            <objects>
+                <viewController id="Plx-jd-uaa" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="buw-Id-chm"/>
+                        <viewControllerLayoutGuide type="bottom" id="aIq-PA-eN3"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="2sP-dW-Kc6">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1xu-2M-4Kf">
+                                <rect key="frame" x="0.0" y="64" width="300" height="179"/>
+                                <color key="backgroundColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WQy-dG-GzO">
+                                <rect key="frame" x="300" y="243" width="300" height="178"/>
+                                <color key="backgroundColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Wir-xI-yGF">
+                                <rect key="frame" x="0.0" y="421" width="300" height="179"/>
+                                <color key="backgroundColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bCT-LN-gbk">
+                                <rect key="frame" x="300" y="64" width="300" height="179"/>
+                                <color key="backgroundColor" red="0.63035872790000003" green="1" blue="0.51983276099999998" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="X3F-gi-toY">
+                                <rect key="frame" x="300" y="421" width="300" height="179"/>
+                                <color key="backgroundColor" red="0.63035872790000003" green="1" blue="0.51983276099999998" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="X2V-4S-rgC">
+                                <rect key="frame" x="0.0" y="243" width="300" height="178"/>
+                                <color key="backgroundColor" red="0.63035872790000003" green="1" blue="0.51983276099999998" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="X3F-gi-toY" firstAttribute="height" secondItem="WQy-dG-GzO" secondAttribute="height" id="2q9-gI-nqO"/>
+                            <constraint firstItem="X3F-gi-toY" firstAttribute="top" secondItem="WQy-dG-GzO" secondAttribute="bottom" id="5en-NK-105"/>
+                            <constraint firstItem="Wir-xI-yGF" firstAttribute="leading" secondItem="2sP-dW-Kc6" secondAttribute="leading" id="6lL-w0-KP8"/>
+                            <constraint firstAttribute="trailing" secondItem="bCT-LN-gbk" secondAttribute="trailing" id="7vS-Wb-Vez"/>
+                            <constraint firstItem="bCT-LN-gbk" firstAttribute="leading" secondItem="1xu-2M-4Kf" secondAttribute="trailing" id="AQs-Mf-OKV"/>
+                            <constraint firstItem="aIq-PA-eN3" firstAttribute="top" secondItem="X3F-gi-toY" secondAttribute="bottom" id="Bfv-A3-1I6"/>
+                            <constraint firstItem="bCT-LN-gbk" firstAttribute="width" secondItem="WQy-dG-GzO" secondAttribute="width" id="Bnr-dX-f1M"/>
+                            <constraint firstItem="1xu-2M-4Kf" firstAttribute="width" secondItem="X2V-4S-rgC" secondAttribute="width" id="CwR-Ex-Bxi"/>
+                            <constraint firstItem="1xu-2M-4Kf" firstAttribute="width" secondItem="bCT-LN-gbk" secondAttribute="width" id="JKb-5V-lQb"/>
+                            <constraint firstItem="WQy-dG-GzO" firstAttribute="leading" secondItem="X2V-4S-rgC" secondAttribute="trailing" id="JR5-5G-DKx"/>
+                            <constraint firstItem="X2V-4S-rgC" firstAttribute="leading" secondItem="2sP-dW-Kc6" secondAttribute="leading" id="Qdx-Z4-SCA"/>
+                            <constraint firstItem="WQy-dG-GzO" firstAttribute="height" secondItem="bCT-LN-gbk" secondAttribute="height" id="SGb-HP-zn2"/>
+                            <constraint firstItem="Wir-xI-yGF" firstAttribute="top" secondItem="X2V-4S-rgC" secondAttribute="bottom" id="TMl-Kg-2r0"/>
+                            <constraint firstItem="X3F-gi-toY" firstAttribute="leading" secondItem="Wir-xI-yGF" secondAttribute="trailing" id="VMR-kh-2ml"/>
+                            <constraint firstItem="bCT-LN-gbk" firstAttribute="top" secondItem="buw-Id-chm" secondAttribute="bottom" id="Vra-1b-6n9"/>
+                            <constraint firstItem="X2V-4S-rgC" firstAttribute="top" secondItem="1xu-2M-4Kf" secondAttribute="bottom" id="eox-k9-0ik"/>
+                            <constraint firstItem="1xu-2M-4Kf" firstAttribute="leading" secondItem="2sP-dW-Kc6" secondAttribute="leading" id="g3A-kb-Spa"/>
+                            <constraint firstItem="WQy-dG-GzO" firstAttribute="top" secondItem="bCT-LN-gbk" secondAttribute="bottom" id="g4b-NZ-aGy"/>
+                            <constraint firstAttribute="trailing" secondItem="WQy-dG-GzO" secondAttribute="trailing" id="grt-NB-CRK"/>
+                            <constraint firstAttribute="trailing" secondItem="X3F-gi-toY" secondAttribute="trailing" id="iAy-Ww-wF2"/>
+                            <constraint firstItem="WQy-dG-GzO" firstAttribute="width" secondItem="X3F-gi-toY" secondAttribute="width" id="k8F-Gt-Ub0"/>
+                            <constraint firstItem="X2V-4S-rgC" firstAttribute="width" secondItem="Wir-xI-yGF" secondAttribute="width" id="kt4-TZ-fIx"/>
+                            <constraint firstItem="aIq-PA-eN3" firstAttribute="top" secondItem="Wir-xI-yGF" secondAttribute="bottom" id="lOc-k6-5z7"/>
+                            <constraint firstItem="X2V-4S-rgC" firstAttribute="height" secondItem="Wir-xI-yGF" secondAttribute="height" id="weM-tB-gtc"/>
+                            <constraint firstItem="1xu-2M-4Kf" firstAttribute="top" secondItem="buw-Id-chm" secondAttribute="bottom" id="wqe-wG-yeh"/>
+                            <constraint firstItem="bCT-LN-gbk" firstAttribute="height" secondItem="1xu-2M-4Kf" secondAttribute="height" id="y2r-WD-Frv"/>
+                            <constraint firstItem="1xu-2M-4Kf" firstAttribute="height" secondItem="X2V-4S-rgC" secondAttribute="height" id="ykR-Le-RQk"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x0Q-X6-FBj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-720" y="-589"/>
+        </scene>
+        <!--Title-->
+        <scene sceneID="yiE-i1-mVj">
+            <objects>
+                <viewController storyboardIdentifier="showQDetailSegue" id="c4Q-wr-6iF" customClass="questionDetailVC" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="hk5-tl-zZ0"/>
+                        <viewControllerLayoutGuide type="bottom" id="6gk-eA-M4O"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="H4s-7m-BIi">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Question" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9a1-sz-t4E">
+                                <rect key="frame" x="150" y="134" width="300" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="dya-aO-eaL"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gFB-FW-Zzb">
+                                <rect key="frame" x="59" y="185" width="482" height="230"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="9a1-sz-t4E" firstAttribute="centerX" secondItem="H4s-7m-BIi" secondAttribute="centerX" id="FNb-LE-d8a"/>
+                            <constraint firstItem="gFB-FW-Zzb" firstAttribute="top" secondItem="hk5-tl-zZ0" secondAttribute="bottom" constant="121" id="JJK-UZ-Dbc"/>
+                            <constraint firstItem="gFB-FW-Zzb" firstAttribute="centerY" secondItem="H4s-7m-BIi" secondAttribute="centerY" id="WS2-Ll-alp"/>
+                            <constraint firstItem="gFB-FW-Zzb" firstAttribute="leading" secondItem="H4s-7m-BIi" secondAttribute="leadingMargin" constant="39" id="Waf-nB-Pb1"/>
+                            <constraint firstItem="gFB-FW-Zzb" firstAttribute="top" secondItem="9a1-sz-t4E" secondAttribute="bottom" constant="30" id="uIg-fT-ejm"/>
+                            <constraint firstItem="gFB-FW-Zzb" firstAttribute="centerX" secondItem="H4s-7m-BIi" secondAttribute="centerX" id="vne-Mu-gY2"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Title" id="AcK-LL-CFG">
+                        <barButtonItem key="backBarButtonItem" systemItem="done" id="rly-tY-Zzh"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="answerTextView" destination="gFB-FW-Zzb" id="6aE-nv-faH"/>
+                        <outlet property="questionLabel" destination="9a1-sz-t4E" id="RDG-2b-3Fr"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lDL-MM-iLr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="789" y="-343"/>
         </scene>
         <!--CustomVC Transition View Controller-->
         <scene sceneID="RRj-ne-QXh">

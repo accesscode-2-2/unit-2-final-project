@@ -14,14 +14,45 @@
 #import "Entry.h"
 #import "Step.h"
 #import "HabitList.h"
+#import "questionDetailVC.h"
 
 
 @interface ViewController ()<UIPickerViewDelegate, UIPickerViewDataSource>
 @property (weak, nonatomic) IBOutlet UIPickerView *habitsPickerView;
+@property (strong, nonatomic) IBOutletCollection(UIButton) NSArray *question;
+
 
 @end
 
 @implementation ViewController
+
+- (IBAction)questionButtonTapped:(UIButton *)sender {
+
+    
+    [self performSegueWithIdentifier:@"showQDetailSegue" sender:sender];
+    
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(UIButton *)sender {
+    NSString *title = sender.currentTitle;
+    // do what you need with the title
+}
+
+
+//passing data to a new VC
+/*
+ if([segue.identifier isEqualToString:@"showQDetailSegue"]){
+ ViewControllerB *controller = (ViewControllerB *)segue.destinationViewController;
+ controller.isSomethingEnabled = YES;
+ */
+
+//selector pushViewController is not declared
+//    questionDetailVC *qDetailVC = [[questionDetailVC alloc] initWithNibName:@"questionDetailVC" bundle:nil];
+//                                   //initWithNib:@"questionDetailVC" bundle:nil];
+//    qDetailVC.isSomethingEnabled = YES;
+//    [self pushViewController:qDetailVC animated:YES];
+
+
 
 - (void)viewDidLoad {
     [super viewDidLoad];
