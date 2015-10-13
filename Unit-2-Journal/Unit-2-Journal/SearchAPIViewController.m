@@ -25,7 +25,7 @@ UITextFieldDelegate
 @property (weak, nonatomic) IBOutlet UIButton *musicButton;
 @property (weak, nonatomic) IBOutlet UIButton *moviesButton;
 @property (weak, nonatomic) IBOutlet UIButton *booksButton;
-@property (weak, nonatomic) IBOutlet UIButton *otherButton;
+@property (strong, nonatomic) IBOutlet UIButton *podcastButton;
 @property (nonatomic) NSString *media;
 @property (nonatomic) NSMutableArray *searchResults;
 @property (nonatomic) iTunesSearchResult *passSearchResult;
@@ -53,11 +53,16 @@ UITextFieldDelegate
 #pragma mark - setup buttons
 
 - (IBAction)mediaButtonTypeSelected:(id)sender {
-    self.media = [sender currentTitle];
-     NSLog(@"Media: %@",self.media);
-}
-
-- (IBAction)mediaButtonOther:(id)sender {
+    
+    if (self.musicButton.isTouchInside){
+        self.media = @"music&entity=album";
+    } else if (self.booksButton.isTouchInside){
+        self.media = @"ebook";
+    } else {
+        self.media = [sender currentTitle];
+    }
+    
+    NSLog(@"Media: %@",self.media);
 }
 
 - (IBAction)createJournalEntryButtonTapped:(id)sender {
@@ -66,6 +71,8 @@ UITextFieldDelegate
 
 - (IBAction)addToWishListButtonTapped:(id)sender {
 
+    
+    
 }
 - (void) makeNewiTunesAPIRequestWithSearchTerm:(NSString *)term
                                        inMedia:(NSString *)media
@@ -104,15 +111,18 @@ UITextFieldDelegate
                             
                             iTunesSearchResult *resultsObject = [[iTunesSearchResult alloc]init];
                             
-                            if ([self.media isEqualToString:@"movie"]){
+                            if ([self.media isEqualToString:@"movie"] || [self.media isEqualToString:@"podcast"] ){
                                 resultsObject.artistName = artistName;
                                 resultsObject.albumOrMovieName = movieName;
                                 resultsObject.artworkURL = artworkURL;
-                            } else if ([self.media isEqualToString:@"music"]){
+                            } else if ([self.media isEqualToString:@"music&entity=album"]){
                                 resultsObject.artistName = artistName;
                                 resultsObject.albumOrMovieName = albumName;
                                 resultsObject.artworkURL = artworkURL;
-
+                            } else if ([self.media isEqualToString:@"ebook"]){
+                                resultsObject.artistName = artistName;
+                                resultsObject.albumOrMovieName = movieName;
+                                resultsObject.artworkURL = artworkURL;
                             }
                             
                             [self.searchResults addObject:resultsObject];

@@ -280,15 +280,15 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kEa-FP-z2a">
                                         <rect key="frame" x="150" y="0.0" width="150" height="100"/>
                                         <animations/>
-                                        <state key="normal" title="Other"/>
+                                        <state key="normal" title="podcast"/>
                                         <connections>
-                                            <action selector="mediaButtonOther:" destination="0x4-Nu-mZ8" eventType="touchUpInside" id="XpB-L1-XNH"/>
+                                            <action selector="mediaButtonTypeSelected:" destination="0x4-Nu-mZ8" eventType="touchUpInside" id="aFT-bH-Jsi"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rgg-OH-neT">
                                         <rect key="frame" x="0.0" y="0.0" width="150" height="100"/>
                                         <animations/>
-                                        <state key="normal" title="Books"/>
+                                        <state key="normal" title="books"/>
                                         <connections>
                                             <action selector="mediaButtonTypeSelected:" destination="0x4-Nu-mZ8" eventType="touchUpInside" id="n38-IM-iTM"/>
                                         </connections>
@@ -433,7 +433,7 @@
                         <outlet property="booksButton" destination="rgg-OH-neT" id="Ucr-iy-A9p"/>
                         <outlet property="moviesButton" destination="CLE-DE-TTz" id="7LO-pm-d9U"/>
                         <outlet property="musicButton" destination="cfG-sQ-zQZ" id="rag-AL-MMx"/>
-                        <outlet property="otherButton" destination="kEa-FP-z2a" id="zZJ-KO-l1f"/>
+                        <outlet property="podcastButton" destination="kEa-FP-z2a" id="tuc-aH-43L"/>
                         <outlet property="searchTextField" destination="zob-sY-qha" id="CSN-S0-Rzp"/>
                         <outlet property="tableView" destination="twc-ko-3Rx" id="4Cw-TH-Ai6"/>
                     </connections>
@@ -963,6 +963,6 @@
         <image name="star" width="24" height="24"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Ggq-sb-ccX"/>
+        <segue reference="a4i-zx-cvK"/>
     </inferredMetricsTieBreakers>
 </document>
