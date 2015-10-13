@@ -17,10 +17,12 @@
 #import "QuestionDetailVC.h"
 
 
-@interface ViewController ()<UIPickerViewDelegate, UIPickerViewDataSource>
+
+@interface ViewController ()<UIPickerViewDelegate, UIPickerViewDataSource, SecondViewControllerDelegate>
 @property (weak, nonatomic) IBOutlet UIPickerView *habitsPickerView;
 @property (strong, nonatomic) IBOutletCollection(UIButton) NSArray *question;
 
+@property (strong, nonatomic) IBOutletCollection(UILabel) NSArray *answer;
 
 @end
 
@@ -32,6 +34,20 @@
     [self presentViewController:qvc animated:YES completion:nil];
 }
 
+
+
+- (void)dataFromController:(NSString *)data {
+   // self.answer.text= data;
+    //add label
+}
+
+- (void)passDataForward
+{
+    QuestionDetailVC *secondViewController = [[QuestionDetailVC alloc] init];
+   // secondViewController.data = self.answer.text; //add label
+    secondViewController.delegate = self; // Set the second view controller's delegate to self
+    [self.navigationController pushViewController:secondViewController animated:YES];
+}
 
 
 //passing data to a new VC

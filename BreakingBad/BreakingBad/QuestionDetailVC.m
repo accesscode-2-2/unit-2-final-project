@@ -25,9 +25,17 @@
 
 }
 
+-(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
+    
+    [self.answerTextView resignFirstResponder];
+}
+
+
 - (IBAction)doneButtonTapped:(UIButton *)sender {
     [self dismissViewControllerAnimated:YES completion:nil];
 }
+
+
 
 
 @end

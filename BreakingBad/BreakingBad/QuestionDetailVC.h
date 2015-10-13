@@ -7,6 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "ViewController.h"
+
+
+@protocol SecondViewControllerDelegate <NSObject>
+@required
+- (void)dataFromController:(NSString *)data;
+@end
 
 @interface QuestionDetailVC : UIViewController
 
@@ -14,5 +21,8 @@
 @property (weak, nonatomic) IBOutlet UITextView *answerTextView;
 
 @property (nonatomic) NSString *question;
+
+@property (nonatomic, retain) NSString *data;
+@property (nonatomic, weak) id<SecondViewControllerDelegate> delegate;
 
 @end
