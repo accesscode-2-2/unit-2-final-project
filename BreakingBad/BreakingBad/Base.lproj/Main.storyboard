@@ -344,8 +344,8 @@
                                     <action selector="doneButtonTapped:" destination="c4Q-wr-6iF" eventType="touchUpInside" id="9kn-pK-kwx"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Question" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9a1-sz-t4E">
-                                <rect key="frame" x="8" y="84" width="592" height="30"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Question" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9a1-sz-t4E">
+                                <rect key="frame" x="8" y="84" width="584" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="cL9-km-Fsi"/>
                                 </constraints>
@@ -368,7 +368,7 @@
                             <constraint firstItem="gFB-FW-Zzb" firstAttribute="centerX" secondItem="H4s-7m-BIi" secondAttribute="centerX" id="dKk-4O-UP8"/>
                             <constraint firstItem="PNY-lO-8iE" firstAttribute="leading" secondItem="H4s-7m-BIi" secondAttribute="leading" id="iaO-Bm-uEX"/>
                             <constraint firstItem="PNY-lO-8iE" firstAttribute="centerX" secondItem="H4s-7m-BIi" secondAttribute="centerX" id="r1T-4Q-uyH"/>
-                            <constraint firstAttribute="trailing" secondItem="9a1-sz-t4E" secondAttribute="trailing" id="x4E-c4-YdY"/>
+                            <constraint firstAttribute="trailing" secondItem="9a1-sz-t4E" secondAttribute="trailing" constant="8" id="x4E-c4-YdY"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
