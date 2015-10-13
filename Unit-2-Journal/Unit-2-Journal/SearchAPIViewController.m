@@ -12,6 +12,8 @@
 #import "iTunesSearchResult.h"
 #import "CreateJournalEntryViewController.h"
 #import "SearchAPITableViewCell.h" // add custom cell
+#import "TabBarViewController.h"
+#import "WishListTableViewController.h"
 
 @interface SearchAPIViewController ()
 <
@@ -70,7 +72,11 @@ UITextFieldDelegate
 }
 
 - (IBAction)addToWishListButtonTapped:(id)sender {
+    
+    WishListTableViewController *viewController = [[WishListTableViewController alloc]init];
+    viewController.searchResult = self.passSearchResult;
 
+    [self.tabBarController setSelectedIndex:0];
     
     
 }

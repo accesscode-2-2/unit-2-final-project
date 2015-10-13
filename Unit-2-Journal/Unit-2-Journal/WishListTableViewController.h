@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "iTunesSearchResult.h"
 
 @interface WishListTableViewController : UITableViewController
+
+@property (nonatomic) iTunesSearchResult *searchResult;
 
 @end

@@ -19,6 +19,8 @@
 {
     [super viewDidLoad];
 
+    NSLog(@"Wish List Result: %@",self.searchResult);
+    
     //    [self setUpSwipeGestures];
     
     // set up custom cell .xib
