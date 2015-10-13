@@ -20,6 +20,12 @@
 @property (strong, nonatomic) IBOutlet UIButton *doneEditingButton;
 
 @property (strong, nonatomic) IBOutlet UIButton *starButtonOne;
+@property (strong, nonatomic) IBOutlet UIButton *starButtonTwo;
+@property (strong, nonatomic) IBOutlet UIButton *starButtonThree;
+@property (strong, nonatomic) IBOutlet UIButton *starButtonFour;
+@property (strong, nonatomic) IBOutlet UIButton *starButtonFive;
+@property (nonatomic) BOOL userRated;
+
 @property (nonatomic) JournalPost *journalPost;
 @property (nonatomic) NSMutableArray *journalPostArray;
 
@@ -29,6 +35,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    self.userRated = NO;
     
     self.journalPostArray = [[NSMutableArray alloc]init];
     
@@ -50,7 +58,7 @@
     NSData *artworkData = [NSData dataWithContentsOfURL:artworkURL];
     UIImage *artworkImage = [UIImage imageWithData:artworkData];
     self.artworkImageView.image = artworkImage;
-    
+        
 }
 - (void) textViewDidBeginEditing:(UITextView *)textView{
     self.textView.text = @"";
@@ -63,12 +71,117 @@
     self.doneEditingButton.hidden = YES;
     
     [[[UIApplication sharedApplication] keyWindow] endEditing:YES];
-
 }
-- (IBAction)starButtonTapped:(id)sender {
+
+#pragma mark - star rating
+
+- (IBAction)oneStarTapped:(id)sender
+{
+    if (self.userRated == NO) {
+        self.userRated = YES; // change to yes
+         [self resetStars];
+        [self.starButtonOne setBackgroundImage:[UIImage imageNamed:@"rating_star_filled.png"] forState:UIControlStateNormal];
     
-    self.starButtonOne.tintColor = [UIColor yellowColor];
+    } else
     
+        if (self.userRated == YES) {
+            self.userRated = NO; // change to yes
+            [self resetStars];
+            [self.starButtonOne setBackgroundImage:[UIImage imageNamed:@"rating_star_filled.png"] forState:UIControlStateNormal];
+        }
+}
+
+- (IBAction)twoStarTapped:(id)sender
+{
+    if (self.userRated == NO) {
+        self.userRated = YES; // change to yes
+         [self resetStars];
+        [self.starButtonOne setBackgroundImage:[UIImage imageNamed:@"rating_star_filled.png"] forState:UIControlStateNormal];
+        [self.starButtonTwo setBackgroundImage:[UIImage imageNamed:@"rating_star_filled.png"] forState:UIControlStateNormal];
+        
+    } else
+        
+        if (self.userRated == YES) {
+            self.userRated = NO; // change to yes
+            [self resetStars];
+            [self.starButtonOne setBackgroundImage:[UIImage imageNamed:@"rating_star_filled.png"] forState:UIControlStateNormal];
+            [self.starButtonTwo setBackgroundImage:[UIImage imageNamed:@"rating_star_filled.png"] forState:UIControlStateNormal];
+        }
+}
+
+- (IBAction)threeStarTapped:(id)sender
+{
+    if (self.userRated == NO) {
+        self.userRated = YES; // change to yes
+         [self resetStars];
+        [self.starButtonOne setBackgroundImage:[UIImage imageNamed:@"rating_star_filled.png"] forState:UIControlStateNormal];
+        [self.starButtonTwo setBackgroundImage:[UIImage imageNamed:@"rating_star_filled.png"] forState:UIControlStateNormal];
+        [self.starButtonThree setBackgroundImage:[UIImage imageNamed:@"rating_star_filled.png"] forState:UIControlStateNormal];
+        
+    } else
+        
+        if (self.userRated == YES) {
+            self.userRated = NO; // change to yes
+            [self resetStars];
+            [self.starButtonOne setBackgroundImage:[UIImage imageNamed:@"rating_star_filled.png"] forState:UIControlStateNormal];
+            [self.starButtonTwo setBackgroundImage:[UIImage imageNamed:@"rating_star_filled.png"] forState:UIControlStateNormal];
+            [self.starButtonThree setBackgroundImage:[UIImage imageNamed:@"rating_star_filled.png"] forState:UIControlStateNormal];
+        }
+}
+
+- (IBAction)fourStarTapped:(id)sender
+{
+    if (self.userRated == NO) {
+        self.userRated = YES; // change to yes
+         [self resetStars];
+        [self.starButtonOne setBackgroundImage:[UIImage imageNamed:@"rating_star_filled.png"] forState:UIControlStateNormal];
+        [self.starButtonTwo setBackgroundImage:[UIImage imageNamed:@"rating_star_filled.png"] forState:UIControlStateNormal];
+        [self.starButtonThree setBackgroundImage:[UIImage imageNamed:@"rating_star_filled.png"] forState:UIControlStateNormal];
+        [self.starButtonFour setBackgroundImage:[UIImage imageNamed:@"rating_star_filled.png"] forState:UIControlStateNormal];
+        
+        
+    } else
+        
+        if (self.userRated == YES) {
+            self.userRated = NO; // change to yes
+            [self resetStars];
+            [self.starButtonOne setBackgroundImage:[UIImage imageNamed:@"rating_star_filled.png"] forState:UIControlStateNormal];
+            [self.starButtonTwo setBackgroundImage:[UIImage imageNamed:@"rating_star_filled.png"] forState:UIControlStateNormal];
+            [self.starButtonThree setBackgroundImage:[UIImage imageNamed:@"rating_star_filled.png"] forState:UIControlStateNormal];
+            [self.starButtonFour setBackgroundImage:[UIImage imageNamed:@"rating_star_filled.png"] forState:UIControlStateNormal];
+        }
+}
+- (IBAction)fiveStarTapped:(id)sender
+{
+    if (self.userRated == NO) {
+        self.userRated = YES; // change to yes
+        [self.starButtonOne setBackgroundImage:[UIImage imageNamed:@"rating_star_filled.png"] forState:UIControlStateNormal];
+        [self.starButtonTwo setBackgroundImage:[UIImage imageNamed:@"rating_star_filled.png"] forState:UIControlStateNormal];
+        [self.starButtonThree setBackgroundImage:[UIImage imageNamed:@"rating_star_filled.png"] forState:UIControlStateNormal];
+        [self.starButtonFour setBackgroundImage:[UIImage imageNamed:@"rating_star_filled.png"] forState:UIControlStateNormal];
+        [self.starButtonFive setBackgroundImage:[UIImage imageNamed:@"rating_star_filled.png"] forState:UIControlStateNormal];
+        
+        
+    } else
+        
+        if (self.userRated == YES) {
+            self.userRated = NO; // change to yes
+            [self resetStars];
+            [self.starButtonOne setBackgroundImage:[UIImage imageNamed:@"rating_star_filled.png"] forState:UIControlStateNormal];
+            [self.starButtonTwo setBackgroundImage:[UIImage imageNamed:@"rating_star_filled.png"] forState:UIControlStateNormal];
+            [self.starButtonThree setBackgroundImage:[UIImage imageNamed:@"rating_star_filled.png"] forState:UIControlStateNormal];
+            [self.starButtonFour setBackgroundImage:[UIImage imageNamed:@"rating_star_filled.png"] forState:UIControlStateNormal];
+            [self.starButtonFive setBackgroundImage:[UIImage imageNamed:@"rating_star_filled.png"] forState:UIControlStateNormal];
+        }
+}
+
+- (void)resetStars
+{
+    [self.starButtonOne setBackgroundImage:[UIImage imageNamed:@"rating_star.png"] forState:UIControlStateNormal];
+    [self.starButtonTwo setBackgroundImage:[UIImage imageNamed:@"rating_star.png"] forState:UIControlStateNormal];
+    [self.starButtonThree setBackgroundImage:[UIImage imageNamed:@"rating_star.png"] forState:UIControlStateNormal];
+    [self.starButtonFour setBackgroundImage:[UIImage imageNamed:@"rating_star.png"] forState:UIControlStateNormal];
+    [self.starButtonFive setBackgroundImage:[UIImage imageNamed:@"rating_star.png"] forState:UIControlStateNormal];
 }
 
 #pragma mark - save items
@@ -102,8 +215,10 @@
 //      
 //         NSLog(@"Segue to Tab");
 //         JournalMainCollectionViewController *viewController = [[JournalMainCollectionViewController alloc]init];
+     
          TabBarViewController *tabVC = segue.destinationViewController;
          JournalMainCollectionViewController *viewController = [[tabVC viewControllers] objectAtIndex:2];
+     
          //[viewController.allJournalPosts addObjectsFromArray:self.journalPostArray];
      
         viewController.journalPostToAdd = self. journalPost;
