@@ -50,6 +50,7 @@
 		84CF45B91BCB0C5900EAA3BF /* HotelViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84CF45B81BCB0C5900EAA3BF /* HotelViewController.m */; settings = {ASSET_TAGS = (); }; };
 		84CF45BC1BCB0E9D00EAA3BF /* ImageTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84CF45BB1BCB0E9D00EAA3BF /* ImageTableViewController.m */; settings = {ASSET_TAGS = (); }; };
 		84CF45CB1BCC51C200EAA3BF /* VideoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84CF45CA1BCC51C200EAA3BF /* VideoViewController.m */; settings = {ASSET_TAGS = (); }; };
+		D9682D5D1BCD4E1600647FD8 /* APIManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D9682D5C1BCD4E1600647FD8 /* APIManager.m */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -127,6 +128,8 @@
 		84CF45BB1BCB0E9D00EAA3BF /* ImageTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageTableViewController.m; sourceTree = "<group>"; };
 		84CF45C91BCC51C200EAA3BF /* VideoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoViewController.h; sourceTree = "<group>"; };
 		84CF45CA1BCC51C200EAA3BF /* VideoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoViewController.m; sourceTree = "<group>"; };
+		D9682D5B1BCD4E1600647FD8 /* APIManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APIManager.h; sourceTree = "<group>"; };
+		D9682D5C1BCD4E1600647FD8 /* APIManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APIManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -193,6 +196,8 @@
 				84CF45931BCAED1D00EAA3BF /* Images */,
 				84CF452C1BCAD0EA00EAA3BF /* AppDelegate.h */,
 				84CF452D1BCAD0EA00EAA3BF /* AppDelegate.m */,
+				D9682D5B1BCD4E1600647FD8 /* APIManager.h */,
+				D9682D5C1BCD4E1600647FD8 /* APIManager.m */,
 				84CF45C11BCB4F0300EAA3BF /* NewTrip */,
 				84CF45C81BCC519800EAA3BF /* Video */,
 				84CF45BD1BCB4ECA00EAA3BF /* Food */,
@@ -481,6 +486,7 @@
 				84CF45371BCAD0EB00EAA3BF /* InControl.xcdatamodeld in Sources */,
 				84CF45B61BCB057600EAA3BF /* WelcomeViewController.m in Sources */,
 				84CF452B1BCAD0EA00EAA3BF /* main.m in Sources */,
+				D9682D5D1BCD4E1600647FD8 /* APIManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
