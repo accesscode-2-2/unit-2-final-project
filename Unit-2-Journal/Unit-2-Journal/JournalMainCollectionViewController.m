@@ -25,8 +25,15 @@
     } else {
         nil;
     }
+
+    NSLog(@"Current Journal Post: %@", self.journalPostToAdd);
     
-     NSLog(@"All Journal Posts: %@", self.allJournalPosts);
+    if (self.journalPostToAdd != nil){
+    [self. allJournalPosts addObject:self.journalPostToAdd];
+    }
+    
+    NSLog(@"All Journal Posts: %@", self.allJournalPosts);
+    
     
     collectionImages = [NSMutableArray arrayWithObjects:@"destroyer.png", @"drake.png", @"big_nerd_ranch.png", @"talking_heads.png", @"true_detective", @"sleater_kinney.png", @"x-files.png", @"run_the_jewels.png", @"lean_startup.png", nil];
     
@@ -54,7 +61,8 @@
 
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
-    return collectionImages.count;
+    //return collectionImages.count;
+    return self.allJournalPosts.count;
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
@@ -63,7 +71,19 @@
     UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:identifier forIndexPath:indexPath];
     
     UIImageView *collectionImageView = (UIImageView *)[cell viewWithTag:100];
-    collectionImageView.image = [UIImage imageNamed:[collectionImages objectAtIndex:indexPath.row]];
+    
+    //collectionImageView.image = [UIImage imageNamed:[collectionImages objectAtIndex:indexPath.row]];
+    
+    JournalPost *thisResult = self.allJournalPosts[indexPath.row];
+    iTunesSearchResult *iTunes = thisResult.postSubject;
+    
+    NSString *imageString = iTunes.artworkURL;
+    NSURL *imageURL = [NSURL URLWithString:imageString];
+    NSData *imageData = [NSData dataWithContentsOfURL:imageURL];
+    UIImage *image = [UIImage imageWithData:imageData];
+    
+    collectionImageView.image = image;
+    
     
     cell.layer.borderWidth = 2.0;
     cell.layer.borderColor = [UIColor blackColor].CGColor;

@@ -8,6 +8,7 @@
 
 #import "CreateJournalEntryViewController.h"
 #import "JournalPost.h"
+#import "TabBarViewController.h"
 #import "JournalMainCollectionViewController.h"
 
 @interface CreateJournalEntryViewController () <UITextViewDelegate>
@@ -94,12 +95,21 @@
 
      NSLog(@"Segue");
      
-     if ([[segue identifier]isEqualToString:@"logToJournalSegue"]) {
-     JournalMainCollectionViewController *viewController = segue.destinationViewController;
-         [viewController.allJournalPosts addObjectsFromArray:self.journalPostArray];
-     }
+//     if ([[segue identifier]isEqualToString:@"logToJournalSegue"]) {
+//      
+//         NSLog(@"Segue to Tab");
+//         JournalMainCollectionViewController *viewController = [[JournalMainCollectionViewController alloc]init];
+         TabBarViewController *tabVC = segue.destinationViewController;
+         JournalMainCollectionViewController *viewController = [[tabVC viewControllers] objectAtIndex:2];
+         //[viewController.allJournalPosts addObjectsFromArray:self.journalPostArray];
+     
+        viewController.journalPostToAdd = self. journalPost;
+        [tabVC setSelectedIndex:2];
+ //    }
  }
 
-
+//locationsHome* vc = [[locationsHome alloc] init];
+//UITabBarController* tbc = [segue destinationViewController];
+//vc = (locationsHome *)[[tbc customizableViewControllers] objectAtIndex:0];
 
 @end
