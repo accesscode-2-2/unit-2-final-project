@@ -32,6 +32,7 @@
 
 
 - (IBAction)doneButtonTapped:(UIButton *)sender {
+    [self.delegate finishedAnswering:self withAnswer:self.answerTextView.text];
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 

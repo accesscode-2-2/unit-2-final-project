@@ -18,7 +18,7 @@
 
 
 
-@interface ViewController ()<UIPickerViewDelegate, UIPickerViewDataSource, SecondViewControllerDelegate>
+@interface ViewController ()<UIPickerViewDelegate, UIPickerViewDataSource, QuestionDetailVCDelegate>
 @property (weak, nonatomic) IBOutlet UIPickerView *habitsPickerView;
 @property (strong, nonatomic) IBOutletCollection(UIButton) NSArray *question;
 
@@ -31,23 +31,37 @@
 - (IBAction)questionButtonTapped:(UIButton *)sender {
     QuestionDetailVC *qvc = (QuestionDetailVC *)[self.storyboard instantiateViewControllerWithIdentifier:@"showQDetailSegue"];
     qvc.question = sender.titleLabel.text;
+   qvc.delegate = self;
+    qvc.tag = sender.tag; 
+    
     [self presentViewController:qvc animated:YES completion:nil];
 }
 
 
 
-- (void)dataFromController:(NSString *)data {
+- (void)finishedAnswering:(QuestionDetailVC *)qvc withAnswer:(NSString *)answer {
+    for (int i = 0; i < self.answer.count; i++) {
+        UIButton *currentButton = (UIButton *)self.question[i];
+        if (qvc.tag == currentButton.tag) {
+            UILabel *currentLabel = (UILabel *)self.answer[i];
+            
+            currentLabel.text = answer; 
+        }
+        
+    }
    // self.answer.text= data;
     //add label
 }
 
-- (void)passDataForward
-{
-    QuestionDetailVC *secondViewController = [[QuestionDetailVC alloc] init];
-   // secondViewController.data = self.answer.text; //add label
-    secondViewController.delegate = self; // Set the second view controller's delegate to self
-    [self.navigationController pushViewController:secondViewController animated:YES];
-}
+
+
+//- (void)passDataForward
+//{
+//    QuestionDetailVC *secondViewController = [[QuestionDetailVC alloc] init];
+//   // secondViewController.data = self.answer.text; //add label
+//    secondViewController.delegate = self; // Set the second view controller's delegate to self
+//    [self.navigationController pushViewController:secondViewController animated:YES];
+//}
 
 
 //passing data to a new VC
