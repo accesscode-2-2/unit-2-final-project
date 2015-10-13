@@ -39,7 +39,12 @@
 
 
 
-
+<<<<<<< HEAD
+- (void)dataFromController:(NSString *)data {
+    for(int i=0; i < self.answer.count; i++){
+        
+    }
+=======
 - (void)finishedAnswering:(QuestionDetailVC *)qvc withAnswer:(NSString *)answer {
     for (int i = 0; i < self.answer.count; i++) {
         UIButton *currentButton = (UIButton *)self.question[i];
@@ -50,7 +55,36 @@
         }
         
     }
+   // self.answer.text= data;
+    //add label
+>>>>>>> f9fb9cabe3fc7c6ddd477dae9457d4478216ab46
 }
+
+
+
+//- (void)passDataForward
+//{
+//    QuestionDetailVC *secondViewController = [[QuestionDetailVC alloc] init];
+//   // secondViewController.data = self.answer.text; //add label
+//    secondViewController.delegate = self; // Set the second view controller's delegate to self
+//    [self.navigationController pushViewController:secondViewController animated:YES];
+//}
+
+
+//passing data to a new VC
+/*
+ if([segue.identifier isEqualToString:@"showQDetailSegue"]){
+ ViewControllerB *controller = (ViewControllerB *)segue.destinationViewController;
+ controller.isSomethingEnabled = YES;
+ */
+
+//selector pushViewController is not declared
+//    questionDetailVC *qDetailVC = [[questionDetailVC alloc] initWithNibName:@"questionDetailVC" bundle:nil];
+//                                   //initWithNib:@"questionDetailVC" bundle:nil];
+//    qDetailVC.isSomethingEnabled = YES;
+//    [self pushViewController:qDetailVC animated:YES];
+
+
 
 - (void)viewDidLoad {
     [super viewDidLoad];
