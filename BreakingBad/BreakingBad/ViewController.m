@@ -37,8 +37,9 @@
 
 
 - (void)dataFromController:(NSString *)data {
-   // self.answer.text= data;
-    //add label
+    for(int i=0; i < self.answer.count; i++){
+        
+    }
 }
 
 - (void)passDataForward
