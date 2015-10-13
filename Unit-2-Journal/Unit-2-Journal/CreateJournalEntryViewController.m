@@ -87,6 +87,9 @@
                                
     NSLog(@"Journal Post: %@",self.journalPost);
     
+ //   [self.navigationController popToRootViewControllerAnimated:YES];
+
+    
 }
 
  #pragma mark - Navigation
@@ -105,6 +108,8 @@
      
         viewController.journalPostToAdd = self. journalPost;
         [tabVC setSelectedIndex:2];
+     
+    
  //    }
  }
 
