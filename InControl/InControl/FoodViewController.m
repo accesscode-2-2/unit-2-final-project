@@ -2,7 +2,7 @@
 //  FoodViewController.m
 //  InControl
 //
-//  Created by Diana Elezaj on 10/11/15.
+//  Created by Xiulan Shi on 10/13/15.
 //  Copyright © 2015 Diana Elezaj. All rights reserved.
 //
 
@@ -31,7 +31,7 @@ UITableViewDelegate
     [self makeNewAPIRequestWithSearchTerm:@"food" andLocation:@"Flushing" callbackBlock:^{
         [self.tableView reloadData];
     }];
-
+    
 }
 
 
@@ -89,5 +89,4 @@ UITableViewDelegate
     cell.detailTextLabel.text = result.address;
     return cell;
 }
-
 @end

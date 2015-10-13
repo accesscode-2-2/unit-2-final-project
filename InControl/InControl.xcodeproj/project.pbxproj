@@ -45,13 +45,13 @@
 		84CF45A51BCAF71300EAA3BF /* video.png in Resources */ = {isa = PBXBuildFile; fileRef = 84CF45A41BCAF71300EAA3BF /* video.png */; settings = {ASSET_TAGS = (); }; };
 		84CF45A71BCAF7D300EAA3BF /* image.png in Resources */ = {isa = PBXBuildFile; fileRef = 84CF45A61BCAF7D300EAA3BF /* image.png */; settings = {ASSET_TAGS = (); }; };
 		84CF45AD1BCAFA5A00EAA3BF /* insta.png in Resources */ = {isa = PBXBuildFile; fileRef = 84CF45AC1BCAFA5A00EAA3BF /* insta.png */; settings = {ASSET_TAGS = (); }; };
-		84CF45B31BCB049200EAA3BF /* FoodViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84CF45B21BCB049200EAA3BF /* FoodViewController.m */; settings = {ASSET_TAGS = (); }; };
 		84CF45B61BCB057600EAA3BF /* WelcomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84CF45B51BCB057600EAA3BF /* WelcomeViewController.m */; settings = {ASSET_TAGS = (); }; };
-		84CF45B91BCB0C5900EAA3BF /* HotelViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84CF45B81BCB0C5900EAA3BF /* HotelViewController.m */; settings = {ASSET_TAGS = (); }; };
 		84CF45BC1BCB0E9D00EAA3BF /* ImageTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84CF45BB1BCB0E9D00EAA3BF /* ImageTableViewController.m */; settings = {ASSET_TAGS = (); }; };
 		84CF45CB1BCC51C200EAA3BF /* VideoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84CF45CA1BCC51C200EAA3BF /* VideoViewController.m */; settings = {ASSET_TAGS = (); }; };
 		D9682D5D1BCD4E1600647FD8 /* APIManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D9682D5C1BCD4E1600647FD8 /* APIManager.m */; settings = {ASSET_TAGS = (); }; };
 		D9682D601BCD501700647FD8 /* Venue.m in Sources */ = {isa = PBXBuildFile; fileRef = D9682D5F1BCD501700647FD8 /* Venue.m */; settings = {ASSET_TAGS = (); }; };
+		D9682D631BCD665200647FD8 /* HotelViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D9682D621BCD665200647FD8 /* HotelViewController.m */; settings = {ASSET_TAGS = (); }; };
+		D9682D661BCD671000647FD8 /* FoodViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D9682D651BCD671000647FD8 /* FoodViewController.m */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -119,12 +119,8 @@
 		84CF45A41BCAF71300EAA3BF /* video.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = video.png; sourceTree = "<group>"; };
 		84CF45A61BCAF7D300EAA3BF /* image.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = image.png; sourceTree = "<group>"; };
 		84CF45AC1BCAFA5A00EAA3BF /* insta.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = insta.png; sourceTree = "<group>"; };
-		84CF45B11BCB049200EAA3BF /* FoodViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FoodViewController.h; sourceTree = "<group>"; };
-		84CF45B21BCB049200EAA3BF /* FoodViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FoodViewController.m; sourceTree = "<group>"; };
 		84CF45B41BCB057600EAA3BF /* WelcomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WelcomeViewController.h; sourceTree = "<group>"; };
 		84CF45B51BCB057600EAA3BF /* WelcomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WelcomeViewController.m; sourceTree = "<group>"; };
-		84CF45B71BCB0C5900EAA3BF /* HotelViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HotelViewController.h; sourceTree = "<group>"; };
-		84CF45B81BCB0C5900EAA3BF /* HotelViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HotelViewController.m; sourceTree = "<group>"; };
 		84CF45BA1BCB0E9D00EAA3BF /* ImageTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageTableViewController.h; sourceTree = "<group>"; };
 		84CF45BB1BCB0E9D00EAA3BF /* ImageTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageTableViewController.m; sourceTree = "<group>"; };
 		84CF45C91BCC51C200EAA3BF /* VideoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoViewController.h; sourceTree = "<group>"; };
@@ -133,6 +129,10 @@
 		D9682D5C1BCD4E1600647FD8 /* APIManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APIManager.m; sourceTree = "<group>"; };
 		D9682D5E1BCD501600647FD8 /* Venue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Venue.h; sourceTree = "<group>"; };
 		D9682D5F1BCD501700647FD8 /* Venue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Venue.m; sourceTree = "<group>"; };
+		D9682D611BCD665200647FD8 /* HotelViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HotelViewController.h; sourceTree = "<group>"; };
+		D9682D621BCD665200647FD8 /* HotelViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HotelViewController.m; sourceTree = "<group>"; };
+		D9682D641BCD671000647FD8 /* FoodViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FoodViewController.h; sourceTree = "<group>"; };
+		D9682D651BCD671000647FD8 /* FoodViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FoodViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -277,8 +277,8 @@
 		84CF45BD1BCB4ECA00EAA3BF /* Food */ = {
 			isa = PBXGroup;
 			children = (
-				84CF45B11BCB049200EAA3BF /* FoodViewController.h */,
-				84CF45B21BCB049200EAA3BF /* FoodViewController.m */,
+				D9682D641BCD671000647FD8 /* FoodViewController.h */,
+				D9682D651BCD671000647FD8 /* FoodViewController.m */,
 			);
 			name = Food;
 			sourceTree = "<group>";
@@ -304,8 +304,8 @@
 		84CF45C01BCB4EF700EAA3BF /* Hotel */ = {
 			isa = PBXGroup;
 			children = (
-				84CF45B71BCB0C5900EAA3BF /* HotelViewController.h */,
-				84CF45B81BCB0C5900EAA3BF /* HotelViewController.m */,
+				D9682D611BCD665200647FD8 /* HotelViewController.h */,
+				D9682D621BCD665200647FD8 /* HotelViewController.m */,
 			);
 			name = Hotel;
 			sourceTree = "<group>";
@@ -482,12 +482,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				84CF45CB1BCC51C200EAA3BF /* VideoViewController.m in Sources */,
-				84CF45B31BCB049200EAA3BF /* FoodViewController.m in Sources */,
 				84CF45311BCAD0EA00EAA3BF /* ViewController.m in Sources */,
+				D9682D631BCD665200647FD8 /* HotelViewController.m in Sources */,
 				84CF456B1BCAD14300EAA3BF /* RNFrostedSidebar.m in Sources */,
 				84CF45BC1BCB0E9D00EAA3BF /* ImageTableViewController.m in Sources */,
-				84CF45B91BCB0C5900EAA3BF /* HotelViewController.m in Sources */,
 				84CF452E1BCAD0EA00EAA3BF /* AppDelegate.m in Sources */,
+				D9682D661BCD671000647FD8 /* FoodViewController.m in Sources */,
 				84CF45371BCAD0EB00EAA3BF /* InControl.xcdatamodeld in Sources */,
 				84CF45B61BCB057600EAA3BF /* WelcomeViewController.m in Sources */,
 				D9682D601BCD501700647FD8 /* Venue.m in Sources */,

@@ -2,7 +2,7 @@
 //  HotelViewController.h
 //  InControl
 //
-//  Created by Diana Elezaj on 10/11/15.
+//  Created by Xiulan Shi on 10/13/15.
 //  Copyright © 2015 Diana Elezaj. All rights reserved.
 //
 
