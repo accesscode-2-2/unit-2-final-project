@@ -124,32 +124,17 @@
     return cell;
 }
 
-//# pragma mark - text field delegate methods
-//
-//- (BOOL)textFieldShouldReturn:(UITextField *)textField{
-//    
-//    [self.view endEditing:YES];
-//    
-//    NSString * query = @"";
-//    
-//    query = [ query stringByAppendingString: self.str];
-//    
-//    [self makeFSAPIRequestWithSearchTerm:query callbackBlock:^{
-//        
-//        [self.tableView reloadData];
-//    }];
-//    return YES;
-//}
+ 
 
-//- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-//    
-//    Youtube *video = [self.searchedVideos objectAtIndex:indexPath.row];
-//    
-//    NSString *videoString = video.videoID;
-//    XCDYouTubeVideoPlayerViewController *videoPlayerViewController = [[XCDYouTubeVideoPlayerViewController alloc] initWithVideoIdentifier:videoString];
-//    
-//    [self presentMoviePlayerViewControllerAnimated:videoPlayerViewController];
-//    
-//}
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    Youtube *video = [self.searchedVideos objectAtIndex:indexPath.row];
+    
+    NSString *videoString = video.videoID;
+    XCDYouTubeVideoPlayerViewController *videoPlayerViewController = [[XCDYouTubeVideoPlayerViewController alloc] initWithVideoIdentifier:videoString];
+    
+    [self presentMoviePlayerViewControllerAnimated:videoPlayerViewController];
+    
+}
 
 @end
