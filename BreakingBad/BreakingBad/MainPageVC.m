@@ -27,25 +27,28 @@
     
     [[SharedManager sharedModel].habitArray addObject:self.habitTextField.text];
     [self.habitPickerView reloadAllComponents];
-    
-//    [self.habitsArray addObject:self.createNewHabit.text];
-//    [self.habitsPickerView reloadAllComponents];
 }
 
+
+-(void)answersFromPreviousScreen{
+    for (int i=0; i <self.reply.count; i++)
+    {
+        UILabel *currentAnswerLabel = (UILabel *) [SharedManager sharedModel].answersLabel[i];
+        UILabel *label = (UILabel *)self.reply[i];
+        if(currentAnswerLabel.tag == label.tag)
+        {
+            label.text = currentAnswerLabel.text;
+        }
+    }
+}
 
 - (void)viewDidLoad{
     [super viewDidLoad];
     self.habitPickerView.delegate = self;
+    [self answersFromPreviousScreen];
     
-    //MainPageVC.navigationItem.title = @"MyTitle";
+    [self.habitPickerView selectRow:[SharedManager sharedModel].selectedRow inComponent:0 animated:YES];
 }
-
-//- (void)selectRow:(NSInteger)row inComponent:(NSInteger)component animated:(BOOL)animated {
-//    
-//    [SharedManager sharedModel].habitArray[row]
-//}
-
-
 
 #pragma mark
 #pragma UIPickerView DataSource Methods
@@ -57,14 +60,11 @@
 - (NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component{
     
     return [SharedManager sharedModel].habitArray.count;
-    //self.habitsArray.count;
 }
 
 - (nullable NSString *)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component{
     
     return [SharedManager sharedModel].habitArray[row];
-    
-    //self.habitsArray[row];
 }
 
 @end

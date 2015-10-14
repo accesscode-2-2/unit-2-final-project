@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8164.2" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="eFl-bJ-oI1">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="eFl-bJ-oI1">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8135.1"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
@@ -682,8 +682,8 @@
                                         </constraints>
                                         <variation key="default">
                                             <mask key="constraints">
-                                                <exclude reference="OeA-wQ-DF2"/>
                                                 <exclude reference="MaE-lo-VDB"/>
+                                                <exclude reference="OeA-wQ-DF2"/>
                                             </mask>
                                         </variation>
                                     </view>
@@ -961,11 +961,11 @@
                             <mask key="constraints">
                                 <exclude reference="7jt-kt-Lii"/>
                                 <exclude reference="lU9-G3-NYs"/>
-                                <exclude reference="DpM-oq-Xta"/>
-                                <exclude reference="oYO-9M-o1t"/>
                                 <exclude reference="0UJ-Cc-Lwv"/>
-                                <exclude reference="ZlF-am-IKt"/>
                                 <exclude reference="86i-wx-31h"/>
+                                <exclude reference="DpM-oq-Xta"/>
+                                <exclude reference="ZlF-am-IKt"/>
+                                <exclude reference="oYO-9M-o1t"/>
                                 <exclude reference="vaN-DM-6gg"/>
                             </mask>
                         </variation>
@@ -977,6 +977,9 @@
                         <outletCollection property="reply" destination="l9q-fl-lA0" id="MbS-5P-5oc"/>
                         <outletCollection property="reply" destination="dQ3-JH-NAX" id="Ne4-EM-UYP"/>
                         <outletCollection property="reply" destination="mXt-Fy-z6C" id="bdC-kG-zof"/>
+                        <outletCollection property="reply" destination="Pbo-7W-DUH" id="rRr-Pv-yYp"/>
+                        <outletCollection property="reply" destination="7mB-TC-4SZ" id="8lF-l5-JCl"/>
+                        <outletCollection property="reply" destination="Dk7-FL-43J" id="Gex-QY-w4h"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3tJ-xw-kL1" userLabel="First Responder" sceneMemberID="firstResponder"/>
