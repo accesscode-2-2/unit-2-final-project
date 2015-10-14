@@ -49,6 +49,7 @@
 		84CF45B61BCB057600EAA3BF /* WelcomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84CF45B51BCB057600EAA3BF /* WelcomeViewController.m */; settings = {ASSET_TAGS = (); }; };
 		84CF45BC1BCB0E9D00EAA3BF /* ImageTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84CF45BB1BCB0E9D00EAA3BF /* ImageTableViewController.m */; settings = {ASSET_TAGS = (); }; };
 		84CF45CB1BCC51C200EAA3BF /* VideoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84CF45CA1BCC51C200EAA3BF /* VideoViewController.m */; settings = {ASSET_TAGS = (); }; };
+		84CF45CE1BCD8F7200EAA3BF /* Youtube.m in Sources */ = {isa = PBXBuildFile; fileRef = 84CF45CD1BCD8F7200EAA3BF /* Youtube.m */; settings = {ASSET_TAGS = (); }; };
 		D9682D5D1BCD4E1600647FD8 /* APIManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D9682D5C1BCD4E1600647FD8 /* APIManager.m */; settings = {ASSET_TAGS = (); }; };
 		D9682D601BCD501700647FD8 /* Venue.m in Sources */ = {isa = PBXBuildFile; fileRef = D9682D5F1BCD501700647FD8 /* Venue.m */; settings = {ASSET_TAGS = (); }; };
 		D9682D631BCD665200647FD8 /* HotelViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D9682D621BCD665200647FD8 /* HotelViewController.m */; settings = {ASSET_TAGS = (); }; };
@@ -127,6 +128,8 @@
 		84CF45BB1BCB0E9D00EAA3BF /* ImageTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageTableViewController.m; sourceTree = "<group>"; };
 		84CF45C91BCC51C200EAA3BF /* VideoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoViewController.h; sourceTree = "<group>"; };
 		84CF45CA1BCC51C200EAA3BF /* VideoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoViewController.m; sourceTree = "<group>"; };
+		84CF45CC1BCD8F7200EAA3BF /* Youtube.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Youtube.h; sourceTree = "<group>"; };
+		84CF45CD1BCD8F7200EAA3BF /* Youtube.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Youtube.m; sourceTree = "<group>"; };
 		CA12CD6286D3D05E336A1706 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA3CA915C16CD3F8F7FFC788 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		D9682D5B1BCD4E1600647FD8 /* APIManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APIManager.h; sourceTree = "<group>"; };
@@ -331,6 +334,8 @@
 			children = (
 				84CF45C91BCC51C200EAA3BF /* VideoViewController.h */,
 				84CF45CA1BCC51C200EAA3BF /* VideoViewController.m */,
+				84CF45CC1BCD8F7200EAA3BF /* Youtube.h */,
+				84CF45CD1BCD8F7200EAA3BF /* Youtube.m */,
 			);
 			name = Video;
 			sourceTree = "<group>";
@@ -546,6 +551,7 @@
 				84CF456B1BCAD14300EAA3BF /* RNFrostedSidebar.m in Sources */,
 				84CF45BC1BCB0E9D00EAA3BF /* ImageTableViewController.m in Sources */,
 				84CF452E1BCAD0EA00EAA3BF /* AppDelegate.m in Sources */,
+				84CF45CE1BCD8F7200EAA3BF /* Youtube.m in Sources */,
 				D9682D661BCD671000647FD8 /* FoodViewController.m in Sources */,
 				84CF45371BCAD0EB00EAA3BF /* InControl.xcdatamodeld in Sources */,
 				84CF45B61BCB057600EAA3BF /* WelcomeViewController.m in Sources */,

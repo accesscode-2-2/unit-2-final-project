@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "ViewController.h"
 @interface VideoViewController : UIViewController
+@property (nonatomic) NSString *str;
 
 @end

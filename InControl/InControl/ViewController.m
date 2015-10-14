@@ -13,7 +13,7 @@
 #import "VideoViewController.h"
 
 @interface ViewController ()
-@property (weak, nonatomic) IBOutlet UISearchBar *searchBar;
+
 @property (weak, nonatomic) IBOutlet UIButton *goButton;
 @property (weak, nonatomic) IBOutlet UIView *budgetView;
 
@@ -25,7 +25,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.searchBar.hidden = YES;
+        self.searchBar.hidden = YES;
     self.goButton.hidden = YES;
     self.budgetView.hidden = YES;
     
@@ -49,6 +49,8 @@
     [self ShowMenu];
     self.goButton.hidden = YES;
     self.searchBar.hidden = YES;
+    
+    
     
 }
 
@@ -149,6 +151,10 @@
     if (index == 5) { //video
         
         VideoViewController * vc = [self.storyboard instantiateViewControllerWithIdentifier:@"VideoID"];
+        vc.str = self.searchBar.text;
+        NSLog(@"passing %@", vc.str);
+        
+        
         [self presentViewController:vc animated:YES completion:nil];
         
         [sidebar dismissAnimated:YES completion:^(BOOL finished) {

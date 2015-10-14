@@ -7,8 +7,14 @@
 //
 
 #import "VideoViewController.h"
+#import <XCDYouTubeKit/XCDYouTubeKit.h>
+#import "APIManager.h"
+#import "ViewController.h"
+#import "Youtube.h"
 
 @interface VideoViewController ()
+//<UITableViewDataSource, UITableViewDelegate, UITextFieldDelegate>
+
 //comment
 @end
 
@@ -16,6 +22,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    NSLog(@"str %@", self.str);
+    
+    
     // Do any additional setup after loading the view.
 }
 
