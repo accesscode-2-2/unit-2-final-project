@@ -74,19 +74,6 @@
     [[[UIApplication sharedApplication] keyWindow] endEditing:YES];
 }
 
-#pragma mark - custom buttons tapped 
-
-- (void)extraRightItemDidPress {
-       NSLog(@"left button tapped!!!");
-}
-- (void)extraLeftItemDidPressed { //
- 
-}
-
-- (void)extraRightItemDidPressed { //
-    NSLog(@"right button tapped!!!");
-}
-
 #pragma mark - star rating
 
 - (IBAction)oneStarTapped:(id)sender
