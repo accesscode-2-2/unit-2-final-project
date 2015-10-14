@@ -13,7 +13,8 @@
 #import "Youtube.h"
 
 @interface VideoViewController ()
-//<UITableViewDataSource, UITableViewDelegate, UITextFieldDelegate>
+<UITableViewDataSource, UITableViewDelegate, UITextFieldDelegate>
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
 
 //comment
 @end
@@ -25,13 +26,11 @@
     NSLog(@"str %@", self.str);
     
     
-    // Do any additional setup after loading the view.
-}
+ }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
+ }
 
 /*
 #pragma mark - Navigation
