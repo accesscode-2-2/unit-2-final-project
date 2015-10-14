@@ -26,7 +26,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-        self.searchBar.hidden = YES;
+    self.searchBar.hidden = YES;
     self.goButton.hidden = YES;
     self.budgetView.hidden = YES;
     
@@ -44,7 +44,7 @@
     self.optionIndices = [NSMutableIndexSet indexSetWithIndex:1];
     // Do any additional setup after loading the view, typically from a nib.
 }
- 
+
 
 - (IBAction)goButton:(id)sender {
     [self ShowMenu];
@@ -63,7 +63,7 @@
 -(void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:YES];
     self.searchBar.text = self.saveSearchedCity;
- }
+}
 
 -(void) ShowMenu {
     
@@ -77,10 +77,10 @@
                         [UIImage imageNamed:@"video"],
                         [UIImage imageNamed:@"insta"],
                         [UIImage imageNamed:@"meetup"],
-                        [UIImage imageNamed:@"star"],
-                        [UIImage imageNamed:@"star"],
-                        [UIImage imageNamed:@"star"],
-                        [UIImage imageNamed:@"star"],
+//                        [UIImage imageNamed:@"star"],
+//                        [UIImage imageNamed:@"star"],
+//                        [UIImage imageNamed:@"star"],
+//                        [UIImage imageNamed:@"star"],
                         ];
     NSArray *colors = @[
                         [UIColor colorWithRed:240/255.f green:159/255.f blue:254/255.f alpha:1],
@@ -91,14 +91,14 @@
                         [UIColor colorWithRed:255/255.f green:137/255.f blue:167/255.f alpha:1],
                         [UIColor colorWithRed:126/255.f green:242/255.f blue:195/255.f alpha:1],
                         [UIColor colorWithRed:119/255.f green:152/255.f blue:255/255.f alpha:1],
-                        [UIColor colorWithRed:240/255.f green:159/255.f blue:254/255.f alpha:1],
-                        [UIColor colorWithRed:255/255.f green:137/255.f blue:167/255.f alpha:1],
-                        [UIColor colorWithRed:126/255.f green:242/255.f blue:195/255.f alpha:1],
-                        [UIColor colorWithRed:119/255.f green:152/255.f blue:255/255.f alpha:1],
+//                        [UIColor colorWithRed:240/255.f green:159/255.f blue:254/255.f alpha:1],
+//                        [UIColor colorWithRed:255/255.f green:137/255.f blue:167/255.f alpha:1],
+//                        [UIColor colorWithRed:126/255.f green:242/255.f blue:195/255.f alpha:1],
+//                        [UIColor colorWithRed:119/255.f green:152/255.f blue:255/255.f alpha:1],
                         ];
     
     RNFrostedSidebar *callout = [[RNFrostedSidebar alloc] initWithImages:images selectedIndices:self.optionIndices borderColors:colors];
-//        RNFrostedSidebar *callout = [[RNFrostedSidebar alloc] initWithImages:images];
+    //        RNFrostedSidebar *callout = [[RNFrostedSidebar alloc] initWithImages:images];
     callout.delegate = self;
     //    callout.showFromRight = YES;
     [callout show];
@@ -121,7 +121,7 @@
     
     if (index == 1) { //budget
         NSLog(@"savee %@",self.saveSearchedCity);
-
+        
         if ([self.searchBar.text isEqualToString:@""]) {
             [self EmptySearchBarAlert];
         }
@@ -133,14 +133,14 @@
     }
     if (index == 2) { //food
         NSLog(@"savee %@",self.saveSearchedCity);
-
+        
         if ([self.searchBar.text isEqualToString:@""]) {
             [self EmptySearchBarAlert];
         }
         else {
-        
+            
             FoodViewController * vc = [self.storyboard instantiateViewControllerWithIdentifier:@"FoodID"];
-        vc.city = self.saveSearchedCity;
+            vc.city = self.saveSearchedCity;
             [self presentViewController:vc animated:YES completion:nil];
             [sidebar dismissAnimated:YES completion:^(BOOL finished) {
                 
@@ -150,14 +150,14 @@
     if (index == 3) { //hotel
         
         NSLog(@"savee %@",self.saveSearchedCity);
-
+        
         if ([self.searchBar.text isEqualToString:@""]) {
             [self EmptySearchBarAlert];
         }
         else {
-        
+            
             HotelViewController * vc = [self.storyboard instantiateViewControllerWithIdentifier:@"HotelID"];
-        vc.city = self.saveSearchedCity;
+            vc.city = self.saveSearchedCity;
             [self presentViewController:vc animated:YES completion:nil];
             [sidebar dismissAnimated:YES completion:^(BOOL finished) {
             }];
@@ -169,7 +169,9 @@
         }
         else {
             ImageTableViewController * vc = [self.storyboard instantiateViewControllerWithIdentifier:@"ImageID"];
-            [self presentViewController:vc animated:YES completion:nil];
+            UINavigationController *nc = [[UINavigationController alloc] initWithRootViewController:vc];
+            
+            [self presentViewController:nc animated:YES completion:nil];
             
             [sidebar dismissAnimated:YES completion:^(BOOL finished) {
             }];
@@ -180,16 +182,16 @@
             [self EmptySearchBarAlert];
         }
         else {
-        
-        VideoViewController * vc = [self.storyboard instantiateViewControllerWithIdentifier:@"VideoID"];
-        vc.city = self.saveSearchedCity;
-        NSLog(@"passing %@", vc.city);
-        
-        
-        [self presentViewController:vc animated:YES completion:nil];
-        
-        [sidebar dismissAnimated:YES completion:^(BOOL finished) {
-        }];
+            
+            VideoViewController * vc = [self.storyboard instantiateViewControllerWithIdentifier:@"VideoID"];
+            vc.city = self.saveSearchedCity;
+            NSLog(@"passing %@", vc.city);
+            
+            
+            [self presentViewController:vc animated:YES completion:nil];
+            
+            [sidebar dismissAnimated:YES completion:^(BOOL finished) {
+            }];
         }
     }
     
@@ -228,7 +230,7 @@
     else {
         [self.optionIndices removeIndex:index];
         NSLog(@"else");
-
+        
     }
 }
 
