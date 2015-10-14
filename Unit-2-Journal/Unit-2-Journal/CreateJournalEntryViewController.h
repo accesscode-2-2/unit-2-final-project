@@ -8,9 +8,10 @@
 
 #import <UIKit/UIKit.h>
 #import "iTunesSearchResult.h"
+#import "YALTabBarInteracting.h"
 
 
-@interface CreateJournalEntryViewController : UIViewController
+@interface CreateJournalEntryViewController : UIViewController <YALTabBarInteracting>
 
 @property (nonatomic) iTunesSearchResult *postSearchResult;
 

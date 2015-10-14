@@ -60,8 +60,8 @@
     
     
     YALTabBarItem *item2 = [[YALTabBarItem alloc] initWithItemImage:[UIImage imageNamed:@"add"]
-                                                      leftItemImage:[UIImage imageNamed:@"idea"]
-                                                     rightItemImage:[UIImage imageNamed:@"star"]];
+                                                      leftItemImage:[UIImage imageNamed:@"star"]
+                                                     rightItemImage:[UIImage imageNamed:@"idea"]];
     
     tabBarController.leftBarItems = @[item1, item2];
     
