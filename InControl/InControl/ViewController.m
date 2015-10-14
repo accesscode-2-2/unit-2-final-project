@@ -18,6 +18,7 @@
 @property (weak, nonatomic) IBOutlet UIView *budgetView;
 
 @property (nonatomic, strong) NSMutableIndexSet *optionIndices;
+@property (nonatomic) NSString *saveSearchedCity;
 @end
 
 @implementation ViewController
@@ -49,8 +50,8 @@
     [self ShowMenu];
     self.goButton.hidden = YES;
     self.searchBar.hidden = YES;
-    
-    
+    self.saveSearchedCity = self.searchBar.text;
+    NSLog(@"savee %@",self.saveSearchedCity);
     
 }
 
@@ -58,6 +59,11 @@
     self.budgetView.hidden = YES;
     [self ShowMenu];
 }
+
+-(void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:YES];
+    self.searchBar.text = self.saveSearchedCity;
+ }
 
 -(void) ShowMenu {
     
@@ -70,7 +76,7 @@
                         [UIImage imageNamed:@"image"],
                         [UIImage imageNamed:@"video"],
                         [UIImage imageNamed:@"insta"],
-                        [UIImage imageNamed:@"star"],
+                        [UIImage imageNamed:@"meetup"],
                         [UIImage imageNamed:@"star"],
                         [UIImage imageNamed:@"star"],
                         [UIImage imageNamed:@"star"],
@@ -114,46 +120,69 @@
     }
     
     if (index == 1) { //budget
-        
-//        if ([self.searchBar.text isEqualToString:@""]) {
-//            [self EmptySearchBarAlert];
-//        }
-//        else {
+        NSLog(@"savee %@",self.saveSearchedCity);
+
+        if ([self.searchBar.text isEqualToString:@""]) {
+            [self EmptySearchBarAlert];
+        }
+        else {
             self.budgetView.hidden = NO;
             
             [sidebar dismissAnimated:YES completion:nil];
-        //}
+        }
     }
     if (index == 2) { //food
+        NSLog(@"savee %@",self.saveSearchedCity);
+
+        if ([self.searchBar.text isEqualToString:@""]) {
+            [self EmptySearchBarAlert];
+        }
+        else {
         
             FoodViewController * vc = [self.storyboard instantiateViewControllerWithIdentifier:@"FoodID"];
-            vc.city = self.searchBar.text;
+        vc.city = self.saveSearchedCity;
             [self presentViewController:vc animated:YES completion:nil];
             [sidebar dismissAnimated:YES completion:^(BOOL finished) {
                 
             }];
+        }
     }
     if (index == 3) { //hotel
         
+        NSLog(@"savee %@",self.saveSearchedCity);
+
+        if ([self.searchBar.text isEqualToString:@""]) {
+            [self EmptySearchBarAlert];
+        }
+        else {
+        
             HotelViewController * vc = [self.storyboard instantiateViewControllerWithIdentifier:@"HotelID"];
-            vc.city = self.searchBar.text; 
+        vc.city = self.saveSearchedCity;
             [self presentViewController:vc animated:YES completion:nil];
             [sidebar dismissAnimated:YES completion:^(BOOL finished) {
             }];
-        
+        }
     }
     if (index == 4) { //image
-        
+        if ([self.searchBar.text isEqualToString:@""]) {
+            [self EmptySearchBarAlert];
+        }
+        else {
             ImageTableViewController * vc = [self.storyboard instantiateViewControllerWithIdentifier:@"ImageID"];
             [self presentViewController:vc animated:YES completion:nil];
             
             [sidebar dismissAnimated:YES completion:^(BOOL finished) {
             }];
+        }
     }
     if (index == 5) { //video
+        if ([self.searchBar.text isEqualToString:@""]) {
+            [self EmptySearchBarAlert];
+        }
+        else {
         
         VideoViewController * vc = [self.storyboard instantiateViewControllerWithIdentifier:@"VideoID"];
-        vc.str = self.searchBar.text;
+        vc.str = self.saveSearchedCity;
         NSLog(@"passing %@", vc.str);
         
         
@@ -161,6 +190,7 @@
         
         [sidebar dismissAnimated:YES completion:^(BOOL finished) {
         }];
+        }
     }
     
     
@@ -170,7 +200,7 @@
 
 -(void) EmptySearchBarAlert {
     
-    UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"NEW TRIP ? ✈️" message:@"Please tell me your next destination 😉 " preferredStyle: UIAlertControllerStyleAlert];
+    UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"NEW TRIP ? ✈️" message:@"Please tell me your next destination! 😉 " preferredStyle: UIAlertControllerStyleAlert];
     
     UIAlertAction *okAction = [UIAlertAction
                                actionWithTitle:NSLocalizedString(@"OK", @"OK action")
