@@ -165,7 +165,7 @@
                                 <rect key="frame" x="10" y="60" width="580" height="530"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="iPa-Hb-M2y" detailTextLabel="20Z-4m-zpY" rowHeight="63" style="IBUITableViewCellStyleSubtitle" id="Stb-Kz-amM">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="VideoCellID" textLabel="iPa-Hb-M2y" detailTextLabel="20Z-4m-zpY" rowHeight="63" style="IBUITableViewCellStyleSubtitle" id="Stb-Kz-amM">
                                         <rect key="frame" x="0.0" y="28" width="580" height="63"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Stb-Kz-amM" id="znK-tM-y76">
@@ -485,6 +485,6 @@
         <image name="burger.png" width="19" height="17"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="f1o-LD-0Oh"/>
+        <segue reference="QJU-95-90e"/>
     </inferredMetricsTieBreakers>
 </document>
