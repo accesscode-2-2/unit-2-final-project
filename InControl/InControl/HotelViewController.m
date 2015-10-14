@@ -27,7 +27,7 @@ UITableViewDelegate
     self.tableView.dataSource = self;
     self.tableView.delegate = self;
     
-    [self makeNewAPIRequestWithSearchTerm:@"hotel" andLocation:@"Flushing" callbackBlock:^{
+    [self makeNewAPIRequestWithSearchTerm:@"hotel" andLocation:self.city callbackBlock:^{
         [self.tableView reloadData];
     }];
     

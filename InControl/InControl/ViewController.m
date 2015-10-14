@@ -127,6 +127,7 @@
     if (index == 2) { //food
         
             FoodViewController * vc = [self.storyboard instantiateViewControllerWithIdentifier:@"FoodID"];
+            vc.city = self.searchBar.text;
             [self presentViewController:vc animated:YES completion:nil];
             [sidebar dismissAnimated:YES completion:^(BOOL finished) {
                 
@@ -135,6 +136,7 @@
     if (index == 3) { //hotel
         
             HotelViewController * vc = [self.storyboard instantiateViewControllerWithIdentifier:@"HotelID"];
+            vc.city = self.searchBar.text; 
             [self presentViewController:vc animated:YES completion:nil];
             [sidebar dismissAnimated:YES completion:^(BOOL finished) {
             }];

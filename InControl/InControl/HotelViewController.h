@@ -10,4 +10,6 @@
 
 @interface HotelViewController : UIViewController
 
+@property NSString *city;
+
 @end
