@@ -411,8 +411,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MCI-x6-Kuv">
-                                <rect key="frame" x="209" y="468" width="46" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MCI-x6-Kuv">
+                                <rect key="frame" x="230" y="470" width="140" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="CC2-ia-6wG"/>
+                                    <constraint firstAttribute="width" constant="140" id="jBa-g1-DAu"/>
+                                </constraints>
                                 <state key="normal" backgroundImage="ok"/>
                                 <connections>
                                     <action selector="okButtonTapped:" destination="Llf-7N-ptg" eventType="touchUpInside" id="CRw-NM-Gct"/>
@@ -420,6 +424,10 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="MCI-x6-Kuv" firstAttribute="centerX" secondItem="X0U-Ff-1P4" secondAttribute="centerX" id="5P3-7Z-pH5"/>
+                            <constraint firstItem="3gM-fH-rf7" firstAttribute="top" secondItem="MCI-x6-Kuv" secondAttribute="bottom" constant="80" id="Mib-lh-X7Q"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="szs-bd-7Pn" userLabel="First Responder" sceneMemberID="firstResponder"/>

@@ -63,10 +63,10 @@ CATransform3D rotationTransform1[PHOTONUM];
     else if (self.currentTag == 1002)  { //games
         
         GamesViewController *vc = [self.storyboard instantiateViewControllerWithIdentifier:@"games"];
-    
-    [self presentViewController:vc animated:YES completion:nil];
-    
-
+        
+        [self presentViewController:vc animated:YES completion:nil];
+        
+        
     }
     
     
