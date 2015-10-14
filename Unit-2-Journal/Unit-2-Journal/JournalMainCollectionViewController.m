@@ -84,7 +84,7 @@
     
     collectionImageView.image = image;
     
-    
+    // round corners
     cell.layer.borderWidth = 2.0;
     cell.layer.borderColor = [UIColor blackColor].CGColor;
     cell.layer.cornerRadius = 30.0;
@@ -92,9 +92,6 @@
     
     return cell;
 }
-
-
-
 
 #pragma mark <UICollectionViewDelegate>
 

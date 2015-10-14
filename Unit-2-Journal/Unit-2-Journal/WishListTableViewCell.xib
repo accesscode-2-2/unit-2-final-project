@@ -7,53 +7,61 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="WishListTableViewCellIdentifier" rowHeight="95" id="KGk-i7-Jjw" customClass="WishListTableViewCell">
-            <rect key="frame" x="0.0" y="0.0" width="349" height="95"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="WishListTableViewCellIdentifier" rowHeight="66" id="KGk-i7-Jjw" customClass="WishListTableViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="340" height="125"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="349" height="94.5"/>
+                <rect key="frame" x="0.0" y="0.0" width="340" height="124.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ywi-Ne-nLf">
-                        <rect key="frame" x="93" y="18" width="248" height="21"/>
-                        <constraints>
-                            <constraint firstAttribute="height" constant="21" id="VyS-9k-VPX"/>
-                        </constraints>
-                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
-                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                        <nil key="highlightedColor"/>
-                    </label>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Vb0-5u-rmQ">
-                        <rect key="frame" x="13" y="13" width="70" height="70"/>
+                        <rect key="frame" x="18" y="32" width="60" height="60"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="70" id="5AS-OM-vRD"/>
-                            <constraint firstAttribute="width" constant="70" id="7pJ-oI-6VV"/>
+                            <constraint firstAttribute="height" constant="60" id="LLD-64-jSM"/>
+                            <constraint firstAttribute="width" constant="60" id="fag-dr-LW7"/>
                         </constraints>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TR1-Ae-Cd4">
-                        <rect key="frame" x="93" y="63" width="248" height="20.5"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <rect key="frame" x="86" y="62.5" width="238" height="46"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ywi-Ne-nLf">
+                        <rect key="frame" x="86" y="16" width="238" height="46.5"/>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="Vb0-5u-rmQ" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="09g-Mw-Qwu"/>
-                    <constraint firstItem="TR1-Ae-Cd4" firstAttribute="leading" secondItem="Vb0-5u-rmQ" secondAttribute="trailing" constant="10" id="4OP-GU-9RR"/>
+                    <constraint firstItem="Vb0-5u-rmQ" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="05Q-DJ-JMP"/>
+                    <constraint firstItem="TR1-Ae-Cd4" firstAttribute="leading" secondItem="Vb0-5u-rmQ" secondAttribute="trailing" constant="8" id="4aK-xN-uGi"/>
+                    <constraint firstItem="Vb0-5u-rmQ" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="10" id="C8a-B1-WwL"/>
                     <constraint firstItem="Vb0-5u-rmQ" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="Ev5-Ck-zXA"/>
-                    <constraint firstItem="TR1-Ae-Cd4" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailingMargin" id="EzE-1F-wek"/>
-                    <constraint firstAttribute="bottomMargin" secondItem="Vb0-5u-rmQ" secondAttribute="bottom" constant="5" id="aca-sS-buy"/>
-                    <constraint firstItem="ywi-Ne-nLf" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="10" id="c8i-sE-pUZ"/>
-                    <constraint firstItem="TR1-Ae-Cd4" firstAttribute="top" secondItem="ywi-Ne-nLf" secondAttribute="bottom" constant="24" id="cJ7-RE-dJF"/>
-                    <constraint firstItem="Vb0-5u-rmQ" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="5" id="eWz-lZ-geO"/>
-                    <constraint firstAttribute="bottomMargin" secondItem="TR1-Ae-Cd4" secondAttribute="bottom" constant="10" id="h2x-1e-3Hu"/>
-                    <constraint firstItem="ywi-Ne-nLf" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailingMargin" id="ixp-vc-hZB"/>
-                    <constraint firstItem="ywi-Ne-nLf" firstAttribute="leading" secondItem="Vb0-5u-rmQ" secondAttribute="trailing" constant="10" id="l25-Mm-zvV"/>
-                    <constraint firstItem="Vb0-5u-rmQ" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="5" id="syJ-0J-drL"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="ywi-Ne-nLf" secondAttribute="trailing" constant="8" id="FFQ-NJ-9ou"/>
+                    <constraint firstItem="TR1-Ae-Cd4" firstAttribute="top" secondItem="ywi-Ne-nLf" secondAttribute="bottom" id="HAv-m5-yWX"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="TR1-Ae-Cd4" secondAttribute="trailing" constant="8" id="Jka-bL-f27"/>
+                    <constraint firstItem="ywi-Ne-nLf" firstAttribute="leading" secondItem="Vb0-5u-rmQ" secondAttribute="trailing" constant="8" id="L74-k4-9jb"/>
+                    <constraint firstItem="ywi-Ne-nLf" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="8" id="Pag-db-ddS"/>
+                    <constraint firstItem="TR1-Ae-Cd4" firstAttribute="leading" secondItem="Vb0-5u-rmQ" secondAttribute="trailing" constant="8" id="Vai-2j-7Lw"/>
+                    <constraint firstItem="TR1-Ae-Cd4" firstAttribute="leading" secondItem="Vb0-5u-rmQ" secondAttribute="trailing" constant="8" id="bGk-BF-l5b"/>
+                    <constraint firstItem="ywi-Ne-nLf" firstAttribute="height" secondItem="TR1-Ae-Cd4" secondAttribute="height" id="bRc-7p-JRM"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="TR1-Ae-Cd4" secondAttribute="bottom" constant="8" id="bUl-jU-Y6L"/>
+                    <constraint firstItem="ywi-Ne-nLf" firstAttribute="top" secondItem="Vb0-5u-rmQ" secondAttribute="top" id="bjp-5S-AIA"/>
+                    <constraint firstItem="TR1-Ae-Cd4" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailingMargin" id="lt5-VN-osh"/>
+                    <constraint firstItem="TR1-Ae-Cd4" firstAttribute="top" secondItem="ywi-Ne-nLf" secondAttribute="bottom" id="wJo-s4-Ays"/>
+                    <constraint firstItem="TR1-Ae-Cd4" firstAttribute="top" secondItem="ywi-Ne-nLf" secondAttribute="bottom" id="zJ7-QU-glF"/>
                 </constraints>
                 <variation key="default">
                     <mask key="constraints">
                         <exclude reference="Ev5-Ck-zXA"/>
+                        <exclude reference="bjp-5S-AIA"/>
+                        <exclude reference="4aK-xN-uGi"/>
+                        <exclude reference="Vai-2j-7Lw"/>
+                        <exclude reference="lt5-VN-osh"/>
+                        <exclude reference="wJo-s4-Ays"/>
+                        <exclude reference="zJ7-QU-glF"/>
                     </mask>
                 </variation>
             </tableViewCellContentView>
@@ -62,7 +70,7 @@
                 <outlet property="authorArtistDirectorLabel" destination="TR1-Ae-Cd4" id="MLM-qU-syZ"/>
                 <outlet property="titleLabel" destination="ywi-Ne-nLf" id="8lN-ad-NzW"/>
             </connections>
-            <point key="canvasLocation" x="594.5" y="436.5"/>
+            <point key="canvasLocation" x="616.5" y="429.5"/>
         </tableViewCell>
     </objects>
 </document>

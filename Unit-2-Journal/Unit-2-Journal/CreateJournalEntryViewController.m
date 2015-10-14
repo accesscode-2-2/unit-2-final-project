@@ -10,6 +10,7 @@
 #import "JournalPost.h"
 #import "TabBarViewController.h"
 #import "JournalMainCollectionViewController.h"
+#import <pop/POP.h>
 
 
 @interface CreateJournalEntryViewController () <UITextViewDelegate>
@@ -25,7 +26,6 @@
 @property (strong, nonatomic) IBOutlet UIButton *starButtonThree;
 @property (strong, nonatomic) IBOutlet UIButton *starButtonFour;
 @property (strong, nonatomic) IBOutlet UIButton *starButtonFive;
-@property (nonatomic) BOOL userRated;
 
 @property (nonatomic) JournalPost *journalPost;
 @property (nonatomic) NSMutableArray *journalPostArray;
@@ -36,8 +36,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    self.userRated = NO;
     
     self.journalPostArray = [[NSMutableArray alloc]init];
     
@@ -60,6 +58,12 @@
     UIImage *artworkImage = [UIImage imageWithData:artworkData];
     self.artworkImageView.image = artworkImage;
     
+    //round image corners
+    self.artworkImageView.clipsToBounds = YES;
+    self.artworkImageView.layer.borderColor = [UIColor blackColor].CGColor;
+    self.artworkImageView.layer.borderWidth = 2.0;
+    self.artworkImageView.layer.cornerRadius = 25.0;
+    
 }
 - (void) textViewDidBeginEditing:(UITextView *)textView{
     self.textView.text = @"";
@@ -78,79 +82,36 @@
 
 - (IBAction)oneStarTapped:(id)sender
 {
-    if (self.userRated == NO) {
-        self.userRated = YES; // change to yes
-        [self resetStars];
-        [self oneStarRating];
-    } else
-        
-        if (self.userRated == YES) {
-            self.userRated = NO; // change to yes
-            [self resetStars];
-            [self oneStarRating];
-        }
+    [self resetStars];
+    [self oneStarRating];
+    [self startAnimation];
 }
 
 - (IBAction)twoStarTapped:(id)sender
 {
-    if (self.userRated == NO) {
-        self.userRated = YES; // change to yes
-        [self resetStars];
-        [self twoStarRating];
-        
-    } else
-        
-        if (self.userRated == YES) {
-            self.userRated = NO; // change to yes
-            [self resetStars];
-            [self twoStarRating];
-        }
+    [self resetStars];
+    [self twoStarRating];
+    [self startAnimation];
 }
 
 - (IBAction)threeStarTapped:(id)sender
 {
-    if (self.userRated == NO) {
-        self.userRated = YES; // change to yes
-        [self resetStars];
-        [self threeStarRating];
-        
-    } else
-        
-        if (self.userRated == YES) {
-            self.userRated = NO; // change to yes
-            [self resetStars];
-            [self threeStarRating];
-        }
+    [self resetStars];
+    [self threeStarRating];
+    [self startAnimation];
 }
 
 - (IBAction)fourStarTapped:(id)sender
 {
-    if (self.userRated == NO) {
-        self.userRated = YES; // change to yes
-        [self resetStars];
-        [self fourStarRating];
-        
-    } else
-        
-        if (self.userRated == YES) {
-            self.userRated = NO; // change to yes
-            [self resetStars];
-            [self fourStarRating];
-        }
+    [self resetStars];
+    [self fourStarRating];
+    [self startAnimation];
 }
 - (IBAction)fiveStarTapped:(id)sender
 {
-    if (self.userRated == NO) {
-        self.userRated = YES; // change to yes
-        [self fiveStarRating];
-        
-    } else
-        
-        if (self.userRated == YES) {
-            self.userRated = NO; // change to yes
-            [self resetStars];
-            [self fiveStarRating];
-        }
+    [self resetStars];
+    [self fiveStarRating];
+    [self startAnimation];
 }
 
 - (void)resetStars
@@ -190,6 +151,24 @@
     [self.starButtonThree setBackgroundImage:[UIImage imageNamed:@"rating_star_filled.png"] forState:UIControlStateNormal];
     [self.starButtonFour setBackgroundImage:[UIImage imageNamed:@"rating_star_filled.png"] forState:UIControlStateNormal];
     [self.starButtonFive setBackgroundImage:[UIImage imageNamed:@"rating_star_filled.png"] forState:UIControlStateNormal];
+}
+
+#pragma mark - animate all
+
+- (void)startAnimation {
+    
+    POPSpringAnimation *spin = [POPSpringAnimation animationWithPropertyNamed:kPOPLayerRotation];
+    
+    spin.fromValue = @(M_PI / 4);
+    spin.toValue = @(5);
+    spin.springBounciness = 5;
+    spin.velocity = @(1);
+    
+    [self.starButtonOne.layer pop_addAnimation:spin forKey:nil];
+    [self.starButtonTwo.layer pop_addAnimation:spin forKey:nil];
+    [self.starButtonThree.layer pop_addAnimation:spin forKey:nil];
+    [self.starButtonFour.layer pop_addAnimation:spin forKey:nil];
+    [self.starButtonFive.layer pop_addAnimation:spin forKey:nil];
 }
 
 
