@@ -30,6 +30,8 @@ UITextFieldDelegate
 @property (strong, nonatomic) IBOutlet UIButton *podcastButton;
 @property (nonatomic) NSString *media;
 @property (nonatomic) NSMutableArray *searchResults;
+@property (nonatomic) NSMutableArray *searchResultsTwo;
+@property (nonatomic) NSMutableArray *allSearchResults;
 @property (nonatomic) iTunesSearchResult *passSearchResult;
 
 @end
@@ -107,7 +109,6 @@ UITextFieldDelegate
                         
                         self.searchResults = [[NSMutableArray alloc]init];
                         
-                        
                         for (NSDictionary *result in results){
                             
                             NSString *artistName = [result objectForKey:@"artistName"];
@@ -122,7 +123,8 @@ UITextFieldDelegate
                                 resultsObject.albumOrMovieName = movieName;
                                 resultsObject.artworkURL = artworkURL;
                             } else if ([self.media isEqualToString:@"music&entity=album"]){
-                                resultsObject.artistName = artistName;
+                       
+                                    resultsObject.artistName = artistName;
                                 resultsObject.albumOrMovieName = albumName;
                                 resultsObject.artworkURL = artworkURL;
                             } else if ([self.media isEqualToString:@"ebook"]){
@@ -134,9 +136,32 @@ UITextFieldDelegate
                             [self.searchResults addObject:resultsObject];
                         }
                         
+                        
                         block();
                     }
                 }];
+    
+    NSString *urlStringTwo = @"http://api.tvmaze.com/search/shows?q=broad%20city";
+    NSURL *urlTwo = [NSURL URLWithString:urlStringTwo];
+    
+    [APIManager GETRequestWithURL:urlTwo
+                completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
+                    
+                    if (data != nil){
+                        NSDictionary *jsonTwo = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
+                        
+                        NSLog(@"jsonTwo: %@",jsonTwo);
+                        
+                        //NSArray *results = [jsonTwo objectForKey:@"results"];
+                        
+                        //NSLog(@"Results: %@",results);
+                        
+                        //self.searchResultsTwo = [[NSMutableArray alloc]init];
+                    }
+                
+                    block();
+                    
+     }];
     
 }
 - (BOOL)textFieldShouldReturn:(UITextField *)textField{
