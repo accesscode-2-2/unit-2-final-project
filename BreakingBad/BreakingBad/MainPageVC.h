@@ -1,16 +1,13 @@
 //
-//  ViewController.h
+//  MainPageVC.h
 //  BreakingBad
 //
-//  Created by Zoufishan Mehdi on 10/10/15.
+//  Created by Zoufishan Mehdi on 10/13/15.
 //  Copyright © 2015 Zoufishan Mehdi. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
-
-
+@interface MainPageVC : UIViewController
 
 @end
-

@@ -7,13 +7,32 @@
 //
 
 #import "HabitList.h"
+#import "ViewController.h"
+#import "QuestionDetailVC.h"
 
 @implementation HabitList
 
 
-+ (NSMutableArray *)listOfHabits{
-    
-    
+//+ (NSMutableArray *)listOfHabits{
+//    
+//    
+//    NSArray *habitList = @[@"Smoking",
+//                           @"Biting your nails",
+//                           @"Cocaine Addiction",
+//                           @"Biting your lips",
+//                           @"Eating unhealthy",
+//                           @"Excessive Drinking",
+//                           @"Facebook"];
+//    
+//   
+//    
+////    [ addObjectsFromArray:habitList];
+//    
+//    
+//    return nil;
+//}
+
+- (NSMutableArray *)habitsList{
     NSArray *habitList = @[@"Smoking",
                            @"Biting your nails",
                            @"Cocaine Addiction",
@@ -22,11 +41,8 @@
                            @"Excessive Drinking",
                            @"Facebook"];
     
-    NSMutableArray *hl = [NSMutableArray new];
-    
-    [hl addObjectsFromArray:habitList];
-    
-    return hl;
+    self.habits  = [[NSMutableArray alloc] initWithArray:habitList];
+    return self.habits;
 }
 
 @end

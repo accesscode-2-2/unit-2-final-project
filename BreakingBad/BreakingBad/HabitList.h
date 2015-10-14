@@ -10,8 +10,11 @@
 
 @interface HabitList : NSObject
 
+@property (nonatomic) NSMutableArray *habits; 
 
-+ (NSMutableArray *)listOfHabits;
+//+ (NSMutableArray *)listOfHabits;
 
+
+- (NSMutableArray *)habitsList;
 
 @end

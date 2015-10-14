@@ -8,6 +8,7 @@
 
 #import "CustomModalViewController.h"
 #import <Parse/Parse.h>
+#import "MainPageVC.h"
 
 @implementation CustomModalViewController
 
@@ -18,10 +19,6 @@
     if(![[thisUser objectForKey:@"emailVerified"] boolValue]){
         [thisUser fetch];
     }
-//    if (![[thisUser objectForKey:@"emailVerified"] boolValue]) {
-//        [self redirectWithMessage:@"You must verify your email address for cake"];
-//        return;
-//    }
     
     if ([self.passwordTextField.text isEqualToString:self.confirmPasswordTextField.text] && self.passwordTextField.text.length !=0) {
         PFUser *thisUser = [PFUser user];
@@ -30,9 +27,12 @@
         thisUser.password = self.passwordTextField.text;
         
         [thisUser signUpInBackgroundWithBlock:^(BOOL succeeded, NSError * _Nullable error) {
-            //add segue here
+            //add segue
         }];
-         [self dismissViewControllerAnimated:YES completion:nil];
+        MainPageVC *mvc = (MainPageVC *)[self.storyboard instantiateViewControllerWithIdentifier:@"showMainPgVC"];
+        [self presentViewController:mvc animated:YES completion:nil];
+         //[self dismissViewControllerAnimated:YES completion:nil];
+       
     } else {
         
         UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"Error" message:@"The password field is either empty or does not match the confirm password field" preferredStyle:UIAlertControllerStyleAlert];

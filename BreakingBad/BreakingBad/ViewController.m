@@ -18,11 +18,15 @@
 
 
 
-@interface ViewController ()<UIPickerViewDelegate, UIPickerViewDataSource, QuestionDetailVCDelegate>
+@interface ViewController ()<UIPickerViewDelegate, UIPickerViewDataSource, UITextFieldDelegate, QuestionDetailVCDelegate>
 @property (weak, nonatomic) IBOutlet UIPickerView *habitsPickerView;
-@property (strong, nonatomic) IBOutletCollection(UIButton) NSArray *question;
+@property (weak, nonatomic) IBOutlet UITextField *createNewHabit;
 
+
+@property (strong, nonatomic) IBOutletCollection(UIButton) NSArray *question;
 @property (strong, nonatomic) IBOutletCollection(UILabel) NSArray *answer;
+
+@property (nonatomic) NSMutableArray *habitsArray;
 
 @end
 
@@ -35,6 +39,12 @@
     qvc.tag = sender.tag; 
     
     [self presentViewController:qvc animated:YES completion:nil];
+}
+
+
+- (IBAction)habitDoneButtonTapped:(UIButton *)sender {
+   [self.habitsArray addObject:self.createNewHabit.text];
+    [self.habitsPickerView reloadAllComponents];
 }
 
 
@@ -56,6 +66,11 @@
     [super viewDidLoad];
     self.habitsPickerView.delegate = self;
     self.habitsPickerView.dataSource = self;
+    self.habitsArray = [NSMutableArray new];
+    HabitList *hl = [HabitList new];
+    self.habitsArray = hl.habitsList;
+    
+    
 //    BBUser *user = (BBUser *)[PFUser object];
 //    
 //    user.email  = @"ab1c@gmail.com";
@@ -126,11 +141,13 @@
 }
 
 - (NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component{
-    return [HabitList listOfHabits].count;
+    
+    return self.habitsArray.count;
 }
 
 - (nullable NSString *)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component{
-    return [HabitList listOfHabits][row];
+
+    return self.habitsArray[row];
 }
 
 
