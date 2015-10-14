@@ -9,6 +9,6 @@
 #import <UIKit/UIKit.h>
 #import "ViewController.h"
 @interface VideoViewController : UIViewController
-@property (nonatomic) NSString *str;
+@property (nonatomic) NSString *city;
 
 @end

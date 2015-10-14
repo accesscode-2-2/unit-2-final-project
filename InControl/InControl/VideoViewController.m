@@ -13,7 +13,7 @@
 #import "Youtube.h"
 
 @interface VideoViewController ()
-<UITableViewDataSource, UITableViewDelegate, UITextFieldDelegate>
+<UITableViewDataSource, UITableViewDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (nonatomic) NSMutableArray *searchedVideos;
 
@@ -28,9 +28,8 @@
     [super viewDidLoad];
     [self.tableView setDataSource:self];
     [self.tableView setDelegate:self];
-//    [self.searchTextField setDelegate:self];
     
-    NSLog(@"you searched for %@", self.str);
+    NSLog(@"you searched for %@", self.city);
     [self printResults];
 
     
@@ -38,10 +37,8 @@
 
 
 -(void)printResults {
-    
     NSString * query = @"";
-    
-    query = [ query stringByAppendingString: self.str];
+    query = [ query stringByAppendingString: self.city];
     
     [self makeFSAPIRequestWithSearchTerm:query callbackBlock:^{
         

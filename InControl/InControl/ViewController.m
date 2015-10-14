@@ -182,8 +182,8 @@
         else {
         
         VideoViewController * vc = [self.storyboard instantiateViewControllerWithIdentifier:@"VideoID"];
-        vc.str = self.saveSearchedCity;
-        NSLog(@"passing %@", vc.str);
+        vc.city = self.saveSearchedCity;
+        NSLog(@"passing %@", vc.city);
         
         
         [self presentViewController:vc animated:YES completion:nil];

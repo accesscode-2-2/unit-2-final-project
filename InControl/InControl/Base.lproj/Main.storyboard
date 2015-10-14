@@ -8,7 +8,7 @@
         <!--NewTripView Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" userLabel="NewTripView Controller" customClass="ViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="newTrip" id="BYZ-38-t0r" userLabel="NewTripView Controller" customClass="ViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -411,38 +411,86 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w3Y-e3-Dx7">
-                                <rect key="frame" x="61" y="44" width="58" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="OJG-bI-uwH"/>
-                                    <constraint firstAttribute="width" constant="58" id="htu-Hg-XVF"/>
-                                </constraints>
-                                <state key="normal" title="New trip"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MCI-x6-Kuv">
+                                <rect key="frame" x="209" y="468" width="46" height="30"/>
+                                <state key="normal" backgroundImage="ok"/>
                                 <connections>
-                                    <segue destination="BYZ-38-t0r" kind="show" id="QJU-95-90e"/>
+                                    <action selector="okButtonTapped:" destination="Llf-7N-ptg" eventType="touchUpInside" id="CRw-NM-Gct"/>
                                 </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QPB-4t-JQD">
-                                <rect key="frame" x="480" y="44" width="59" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="59" id="VIn-PV-jUg"/>
-                                    <constraint firstAttribute="height" constant="30" id="o7f-wj-MYD"/>
-                                </constraints>
-                                <state key="normal" title="My Trips"/>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstAttribute="trailingMargin" secondItem="QPB-4t-JQD" secondAttribute="trailing" constant="41" id="5HS-jX-Zld"/>
-                            <constraint firstItem="w3Y-e3-Dx7" firstAttribute="leading" secondItem="X0U-Ff-1P4" secondAttribute="leadingMargin" constant="41" id="Vgn-SA-Xxv"/>
-                            <constraint firstItem="w3Y-e3-Dx7" firstAttribute="top" secondItem="g8b-Jf-d7H" secondAttribute="bottom" constant="24" id="h5k-KM-02P"/>
-                            <constraint firstItem="QPB-4t-JQD" firstAttribute="top" secondItem="g8b-Jf-d7H" secondAttribute="bottom" constant="24" id="oOK-Vj-Ck0"/>
-                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="szs-bd-7Pn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1873" y="721"/>
+            <point key="canvasLocation" x="2273" y="473"/>
+        </scene>
+        <!--Games View Controller-->
+        <scene sceneID="dOd-xF-Ffl">
+            <objects>
+                <viewController storyboardIdentifier="games" id="2Oo-zj-tBU" customClass="GamesViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="J5w-v5-Dwq"/>
+                        <viewControllerLayoutGuide type="bottom" id="2je-H0-xj8"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="b10-xq-BN2">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6K8-iz-6hE">
+                                <rect key="frame" x="68" y="50" width="34" height="30"/>
+                                <state key="normal" title="Back"/>
+                                <connections>
+                                    <segue destination="Llf-7N-ptg" kind="show" id="Gf5-oo-kyB"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Games View Controller " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wQM-o6-Xjm">
+                                <rect key="frame" x="38" y="183" width="180" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="0.7243808491" blue="0.71085348520000002" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TNi-41-Zpl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2606" y="-266"/>
+        </scene>
+        <!--Visited View Controller-->
+        <scene sceneID="kJf-56-jVf">
+            <objects>
+                <viewController storyboardIdentifier="visited" id="Xs9-iS-hxb" customClass="VisitedViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="n2l-yc-HZu"/>
+                        <viewControllerLayoutGuide type="bottom" id="Qad-Km-mZD"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Xrt-ws-5R5">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8qw-mZ-nUz">
+                                <rect key="frame" x="37" y="28" width="34" height="30"/>
+                                <state key="normal" title="Back"/>
+                                <connections>
+                                    <segue destination="Llf-7N-ptg" kind="show" id="d0P-gd-MM3"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Visited places" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y2O-rC-dtG">
+                                <rect key="frame" x="37" y="155" width="107" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.84935287240000001" green="0.9643627441" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WeW-g4-gSS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3350" y="-235"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Umr-5l-d3k">
@@ -483,8 +531,10 @@
     </scenes>
     <resources>
         <image name="burger.png" width="19" height="17"/>
+        <image name="ok" width="600" height="296"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="QJU-95-90e"/>
+        <segue reference="f1o-LD-0Oh"/>
+        <segue reference="d0P-gd-MM3"/>
     </inferredMetricsTieBreakers>
 </document>

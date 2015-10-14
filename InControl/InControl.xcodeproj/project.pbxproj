@@ -51,6 +51,8 @@
 		84CF45CB1BCC51C200EAA3BF /* VideoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84CF45CA1BCC51C200EAA3BF /* VideoViewController.m */; settings = {ASSET_TAGS = (); }; };
 		84CF45CE1BCD8F7200EAA3BF /* Youtube.m in Sources */ = {isa = PBXBuildFile; fileRef = 84CF45CD1BCD8F7200EAA3BF /* Youtube.m */; settings = {ASSET_TAGS = (); }; };
 		84CF46591BCDE80000EAA3BF /* meetup.png in Resources */ = {isa = PBXBuildFile; fileRef = 84CF46581BCDE80000EAA3BF /* meetup.png */; settings = {ASSET_TAGS = (); }; };
+		84CF46621BCE29DB00EAA3BF /* GamesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84CF46611BCE29DB00EAA3BF /* GamesViewController.m */; settings = {ASSET_TAGS = (); }; };
+		84CF46661BCE2B4600EAA3BF /* VisitedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84CF46651BCE2B4600EAA3BF /* VisitedViewController.m */; settings = {ASSET_TAGS = (); }; };
 		D9682D5D1BCD4E1600647FD8 /* APIManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D9682D5C1BCD4E1600647FD8 /* APIManager.m */; settings = {ASSET_TAGS = (); }; };
 		D9682D601BCD501700647FD8 /* Venue.m in Sources */ = {isa = PBXBuildFile; fileRef = D9682D5F1BCD501700647FD8 /* Venue.m */; settings = {ASSET_TAGS = (); }; };
 		D9682D631BCD665200647FD8 /* HotelViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D9682D621BCD665200647FD8 /* HotelViewController.m */; settings = {ASSET_TAGS = (); }; };
@@ -132,6 +134,10 @@
 		84CF45CC1BCD8F7200EAA3BF /* Youtube.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Youtube.h; sourceTree = "<group>"; };
 		84CF45CD1BCD8F7200EAA3BF /* Youtube.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Youtube.m; sourceTree = "<group>"; };
 		84CF46581BCDE80000EAA3BF /* meetup.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = meetup.png; sourceTree = "<group>"; };
+		84CF46601BCE29DB00EAA3BF /* GamesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GamesViewController.h; sourceTree = "<group>"; };
+		84CF46611BCE29DB00EAA3BF /* GamesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GamesViewController.m; sourceTree = "<group>"; };
+		84CF46641BCE2B4600EAA3BF /* VisitedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VisitedViewController.h; sourceTree = "<group>"; };
+		84CF46651BCE2B4600EAA3BF /* VisitedViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VisitedViewController.m; sourceTree = "<group>"; };
 		CA12CD6286D3D05E336A1706 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA3CA915C16CD3F8F7FFC788 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		D9682D5B1BCD4E1600647FD8 /* APIManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APIManager.h; sourceTree = "<group>"; };
@@ -208,6 +214,8 @@
 			isa = PBXGroup;
 			children = (
 				84CF45761BCAD16400EAA3BF /* InfoPlist.strings */,
+				84CF46671BCE2B4B00EAA3BF /* Visited */,
+				84CF46631BCE29E100EAA3BF /* Games */,
 				84CF45931BCAED1D00EAA3BF /* Images */,
 				84CF452C1BCAD0EA00EAA3BF /* AppDelegate.h */,
 				84CF452D1BCAD0EA00EAA3BF /* AppDelegate.m */,
@@ -341,6 +349,24 @@
 				84CF45CD1BCD8F7200EAA3BF /* Youtube.m */,
 			);
 			name = Video;
+			sourceTree = "<group>";
+		};
+		84CF46631BCE29E100EAA3BF /* Games */ = {
+			isa = PBXGroup;
+			children = (
+				84CF46601BCE29DB00EAA3BF /* GamesViewController.h */,
+				84CF46611BCE29DB00EAA3BF /* GamesViewController.m */,
+			);
+			name = Games;
+			sourceTree = "<group>";
+		};
+		84CF46671BCE2B4B00EAA3BF /* Visited */ = {
+			isa = PBXGroup;
+			children = (
+				84CF46651BCE2B4600EAA3BF /* VisitedViewController.m */,
+				84CF46641BCE2B4600EAA3BF /* VisitedViewController.h */,
+			);
+			name = Visited;
 			sourceTree = "<group>";
 		};
 		B2BC0F9C4153A1759E333F8D /* Frameworks */ = {
@@ -555,10 +581,12 @@
 				84CF456B1BCAD14300EAA3BF /* RNFrostedSidebar.m in Sources */,
 				84CF45BC1BCB0E9D00EAA3BF /* ImageTableViewController.m in Sources */,
 				84CF452E1BCAD0EA00EAA3BF /* AppDelegate.m in Sources */,
+				84CF46661BCE2B4600EAA3BF /* VisitedViewController.m in Sources */,
 				84CF45CE1BCD8F7200EAA3BF /* Youtube.m in Sources */,
 				D9682D661BCD671000647FD8 /* FoodViewController.m in Sources */,
 				84CF45371BCAD0EB00EAA3BF /* InControl.xcdatamodeld in Sources */,
 				84CF45B61BCB057600EAA3BF /* WelcomeViewController.m in Sources */,
+				84CF46621BCE29DB00EAA3BF /* GamesViewController.m in Sources */,
 				D9682D601BCD501700647FD8 /* Venue.m in Sources */,
 				84CF452B1BCAD0EA00EAA3BF /* main.m in Sources */,
 				D9682D5D1BCD4E1600647FD8 /* APIManager.m in Sources */,
