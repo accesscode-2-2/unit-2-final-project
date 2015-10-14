@@ -439,7 +439,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jtX-Jk-aNy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-131" y="3314"/>
+            <point key="canvasLocation" x="681" y="3314"/>
         </scene>
         <!--Create Journal Entry View Controller-->
         <scene sceneID="3xO-3p-x8L">
@@ -610,7 +610,6 @@
                                         </state>
                                         <connections>
                                             <action selector="logToJournalButtonTapped:" destination="aXS-um-aw2" eventType="touchUpInside" id="bF7-vG-sm2"/>
-                                            <segue destination="sU9-FA-LDO" kind="show" identifier="logToJournalSegue" id="1dJ-1Z-3H8"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -684,10 +683,10 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
                     <connections>
-                        <segue destination="WZe-UX-wgc" kind="relationship" relationship="viewControllers" id="J0X-l6-QQi"/>
-                        <segue destination="egC-fa-mOn" kind="relationship" relationship="viewControllers" id="cwP-3d-peb"/>
-                        <segue destination="Gih-78-N3X" kind="relationship" relationship="viewControllers" id="0Uq-id-h7h"/>
-                        <segue destination="Oeh-Ah-1CX" kind="relationship" relationship="viewControllers" id="gqs-7r-Ydd"/>
+                        <segue destination="WZe-UX-wgc" kind="relationship" relationship="viewControllers" id="bAR-Zf-Kaj"/>
+                        <segue destination="UUP-oh-FLI" kind="relationship" relationship="viewControllers" id="67Z-In-Vm1"/>
+                        <segue destination="Gih-78-N3X" kind="relationship" relationship="viewControllers" id="gbO-Fx-x82"/>
+                        <segue destination="Oeh-Ah-1CX" kind="relationship" relationship="viewControllers" id="vba-B8-xOk"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1hc-eJ-lg1" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -973,26 +972,26 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gKL-Ix-enk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1361" y="3332"/>
+            <point key="canvasLocation" x="2173" y="3332"/>
         </scene>
         <!--Item-->
-        <scene sceneID="vDd-FV-eA9">
+        <scene sceneID="lqz-ju-jUl">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="egC-fa-mOn" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="a8h-Hd-5Ai"/>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="UUP-oh-FLI" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="DsW-2U-fk2"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="f3P-d5-xaE">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="H6d-AU-tTl">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="0x4-Nu-mZ8" kind="relationship" relationship="rootViewController" id="y2K-pO-xKu"/>
+                        <segue destination="0x4-Nu-mZ8" kind="relationship" relationship="rootViewController" id="Thc-kb-GNn"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="gsC-GX-MnN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1ok-11-KLp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-131" y="2528"/>
+            <point key="canvasLocation" x="-131" y="3314"/>
         </scene>
     </scenes>
     <resources>

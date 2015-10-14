@@ -10,6 +10,7 @@
 #import "iTunesSearchResult.h"
 
 
+
 @interface CreateJournalEntryViewController : UIViewController
 
 @property (nonatomic) iTunesSearchResult *postSearchResult;

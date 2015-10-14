@@ -11,6 +11,7 @@
 #import "TabBarViewController.h"
 #import "JournalMainCollectionViewController.h"
 
+
 @interface CreateJournalEntryViewController () <UITextViewDelegate>
 
 @property (strong, nonatomic) IBOutlet UILabel *movieOrAlbumNameLabel;
@@ -208,33 +209,35 @@
                                
     NSLog(@"Journal Post: %@",self.journalPost);
     
- //   [self.navigationController popToRootViewControllerAnimated:YES];
+    [self.navigationController popToRootViewControllerAnimated:YES];
 
+    [self.tabBarController setSelectedIndex:2]; // send to correct tab
     
 }
 
  #pragma mark - Navigation
  
- - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-
-     NSLog(@"Segue");
-     
-//     if ([[segue identifier]isEqualToString:@"logToJournalSegue"]) {
-//      
-//         NSLog(@"Segue to Tab");
-//         JournalMainCollectionViewController *viewController = [[JournalMainCollectionViewController alloc]init];
-     
-         TabBarViewController *tabVC = segue.destinationViewController;
-         JournalMainCollectionViewController *viewController = [[tabVC viewControllers] objectAtIndex:2];
-     
-         //[viewController.allJournalPosts addObjectsFromArray:self.journalPostArray];
-     
-        viewController.journalPostToAdd = self. journalPost;
-        [tabVC setSelectedIndex:2];
-     
-    
- //    }
- }
+// - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+//
+//     NSLog(@"Segue");
+//     
+////     if ([[segue identifier]isEqualToString:@"logToJournalSegue"]) {
+////      
+////         NSLog(@"Segue to Tab");
+////         JournalMainCollectionViewController *viewController = [[JournalMainCollectionViewController alloc]init];
+//     
+//         TabBarViewController *tabVC = segue.destinationViewController; // this creates a new tab bar
+//     
+//         JournalMainCollectionViewController *viewController = [[tabVC viewControllers] objectAtIndex:2];
+//     
+//         //[viewController.allJournalPosts addObjectsFromArray:self.journalPostArray];
+//     
+//        viewController.journalPostToAdd = self. journalPost;
+//        [tabVC setSelectedIndex:2];
+//     
+//    
+// //    }
+// }
 
 //locationsHome* vc = [[locationsHome alloc] init];
 //UITabBarController* tbc = [segue destinationViewController];
