@@ -10,4 +10,6 @@
 
 @interface ImageTableViewController : UITableViewController
 
+@property (nonatomic) NSString *city;
+
 @end
