@@ -13,8 +13,10 @@
 #import "Youtube.h"
 
 @interface VideoViewController ()
-<UITableViewDataSource, UITableViewDelegate, UITextFieldDelegate>
+<UITableViewDataSource, UITableViewDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
+@property (nonatomic) NSMutableArray *searchedVideos;
+
 
 //comment
 @end
@@ -23,23 +25,112 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    NSLog(@"str %@", self.str);
+    [super viewDidLoad];
+    [self.tableView setDataSource:self];
+    [self.tableView setDelegate:self];
+//    [self.searchTextField setDelegate:self];
     
+    NSLog(@"you searched for %@", self.str);
     
- }
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
- }
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
 }
-*/
+
+
+- (void) makeFSAPIRequestWithSearchTerm:(NSString*) searchTerm callbackBlock:(void(^)())block{
+    NSLog(@"%@", searchTerm);
+    
+    
+//https://www.googleapis.com/youtube/v3/search?part=id,snippet&q=How%20To%20ios&maxResults=50&key=AIzaSyDt8qmOMAZJoW3F_q1_BSPW8P4P1fFPduM
+    
+    //api key AIzaSyDt8qmOMAZJoW3F_q1_BSPW8P4P1fFPduM
+    
+    
+    NSString *urlString = [NSString stringWithFormat:@"https://www.googleapis.com/youtube/v3/search?part=id,snippet&q=%@&maxResults=50&key=AIzaSyDt8qmOMAZJoW3F_q1_BSPW8P4P1fFPduM", searchTerm];
+    
+    
+    
+    NSLog(@"hhhhhhh %@", urlString);
+    
+    NSString *encodedString = [urlString stringByAddingPercentEncodingWithAllowedCharacters: [NSCharacterSet URLQueryAllowedCharacterSet]];
+    NSURL *url = [NSURL   URLWithString:encodedString];
+    
+    NSLog(@"hhhhhhh %@", url);
+    
+    
+    [APIManager GETRequestWithURL:url completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
+        if (data != nil) {
+            NSDictionary *json = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
+            self.searchedVideos = [[NSMutableArray alloc]init];
+            
+            NSArray *results = [json objectForKey:@"items"];
+            
+            //NSLog(@"%@", json);
+            for (NSDictionary *result in results) {
+                
+                Youtube *video = [[Youtube alloc] init];
+                video.videoTitle = [[result objectForKey:@"snippet"]objectForKey:@"title"];
+                
+                video.videoDescription = [[result objectForKey:@"snippet"]objectForKey:@"description"];
+                video.videoID = [[result objectForKey:@"id"] objectForKey:@"videoId"];
+                video.videoImage = [[[[result objectForKey:@"snippet"]objectForKey:@"thumbnails"] objectForKey:@"medium"] objectForKey:@"url"];
+                [self.searchedVideos addObject:video];
+            }
+            block();
+        }
+        
+    }];
+    
+}
+
+# pragma mark -tableView delegate methods
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
+    return 1;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+    
+    return self.searchedVideos.count;
+    
+}
+
+-(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"VideoCellIdentifier" forIndexPath:indexPath];
+    Youtube * video = [self.searchedVideos objectAtIndex:indexPath.row];
+    
+    NSURL *imgURL = [NSURL URLWithString:video.videoImage];
+    NSData *imageData = [NSData dataWithContentsOfURL:imgURL];
+    UIImage *image = [UIImage imageWithData:imageData];
+    
+    cell.textLabel.text = video.videoTitle;
+    cell.detailTextLabel.text = video.videoDescription;
+    cell.imageView.image = image;
+    
+    return cell;
+}
+
+# pragma mark - text field delegate methods
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField{
+    [self.view endEditing:YES];
+    
+    NSString * query = [ query stringByAppendingString: self.str];
+    
+    [self makeFSAPIRequestWithSearchTerm:query callbackBlock:^{
+        
+        [self.tableView reloadData];
+    }];
+    return YES;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    Youtube *video = [self.searchedVideos objectAtIndex:indexPath.row];
+    
+    NSString *videoString = video.videoID;
+    XCDYouTubeVideoPlayerViewController *videoPlayerViewController = [[XCDYouTubeVideoPlayerViewController alloc] initWithVideoIdentifier:videoString];
+    
+    [self presentMoviePlayerViewControllerAnimated:videoPlayerViewController];
+    
+}
 
 @end
