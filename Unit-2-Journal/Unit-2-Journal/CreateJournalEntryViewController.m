@@ -209,7 +209,7 @@
                                
     NSLog(@"Journal Post: %@",self.journalPost);
     
- //   [self.navigationController popToRootViewControllerAnimated:YES];
+    [self.navigationController popToRootViewControllerAnimated:YES];
 
     [self.tabBarController setSelectedIndex:2]; // send to correct tab
     
@@ -226,7 +226,7 @@
 ////         NSLog(@"Segue to Tab");
 ////         JournalMainCollectionViewController *viewController = [[JournalMainCollectionViewController alloc]init];
 //     
-//         TabBarViewController *tabVC = segue.destinationViewController; // this is a new tab bar
+//         TabBarViewController *tabVC = segue.destinationViewController; // this creates a new tab bar
 //     
 //         JournalMainCollectionViewController *viewController = [[tabVC viewControllers] objectAtIndex:2];
 //     
