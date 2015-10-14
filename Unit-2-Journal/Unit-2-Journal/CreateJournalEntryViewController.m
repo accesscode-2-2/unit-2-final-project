@@ -20,6 +20,12 @@
 @property (strong, nonatomic) IBOutlet UIButton *doneEditingButton;
 
 @property (strong, nonatomic) IBOutlet UIButton *starButtonOne;
+@property (strong, nonatomic) IBOutlet UIButton *starButtonTwo;
+@property (strong, nonatomic) IBOutlet UIButton *starButtonThree;
+@property (strong, nonatomic) IBOutlet UIButton *starButtonFour;
+@property (strong, nonatomic) IBOutlet UIButton *starButtonFive;
+@property (nonatomic) BOOL userRated;
+
 @property (nonatomic) JournalPost *journalPost;
 @property (nonatomic) NSMutableArray *journalPostArray;
 
@@ -29,6 +35,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    self.userRated = NO;
     
     self.journalPostArray = [[NSMutableArray alloc]init];
     
@@ -63,13 +71,126 @@
     self.doneEditingButton.hidden = YES;
     
     [[[UIApplication sharedApplication] keyWindow] endEditing:YES];
+}
 
+#pragma mark - star rating
+
+- (IBAction)oneStarTapped:(id)sender
+{
+    if (self.userRated == NO) {
+        self.userRated = YES; // change to yes
+        [self resetStars];
+        [self oneStarRating];
+    } else
+        
+        if (self.userRated == YES) {
+            self.userRated = NO; // change to yes
+            [self resetStars];
+            [self oneStarRating];
+        }
 }
-- (IBAction)starButtonTapped:(id)sender {
-    
-    self.starButtonOne.tintColor = [UIColor yellowColor];
-    
+
+- (IBAction)twoStarTapped:(id)sender
+{
+    if (self.userRated == NO) {
+        self.userRated = YES; // change to yes
+        [self resetStars];
+        [self twoStarRating];
+        
+    } else
+        
+        if (self.userRated == YES) {
+            self.userRated = NO; // change to yes
+            [self resetStars];
+            [self twoStarRating];
+        }
 }
+
+- (IBAction)threeStarTapped:(id)sender
+{
+    if (self.userRated == NO) {
+        self.userRated = YES; // change to yes
+        [self resetStars];
+        [self threeStarRating];
+        
+    } else
+        
+        if (self.userRated == YES) {
+            self.userRated = NO; // change to yes
+            [self resetStars];
+            [self threeStarRating];
+        }
+}
+
+- (IBAction)fourStarTapped:(id)sender
+{
+    if (self.userRated == NO) {
+        self.userRated = YES; // change to yes
+        [self resetStars];
+        [self fourStarRating];
+        
+    } else
+        
+        if (self.userRated == YES) {
+            self.userRated = NO; // change to yes
+            [self resetStars];
+            [self fourStarRating];
+        }
+}
+- (IBAction)fiveStarTapped:(id)sender
+{
+    if (self.userRated == NO) {
+        self.userRated = YES; // change to yes
+        [self fiveStarRating];
+        
+    } else
+        
+        if (self.userRated == YES) {
+            self.userRated = NO; // change to yes
+            [self resetStars];
+            [self fiveStarRating];
+        }
+}
+
+- (void)resetStars
+{
+    [self.starButtonOne setBackgroundImage:[UIImage imageNamed:@"rating_star.png"] forState:UIControlStateNormal];
+    [self.starButtonTwo setBackgroundImage:[UIImage imageNamed:@"rating_star.png"] forState:UIControlStateNormal];
+    [self.starButtonThree setBackgroundImage:[UIImage imageNamed:@"rating_star.png"] forState:UIControlStateNormal];
+    [self.starButtonFour setBackgroundImage:[UIImage imageNamed:@"rating_star.png"] forState:UIControlStateNormal];
+    [self.starButtonFive setBackgroundImage:[UIImage imageNamed:@"rating_star.png"] forState:UIControlStateNormal];
+}
+
+- (void)oneStarRating {
+    [self.starButtonOne setBackgroundImage:[UIImage imageNamed:@"rating_star_filled.png"] forState:UIControlStateNormal];
+}
+
+- (void)twoStarRating {
+    [self.starButtonOne setBackgroundImage:[UIImage imageNamed:@"rating_star_filled.png"] forState:UIControlStateNormal];
+    [self.starButtonTwo setBackgroundImage:[UIImage imageNamed:@"rating_star_filled.png"] forState:UIControlStateNormal];
+}
+
+- (void)threeStarRating {
+    [self.starButtonOne setBackgroundImage:[UIImage imageNamed:@"rating_star_filled.png"] forState:UIControlStateNormal];
+    [self.starButtonTwo setBackgroundImage:[UIImage imageNamed:@"rating_star_filled.png"] forState:UIControlStateNormal];
+    [self.starButtonThree setBackgroundImage:[UIImage imageNamed:@"rating_star_filled.png"] forState:UIControlStateNormal];
+}
+
+- (void)fourStarRating {
+    [self.starButtonOne setBackgroundImage:[UIImage imageNamed:@"rating_star_filled.png"] forState:UIControlStateNormal];
+    [self.starButtonTwo setBackgroundImage:[UIImage imageNamed:@"rating_star_filled.png"] forState:UIControlStateNormal];
+    [self.starButtonThree setBackgroundImage:[UIImage imageNamed:@"rating_star_filled.png"] forState:UIControlStateNormal];
+    [self.starButtonFour setBackgroundImage:[UIImage imageNamed:@"rating_star_filled.png"] forState:UIControlStateNormal];
+}
+
+- (void)fiveStarRating {
+    [self.starButtonOne setBackgroundImage:[UIImage imageNamed:@"rating_star_filled.png"] forState:UIControlStateNormal];
+    [self.starButtonTwo setBackgroundImage:[UIImage imageNamed:@"rating_star_filled.png"] forState:UIControlStateNormal];
+    [self.starButtonThree setBackgroundImage:[UIImage imageNamed:@"rating_star_filled.png"] forState:UIControlStateNormal];
+    [self.starButtonFour setBackgroundImage:[UIImage imageNamed:@"rating_star_filled.png"] forState:UIControlStateNormal];
+    [self.starButtonFive setBackgroundImage:[UIImage imageNamed:@"rating_star_filled.png"] forState:UIControlStateNormal];
+}
+
 
 #pragma mark - save items
 
@@ -87,6 +208,9 @@
                                
     NSLog(@"Journal Post: %@",self.journalPost);
     
+ //   [self.navigationController popToRootViewControllerAnimated:YES];
+
+    
 }
 
  #pragma mark - Navigation
@@ -99,12 +223,16 @@
 //      
 //         NSLog(@"Segue to Tab");
 //         JournalMainCollectionViewController *viewController = [[JournalMainCollectionViewController alloc]init];
+     
          TabBarViewController *tabVC = segue.destinationViewController;
          JournalMainCollectionViewController *viewController = [[tabVC viewControllers] objectAtIndex:2];
+     
          //[viewController.allJournalPosts addObjectsFromArray:self.journalPostArray];
      
         viewController.journalPostToAdd = self. journalPost;
         [tabVC setSelectedIndex:2];
+     
+    
  //    }
  }
 
