@@ -694,6 +694,17 @@
                                             <action selector="doneButtonTapped:" destination="MBI-FE-AUg" eventType="touchUpInside" id="roa-uE-BUh"/>
                                         </connections>
                                     </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m5z-qO-VUR">
+                                        <rect key="frame" x="562" y="16" width="30" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="30" id="Kk9-db-CQd"/>
+                                            <constraint firstAttribute="height" constant="30" id="fmx-y4-pe6"/>
+                                        </constraints>
+                                        <state key="normal" image="menu"/>
+                                        <connections>
+                                            <action selector="menuButtonTapped:" destination="MBI-FE-AUg" eventType="touchUpInside" id="rYv-F8-ZnI"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.88222064389999999" green="0.44719244889999998" blue="0.034063707169999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
@@ -705,10 +716,12 @@
                                     <constraint firstAttribute="bottom" secondItem="RL6-c1-Bxc" secondAttribute="bottom" constant="16" id="ScD-b2-dlO"/>
                                     <constraint firstItem="G33-A8-17E" firstAttribute="leading" secondItem="RL6-c1-Bxc" secondAttribute="trailing" constant="10" id="UFd-Ep-eLf"/>
                                     <constraint firstItem="ZAy-pm-NYS" firstAttribute="top" secondItem="vAX-db-DRg" secondAttribute="top" constant="8" id="W0n-oh-Rm9"/>
+                                    <constraint firstItem="m5z-qO-VUR" firstAttribute="top" secondItem="vAX-db-DRg" secondAttribute="top" constant="16" id="ZoU-cx-6mV"/>
                                     <constraint firstItem="6LJ-at-dIk" firstAttribute="top" secondItem="vAX-db-DRg" secondAttribute="top" constant="16" id="bCp-Si-wkd"/>
                                     <constraint firstItem="6LJ-at-dIk" firstAttribute="leading" secondItem="vAX-db-DRg" secondAttribute="leading" constant="8" id="d4w-yE-sy4"/>
                                     <constraint firstAttribute="bottom" secondItem="w56-Lx-hzY" secondAttribute="bottom" constant="20" id="f5z-Js-YDw"/>
                                     <constraint firstItem="RL6-c1-Bxc" firstAttribute="top" secondItem="ZAy-pm-NYS" secondAttribute="bottom" constant="36" id="gKm-PZ-XMQ"/>
+                                    <constraint firstAttribute="trailing" secondItem="m5z-qO-VUR" secondAttribute="trailing" constant="8" id="ge0-t3-lYU"/>
                                     <constraint firstItem="RL6-c1-Bxc" firstAttribute="leading" secondItem="w56-Lx-hzY" secondAttribute="trailing" constant="3" id="hfd-F7-EMm"/>
                                     <constraint firstAttribute="bottom" secondItem="G33-A8-17E" secondAttribute="bottom" constant="16" id="oS6-2b-xKy"/>
                                     <constraint firstAttribute="trailing" secondItem="G33-A8-17E" secondAttribute="trailing" constant="10" id="q8A-rN-eVi"/>
@@ -986,5 +999,26 @@
             </objects>
             <point key="canvasLocation" x="2263" y="324"/>
         </scene>
+        <!--Check Progress View Controller-->
+        <scene sceneID="DNO-Ip-wgj">
+            <objects>
+                <viewController storyboardIdentifier="checkProgressID" id="1Xe-2g-iaM" customClass="CheckProgressViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="083-qY-doY"/>
+                        <viewControllerLayoutGuide type="bottom" id="ZuF-Nf-71J"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="RJL-Rr-GzT">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wqw-Y1-O82" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2258" y="991"/>
+        </scene>
     </scenes>
+    <resources>
+        <image name="menu" width="50" height="50"/>
+    </resources>
 </document>

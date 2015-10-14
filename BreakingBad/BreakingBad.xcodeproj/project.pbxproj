@@ -21,6 +21,7 @@
 		5FEAE2641BCB055A00201A0E /* CustomModalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FEAE2631BCB055A00201A0E /* CustomModalViewController.m */; };
 		5FEAE26E1BCB125A00201A0E /* PresentingAnimationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FEAE26D1BCB125A00201A0E /* PresentingAnimationController.m */; };
 		5FEAE2711BCB126700201A0E /* DismissingAnimationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FEAE2701BCB126700201A0E /* DismissingAnimationController.m */; };
+		DC22D49F1BCEE95A00D1E214 /* CheckProgressViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DC22D49E1BCEE95A00D1E214 /* CheckProgressViewController.m */; settings = {ASSET_TAGS = (); }; };
 		DC2DC1881BCAC00500A627E2 /* Habit.m in Sources */ = {isa = PBXBuildFile; fileRef = DC2DC1871BCAC00500A627E2 /* Habit.m */; settings = {ASSET_TAGS = (); }; };
 		DC2DC18B1BCAC08700A627E2 /* Goal.m in Sources */ = {isa = PBXBuildFile; fileRef = DC2DC18A1BCAC08700A627E2 /* Goal.m */; settings = {ASSET_TAGS = (); }; };
 		DC2DC18E1BCAC0A700A627E2 /* Entry.m in Sources */ = {isa = PBXBuildFile; fileRef = DC2DC18D1BCAC0A700A627E2 /* Entry.m */; settings = {ASSET_TAGS = (); }; };
@@ -28,6 +29,8 @@
 		DC2DC1941BCAEB8D00A627E2 /* BBUser.m in Sources */ = {isa = PBXBuildFile; fileRef = DC2DC1931BCAEB8D00A627E2 /* BBUser.m */; settings = {ASSET_TAGS = (); }; };
 		DC51A76B1BCC4CD60044984B /* HabitList.m in Sources */ = {isa = PBXBuildFile; fileRef = DC51A76A1BCC4CD60044984B /* HabitList.m */; settings = {ASSET_TAGS = (); }; };
 		DCBA27C21BCDE85800E61721 /* SharedManager.m in Sources */ = {isa = PBXBuildFile; fileRef = DCBA27C11BCDE85800E61721 /* SharedManager.m */; settings = {ASSET_TAGS = (); }; };
+		DCBA27C61BCED16E00E61721 /* CustomContextTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DCBA27C41BCED16E00E61721 /* CustomContextTableViewCell.m */; settings = {ASSET_TAGS = (); }; };
+		DCBA27C71BCED16E00E61721 /* CustomContextTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DCBA27C51BCED16E00E61721 /* CustomContextTableViewCell.xib */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -57,6 +60,8 @@
 		5FEAE26F1BCB126200201A0E /* DismissingAnimationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DismissingAnimationController.h; sourceTree = "<group>"; };
 		5FEAE2701BCB126700201A0E /* DismissingAnimationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DismissingAnimationController.m; sourceTree = "<group>"; };
 		B57E170B6FA09C54334C0536 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		DC22D49D1BCEE95A00D1E214 /* CheckProgressViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CheckProgressViewController.h; sourceTree = "<group>"; };
+		DC22D49E1BCEE95A00D1E214 /* CheckProgressViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CheckProgressViewController.m; sourceTree = "<group>"; };
 		DC2DC1861BCAC00500A627E2 /* Habit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Habit.h; sourceTree = "<group>"; };
 		DC2DC1871BCAC00500A627E2 /* Habit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Habit.m; sourceTree = "<group>"; };
 		DC2DC1891BCAC08700A627E2 /* Goal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Goal.h; sourceTree = "<group>"; };
@@ -71,6 +76,9 @@
 		DC51A76A1BCC4CD60044984B /* HabitList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HabitList.m; sourceTree = "<group>"; };
 		DCBA27C01BCDE85800E61721 /* SharedManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SharedManager.h; sourceTree = "<group>"; };
 		DCBA27C11BCDE85800E61721 /* SharedManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SharedManager.m; sourceTree = "<group>"; };
+		DCBA27C31BCED16E00E61721 /* CustomContextTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomContextTableViewCell.h; sourceTree = "<group>"; };
+		DCBA27C41BCED16E00E61721 /* CustomContextTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomContextTableViewCell.m; sourceTree = "<group>"; };
+		DCBA27C51BCED16E00E61721 /* CustomContextTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomContextTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,8 +122,13 @@
 				5F8FF99E1BC9A9CD00855DFB /* ViewController.m */,
 				5F9B082D1BCC9ECC00460FF2 /* QuestionDetailVC.h */,
 				5F9B082E1BCC9ECC00460FF2 /* QuestionDetailVC.m */,
+				DC22D49D1BCEE95A00D1E214 /* CheckProgressViewController.h */,
+				DC22D49E1BCEE95A00D1E214 /* CheckProgressViewController.m */,
 				5F9B08301BCDAD1500460FF2 /* MainPageVC.h */,
 				5F9B08311BCDAD1500460FF2 /* MainPageVC.m */,
+				DCBA27C31BCED16E00E61721 /* CustomContextTableViewCell.h */,
+				DCBA27C41BCED16E00E61721 /* CustomContextTableViewCell.m */,
+				DCBA27C51BCED16E00E61721 /* CustomContextTableViewCell.xib */,
 				DCBA27C01BCDE85800E61721 /* SharedManager.h */,
 				DCBA27C11BCDE85800E61721 /* SharedManager.m */,
 				DC51A7651BCC1D4A0044984B /* BBModel */,
@@ -249,6 +262,7 @@
 			files = (
 				5F8FF9AA1BC9A9CD00855DFB /* LaunchScreen.storyboard in Resources */,
 				5F8FF9A71BC9A9CD00855DFB /* Assets.xcassets in Resources */,
+				DCBA27C71BCED16E00E61721 /* CustomContextTableViewCell.xib in Resources */,
 				5F8FF9A21BC9A9CD00855DFB /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -302,7 +316,9 @@
 				5FEAE26E1BCB125A00201A0E /* PresentingAnimationController.m in Sources */,
 				5F8FF99F1BC9A9CD00855DFB /* ViewController.m in Sources */,
 				5F9B082F1BCC9ECD00460FF2 /* QuestionDetailVC.m in Sources */,
+				DC22D49F1BCEE95A00D1E214 /* CheckProgressViewController.m in Sources */,
 				DC2DC18E1BCAC0A700A627E2 /* Entry.m in Sources */,
+				DCBA27C61BCED16E00E61721 /* CustomContextTableViewCell.m in Sources */,
 				5F8FF99C1BC9A9CD00855DFB /* AppDelegate.m in Sources */,
 				DCBA27C21BCDE85800E61721 /* SharedManager.m in Sources */,
 				5F8FF9A51BC9A9CD00855DFB /* BreakingBad.xcdatamodeld in Sources */,
