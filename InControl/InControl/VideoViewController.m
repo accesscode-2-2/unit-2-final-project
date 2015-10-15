@@ -43,6 +43,8 @@
     [self makeFSAPIRequestWithSearchTerm:query callbackBlock:^{
         
         [self.tableView reloadData];
+        
+        
     }];
     
 }

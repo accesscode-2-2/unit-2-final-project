@@ -18,7 +18,7 @@
 @property (weak, nonatomic) IBOutlet UIView *budgetView;
 
 @property (nonatomic, strong) NSMutableIndexSet *optionIndices;
-@property (nonatomic) NSString *saveSearchedCity;
+//@property (nonatomic) NSString *saveSearchedCity;
 @end
 
 @implementation ViewController
@@ -50,9 +50,15 @@
     [self ShowMenu];
     self.goButton.hidden = YES;
     self.searchBar.hidden = YES;
-    self.saveSearchedCity = self.searchBar.text;
-    NSLog(@"savee %@",self.saveSearchedCity);
+//    self.saveSearchedCity = self.searchBar.text;
+//    NSLog(@"savee %@",self.saveSearchedCity);
     
+    
+    NSLog(@"saveeeee");
+    NSString *saveString = self.searchBar.text;
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    [defaults setObject:saveString forKey:@"savedString"];
+    [defaults synchronize];
 }
 
 - (IBAction)onBurger:(id)sender {
@@ -62,7 +68,17 @@
 
 -(void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:YES];
-    self.searchBar.text = self.saveSearchedCity;
+//    self.searchBar.text = self.saveSearchedCity;
+    
+    NSLog(@"reloadddd will appear");
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    NSString *loadString =  [defaults objectForKey:@"savedString"];
+    [self.searchBar setText:loadString];
+    NSLog(@"will appear search bar %@",self.searchBar.text);
+//    [label setText:loadString];
+    
+
+    
 }
 
 -(void) ShowMenu {
@@ -120,7 +136,7 @@
     }
     
     if (index == 1) { //budget
-        NSLog(@"savee %@",self.saveSearchedCity);
+//        NSLog(@"savee %@",self.saveSearchedCity);
         
         if ([self.searchBar.text isEqualToString:@""]) {
             [self EmptySearchBarAlert];
@@ -132,7 +148,7 @@
         }
     }
     if (index == 2) { //food
-        NSLog(@"savee %@",self.saveSearchedCity);
+//        NSLog(@"savee %@",self.saveSearchedCity);
         
         if ([self.searchBar.text isEqualToString:@""]) {
             [self EmptySearchBarAlert];
@@ -140,7 +156,7 @@
         else {
             
             FoodViewController * vc = [self.storyboard instantiateViewControllerWithIdentifier:@"FoodID"];
-            vc.city = self.saveSearchedCity;
+            vc.city = self.searchBar.text;
             [self presentViewController:vc animated:YES completion:nil];
             [sidebar dismissAnimated:YES completion:^(BOOL finished) {
                 
@@ -149,7 +165,7 @@
     }
     if (index == 3) { //hotel
         
-        NSLog(@"savee %@",self.saveSearchedCity);
+//        NSLog(@"savee %@",self.saveSearchedCity);
         
         if ([self.searchBar.text isEqualToString:@""]) {
             [self EmptySearchBarAlert];
@@ -157,7 +173,7 @@
         else {
             
             HotelViewController * vc = [self.storyboard instantiateViewControllerWithIdentifier:@"HotelID"];
-            vc.city = self.saveSearchedCity;
+            vc.city = self.searchBar.text;
             [self presentViewController:vc animated:YES completion:nil];
             [sidebar dismissAnimated:YES completion:^(BOOL finished) {
             }];
@@ -184,9 +200,10 @@
         else {
             
             VideoViewController * vc = [self.storyboard instantiateViewControllerWithIdentifier:@"VideoID"];
-            vc.city = self.saveSearchedCity;
+            vc.city = self.searchBar.text;
             NSLog(@"passing %@", vc.city);
-            
+            NSLog(@"passing %@", self.searchBar.text);
+
             
             [self presentViewController:vc animated:YES completion:nil];
             
