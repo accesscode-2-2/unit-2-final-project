@@ -115,6 +115,19 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		4D64F9D01BCEBF080079086C /* Custom Views & .XIBs */ = {
+			isa = PBXGroup;
+			children = (
+				4D7FE29A1BCC32170036E58E /* SearchAPITableViewCell.h */,
+				4D7FE29B1BCC32170036E58E /* SearchAPITableViewCell.m */,
+				4D7FE29C1BCC32170036E58E /* SearchAPITableViewCell.xib */,
+				4D7FE2A21BCC41A00036E58E /* WishListTableViewCell.h */,
+				4D7FE2A31BCC41A00036E58E /* WishListTableViewCell.m */,
+				4D7FE2A41BCC41A00036E58E /* WishListTableViewCell.xib */,
+			);
+			name = "Custom Views & .XIBs";
+			sourceTree = "<group>";
+		};
 		5A43989E2A6AD60B52B523E0 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -162,6 +175,7 @@
 				9A2FFC301BC84BF200E880D3 /* AppDelegate.h */,
 				9A2FFC311BC84BF200E880D3 /* AppDelegate.m */,
 				9AAB40031BC9ECAA00FD7227 /* Classes & Managers */,
+				4D64F9D01BCEBF080079086C /* Custom Views & .XIBs */,
 				9AAB40021BC9EC7300FD7227 /* ViewControllers */,
 				9A2FFC361BC84BF200E880D3 /* Main.storyboard */,
 				9A2FFC3C1BC84BF200E880D3 /* Assets.xcassets */,
@@ -218,12 +232,6 @@
 				9A34656C1BCACDF40049337C /* iTunesSearchResult.m */,
 				9A29371E1BCC26FE00ACEEE0 /* JournalPost.h */,
 				9A29371F1BCC26FE00ACEEE0 /* JournalPost.m */,
-				4D7FE29A1BCC32170036E58E /* SearchAPITableViewCell.h */,
-				4D7FE29B1BCC32170036E58E /* SearchAPITableViewCell.m */,
-				4D7FE29C1BCC32170036E58E /* SearchAPITableViewCell.xib */,
-				4D7FE2A21BCC41A00036E58E /* WishListTableViewCell.h */,
-				4D7FE2A31BCC41A00036E58E /* WishListTableViewCell.m */,
-				4D7FE2A41BCC41A00036E58E /* WishListTableViewCell.xib */,
 			);
 			name = "Classes & Managers";
 			sourceTree = "<group>";

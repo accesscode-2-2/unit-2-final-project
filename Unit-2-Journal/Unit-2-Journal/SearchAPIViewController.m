@@ -12,8 +12,12 @@
 #import "iTunesSearchResult.h"
 #import "CreateJournalEntryViewController.h"
 #import "SearchAPITableViewCell.h" // add custom cell
+<<<<<<< HEAD
 #import "TabBarViewController.h"
 #import "WishListTableViewController.h"
+=======
+//#import <pop/POP.h>
+>>>>>>> 41b184b0ce1d1c3f61d1727035f22fd4bc0c62b6
 
 @interface SearchAPIViewController ()
 <
@@ -52,6 +56,7 @@ UITextFieldDelegate
     
     self.tableView.rowHeight = UITableViewAutomaticDimension;
     self.tableView.estimatedRowHeight = 35.0;
+    
 }
 
 #pragma mark - setup buttons
@@ -69,8 +74,10 @@ UITextFieldDelegate
     NSLog(@"Media: %@",self.media);
 }
 
+#pragma mark - add to list buttons
+
 - (IBAction)createJournalEntryButtonTapped:(id)sender {
-    
+
 }
 
 - (IBAction)addToWishListButtonTapped:(id)sender {
@@ -80,8 +87,10 @@ UITextFieldDelegate
 
     [self.tabBarController setSelectedIndex:0];
     
-    
 }
+
+#pragma mark - API request
+
 - (void) makeNewiTunesAPIRequestWithSearchTerm:(NSString *)term
                                        inMedia:(NSString *)media
                                  callbackBlock:(void(^)())block{
@@ -177,6 +186,8 @@ UITextFieldDelegate
     return YES;
 }
 
+#pragma mark - set up table view
+
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
     return 1;
 }
@@ -206,10 +217,11 @@ UITextFieldDelegate
     
     cell.artworkImage.image = artworkImage;
     
+    // round corners
     cell.imageView.layer.borderWidth = 2.0;
     cell.imageView.layer.borderColor = [UIColor blackColor].CGColor;
     cell.imageView.layer.cornerRadius = 3.0;
-
+    
     return cell;
 }
 
@@ -221,7 +233,7 @@ UITextFieldDelegate
 
     NSLog(@"%@", self.passSearchResult);
     
-    // push view controller
+    // push view controller 
     
 }
 
@@ -235,9 +247,11 @@ UITextFieldDelegate
 
      CreateJournalEntryViewController *viewController = segue.destinationViewController;
      viewController.postSearchResult = self.passSearchResult;
+         
      }
      
  }
+
 
 
 @end
