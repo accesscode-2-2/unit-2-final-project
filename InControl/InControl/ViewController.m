@@ -16,9 +16,7 @@
 
 @property (weak, nonatomic) IBOutlet UIButton *goButton;
 @property (weak, nonatomic) IBOutlet UIView *budgetView;
-
 @property (nonatomic, strong) NSMutableIndexSet *optionIndices;
-//@property (nonatomic) NSString *saveSearchedCity;
 @end
 
 @implementation ViewController
@@ -30,7 +28,6 @@
     self.goButton.hidden = YES;
     self.budgetView.hidden = YES;
     
-    
     UIGraphicsBeginImageContext(self.view.frame.size);
     [[UIImage imageNamed:@"back"] drawInRect:self.view.bounds];
     UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
@@ -38,11 +35,7 @@
     
     self.view.backgroundColor = [UIColor colorWithPatternImage:image];
     
-    
-    
-    
     self.optionIndices = [NSMutableIndexSet indexSetWithIndex:1];
-    // Do any additional setup after loading the view, typically from a nib.
 }
 
 
@@ -50,11 +43,8 @@
     [self ShowMenu];
     self.goButton.hidden = YES;
     self.searchBar.hidden = YES;
-//    self.saveSearchedCity = self.searchBar.text;
-//    NSLog(@"savee %@",self.saveSearchedCity);
     
-    
-    NSLog(@"saveeeee");
+    //save user's input
     NSString *saveString = self.searchBar.text;
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     [defaults setObject:saveString forKey:@"savedString"];
@@ -68,21 +58,15 @@
 
 -(void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:YES];
-//    self.searchBar.text = self.saveSearchedCity;
     
-    NSLog(@"reloadddd will appear");
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     NSString *loadString =  [defaults objectForKey:@"savedString"];
     [self.searchBar setText:loadString];
     NSLog(@"will appear search bar %@",self.searchBar.text);
-//    [label setText:loadString];
-    
-
     
 }
 
 -(void) ShowMenu {
-    
     
     NSArray *images = @[
                         [UIImage imageNamed:@"search"],
@@ -122,9 +106,6 @@
 
 #pragma mark - RNFrostedSidebarDelegate
 
-
-
-
 - (void)sidebar:(RNFrostedSidebar *)sidebar didTapItemAtIndex:(NSUInteger)index {
     NSLog(@"Tapped item at index %lu",(unsigned long)index);
     if (index == 0) { //search Bar
@@ -136,25 +117,21 @@
     }
     
     if (index == 1) { //budget
-//        NSLog(@"savee %@",self.saveSearchedCity);
         
         if ([self.searchBar.text isEqualToString:@""]) {
             [self EmptySearchBarAlert];
         }
         else {
             self.budgetView.hidden = NO;
-            
             [sidebar dismissAnimated:YES completion:nil];
         }
     }
     if (index == 2) { //food
-//        NSLog(@"savee %@",self.saveSearchedCity);
         
         if ([self.searchBar.text isEqualToString:@""]) {
             [self EmptySearchBarAlert];
         }
         else {
-            
             FoodViewController * vc = [self.storyboard instantiateViewControllerWithIdentifier:@"FoodID"];
             vc.city = self.searchBar.text;
             [self presentViewController:vc animated:YES completion:nil];
@@ -165,13 +142,10 @@
     }
     if (index == 3) { //hotel
         
-//        NSLog(@"savee %@",self.saveSearchedCity);
-        
         if ([self.searchBar.text isEqualToString:@""]) {
             [self EmptySearchBarAlert];
         }
         else {
-            
             HotelViewController * vc = [self.storyboard instantiateViewControllerWithIdentifier:@"HotelID"];
             vc.city = self.searchBar.text;
             [self presentViewController:vc animated:YES completion:nil];
@@ -201,9 +175,6 @@
             
             VideoViewController * vc = [self.storyboard instantiateViewControllerWithIdentifier:@"VideoID"];
             vc.city = self.searchBar.text;
-            NSLog(@"passing %@", vc.city);
-            NSLog(@"passing %@", self.searchBar.text);
-
             
             [self presentViewController:vc animated:YES completion:nil];
             
@@ -211,10 +182,6 @@
             }];
         }
     }
-    
-    
-    
-    
 }
 
 -(void) EmptySearchBarAlert {
@@ -253,7 +220,6 @@
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 @end
