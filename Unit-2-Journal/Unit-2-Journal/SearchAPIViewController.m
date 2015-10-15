@@ -26,17 +26,14 @@ UITextFieldDelegate
 
 @property (weak, nonatomic) IBOutlet UITextField *searchTextField;
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
-@property (weak, nonatomic) IBOutlet UIButton *musicButton;
-@property (weak, nonatomic) IBOutlet UIButton *moviesButton;
-@property (weak, nonatomic) IBOutlet UIButton *booksButton;
+@property (strong, nonatomic) IBOutlet UIButton *musicButton;
+@property (strong, nonatomic) IBOutlet UIButton *moviesButton;
+@property (strong, nonatomic) IBOutlet UIButton *booksButton;
 @property (strong, nonatomic) IBOutlet UIButton *podcastButton;
+@property (strong, nonatomic) IBOutlet UIButton *televisionButton;
 @property (nonatomic) NSString *media;
 @property (nonatomic) NSMutableArray *searchResults;
-@property (nonatomic) NSMutableArray *searchResultsTwo;
-@property (nonatomic) NSMutableArray *allSearchResults;
 @property (nonatomic) iTunesSearchResult *passSearchResult;
-@property (nonatomic) BOOL isITunesSearch;
-@property (nonatomic) BOOL isTVSearch;
 
 @end
 
@@ -65,12 +62,12 @@ UITextFieldDelegate
     
     if (self.musicButton.isTouchInside){
         self.media = @"music&entity=album";
-        self.isTVSearch = FALSE;
-        self.isITunesSearch = TRUE;
+
     } else if (self.booksButton.isTouchInside){
         self.media = @"ebook";
-        self.isTVSearch = TRUE;
-        self.isTVSearch = FALSE;
+        
+    } else if (self.televisionButton.isTouchInside){
+        self.media = @"television";
     } else {
         self.media = [sender currentTitle];
     }
@@ -100,7 +97,7 @@ UITextFieldDelegate
  
     self.searchResults = [[NSMutableArray alloc]init];
     
-    //First API Request
+//First API Request - iTunes (music, ebooks, podcast)
     
     NSString *urlString = [NSString stringWithFormat:
                            @"https://itunes.apple.com/search?media=%@&term=%@",media,term];
@@ -118,7 +115,7 @@ UITextFieldDelegate
                         
                         NSArray *results = [json objectForKey:@"results"];
                         
-                        //NSLog(@"Results: %@",results);
+                        NSLog(@"iTunes Results: %@",results);
                         
                         for (NSDictionary *result in results){
                             
@@ -129,7 +126,7 @@ UITextFieldDelegate
                             
                             iTunesSearchResult *resultsObject = [[iTunesSearchResult alloc]init];
                             
-                            if ([self.media isEqualToString:@"podcast"]){
+                            if ([self.media isEqualToString:@"podcast"] || [self.media isEqualToString:@"movie"]){
                                 resultsObject.artistName = artistName;
                                 resultsObject.albumOrMovieName = movieName;
                                 resultsObject.artworkURL = artworkURL;
@@ -148,7 +145,7 @@ UITextFieldDelegate
                         [self.tableView reloadData];
                     }}];
     
-    //Second API Request
+//Second API Request - for television
    
     NSString *urlStringTwo = [NSString stringWithFormat:@"http://api.tvmaze.com/search/shows?q=%@",term];
     NSString *encodedStringTwo = [urlStringTwo stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLQueryAllowedCharacterSet]];
@@ -160,45 +157,85 @@ UITextFieldDelegate
                     if (data != nil){
                         NSArray *jsonTwo = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
                         
-                        NSLog(@"JSonTwo: %@",jsonTwo);
+                        NSLog(@"TV results: %@",jsonTwo);
                         
                         NSDictionary *shows = [jsonTwo valueForKey:@"show"];
                         
                         for (NSDictionary *show in shows){
-                        
+                            
                             NSString *name = [show valueForKey:@"name"];
                             NSArray *image = [show valueForKey:@"image"];
                             NSString *imageURL = [image valueForKey:@"medium"];
                             NSArray *network = [show valueForKey:@"network"];
                             NSString *channel = [network valueForKey:@"name"];
                             
-                            iTunesSearchResult *searchResult = [[iTunesSearchResult alloc]init];
-                            searchResult.artistName = channel;
-                            searchResult.albumOrMovieName = name;
-                            searchResult.artworkURL = imageURL;
+                            if ([self.media isEqualToString:@"television"]){
+                                
+                                iTunesSearchResult *searchResult = [[iTunesSearchResult alloc]init];
+                                searchResult.artistName = channel;
+                                searchResult.albumOrMovieName = name;
+                                searchResult.artworkURL = imageURL;
+                                
+                                [self.searchResults addObject:searchResult];
+                                
+                            }
+                        }
+                    }
+                    [self.tableView reloadData];
+                }];
+    
+//Third API Request - for movies, including in-theatre
+
+// https://api.themoviedb.org/3/search/movie?api_key=a958839150c7c7c6333fd335128ea066&query=django
+
+    
+    NSString *urlStringThree = [NSString stringWithFormat:@"https://api.themoviedb.org/3/search/%@?api_key=a958839150c7c7c6333fd335128ea066&query=%@",media,term];
+    
+    NSString *encodedStringThree = [urlStringThree stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLQueryAllowedCharacterSet]];
+    
+    NSLog(@"Movie String: %@",encodedStringThree);
+    
+    NSURL *urlThree = [NSURL URLWithString:encodedStringThree];
+
+    [APIManager GETRequestWithURL:urlThree
+                completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
+                    
+                    if (data != nil){
+                        NSArray *jsonThree = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
                         
-                            NSLog(@"Show: %@",searchResult.albumOrMovieName);
-                            NSLog(@"Artwork: %@",searchResult.artworkURL);
-                            NSLog(@"Channel: %@",searchResult.artistName);
+                        NSDictionary *results = [jsonThree valueForKey:@"results"];
+                        
+                        NSLog(@"Movie Results: %@",results);
+                        
+                        for (NSDictionary *result in results){
                             
-                        [self.searchResults addObject:searchResult];
+                            NSString *name = [result valueForKey:@"title"];
+                            NSString *releaseDate = [result valueForKey:@"release_date"];
+                            NSString *posterPath = [result valueForKey:@"poster_path"];
+                            
+                            //http://image.tmdb.org/t/p/w500
+                            
+                            if ([self.media isEqualToString:@"movie"]){
+
+                               iTunesSearchResult *movieResult = [[iTunesSearchResult alloc]init];
+                                
+                                movieResult.albumOrMovieName = name;
+                                movieResult.artistName = releaseDate;
+                                movieResult.artworkURL = [NSString stringWithFormat:@"http://image.tmdb.org/t/p/w500%@",posterPath];
+                                
+                                [self.searchResults addObject:movieResult];
+                                
+                            }
+                            
+                            [self.tableView reloadData];
                             
                         }
                         
-                        
                     }
-                
-                    [self.tableView reloadData];
+                   
                 }];
+    }
 
-   
-    
-}
-
-
-     
-     
-// https://api.themoviedb.org/3/search/movie?api_key=a958839150c7c7c6333fd335128ea066&query=django
 - (BOOL)textFieldShouldReturn:(UITextField *)textField{
     
     [self.view endEditing:YES];
