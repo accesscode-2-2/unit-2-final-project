@@ -146,7 +146,6 @@ UITableViewDelegate
         cell.backgroundColor = [UIColor orangeColor];
         cell.menuTitleLabel.text = [self.menuTitles objectAtIndex:indexPath.row];
         cell.menuTitleImage.image = [self.menuIcons objectAtIndex:indexPath.row];
-        cell.menuTitleLabel.backgroundColor = [UIColor clearColor];
     }
     
     return cell;
