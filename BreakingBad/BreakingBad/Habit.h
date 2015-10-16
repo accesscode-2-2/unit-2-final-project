@@ -11,11 +11,10 @@
 #import "Entry.h"
 #import "Goal.h"
 
-@interface Habit : PFObject<PFSubclassing>
+@interface Habit : PFObject<PFSubclassing, NSCopying>
 
 @property (nonatomic) NSMutableArray<Entry *> *entries;
 @property (nonatomic) NSMutableArray<Goal *> *goals;
 @property (nonatomic) NSString *name;
-
 
 @end

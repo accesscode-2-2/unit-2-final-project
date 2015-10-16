@@ -10,6 +10,7 @@
 #import "MainPageVC.h"
 #import "ViewController.h"
 #import "SignUpViewController.h"
+#import "SharedManager.h"
 
 @implementation LoginViewController
 
@@ -86,6 +87,24 @@
         thisUser.password = password;
         
         [PFUser logInWithUsernameInBackground:thisUser.username password:thisUser.password block:^(PFUser * _Nullable user, NSError * _Nullable error) {
+            
+            PFQuery *query = [PFQuery queryWithClassName:@"_User"];
+            [query whereKey:@"user" equalTo:[PFUser currentUser]];
+            [query getFirstObjectInBackgroundWithBlock:^(PFObject * user, NSError *error) {
+                if (!error) {
+                    // Found UserStats
+                    [user setObject:[[SharedManager sharedModel].currentUser habits] forKey:@"habits"];
+                    
+                    // Save
+                    [user saveInBackground];
+                } else {
+                    // Did not find any UserStats for the current user
+                    NSLog(@"Error: %@", error);
+                }
+            }];
+            
+            //[[SharedManager sharedModel].currentUser saveInBackground];
+            
             MainPageVC *mvc = (MainPageVC *)[self.storyboard instantiateViewControllerWithIdentifier:@"showMainPgVC"];
             [self presentViewController:mvc animated:YES completion:nil];
         }];

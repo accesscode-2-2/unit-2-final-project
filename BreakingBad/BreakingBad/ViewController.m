@@ -16,6 +16,7 @@
 #import "HabitList.h"
 #import "QuestionDetailVC.h"
 #import "SharedManager.h"
+#import "CustomVCTransitionViewController.h"
 
 
 
@@ -37,6 +38,19 @@
 
 @implementation ViewController
 
+- (IBAction)saveButtonTapped:(UIBarButtonItem *)sender {
+    
+    //[self.user saveInBackground];
+    
+    [SharedManager sharedModel].currentUser = self.user;
+    
+    CustomVCTransitionViewController *customVC = [self.storyboard instantiateViewControllerWithIdentifier:@"customVC"];
+    
+    [self presentViewController:customVC animated:YES completion:nil];
+    
+}
+
+
 - (IBAction)questionButtonTapped:(UIButton *)sender {
     QuestionDetailVC *qvc = (QuestionDetailVC *)[self.storyboard instantiateViewControllerWithIdentifier:@"showQDetailSegue"];
     qvc.question = sender.titleLabel.text;
@@ -54,14 +68,15 @@
     self.habit = [Habit new];
     self.habit.name = self.createNewHabit.text;
     
-    
-    [self.user.habits addObject:self.habit];
-    
+    if([self.user objectForKey:@"habits"]==nil)
+    {
+        self.user.habits = [NSMutableArray<Habit *> new];
+        [self.user.habits addObject:self.habit];
+    }else{
+        [self.user.habits addObject:self.habit];
+    }
     
 }
-
-
-
 
 - (void)finishedAnswering:(QuestionDetailVC *)qvc withAnswer:(NSString *)answer {
     if(![SharedManager sharedModel].answersDictionary)
@@ -83,7 +98,15 @@
             
             self.entry = [Entry new];
             self.entry.entryLog = answer;
-            [self.habit.entries addObject:self.entry];
+            if([self.habit objectForKey:@"entries"] == nil)
+            {
+                self.habit.entries = [NSMutableArray<Entry *> new];
+                [self.habit.entries addObject:self.entry];
+            }
+            else
+            {
+                [self.habit.entries addObject:self.entry];
+            }
         }
     }
 }
@@ -183,7 +206,14 @@
     self.habit = [Habit new];
     self.habit.name = habitString;
     
-    [self.user.habits addObject:self.habit];
+    if([self.user objectForKey:@"habits"]==nil)
+    {
+        self.user.habits = [NSMutableArray<Habit *> new];
+        [self.user.habits addObject:self.habit];
+    }else{
+        [self.user.habits addObject:self.habit];
+    }
+    
 }
 
 

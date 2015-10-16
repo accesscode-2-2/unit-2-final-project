@@ -11,6 +11,7 @@
 #import "MainPageVC.h"
 #import "LoginViewController.h"
 #import "ViewController.h"
+#import "SharedManager.h"
 
 @implementation CustomModalViewController
 
@@ -65,6 +66,9 @@
         thisUser.password = self.passwordTextField.text;
         
         [thisUser signUpInBackgroundWithBlock:^(BOOL succeeded, NSError * _Nullable error) {
+            
+            [[SharedManager sharedModel].currentUser saveInBackground];
+            
             MainPageVC *mvc = (MainPageVC *)[self.storyboard instantiateViewControllerWithIdentifier:@"showMainPgVC"];
             [self presentViewController:mvc animated:YES completion:nil];
         }];

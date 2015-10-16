@@ -12,5 +12,6 @@
 @interface Entry : PFObject<PFSubclassing>
 
 @property (nonatomic) NSString *entryLog;
+@property (nonatomic) NSDictionary *logs;
 
 @end
