@@ -7,17 +7,22 @@
 //
 
 #import "MainPageVC.h"
+#import "BBUser.h"
+#import "Habit.h"
+#import "Entry.h"
 #import "SharedManager.h"
 #import "YALContextMenuTableView.h"
 #import "CustomContextTableViewCell.h"
 #import "CheckProgressViewController.h"
+#import "QuestionDetailVC.h"
 
 @interface MainPageVC ()
 <
 UIPickerViewDataSource,
 UIPickerViewDelegate,
 UITableViewDataSource,
-UITableViewDelegate
+UITableViewDelegate,
+QuestionDetailVCDelegate
 >
 
 @property (weak, nonatomic) IBOutlet UIPickerView *habitPickerView;
@@ -30,12 +35,50 @@ UITableViewDelegate
 @property (nonatomic) NSArray *menuIcons;
 
 @property (strong, nonatomic) IBOutletCollection(UIButton) NSArray *questionsArray;
+@property (nonatomic) NSArray *habitsArray;
+
+@property (nonatomic) BBUser *user;
+@property (nonatomic) Entry *entry;
+@property (nonatomic) Habit *habit;
 
 @end
 
 
 
 @implementation MainPageVC
+
+#pragma mark
+#pragma Question Buttons Method
+
+- (IBAction)questionButtonTapped:(UIButton *)sender {
+    QuestionDetailVC *qvc = (QuestionDetailVC *)[self.storyboard instantiateViewControllerWithIdentifier:@"showQDetailSegue"];
+    qvc.question = sender.titleLabel.text;
+    qvc.delegate = self;
+    qvc.tag = sender.tag;
+    
+    [self presentViewController:qvc animated:YES completion:nil];
+}
+
+- (void)finishedAnswering:(QuestionDetailVC *)qvc withAnswer:(NSString *)answer {
+    for(int i=0; i < self.questionsArray.count; i++)
+    {
+        UIButton *currentButton = (UIButton *)self.questionsArray[i];
+        if(qvc.tag == currentButton.tag)
+        {
+            UILabel *currentAnswerLabel = (UILabel *)self.reply[i];
+            
+            currentAnswerLabel.text = answer;
+            
+            NSString *tagString = [NSString stringWithFormat:@"%ld",(long)qvc.tag];
+            
+            [[SharedManager sharedModel].answersDictionary setObject:answer forKey:tagString];
+            
+            self.entry = [Entry new];
+            self.entry.entryLog = answer;
+            [self.habit.entries addObject:self.entry];
+        }
+    }
+}
 
 #pragma mark
 #pragma Context Menu methods
@@ -84,21 +127,58 @@ UITableViewDelegate
                         @"My Habits",
                         @"Check Progress",
                         @"Set Goals",
-                        @"Info"];
+                        @"Info",
+                        @"Save"];
     
     self.menuIcons = @[[UIImage imageNamed:@"cancel"],
                        [UIImage imageNamed:@"my_habits"],
                        [UIImage imageNamed:@"check_progress"],
                        [UIImage imageNamed:@"goals"],
-                       [UIImage imageNamed:@"info"]];
+                       [UIImage imageNamed:@"info"],
+                       [UIImage imageNamed:@"save"]];
 }
 
 #pragma mark
 #pragma Values from Singleton
 - (IBAction)doneButtonTapped:(UIButton *)sender {
     
-    [[SharedManager sharedModel].habitArray addObject:self.habitTextField.text];
-    [self.habitPickerView reloadAllComponents];
+    NSInteger selectedIdx = [self.habitPickerView selectedRowInComponent:0];
+    Habit *selectedHabit = self.habitsArray[selectedIdx];
+    
+    Entry *newEntry = [Entry new];
+    
+    NSMutableDictionary *entryDictionary = [[NSMutableDictionary alloc] init];
+    for(int i=0; i < self.questionsArray.count; i++)
+    {
+        UIButton *currentButton = (UIButton *)self.questionsArray[i];
+        UILabel *label = (UILabel *)self.reply[i];
+        
+        NSString *key = [NSString stringWithFormat:@"%d", i];
+        NSString *value = label.text;
+        
+        entryDictionary[key] = value;
+    }
+    
+    newEntry.logs = entryDictionary;
+    [selectedHabit.entries addObject:newEntry];
+    [selectedHabit saveInBackground];
+    
+    
+    
+//    [self.habitsArray addObject:self.habitTextField.text];
+    //[[SharedManager sharedModel].habitArray addObject:self.habitTextField.text];
+//    [self.habitPickerView reloadAllComponents];
+//    
+//    self.habit = [Habit new];
+//    self.habit.name = self.habitTextField.text;
+//    
+//    if([self.user objectForKey:@"habits"]==nil)
+//    {
+//        self.user.habits = [NSMutableArray<Habit *> new];
+//        [self.user.habits addObject:self.habit];
+//    }else{
+//        [self.user.habits addObject:self.habit];
+//    }
 }
 
 
@@ -133,6 +213,9 @@ UITableViewDelegate
     if(indexPath.row == 2){
         CheckProgressViewController *cp = (CheckProgressViewController *)[self.storyboard instantiateViewControllerWithIdentifier:@"checkProgressID"];
         [self presentViewController:cp animated:YES completion:nil];
+    }
+    else if (indexPath.row ==  5){
+        [self.user saveInBackground];
     }
     
     [tableView dismisWithIndexPath:indexPath];
@@ -171,7 +254,38 @@ UITableViewDelegate
     [self answersFromPreviousScreen];
     [self initiateMenuOptions];
     
-    [self.habitPickerView selectRow:[SharedManager sharedModel].selectedRow inComponent:0 animated:YES];
+    
+//    self.habitsArray = [NSMutableArray new];
+//    HabitList *hl = [HabitList new];
+//    self.habitsArray = hl.habitsList;
+    
+    //[self.habitPickerView selectRow:[SharedManager sharedModel].selectedRow inComponent:0 animated:YES];
+    
+//    BBUser *currentUser = (BBUser *)[PFUser currentUser];
+//        [currentUser objectForKey:@"habits"];
+//        [currentUser fetchIfNeededInBackgroundWithBlock:^(PFObject * _Nullable object, NSError * _Nullable error) {
+//          NSLog(@"%@",object);
+//        }];
+//    PFQuery *query = [PFUser query];
+//    
+//    [query whereKey:@"username" equalTo:[currentUser username]];
+//    
+//    [query getFirstObjectInBackgroundWithBlock:^(PFObject * _Nullable object, NSError * _Nullable error) {
+//        NSLog(@"Object: %@", object);
+//        NSLog(@"Habits: %@", [object objectForKey:@"habtis"]);
+//    }];
+    
+    
+    __weak typeof(self) weakSelf = self;
+    PFQuery *query = [PFQuery queryWithClassName:@"Habit"];
+    [query findObjectsInBackgroundWithBlock:^(NSArray * _Nullable objects, NSError * _Nullable error) {
+        weakSelf.habitsArray = objects;
+        [weakSelf.habitPickerView reloadAllComponents];
+    }];
+}
+
+-(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
+    [self.habitTextField resignFirstResponder];
 }
 
 #pragma mark
@@ -183,12 +297,28 @@ UITableViewDelegate
 
 - (NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component{
     
-    return [SharedManager sharedModel].habitArray.count;
+    return self.habitsArray.count;
 }
 
 - (nullable NSString *)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component{
+    return ((Habit *)self.habitsArray[row]).name;
+}
+
+- (void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component{
+//    [SharedManager sharedModel].selectedRow = row;
+//    
+//    NSString *habitString = self.habitsArray[row];
+//    self.habit = [Habit new];
+//    self.habit.name = habitString;
+//    
+//    if([self.user objectForKey:@"habits"]==nil)
+//    {
+//        self.user.habits = [NSMutableArray<Habit *> new];
+//        [self.user.habits addObject:self.habit];
+//    }else{
+//        [self.user.habits addObject:self.habit];
+//    }
     
-    return [SharedManager sharedModel].habitArray[row];
 }
 
 @end

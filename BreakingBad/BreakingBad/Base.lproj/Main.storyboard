@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="eFl-bJ-oI1">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="MBI-FE-AUg">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8135.1"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
@@ -392,7 +392,7 @@
                     <navigationItem key="navigationItem" id="XA7-Li-upt">
                         <barButtonItem key="rightBarButtonItem" systemItem="save" id="GHw-vP-gZC">
                             <connections>
-                                <segue destination="wYD-HK-GAx" kind="presentation" id="hPu-6T-D8M"/>
+                                <action selector="saveButtonTapped:" destination="tdt-Sk-XM9" id="xhj-bR-GcV"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -499,9 +499,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Ea-YD-OGl">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Ea-YD-OGl">
                                 <rect key="frame" x="282" y="285" width="37" height="30"/>
-                                <state key="normal" title="Enter">
+                                <state key="normal">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -632,7 +632,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5gF-Rh-BqW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1618" y="324"/>
+            <point key="canvasLocation" x="1584" y="991"/>
         </scene>
         <!--Main PageVC-->
         <scene sceneID="9fo-Ua-tWL">
@@ -759,6 +759,9 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="200" height="170"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                 <state key="normal" title="How are you feeling today?"/>
+                                                <connections>
+                                                    <action selector="questionButtonTapped:" destination="MBI-FE-AUg" eventType="touchUpInside" id="FHD-nb-hU6"/>
+                                                </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l9q-fl-lA0">
                                                 <rect key="frame" x="18" y="132" width="164" height="30"/>
@@ -788,6 +791,9 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="200" height="170"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                 <state key="normal" title="What will your mantra be?"/>
+                                                <connections>
+                                                    <action selector="questionButtonTapped:" destination="MBI-FE-AUg" eventType="touchUpInside" id="faU-58-YqP"/>
+                                                </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" tag="2" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mXt-Fy-z6C">
                                                 <rect key="frame" x="18" y="132" width="164" height="30"/>
@@ -817,6 +823,9 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="200" height="170"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                 <state key="normal" title="What's one road block that you seek to tackle?"/>
+                                                <connections>
+                                                    <action selector="questionButtonTapped:" destination="MBI-FE-AUg" eventType="touchUpInside" id="Da1-Ak-7w2"/>
+                                                </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" tag="3" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pbo-7W-DUH">
                                                 <rect key="frame" x="18" y="126" width="164" height="30"/>
@@ -846,6 +855,9 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="200" height="170"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                 <state key="normal" title="Share a feel good moment from yesterday"/>
+                                                <connections>
+                                                    <action selector="questionButtonTapped:" destination="MBI-FE-AUg" eventType="touchUpInside" id="SDi-sN-bFh"/>
+                                                </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" tag="4" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7mB-TC-4SZ">
                                                 <rect key="frame" x="18" y="127" width="164" height="30"/>
@@ -875,6 +887,9 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="200" height="170"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                 <state key="normal" title="What steps will you take to inch closer to your goal?"/>
+                                                <connections>
+                                                    <action selector="questionButtonTapped:" destination="MBI-FE-AUg" eventType="touchUpInside" id="zhc-43-9vZ"/>
+                                                </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dQ3-JH-NAX">
                                                 <rect key="frame" x="18" y="127" width="164" height="30"/>
@@ -904,6 +919,9 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="200" height="170"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                 <state key="normal" title="Reflect on how you surrounded yourself with positive vibes"/>
+                                                <connections>
+                                                    <action selector="questionButtonTapped:" destination="MBI-FE-AUg" eventType="touchUpInside" id="0eg-Ry-SOU"/>
+                                                </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" tag="5" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dk7-FL-43J">
                                                 <rect key="frame" x="18" y="132" width="164" height="30"/>
@@ -1016,7 +1034,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3tJ-xw-kL1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2263" y="324"/>
+            <point key="canvasLocation" x="-454" y="996"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="735-WF-kMc">
@@ -1080,7 +1098,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oQ5-RK-Z8F" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1618" y="996"/>
+            <point key="canvasLocation" x="934" y="991"/>
         </scene>
         <!--Check Progress View Controller-->
         <scene sceneID="DNO-Ip-wgj">
@@ -1098,7 +1116,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wqw-Y1-O82" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2269" y="991"/>
+            <point key="canvasLocation" x="-454" y="1663"/>
         </scene>
     </scenes>
     <resources>

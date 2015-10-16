@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "HabitList.h"
 #import "ViewController.h"
+#import "BBUser.h"
 
 @interface SharedManager : NSObject
 
@@ -17,6 +18,8 @@
 @property (nonatomic) NSMutableArray *habitArray;
 @property (nonatomic) NSInteger selectedRow;
 @property (nonatomic) NSMutableDictionary *answersDictionary;
+
+@property (nonatomic) BBUser *currentUser;
 
 
 + (SharedManager *)sharedModel;
