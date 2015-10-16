@@ -53,7 +53,7 @@
 
 - (void) makeFSAPIRequestWithSearchTerm:(NSString*) searchTerm callbackBlock:(void(^)())block{
     NSLog(@"%@", searchTerm);
-     
+    
     
     //api key AIzaSyDt8qmOMAZJoW3F_q1_BSPW8P4P1fFPduM
     

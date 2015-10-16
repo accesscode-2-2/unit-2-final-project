@@ -522,7 +522,7 @@
         <!--Flappy Game-->
         <scene sceneID="Ivd-Yw-4DO">
             <objects>
-                <viewController hidesBottomBarWhenPushed="YES" id="fC0-NN-pAX" customClass="FlappyGame" sceneMemberID="viewController">
+                <viewController id="fC0-NN-pAX" customClass="FlappyGame" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="MRd-dB-Fnx"/>
                         <viewControllerLayoutGuide type="bottom" id="HcS-PW-shZ"/>
@@ -530,12 +530,89 @@
                     <view key="view" contentMode="scaleToFill" id="pyN-Jf-S8L">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="GameBack.png" translatesAutoresizingMaskIntoConstraints="NO" id="XPX-6B-xaO">
+                                <rect key="frame" x="0.0" y="20" width="600" height="580"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="BirdUp.png" translatesAutoresizingMaskIntoConstraints="NO" id="b0w-CH-Ggd">
+                                <rect key="frame" x="40" y="264" width="40" height="40"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8SE-vT-BJI">
+                                <rect key="frame" x="94" y="184" width="132" height="71"/>
+                                <state key="normal" title="Start Game"/>
+                                <connections>
+                                    <action selector="StartGame:" destination="fC0-NN-pAX" eventType="touchUpInside" id="UxY-H7-Qub"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Tunnel.png" translatesAutoresizingMaskIntoConstraints="NO" id="MsN-a6-dze">
+                                <rect key="frame" x="500" y="-374" width="53" height="500"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Tunnel.png" translatesAutoresizingMaskIntoConstraints="NO" id="dWL-Ry-Umh">
+                                <rect key="frame" x="500" y="500" width="53" height="415"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Tunnel.png" translatesAutoresizingMaskIntoConstraints="NO" id="AoY-KK-TzR">
+                                <rect key="frame" x="0.0" y="578" width="600" height="22"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="22" id="yqI-b6-70g"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Tunnel.png" translatesAutoresizingMaskIntoConstraints="NO" id="RcK-xi-dHU">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="22"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="22" id="sBH-35-hhR"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XUZ-dt-JGx">
+                                <rect key="frame" x="13" y="30" width="295" height="123"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="70"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ekc-4O-PGN">
+                                <rect key="frame" x="118" y="314" width="85" height="52"/>
+                                <state key="normal" title="Exit">
+                                    <color key="titleShadowColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="NCQ-5h-pmp" kind="presentation" id="uy4-x5-2D8"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="RcK-xi-dHU" firstAttribute="leading" secondItem="pyN-Jf-S8L" secondAttribute="leadingMargin" id="7oY-ld-Uvw"/>
+                            <constraint firstItem="HcS-PW-shZ" firstAttribute="top" secondItem="AoY-KK-TzR" secondAttribute="bottom" id="Dxs-nH-okj"/>
+                            <constraint firstItem="RcK-xi-dHU" firstAttribute="leading" secondItem="pyN-Jf-S8L" secondAttribute="leading" id="S1e-nN-b5C"/>
+                            <constraint firstAttribute="trailing" secondItem="RcK-xi-dHU" secondAttribute="trailing" id="ZJf-eR-mFH"/>
+                            <constraint firstItem="HcS-PW-shZ" firstAttribute="top" secondItem="XPX-6B-xaO" secondAttribute="bottom" id="dx9-bh-E8Y"/>
+                            <constraint firstItem="XPX-6B-xaO" firstAttribute="top" secondItem="MRd-dB-Fnx" secondAttribute="bottom" id="p65-Vj-9uO"/>
+                            <constraint firstAttribute="trailing" secondItem="XPX-6B-xaO" secondAttribute="trailing" id="p6p-sC-beQ"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="RcK-xi-dHU" secondAttribute="trailing" id="qSV-OC-MCd"/>
+                            <constraint firstItem="RcK-xi-dHU" firstAttribute="top" secondItem="pyN-Jf-S8L" secondAttribute="topMargin" id="qb9-nu-zmk"/>
+                            <constraint firstAttribute="trailing" secondItem="AoY-KK-TzR" secondAttribute="trailing" id="tzF-FP-gvN"/>
+                            <constraint firstItem="XPX-6B-xaO" firstAttribute="leading" secondItem="pyN-Jf-S8L" secondAttribute="leading" id="u3j-Cd-Ytc"/>
+                            <constraint firstItem="AoY-KK-TzR" firstAttribute="leading" secondItem="pyN-Jf-S8L" secondAttribute="leading" id="uOM-Fz-FW4"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="7oY-ld-Uvw"/>
+                                <exclude reference="qSV-OC-MCd"/>
+                            </mask>
+                        </variation>
                     </view>
-                    <extendedEdge key="edgesForExtendedLayout" top="YES"/>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="boolean" keyPath="keyPath" value="YES"/>
                     </userDefinedRuntimeAttributes>
+                    <connections>
+                        <outlet property="Bird" destination="b0w-CH-Ggd" id="xpL-ED-a0m"/>
+                        <outlet property="Bottom" destination="AoY-KK-TzR" id="Pcg-mN-Vi0"/>
+                        <outlet property="Exit" destination="ekc-4O-PGN" id="taW-PS-fcz"/>
+                        <outlet property="ScoreLabel" destination="XUZ-dt-JGx" id="fkx-ep-xos"/>
+                        <outlet property="StartGame" destination="8SE-vT-BJI" id="C2k-Q5-Q4S"/>
+                        <outlet property="Top" destination="RcK-xi-dHU" id="8BB-JM-jPG"/>
+                        <outlet property="TunnelBottom" destination="dWL-Ry-Umh" id="nap-HX-1bk"/>
+                        <outlet property="TunnelTop" destination="MsN-a6-dze" id="5LY-IH-Ti0"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xFb-cm-DxC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -553,16 +630,20 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6K8-iz-6hE">
-                                <rect key="frame" x="68" y="50" width="34" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6K8-iz-6hE">
+                                <rect key="frame" x="68" y="50" width="80" height="60"/>
                                 <animations/>
-                                <state key="normal" title="Back"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="acY-vc-kIS"/>
+                                    <constraint firstAttribute="width" constant="80" id="l5w-5O-Jdo"/>
+                                </constraints>
+                                <state key="normal" backgroundImage="homeButton.png"/>
                                 <connections>
                                     <segue destination="Llf-7N-ptg" kind="show" id="Gf5-oo-kyB"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hJt-FW-x0J">
-                                <rect key="frame" x="124" y="145" width="77" height="30"/>
+                                <rect key="frame" x="163" y="225" width="77" height="30"/>
                                 <state key="normal" title="Flappy Bird"/>
                                 <connections>
                                     <segue destination="NCQ-5h-pmp" kind="modal" id="aGj-8u-3bd"/>
@@ -571,6 +652,10 @@
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" red="1" green="0.7243808491" blue="0.71085348520000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="6K8-iz-6hE" firstAttribute="top" secondItem="J5w-v5-Dwq" secondAttribute="bottom" constant="30" id="2g7-ud-frf"/>
+                            <constraint firstItem="6K8-iz-6hE" firstAttribute="leading" secondItem="b10-xq-BN2" secondAttribute="leadingMargin" constant="48" id="jlc-4W-hDM"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TNi-41-Zpl" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -653,11 +738,16 @@
         </scene>
     </scenes>
     <resources>
+        <image name="BirdUp.png" width="40" height="40"/>
+        <image name="GameBack.png" width="320" height="480"/>
+        <image name="Tunnel.png" width="50" height="100"/>
         <image name="burger.png" width="19" height="17"/>
+        <image name="homeButton.png" width="2084" height="1580"/>
         <image name="ok" width="600" height="296"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="Gf5-oo-kyB"/>
+        <segue reference="aGj-8u-3bd"/>
         <segue reference="Xni-6n-rdo"/>
     </inferredMetricsTieBreakers>
 </document>
