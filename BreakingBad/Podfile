@@ -5,3 +5,5 @@ pod 'Parse'
 pod "AFNetworking", "~> 2.0"
 
 pod 'ContextMenu.iOS', '~> 1.0.0'
+
+pod 'ParseUI'

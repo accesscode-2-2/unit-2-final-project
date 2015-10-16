@@ -7,8 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <ParseUI/ParseUI.h>
 
 @interface CustomModalViewController : UIViewController
+<
+PFLogInViewControllerDelegate,
+PFSignUpViewControllerDelegate
+>
+
 @property (weak, nonatomic) IBOutlet UITextField *emailTextField;
 @property (weak, nonatomic) IBOutlet UITextField *usernameTextField;
 @property (weak, nonatomic) IBOutlet UITextField *passwordTextField;
