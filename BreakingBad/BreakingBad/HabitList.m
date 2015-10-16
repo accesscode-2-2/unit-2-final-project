@@ -37,6 +37,7 @@
                            @"Biting your nails",
                            @"Cocaine Addiction",
                            @"Biting your lips",
+                           @"Biting you nails",
                            @"Eating unhealthy",
                            @"Excessive Drinking",
                            @"Facebook"];

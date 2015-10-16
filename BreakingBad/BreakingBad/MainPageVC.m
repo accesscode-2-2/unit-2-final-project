@@ -29,6 +29,7 @@ UITableViewDelegate
 @property (nonatomic) NSArray *menuTitles;
 @property (nonatomic) NSArray *menuIcons;
 
+@property (strong, nonatomic) IBOutletCollection(UIButton) NSArray *questionsArray;
 
 @end
 
@@ -102,14 +103,19 @@ UITableViewDelegate
 
 
 -(void)answersFromPreviousScreen{
-    for (int i=0; i <self.reply.count; i++)
+    NSArray *allkeys = [[[SharedManager sharedModel] answersDictionary] allKeys];
+    for(NSString *key in allkeys)
     {
-        
-        UILabel *currentAnswerLabel = (UILabel *) [SharedManager sharedModel].answersLabel[i];
-        UILabel *label = (UILabel *)self.reply[i];
-        if(currentAnswerLabel.tag == label.tag)
+        NSInteger tag = [key integerValue];
+        for(int i=0; i < self.questionsArray.count; i++)
         {
-            label.text = currentAnswerLabel.text;
+            UIButton *currentQuestionButton = (UIButton *)self.questionsArray[i];
+            if(tag == currentQuestionButton.tag)
+            {
+                UILabel *answerLabel = self.reply[i];
+                answerLabel.text = [[SharedManager sharedModel].answersDictionary objectForKey:key];
+                break;
+            }
         }
     }
 }

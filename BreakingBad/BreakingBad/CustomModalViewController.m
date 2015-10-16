@@ -9,11 +9,46 @@
 #import "CustomModalViewController.h"
 #import <Parse/Parse.h>
 #import "MainPageVC.h"
+#import "LoginViewController.h"
+#import "ViewController.h"
 
 @implementation CustomModalViewController
 
+#pragma mark
+#pragma LifeCycle Methods
 
-- (IBAction)didClickClose:(id)sender {
+//- (void)viewDidAppear:(BOOL)animated {
+//    [super viewDidAppear:animated];
+//    
+//    // Check if user is logged in
+//    if (![PFUser currentUser]) {
+//        // Instantiate our custom log in view controller
+//        LoginViewController *logInViewController = [[LoginViewController alloc] init];
+//        [logInViewController setDelegate:self];
+//        [logInViewController setFacebookPermissions:[NSArray arrayWithObjects:@"friends_about_me", nil]];
+//        [logInViewController setFields:PFLogInFieldsUsernameAndPassword
+//         | PFLogInFieldsSignUpButton
+//         | PFLogInFieldsDismissButton];
+//        
+//        // Instantiate our custom sign up view controller
+//        CustomModalViewController *signUpViewController = [[CustomModalViewController alloc] init];
+//        [signUpViewController setDelegate:self];
+//        [signUpViewController setFields:PFSignUpFieldsDefault | PFSignUpFieldsAdditional];
+//        
+//        // Link the sign up view controller
+//        [logInViewController setSignUpController:signUpViewController];
+//        
+//        // Present log in view controller
+//        [self presentViewController:logInViewController animated:YES completion:NULL];
+//    }
+//}
+//
+//- (void)viewDidLoad{
+//    [super viewDidLoad];
+//}
+
+
+- (IBAction)signUpButtonTapped:(UIButton *)sender {
     
     PFUser *thisUser = [PFUser user];
     if(![[thisUser objectForKey:@"emailVerified"] boolValue]){
@@ -27,12 +62,11 @@
         thisUser.password = self.passwordTextField.text;
         
         [thisUser signUpInBackgroundWithBlock:^(BOOL succeeded, NSError * _Nullable error) {
-            //add segue
+            MainPageVC *mvc = (MainPageVC *)[self.storyboard instantiateViewControllerWithIdentifier:@"showMainPgVC"];
+            [self presentViewController:mvc animated:YES completion:nil];
         }];
-        MainPageVC *mvc = (MainPageVC *)[self.storyboard instantiateViewControllerWithIdentifier:@"showMainPgVC"];
-        [self presentViewController:mvc animated:YES completion:nil];
-         //[self dismissViewControllerAnimated:YES completion:nil];
-       
+        
+        
     } else {
         
         UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"Error" message:@"The password field is either empty or does not match the confirm password field" preferredStyle:UIAlertControllerStyleAlert];
@@ -44,27 +78,18 @@
         [alertController addAction:okAction];
         
         [self presentViewController:alertController animated:YES completion:nil];
-        
-        
     }
-    
-  
     
 }
 
 -(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
     
     [self.emailTextField resignFirstResponder];
-            [self.usernameTextField resignFirstResponder];
-            [self.passwordTextField resignFirstResponder];
-            [self.confirmPasswordTextField resignFirstResponder];
-    
-    //[self.emailTextField endEditing:YES];
-    //        [self.usernameTextField endEditing:YES];
-    //        [self.passwordTextField endEditing:YES];
-    //        [self.confirmPasswordTextField endEditing:YES];
-    
+    [self.usernameTextField resignFirstResponder];
+    [self.passwordTextField resignFirstResponder];
+    [self.confirmPasswordTextField resignFirstResponder];
 }
+
 
 
 @end

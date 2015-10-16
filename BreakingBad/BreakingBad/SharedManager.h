@@ -16,7 +16,7 @@
 
 @property (nonatomic) NSMutableArray *habitArray;
 @property (nonatomic) NSInteger selectedRow;
-@property (nonatomic) NSMutableArray<UILabel *> *answersLabel;
+@property (nonatomic) NSMutableDictionary *answersDictionary;
 
 
 + (SharedManager *)sharedModel;

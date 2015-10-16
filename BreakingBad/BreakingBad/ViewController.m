@@ -52,20 +52,23 @@
 
 
 - (void)finishedAnswering:(QuestionDetailVC *)qvc withAnswer:(NSString *)answer {
-    if(! [SharedManager sharedModel].answersLabel)
+    if(![SharedManager sharedModel].answersDictionary)
     {
-        [SharedManager sharedModel].answersLabel = [NSMutableArray new];
+        [SharedManager sharedModel].answersDictionary = [NSMutableDictionary new];
     }
-    for (int i = 0; i < self.answer.count; i++) {
+    for(int i=0; i < self.question.count; i++)
+    {
         UIButton *currentButton = (UIButton *)self.question[i];
-        if (qvc.tag == currentButton.tag) {
-            UILabel *currentLabel = (UILabel *)self.answer[i];
+        if(qvc.tag == currentButton.tag)
+        {
+            UILabel *currentAnswerLabel = (UILabel *)self.answer[i];
             
-            currentLabel.text = answer;
+            currentAnswerLabel.text = answer;
             
-            [[SharedManager sharedModel].answersLabel addObject:currentLabel];
+            NSString *tagString = [NSString stringWithFormat:@"%ld",(long)qvc.tag];
+            
+            [[SharedManager sharedModel].answersDictionary setObject:answer forKey:tagString];
         }
-        
     }
 }
 

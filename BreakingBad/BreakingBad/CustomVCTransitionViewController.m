@@ -10,19 +10,26 @@
 #import "CustomModalViewController.h"
 #import "PresentingAnimationController.h"
 #import "DismissingAnimationController.h"
+#import "LoginViewController.h"
 #import <pop/POP.h>
 
 @implementation CustomVCTransitionViewController
 
 - (IBAction)didClickEnter:(id)sender {
-    CustomModalViewController *modalVC = [self.storyboard instantiateViewControllerWithIdentifier:@"customModal"];
+//    CustomModalViewController *modalVC = [self.storyboard instantiateViewControllerWithIdentifier:@"customModal"];
+//    
+//    
+//    modalVC.transitioningDelegate = self;
+//    
+//    modalVC.modalPresentationStyle = UIModalPresentationCustom;
+//    
+//    [self presentViewController:modalVC animated:YES completion:nil];
     
+    LoginViewController *lvc = [self.storyboard instantiateViewControllerWithIdentifier:@"loginVC"];
+    lvc.transitioningDelegate = self;
+    lvc.modalPresentationStyle = UIModalPresentationCustom;
+    [self presentViewController:lvc animated:YES completion:nil];
     
-    modalVC.transitioningDelegate = self;
-    
-    modalVC.modalPresentationStyle = UIModalPresentationCustom;
-    
-    [self presentViewController:modalVC animated:YES completion:nil];
 }
 
 
