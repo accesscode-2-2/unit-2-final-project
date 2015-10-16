@@ -104,6 +104,7 @@ UITableViewDelegate
 -(void)answersFromPreviousScreen{
     for (int i=0; i <self.reply.count; i++)
     {
+        
         UILabel *currentAnswerLabel = (UILabel *) [SharedManager sharedModel].answersLabel[i];
         UILabel *label = (UILabel *)self.reply[i];
         if(currentAnswerLabel.tag == label.tag)
@@ -112,6 +113,7 @@ UITableViewDelegate
         }
     }
 }
+
 
 #pragma mark - YALContextMenuTableViewDelegate
 
