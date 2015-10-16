@@ -202,7 +202,7 @@
     
     NSLog(@"my journal text is: %@", self.textView.text);
     
-    // SAVE it all to Parse
+    // when we log the journal entry, SAVE it all to Parse
     JournalPost *myJournalPost = [[JournalPost alloc] init]; // most of this is a repeat of above.
     
     myJournalPost[@"starRating"] = self.rating;
