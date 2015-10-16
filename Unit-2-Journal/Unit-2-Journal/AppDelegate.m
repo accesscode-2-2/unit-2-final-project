@@ -29,8 +29,8 @@
     [[FBSDKApplicationDelegate sharedInstance] application:application
                              didFinishLaunchingWithOptions:launchOptions];;
     
-    [Parse setApplicationId:@"hCzKKPDr1l6QLDRastUEgUvunGWfxAYdQTI8zbdS"
-                  clientKey:@"8ayioRGrdvQNTzwQfJ7KG9H4yLHz43ZKgvgqTIdt"];
+    [Parse setApplicationId:@"huGlqbY2KVINDuFfqju1fN0eB2QVANcqqHP0NVpY"
+                  clientKey:@"aohlSqEhCwaXtZbji5us0j97GNzemWqq3m3EJqwG"];
     
     //registering subclases to parse
     [iTunesSearchResult registerSubclass];

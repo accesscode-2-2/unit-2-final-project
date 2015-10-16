@@ -69,8 +69,8 @@ UITextFieldDelegate
     } else if (self.televisionButton.isTouchInside){
         self.media = @"television";
     
-    } else if (self.podcastButton.isTouchInside) {
-        
+   // } else if (self.podcastButton.isTouchInside) {
+       
     } else {
         self.media = [sender currentTitle];
     }
@@ -114,11 +114,11 @@ UITextFieldDelegate
                     if (data != nil){
                         NSDictionary *json = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
                         
-                        //NSLog(@"%@",json);
+                       NSLog(@"%@",json);
                         
                         NSArray *results = [json objectForKey:@"results"];
                         
-                      //  NSLog(@"iTunes Results: %@",results);
+                      // NSLog(@"iTunes Results: %@",results);
                         
                         for (NSDictionary *result in results){
                             
@@ -129,11 +129,18 @@ UITextFieldDelegate
                             
                             iTunesSearchResult *resultsObject = [[iTunesSearchResult alloc]init];
                             
-                            if ([self.media isEqualToString:@"podcast"] || [self.media isEqualToString:@"movie"]){
+                            if ([self.media isEqualToString:@"movie"]){
                                 resultsObject.artistName = artistName;
                                 resultsObject.albumOrMovieName = movieName;
                                 resultsObject.artworkURL = artworkURL;
-                                resultsObject.mediaType = @"podcast";
+                                resultsObject.mediaType = @"movie";
+                                
+                            } else if ([self.media isEqualToString:@"podcast"]) {
+                                resultsObject.artistName = artistName;
+                                resultsObject.albumOrMovieName = movieName;
+                                resultsObject.artworkURL = artworkURL;
+                                resultsObject.mediaType = @"podcast"; // add media type to iTunesSearchObject so that we can add it to Parse later
+            
                                 
                             } else if ([self.media isEqualToString:@"music&entity=album"]){
                                 resultsObject.artistName = artistName;
