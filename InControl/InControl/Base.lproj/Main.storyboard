@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Llf-7N-ptg">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Llf-7N-ptg">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -471,6 +471,76 @@
             </objects>
             <point key="canvasLocation" x="2273" y="473"/>
         </scene>
+        <!--Flappy View Controller-->
+        <scene sceneID="lyX-HQ-82D">
+            <objects>
+                <viewController id="NCQ-5h-pmp" customClass="FlappyViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="aHc-vU-roW"/>
+                        <viewControllerLayoutGuide type="bottom" id="stY-rZ-3tw"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="hjc-Us-hyH">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Flappy Bird" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="chp-jQ-cFq">
+                                <rect key="frame" x="235" y="90" width="86" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Tapping, Flapping, and Getting Angry" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5gE-kQ-x0N">
+                                <rect key="frame" x="76" y="170" width="285" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="High Score:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mns-lg-di6">
+                                <rect key="frame" x="231" y="419" width="90" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uZN-xU-1qr">
+                                <rect key="frame" x="240" y="333" width="73" height="30"/>
+                                <state key="normal" title="Play Game"/>
+                                <connections>
+                                    <segue destination="fC0-NN-pAX" kind="presentation" id="gDz-h4-GCJ"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="HighScore" destination="Mns-lg-di6" id="vKp-4x-1hI"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cI8-Ve-lL0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3360" y="-609"/>
+        </scene>
+        <!--Flappy Game-->
+        <scene sceneID="Ivd-Yw-4DO">
+            <objects>
+                <viewController hidesBottomBarWhenPushed="YES" id="fC0-NN-pAX" customClass="FlappyGame" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="MRd-dB-Fnx"/>
+                        <viewControllerLayoutGuide type="bottom" id="HcS-PW-shZ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="pyN-Jf-S8L">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <extendedEdge key="edgesForExtendedLayout" top="YES"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="keyPath" value="YES"/>
+                    </userDefinedRuntimeAttributes>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xFb-cm-DxC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4031" y="-609"/>
+        </scene>
         <!--Games View Controller-->
         <scene sceneID="dOd-xF-Ffl">
             <objects>
@@ -491,13 +561,13 @@
                                     <segue destination="Llf-7N-ptg" kind="show" id="Gf5-oo-kyB"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Games View Controller " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wQM-o6-Xjm">
-                                <rect key="frame" x="38" y="183" width="180" height="21"/>
-                                <animations/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hJt-FW-x0J">
+                                <rect key="frame" x="124" y="145" width="77" height="30"/>
+                                <state key="normal" title="Flappy Bird"/>
+                                <connections>
+                                    <segue destination="NCQ-5h-pmp" kind="modal" id="aGj-8u-3bd"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" red="1" green="0.7243808491" blue="0.71085348520000002" alpha="1" colorSpace="calibratedRGB"/>
@@ -505,7 +575,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TNi-41-Zpl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2606" y="-266"/>
+            <point key="canvasLocation" x="2624" y="-344"/>
         </scene>
         <!--Visited View Controller-->
         <scene sceneID="kJf-56-jVf">
@@ -541,7 +611,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WeW-g4-gSS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3350" y="-235"/>
+            <point key="canvasLocation" x="2273" y="-1031"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Umr-5l-d3k">
@@ -587,7 +657,7 @@
         <image name="ok" width="600" height="296"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="Gf5-oo-kyB"/>
         <segue reference="Xni-6n-rdo"/>
-        <segue reference="d0P-gd-MM3"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -11,6 +11,7 @@
 #import "APIManager.h"
 #import "ViewController.h"
 #import "Youtube.h"
+#import <UIKit/UIViewController.h>
 
 @interface VideoViewController ()
 <UITableViewDataSource, UITableViewDelegate>
@@ -52,9 +53,7 @@
 
 - (void) makeFSAPIRequestWithSearchTerm:(NSString*) searchTerm callbackBlock:(void(^)())block{
     NSLog(@"%@", searchTerm);
-    
-    
-//https://www.googleapis.com/youtube/v3/search?part=id,snippet&q=How%20To%20ios&maxResults=50&key=AIzaSyDt8qmOMAZJoW3F_q1_BSPW8P4P1fFPduM
+     
     
     //api key AIzaSyDt8qmOMAZJoW3F_q1_BSPW8P4P1fFPduM
     
@@ -126,13 +125,16 @@
  
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    
+    NSLog(@"errorrrrr");
     Youtube *video = [self.searchedVideos objectAtIndex:indexPath.row];
     
     NSString *videoString = video.videoID;
     XCDYouTubeVideoPlayerViewController *videoPlayerViewController = [[XCDYouTubeVideoPlayerViewController alloc] initWithVideoIdentifier:videoString];
     
-    [self presentMoviePlayerViewControllerAnimated:videoPlayerViewController];
+    [self presentViewController:videoPlayerViewController animated:YES completion:^{
+        
+        
+    }]; //presentMoviePlayerViewControllerAnimated:videoPlayerViewController];
     
 }
 

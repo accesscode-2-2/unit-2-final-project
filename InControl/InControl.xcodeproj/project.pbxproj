@@ -53,6 +53,12 @@
 		84CF46591BCDE80000EAA3BF /* meetup.png in Resources */ = {isa = PBXBuildFile; fileRef = 84CF46581BCDE80000EAA3BF /* meetup.png */; settings = {ASSET_TAGS = (); }; };
 		84CF46621BCE29DB00EAA3BF /* GamesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84CF46611BCE29DB00EAA3BF /* GamesViewController.m */; settings = {ASSET_TAGS = (); }; };
 		84CF46661BCE2B4600EAA3BF /* VisitedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84CF46651BCE2B4600EAA3BF /* VisitedViewController.m */; settings = {ASSET_TAGS = (); }; };
+		84CF46AE1BD0678700EAA3BF /* Tunnel.png in Resources */ = {isa = PBXBuildFile; fileRef = 84CF46AA1BD0678700EAA3BF /* Tunnel.png */; settings = {ASSET_TAGS = (); }; };
+		84CF46AF1BD0678700EAA3BF /* GameBack.png in Resources */ = {isa = PBXBuildFile; fileRef = 84CF46AB1BD0678700EAA3BF /* GameBack.png */; settings = {ASSET_TAGS = (); }; };
+		84CF46B01BD0678700EAA3BF /* BirdUp.png in Resources */ = {isa = PBXBuildFile; fileRef = 84CF46AC1BD0678700EAA3BF /* BirdUp.png */; settings = {ASSET_TAGS = (); }; };
+		84CF46B11BD0678700EAA3BF /* BirdDown.png in Resources */ = {isa = PBXBuildFile; fileRef = 84CF46AD1BD0678700EAA3BF /* BirdDown.png */; settings = {ASSET_TAGS = (); }; };
+		84CF46B51BD0681800EAA3BF /* FlappyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84CF46B41BD0681800EAA3BF /* FlappyViewController.m */; settings = {ASSET_TAGS = (); }; };
+		84CF46B81BD0683000EAA3BF /* FlappyGame.m in Sources */ = {isa = PBXBuildFile; fileRef = 84CF46B71BD0683000EAA3BF /* FlappyGame.m */; settings = {ASSET_TAGS = (); }; };
 		D9682D5D1BCD4E1600647FD8 /* APIManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D9682D5C1BCD4E1600647FD8 /* APIManager.m */; settings = {ASSET_TAGS = (); }; };
 		D9682D601BCD501700647FD8 /* Venue.m in Sources */ = {isa = PBXBuildFile; fileRef = D9682D5F1BCD501700647FD8 /* Venue.m */; settings = {ASSET_TAGS = (); }; };
 		D9682D631BCD665200647FD8 /* HotelViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D9682D621BCD665200647FD8 /* HotelViewController.m */; settings = {ASSET_TAGS = (); }; };
@@ -138,6 +144,14 @@
 		84CF46611BCE29DB00EAA3BF /* GamesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GamesViewController.m; sourceTree = "<group>"; };
 		84CF46641BCE2B4600EAA3BF /* VisitedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VisitedViewController.h; sourceTree = "<group>"; };
 		84CF46651BCE2B4600EAA3BF /* VisitedViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VisitedViewController.m; sourceTree = "<group>"; };
+		84CF46AA1BD0678700EAA3BF /* Tunnel.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Tunnel.png; sourceTree = "<group>"; };
+		84CF46AB1BD0678700EAA3BF /* GameBack.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = GameBack.png; sourceTree = "<group>"; };
+		84CF46AC1BD0678700EAA3BF /* BirdUp.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = BirdUp.png; sourceTree = "<group>"; };
+		84CF46AD1BD0678700EAA3BF /* BirdDown.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = BirdDown.png; sourceTree = "<group>"; };
+		84CF46B31BD0681800EAA3BF /* FlappyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlappyViewController.h; sourceTree = "<group>"; };
+		84CF46B41BD0681800EAA3BF /* FlappyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FlappyViewController.m; sourceTree = "<group>"; };
+		84CF46B61BD0683000EAA3BF /* FlappyGame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlappyGame.h; sourceTree = "<group>"; };
+		84CF46B71BD0683000EAA3BF /* FlappyGame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FlappyGame.m; sourceTree = "<group>"; };
 		CA12CD6286D3D05E336A1706 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA3CA915C16CD3F8F7FFC788 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		D9682D5B1BCD4E1600647FD8 /* APIManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APIManager.h; sourceTree = "<group>"; };
@@ -269,6 +283,10 @@
 			isa = PBXGroup;
 			children = (
 				84CF45771BCAD16400EAA3BF /* gear.png */,
+				84CF46AA1BD0678700EAA3BF /* Tunnel.png */,
+				84CF46AB1BD0678700EAA3BF /* GameBack.png */,
+				84CF46AC1BD0678700EAA3BF /* BirdUp.png */,
+				84CF46AD1BD0678700EAA3BF /* BirdDown.png */,
 				84CF456C1BCAD15A00EAA3BF /* burger.png */,
 				84CF456D1BCAD15A00EAA3BF /* burger@2x.png */,
 				84CF45981BCAF49900EAA3BF /* budget.png */,
@@ -356,6 +374,7 @@
 			children = (
 				84CF46601BCE29DB00EAA3BF /* GamesViewController.h */,
 				84CF46611BCE29DB00EAA3BF /* GamesViewController.m */,
+				84CF46B21BD067FC00EAA3BF /* FlappyBird */,
 			);
 			name = Games;
 			sourceTree = "<group>";
@@ -367,6 +386,17 @@
 				84CF46641BCE2B4600EAA3BF /* VisitedViewController.h */,
 			);
 			name = Visited;
+			sourceTree = "<group>";
+		};
+		84CF46B21BD067FC00EAA3BF /* FlappyBird */ = {
+			isa = PBXGroup;
+			children = (
+				84CF46B31BD0681800EAA3BF /* FlappyViewController.h */,
+				84CF46B41BD0681800EAA3BF /* FlappyViewController.m */,
+				84CF46B61BD0683000EAA3BF /* FlappyGame.h */,
+				84CF46B71BD0683000EAA3BF /* FlappyGame.m */,
+			);
+			name = FlappyBird;
 			sourceTree = "<group>";
 		};
 		B2BC0F9C4153A1759E333F8D /* Frameworks */ = {
@@ -498,8 +528,11 @@
 				84CF45721BCAD15A00EAA3BF /* burger@2x.png in Resources */,
 				84CF453C1BCAD0EB00EAA3BF /* LaunchScreen.storyboard in Resources */,
 				84CF46591BCDE80000EAA3BF /* meetup.png in Resources */,
+				84CF46AE1BD0678700EAA3BF /* Tunnel.png in Resources */,
 				84CF457D1BCAD16400EAA3BF /* gear@2x.png in Resources */,
 				84CF45391BCAD0EB00EAA3BF /* Assets.xcassets in Resources */,
+				84CF46AF1BD0678700EAA3BF /* GameBack.png in Resources */,
+				84CF46B01BD0678700EAA3BF /* BirdUp.png in Resources */,
 				84CF45861BCAD2AE00EAA3BF /* Profile_image.png in Resources */,
 				84CF45741BCAD15A00EAA3BF /* Default.png in Resources */,
 				84CF45A11BCAF64300EAA3BF /* hotel.png in Resources */,
@@ -507,6 +540,7 @@
 				84CF457C1BCAD16400EAA3BF /* gear.png in Resources */,
 				84CF45AD1BCAFA5A00EAA3BF /* insta.png in Resources */,
 				84CF45341BCAD0EA00EAA3BF /* Main.storyboard in Resources */,
+				84CF46B11BD0678700EAA3BF /* BirdDown.png in Resources */,
 				84CF45A71BCAF7D300EAA3BF /* image.png in Resources */,
 				84CF459B1BCAF50100EAA3BF /* food.png in Resources */,
 				84CF458A1BCAD2C900EAA3BF /* star.png in Resources */,
@@ -582,11 +616,13 @@
 				84CF45BC1BCB0E9D00EAA3BF /* ImageTableViewController.m in Sources */,
 				84CF452E1BCAD0EA00EAA3BF /* AppDelegate.m in Sources */,
 				84CF46661BCE2B4600EAA3BF /* VisitedViewController.m in Sources */,
+				84CF46B81BD0683000EAA3BF /* FlappyGame.m in Sources */,
 				84CF45CE1BCD8F7200EAA3BF /* Youtube.m in Sources */,
 				D9682D661BCD671000647FD8 /* FoodViewController.m in Sources */,
 				84CF45371BCAD0EB00EAA3BF /* InControl.xcdatamodeld in Sources */,
 				84CF45B61BCB057600EAA3BF /* WelcomeViewController.m in Sources */,
 				84CF46621BCE29DB00EAA3BF /* GamesViewController.m in Sources */,
+				84CF46B51BD0681800EAA3BF /* FlappyViewController.m in Sources */,
 				D9682D601BCD501700647FD8 /* Venue.m in Sources */,
 				84CF452B1BCAD0EA00EAA3BF /* main.m in Sources */,
 				D9682D5D1BCD4E1600647FD8 /* APIManager.m in Sources */,
