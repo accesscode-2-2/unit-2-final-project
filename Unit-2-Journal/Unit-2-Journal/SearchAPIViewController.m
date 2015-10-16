@@ -14,8 +14,8 @@
 #import "SearchAPITableViewCell.h" // add custom cell
 #import "TabBarViewController.h"
 #import "WishListTableViewController.h"
-//#import <pop/POP.h>
 
+//#import "JournalPost.h"
 
 @interface SearchAPIViewController ()
 <
@@ -62,23 +62,26 @@ UITextFieldDelegate
     
     if (self.musicButton.isTouchInside){
         self.media = @"music&entity=album";
-
+        
     } else if (self.booksButton.isTouchInside){
         self.media = @"ebook";
         
     } else if (self.televisionButton.isTouchInside){
         self.media = @"television";
+    
+    } else if (self.podcastButton.isTouchInside) {
+        
     } else {
         self.media = [sender currentTitle];
     }
-    
-    NSLog(@"Media: %@",self.media);
+
+    NSLog(@"Media button tapped: %@",self.media);
 }
 
 #pragma mark - add to list buttons
 
 - (IBAction)createJournalEntryButtonTapped:(id)sender {
-
+    
 }
 
 - (IBAction)addToWishListButtonTapped:(id)sender {
@@ -115,7 +118,7 @@ UITextFieldDelegate
                         
                         NSArray *results = [json objectForKey:@"results"];
                         
-                        NSLog(@"iTunes Results: %@",results);
+                      //  NSLog(@"iTunes Results: %@",results);
                         
                         for (NSDictionary *result in results){
                             
@@ -130,14 +133,19 @@ UITextFieldDelegate
                                 resultsObject.artistName = artistName;
                                 resultsObject.albumOrMovieName = movieName;
                                 resultsObject.artworkURL = artworkURL;
+                                resultsObject.mediaType = @"podcast";
+                                
                             } else if ([self.media isEqualToString:@"music&entity=album"]){
                                 resultsObject.artistName = artistName;
                                 resultsObject.albumOrMovieName = albumName;
                                 resultsObject.artworkURL = artworkURL;
+                                resultsObject.mediaType = @"album";
+                                
                             } else if ([self.media isEqualToString:@"ebook"]){
                                 resultsObject.artistName = artistName;
                                 resultsObject.albumOrMovieName = movieName;
                                 resultsObject.artworkURL = artworkURL;
+                                resultsObject.mediaType = @"book";
                             }
                             
                             [self.searchResults addObject:resultsObject];
@@ -145,7 +153,7 @@ UITextFieldDelegate
                         [self.tableView reloadData];
                     }}];
     
-//Second API Request - for television
+// Second API Request - for television
    
     NSString *urlStringTwo = [NSString stringWithFormat:@"http://api.tvmaze.com/search/shows?q=%@",term];
     NSString *encodedStringTwo = [urlStringTwo stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLQueryAllowedCharacterSet]];
@@ -157,7 +165,7 @@ UITextFieldDelegate
                     if (data != nil){
                         NSArray *jsonTwo = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
                         
-                        NSLog(@"TV results: %@",jsonTwo);
+                      //  NSLog(@"TV results: %@",jsonTwo);
                         
                         NSDictionary *shows = [jsonTwo valueForKey:@"show"];
                         
@@ -175,6 +183,7 @@ UITextFieldDelegate
                                 searchResult.artistName = channel;
                                 searchResult.albumOrMovieName = name;
                                 searchResult.artworkURL = imageURL;
+                                searchResult.mediaType = @"tv";
                                 
                                 [self.searchResults addObject:searchResult];
                                 
@@ -184,7 +193,7 @@ UITextFieldDelegate
                     [self.tableView reloadData];
                 }];
     
-//Third API Request - for movies, including in-theatre
+// Third API Request - for movies, including in-theatre
 
 // https://api.themoviedb.org/3/search/movie?api_key=a958839150c7c7c6333fd335128ea066&query=django
 
@@ -193,7 +202,7 @@ UITextFieldDelegate
     
     NSString *encodedStringThree = [urlStringThree stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLQueryAllowedCharacterSet]];
     
-    NSLog(@"Movie String: %@",encodedStringThree);
+   // NSLog(@"Movie String: %@",encodedStringThree);
     
     NSURL *urlThree = [NSURL URLWithString:encodedStringThree];
 
@@ -205,7 +214,7 @@ UITextFieldDelegate
                         
                         NSDictionary *results = [jsonThree valueForKey:@"results"];
                         
-                        NSLog(@"Movie Results: %@",results);
+                        // NSLog(@"Movie Results: %@",results);
                         
                         for (NSDictionary *result in results){
                             
@@ -222,6 +231,7 @@ UITextFieldDelegate
                                 movieResult.albumOrMovieName = name;
                                 movieResult.artistName = releaseDate;
                                 movieResult.artworkURL = [NSString stringWithFormat:@"http://image.tmdb.org/t/p/w500%@",posterPath];
+                                movieResult.mediaType = @"movie";
                                 
                                 [self.searchResults addObject:movieResult];
                                 
@@ -291,8 +301,9 @@ UITextFieldDelegate
     iTunesSearchResult *searchResult = self.searchResults[indexPath.row];
     
     self.passSearchResult = searchResult;
+    
 
-    NSLog(@"%@", self.passSearchResult);
+    NSLog(@"passed search results: %@", self.passSearchResult);
     
     // push view controller 
     

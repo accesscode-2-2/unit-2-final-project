@@ -11,6 +11,7 @@
 #import "TabBarViewController.h"
 #import "JournalMainCollectionViewController.h"
 #import <pop/POP.h>
+#import <Parse/Parse.h>
 
 
 @interface CreateJournalEntryViewController () <UITextViewDelegate>
@@ -26,6 +27,7 @@
 @property (strong, nonatomic) IBOutlet UIButton *starButtonThree;
 @property (strong, nonatomic) IBOutlet UIButton *starButtonFour;
 @property (strong, nonatomic) IBOutlet UIButton *starButtonFive;
+@property (strong, nonatomic) NSNumber *rating;
 
 @property (nonatomic) JournalPost *journalPost;
 @property (nonatomic) NSMutableArray *journalPostArray;
@@ -48,7 +50,7 @@
     self.textView.text = @"Write your thoughts here...";
     self.textView.layer.borderWidth = 1.0f;
     self.textView.layer.cornerRadius = 5.0f;
-    self.textView.layer.borderColor = [UIColor grayColor].CGColor;
+    self.textView.layer.borderColor = [UIColor blackColor].CGColor;
    
     //populate journal header
     self.movieOrAlbumNameLabel.text = self.postSearchResult.albumOrMovieName;
@@ -85,6 +87,7 @@
     [self resetStars];
     [self oneStarRating];
     [self startAnimation];
+    
 }
 
 - (IBAction)twoStarTapped:(id)sender
@@ -124,21 +127,25 @@
 }
 
 - (void)oneStarRating {
+    self.rating = @1; // assign rating for parse
     [self.starButtonOne setBackgroundImage:[UIImage imageNamed:@"rating_star_filled.png"] forState:UIControlStateNormal];
 }
 
 - (void)twoStarRating {
+    self.rating = @2; // assign rating for parse
     [self.starButtonOne setBackgroundImage:[UIImage imageNamed:@"rating_star_filled.png"] forState:UIControlStateNormal];
     [self.starButtonTwo setBackgroundImage:[UIImage imageNamed:@"rating_star_filled.png"] forState:UIControlStateNormal];
 }
 
 - (void)threeStarRating {
+    self.rating = @3; // assign rating for parse
     [self.starButtonOne setBackgroundImage:[UIImage imageNamed:@"rating_star_filled.png"] forState:UIControlStateNormal];
     [self.starButtonTwo setBackgroundImage:[UIImage imageNamed:@"rating_star_filled.png"] forState:UIControlStateNormal];
     [self.starButtonThree setBackgroundImage:[UIImage imageNamed:@"rating_star_filled.png"] forState:UIControlStateNormal];
 }
 
 - (void)fourStarRating {
+    self.rating = @4; // assign rating for parse
     [self.starButtonOne setBackgroundImage:[UIImage imageNamed:@"rating_star_filled.png"] forState:UIControlStateNormal];
     [self.starButtonTwo setBackgroundImage:[UIImage imageNamed:@"rating_star_filled.png"] forState:UIControlStateNormal];
     [self.starButtonThree setBackgroundImage:[UIImage imageNamed:@"rating_star_filled.png"] forState:UIControlStateNormal];
@@ -146,6 +153,7 @@
 }
 
 - (void)fiveStarRating {
+    self.rating = @5; // assign rating for parse
     [self.starButtonOne setBackgroundImage:[UIImage imageNamed:@"rating_star_filled.png"] forState:UIControlStateNormal];
     [self.starButtonTwo setBackgroundImage:[UIImage imageNamed:@"rating_star_filled.png"] forState:UIControlStateNormal];
     [self.starButtonThree setBackgroundImage:[UIImage imageNamed:@"rating_star_filled.png"] forState:UIControlStateNormal];
@@ -188,9 +196,25 @@
                                
     NSLog(@"Journal Post: %@",self.journalPost);
     
-    [self.navigationController popToRootViewControllerAnimated:YES];
+    [self.navigationController popToRootViewControllerAnimated:YES]; // pop back to root controller
 
     [self.tabBarController setSelectedIndex:2]; // send to correct tab
+    
+    NSLog(@"my journal text is: %@", self.textView.text);
+    
+    // SAVE it all to Parse
+    JournalPost *myJournalPost = [[JournalPost alloc] init]; // most of this is a repeat of above.
+    
+    myJournalPost[@"starRating"] = self.rating;
+    myJournalPost[@"postText"] = self.textView.text;
+    myJournalPost[@"title"] = self.postSearchResult.albumOrMovieName;
+    myJournalPost[@"creator"] = self.postSearchResult.artistName;
+    myJournalPost[@"dateEntered"] = [NSDate date];
+    myJournalPost[@"typeOfMedia"] = self.postSearchResult.mediaType;
+    myJournalPost[@"imageForMedia"] = self.postSearchResult.artworkURL;
+    
+    [myJournalPost saveEventually]; // save your entry, even if offline
+    
     
 }
 

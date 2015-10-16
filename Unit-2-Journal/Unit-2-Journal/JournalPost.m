@@ -13,6 +13,14 @@
 @dynamic postText;
 @dynamic postSubject;
 
+// added
+@dynamic title;
+@dynamic creator; // artist, writer, director
+@dynamic dateEntered;
+@dynamic starRating;
+@dynamic typeOfMedia; // ie book, album, movie, tv
+@dynamic imageForMedia; 
+
 +(NSString *)parseClassName {
     return @"JournalPost";
 }

@@ -14,4 +14,12 @@
 @property (nonatomic) NSString *postText;
 @property (nonatomic) iTunesSearchResult *postSubject;
 
+// added
+@property (nonatomic) NSString *title;
+@property (nonatomic) NSString *creator; // artist, writer, director
+@property (nonatomic) NSDate *dateEntered;
+@property (nonatomic) NSNumber *starRating;
+@property (nonatomic) NSString *typeOfMedia; // ie book, album, movie, tv
+@property (nonatomic) NSString *imageForMedia; 
+
 @end
