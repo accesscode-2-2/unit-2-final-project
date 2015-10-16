@@ -160,7 +160,8 @@
         else {
             ImageTableViewController * vc = [self.storyboard instantiateViewControllerWithIdentifier:@"ImageID"];
             UINavigationController *nc = [[UINavigationController alloc] initWithRootViewController:vc];
-            
+            vc.city = self.searchBar.text;
+
             [self presentViewController:nc animated:YES completion:nil];
             
             [sidebar dismissAnimated:YES completion:^(BOOL finished) {
