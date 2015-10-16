@@ -23,6 +23,7 @@
 		5FEAE2711BCB126700201A0E /* DismissingAnimationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FEAE2701BCB126700201A0E /* DismissingAnimationController.m */; };
 		DC22D49F1BCEE95A00D1E214 /* CheckProgressViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DC22D49E1BCEE95A00D1E214 /* CheckProgressViewController.m */; settings = {ASSET_TAGS = (); }; };
 		DC22D4A51BD0221200D1E214 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DC22D4A41BD0221200D1E214 /* LoginViewController.m */; settings = {ASSET_TAGS = (); }; };
+		DC22D4A81BD1435000D1E214 /* SignUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DC22D4A71BD1435000D1E214 /* SignUpViewController.m */; settings = {ASSET_TAGS = (); }; };
 		DC2DC1881BCAC00500A627E2 /* Habit.m in Sources */ = {isa = PBXBuildFile; fileRef = DC2DC1871BCAC00500A627E2 /* Habit.m */; settings = {ASSET_TAGS = (); }; };
 		DC2DC18B1BCAC08700A627E2 /* Goal.m in Sources */ = {isa = PBXBuildFile; fileRef = DC2DC18A1BCAC08700A627E2 /* Goal.m */; settings = {ASSET_TAGS = (); }; };
 		DC2DC18E1BCAC0A700A627E2 /* Entry.m in Sources */ = {isa = PBXBuildFile; fileRef = DC2DC18D1BCAC0A700A627E2 /* Entry.m */; settings = {ASSET_TAGS = (); }; };
@@ -65,6 +66,8 @@
 		DC22D49E1BCEE95A00D1E214 /* CheckProgressViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CheckProgressViewController.m; sourceTree = "<group>"; };
 		DC22D4A31BD0221200D1E214 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		DC22D4A41BD0221200D1E214 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		DC22D4A61BD1435000D1E214 /* SignUpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignUpViewController.h; sourceTree = "<group>"; };
+		DC22D4A71BD1435000D1E214 /* SignUpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignUpViewController.m; sourceTree = "<group>"; };
 		DC2DC1861BCAC00500A627E2 /* Habit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Habit.h; sourceTree = "<group>"; };
 		DC2DC1871BCAC00500A627E2 /* Habit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Habit.m; sourceTree = "<group>"; };
 		DC2DC1891BCAC08700A627E2 /* Goal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Goal.h; sourceTree = "<group>"; };
@@ -163,6 +166,8 @@
 				5FEAE2631BCB055A00201A0E /* CustomModalViewController.m */,
 				DC22D4A31BD0221200D1E214 /* LoginViewController.h */,
 				DC22D4A41BD0221200D1E214 /* LoginViewController.m */,
+				DC22D4A61BD1435000D1E214 /* SignUpViewController.h */,
+				DC22D4A71BD1435000D1E214 /* SignUpViewController.m */,
 				5FEAE26C1BCB125100201A0E /* PresentingAnimationController.h */,
 				5FEAE26D1BCB125A00201A0E /* PresentingAnimationController.m */,
 				5FEAE26F1BCB126200201A0E /* DismissingAnimationController.h */,
@@ -317,6 +322,7 @@
 				5F9B08321BCDAD1500460FF2 /* MainPageVC.m in Sources */,
 				DC2DC1911BCAE7E600A627E2 /* Step.m in Sources */,
 				DC22D4A51BD0221200D1E214 /* LoginViewController.m in Sources */,
+				DC22D4A81BD1435000D1E214 /* SignUpViewController.m in Sources */,
 				5FEAE2641BCB055A00201A0E /* CustomModalViewController.m in Sources */,
 				DC2DC18B1BCAC08700A627E2 /* Goal.m in Sources */,
 				5FEAE26E1BCB125A00201A0E /* PresentingAnimationController.m in Sources */,

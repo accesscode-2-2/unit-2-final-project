@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-
-@interface CustomVCTransitionViewController : UIViewController <UIViewControllerTransitioningDelegate>
+#import <ParseUI/ParseUI.h>
+@interface CustomVCTransitionViewController : UIViewController <UIViewControllerTransitioningDelegate, PFSignUpViewControllerDelegate, PFLogInViewControllerDelegate>
 
 @end
