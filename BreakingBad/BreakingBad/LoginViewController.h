@@ -10,11 +10,10 @@
 #import <ParseUI/ParseUI.h>
 #import <Parse/Parse.h>
 
-@interface LoginViewController : PFLogInViewController
-<
-PFSignUpViewControllerDelegate,
-PFLogInViewControllerDelegate
->
+@interface LoginViewController : UIViewController
+//<
+//PFLogInViewControllerDelegate
+//>
 @property (weak, nonatomic) IBOutlet UITextField *usernameTextField;
 @property (weak, nonatomic) IBOutlet UITextField *passwordTextField;
 

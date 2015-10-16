@@ -29,6 +29,10 @@
 
 @property (nonatomic) NSMutableArray *habitsArray;
 
+@property (nonatomic) BBUser *user;
+@property (nonatomic) Entry *entry;
+@property (nonatomic) Habit *habit;
+
 @end
 
 @implementation ViewController
@@ -46,6 +50,14 @@
 - (IBAction)habitDoneButtonTapped:(UIButton *)sender {
     [self.habitsArray addObject:self.createNewHabit.text];
     [self.habitsPickerView reloadAllComponents];
+    
+    self.habit = [Habit new];
+    self.habit.name = self.createNewHabit.text;
+    
+    
+    [self.user.habits addObject:self.habit];
+    
+    
 }
 
 
@@ -68,6 +80,10 @@
             NSString *tagString = [NSString stringWithFormat:@"%ld",(long)qvc.tag];
             
             [[SharedManager sharedModel].answersDictionary setObject:answer forKey:tagString];
+            
+            self.entry = [Entry new];
+            self.entry.entryLog = answer;
+            [self.habit.entries addObject:self.entry];
         }
     }
 }
@@ -81,8 +97,8 @@
     self.habitsArray = hl.habitsList;
     
     
-    //    BBUser *user = (BBUser *)[PFUser object];
-    //
+    self.user = (BBUser *)[PFUser object];
+    
     //    user.email  = @"ab1c@gmail.com";
     //    user.password = @"mesfinnotcool";
     //    user.username = @"nc3j";
@@ -162,6 +178,12 @@
 
 - (void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component{
     [SharedManager sharedModel].selectedRow = row;
+    
+    NSString *habitString = self.habitsArray[row];
+    self.habit = [Habit new];
+    self.habit.name = habitString;
+    
+    [self.user.habits addObject:self.habit];
 }
 
 

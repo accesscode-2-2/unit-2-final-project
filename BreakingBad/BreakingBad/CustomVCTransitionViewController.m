@@ -11,6 +11,8 @@
 #import "PresentingAnimationController.h"
 #import "DismissingAnimationController.h"
 #import "LoginViewController.h"
+#import "LoginViewController.h"
+#import "SignUpViewController.h"
 #import <pop/POP.h>
 
 @implementation CustomVCTransitionViewController
@@ -29,6 +31,24 @@
     lvc.transitioningDelegate = self;
     lvc.modalPresentationStyle = UIModalPresentationCustom;
     [self presentViewController:lvc animated:YES completion:nil];
+    
+//    if (![PFUser currentUser])
+//           { // No user logged in
+//                // Create the log in view controller
+//                LoginViewController *logInViewController = [[LoginViewController alloc] init];
+//                [logInViewController setDelegate:self]; // Set ourselves as the delegate
+//               logInViewController.transitioningDelegate = self;
+//               logInViewController.modalPresentationStyle = UIModalPresentationCustom;
+//                // Create the sign up view controller
+//                SignUpViewController *signUpViewController = [[SignUpViewController alloc] init];
+//                [signUpViewController setDelegate:self]; // Set ourselves as the delegate
+//        
+//                // Assign our sign up controller to be displayed from the login contr   oller
+//                [logInViewController setSignUpController:signUpViewController];
+//        
+//                // Present the log in view controller
+//                [self presentViewController:logInViewController animated:YES completion:NULL];
+//            }
     
 }
 

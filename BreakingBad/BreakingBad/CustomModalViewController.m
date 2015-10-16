@@ -47,6 +47,9 @@
 //    [super viewDidLoad];
 //}
 
+- (IBAction)cancelButtonTapped:(UIButton *)sender {
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
 
 - (IBAction)signUpButtonTapped:(UIButton *)sender {
     
