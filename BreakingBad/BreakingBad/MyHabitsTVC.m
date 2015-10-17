@@ -106,7 +106,6 @@
     EntryLogsTableViewController *eltvc = (EntryLogsTableViewController *)[self.storyboard instantiateViewControllerWithIdentifier:@"entryLogsID"];
     
     eltvc.habit = self.habitsArray[indexPath.row];
-    [self.delegate pickedAHabit:self withName:eltvc.habit.name];
     [self.navigationController pushViewController:eltvc animated:YES];
     
 }

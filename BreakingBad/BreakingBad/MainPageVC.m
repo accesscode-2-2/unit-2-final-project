@@ -209,13 +209,7 @@ QuestionDetailVCDelegate
     }
 }
 
-#pragma mark
-#pragma MyHabits Delegate Method
 
--(void)pickedAHabit:(MyHabitsTVC *)tvc withName:(NSString *)name{
-    self.habitName = name;
-    self.habitLabel.text = name;
-}
 
 
 #pragma mark - YALContextMenuTableViewDelegate
@@ -236,9 +230,7 @@ QuestionDetailVCDelegate
         
         
         MyHabitsTVC *controller = (MyHabitsTVC *)navigationController.topViewController;
-        controller.habitsArray = self.habitsArray;
-        controller.delegate = self;
-        
+        controller.habitsArray = self.habitsArray;        
         [self presentViewController:navigationController animated:YES completion:nil];
         
     }

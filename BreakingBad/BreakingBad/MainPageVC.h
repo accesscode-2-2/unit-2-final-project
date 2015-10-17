@@ -7,9 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "MyHabitsTVC.h"
 #import "Entry.h"
-@interface MainPageVC : UIViewController<MyHabitsDelegate>
+@interface MainPageVC : UIViewController
 
 @property (nonatomic) Entry *entry;
 @property (nonatomic) BOOL readOnly;
