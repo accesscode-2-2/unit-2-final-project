@@ -56,6 +56,7 @@
     
     mainPageVC.entry = self.habit.entries[indexPath.row];
     mainPageVC.readOnly = YES;
+    mainPageVC.habitName = self.habit.name;
     
     [self.navigationController pushViewController:mainPageVC animated:YES];
     

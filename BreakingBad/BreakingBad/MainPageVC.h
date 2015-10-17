@@ -13,5 +13,6 @@
 
 @property (nonatomic) Entry *entry;
 @property (nonatomic) BOOL readOnly;
+@property (nonatomic) NSString *habitName;
 
 @end

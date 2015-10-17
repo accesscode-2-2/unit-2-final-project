@@ -41,7 +41,6 @@ QuestionDetailVCDelegate
 @property (nonatomic) BBUser *user;
 @property (nonatomic) Habit *habit;
 
-@property (nonatomic) NSString *habitName;
 
 
 @property (weak, nonatomic) IBOutlet UILabel *habitLabel;
@@ -317,8 +316,7 @@ QuestionDetailVCDelegate
     [[self.navigationController navigationBar]setHidden:YES];
     
     self.habitLabel.hidden = YES;
-    
-    
+
 //    self.habitsArray = [NSMutableArray new];
 //    HabitList *hl = [HabitList new];
 //    self.habitsArray = hl.habitsList;
