@@ -60,10 +60,12 @@
 		84CF46B51BD0681800EAA3BF /* FlappyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84CF46B41BD0681800EAA3BF /* FlappyViewController.m */; settings = {ASSET_TAGS = (); }; };
 		84CF46B81BD0683000EAA3BF /* FlappyGame.m in Sources */ = {isa = PBXBuildFile; fileRef = 84CF46B71BD0683000EAA3BF /* FlappyGame.m */; settings = {ASSET_TAGS = (); }; };
 		84E6D4561BD08CCE00ECAE47 /* homeButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 84E6D4551BD08CCE00ECAE47 /* homeButton.png */; settings = {ASSET_TAGS = (); }; };
+		D9389C3B1BD1E173009A8A15 /* DetailVisitedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D9389C3A1BD1E173009A8A15 /* DetailVisitedViewController.m */; settings = {ASSET_TAGS = (); }; };
 		D9682D5D1BCD4E1600647FD8 /* APIManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D9682D5C1BCD4E1600647FD8 /* APIManager.m */; settings = {ASSET_TAGS = (); }; };
 		D9682D601BCD501700647FD8 /* Venue.m in Sources */ = {isa = PBXBuildFile; fileRef = D9682D5F1BCD501700647FD8 /* Venue.m */; settings = {ASSET_TAGS = (); }; };
 		D9682D631BCD665200647FD8 /* HotelViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D9682D621BCD665200647FD8 /* HotelViewController.m */; settings = {ASSET_TAGS = (); }; };
 		D9682D661BCD671000647FD8 /* FoodViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D9682D651BCD671000647FD8 /* FoodViewController.m */; settings = {ASSET_TAGS = (); }; };
+		D9682E681BD1DD9C00647FD8 /* AddVisitedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D9682E671BD1DD9C00647FD8 /* AddVisitedViewController.m */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -156,6 +158,8 @@
 		84E6D4551BD08CCE00ECAE47 /* homeButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = homeButton.png; sourceTree = "<group>"; };
 		CA12CD6286D3D05E336A1706 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA3CA915C16CD3F8F7FFC788 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		D9389C391BD1E173009A8A15 /* DetailVisitedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailVisitedViewController.h; sourceTree = "<group>"; };
+		D9389C3A1BD1E173009A8A15 /* DetailVisitedViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailVisitedViewController.m; sourceTree = "<group>"; };
 		D9682D5B1BCD4E1600647FD8 /* APIManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APIManager.h; sourceTree = "<group>"; };
 		D9682D5C1BCD4E1600647FD8 /* APIManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APIManager.m; sourceTree = "<group>"; };
 		D9682D5E1BCD501600647FD8 /* Venue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Venue.h; sourceTree = "<group>"; };
@@ -164,6 +168,8 @@
 		D9682D621BCD665200647FD8 /* HotelViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HotelViewController.m; sourceTree = "<group>"; };
 		D9682D641BCD671000647FD8 /* FoodViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FoodViewController.h; sourceTree = "<group>"; };
 		D9682D651BCD671000647FD8 /* FoodViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FoodViewController.m; sourceTree = "<group>"; };
+		D9682E661BD1DD9C00647FD8 /* AddVisitedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddVisitedViewController.h; sourceTree = "<group>"; };
+		D9682E671BD1DD9C00647FD8 /* AddVisitedViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddVisitedViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -387,6 +393,10 @@
 			children = (
 				84CF46651BCE2B4600EAA3BF /* VisitedViewController.m */,
 				84CF46641BCE2B4600EAA3BF /* VisitedViewController.h */,
+				D9682E661BD1DD9C00647FD8 /* AddVisitedViewController.h */,
+				D9682E671BD1DD9C00647FD8 /* AddVisitedViewController.m */,
+				D9389C391BD1E173009A8A15 /* DetailVisitedViewController.h */,
+				D9389C3A1BD1E173009A8A15 /* DetailVisitedViewController.m */,
 			);
 			name = Visited;
 			sourceTree = "<group>";
@@ -614,11 +624,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				84CF45CB1BCC51C200EAA3BF /* VideoViewController.m in Sources */,
+				D9682E681BD1DD9C00647FD8 /* AddVisitedViewController.m in Sources */,
 				84CF45311BCAD0EA00EAA3BF /* ViewController.m in Sources */,
 				D9682D631BCD665200647FD8 /* HotelViewController.m in Sources */,
 				84CF456B1BCAD14300EAA3BF /* RNFrostedSidebar.m in Sources */,
 				84CF45BC1BCB0E9D00EAA3BF /* ImageTableViewController.m in Sources */,
 				84CF452E1BCAD0EA00EAA3BF /* AppDelegate.m in Sources */,
+				D9389C3B1BD1E173009A8A15 /* DetailVisitedViewController.m in Sources */,
 				84CF46661BCE2B4600EAA3BF /* VisitedViewController.m in Sources */,
 				84CF46B81BD0683000EAA3BF /* FlappyGame.m in Sources */,
 				84CF45CE1BCD8F7200EAA3BF /* Youtube.m in Sources */,
