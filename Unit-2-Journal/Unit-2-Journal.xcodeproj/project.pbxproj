@@ -26,6 +26,7 @@
 		4DCBE14A1BC9ADAE0075BA2C /* CreateJournalEntryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DCBE1491BC9ADAE0075BA2C /* CreateJournalEntryViewController.m */; settings = {ASSET_TAGS = (); }; };
 		4DCBE14D1BC9ADE00075BA2C /* WishListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DCBE14C1BC9ADE00075BA2C /* WishListTableViewController.m */; settings = {ASSET_TAGS = (); }; };
 		4DCBE1501BC9BD800075BA2C /* ViewCompletedEntryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DCBE14F1BC9BD800075BA2C /* ViewCompletedEntryViewController.m */; settings = {ASSET_TAGS = (); }; };
+		4DFECE8B1BD1A4C000CC8DF6 /* JournalMainCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DFECE8A1BD1A4C000CC8DF6 /* JournalMainCollectionViewCell.m */; settings = {ASSET_TAGS = (); }; };
 		5A50331A1BC8D0E4001CBA5C /* MainTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A5033191BC8D0E4001CBA5C /* MainTableViewController.m */; settings = {ASSET_TAGS = (); }; };
 		5A50331D1BC8D99D001CBA5C /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A50331C1BC8D99D001CBA5C /* LoginViewController.m */; settings = {ASSET_TAGS = (); }; };
 		5A5033201BC8D9B5001CBA5C /* SignUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A50331F1BC8D9B5001CBA5C /* SignUpViewController.m */; settings = {ASSET_TAGS = (); }; };
@@ -71,6 +72,8 @@
 		4DCBE14C1BC9ADE00075BA2C /* WishListTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WishListTableViewController.m; sourceTree = "<group>"; };
 		4DCBE14E1BC9BD800075BA2C /* ViewCompletedEntryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewCompletedEntryViewController.h; sourceTree = "<group>"; };
 		4DCBE14F1BC9BD800075BA2C /* ViewCompletedEntryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewCompletedEntryViewController.m; sourceTree = "<group>"; };
+		4DFECE891BD1A4C000CC8DF6 /* JournalMainCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JournalMainCollectionViewCell.h; sourceTree = "<group>"; };
+		4DFECE8A1BD1A4C000CC8DF6 /* JournalMainCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JournalMainCollectionViewCell.m; sourceTree = "<group>"; };
 		5A5033181BC8D0E4001CBA5C /* MainTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainTableViewController.h; sourceTree = "<group>"; };
 		5A5033191BC8D0E4001CBA5C /* MainTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainTableViewController.m; sourceTree = "<group>"; };
 		5A50331B1BC8D99D001CBA5C /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
@@ -124,6 +127,8 @@
 				4D7FE2A21BCC41A00036E58E /* WishListTableViewCell.h */,
 				4D7FE2A31BCC41A00036E58E /* WishListTableViewCell.m */,
 				4D7FE2A41BCC41A00036E58E /* WishListTableViewCell.xib */,
+				4DFECE891BD1A4C000CC8DF6 /* JournalMainCollectionViewCell.h */,
+				4DFECE8A1BD1A4C000CC8DF6 /* JournalMainCollectionViewCell.m */,
 			);
 			name = "Custom Views & .XIBs";
 			sourceTree = "<group>";
@@ -384,6 +389,7 @@
 				5A5033201BC8D9B5001CBA5C /* SignUpViewController.m in Sources */,
 				4D7FE2A51BCC41A00036E58E /* WishListTableViewCell.m in Sources */,
 				4DCBE1501BC9BD800075BA2C /* ViewCompletedEntryViewController.m in Sources */,
+				4DFECE8B1BD1A4C000CC8DF6 /* JournalMainCollectionViewCell.m in Sources */,
 				9A2FFC2F1BC84BF200E880D3 /* main.m in Sources */,
 				4D7FE29D1BCC32170036E58E /* SearchAPITableViewCell.m in Sources */,
 			);

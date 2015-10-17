@@ -133,13 +133,13 @@ UITextFieldDelegate
                                 resultsObject.artistName = artistName;
                                 resultsObject.albumOrMovieName = movieName;
                                 resultsObject.artworkURL = artworkURL;
-                                resultsObject.mediaType = @"movie";
+                                resultsObject.mediaType = @"movie"; // add media type to iTunesSearchObject so that we can pass it to Parse later
                                 
                             } else if ([self.media isEqualToString:@"podcast"]) {
                                 resultsObject.artistName = artistName;
                                 resultsObject.albumOrMovieName = movieName;
                                 resultsObject.artworkURL = artworkURL;
-                                resultsObject.mediaType = @"podcast"; // add media type to iTunesSearchObject so that we can add it to Parse later
+                                resultsObject.mediaType = @"podcast";
             
                                 
                             } else if ([self.media isEqualToString:@"music&entity=album"]){

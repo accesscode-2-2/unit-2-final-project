@@ -215,7 +215,6 @@
     
     [myJournalPost saveEventually]; // save your entry, even if offline
     
-    
 }
 
  #pragma mark - Navigation

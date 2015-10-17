@@ -7,6 +7,7 @@
 //
 
 #import "JournalMainCollectionViewController.h"
+#import <Parse/Parse.h>
 
 @interface JournalMainCollectionViewController ()
 
@@ -44,14 +45,34 @@
 //          forCellWithReuseIdentifier:@"CollectionHeaderIdentifier"];
     
   //  [self.collectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:@"Cell"];
+    
+//    PFQuery *query = [PFQuery queryWithClassName:@"JournalPost"];
+//    [query selectKeys:@[@"imageForMedia"]];
+//    [query findObjectsInBackgroundWithBlock:^(NSArray * _Nullable objects, NSError * _Nullable error) {
+//       
+//        collectionImages = [NSMutableArray arrayWithObjects:objects, nil];
+    
+       
+        
+       // NSLog(@"saved images: %@", objects);
+        
+//    }];
+    
+    [self runQuery]; // run Parse query to fetch saved data
 }
 
-#pragma mark - Navigation
-
-//- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-//
-//}
-
+- (void)runQuery {
+    PFQuery *query = [PFQuery queryWithClassName:@"JournalPost"];
+    [query findObjectsInBackgroundWithBlock:^(NSArray * _Nullable objects, NSError * _Nullable error) {
+        
+        self.allJournalPosts = objects; // pull all images from Parse
+        NSLog(@"info fetched from parse: %@", self.allJournalPosts); // test it!
+        
+        // right now the posts are saved as a URL... change this back to image somehow
+        
+        [self.collectionView reloadData]; // reload tableView
+    }];
+}
 
 #pragma mark <UICollectionViewDataSource>
 
@@ -61,7 +82,6 @@
 
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
-    //return collectionImages.count;
     return self.allJournalPosts.count;
 }
 
@@ -69,6 +89,12 @@
     static NSString *identifier = @"Cell";
     
     UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:identifier forIndexPath:indexPath];
+   
+    
+    PFObject *post = self.allJournalPosts[indexPath.row]; // pulling out parse data here
+    PFFile *file = post[@"imageForMedia"]; // this returns urls for each image
+   // [cell.imageView loadInBackground]; // broken
+    
     
     UIImageView *collectionImageView = (UIImageView *)[cell viewWithTag:100];
     
