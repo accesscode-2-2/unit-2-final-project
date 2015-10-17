@@ -15,6 +15,7 @@
 #import "CustomContextTableViewCell.h"
 #import "CheckProgressViewController.h"
 #import "QuestionDetailVC.h"
+#import "MyHabitsTVC.h"
 
 @interface MainPageVC ()
 <
@@ -38,8 +39,12 @@ QuestionDetailVCDelegate
 @property (nonatomic) NSArray *habitsArray;
 
 @property (nonatomic) BBUser *user;
-@property (nonatomic) Entry *entry;
 @property (nonatomic) Habit *habit;
+
+@property (nonatomic) NSString *habitName;
+
+
+@property (weak, nonatomic) IBOutlet UILabel *habitLabel;
 
 @end
 
@@ -55,6 +60,11 @@ QuestionDetailVCDelegate
     qvc.question = sender.titleLabel.text;
     qvc.delegate = self;
     qvc.tag = sender.tag;
+    
+    UILabel *currentAnswerLabel = self.reply[sender.tag];
+    if (currentAnswerLabel.text) {
+        qvc.answer = currentAnswerLabel.text;
+    }
     
     [self presentViewController:qvc animated:YES completion:nil];
 }
@@ -94,8 +104,8 @@ QuestionDetailVCDelegate
         [self.contextMenuTableView registerNib:cellNib forCellReuseIdentifier:@"contextMenuCellReuseId"];
     }
     // it is better to use this method only for proper animation
+    self.contextMenuTableView.animationDuration = 0.15;
     [self.contextMenuTableView showInView:self.view withEdgeInsets:UIEdgeInsetsZero animated:YES];
-    
 }
 
 - (void)didRotateFromInterfaceOrientation:(UIInterfaceOrientation)fromInterfaceOrientation{
@@ -200,6 +210,14 @@ QuestionDetailVCDelegate
     }
 }
 
+#pragma mark
+#pragma MyHabits Delegate Method
+
+-(void)pickedAHabit:(MyHabitsTVC *)tvc withName:(NSString *)name{
+    self.habitName = name;
+    self.habitLabel.text = name;
+}
+
 
 #pragma mark - YALContextMenuTableViewDelegate
 
@@ -210,6 +228,22 @@ QuestionDetailVCDelegate
 #pragma mark - UITableViewDataSource, UITableViewDelegate
 
 - (void)tableView:(YALContextMenuTableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    self.contextMenuTableView.animationDuration = 0.02;
+    
+    if (indexPath.row == 1) {
+        
+        UINavigationController *navigationController = (UINavigationController *)[self.storyboard instantiateViewControllerWithIdentifier:@"habitsSegue"];
+        
+        
+        MyHabitsTVC *controller = (MyHabitsTVC *)navigationController.topViewController;
+        controller.habitsArray = self.habitsArray;
+        controller.delegate = self;
+        
+        [self presentViewController:navigationController animated:YES completion:nil];
+        
+    }
+    
     if(indexPath.row == 2){
         CheckProgressViewController *cp = (CheckProgressViewController *)[self.storyboard instantiateViewControllerWithIdentifier:@"checkProgressID"];
         [self presentViewController:cp animated:YES completion:nil];
@@ -219,7 +253,9 @@ QuestionDetailVCDelegate
     }
     
     [tableView dismisWithIndexPath:indexPath];
+    
 }
+
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     return 65;
@@ -248,11 +284,39 @@ QuestionDetailVCDelegate
 #pragma mark
 #pragma Life Cycle Methods
 
+-(void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    if (self.readOnly) {
+        self.habitPickerView.hidden = YES;
+        self.habitLabel.hidden = NO;
+        self.habitLabel.text = self.habitName;
+        NSArray *allKeys = [self.entry.logs allKeys];
+        
+        for(NSString *key in allKeys){
+            NSInteger tag = [key integerValue];
+            
+            for(int i=0; i < self.questionsArray.count; i++)
+            {
+                UIButton *currentButton = (UIButton *)self.questionsArray[i];
+                if(tag == currentButton.tag)
+                {
+                    UILabel *currentLabel = (UILabel *)self.reply[i];
+                    currentLabel.text = [self.entry.logs objectForKey:key];
+                }
+            }
+            
+        }
+    }
+}
+
 - (void)viewDidLoad{
     [super viewDidLoad];
     self.habitPickerView.delegate = self;
     [self answersFromPreviousScreen];
     [self initiateMenuOptions];
+    [[self.navigationController navigationBar]setHidden:YES];
+    
+    self.habitLabel.hidden = YES;
     
     
 //    self.habitsArray = [NSMutableArray new];
@@ -278,6 +342,7 @@ QuestionDetailVCDelegate
     
     __weak typeof(self) weakSelf = self;
     PFQuery *query = [PFQuery queryWithClassName:@"Habit"];
+    [query includeKey:@"entries"];
     [query findObjectsInBackgroundWithBlock:^(NSArray * _Nullable objects, NSError * _Nullable error) {
         weakSelf.habitsArray = objects;
         [weakSelf.habitPickerView reloadAllComponents];
@@ -318,6 +383,10 @@ QuestionDetailVCDelegate
 //    }else{
 //        [self.user.habits addObject:self.habit];
 //    }
+    
+}
+
+-(void)prepareForSegue:(nonnull UIStoryboardSegue *)segue sender:(nullable id)sender {
     
 }
 

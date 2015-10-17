@@ -22,6 +22,9 @@
     [super viewDidLoad];
     
     self.questionLabel.text = self.question;
+    if (self.answer) {
+        self.answerTextView.text = self.answer;
+    }
 
 }
 

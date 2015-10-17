@@ -21,6 +21,7 @@
 @property (weak, nonatomic) IBOutlet UITextView *answerTextView;
 
 @property (nonatomic) NSString *question;
+@property (nonatomic) NSString *answer;
 
 @property (nonatomic, retain) NSString *data;
 @property (nonatomic, weak) id<QuestionDetailVCDelegate> delegate;

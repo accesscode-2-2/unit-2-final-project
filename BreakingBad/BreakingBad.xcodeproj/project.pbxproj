@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		4A5A43BBA13FCB718327B866 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 288369826A80E7C37FA68C71 /* libPods.a */; };
+		5F058DF01BD1912C001D93B2 /* MyHabitsTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F058DEF1BD1912C001D93B2 /* MyHabitsTVC.m */; };
 		5F8FF9991BC9A9CD00855DFB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F8FF9981BC9A9CD00855DFB /* main.m */; };
 		5F8FF99C1BC9A9CD00855DFB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F8FF99B1BC9A9CD00855DFB /* AppDelegate.m */; };
 		5F8FF99F1BC9A9CD00855DFB /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F8FF99E1BC9A9CD00855DFB /* ViewController.m */; };
@@ -17,6 +18,7 @@
 		5F8FF9AA1BC9A9CD00855DFB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5F8FF9A81BC9A9CD00855DFB /* LaunchScreen.storyboard */; };
 		5F9B082F1BCC9ECD00460FF2 /* QuestionDetailVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F9B082E1BCC9ECC00460FF2 /* QuestionDetailVC.m */; };
 		5F9B08321BCDAD1500460FF2 /* MainPageVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F9B08311BCDAD1500460FF2 /* MainPageVC.m */; };
+		5FDF1A2C1BD1B7E200720A44 /* EntryLogsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FDF1A2B1BD1B7E200720A44 /* EntryLogsTableViewController.m */; settings = {ASSET_TAGS = (); }; };
 		5FEAE2611BCB053F00201A0E /* CustomVCTransitionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FEAE2601BCB053F00201A0E /* CustomVCTransitionViewController.m */; };
 		5FEAE2641BCB055A00201A0E /* CustomModalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FEAE2631BCB055A00201A0E /* CustomModalViewController.m */; };
 		5FEAE26E1BCB125A00201A0E /* PresentingAnimationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FEAE26D1BCB125A00201A0E /* PresentingAnimationController.m */; };
@@ -38,6 +40,8 @@
 /* Begin PBXFileReference section */
 		27C4A644526FAE35EDE94530 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		288369826A80E7C37FA68C71 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		5F058DEE1BD1912C001D93B2 /* MyHabitsTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyHabitsTVC.h; sourceTree = "<group>"; };
+		5F058DEF1BD1912C001D93B2 /* MyHabitsTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyHabitsTVC.m; sourceTree = "<group>"; };
 		5F8FF9941BC9A9CD00855DFB /* BreakingBad.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BreakingBad.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5F8FF9981BC9A9CD00855DFB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		5F8FF99A1BC9A9CD00855DFB /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -53,6 +57,8 @@
 		5F9B082E1BCC9ECC00460FF2 /* QuestionDetailVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuestionDetailVC.m; sourceTree = "<group>"; };
 		5F9B08301BCDAD1500460FF2 /* MainPageVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainPageVC.h; sourceTree = "<group>"; };
 		5F9B08311BCDAD1500460FF2 /* MainPageVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainPageVC.m; sourceTree = "<group>"; };
+		5FDF1A2A1BD1B7E200720A44 /* EntryLogsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EntryLogsTableViewController.h; sourceTree = "<group>"; };
+		5FDF1A2B1BD1B7E200720A44 /* EntryLogsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EntryLogsTableViewController.m; sourceTree = "<group>"; };
 		5FEAE25F1BCB053F00201A0E /* CustomVCTransitionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomVCTransitionViewController.h; sourceTree = "<group>"; };
 		5FEAE2601BCB053F00201A0E /* CustomVCTransitionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomVCTransitionViewController.m; sourceTree = "<group>"; };
 		5FEAE2621BCB055A00201A0E /* CustomModalViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomModalViewController.h; sourceTree = "<group>"; };
@@ -132,6 +138,10 @@
 				DC22D49E1BCEE95A00D1E214 /* CheckProgressViewController.m */,
 				5F9B08301BCDAD1500460FF2 /* MainPageVC.h */,
 				5F9B08311BCDAD1500460FF2 /* MainPageVC.m */,
+				5F058DEE1BD1912C001D93B2 /* MyHabitsTVC.h */,
+				5F058DEF1BD1912C001D93B2 /* MyHabitsTVC.m */,
+				5FDF1A2A1BD1B7E200720A44 /* EntryLogsTableViewController.h */,
+				5FDF1A2B1BD1B7E200720A44 /* EntryLogsTableViewController.m */,
 				DCBA27C31BCED16E00E61721 /* CustomContextTableViewCell.h */,
 				DCBA27C41BCED16E00E61721 /* CustomContextTableViewCell.m */,
 				DCBA27C51BCED16E00E61721 /* CustomContextTableViewCell.xib */,
@@ -331,7 +341,9 @@
 				DC22D49F1BCEE95A00D1E214 /* CheckProgressViewController.m in Sources */,
 				DC2DC18E1BCAC0A700A627E2 /* Entry.m in Sources */,
 				DCBA27C61BCED16E00E61721 /* CustomContextTableViewCell.m in Sources */,
+				5F058DF01BD1912C001D93B2 /* MyHabitsTVC.m in Sources */,
 				5F8FF99C1BC9A9CD00855DFB /* AppDelegate.m in Sources */,
+				5FDF1A2C1BD1B7E200720A44 /* EntryLogsTableViewController.m in Sources */,
 				DCBA27C21BCDE85800E61721 /* SharedManager.m in Sources */,
 				5F8FF9A51BC9A9CD00855DFB /* BreakingBad.xcdatamodeld in Sources */,
 				5FEAE2711BCB126700201A0E /* DismissingAnimationController.m in Sources */,
