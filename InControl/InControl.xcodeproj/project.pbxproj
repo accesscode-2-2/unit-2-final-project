@@ -67,6 +67,8 @@
 		D9682D631BCD665200647FD8 /* HotelViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D9682D621BCD665200647FD8 /* HotelViewController.m */; settings = {ASSET_TAGS = (); }; };
 		D9682D661BCD671000647FD8 /* FoodViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D9682D651BCD671000647FD8 /* FoodViewController.m */; settings = {ASSET_TAGS = (); }; };
 		D9682E681BD1DD9C00647FD8 /* AddVisitedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D9682E671BD1DD9C00647FD8 /* AddVisitedViewController.m */; settings = {ASSET_TAGS = (); }; };
+		D9E6A8681BD3F2710092BFA7 /* City+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = D9E6A8651BD3F2710092BFA7 /* City+CoreDataProperties.m */; settings = {ASSET_TAGS = (); }; };
+		D9E6A8691BD3F2710092BFA7 /* City.m in Sources */ = {isa = PBXBuildFile; fileRef = D9E6A8671BD3F2710092BFA7 /* City.m */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -173,6 +175,10 @@
 		D9682D651BCD671000647FD8 /* FoodViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FoodViewController.m; sourceTree = "<group>"; };
 		D9682E661BD1DD9C00647FD8 /* AddVisitedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddVisitedViewController.h; sourceTree = "<group>"; };
 		D9682E671BD1DD9C00647FD8 /* AddVisitedViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddVisitedViewController.m; sourceTree = "<group>"; };
+		D9E6A8641BD3F2710092BFA7 /* City+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "City+CoreDataProperties.h"; sourceTree = "<group>"; };
+		D9E6A8651BD3F2710092BFA7 /* City+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "City+CoreDataProperties.m"; sourceTree = "<group>"; };
+		D9E6A8661BD3F2710092BFA7 /* City.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = City.h; sourceTree = "<group>"; };
+		D9E6A8671BD3F2710092BFA7 /* City.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = City.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -396,12 +402,16 @@
 		84CF46671BCE2B4B00EAA3BF /* Visited */ = {
 			isa = PBXGroup;
 			children = (
-				84CF46651BCE2B4600EAA3BF /* VisitedViewController.m */,
 				84CF46641BCE2B4600EAA3BF /* VisitedViewController.h */,
+				84CF46651BCE2B4600EAA3BF /* VisitedViewController.m */,
 				D9682E661BD1DD9C00647FD8 /* AddVisitedViewController.h */,
 				D9682E671BD1DD9C00647FD8 /* AddVisitedViewController.m */,
 				D9389C391BD1E173009A8A15 /* DetailVisitedViewController.h */,
 				D9389C3A1BD1E173009A8A15 /* DetailVisitedViewController.m */,
+				D9E6A8641BD3F2710092BFA7 /* City+CoreDataProperties.h */,
+				D9E6A8651BD3F2710092BFA7 /* City+CoreDataProperties.m */,
+				D9E6A8661BD3F2710092BFA7 /* City.h */,
+				D9E6A8671BD3F2710092BFA7 /* City.m */,
 			);
 			name = Visited;
 			sourceTree = "<group>";
@@ -637,12 +647,14 @@
 				84CF452E1BCAD0EA00EAA3BF /* AppDelegate.m in Sources */,
 				D9389C3B1BD1E173009A8A15 /* DetailVisitedViewController.m in Sources */,
 				84CF46661BCE2B4600EAA3BF /* VisitedViewController.m in Sources */,
+				D9E6A8681BD3F2710092BFA7 /* City+CoreDataProperties.m in Sources */,
 				84CF46B81BD0683000EAA3BF /* FlappyGame.m in Sources */,
 				84CF45CE1BCD8F7200EAA3BF /* Youtube.m in Sources */,
 				D9682D661BCD671000647FD8 /* FoodViewController.m in Sources */,
 				84CF45371BCAD0EB00EAA3BF /* InControl.xcdatamodeld in Sources */,
 				84CF45B61BCB057600EAA3BF /* WelcomeViewController.m in Sources */,
 				84CF46621BCE29DB00EAA3BF /* GamesViewController.m in Sources */,
+				D9E6A8691BD3F2710092BFA7 /* City.m in Sources */,
 				84CF46B51BD0681800EAA3BF /* FlappyViewController.m in Sources */,
 				D9682D601BCD501700647FD8 /* Venue.m in Sources */,
 				84CF452B1BCAD0EA00EAA3BF /* main.m in Sources */,

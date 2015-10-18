@@ -9,6 +9,10 @@
 #import "DetailVisitedViewController.h"
 
 @interface DetailVisitedViewController ()
+@property (weak, nonatomic) IBOutlet UILabel *cityLabel;
+@property (weak, nonatomic) IBOutlet UILabel *rateLabel;
+@property (weak, nonatomic) IBOutlet UILabel *impressionLabel;
+@property (weak, nonatomic) IBOutlet UIImageView *imageView;
 
 @end
 
@@ -16,22 +20,26 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+//    [self setupNavigationBar];
+    self.cityLabel.text = self.city.name;
+    self.rateLabel.text = [NSString stringWithFormat:@"%@", self.city.rate];
+    self.impressionLabel.text = self.city.impression;
+    self.imageView.image = [UIImage imageWithData:self.city.photo];
+    
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
+//- (void)setupNavigationBar {
+//    
+//    [self.navigationItem setTitle:@"Detailed Visited City"];
+//    
+//    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCancel target:self action:@selector(cancel)];
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
+//    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemSave target:self action:@selector(save)];
+//}
+//
+//- (void)cancel {
+//    [self dismissViewControllerAnimated:YES completion:nil];
+//}
+//
 
 @end
