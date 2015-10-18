@@ -702,9 +702,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <view key="tableHeaderView" contentMode="scaleToFill" id="t7Q-Vo-vCQ">
+                            <rect key="frame" x="0.0" y="0.0" width="600" height="158"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                        </view>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="WishListIdentifier" rowHeight="64" id="Ej0-R4-rXa">
-                                <rect key="frame" x="0.0" y="28" width="600" height="64"/>
+                                <rect key="frame" x="0.0" y="186" width="600" height="64"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Ej0-R4-rXa" id="ezU-vk-VRT">
                                     <rect key="frame" x="0.0" y="0.0" width="567" height="63.5"/>
@@ -1012,6 +1017,6 @@
         <image name="rating_star_filled" width="128" height="128"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="a4i-zx-cvK"/>
+        <segue reference="Ggq-sb-ccX"/>
     </inferredMetricsTieBreakers>
 </document>

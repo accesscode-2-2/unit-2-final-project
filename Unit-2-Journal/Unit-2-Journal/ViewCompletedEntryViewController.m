@@ -26,11 +26,21 @@
 
 @implementation ViewCompletedEntryViewController
 
-- (void)viewDidLoad
-{
+- (void)viewDidLoad{
     [super viewDidLoad];
     NSLog(@"Journal Post passed: %@",self.journalPostDetail);
     
+    self.completedTitleLabel.text = self.journalPostDetail.title;
+    self.completedCreatorLabel.text = self.journalPostDetail.creator;
+    self.completedDateLabel.text = [NSString stringWithFormat:@"%@",self.journalPostDetail.dateEntered];
+    self.completedReviewTextView.text = self.journalPostDetail.postText;
+    
+    NSURL *imageURL = [NSURL URLWithString:self.journalPostDetail.imageForMedia];
+    NSData *imageData = [NSData dataWithContentsOfURL:imageURL];
+    UIImage *image = [UIImage imageWithData:imageData];
+    
+    self.completedImageView.image = image;
+
 }
 
 - (void)didReceiveMemoryWarning
