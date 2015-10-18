@@ -10,6 +10,18 @@
 
 @interface ViewCompletedEntryViewController ()
 
+@property (weak, nonatomic) IBOutlet UIImageView *completedImageView;
+@property (weak, nonatomic) IBOutlet UILabel *completedTitleLabel;
+@property (weak, nonatomic) IBOutlet UILabel *completedCreatorLabel;
+@property (weak, nonatomic) IBOutlet UILabel *completedDateLabel; // review written on
+@property (weak, nonatomic) IBOutlet UITextView *completedReviewTextView;
+
+@property (weak, nonatomic) IBOutlet UIButton *starOne;
+@property (weak, nonatomic) IBOutlet UIButton *starTwo;
+@property (weak, nonatomic) IBOutlet UIButton *starThree;
+@property (weak, nonatomic) IBOutlet UIButton *starFour;
+@property (weak, nonatomic) IBOutlet UIButton *starFive;
+
 @end
 
 @implementation ViewCompletedEntryViewController
