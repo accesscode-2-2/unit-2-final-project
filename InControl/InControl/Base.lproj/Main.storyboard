@@ -14,7 +14,7 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="1000"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5c2-eB-x2F">
@@ -659,20 +659,60 @@
         <!--Root View Controller-->
         <scene sceneID="hxP-Bh-W7U">
             <objects>
-                <tableViewController id="PVQ-cZ-ooO" customClass="MeetupTableViewController" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="Yv8-EI-Vkj">
+                <tableViewController storyboardIdentifier="MeetupID" id="PVQ-cZ-ooO" customClass="MeetupTableViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="104" sectionHeaderHeight="28" sectionFooterHeight="28" id="Yv8-EI-Vkj">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="tTa-V9-Btc">
-                                <rect key="frame" x="0.0" y="92" width="600" height="44"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="104" id="tTa-V9-Btc" customClass="MeetupTableViewCell">
+                                <rect key="frame" x="0.0" y="92" width="600" height="104"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="tTa-V9-Btc" id="Rqi-Nq-Drr">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="103"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bAp-yL-0o3">
+                                            <rect key="frame" x="23" y="8" width="74" height="16"/>
+                                            <animations/>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="13"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Lorem Ipsum is simply dummy text of the printing and typesetting industry" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0To-Pt-VvA">
+                                            <rect key="frame" x="23" y="59" width="569" height="36"/>
+                                            <animations/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="City, Country" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cf3-td-9Nu">
+                                            <rect key="frame" x="343" y="9" width="235" height="21"/>
+                                            <animations/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fuE-hS-lir">
+                                            <rect key="frame" x="23" y="30" width="294" height="21"/>
+                                            <animations/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
                                     <animations/>
+                                    <constraints>
+                                        <constraint firstAttribute="trailingMargin" secondItem="Cf3-td-9Nu" secondAttribute="trailing" constant="14" id="3P9-Pv-ghC"/>
+                                        <constraint firstItem="bAp-yL-0o3" firstAttribute="leading" secondItem="Rqi-Nq-Drr" secondAttribute="leadingMargin" constant="15" id="FFN-sm-QSD"/>
+                                        <constraint firstItem="0To-Pt-VvA" firstAttribute="leading" secondItem="Rqi-Nq-Drr" secondAttribute="leadingMargin" constant="15" id="Jx1-XL-lOn"/>
+                                        <constraint firstItem="0To-Pt-VvA" firstAttribute="bottom" secondItem="Rqi-Nq-Drr" secondAttribute="bottomMargin" id="QLl-yc-qif"/>
+                                        <constraint firstItem="bAp-yL-0o3" firstAttribute="top" secondItem="Rqi-Nq-Drr" secondAttribute="topMargin" id="SXn-pc-TYZ"/>
+                                        <constraint firstItem="bAp-yL-0o3" firstAttribute="width" secondItem="Cf3-td-9Nu" secondAttribute="width" id="hes-Hf-DOm"/>
+                                        <constraint firstItem="fuE-hS-lir" firstAttribute="leading" secondItem="Rqi-Nq-Drr" secondAttribute="leadingMargin" constant="15" id="hmA-ae-VOU"/>
+                                        <constraint firstItem="Cf3-td-9Nu" firstAttribute="top" secondItem="Rqi-Nq-Drr" secondAttribute="topMargin" constant="1" id="ij6-zW-rQx"/>
+                                        <constraint firstItem="fuE-hS-lir" firstAttribute="top" secondItem="bAp-yL-0o3" secondAttribute="bottom" constant="6" id="yKt-NZ-GTl"/>
+                                    </constraints>
                                 </tableViewCellContentView>
                                 <animations/>
                             </tableViewCell>
@@ -682,7 +722,15 @@
                             <outlet property="delegate" destination="PVQ-cZ-ooO" id="XaV-oZ-AfK"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="bC7-2l-qqO"/>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="Root View Controller" id="bC7-2l-qqO">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="Qlz-4q-bWM">
+                            <connections>
+                                <segue destination="BYZ-38-t0r" kind="show" id="ofM-AI-3BJ"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="n55-lj-qYh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1206,8 +1254,8 @@
         <image name="ok" width="600" height="296"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Xni-6n-rdo"/>
         <segue reference="d0P-gd-MM3"/>
+        <segue reference="ofM-AI-3BJ"/>
         <segue reference="aGj-8u-3bd"/>
     </inferredMetricsTieBreakers>
 </document>

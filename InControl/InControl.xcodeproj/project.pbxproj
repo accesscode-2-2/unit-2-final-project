@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0B8208931BD43A5B00117BE1 /* MeetupTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B8208921BD43A5B00117BE1 /* MeetupTableViewController.m */; settings = {ASSET_TAGS = (); }; };
+		0B8208961BD43CC500117BE1 /* MeetupTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B8208951BD43CC500117BE1 /* MeetupTableViewCell.m */; settings = {ASSET_TAGS = (); }; };
 		0BAA7ABC1BD34A4D00CB7443 /* CustomTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BAA7ABB1BD34A4D00CB7443 /* CustomTableViewCell.m */; settings = {ASSET_TAGS = (); }; };
 		44FA49C8E2DCD94AB1DEA855 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CA12CD6286D3D05E336A1706 /* libPods.a */; };
 		84CF452B1BCAD0EA00EAA3BF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 84CF452A1BCAD0EA00EAA3BF /* main.m */; };
@@ -92,6 +93,8 @@
 /* Begin PBXFileReference section */
 		0B8208911BD43A5B00117BE1 /* MeetupTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MeetupTableViewController.h; sourceTree = "<group>"; };
 		0B8208921BD43A5B00117BE1 /* MeetupTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MeetupTableViewController.m; sourceTree = "<group>"; };
+		0B8208941BD43CC500117BE1 /* MeetupTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MeetupTableViewCell.h; sourceTree = "<group>"; };
+		0B8208951BD43CC500117BE1 /* MeetupTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MeetupTableViewCell.m; sourceTree = "<group>"; };
 		0BAA7ABA1BD34A4D00CB7443 /* CustomTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomTableViewCell.h; sourceTree = "<group>"; };
 		0BAA7ABB1BD34A4D00CB7443 /* CustomTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomTableViewCell.m; sourceTree = "<group>"; };
 		4B5D5618892B20D168B80EB1 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
@@ -220,6 +223,8 @@
 			children = (
 				0B8208911BD43A5B00117BE1 /* MeetupTableViewController.h */,
 				0B8208921BD43A5B00117BE1 /* MeetupTableViewController.m */,
+				0B8208941BD43CC500117BE1 /* MeetupTableViewCell.h */,
+				0B8208951BD43CC500117BE1 /* MeetupTableViewCell.m */,
 			);
 			name = Meetup;
 			sourceTree = "<group>";
@@ -670,6 +675,7 @@
 				D9E6A8691BD3F2710092BFA7 /* City.m in Sources */,
 				84CF46B51BD0681800EAA3BF /* FlappyViewController.m in Sources */,
 				0B8208931BD43A5B00117BE1 /* MeetupTableViewController.m in Sources */,
+				0B8208961BD43CC500117BE1 /* MeetupTableViewCell.m in Sources */,
 				D9682D601BCD501700647FD8 /* Venue.m in Sources */,
 				84CF452B1BCAD0EA00EAA3BF /* main.m in Sources */,
 				0BAA7ABC1BD34A4D00CB7443 /* CustomTableViewCell.m in Sources */,

@@ -1,5 +1,5 @@
 //
-//  MeetupTableViewController.h
+//  MeetupTableViewCell.h
 //  InControl
 //
 //  Created by Artur Lan on 10/18/15.
@@ -8,9 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface MeetupTableViewController : UITableViewController
-
-@property (nonatomic) NSString *city;
-
+@interface MeetupTableViewCell : UITableViewCell
 
 @end

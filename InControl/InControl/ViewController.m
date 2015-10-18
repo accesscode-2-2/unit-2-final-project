@@ -11,6 +11,7 @@
 #import "HotelViewController.h"
 #import "ImageTableViewController.h"
 #import "VideoViewController.h"
+#import "MeetupTableViewController.h"
 
 @interface ViewController ()
 
@@ -183,6 +184,24 @@
             }];
         }
     }
+    if (index == 7) { //meetup
+        if ([self.searchBar.text isEqualToString:@""]) {
+            [self EmptySearchBarAlert];
+        }
+        else {
+            
+            MeetupTableViewController * vc = [self.storyboard instantiateViewControllerWithIdentifier:@"MeetupID"];
+            UINavigationController *nc = [[UINavigationController alloc] initWithRootViewController:vc];
+
+            vc.city = self.searchBar.text;
+            
+            [self presentViewController:nc animated:YES completion:nil];
+            
+            [sidebar dismissAnimated:YES completion:^(BOOL finished) {
+            }];
+        }
+    }
+
 }
 
 -(void) EmptySearchBarAlert {
