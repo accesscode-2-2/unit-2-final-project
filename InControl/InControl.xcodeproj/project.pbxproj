@@ -272,10 +272,7 @@
 				84CF452D1BCAD0EA00EAA3BF /* AppDelegate.m */,
 				D9682D5B1BCD4E1600647FD8 /* APIManager.h */,
 				D9682D5C1BCD4E1600647FD8 /* APIManager.m */,
-				D9E6A86A1BD43BCC0092BFA7 /* FoursquareAPIManager.h */,
-				D9E6A86B1BD43BCC0092BFA7 /* FoursquareAPIManager.m */,
-				D9682D5E1BCD501600647FD8 /* Venue.h */,
-				D9682D5F1BCD501700647FD8 /* Venue.m */,
+				D9E6A86D1BD44C5E0092BFA7 /* Foursquare */,
 				84CF45C11BCB4F0300EAA3BF /* NewTrip */,
 				84CF45C81BCC519800EAA3BF /* Video */,
 				84CF45BD1BCB4ECA00EAA3BF /* Food */,
@@ -465,6 +462,17 @@
 				CA3CA915C16CD3F8F7FFC788 /* Pods.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		D9E6A86D1BD44C5E0092BFA7 /* Foursquare */ = {
+			isa = PBXGroup;
+			children = (
+				D9E6A86A1BD43BCC0092BFA7 /* FoursquareAPIManager.h */,
+				D9E6A86B1BD43BCC0092BFA7 /* FoursquareAPIManager.m */,
+				D9682D5E1BCD501600647FD8 /* Venue.h */,
+				D9682D5F1BCD501700647FD8 /* Venue.m */,
+			);
+			name = Foursquare;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
