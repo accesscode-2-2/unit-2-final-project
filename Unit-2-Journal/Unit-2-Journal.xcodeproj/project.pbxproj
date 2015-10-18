@@ -30,6 +30,7 @@
 		5A50331A1BC8D0E4001CBA5C /* MainTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A5033191BC8D0E4001CBA5C /* MainTableViewController.m */; settings = {ASSET_TAGS = (); }; };
 		5A50331D1BC8D99D001CBA5C /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A50331C1BC8D99D001CBA5C /* LoginViewController.m */; settings = {ASSET_TAGS = (); }; };
 		5A5033201BC8D9B5001CBA5C /* SignUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A50331F1BC8D9B5001CBA5C /* SignUpViewController.m */; settings = {ASSET_TAGS = (); }; };
+		5A6A22811BD3FE31006E9FE7 /* basictitlefont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5A6A22801BD3FDFF006E9FE7 /* basictitlefont.ttf */; };
 		617F8769EFBE79517A02E6D0 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FAF24AD380284C55768010A2 /* libPods.a */; };
 		9A2937201BCC26FE00ACEEE0 /* JournalPost.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A29371F1BCC26FE00ACEEE0 /* JournalPost.m */; settings = {ASSET_TAGS = (); }; };
 		9A2FFC2F1BC84BF200E880D3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A2FFC2E1BC84BF200E880D3 /* main.m */; };
@@ -80,6 +81,7 @@
 		5A50331C1BC8D99D001CBA5C /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		5A50331E1BC8D9B5001CBA5C /* SignUpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignUpViewController.h; sourceTree = "<group>"; };
 		5A50331F1BC8D9B5001CBA5C /* SignUpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignUpViewController.m; sourceTree = "<group>"; };
+		5A6A22801BD3FDFF006E9FE7 /* basictitlefont.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = basictitlefont.ttf; sourceTree = "<group>"; };
 		9A29371E1BCC26FE00ACEEE0 /* JournalPost.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JournalPost.h; sourceTree = "<group>"; };
 		9A29371F1BCC26FE00ACEEE0 /* JournalPost.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JournalPost.m; sourceTree = "<group>"; };
 		9A2FFC2A1BC84BF200E880D3 /* Unit-2-Journal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Unit-2-Journal.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -195,6 +197,7 @@
 		9A2FFC2D1BC84BF200E880D3 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				5A6A22801BD3FDFF006E9FE7 /* basictitlefont.ttf */,
 				4DCBE1331BC9943D0075BA2C /* big_nerd_ranch.png */,
 				4DCBE1341BC9943D0075BA2C /* destroyer.png */,
 				4DCBE1351BC9943D0075BA2C /* drake.png */,
@@ -275,7 +278,7 @@
 				TargetAttributes = {
 					9A2FFC291BC84BF100E880D3 = {
 						CreatedOnToolsVersion = 7.0;
-						DevelopmentTeam = 5F2A5ZZ575;
+						DevelopmentTeam = Z6GBYPK592;
 					};
 				};
 			};
@@ -302,6 +305,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5A6A22811BD3FE31006E9FE7 /* basictitlefont.ttf in Resources */,
 				4DCBE13F1BC9943D0075BA2C /* lean_startup.png in Resources */,
 				9A2FFC401BC84BF200E880D3 /* LaunchScreen.storyboard in Resources */,
 				4D7FE2A61BCC41A00036E58E /* WishListTableViewCell.xib in Resources */,
@@ -509,7 +513,7 @@
 				INFOPLIST_FILE = "Unit-2-Journal/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.jamaalsedayao.Unit-2-Journal";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.brianblanco.Unit-2-Journal";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};
@@ -525,7 +529,7 @@
 				INFOPLIST_FILE = "Unit-2-Journal/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.jamaalsedayao.Unit-2-Journal";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.brianblanco.Unit-2-Journal";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};
