@@ -2,12 +2,18 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" initialViewController="01J-lp-oVM">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="Akkurat Light Regular.otf">
+            <string>AkkuratLight</string>
+        </mutableArray>
+    </customFonts>
     <scenes>
-        <!--View Controller-->
+        <!--Custom Font View Controller-->
         <scene sceneID="EHf-IW-A2E">
             <objects>
-                <viewController id="01J-lp-oVM" sceneMemberID="viewController">
+                <viewController id="01J-lp-oVM" customClass="CustomFontViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Llm-lL-Icb"/>
                         <viewControllerLayoutGuide type="bottom" id="xb3-aO-Qok"/>
@@ -16,18 +22,36 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+<<<<<<< HEAD
+=======
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rate It" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j2q-Vy-UO8">
+                                <rect key="frame" x="148" y="146" width="305" height="142"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="142" id="DJr-5U-LGO"/>
+                                    <constraint firstAttribute="width" constant="305" id="T3c-iU-jOA"/>
+                                    <constraint firstAttribute="width" secondItem="j2q-Vy-UO8" secondAttribute="height" multiplier="305:142" id="odS-3V-kuc"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AkkuratLight" family="Akkurat Light" pointSize="100"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <size key="shadowOffset" width="2" height="-1"/>
+                            </label>
+>>>>>>> 7a8bb9c910214440048cd404750a5f88926cf49e
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="rating_star_filled" translatesAutoresizingMaskIntoConstraints="NO" id="r92-Pp-sGu">
                                 <rect key="frame" x="148" y="278" width="60" height="60"/>
                                 <animations/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="60" id="0Kv-zE-laH"/>
                                     <constraint firstAttribute="height" constant="60" id="Gy3-sl-70j"/>
+                                    <constraint firstAttribute="width" secondItem="r92-Pp-sGu" secondAttribute="height" multiplier="1:1" id="Iuu-nz-EgZ"/>
                                 </constraints>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="rating_star_filled" translatesAutoresizingMaskIntoConstraints="NO" id="ziX-3c-ZhK">
                                 <rect key="frame" x="270" y="278" width="60" height="60"/>
                                 <animations/>
                                 <constraints>
+                                    <constraint firstAttribute="width" secondItem="ziX-3c-ZhK" secondAttribute="height" multiplier="1:1" id="5Zf-Gi-HjR"/>
                                     <constraint firstAttribute="height" constant="60" id="XtN-IC-I2J"/>
                                     <constraint firstAttribute="width" constant="60" id="g7o-8m-NZF"/>
                                 </constraints>
@@ -37,6 +61,7 @@
                                 <animations/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="B7e-84-ide"/>
+                                    <constraint firstAttribute="width" secondItem="0L6-ec-PpF" secondAttribute="height" multiplier="1:1" id="RIg-fd-gVX"/>
                                     <constraint firstAttribute="width" constant="60" id="cVT-nK-qtc"/>
                                 </constraints>
                             </imageView>
@@ -44,6 +69,7 @@
                                 <rect key="frame" x="207" y="278" width="60" height="60"/>
                                 <animations/>
                                 <constraints>
+                                    <constraint firstAttribute="width" secondItem="Hd4-1H-gES" secondAttribute="height" multiplier="1:1" id="8E2-7l-5Jg"/>
                                     <constraint firstAttribute="height" constant="60" id="Uc8-zf-puh"/>
                                     <constraint firstAttribute="width" constant="60" id="hEI-nU-1lO"/>
                                 </constraints>
@@ -53,6 +79,7 @@
                                 <animations/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="Oii-Sw-U6V"/>
+                                    <constraint firstAttribute="width" secondItem="6el-0s-hhb" secondAttribute="height" multiplier="1:1" id="Zjy-QC-m00"/>
                                     <constraint firstAttribute="width" constant="60" id="fEz-kV-Ad3"/>
                                 </constraints>
                             </imageView>
@@ -88,6 +115,9 @@
                             <constraint firstItem="j2q-Vy-UO8" firstAttribute="top" secondItem="Llm-lL-Icb" secondAttribute="bottom" constant="126" id="ucC-Ud-8N3"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="launchLabel" destination="j2q-Vy-UO8" id="ypS-04-noB"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
