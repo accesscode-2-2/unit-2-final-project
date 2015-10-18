@@ -33,7 +33,7 @@ UITableViewDelegate
     
     NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] initWithEntityName:@"City"];
     
-    NSSortDescriptor *sort = [[NSSortDescriptor alloc] initWithKey:@"name" ascending:NO];
+    NSSortDescriptor *sort = [[NSSortDescriptor alloc] initWithKey:@"name" ascending:YES];
     
     fetchRequest.sortDescriptors = @[sort];
     

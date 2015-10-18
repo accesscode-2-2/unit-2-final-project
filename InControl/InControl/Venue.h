@@ -13,7 +13,13 @@
 @property (nonatomic) NSString *name;
 @property (nonatomic) NSString *address;
 @property (nonatomic) NSNumber *phone;
-@property (nonatomic) NSData *photo;
+@property (nonatomic) NSURL *photoURL;
+
 @property (nonatomic) NSString *latlng;
+@property (nonatomic) NSString *venueID;
+@property (nonatomic, copy) void (^photoUpdateListener)();
+
+- (void)fetchPhotosWithCallbackBlock:(void(^)())callbackBlock;
+
 
 @end

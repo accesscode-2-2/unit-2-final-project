@@ -69,6 +69,7 @@
 		D9682E681BD1DD9C00647FD8 /* AddVisitedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D9682E671BD1DD9C00647FD8 /* AddVisitedViewController.m */; settings = {ASSET_TAGS = (); }; };
 		D9E6A8681BD3F2710092BFA7 /* City+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = D9E6A8651BD3F2710092BFA7 /* City+CoreDataProperties.m */; settings = {ASSET_TAGS = (); }; };
 		D9E6A8691BD3F2710092BFA7 /* City.m in Sources */ = {isa = PBXBuildFile; fileRef = D9E6A8671BD3F2710092BFA7 /* City.m */; settings = {ASSET_TAGS = (); }; };
+		D9E6A86C1BD43BCC0092BFA7 /* FoursquareAPIManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D9E6A86B1BD43BCC0092BFA7 /* FoursquareAPIManager.m */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -179,6 +180,8 @@
 		D9E6A8651BD3F2710092BFA7 /* City+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "City+CoreDataProperties.m"; sourceTree = "<group>"; };
 		D9E6A8661BD3F2710092BFA7 /* City.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = City.h; sourceTree = "<group>"; };
 		D9E6A8671BD3F2710092BFA7 /* City.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = City.m; sourceTree = "<group>"; };
+		D9E6A86A1BD43BCC0092BFA7 /* FoursquareAPIManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FoursquareAPIManager.h; sourceTree = "<group>"; };
+		D9E6A86B1BD43BCC0092BFA7 /* FoursquareAPIManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FoursquareAPIManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -252,6 +255,8 @@
 				84CF452D1BCAD0EA00EAA3BF /* AppDelegate.m */,
 				D9682D5B1BCD4E1600647FD8 /* APIManager.h */,
 				D9682D5C1BCD4E1600647FD8 /* APIManager.m */,
+				D9E6A86A1BD43BCC0092BFA7 /* FoursquareAPIManager.h */,
+				D9E6A86B1BD43BCC0092BFA7 /* FoursquareAPIManager.m */,
 				D9682D5E1BCD501600647FD8 /* Venue.h */,
 				D9682D5F1BCD501700647FD8 /* Venue.m */,
 				84CF45C11BCB4F0300EAA3BF /* NewTrip */,
@@ -646,6 +651,7 @@
 				84CF45BC1BCB0E9D00EAA3BF /* ImageTableViewController.m in Sources */,
 				84CF452E1BCAD0EA00EAA3BF /* AppDelegate.m in Sources */,
 				D9389C3B1BD1E173009A8A15 /* DetailVisitedViewController.m in Sources */,
+				D9E6A86C1BD43BCC0092BFA7 /* FoursquareAPIManager.m in Sources */,
 				84CF46661BCE2B4600EAA3BF /* VisitedViewController.m in Sources */,
 				D9E6A8681BD3F2710092BFA7 /* City+CoreDataProperties.m in Sources */,
 				84CF46B81BD0683000EAA3BF /* FlappyGame.m in Sources */,

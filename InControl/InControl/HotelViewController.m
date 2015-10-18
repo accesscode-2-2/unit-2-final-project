@@ -9,6 +9,8 @@
 #import "HotelViewController.h"
 #import "APIManager.h"
 #import "Venue.h"
+#import "FoursquareAPIManager.h"
+#import <SDWebImage/UIImageView+WebCache.h>
 
 @interface HotelViewController ()
 <
@@ -27,46 +29,40 @@ UITableViewDelegate
     self.tableView.dataSource = self;
     self.tableView.delegate = self;
     
-    [self makeNewAPIRequestWithSearchTerm:@"hotel" andLocation:self.city callbackBlock:^{
-        [self.tableView reloadData];
-    }];
+    [self fetchFoursquareVenues];
     
 }
 
 
-- (void) makeNewAPIRequestWithSearchTerm:(NSString*)searchTerm andLocation:(NSString*)location
-                           callbackBlock:(void(^)())block{
-    
-    NSString *urlString = [NSString stringWithFormat:@"https://api.foursquare.com/v2/venues/search?near=%@&query=%@&client_id=SVBBDTUHT5WOBDQ5NINYVTLNDNTHGD0XGRRE0LMB304VMWG1&client_secret=ZHPO4GOAGH3YSPQNQZAYC13YJ420Q2IPXAI0CRHQ0I3SB0HL&v=20150925", location, searchTerm];
-    
-    NSString *encodedString = [urlString stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLQueryAllowedCharacterSet]];
-    
-    NSURL *url = [NSURL URLWithString:encodedString];
-    
-    [APIManager GETRequestWithURL:url completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
+- (void)fetchFoursquareVenues {
+    [FoursquareAPIManager fetchResultsWithSearchTerm:@"hotel" location:self.city callbackBlock:^(id json){
+        NSArray *results = json[@"response"][@"venues"];
         
-        if (data != nil) {
-            NSDictionary *json = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
+        self.searchResults =[[NSMutableArray alloc] init];
+        
+        for (NSDictionary *result in results) {
             
-            NSArray *results = json[@"response"][@"venues"];
+            NSString *name = result[@"name"];
+            NSString *venueID = result[@"id"];
+            NSString *address = result[@"location"][@"address"];
+            NSString *city = result[@"location"][@"city"];
+            NSString *state = result[@"location"][@"state"];
+            NSString *postCode = result[@"location"][@"postalCode"];
             
-            self.searchResults =[[NSMutableArray alloc] init];
             
-            for (NSDictionary *result in results) {
-                
-                NSString *name = result[@"name"];
-                NSString *address = result[@"location"][@"address"];
-                NSString *city = result[@"location"][@"city"];
-                NSString *state = result[@"location"][@"state"];
-                NSString *postCode = result[@"location"][@"postalCode"];
-                
-                Venue *venueObject = [[Venue alloc] init];
-                venueObject.name = name;
-                venueObject.address = [NSString stringWithFormat:@"%@, %@, %@ %@", address, city, state, postCode];
-                [self.searchResults addObject:venueObject];
-            }
-            block();
+            Venue *venueObject = [[Venue alloc] init];
+            venueObject.name = name;
+            venueObject.address = [NSString stringWithFormat:@"%@, %@, %@ %@", address, city, state, postCode];
+            venueObject.venueID = venueID;
+            
+            [venueObject fetchPhotosWithCallbackBlock:nil];
+            
+            [self.searchResults addObject:venueObject];
+            
         }
+        
+        [self.tableView reloadData];
+        
     }];
 }
 
@@ -84,8 +80,19 @@ UITableViewDelegate
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"HotelCellIdentifier" forIndexPath:indexPath];
     Venue *result = [self.searchResults objectAtIndex:indexPath.row];
+    
+    result.photoUpdateListener = ^{
+        [cell.imageView sd_setImageWithURL:result.photoURL];
+    };
+    
+    [cell.imageView sd_setImageWithURL:result.photoURL placeholderImage:[UIImage imageNamed:@"hotelimg"]];
+    if (cell.imageView.image == nil) {
+        cell.imageView.image = [UIImage imageNamed:@"hotelimg"];
+    }
+    
     cell.textLabel.text = result.name;
     cell.detailTextLabel.text = result.address;
+    
     return cell;
 }
 
