@@ -30,7 +30,7 @@
 }
 
 -(UIView *)animatedIcon{
-    return self.menuTitleImage;
+    return self.viewHoldingImageView;
 }
 
 

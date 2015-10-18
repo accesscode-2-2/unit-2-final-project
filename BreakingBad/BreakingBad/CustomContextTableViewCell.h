@@ -13,5 +13,6 @@
 
 @property (weak, nonatomic) IBOutlet UIImageView *menuTitleImage;
 @property (weak, nonatomic) IBOutlet UILabel *menuTitleLabel;
+@property (weak, nonatomic) IBOutlet UIView *viewHoldingImageView;
 
 @end

@@ -27,7 +27,6 @@ QuestionDetailVCDelegate
 >
 
 @property (weak, nonatomic) IBOutlet UIPickerView *habitPickerView;
-@property (weak, nonatomic) IBOutlet UITextField *habitTextField;
 @property (weak, nonatomic) IBOutlet UIButton *doneButton;
 
 @property (strong, nonatomic) IBOutletCollection(UILabel) NSArray *reply;
@@ -41,13 +40,9 @@ QuestionDetailVCDelegate
 @property (nonatomic) BBUser *user;
 @property (nonatomic) Habit *habit;
 
-
-
 @property (weak, nonatomic) IBOutlet UILabel *habitLabel;
 
 @end
-
-
 
 @implementation MainPageVC
 
@@ -67,7 +62,8 @@ QuestionDetailVCDelegate
     
     [self presentViewController:qvc animated:YES completion:nil];
 }
-
+#pragma mark
+#pragma Question Detail View Delegate Method
 - (void)finishedAnswering:(QuestionDetailVC *)qvc withAnswer:(NSString *)answer {
     for(int i=0; i < self.questionsArray.count; i++)
     {
@@ -94,9 +90,7 @@ QuestionDetailVCDelegate
 - (IBAction)menuButtonTapped:(UIButton *)sender {
     if(!self.contextMenuTableView){
         self.contextMenuTableView = [[YALContextMenuTableView alloc] initWithTableViewDelegateDataSource:self];
-        self.contextMenuTableView.animationDuration = 0.15;
         self.contextMenuTableView.delegate = self;
-        
         //register nib
         
         UINib *cellNib = [UINib nibWithNibName:@"CustomContextTableViewCell" bundle:nil];
@@ -261,9 +255,10 @@ QuestionDetailVCDelegate
     CustomContextTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"contextMenuCellReuseId" forIndexPath:indexPath];
     
     if (cell) {
-        cell.backgroundColor = [UIColor orangeColor];
+        cell.backgroundColor = [UIColor clearColor];
         cell.menuTitleLabel.text = [self.menuTitles objectAtIndex:indexPath.row];
         cell.menuTitleImage.image = [self.menuIcons objectAtIndex:indexPath.row];
+        cell.viewHoldingImageView.backgroundColor = [UIColor whiteColor];
     }
     
     return cell;
@@ -278,6 +273,7 @@ QuestionDetailVCDelegate
 -(void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
     if (self.readOnly) {
+        self.navigationController.navigationBar.hidden = NO;
         self.habitPickerView.hidden = YES;
         self.habitLabel.hidden = NO;
         self.habitLabel.text = self.habitName;
@@ -338,11 +334,6 @@ QuestionDetailVCDelegate
         [weakSelf.habitPickerView reloadAllComponents];
     }];
 }
-
--(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
-    [self.habitTextField resignFirstResponder];
-}
-
 #pragma mark
 #pragma UIPickerView DataSource Methods
 
