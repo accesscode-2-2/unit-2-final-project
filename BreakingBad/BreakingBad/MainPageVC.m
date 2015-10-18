@@ -91,6 +91,7 @@ QuestionDetailVCDelegate
     if(!self.contextMenuTableView){
         self.contextMenuTableView = [[YALContextMenuTableView alloc] initWithTableViewDelegateDataSource:self];
         self.contextMenuTableView.delegate = self;
+        self.contextMenuTableView.animationDuration = 0.15;
         //register nib
         
         UINib *cellNib = [UINib nibWithNibName:@"CustomContextTableViewCell" bundle:nil];
@@ -216,16 +217,12 @@ QuestionDetailVCDelegate
 
 - (void)tableView:(YALContextMenuTableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    self.contextMenuTableView.animationDuration = 0.02;
+    //self.contextMenuTableView.animationDuration = 0.15;
     
     if (indexPath.row == 1) {
+        [tableView dismisWithIndexPath:indexPath];
         
-        UINavigationController *navigationController = (UINavigationController *)[self.storyboard instantiateViewControllerWithIdentifier:@"habitsSegue"];
-        
-        
-        MyHabitsTVC *controller = (MyHabitsTVC *)navigationController.topViewController;
-        controller.habitsArray = self.habitsArray;        
-        [self presentViewController:navigationController animated:YES completion:nil];
+        [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(showMyHabits) userInfo:nil repeats:NO];
         
     }
     
@@ -239,6 +236,16 @@ QuestionDetailVCDelegate
     
     [tableView dismisWithIndexPath:indexPath];
     
+}
+
+- (void)showMyHabits{
+    
+    UINavigationController *navigationController = (UINavigationController *)[self.storyboard instantiateViewControllerWithIdentifier:@"habitsSegue"];
+    
+    MyHabitsTVC *controller = (MyHabitsTVC *)navigationController.topViewController;
+    controller.habitsArray = self.habitsArray;
+    
+    [self presentViewController:navigationController animated:YES completion:nil];
 }
 
 
