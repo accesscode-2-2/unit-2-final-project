@@ -17,5 +17,6 @@
 
 @property (nonatomic) NSMutableArray *allJournalPosts;
 @property (nonatomic) JournalPost *journalPostToAdd;
+@property (nonatomic) JournalPost *journalPostToPass;
 
 @end

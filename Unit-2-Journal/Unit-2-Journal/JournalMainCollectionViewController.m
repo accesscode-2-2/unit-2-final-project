@@ -8,6 +8,7 @@
 
 #import "JournalMainCollectionViewController.h"
 #import <Parse/Parse.h>
+#import "ViewCompletedEntryViewController.h"
 
 @interface JournalMainCollectionViewController ()
 
@@ -121,6 +122,30 @@
     
     return cell;
 }
+#pragma mark Navigation
+
+-(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
+    
+    self.journalPostToPass = self.allJournalPosts[indexPath.row];
+    NSLog(@"Journal Post Clicked:%@",self.journalPostToPass);
+    
+    ViewCompletedEntryViewController *viewController = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"CompleteEntryVC"];
+    viewController.journalPostDetail = self.journalPostToPass;
+    
+    [self.navigationController pushViewController:viewController animated:YES];
+    
+}
+//-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+//    
+//    if ([[segue identifier] isEqualToString:@"ViewCompletedEntrySegue"]){
+//    
+//    ViewCompletedEntryViewController *viewController = segue.destinationViewController;
+//    viewController.journalPostDetail = self.journalPostToPass;
+//    }
+//    
+//}
+
+
 
 #pragma mark <UICollectionViewDelegate>
 

@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "JournalPost.h"
 
 @interface ViewCompletedEntryViewController : UIViewController
+
+@property (nonatomic) JournalPost *journalPostDetail;
 
 @end

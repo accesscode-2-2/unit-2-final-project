@@ -17,6 +17,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    NSLog(@"Journal Post passed: %@",self.journalPostDetail);
     
 }
 

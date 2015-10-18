@@ -21,7 +21,9 @@
 {
     [super viewDidLoad];
 
+    if (self.allJournalPosts == nil){
     self.allJournalPosts = [[NSMutableArray alloc]init];
+    }
     
     NSLog(@"Wish List Result: %@",self.searchResult);
     
@@ -99,8 +101,15 @@
     
     JournalPost *thisEntry = self.allJournalPosts[indexPath.row];
     
-    cell.textLabel.text = thisEntry.title;
+    cell.titleLabel.text = thisEntry.title;
+    cell.authorArtistDirectorLabel.text = thisEntry.creator;
     
+    NSString *imageString = thisEntry.imageForMedia;
+    NSURL *imageURL = [NSURL URLWithString:imageString];
+    NSData *imageData = [NSData dataWithContentsOfURL:imageURL];
+    UIImage *image = [UIImage imageWithData:imageData];
+    
+    cell.artworkImage.image = image;
     
     return cell;
 }

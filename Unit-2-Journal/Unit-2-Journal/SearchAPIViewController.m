@@ -100,12 +100,12 @@ UITextFieldDelegate
     // SAVE the date, title, creator and image in parse, mark reviewed bool as NO
 
     JournalPost *myJournalPost = [[JournalPost alloc] init];
-
-  //  myJournalPost[@"title"] = self.postSearchResult.albumOrMovieName;
-   // myJournalPost[@"creator"] = self.postSearchResult.artistName;
+    
+    myJournalPost[@"title"] = self.passSearchResult.albumOrMovieName;
+    myJournalPost[@"creator"] = self.passSearchResult.artistName;
     myJournalPost[@"dateEntered"] = [NSDate date];
-  //  myJournalPost[@"typeOfMedia"] = self.postSearchResult.mediaType;
-   // myJournalPost[@"imageForMedia"] = self.postSearchResult.artworkURL;
+    myJournalPost[@"typeOfMedia"] = self.passSearchResult.mediaType;
+    myJournalPost[@"imageForMedia"] = self.passSearchResult.artworkURL;
     myJournalPost[@"reviewed"] = [NSNumber numberWithBool:NO];
     
     [myJournalPost saveEventually]; // save your entry, even if offline
