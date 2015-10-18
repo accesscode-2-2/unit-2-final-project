@@ -22,6 +22,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.tableView.dataSource = self;
+    self.navigationItem.title = @"Flickr";
     
     [self makeApPIRequestWithNewTerm:self.city cityName:self.city callbackBlock:^{
         [self.tableView reloadData];
@@ -33,7 +34,7 @@
 - (void)makeApPIRequestWithNewTerm:(NSString *)searchTerm cityName:(NSString *)location
                      callbackBlock:(void(^)())block {
     
-    NSString *imageURL = [NSString stringWithFormat:@"https://api.flickr.com/services/rest/?&method=flickr.photos.search&api_key=4ef2fe2affcdd6e13218f5ddd0e2500d&tags=%@&per_page=25&format=json&nojsoncallback=1", searchTerm];
+    NSString *imageURL = [NSString stringWithFormat:@"https://api.flickr.com/services/rest/?&method=flickr.photos.search&api_key=4ef2fe2affcdd6e13218f5ddd0e2500d&tags=%@&per_page=100&format=json&nojsoncallback=1", searchTerm];
     
     
     
@@ -83,7 +84,7 @@
     NSDictionary *photo = photos[indexPath.row];
     
     NSString *imageURL = [NSString stringWithFormat:@"https://farm%@.staticflickr.com/%@/%@_%@.jpg",[photo objectForKey:@"farm"] ,[photo objectForKey:@"server"], [photo objectForKey:@"id"], [photo objectForKey:@"secret"]];
-    cell.textLabel.text = imageURL;
+//    cell.textLabel.text = imageURL;
     
     NSURL *url = [NSURL URLWithString:imageURL];
     NSData *pictureData = [NSData dataWithContentsOfURL:url];
