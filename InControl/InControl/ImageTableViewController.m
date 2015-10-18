@@ -8,12 +8,12 @@
 
 #import "ImageTableViewController.h"
 #import "APIManager.h"
+#import "CustomTableViewCell.h"
 
 
 @interface ImageTableViewController ()
 
 @property (nonatomic) NSDictionary * imageData;
-@property (weak, nonatomic) IBOutlet UIImageView *imageView;
 
 @end
 
@@ -76,7 +76,7 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"CellIdentifier" forIndexPath:indexPath];
+    CustomTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"CellIdentifier" forIndexPath:indexPath];
     
     //NSDictionary *currentInstagramItem = self.imageData[indexPath.row];
     NSArray *photos = [self.imageData objectForKey:@"photo"];
@@ -88,7 +88,7 @@
     NSURL *url = [NSURL URLWithString:imageURL];
     NSData *pictureData = [NSData dataWithContentsOfURL:url];
     UIImage *picture = [UIImage imageWithData:pictureData];
-    cell.imageView.image = picture;
+    cell.customImage.image = picture;
     
     NSLog(@"%@", picture);
     

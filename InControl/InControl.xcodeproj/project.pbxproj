@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0BAA7ABC1BD34A4D00CB7443 /* CustomTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BAA7ABB1BD34A4D00CB7443 /* CustomTableViewCell.m */; settings = {ASSET_TAGS = (); }; };
 		44FA49C8E2DCD94AB1DEA855 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CA12CD6286D3D05E336A1706 /* libPods.a */; };
 		84CF452B1BCAD0EA00EAA3BF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 84CF452A1BCAD0EA00EAA3BF /* main.m */; };
 		84CF452E1BCAD0EA00EAA3BF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 84CF452D1BCAD0EA00EAA3BF /* AppDelegate.m */; };
@@ -86,6 +87,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0BAA7ABA1BD34A4D00CB7443 /* CustomTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomTableViewCell.h; sourceTree = "<group>"; };
+		0BAA7ABB1BD34A4D00CB7443 /* CustomTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomTableViewCell.m; sourceTree = "<group>"; };
 		4B5D5618892B20D168B80EB1 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		84CF45261BCAD0EA00EAA3BF /* InControl.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InControl.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84CF452A1BCAD0EA00EAA3BF /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -336,6 +339,8 @@
 			children = (
 				84CF45BA1BCB0E9D00EAA3BF /* ImageTableViewController.h */,
 				84CF45BB1BCB0E9D00EAA3BF /* ImageTableViewController.m */,
+				0BAA7ABA1BD34A4D00CB7443 /* CustomTableViewCell.h */,
+				0BAA7ABB1BD34A4D00CB7443 /* CustomTableViewCell.m */,
 			);
 			name = Image;
 			sourceTree = "<group>";
@@ -641,6 +646,7 @@
 				84CF46B51BD0681800EAA3BF /* FlappyViewController.m in Sources */,
 				D9682D601BCD501700647FD8 /* Venue.m in Sources */,
 				84CF452B1BCAD0EA00EAA3BF /* main.m in Sources */,
+				0BAA7ABC1BD34A4D00CB7443 /* CustomTableViewCell.m in Sources */,
 				D9682D5D1BCD4E1600647FD8 /* APIManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
