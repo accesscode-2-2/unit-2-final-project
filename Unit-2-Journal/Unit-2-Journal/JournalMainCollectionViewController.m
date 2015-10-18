@@ -17,6 +17,10 @@
 
 //static NSString * const reuseIdentifier = @"Cell";
 
+- (void) viewDidAppear:(BOOL)animated{
+    [self.collectionView reloadData];
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -40,26 +44,10 @@
     
     self.collectionView.alwaysBounceVertical = YES;
     
-//    UINib *headerNib = [UINib nibWithNibName:@"CollectionHeaderIdentifier" bundle:nil]; // header nib
-//    [self.collectionView registerNib:headerNib
-//          forCellWithReuseIdentifier:@"CollectionHeaderIdentifier"];
-    
-  //  [self.collectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:@"Cell"];
-    
-//    PFQuery *query = [PFQuery queryWithClassName:@"JournalPost"];
-//    [query selectKeys:@[@"imageForMedia"]];
-//    [query findObjectsInBackgroundWithBlock:^(NSArray * _Nullable objects, NSError * _Nullable error) {
-//       
-//        collectionImages = [NSMutableArray arrayWithObjects:objects, nil];
-    
-       
-        
-       // NSLog(@"saved images: %@", objects);
-        
-//    }];
-    
     [self runQuery]; // run Parse query to fetch saved data
 }
+
+#pragma mark - fetch saved data from Parse
 
 - (void)runQuery {
     PFQuery *query = [PFQuery queryWithClassName:@"JournalPost"];
@@ -94,7 +82,12 @@
     PFObject *post = self.allJournalPosts[indexPath.row]; // pulling out parse data here
     PFFile *file = post[@"imageForMedia"]; // this returns urls for each image
    // [cell.imageView loadInBackground]; // broken
+    NSLog(@"file: %@", file);
     
+    NSString *fileString = [NSString stringWithFormat:@"%@",file];
+    NSURL *fileURL = [NSURL URLWithString:fileString];
+    NSData *fileData = [NSData dataWithContentsOfURL:fileURL];
+    UIImage *fileImage = [UIImage imageWithData:fileData];
     
     UIImageView *collectionImageView = (UIImageView *)[cell viewWithTag:100];
     
@@ -106,9 +99,9 @@
     NSString *imageString = iTunes.artworkURL;
     NSURL *imageURL = [NSURL URLWithString:imageString];
     NSData *imageData = [NSData dataWithContentsOfURL:imageURL];
-    UIImage *image = [UIImage imageWithData:imageData];
+   // UIImage *image = [UIImage imageWithData:imageData];
     
-    collectionImageView.image = image;
+    collectionImageView.image = fileImage;
     
     // round corners
     cell.layer.borderWidth = 2.0;
