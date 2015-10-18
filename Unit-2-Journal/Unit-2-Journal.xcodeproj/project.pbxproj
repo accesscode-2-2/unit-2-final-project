@@ -31,6 +31,10 @@
 		5A50331D1BC8D99D001CBA5C /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A50331C1BC8D99D001CBA5C /* LoginViewController.m */; settings = {ASSET_TAGS = (); }; };
 		5A5033201BC8D9B5001CBA5C /* SignUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A50331F1BC8D9B5001CBA5C /* SignUpViewController.m */; settings = {ASSET_TAGS = (); }; };
 		5A6A22811BD3FE31006E9FE7 /* basictitlefont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5A6A22801BD3FDFF006E9FE7 /* basictitlefont.ttf */; };
+		5A6A22851BD4393D006E9FE7 /* Akkurat Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 5A6A22841BD438B4006E9FE7 /* Akkurat Regular.otf */; settings = {ASSET_TAGS = (); }; };
+		5A6A22891BD43952006E9FE7 /* Akkurat Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 5A6A22861BD4394E006E9FE7 /* Akkurat Bold.otf */; settings = {ASSET_TAGS = (); }; };
+		5A6A228A1BD43955006E9FE7 /* Akkurat Italic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 5A6A22871BD4394E006E9FE7 /* Akkurat Italic.otf */; settings = {ASSET_TAGS = (); }; };
+		5A6A228B1BD43958006E9FE7 /* Akkurat Light Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 5A6A22881BD4394E006E9FE7 /* Akkurat Light Regular.otf */; settings = {ASSET_TAGS = (); }; };
 		617F8769EFBE79517A02E6D0 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FAF24AD380284C55768010A2 /* libPods.a */; };
 		9A2937201BCC26FE00ACEEE0 /* JournalPost.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A29371F1BCC26FE00ACEEE0 /* JournalPost.m */; settings = {ASSET_TAGS = (); }; };
 		9A2FFC2F1BC84BF200E880D3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A2FFC2E1BC84BF200E880D3 /* main.m */; };
@@ -82,6 +86,10 @@
 		5A50331E1BC8D9B5001CBA5C /* SignUpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignUpViewController.h; sourceTree = "<group>"; };
 		5A50331F1BC8D9B5001CBA5C /* SignUpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignUpViewController.m; sourceTree = "<group>"; };
 		5A6A22801BD3FDFF006E9FE7 /* basictitlefont.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = basictitlefont.ttf; sourceTree = "<group>"; };
+		5A6A22841BD438B4006E9FE7 /* Akkurat Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Akkurat Regular.otf"; sourceTree = "<group>"; };
+		5A6A22861BD4394E006E9FE7 /* Akkurat Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Akkurat Bold.otf"; sourceTree = "<group>"; };
+		5A6A22871BD4394E006E9FE7 /* Akkurat Italic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Akkurat Italic.otf"; sourceTree = "<group>"; };
+		5A6A22881BD4394E006E9FE7 /* Akkurat Light Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Akkurat Light Regular.otf"; sourceTree = "<group>"; };
 		9A29371E1BCC26FE00ACEEE0 /* JournalPost.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JournalPost.h; sourceTree = "<group>"; };
 		9A29371F1BCC26FE00ACEEE0 /* JournalPost.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JournalPost.m; sourceTree = "<group>"; };
 		9A2FFC2A1BC84BF200E880D3 /* Unit-2-Journal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Unit-2-Journal.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -197,6 +205,10 @@
 		9A2FFC2D1BC84BF200E880D3 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				5A6A22841BD438B4006E9FE7 /* Akkurat Regular.otf */,
+				5A6A22861BD4394E006E9FE7 /* Akkurat Bold.otf */,
+				5A6A22871BD4394E006E9FE7 /* Akkurat Italic.otf */,
+				5A6A22881BD4394E006E9FE7 /* Akkurat Light Regular.otf */,
 				5A6A22801BD3FDFF006E9FE7 /* basictitlefont.ttf */,
 				4DCBE1331BC9943D0075BA2C /* big_nerd_ranch.png */,
 				4DCBE1341BC9943D0075BA2C /* destroyer.png */,
@@ -307,19 +319,23 @@
 			files = (
 				5A6A22811BD3FE31006E9FE7 /* basictitlefont.ttf in Resources */,
 				4DCBE13F1BC9943D0075BA2C /* lean_startup.png in Resources */,
+				5A6A228A1BD43955006E9FE7 /* Akkurat Italic.otf in Resources */,
 				9A2FFC401BC84BF200E880D3 /* LaunchScreen.storyboard in Resources */,
 				4D7FE2A61BCC41A00036E58E /* WishListTableViewCell.xib in Resources */,
 				4D7FE29E1BCC32170036E58E /* SearchAPITableViewCell.xib in Resources */,
 				4DCBE1441BC9943D0075BA2C /* x-files.png in Resources */,
 				4DCBE13E1BC9943D0075BA2C /* drake.png in Resources */,
 				4DCBE1401BC9943D0075BA2C /* run_the_jewels.png in Resources */,
+				5A6A228B1BD43958006E9FE7 /* Akkurat Light Regular.otf in Resources */,
 				4DCBE13D1BC9943D0075BA2C /* destroyer.png in Resources */,
 				4DCBE1411BC9943D0075BA2C /* sleater_kinney.png in Resources */,
 				4DCBE1421BC9943D0075BA2C /* talking_heads.png in Resources */,
 				9A2FFC3D1BC84BF200E880D3 /* Assets.xcassets in Resources */,
 				4DCBE13C1BC9943D0075BA2C /* big_nerd_ranch.png in Resources */,
+				5A6A22891BD43952006E9FE7 /* Akkurat Bold.otf in Resources */,
 				9A2FFC381BC84BF200E880D3 /* Main.storyboard in Resources */,
 				4DCBE1431BC9943D0075BA2C /* true_detective.png in Resources */,
+				5A6A22851BD4393D006E9FE7 /* Akkurat Regular.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
