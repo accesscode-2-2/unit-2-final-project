@@ -48,6 +48,8 @@
 }
 
 - (void)cancel {
+    AppDelegate *delegate = [UIApplication sharedApplication].delegate;
+    [delegate.managedObjectContext deleteObject:self.city];
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 

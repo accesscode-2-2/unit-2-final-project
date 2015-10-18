@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Llf-7N-ptg">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Llf-7N-ptg">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -1135,11 +1135,6 @@
                                     <segue destination="Kxk-CC-7rg" kind="presentation" id="Ob7-gb-6Uy"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f2S-qQ-l6D">
-                                <rect key="frame" x="534" y="66" width="48" height="30"/>
-                                <animations/>
-                                <state key="normal" title="Cancel"/>
-                            </button>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="kew-ev-8Ke">
                                 <rect key="frame" x="0.0" y="103" width="600" height="29"/>
                                 <animations/>
@@ -1152,6 +1147,9 @@
                                 <rect key="frame" x="0.0" y="131" width="600" height="469"/>
                                 <animations/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="469" id="wQX-Lp-zQm"/>
+                                </constraints>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="VisitedCellIdentifier" textLabel="UJP-Fy-k2C" detailTextLabel="1ka-Ji-a21" style="IBUITableViewCellStyleValue1" id="F1Q-mf-jyX">
                                         <rect key="frame" x="0.0" y="28" width="600" height="44"/>
@@ -1186,42 +1184,51 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
-                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="oci-dY-Kgt">
-                                <rect key="frame" x="0.0" y="59" width="520" height="44"/>
-                                <animations/>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="vKQ-OD-4jb">
+                                <rect key="frame" x="0.0" y="59" width="600" height="44"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="Xs9-iS-hxb" id="Ym5-DW-itw"/>
+                                </connections>
                             </searchBar>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" red="0.84935287240000001" green="0.9643627441" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="gp4-Tm-eiu" firstAttribute="top" secondItem="kew-ev-8Ke" secondAttribute="bottom" id="8dJ-nZ-7ND"/>
-                            <constraint firstItem="oci-dY-Kgt" firstAttribute="top" secondItem="8qw-mZ-nUz" secondAttribute="bottom" id="Anw-rF-4ri"/>
                             <constraint firstAttribute="trailing" secondItem="gp4-Tm-eiu" secondAttribute="trailing" id="H7q-DU-GvY"/>
                             <constraint firstItem="AqP-pM-VpZ" firstAttribute="centerY" secondItem="8qw-mZ-nUz" secondAttribute="centerY" id="HVI-Fl-QQX"/>
                             <constraint firstItem="gp4-Tm-eiu" firstAttribute="leading" secondItem="Xrt-ws-5R5" secondAttribute="leading" id="J0a-qy-fk9"/>
                             <constraint firstAttribute="trailing" secondItem="AqP-pM-VpZ" secondAttribute="trailing" constant="27" id="JWo-Os-maq"/>
-                            <constraint firstItem="kew-ev-8Ke" firstAttribute="top" secondItem="oci-dY-Kgt" secondAttribute="bottom" id="Uar-AJ-j1w"/>
                             <constraint firstAttribute="trailing" secondItem="kew-ev-8Ke" secondAttribute="trailing" id="Zjb-pk-Fq4"/>
                             <constraint firstItem="y2O-rC-dtG" firstAttribute="top" secondItem="n2l-yc-HZu" secondAttribute="bottom" constant="4" id="bab-DU-ZUQ"/>
+                            <constraint firstItem="kew-ev-8Ke" firstAttribute="trailing" secondItem="vKQ-OD-4jb" secondAttribute="trailing" id="dn7-dr-fKh"/>
                             <constraint firstItem="kew-ev-8Ke" firstAttribute="leading" secondItem="Xrt-ws-5R5" secondAttribute="leading" id="e39-hv-MYP"/>
+                            <constraint firstItem="kew-ev-8Ke" firstAttribute="leading" secondItem="vKQ-OD-4jb" secondAttribute="leading" id="fpT-fY-TUN"/>
                             <constraint firstItem="y2O-rC-dtG" firstAttribute="centerX" secondItem="Xrt-ws-5R5" secondAttribute="centerX" id="fyO-QQ-UwN"/>
-                            <constraint firstItem="f2S-qQ-l6D" firstAttribute="centerY" secondItem="oci-dY-Kgt" secondAttribute="centerY" id="l6M-bF-4Au"/>
                             <constraint firstItem="Qad-Km-mZD" firstAttribute="top" secondItem="gp4-Tm-eiu" secondAttribute="bottom" id="l6M-oD-q9S"/>
+                            <constraint firstItem="kew-ev-8Ke" firstAttribute="top" secondItem="vKQ-OD-4jb" secondAttribute="bottom" id="lnw-3C-aeq"/>
                             <constraint firstItem="8qw-mZ-nUz" firstAttribute="top" secondItem="n2l-yc-HZu" secondAttribute="bottom" id="lop-c4-3c3"/>
-                            <constraint firstItem="oci-dY-Kgt" firstAttribute="leading" secondItem="Xrt-ws-5R5" secondAttribute="leading" id="qvM-Al-cdX"/>
                             <constraint firstItem="AqP-pM-VpZ" firstAttribute="top" secondItem="n2l-yc-HZu" secondAttribute="bottom" id="tmH-wb-KNa"/>
                             <constraint firstItem="8qw-mZ-nUz" firstAttribute="leading" secondItem="Xrt-ws-5R5" secondAttribute="leading" constant="20" id="utZ-Eq-xSr"/>
-                            <constraint firstItem="f2S-qQ-l6D" firstAttribute="leading" secondItem="oci-dY-Kgt" secondAttribute="trailing" constant="14" id="xsq-9M-qFb"/>
-                            <constraint firstItem="f2S-qQ-l6D" firstAttribute="centerX" secondItem="AqP-pM-VpZ" secondAttribute="centerX" id="zFK-Pb-hwr"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="VRE-Xg-ruq"/>
                     <connections>
+                        <outlet property="searchDisplayController" destination="gVS-1q-Q4g" id="Bdg-Kf-cBR"/>
                         <outlet property="tableView" destination="gp4-Tm-eiu" id="Irp-0L-YfQ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WeW-g4-gSS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <searchDisplayController id="gVS-1q-Q4g">
+                    <connections>
+                        <outlet property="delegate" destination="Xs9-iS-hxb" id="Mfw-6s-sUK"/>
+                        <outlet property="searchBar" destination="vKQ-OD-4jb" id="cFq-vh-NQw"/>
+                        <outlet property="searchContentsController" destination="Xs9-iS-hxb" id="fMH-yM-4tJ"/>
+                        <outlet property="searchResultsDataSource" destination="Xs9-iS-hxb" id="2H2-GV-ZBS"/>
+                        <outlet property="searchResultsDelegate" destination="Xs9-iS-hxb" id="T29-hj-ntc"/>
+                    </connections>
+                </searchDisplayController>
             </objects>
             <point key="canvasLocation" x="2621" y="-1115"/>
         </scene>

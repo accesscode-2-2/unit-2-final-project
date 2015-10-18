@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface VisitedViewController : UIViewController
+@interface VisitedViewController : UIViewController <UISearchBarDelegate, UISearchDisplayDelegate>
 
 @end
