@@ -41,7 +41,7 @@
     
     self.journalPostArray = [[NSMutableArray alloc]init];
     
-    NSLog(@"Data has been passed: %@",self.postSearchResult);
+  //  NSLog(@"Data has been passed: %@",self.postSearchResult);
     
     self.doneEditingButton.hidden = YES;
     
@@ -179,9 +179,7 @@
     [self.starButtonFive.layer pop_addAnimation:spin forKey:nil];
 }
 
-
 #pragma mark - save items
-
 
 - (IBAction)logToJournalButtonTapped:(id)sender {
     
@@ -190,17 +188,20 @@
     journalPost.postText = self.textView.text;
     journalPost.postSubject = self.postSearchResult;
     
+    //journalPost.reviewed = YES;
+    
     self.journalPost = journalPost;
+    
     
     [self.journalPostArray addObject:self.journalPost];
                                
-    NSLog(@"Journal Post: %@",self.journalPost);
+   // NSLog(@"Journal Post: %@",self.journalPost);
     
     [self.navigationController popToRootViewControllerAnimated:YES]; // pop back to root controller
 
     [self.tabBarController setSelectedIndex:2]; // send to correct tab
     
-    NSLog(@"my journal text is: %@", self.textView.text);
+  //  NSLog(@"my journal text is: %@", self.textView.text);
     
     // when we log the journal entry, SAVE it all to Parse
     JournalPost *myJournalPost = [[JournalPost alloc] init]; // most of this is a repeat of above.
@@ -212,10 +213,13 @@
     myJournalPost[@"dateEntered"] = [NSDate date];
     myJournalPost[@"typeOfMedia"] = self.postSearchResult.mediaType;
     myJournalPost[@"imageForMedia"] = self.postSearchResult.artworkURL;
+    myJournalPost[@"reviewed"] = [NSNumber numberWithBool:YES];
     
     [myJournalPost saveEventually]; // save your entry, even if offline
     
 }
+
+
 
  #pragma mark - Navigation
  

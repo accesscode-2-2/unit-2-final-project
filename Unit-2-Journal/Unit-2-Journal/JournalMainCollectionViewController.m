@@ -18,7 +18,8 @@
 //static NSString * const reuseIdentifier = @"Cell";
 
 - (void) viewDidAppear:(BOOL)animated{
-    [self.collectionView reloadData];
+    
+    [self runQuery];
 }
 
 - (void)viewDidLoad
@@ -31,13 +32,13 @@
         nil;
     }
 
-    NSLog(@"Current Journal Post: %@", self.journalPostToAdd);
+  //  NSLog(@"Current Journal Post: %@", self.journalPostToAdd);
     
     if (self.journalPostToAdd != nil){
     [self. allJournalPosts addObject:self.journalPostToAdd];
     }
     
-    NSLog(@"All Journal Posts: %@", self.allJournalPosts);
+   // NSLog(@"All Journal Posts: %@", self.allJournalPosts);
     
     
     collectionImages = [NSMutableArray arrayWithObjects:@"destroyer.png", @"drake.png", @"big_nerd_ranch.png", @"talking_heads.png", @"true_detective", @"sleater_kinney.png", @"x-files.png", @"run_the_jewels.png", @"lean_startup.png", nil];
@@ -50,13 +51,26 @@
 #pragma mark - fetch saved data from Parse
 
 - (void)runQuery {
+    
+   // __weak typeof(self) weakSelf = self; // prevent memory leakage?
+    
     PFQuery *query = [PFQuery queryWithClassName:@"JournalPost"];
+    
     [query findObjectsInBackgroundWithBlock:^(NSArray * _Nullable objects, NSError * _Nullable error) {
+     
+        // create a for loop and iterate through the objects array and push only the posts that are marked with True to "self.allJournalPosts"
         
-        self.allJournalPosts = objects; // pull all images from Parse
+        [self.allJournalPosts removeAllObjects]; // clear to prevent doubles
+        
+        for (JournalPost *object in objects) {
+            if (object.reviewed) {
+                [self.allJournalPosts addObject:object];
+            }
+        }
+        
+//       self.allJournalPosts = objects; // pull all images from Parse
+        
         NSLog(@"info fetched from parse: %@", self.allJournalPosts); // test it!
-        
-        // right now the posts are saved as a URL... change this back to image somehow
         
         [self.collectionView reloadData]; // reload tableView
     }];
@@ -77,12 +91,9 @@
     static NSString *identifier = @"Cell";
     
     UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:identifier forIndexPath:indexPath];
-   
     
     PFObject *post = self.allJournalPosts[indexPath.row]; // pulling out parse data here
     PFFile *file = post[@"imageForMedia"]; // this returns urls for each image
-   // [cell.imageView loadInBackground]; // broken
-    NSLog(@"file: %@", file);
     
     NSString *fileString = [NSString stringWithFormat:@"%@",file];
     NSURL *fileURL = [NSURL URLWithString:fileString];
@@ -107,7 +118,6 @@
     cell.layer.borderWidth = 2.0;
     cell.layer.borderColor = [UIColor blackColor].CGColor;
     cell.layer.cornerRadius = 30.0;
-    
     
     return cell;
 }

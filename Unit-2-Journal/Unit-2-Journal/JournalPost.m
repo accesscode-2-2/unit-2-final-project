@@ -19,7 +19,8 @@
 @dynamic dateEntered;
 @dynamic starRating;
 @dynamic typeOfMedia; // ie book, album, movie, tv
-@dynamic imageForMedia; 
+@dynamic imageForMedia;
+@dynamic reviewed;
 
 +(NSString *)parseClassName {
     return @"JournalPost";

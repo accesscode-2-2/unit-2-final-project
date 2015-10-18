@@ -14,6 +14,9 @@
 #import "SearchAPITableViewCell.h" // add custom cell
 #import "TabBarViewController.h"
 #import "WishListTableViewController.h"
+#import <Parse/Parse.h>
+#import "JournalPost.h" // for parse
+
 
 //#import "JournalPost.h"
 
@@ -33,7 +36,12 @@ UITextFieldDelegate
 @property (strong, nonatomic) IBOutlet UIButton *televisionButton;
 @property (nonatomic) NSString *media;
 @property (nonatomic) NSMutableArray *searchResults;
+@property (nonatomic) NSMutableArray *wishListItems;
 @property (nonatomic) iTunesSearchResult *passSearchResult;
+
+@property (nonatomic) JournalPost *journalPost; // for parse
+@property (nonatomic) NSString *mediaType; // for parse
+
 
 @end
 
@@ -75,19 +83,32 @@ UITextFieldDelegate
         self.media = [sender currentTitle];
     }
 
-    NSLog(@"Media button tapped: %@",self.media);
+   // NSLog(@"Media button tapped: %@",self.media);
 }
 
 #pragma mark - add to list buttons
 
 - (IBAction)createJournalEntryButtonTapped:(id)sender {
-    
+ 
 }
 
 - (IBAction)addToWishListButtonTapped:(id)sender {
     
-    WishListTableViewController *viewController = [[WishListTableViewController alloc]init];
-    viewController.searchResult = self.passSearchResult;
+//    WishListTableViewController *viewController = [[WishListTableViewController alloc]init];
+//    viewController.searchResult = self.passSearchResult;
+    
+    // SAVE the date, title, creator and image in parse, mark reviewed bool as NO
+
+    JournalPost *myJournalPost = [[JournalPost alloc] init];
+
+  //  myJournalPost[@"title"] = self.postSearchResult.albumOrMovieName;
+   // myJournalPost[@"creator"] = self.postSearchResult.artistName;
+    myJournalPost[@"dateEntered"] = [NSDate date];
+  //  myJournalPost[@"typeOfMedia"] = self.postSearchResult.mediaType;
+   // myJournalPost[@"imageForMedia"] = self.postSearchResult.artworkURL;
+    myJournalPost[@"reviewed"] = [NSNumber numberWithBool:NO];
+    
+    [myJournalPost saveEventually]; // save your entry, even if offline
 
     [self.tabBarController setSelectedIndex:0];
     
@@ -114,7 +135,7 @@ UITextFieldDelegate
                     if (data != nil){
                         NSDictionary *json = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
                         
-                       NSLog(@"%@",json);
+                      // NSLog(@"%@",json);
                         
                         NSArray *results = [json objectForKey:@"results"];
                         
@@ -310,7 +331,7 @@ UITextFieldDelegate
     self.passSearchResult = searchResult;
     
 
-    NSLog(@"passed search results: %@", self.passSearchResult);
+ //   NSLog(@"passed search results: %@", self.passSearchResult);
     
     // push view controller 
     
@@ -322,7 +343,7 @@ UITextFieldDelegate
     
      if ([[segue identifier]isEqualToString:@"pushToCreateJournalEntry"]) {
      
-         NSLog(@"segue");
+       //  NSLog(@"segue");
 
      CreateJournalEntryViewController *viewController = segue.destinationViewController;
      viewController.postSearchResult = self.passSearchResult;

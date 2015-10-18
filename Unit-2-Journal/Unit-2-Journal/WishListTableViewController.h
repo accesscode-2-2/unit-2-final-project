@@ -12,5 +12,6 @@
 @interface WishListTableViewController : UITableViewController
 
 @property (nonatomic) iTunesSearchResult *searchResult;
+@property (nonatomic) NSMutableArray *allJournalPosts;
 
 @end

@@ -8,6 +8,8 @@
 
 #import "WishListTableViewController.h"
 #import "WishListTableViewCell.h"
+#import <Parse/Parse.h>
+#import "JournalPost.h"
 
 @interface WishListTableViewController ()
 
@@ -19,6 +21,8 @@
 {
     [super viewDidLoad];
 
+    self.allJournalPosts = [[NSMutableArray alloc]init];
+    
     NSLog(@"Wish List Result: %@",self.searchResult);
     
     //    [self setUpSwipeGestures];
@@ -29,6 +33,35 @@
     
     self.tableView.rowHeight = UITableViewAutomaticDimension;
     self.tableView.estimatedRowHeight = 35.0;
+    
+    [self pullEntriesFromParse];
+}
+
+- (void)pullEntriesFromParse {
+    
+    // __weak typeof(self) weakSelf = self; // prevent memory leakage?
+    
+    PFQuery *query = [PFQuery queryWithClassName:@"JournalPost"];
+    
+    [query findObjectsInBackgroundWithBlock:^(NSArray * _Nullable objects, NSError * _Nullable error) {
+        
+        // create a for loop and iterate through the objects array and push only the posts that are marked with True to "self.allJournalPosts"
+        
+        [self.allJournalPosts removeAllObjects]; // clear to prevent doubles
+        
+        for (JournalPost *object in objects) {
+            if (!object.reviewed) {
+                [self.allJournalPosts addObject:object];
+            }
+        }
+        
+        //       self.allJournalPosts = objects; // pull all images from Parse
+        
+        NSLog(@"info fetched from parse: %@", self.allJournalPosts); // test it!
+        
+        [self.tableView reloadData]; // reload tableView
+    }];
+    
 }
 
 //#pragma  mark - swipe gestures
@@ -57,14 +90,17 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 5;
+    return self.allJournalPosts.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     WishListTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"WishListTableViewCellIdentifier" forIndexPath:indexPath];
     
-    // Configure the cell...
+    JournalPost *thisEntry = self.allJournalPosts[indexPath.row];
+    
+    cell.textLabel.text = thisEntry.title;
+    
     
     return cell;
 }

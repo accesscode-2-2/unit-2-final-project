@@ -20,6 +20,7 @@
 @property (nonatomic) NSDate *dateEntered;
 @property (nonatomic) NSNumber *starRating;
 @property (nonatomic) NSString *typeOfMedia; // ie book, album, movie, tv
-@property (nonatomic) NSString *imageForMedia; 
+@property (nonatomic) NSString *imageForMedia;
+@property (nonatomic) BOOL reviewed;
 
 @end
