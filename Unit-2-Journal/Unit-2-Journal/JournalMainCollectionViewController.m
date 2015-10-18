@@ -124,26 +124,16 @@
 }
 #pragma mark Navigation
 
--(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
     
-    self.journalPostToPass = self.allJournalPosts[indexPath.row];
-    NSLog(@"Journal Post Clicked:%@",self.journalPostToPass);
-    
-    ViewCompletedEntryViewController *viewController = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"CompleteEntryVC"];
-    viewController.journalPostDetail = self.journalPostToPass;
-    
-    [self.navigationController pushViewController:viewController animated:YES];
+    if ([[segue identifier] isEqualToString:@"ViewCompletedEntrySegue"]){
+    NSIndexPath *selectedIndexPath = [self.collectionView indexPathForCell:sender];
+    ViewCompletedEntryViewController *viewController = segue.destinationViewController;
+    JournalPost *thisPost = self.allJournalPosts[selectedIndexPath.row];
+    viewController.journalPostDetail = thisPost;
+    }
     
 }
-//-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
-//    
-//    if ([[segue identifier] isEqualToString:@"ViewCompletedEntrySegue"]){
-//    
-//    ViewCompletedEntryViewController *viewController = segue.destinationViewController;
-//    viewController.journalPostDetail = self.journalPostToPass;
-//    }
-//    
-//}
 
 
 
