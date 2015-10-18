@@ -40,6 +40,12 @@
     UIImage *image = [UIImage imageWithData:imageData];
     
     self.completedImageView.image = image;
+    
+    // round corners
+    self.completedImageView.clipsToBounds = YES;
+    self.completedImageView.layer.borderColor = [UIColor blackColor].CGColor;
+    self.completedImageView.layer.borderWidth = 2.0;
+    self.completedImageView.layer.cornerRadius = 25.0;
 
 }
 
