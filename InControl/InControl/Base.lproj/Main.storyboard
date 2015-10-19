@@ -146,7 +146,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1873" y="1622"/>
+            <point key="canvasLocation" x="3017" y="-1130"/>
         </scene>
         <!--Video View Controller-->
         <scene sceneID="tmm-sN-OO4">
@@ -225,7 +225,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="v3v-Xl-LF2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1862" y="2486"/>
+            <point key="canvasLocation" x="2334" y="2158"/>
         </scene>
         <!--Root View Controller-->
         <scene sceneID="ZND-Ok-Rth">
@@ -280,7 +280,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QxR-gz-6lt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3786" y="926"/>
+            <point key="canvasLocation" x="1102" y="2198"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="SQd-xx-Pna">
@@ -297,7 +297,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Rwx-Gi-81r" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2966" y="925"/>
+            <point key="canvasLocation" x="198" y="2198"/>
         </scene>
         <!--Hotel View Controller-->
         <scene sceneID="alR-2g-khq">
@@ -373,7 +373,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4tY-aX-Igq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1090" y="2486"/>
+            <point key="canvasLocation" x="1102" y="194"/>
         </scene>
         <!--Food View Controller-->
         <scene sceneID="8l4-nh-Ktd">
@@ -449,7 +449,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3BH-oi-CrG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1090" y="1622"/>
+            <point key="canvasLocation" x="1102" y="-586"/>
         </scene>
         <!--Welcome View Controller-->
         <scene sceneID="r1B-xf-me1">
@@ -486,7 +486,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="szs-bd-7Pn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2273" y="473"/>
+            <point key="canvasLocation" x="3281" y="1833"/>
         </scene>
         <!--Add Visited View Controller-->
         <scene sceneID="siR-Bc-BzH">
@@ -721,7 +721,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yp6-tS-XUm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2058" y="-297"/>
+            <point key="canvasLocation" x="6570" y="1200"/>
         </scene>
         <!--Root View Controller-->
         <scene sceneID="hxP-Bh-W7U">
@@ -801,7 +801,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="n55-lj-qYh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5370" y="360"/>
+            <point key="canvasLocation" x="1102" y="1200"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="SA9-13-fpl">
@@ -818,7 +818,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fWr-dU-Eaj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4552" y="360"/>
+            <point key="canvasLocation" x="198" y="1200"/>
         </scene>
         <!--Flappy View Controller-->
         <scene sceneID="lyX-HQ-82D">
@@ -871,7 +871,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cI8-Ve-lL0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4496" y="-1257"/>
+            <point key="canvasLocation" x="4776" y="-409"/>
         </scene>
         <!--Flappy Game-->
         <scene sceneID="Ivd-Yw-4DO">
@@ -980,7 +980,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xFb-cm-DxC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5167" y="-1257"/>
+            <point key="canvasLocation" x="5447" y="-409"/>
         </scene>
         <!--Games View Controller-->
         <scene sceneID="dOd-xF-Ffl">
@@ -1025,7 +1025,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TNi-41-Zpl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3436" y="-344"/>
+            <point key="canvasLocation" x="3948" y="-400"/>
         </scene>
         <!--Detail Visited View Controller-->
         <scene sceneID="sY7-s9-hcI">
@@ -1164,7 +1164,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0fn-Cw-tUk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3335" y="-1127"/>
+            <point key="canvasLocation" x="4519" y="2233"/>
         </scene>
         <!--Visited View Controller-->
         <scene sceneID="kJf-56-jVf">
@@ -1301,7 +1301,7 @@
                     </connections>
                 </searchDisplayController>
             </objects>
-            <point key="canvasLocation" x="2621" y="-1115"/>
+            <point key="canvasLocation" x="4469" y="1221"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="OOk-YR-pRO">
@@ -1320,373 +1320,12 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1C2-wx-dvr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1246" y="-297"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="tfF-mS-4fn">
-            <objects>
-                <viewController id="slu-JR-Je8" customClass="ViewController" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="odh-BV-yaL"/>
-                        <viewControllerLayoutGuide type="bottom" id="yc0-CL-i8Q"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="Jcb-09-mC9">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="MainMenu.png" translatesAutoresizingMaskIntoConstraints="NO" id="quq-Tx-DYp">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                            </imageView>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Candy Crush" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cte-1g-FIJ">
-                                <rect key="frame" x="20" y="203" width="280" height="78"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="45"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="The Tastiest Tutorial Ever!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pX6-3h-3dd">
-                                <rect key="frame" x="48" y="273" width="225" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qZr-Wd-UfG">
-                                <rect key="frame" x="34" y="326" width="253" height="130"/>
-                                <string key="text">Swap two candies next to each other! Try to get three or four in a row to earn points! Get as many points as you can in 10 moves!</string>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pxH-b5-7X6">
-                                <rect key="frame" x="96" y="302" width="128" height="30"/>
-                                <state key="normal" title="Start Game!">
-                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="nbo-vO-Lu2" kind="modal" id="2cW-tH-d4t"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="gXQ-sq-r5d" sceneMemberID="firstResponder"/>
-            </objects>
-        </scene>
-        <!--Game-->
-        <scene sceneID="QHJ-J0-7A8">
-            <objects>
-                <viewController id="nbo-vO-Lu2" customClass="Game" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="drh-9w-GZb"/>
-                        <viewControllerLayoutGuide type="bottom" id="CVj-34-KKK"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="iKG-P7-2h0">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="GameBackGround.png" translatesAutoresizingMaskIntoConstraints="NO" id="UmK-ld-oGm">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="SelectedCandy.png" translatesAutoresizingMaskIntoConstraints="NO" id="epa-tL-ENb">
-                                <rect key="frame" x="34" y="78" width="38" height="38"/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="SelectedCandy.png" translatesAutoresizingMaskIntoConstraints="NO" id="W6T-9S-ELs">
-                                <rect key="frame" x="106" y="78" width="38" height="38"/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="SelectedCandy.png" translatesAutoresizingMaskIntoConstraints="NO" id="tpS-LN-jnm">
-                                <rect key="frame" x="176" y="78" width="38" height="38"/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="SelectedCandy.png" translatesAutoresizingMaskIntoConstraints="NO" id="3PI-5N-mVm">
-                                <rect key="frame" x="248" y="78" width="38" height="38"/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="SelectedCandy.png" translatesAutoresizingMaskIntoConstraints="NO" id="ZnD-Po-n8H">
-                                <rect key="frame" x="34" y="147" width="38" height="38"/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="SelectedCandy.png" translatesAutoresizingMaskIntoConstraints="NO" id="dpV-qg-YFq">
-                                <rect key="frame" x="106" y="147" width="38" height="38"/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="SelectedCandy.png" translatesAutoresizingMaskIntoConstraints="NO" id="jSC-OB-gvk">
-                                <rect key="frame" x="176" y="147" width="38" height="38"/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="SelectedCandy.png" translatesAutoresizingMaskIntoConstraints="NO" id="IGi-sV-Qcc">
-                                <rect key="frame" x="248" y="147" width="38" height="38"/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="SelectedCandy.png" translatesAutoresizingMaskIntoConstraints="NO" id="Qtm-w4-11o">
-                                <rect key="frame" x="34" y="212" width="38" height="38"/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="SelectedCandy.png" translatesAutoresizingMaskIntoConstraints="NO" id="DHK-Og-VuG">
-                                <rect key="frame" x="106" y="212" width="38" height="38"/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="SelectedCandy.png" translatesAutoresizingMaskIntoConstraints="NO" id="y5b-8z-kEj">
-                                <rect key="frame" x="176" y="212" width="38" height="38"/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="SelectedCandy.png" translatesAutoresizingMaskIntoConstraints="NO" id="eo7-OX-2U5">
-                                <rect key="frame" x="248" y="212" width="38" height="38"/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="SelectedCandy.png" translatesAutoresizingMaskIntoConstraints="NO" id="xUi-Yt-aTK">
-                                <rect key="frame" x="34" y="278" width="38" height="38"/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="SelectedCandy.png" translatesAutoresizingMaskIntoConstraints="NO" id="PgE-vk-g9f">
-                                <rect key="frame" x="106" y="278" width="38" height="38"/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="SelectedCandy.png" translatesAutoresizingMaskIntoConstraints="NO" id="cAL-L3-sXV">
-                                <rect key="frame" x="176" y="278" width="38" height="38"/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="SelectedCandy.png" translatesAutoresizingMaskIntoConstraints="NO" id="zXJ-EC-ePM">
-                                <rect key="frame" x="248" y="278" width="38" height="38"/>
-                            </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qye-qU-Nd0">
-                                <rect key="frame" x="38" y="82" width="30" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                <state key="normal" image="BlueCandy.png">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="Candy1Button:" destination="nbo-vO-Lu2" eventType="touchUpInside" id="jy0-Cz-e5Q"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c6B-Ag-FiO">
-                                <rect key="frame" x="110" y="82" width="30" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                <state key="normal" image="GreenCandy.png">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="Candy2Button:" destination="nbo-vO-Lu2" eventType="touchUpInside" id="bZk-BP-JdV"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l88-3k-BYd">
-                                <rect key="frame" x="180" y="82" width="30" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                <state key="normal" image="BlueCandy.png">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="Candy3Button:" destination="nbo-vO-Lu2" eventType="touchUpInside" id="BPm-jh-U2O"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jsR-qu-kId">
-                                <rect key="frame" x="252" y="82" width="30" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                <state key="normal" image="PinkCandy.png">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="Candy4Button:" destination="nbo-vO-Lu2" eventType="touchUpInside" id="9Ss-Cv-Bcl"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hwc-uU-BAe">
-                                <rect key="frame" x="38" y="151" width="30" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                <state key="normal" image="PinkCandy.png">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="Candy5Button:" destination="nbo-vO-Lu2" eventType="touchUpInside" id="KbV-jK-0s2"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bWc-Mh-TXI">
-                                <rect key="frame" x="110" y="151" width="30" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                <state key="normal" image="OrangeCandy.png">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="Candy6Button:" destination="nbo-vO-Lu2" eventType="touchUpInside" id="jag-Pt-oVx"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iVm-py-8E0">
-                                <rect key="frame" x="180" y="151" width="30" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                <state key="normal" image="OrangeCandy.png">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="Candy7Button:" destination="nbo-vO-Lu2" eventType="touchUpInside" id="vYN-fL-Zbw"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DE3-NL-o4U">
-                                <rect key="frame" x="252" y="151" width="30" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                <state key="normal" image="PinkCandy.png">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="Candy8Button:" destination="nbo-vO-Lu2" eventType="touchUpInside" id="q1n-5Y-Aen"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SnB-WZ-gQR">
-                                <rect key="frame" x="38" y="216" width="30" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                <state key="normal" image="GreenCandy.png">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="Candy9Button:" destination="nbo-vO-Lu2" eventType="touchUpInside" id="63s-Xl-Ztd"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1n7-dr-cDw">
-                                <rect key="frame" x="110" y="216" width="30" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                <state key="normal" image="GreenCandy.png">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="Candy10Button:" destination="nbo-vO-Lu2" eventType="touchUpInside" id="5hx-NY-obt"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4VD-15-mN0">
-                                <rect key="frame" x="180" y="216" width="30" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                <state key="normal" image="BlueCandy.png">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="Candy11Button:" destination="nbo-vO-Lu2" eventType="touchUpInside" id="pEb-0h-XFD"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tBs-FR-Kul">
-                                <rect key="frame" x="252" y="216" width="30" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                <state key="normal" image="GreenCandy.png">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="Candy12Button:" destination="nbo-vO-Lu2" eventType="touchUpInside" id="yul-0x-TZ6"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qut-y2-inG">
-                                <rect key="frame" x="38" y="282" width="30" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                <state key="normal" image="GreenCandy.png">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="Candy13Button:" destination="nbo-vO-Lu2" eventType="touchUpInside" id="ldm-dj-uCn"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Apd-lx-gKM">
-                                <rect key="frame" x="110" y="282" width="30" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                <state key="normal" image="BlueCandy.png">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="Candy14Button:" destination="nbo-vO-Lu2" eventType="touchUpInside" id="GZU-7T-GdU"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VNy-wm-88f">
-                                <rect key="frame" x="180" y="282" width="30" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                <state key="normal" image="OrangeCandy.png">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="Candy15Button:" destination="nbo-vO-Lu2" eventType="touchUpInside" id="CBg-DC-FGZ"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bPg-dc-yjj">
-                                <rect key="frame" x="252" y="282" width="30" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                <state key="normal" image="BlueCandy.png">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="Candy16Button:" destination="nbo-vO-Lu2" eventType="touchUpInside" id="ffF-ON-ooz"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Moves Left:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MU9-AM-L9i">
-                                <rect key="frame" x="71" y="349" width="179" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Score:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EvM-EY-793">
-                                <rect key="frame" x="59" y="384" width="202" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="High Score:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vHH-ek-1Dk">
-                                <rect key="frame" x="71" y="423" width="179" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gtA-bJ-tin">
-                                <rect key="frame" x="38" y="523" width="248" height="30"/>
-                                <state key="normal" title="Shuffle! (Costs 2 Moves!)">
-                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="Shuffle:" destination="nbo-vO-Lu2" eventType="touchUpInside" id="oaq-df-fEQ"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CFa-Wc-qJi">
-                                <rect key="frame" x="-15" y="370" width="137" height="30"/>
-                                <state key="normal" title="Exit">
-                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="slu-JR-Je8" kind="modal" id="24S-Y7-HGK"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                    </view>
-                    <connections>
-                        <outlet property="Candy1" destination="Qye-qU-Nd0" id="zCF-zb-2xw"/>
-                        <outlet property="Candy10" destination="1n7-dr-cDw" id="XSw-XU-Dt5"/>
-                        <outlet property="Candy10Selected" destination="DHK-Og-VuG" id="hBX-1B-5Gl"/>
-                        <outlet property="Candy11" destination="4VD-15-mN0" id="xwn-oK-BBm"/>
-                        <outlet property="Candy11Selected" destination="y5b-8z-kEj" id="TGV-xS-qfg"/>
-                        <outlet property="Candy12" destination="tBs-FR-Kul" id="4Ce-DM-g6i"/>
-                        <outlet property="Candy12Selected" destination="eo7-OX-2U5" id="UYz-Tp-9fI"/>
-                        <outlet property="Candy13" destination="qut-y2-inG" id="7HI-uZ-RXz"/>
-                        <outlet property="Candy13Selected" destination="xUi-Yt-aTK" id="bNv-3l-ajn"/>
-                        <outlet property="Candy14" destination="Apd-lx-gKM" id="vTH-iz-gW3"/>
-                        <outlet property="Candy14Selected" destination="PgE-vk-g9f" id="hNB-FI-jsR"/>
-                        <outlet property="Candy15" destination="VNy-wm-88f" id="EVB-ud-5ee"/>
-                        <outlet property="Candy15Selected" destination="cAL-L3-sXV" id="LVL-jA-lsX"/>
-                        <outlet property="Candy16" destination="bPg-dc-yjj" id="pdy-gh-eTi"/>
-                        <outlet property="Candy16Selected" destination="zXJ-EC-ePM" id="m2w-R4-blH"/>
-                        <outlet property="Candy1Selected" destination="epa-tL-ENb" id="Sp9-uJ-eem"/>
-                        <outlet property="Candy2" destination="c6B-Ag-FiO" id="mnw-Ua-mfb"/>
-                        <outlet property="Candy2Selected" destination="W6T-9S-ELs" id="S57-3A-72m"/>
-                        <outlet property="Candy3" destination="l88-3k-BYd" id="f4C-yU-eyp"/>
-                        <outlet property="Candy3Selected" destination="tpS-LN-jnm" id="KDL-V6-8uA"/>
-                        <outlet property="Candy4" destination="jsR-qu-kId" id="Ry8-7q-SK2"/>
-                        <outlet property="Candy4Selected" destination="3PI-5N-mVm" id="WAR-Ap-Bad"/>
-                        <outlet property="Candy5" destination="hwc-uU-BAe" id="9s3-UF-O0T"/>
-                        <outlet property="Candy5Selected" destination="ZnD-Po-n8H" id="1Q7-lP-ZmN"/>
-                        <outlet property="Candy6" destination="bWc-Mh-TXI" id="MAF-hX-WTd"/>
-                        <outlet property="Candy6Selected" destination="dpV-qg-YFq" id="22x-bN-kmg"/>
-                        <outlet property="Candy7" destination="iVm-py-8E0" id="WKh-Ga-h8W"/>
-                        <outlet property="Candy7Selected" destination="jSC-OB-gvk" id="TqP-2b-pXh"/>
-                        <outlet property="Candy8" destination="DE3-NL-o4U" id="Bqj-sS-dAA"/>
-                        <outlet property="Candy8Selected" destination="IGi-sV-Qcc" id="Vm1-EB-CP5"/>
-                        <outlet property="Candy9" destination="SnB-WZ-gQR" id="1hf-mx-aQb"/>
-                        <outlet property="Candy9Selected" destination="Qtm-w4-11o" id="96F-KI-T22"/>
-                        <outlet property="Exit" destination="CFa-Wc-qJi" id="L3E-RX-QBu"/>
-                        <outlet property="HighScore" destination="vHH-ek-1Dk" id="sgP-xE-XLC"/>
-                        <outlet property="MovesLeft" destination="MU9-AM-L9i" id="S29-2y-RNJ"/>
-                        <outlet property="Score" destination="EvM-EY-793" id="iUa-WO-TdT"/>
-                        <outlet property="Shuffle" destination="gtA-bJ-tin" id="aAk-Ey-l5W"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="cnA-LA-YJv" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="5348" y="-424"/>
+            <point key="canvasLocation" x="5582" y="1224"/>
         </scene>
     </scenes>
     <resources>
         <image name="BirdUp.png" width="40" height="40"/>
-        <image name="BlueCandy.png" width="320" height="480"/>
         <image name="GameBack.png" width="320" height="480"/>
-        <image name="GameBackGround.png" width="320" height="480"/>
-        <image name="GreenCandy.png" width="320" height="480"/>
-        <image name="MainMenu.png" width="320" height="480"/>
-        <image name="OrangeCandy.png" width="320" height="480"/>
-        <image name="PinkCandy.png" width="320" height="480"/>
-        <image name="SelectedCandy.png" width="320" height="480"/>
         <image name="Tunnel.png" width="50" height="100"/>
         <image name="WhiteStar" width="1979" height="1962"/>
         <image name="burger.png" width="19" height="17"/>
@@ -1694,8 +1333,8 @@
         <image name="ok" width="600" height="296"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="ofM-AI-3BJ"/>
-        <segue reference="pU7-Mv-mbd"/>
+        <segue reference="f1o-LD-0Oh"/>
+        <segue reference="d0P-gd-MM3"/>
         <segue reference="uy4-x5-2D8"/>
     </inferredMetricsTieBreakers>
 </document>
