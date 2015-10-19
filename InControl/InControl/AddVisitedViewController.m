@@ -14,8 +14,16 @@
 @interface AddVisitedViewController ()
 @property (weak, nonatomic) IBOutlet UITextField *cityTextField;
 @property (weak, nonatomic) IBOutlet UITextField *impressionTextField;
-@property (weak, nonatomic) IBOutlet UITextField *rateTextField;
 @property (weak, nonatomic) IBOutlet UIImageView *imageView;
+@property (weak, nonatomic) IBOutlet UIButton *rate1Button;
+@property (weak, nonatomic) IBOutlet UIButton *rate2Button;
+@property (weak, nonatomic) IBOutlet UIButton *rate3Button;
+@property (weak, nonatomic) IBOutlet UIButton *rate4Button;
+@property (weak, nonatomic) IBOutlet UIButton *rate5Button;
+@property (nonatomic) NSNumber *rateSelected;
+@property (nonatomic) UIImage *whiteStarBackground;
+@property (nonatomic) UIImage *yellowStarBackground;
+
 
 @property (nonatomic) UIImagePickerController *picker;
 @property (nonatomic) UIImagePickerController *picker2;
@@ -30,6 +38,10 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    self.whiteStarBackground = [UIImage imageNamed:@"WhiteStar"];
+    self.yellowStarBackground = [UIImage imageNamed:@"YellowStar"];
+    self.rateSelected = @1;
+
     [self setupNavigationBar];
     
     AppDelegate *delegate = [UIApplication sharedApplication].delegate;
@@ -58,7 +70,7 @@
     
     NSNumberFormatter *f = [[NSNumberFormatter alloc] init];
     f.numberStyle = NSNumberFormatterDecimalStyle;
-    self.city.rate = [f numberFromString:self.rateTextField.text];
+    self.city.rate = self.rateSelected;
     
     self.city.impression = self.impressionTextField.text;
     
@@ -97,5 +109,56 @@
 - (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker {
     [self dismissViewControllerAnimated:YES completion:NULL];
 }
+
+
+
+- (IBAction)rate1Selected:(UIButton *)sender {
+    self.rateSelected = @1;
+    [self.rate1Button setBackgroundImage:self.yellowStarBackground forState:UIControlStateNormal];
+    [self.rate2Button setBackgroundImage:self.whiteStarBackground forState:UIControlStateNormal];
+    [self.rate3Button setBackgroundImage:self.whiteStarBackground forState:UIControlStateNormal];
+    [self.rate4Button setBackgroundImage:self.whiteStarBackground forState:UIControlStateNormal];
+    [self.rate5Button setBackgroundImage:self.yellowStarBackground forState:UIControlStateNormal];
+}
+- (IBAction)rate2Selected:(UIButton *)sender {
+    self.rateSelected = @2;
+    NSLog(@"2222");
+    [self.rate1Button setBackgroundImage:self.yellowStarBackground forState:UIControlStateNormal];
+    NSLog(@"2222 %@",self.whiteStarBackground);
+    NSLog(@"2222 %@",self.yellowStarBackground);
+
+    [self.rate2Button setBackgroundImage:self.yellowStarBackground forState:UIControlStateNormal];
+    [self.rate3Button setBackgroundImage:self.whiteStarBackground forState:UIControlStateNormal];
+    [self.rate4Button setBackgroundImage:self.whiteStarBackground forState:UIControlStateNormal];
+    [self.rate5Button setBackgroundImage:self.whiteStarBackground forState:UIControlStateNormal];
+}
+- (IBAction)rate3Selected:(UIButton *)sender {
+    self.rateSelected = @3;
+    [self.rate1Button setBackgroundImage:self.yellowStarBackground forState:UIControlStateNormal];
+    [self.rate2Button setBackgroundImage:self.yellowStarBackground forState:UIControlStateNormal];
+    [self.rate3Button setBackgroundImage:self.yellowStarBackground forState:UIControlStateNormal];
+    [self.rate4Button setBackgroundImage:self.whiteStarBackground forState:UIControlStateNormal];
+    [self.rate5Button setBackgroundImage:self.whiteStarBackground forState:UIControlStateNormal];
+}
+- (IBAction)rate4Selected:(UIButton *)sender {
+    self.rateSelected = @4;
+    [self.rate1Button setBackgroundImage:self.yellowStarBackground forState:UIControlStateNormal];
+    [self.rate2Button setBackgroundImage:self.yellowStarBackground forState:UIControlStateNormal];
+    [self.rate3Button setBackgroundImage:self.yellowStarBackground forState:UIControlStateNormal];
+    [self.rate4Button setBackgroundImage:self.yellowStarBackground forState:UIControlStateNormal];
+    [self.rate5Button setBackgroundImage:self.whiteStarBackground forState:UIControlStateNormal];
+}
+- (IBAction)rate5Selected:(UIButton *)sender {
+    self.rateSelected = @5;
+    [self.rate1Button setBackgroundImage:self.yellowStarBackground forState:UIControlStateNormal];
+    [self.rate2Button setBackgroundImage:self.yellowStarBackground forState:UIControlStateNormal];
+    [self.rate3Button setBackgroundImage:self.yellowStarBackground forState:UIControlStateNormal];
+    [self.rate4Button setBackgroundImage:self.yellowStarBackground forState:UIControlStateNormal];
+    [self.rate5Button setBackgroundImage:self.yellowStarBackground forState:UIControlStateNormal];
+}
+
+
+
+
 
 @end

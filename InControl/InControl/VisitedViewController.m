@@ -28,7 +28,22 @@ UITableViewDelegate
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+    [self sorting];
+    self.tableView.dataSource = self;
+    self.tableView.delegate = self;
+    [self.tableView reloadData];
+
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    [self sorting];
+    [self.tableView reloadData];
+
+}
+
+
+-(void) sorting {
     AppDelegate *delegate = [UIApplication sharedApplication].delegate;
     
     NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] initWithEntityName:@"City"];
@@ -42,18 +57,9 @@ UITableViewDelegate
     self.fetchedResultsController.delegate = self;
     
     [self.fetchedResultsController performFetch:nil];
-    
-    self.tableView.dataSource = self;
-    self.tableView.delegate = self;
-    
-}
-
-- (void)viewWillAppear:(BOOL)animated {
-    [super viewWillAppear:animated];
     [self.tableView reloadData];
+
 }
-
-
 
 #pragma mark - Table view data source
 
