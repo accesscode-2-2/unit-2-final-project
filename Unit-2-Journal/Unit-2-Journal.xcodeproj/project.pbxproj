@@ -35,6 +35,8 @@
 		5A6A22891BD43952006E9FE7 /* Akkurat Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 5A6A22861BD4394E006E9FE7 /* Akkurat Bold.otf */; settings = {ASSET_TAGS = (); }; };
 		5A6A228A1BD43955006E9FE7 /* Akkurat Italic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 5A6A22871BD4394E006E9FE7 /* Akkurat Italic.otf */; settings = {ASSET_TAGS = (); }; };
 		5A6A228B1BD43958006E9FE7 /* Akkurat Light Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 5A6A22881BD4394E006E9FE7 /* Akkurat Light Regular.otf */; settings = {ASSET_TAGS = (); }; };
+		5A6A22911BD43A4A006E9FE7 /* CustomFontViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A6A22901BD43A4A006E9FE7 /* CustomFontViewController.m */; settings = {ASSET_TAGS = (); }; };
+		5AE959A11BD442C1007136F4 /* LaunchScreen.Storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5AE959A01BD442C1007136F4 /* LaunchScreen.Storyboard */; settings = {ASSET_TAGS = (); }; };
 		617F8769EFBE79517A02E6D0 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FAF24AD380284C55768010A2 /* libPods.a */; };
 		9A2937201BCC26FE00ACEEE0 /* JournalPost.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A29371F1BCC26FE00ACEEE0 /* JournalPost.m */; settings = {ASSET_TAGS = (); }; };
 		9A2FFC2F1BC84BF200E880D3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A2FFC2E1BC84BF200E880D3 /* main.m */; };
@@ -42,7 +44,6 @@
 		9A2FFC381BC84BF200E880D3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9A2FFC361BC84BF200E880D3 /* Main.storyboard */; };
 		9A2FFC3B1BC84BF200E880D3 /* Unit_2_Journal.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9A2FFC391BC84BF200E880D3 /* Unit_2_Journal.xcdatamodeld */; };
 		9A2FFC3D1BC84BF200E880D3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9A2FFC3C1BC84BF200E880D3 /* Assets.xcassets */; };
-		9A2FFC401BC84BF200E880D3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9A2FFC3E1BC84BF200E880D3 /* LaunchScreen.storyboard */; };
 		9A34656D1BCACDF40049337C /* iTunesSearchResult.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A34656C1BCACDF40049337C /* iTunesSearchResult.m */; settings = {ASSET_TAGS = (); }; };
 		9AAB40061BC9FABC00FD7227 /* APIManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AAB40051BC9FABC00FD7227 /* APIManager.m */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
@@ -90,6 +91,9 @@
 		5A6A22861BD4394E006E9FE7 /* Akkurat Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Akkurat Bold.otf"; sourceTree = "<group>"; };
 		5A6A22871BD4394E006E9FE7 /* Akkurat Italic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Akkurat Italic.otf"; sourceTree = "<group>"; };
 		5A6A22881BD4394E006E9FE7 /* Akkurat Light Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Akkurat Light Regular.otf"; sourceTree = "<group>"; };
+		5A6A228F1BD43A4A006E9FE7 /* CustomFontViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomFontViewController.h; sourceTree = "<group>"; };
+		5A6A22901BD43A4A006E9FE7 /* CustomFontViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomFontViewController.m; sourceTree = "<group>"; };
+		5AE959A01BD442C1007136F4 /* LaunchScreen.Storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.Storyboard; sourceTree = "<group>"; };
 		9A29371E1BCC26FE00ACEEE0 /* JournalPost.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JournalPost.h; sourceTree = "<group>"; };
 		9A29371F1BCC26FE00ACEEE0 /* JournalPost.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JournalPost.m; sourceTree = "<group>"; };
 		9A2FFC2A1BC84BF200E880D3 /* Unit-2-Journal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Unit-2-Journal.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -99,7 +103,6 @@
 		9A2FFC371BC84BF200E880D3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9A2FFC3A1BC84BF200E880D3 /* Unit_2_Journal.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Unit_2_Journal.xcdatamodel; sourceTree = "<group>"; };
 		9A2FFC3C1BC84BF200E880D3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		9A2FFC3F1BC84BF200E880D3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9A2FFC411BC84BF200E880D3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9A34656B1BCACDF40049337C /* iTunesSearchResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iTunesSearchResult.h; sourceTree = "<group>"; };
 		9A34656C1BCACDF40049337C /* iTunesSearchResult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iTunesSearchResult.m; sourceTree = "<group>"; };
@@ -194,7 +197,9 @@
 				9AAB40021BC9EC7300FD7227 /* ViewControllers */,
 				9A2FFC361BC84BF200E880D3 /* Main.storyboard */,
 				9A2FFC3C1BC84BF200E880D3 /* Assets.xcassets */,
-				9A2FFC3E1BC84BF200E880D3 /* LaunchScreen.storyboard */,
+				5AE959A01BD442C1007136F4 /* LaunchScreen.Storyboard */,
+				5A6A228F1BD43A4A006E9FE7 /* CustomFontViewController.h */,
+				5A6A22901BD43A4A006E9FE7 /* CustomFontViewController.m */,
 				9A2FFC411BC84BF200E880D3 /* Info.plist */,
 				9A2FFC391BC84BF200E880D3 /* Unit_2_Journal.xcdatamodeld */,
 				9A2FFC2D1BC84BF200E880D3 /* Supporting Files */,
@@ -290,7 +295,7 @@
 				TargetAttributes = {
 					9A2FFC291BC84BF100E880D3 = {
 						CreatedOnToolsVersion = 7.0;
-						DevelopmentTeam = 5F2A5ZZ575;
+						DevelopmentTeam = Z6GBYPK592;
 					};
 				};
 			};
@@ -319,8 +324,8 @@
 			files = (
 				5A6A22811BD3FE31006E9FE7 /* basictitlefont.ttf in Resources */,
 				4DCBE13F1BC9943D0075BA2C /* lean_startup.png in Resources */,
+				5AE959A11BD442C1007136F4 /* LaunchScreen.Storyboard in Resources */,
 				5A6A228A1BD43955006E9FE7 /* Akkurat Italic.otf in Resources */,
-				9A2FFC401BC84BF200E880D3 /* LaunchScreen.storyboard in Resources */,
 				4D7FE2A61BCC41A00036E58E /* WishListTableViewCell.xib in Resources */,
 				4D7FE29E1BCC32170036E58E /* SearchAPITableViewCell.xib in Resources */,
 				4DCBE1441BC9943D0075BA2C /* x-files.png in Resources */,
@@ -396,6 +401,7 @@
 			files = (
 				9A2FFC321BC84BF200E880D3 /* AppDelegate.m in Sources */,
 				9A34656D1BCACDF40049337C /* iTunesSearchResult.m in Sources */,
+				5A6A22911BD43A4A006E9FE7 /* CustomFontViewController.m in Sources */,
 				4D7FE2941BCC12050036E58E /* TabBarViewController.m in Sources */,
 				4DCBE14A1BC9ADAE0075BA2C /* CreateJournalEntryViewController.m in Sources */,
 				5A50331D1BC8D99D001CBA5C /* LoginViewController.m in Sources */,
@@ -424,14 +430,6 @@
 				9A2FFC371BC84BF200E880D3 /* Base */,
 			);
 			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		9A2FFC3E1BC84BF200E880D3 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				9A2FFC3F1BC84BF200E880D3 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

@@ -4,6 +4,25 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="Akkurat Bold.otf">
+            <string>Akkurat-Bold</string>
+            <string>Akkurat-Bold</string>
+            <string>Akkurat-Bold</string>
+        </mutableArray>
+        <mutableArray key="Akkurat Regular.otf">
+            <string>Akkurat</string>
+            <string>Akkurat</string>
+            <string>Akkurat</string>
+            <string>Akkurat</string>
+            <string>Akkurat</string>
+            <string>Akkurat</string>
+            <string>Akkurat</string>
+            <string>Akkurat</string>
+            <string>Akkurat</string>
+            <string>Akkurat</string>
+        </mutableArray>
+    </customFonts>
     <scenes>
         <!--Main Table View Controller-->
         <scene sceneID="n2d-u0-8vM">
@@ -201,10 +220,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="lets add the social stuff over here! " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qLr-OV-7JA">
-                                <rect key="frame" x="169" y="291" width="264" height="20"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="lets add the social stuff over here! " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qLr-OV-7JA">
+                                <rect key="frame" x="165" y="290" width="270.5" height="20.5"/>
                                 <animations/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" name="Akkurat" family="Akkurat" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -329,6 +348,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="nSu-DZ-G40"/>
                                 </constraints>
+                                <fontDescription key="fontDescription" name="Akkurat" family="Akkurat" pointSize="15"/>
                                 <state key="normal" title="music">
                                     <color key="titleColor" red="1" green="0.96580194144491827" blue="0.065849877366854659" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
@@ -340,6 +360,7 @@
                                 <rect key="frame" x="120" y="20" width="120" height="50"/>
                                 <animations/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" name="Akkurat" family="Akkurat" pointSize="15"/>
                                 <state key="normal" title="movie">
                                     <color key="titleColor" red="0.0" green="0.98431378599999997" blue="0.31764706970000001" alpha="1" colorSpace="deviceRGB"/>
                                 </state>
@@ -362,6 +383,7 @@
                                 <rect key="frame" x="360" y="20" width="120" height="50"/>
                                 <animations/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" name="Akkurat" family="Akkurat" pointSize="15"/>
                                 <state key="normal" title="podcast">
                                     <color key="titleColor" red="0.98580998180000001" green="0.62003214620000002" blue="0.067037612610000005" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
@@ -373,6 +395,7 @@
                                 <rect key="frame" x="240" y="20" width="120" height="50"/>
                                 <animations/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" name="Akkurat" family="Akkurat" pointSize="15"/>
                                 <state key="normal" title="tv">
                                     <color key="titleColor" red="0.68431816999999995" green="0.90332986250000002" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
@@ -467,20 +490,21 @@
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HdG-mr-PTo">
                                         <rect key="frame" x="128" y="103" width="412" height="17"/>
                                         <animations/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <fontDescription key="fontDescription" name="Akkurat" family="Akkurat" pointSize="14"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" lineBreakMode="wordWrap" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f6q-RS-lgS">
-                                        <rect key="frame" x="128" y="84" width="412" height="19"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Title" lineBreakMode="wordWrap" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f6q-RS-lgS">
+                                        <rect key="frame" x="128" y="83" width="412" height="19"/>
                                         <animations/>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                        <fontDescription key="fontDescription" name="Akkurat" family="Akkurat" pointSize="16"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oCt-vd-4RS">
-                                        <rect key="frame" x="515" y="0.0" width="37" height="30"/>
+                                        <rect key="frame" x="516" y="0.0" width="36" height="30"/>
                                         <animations/>
+                                        <fontDescription key="fontDescription" name="Akkurat" family="Akkurat" pointSize="15"/>
                                         <state key="normal" title="Done">
                                             <color key="titleColor" red="0.98580998180000001" green="0.62003214620000002" blue="0.067037612610000005" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
@@ -603,8 +627,9 @@
                                 <rect key="frame" x="0.0" y="411" width="600" height="60"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bIK-7d-Vfl">
-                                        <rect key="frame" x="250" y="15" width="101" height="30"/>
+                                        <rect key="frame" x="251" y="15" width="99" height="30"/>
                                         <animations/>
+                                        <fontDescription key="fontDescription" name="Akkurat-Bold" family="Akkurat" pointSize="15"/>
                                         <state key="normal" title="Log To Journal">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
@@ -810,65 +835,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2sS-fd-D0X">
-                                <rect key="frame" x="20" y="20" width="560" height="140"/>
-                                <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="P8h-8Q-AZm">
-                                        <rect key="frame" x="0.0" y="5" width="130" height="130"/>
-                                        <animations/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="130" id="T4f-sf-dem"/>
-                                            <constraint firstAttribute="height" constant="130" id="ZGH-hy-6dT"/>
-                                        </constraints>
-                                    </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" lineBreakMode="characterWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uPb-Kv-PyA">
-                                        <rect key="frame" x="145" y="5" width="415" height="30"/>
-                                        <animations/>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
-                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eHa-Fq-bcU">
-                                        <rect key="frame" x="145" y="111" width="415" height="24"/>
-                                        <animations/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RUW-ww-VHC">
-                                        <rect key="frame" x="145" y="58" width="415" height="24"/>
-                                        <animations/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
-                                <animations/>
-                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstItem="P8h-8Q-AZm" firstAttribute="top" secondItem="2sS-fd-D0X" secondAttribute="top" constant="5" id="4Iw-Mk-e5C"/>
-                                    <constraint firstItem="eHa-Fq-bcU" firstAttribute="bottom" secondItem="P8h-8Q-AZm" secondAttribute="bottom" id="9Ij-qz-1nr"/>
-                                    <constraint firstItem="eHa-Fq-bcU" firstAttribute="leading" secondItem="P8h-8Q-AZm" secondAttribute="trailing" constant="15" id="AOR-fg-jjQ"/>
-                                    <constraint firstItem="RUW-ww-VHC" firstAttribute="centerY" secondItem="P8h-8Q-AZm" secondAttribute="centerY" id="B8H-cZ-Twb"/>
-                                    <constraint firstItem="P8h-8Q-AZm" firstAttribute="centerY" secondItem="2sS-fd-D0X" secondAttribute="centerY" id="IsG-6d-QoO"/>
-                                    <constraint firstItem="uPb-Kv-PyA" firstAttribute="top" secondItem="P8h-8Q-AZm" secondAttribute="top" id="RKA-2y-eIC"/>
-                                    <constraint firstAttribute="bottom" secondItem="P8h-8Q-AZm" secondAttribute="bottom" constant="5" id="UCI-7U-pf5"/>
-                                    <constraint firstAttribute="trailing" secondItem="eHa-Fq-bcU" secondAttribute="trailing" id="gYy-RN-0dc"/>
-                                    <constraint firstItem="uPb-Kv-PyA" firstAttribute="leading" secondItem="P8h-8Q-AZm" secondAttribute="trailing" constant="15" id="gwF-Qt-P6G"/>
-                                    <constraint firstItem="P8h-8Q-AZm" firstAttribute="leading" secondItem="2sS-fd-D0X" secondAttribute="leading" id="nTp-YF-tYN"/>
-                                    <constraint firstAttribute="trailing" secondItem="RUW-ww-VHC" secondAttribute="trailing" id="p8j-yz-JRL"/>
-                                    <constraint firstItem="RUW-ww-VHC" firstAttribute="leading" secondItem="P8h-8Q-AZm" secondAttribute="trailing" constant="15" id="wQg-ht-nEO"/>
-                                    <constraint firstAttribute="trailing" secondItem="uPb-Kv-PyA" secondAttribute="trailing" id="yeu-We-Dj2"/>
-                                </constraints>
-                            </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bI1-9Y-Lhn">
-                                <rect key="frame" x="20" y="160" width="560" height="250"/>
+                                <rect key="frame" x="20" y="150" width="560" height="260"/>
                                 <subviews>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="riX-qw-M2j">
-                                        <rect key="frame" x="5" y="5" width="550" height="240"/>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" usesAttributedText="YES" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="riX-qw-M2j">
+                                        <rect key="frame" x="5" y="5" width="550" height="250"/>
                                         <animations/>
-                                        <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <attributedString key="attributedText"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
                                 </subviews>
@@ -930,9 +903,10 @@
                                 <rect key="frame" x="20" y="485" width="560" height="66"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1br-zx-rKo">
-                                        <rect key="frame" x="258" y="18" width="45" height="30"/>
+                                        <rect key="frame" x="250.5" y="18" width="59" height="30"/>
                                         <animations/>
-                                        <state key="normal" title="Delete"/>
+                                        <fontDescription key="fontDescription" name="Akkurat-Bold" family="Akkurat" pointSize="15"/>
+                                        <state key="normal" title="RETURN"/>
                                         <connections>
                                             <action selector="deleteButtonTapped:" destination="z1K-z0-Vef" eventType="touchUpInside" id="umA-zo-2bu"/>
                                         </connections>
@@ -948,6 +922,58 @@
                                 <variation key="default">
                                     <mask key="constraints">
                                         <exclude reference="4cP-Gz-KpJ"/>
+                                    </mask>
+                                </variation>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2sS-fd-D0X">
+                                <rect key="frame" x="20" y="20" width="560" height="130"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="P8h-8Q-AZm">
+                                        <rect key="frame" x="0.0" y="5" width="120" height="120"/>
+                                        <animations/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="120" id="T4f-sf-dem"/>
+                                            <constraint firstAttribute="height" constant="120" id="ZGH-hy-6dT"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Title" lineBreakMode="characterWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uPb-Kv-PyA">
+                                        <rect key="frame" x="128" y="8" width="425" height="19.5"/>
+                                        <animations/>
+                                        <fontDescription key="fontDescription" name="Akkurat-Bold" family="Akkurat" pointSize="16"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eHa-Fq-bcU">
+                                        <rect key="frame" x="128" y="108" width="424" height="17"/>
+                                        <animations/>
+                                        <fontDescription key="fontDescription" name="Akkurat" family="Akkurat" pointSize="14"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Title" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RUW-ww-VHC">
+                                        <rect key="frame" x="128" y="69" width="425" height="17"/>
+                                        <animations/>
+                                        <fontDescription key="fontDescription" name="Akkurat" family="Akkurat" pointSize="14"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <animations/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="P8h-8Q-AZm" firstAttribute="top" secondItem="2sS-fd-D0X" secondAttribute="top" constant="5" id="4Iw-Mk-e5C"/>
+                                    <constraint firstItem="eHa-Fq-bcU" firstAttribute="bottom" secondItem="P8h-8Q-AZm" secondAttribute="bottom" id="Chb-Da-5rL"/>
+                                    <constraint firstAttribute="trailing" secondItem="eHa-Fq-bcU" secondAttribute="trailing" constant="8" id="Hpo-YO-zPa"/>
+                                    <constraint firstItem="P8h-8Q-AZm" firstAttribute="centerY" secondItem="2sS-fd-D0X" secondAttribute="centerY" id="IsG-6d-QoO"/>
+                                    <constraint firstAttribute="bottom" secondItem="P8h-8Q-AZm" secondAttribute="bottom" constant="5" id="UCI-7U-pf5"/>
+                                    <constraint firstItem="P8h-8Q-AZm" firstAttribute="leading" secondItem="2sS-fd-D0X" secondAttribute="leading" id="nTp-YF-tYN"/>
+                                    <constraint firstItem="eHa-Fq-bcU" firstAttribute="leading" secondItem="P8h-8Q-AZm" secondAttribute="trailing" constant="8" id="nZv-l4-XuW"/>
+                                    <constraint firstAttribute="height" constant="125" id="pV2-le-mwS"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="pV2-le-mwS"/>
+                                        <exclude reference="4Iw-Mk-e5C"/>
                                     </mask>
                                 </variation>
                             </view>
@@ -1017,6 +1043,6 @@
         <image name="rating_star_filled" width="128" height="128"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Ggq-sb-ccX"/>
+        <segue reference="a4i-zx-cvK"/>
     </inferredMetricsTieBreakers>
 </document>
