@@ -42,7 +42,6 @@ UITextFieldDelegate
 @property (nonatomic) JournalPost *journalPost; // for parse
 @property (nonatomic) NSString *mediaType; // for parse
 
-
 @end
 
 @implementation SearchAPIViewController
@@ -61,7 +60,7 @@ UITextFieldDelegate
     
     self.tableView.rowHeight = UITableViewAutomaticDimension;
     self.tableView.estimatedRowHeight = 35.0;
-    
+    [self.tableView setSeparatorColor:[UIColor whiteColor]];
 }
 
 #pragma mark - setup buttons
@@ -93,11 +92,6 @@ UITextFieldDelegate
 }
 
 - (IBAction)addToWishListButtonTapped:(id)sender {
-    
-//    WishListTableViewController *viewController = [[WishListTableViewController alloc]init];
-//    viewController.searchResult = self.passSearchResult;
-    
-    // SAVE the date, title, creator and image in parse, mark reviewed bool as NO
 
     JournalPost *myJournalPost = [[JournalPost alloc] init];
     
@@ -121,7 +115,7 @@ UITextFieldDelegate
  
     self.searchResults = [[NSMutableArray alloc]init];
     
-//First API Request - iTunes (music, ebooks, podcast)
+// First API Request - iTunes (music, ebooks, podcast)
     
     NSString *urlString = [NSString stringWithFormat:
                            @"https://itunes.apple.com/search?media=%@&term=%@",media,term];
@@ -135,13 +129,9 @@ UITextFieldDelegate
                     if (data != nil){
                         NSDictionary *json = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
                         
-                      // NSLog(@"%@",json);
-                        
                         NSArray *results = [json objectForKey:@"results"];
                         
-                      // NSLog(@"iTunes Results: %@",results);
-                        
-                        for (NSDictionary *result in results){
+                        for (NSDictionary *result in results) {
                             
                             NSString *artistName = [result objectForKey:@"artistName"];
                             NSString *albumName = [result objectForKey:@"collectionName"];
@@ -214,7 +204,6 @@ UITextFieldDelegate
                                 searchResult.mediaType = @"tv";
                                 
                                 [self.searchResults addObject:searchResult];
-                                
                             }
                         }
                     }
@@ -224,13 +213,10 @@ UITextFieldDelegate
 // Third API Request - for movies, including in-theatre
 
 // https://api.themoviedb.org/3/search/movie?api_key=a958839150c7c7c6333fd335128ea066&query=django
-
     
     NSString *urlStringThree = [NSString stringWithFormat:@"https://api.themoviedb.org/3/search/%@?api_key=a958839150c7c7c6333fd335128ea066&query=%@",media,term];
     
     NSString *encodedStringThree = [urlStringThree stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLQueryAllowedCharacterSet]];
-    
-   // NSLog(@"Movie String: %@",encodedStringThree);
     
     NSURL *urlThree = [NSURL URLWithString:encodedStringThree];
 
@@ -242,14 +228,12 @@ UITextFieldDelegate
                         
                         NSDictionary *results = [jsonThree valueForKey:@"results"];
                         
-                        // NSLog(@"Movie Results: %@",results);
-                        
                         for (NSDictionary *result in results){
                             
                             NSString *name = [result valueForKey:@"title"];
                             NSString *releaseDate = [result valueForKey:@"release_date"];
                             NSString *posterPath = [result valueForKey:@"poster_path"];
-                            
+                        
                             //http://image.tmdb.org/t/p/w500
                             
                             if ([self.media isEqualToString:@"movie"]){
@@ -257,41 +241,33 @@ UITextFieldDelegate
                                iTunesSearchResult *movieResult = [[iTunesSearchResult alloc]init];
                                 
                                 movieResult.albumOrMovieName = name;
-                                movieResult.artistName = releaseDate;
+                            movieResult.artistName = releaseDate;
                                 movieResult.artworkURL = [NSString stringWithFormat:@"http://image.tmdb.org/t/p/w500%@",posterPath];
                                 movieResult.mediaType = @"movie";
                                 
                                 [self.searchResults addObject:movieResult];
-                                
                             }
-                            
                             [self.tableView reloadData];
-                            
                         }
-                        
                     }
-                   
                 }];
     }
 
-- (BOOL)textFieldShouldReturn:(UITextField *)textField{
+- (BOOL)textFieldShouldReturn:(UITextField *)textField {
     
     [self.view endEditing:YES];
-    
     [self makeNewAPIRequestWithSearchTerm:textField.text
                                         inMedia:self.media];
-
-        
     return YES;
 }
 
 #pragma mark - set up table view
 
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     return 1;
 }
 
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return self.searchResults.count;
 }
 
@@ -329,12 +305,6 @@ UITextFieldDelegate
     iTunesSearchResult *searchResult = self.searchResults[indexPath.row];
     
     self.passSearchResult = searchResult;
-    
-
- //   NSLog(@"passed search results: %@", self.passSearchResult);
-    
-    // push view controller 
-    
 }
 
  #pragma mark - Navigation
@@ -342,16 +312,8 @@ UITextFieldDelegate
  - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     
      if ([[segue identifier]isEqualToString:@"pushToCreateJournalEntry"]) {
-     
-       //  NSLog(@"segue");
-
      CreateJournalEntryViewController *viewController = segue.destinationViewController;
      viewController.postSearchResult = self.passSearchResult;
-         
      }
-     
  }
-
-
-
 @end

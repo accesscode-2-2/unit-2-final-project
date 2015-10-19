@@ -35,6 +35,9 @@
     
     self.tableView.rowHeight = UITableViewAutomaticDimension;
     self.tableView.estimatedRowHeight = 35.0;
+    //[self.tableView setSeparatorColor:[UIColor whiteColor]];
+    [self.tableView setTableFooterView:[UIView new]]; // hide extra lines in empty tableview cells
+
     
     [self pullEntriesFromParse];
 }
@@ -110,6 +113,11 @@
     UIImage *image = [UIImage imageWithData:imageData];
     
     cell.artworkImage.image = image;
+    
+    cell.preservesSuperviewLayoutMargins = false;
+    cell.separatorInset = UIEdgeInsetsZero;
+    cell.layoutMargins = UIEdgeInsetsZero;
+    
     
     return cell;
 }

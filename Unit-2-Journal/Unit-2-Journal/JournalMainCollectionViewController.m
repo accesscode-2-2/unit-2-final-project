@@ -41,11 +41,8 @@
     
    // NSLog(@"All Journal Posts: %@", self.allJournalPosts);
     
-    
-    collectionImages = [NSMutableArray arrayWithObjects:@"destroyer.png", @"drake.png", @"big_nerd_ranch.png", @"talking_heads.png", @"true_detective", @"sleater_kinney.png", @"x-files.png", @"run_the_jewels.png", @"lean_startup.png", nil];
-    
     self.collectionView.alwaysBounceVertical = YES;
-    
+     
     [self runQuery]; // run Parse query to fetch saved data
 }
 
