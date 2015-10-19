@@ -16,6 +16,8 @@
 #import "CheckProgressViewController.h"
 #import "QuestionDetailVC.h"
 #import "MyHabitsTVC.h"
+#import "HabitInfoTVC.h"
+
 
 @interface MainPageVC ()
 <
@@ -230,6 +232,17 @@ QuestionDetailVCDelegate
         CheckProgressViewController *cp = (CheckProgressViewController *)[self.storyboard instantiateViewControllerWithIdentifier:@"checkProgressID"];
         [self presentViewController:cp animated:YES completion:nil];
     }
+    
+    else if (indexPath.row == 4) {
+        
+        UINavigationController *navigationController = [self.storyboard instantiateViewControllerWithIdentifier:@"HabitInfoNav"];
+        
+        HabitInfoTVC *hInfo = (HabitInfoTVC *) navigationController.topViewController;
+        
+        hInfo.habitsArray = self.habitsArray;
+        
+        [self presentViewController:navigationController animated:YES completion:nil];
+    }
     else if (indexPath.row ==  5){
         [self.user saveInBackground];
     }
@@ -237,6 +250,8 @@ QuestionDetailVCDelegate
     [tableView dismisWithIndexPath:indexPath];
     
 }
+
+
 
 - (void)showMyHabits{
     
