@@ -22,6 +22,9 @@ UITableViewDelegate
 @property (nonatomic) NSFetchedResultsController *fetchedResultsController;
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
+@property (nonatomic) NSSortDescriptor *sort;
+@property (weak, nonatomic) IBOutlet UISegmentedControl *segmentedControl;
+
 @end
 
 @implementation VisitedViewController
@@ -48,15 +51,33 @@ UITableViewDelegate
     
     NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] initWithEntityName:@"City"];
     
-    NSSortDescriptor *sort = [[NSSortDescriptor alloc] initWithKey:@"name" ascending:YES];
     
-    fetchRequest.sortDescriptors = @[sort];
+    
+    
+    
+    
+    if (self.segmentedControl.selectedSegmentIndex == 0)  {
+        
+        self.sort = [NSSortDescriptor sortDescriptorWithKey:@"name" ascending:YES];
+    }
+    else if (self.segmentedControl.selectedSegmentIndex == 1)  {
+        
+        self.sort = [NSSortDescriptor sortDescriptorWithKey:@"rate" ascending:NO];
+    }
+    
+    
+    fetchRequest.sortDescriptors = @[self.sort];
     
     self.fetchedResultsController = [[NSFetchedResultsController alloc] initWithFetchRequest:fetchRequest managedObjectContext:delegate.managedObjectContext sectionNameKeyPath:nil cacheName:nil];
     
     self.fetchedResultsController.delegate = self;
     
     [self.fetchedResultsController performFetch:nil];
+    [self.tableView reloadData];
+
+}
+- (IBAction)segmentSelected:(UISegmentedControl *)sender {
+    [self sorting];
     [self.tableView reloadData];
 
 }
@@ -79,7 +100,7 @@ UITableViewDelegate
     
     City *city = self.fetchedResultsController.fetchedObjects[indexPath.row];
     cell.textLabel.text = city.name;
-    cell.detailTextLabel.text = city.impression;
+    cell.detailTextLabel.text = [NSString stringWithFormat:@"%@", city.rate ];
     cell.imageView.image = [UIImage imageWithData:city.photo];
     
     return cell;

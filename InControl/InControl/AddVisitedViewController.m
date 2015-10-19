@@ -118,15 +118,11 @@
     [self.rate2Button setBackgroundImage:self.whiteStarBackground forState:UIControlStateNormal];
     [self.rate3Button setBackgroundImage:self.whiteStarBackground forState:UIControlStateNormal];
     [self.rate4Button setBackgroundImage:self.whiteStarBackground forState:UIControlStateNormal];
-    [self.rate5Button setBackgroundImage:self.yellowStarBackground forState:UIControlStateNormal];
+    [self.rate5Button setBackgroundImage:self.whiteStarBackground forState:UIControlStateNormal];
 }
 - (IBAction)rate2Selected:(UIButton *)sender {
     self.rateSelected = @2;
-    NSLog(@"2222");
     [self.rate1Button setBackgroundImage:self.yellowStarBackground forState:UIControlStateNormal];
-    NSLog(@"2222 %@",self.whiteStarBackground);
-    NSLog(@"2222 %@",self.yellowStarBackground);
-
     [self.rate2Button setBackgroundImage:self.yellowStarBackground forState:UIControlStateNormal];
     [self.rate3Button setBackgroundImage:self.whiteStarBackground forState:UIControlStateNormal];
     [self.rate4Button setBackgroundImage:self.whiteStarBackground forState:UIControlStateNormal];

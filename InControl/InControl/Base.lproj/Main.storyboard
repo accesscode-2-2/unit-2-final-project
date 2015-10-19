@@ -1209,6 +1209,9 @@
                                     <segment title="Name"/>
                                     <segment title="Rate"/>
                                 </segments>
+                                <connections>
+                                    <action selector="segmentSelected:" destination="Xs9-iS-hxb" eventType="valueChanged" id="bXj-ea-TSy"/>
+                                </connections>
                             </segmentedControl>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="gp4-Tm-eiu">
                                 <rect key="frame" x="0.0" y="131" width="600" height="469"/>
@@ -1283,6 +1286,7 @@
                     <navigationItem key="navigationItem" id="VRE-Xg-ruq"/>
                     <connections>
                         <outlet property="searchDisplayController" destination="gVS-1q-Q4g" id="Bdg-Kf-cBR"/>
+                        <outlet property="segmentedControl" destination="kew-ev-8Ke" id="uPl-hd-KQ5"/>
                         <outlet property="tableView" destination="gp4-Tm-eiu" id="Irp-0L-YfQ"/>
                     </connections>
                 </viewController>
