@@ -52,7 +52,7 @@
                                                      rightItemImage:nil];
     
     
-    YALTabBarItem *item2 = [[YALTabBarItem alloc] initWithItemImage:[UIImage imageNamed:@"add"]
+    YALTabBarItem *item2 = [[YALTabBarItem alloc] initWithItemImage:[UIImage imageNamed:@"add"] // we can add hidden left/right buttons here
                                                       leftItemImage:nil
                                                      rightItemImage:nil];
     

@@ -25,7 +25,7 @@
     self.allJournalPosts = [[NSMutableArray alloc]init];
     }
     
-    NSLog(@"Wish List Result: %@",self.searchResult);
+    // NSLog(@"Wish List Result: %@",self.searchResult);
     
     //    [self setUpSwipeGestures];
     
@@ -41,6 +41,8 @@
     
     [self pullEntriesFromParse];
 }
+
+
 
 - (void)pullEntriesFromParse {
     
@@ -114,6 +116,7 @@
     
     cell.artworkImage.image = image;
     
+    // format table view lines
     cell.preservesSuperviewLayoutMargins = false;
     cell.separatorInset = UIEdgeInsetsZero;
     cell.layoutMargins = UIEdgeInsetsZero;

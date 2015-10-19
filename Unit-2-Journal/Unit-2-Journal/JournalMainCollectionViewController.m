@@ -10,6 +10,8 @@
 #import <Parse/Parse.h>
 #import "ViewCompletedEntryViewController.h"
 
+
+
 @interface JournalMainCollectionViewController ()
 
 @end
@@ -131,6 +133,8 @@
     }
     
 }
+
+
 
 
 

@@ -11,8 +11,14 @@
             <string>Akkurat-Bold</string>
             <string>Akkurat-Bold</string>
             <string>Akkurat-Bold</string>
+            <string>Akkurat-Bold</string>
         </mutableArray>
         <mutableArray key="Akkurat Regular.otf">
+            <string>Akkurat</string>
+            <string>Akkurat</string>
+            <string>Akkurat</string>
+            <string>Akkurat</string>
+            <string>Akkurat</string>
             <string>Akkurat</string>
             <string>Akkurat</string>
             <string>Akkurat</string>
@@ -255,28 +261,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i6F-Oe-4xR">
-                                <rect key="frame" x="300" y="426" width="300" height="50"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="twc-ko-3Rx">
+                                <rect key="frame" x="0.0" y="145" width="600" height="281"/>
                                 <animations/>
-                                <color key="backgroundColor" red="1" green="0.5210467205" blue="0.69047673470000004" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="hZN-AM-gYR"/>
-                                </constraints>
-                                <state key="normal" title="Add to Wish List"/>
-                                <connections>
-                                    <action selector="addToWishListButtonTapped:" destination="0x4-Nu-mZ8" eventType="touchUpInside" id="pGb-oC-cak"/>
-                                </connections>
-                            </button>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="twc-ko-3Rx">
-                                <rect key="frame" x="0.0" y="120" width="600" height="306"/>
-                                <animations/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="separatorColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="APIResultsIdentifier" textLabel="wn8-3w-eKd" detailTextLabel="DsP-zu-9UZ" style="IBUITableViewCellStyleSubtitle" id="oHk-9R-1hr">
                                         <rect key="frame" x="0.0" y="28" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="oHk-9R-1hr" id="Q9h-u4-3sZ">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="wn8-3w-eKd">
@@ -302,44 +297,18 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4h9-oR-C40">
-                                <rect key="frame" x="0.0" y="70" width="600" height="50"/>
-                                <subviews>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Search" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="20" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="zob-sY-qha">
-                                        <rect key="frame" x="40" y="10" width="520" height="30"/>
-                                        <animations/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="350" id="FjN-tR-Pz2"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" autocapitalizationType="words" autocorrectionType="yes" spellCheckingType="yes"/>
-                                        <variation key="default">
-                                            <mask key="constraints">
-                                                <exclude reference="FjN-tR-Pz2"/>
-                                            </mask>
-                                        </variation>
-                                    </textField>
-                                </subviews>
-                                <animations/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="zob-sY-qha" secondAttribute="trailing" constant="40" id="2d1-5l-Hn0"/>
-                                    <constraint firstItem="zob-sY-qha" firstAttribute="leading" secondItem="4h9-oR-C40" secondAttribute="leading" constant="40" id="Yg5-BR-c5k"/>
-                                    <constraint firstItem="zob-sY-qha" firstAttribute="centerX" secondItem="4h9-oR-C40" secondAttribute="centerX" id="cbv-OU-esH"/>
-                                    <constraint firstAttribute="height" constant="50" id="fyg-AW-jv6"/>
-                                    <constraint firstItem="zob-sY-qha" firstAttribute="centerY" secondItem="4h9-oR-C40" secondAttribute="centerY" id="x76-Iu-Ldy"/>
-                                </constraints>
-                            </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q0c-Ez-WJB">
                                 <rect key="frame" x="0.0" y="426" width="300" height="50"/>
                                 <animations/>
-                                <color key="backgroundColor" red="0.75457596599999999" green="0.86496030550000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="Obp-pq-hKR"/>
                                 </constraints>
-                                <state key="normal" title="Create Journal Entry"/>
+                                <fontDescription key="fontDescription" name="Akkurat" family="Akkurat" pointSize="17"/>
+                                <state key="normal" title="Add to Journal">
+                                    <color key="titleColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                </state>
                                 <connections>
-                                    <action selector="createJournalEntryButtonTapped:" destination="0x4-Nu-mZ8" eventType="touchUpInside" id="tTN-M9-kCZ"/>
                                     <segue destination="aXS-um-aw2" kind="show" identifier="pushToCreateJournalEntry" id="a4i-zx-cvK"/>
                                 </connections>
                             </button>
@@ -350,7 +319,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="nSu-DZ-G40"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="Akkurat" family="Akkurat" pointSize="15"/>
+                                <fontDescription key="fontDescription" name="Akkurat" family="Akkurat" pointSize="17"/>
                                 <state key="normal" title="music">
                                     <color key="titleColor" red="1" green="0.96580194144491827" blue="0.065849877366854659" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
@@ -362,7 +331,7 @@
                                 <rect key="frame" x="120" y="20" width="120" height="50"/>
                                 <animations/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" name="Akkurat" family="Akkurat" pointSize="15"/>
+                                <fontDescription key="fontDescription" name="Akkurat" family="Akkurat" pointSize="17"/>
                                 <state key="normal" title="movie">
                                     <color key="titleColor" red="0.0" green="0.98431378599999997" blue="0.31764706970000001" alpha="1" colorSpace="deviceRGB"/>
                                 </state>
@@ -374,6 +343,7 @@
                                 <rect key="frame" x="480" y="20" width="120" height="50"/>
                                 <animations/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <state key="normal" title="book">
                                     <color key="titleColor" red="1" green="0.30034427511886808" blue="0.46572456648647631" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
@@ -385,7 +355,7 @@
                                 <rect key="frame" x="360" y="20" width="120" height="50"/>
                                 <animations/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" name="Akkurat" family="Akkurat" pointSize="15"/>
+                                <fontDescription key="fontDescription" name="Akkurat" family="Akkurat" pointSize="17"/>
                                 <state key="normal" title="podcast">
                                     <color key="titleColor" red="0.98580998180000001" green="0.62003214620000002" blue="0.067037612610000005" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
@@ -397,7 +367,7 @@
                                 <rect key="frame" x="240" y="20" width="120" height="50"/>
                                 <animations/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" name="Akkurat" family="Akkurat" pointSize="15"/>
+                                <fontDescription key="fontDescription" name="Akkurat" family="Akkurat" pointSize="17"/>
                                 <state key="normal" title="tv">
                                     <color key="titleColor" red="0.68431816999999995" green="0.90332986250000002" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
@@ -405,9 +375,52 @@
                                     <action selector="mediaButtonTypeSelected:" destination="0x4-Nu-mZ8" eventType="touchUpInside" id="OaW-gN-Lra"/>
                                 </connections>
                             </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4h9-oR-C40">
+                                <rect key="frame" x="0.0" y="70" width="600" height="75"/>
+                                <subviews>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="search for title" textAlignment="center" clearsOnBeginEditing="YES" minimumFontSize="20" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="zob-sY-qha">
+                                        <rect key="frame" x="40" y="22.5" width="520" height="30"/>
+                                        <animations/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="350" id="FjN-tR-Pz2"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Akkurat" family="Akkurat" pointSize="17"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="words" autocorrectionType="yes" spellCheckingType="yes"/>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="FjN-tR-Pz2"/>
+                                            </mask>
+                                        </variation>
+                                    </textField>
+                                </subviews>
+                                <animations/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="zob-sY-qha" secondAttribute="trailing" constant="40" id="2d1-5l-Hn0"/>
+                                    <constraint firstItem="zob-sY-qha" firstAttribute="leading" secondItem="4h9-oR-C40" secondAttribute="leading" constant="40" id="Yg5-BR-c5k"/>
+                                    <constraint firstItem="zob-sY-qha" firstAttribute="centerX" secondItem="4h9-oR-C40" secondAttribute="centerX" id="cbv-OU-esH"/>
+                                    <constraint firstAttribute="height" constant="75" id="fyg-AW-jv6"/>
+                                    <constraint firstItem="zob-sY-qha" firstAttribute="centerY" secondItem="4h9-oR-C40" secondAttribute="centerY" id="x76-Iu-Ldy"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i6F-Oe-4xR">
+                                <rect key="frame" x="300" y="426" width="300" height="50"/>
+                                <animations/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="hZN-AM-gYR"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Akkurat" family="Akkurat" pointSize="17"/>
+                                <state key="normal" title="Add to Wish List">
+                                    <color key="titleColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="addToWishListButtonTapped:" destination="0x4-Nu-mZ8" eventType="touchUpInside" id="pGb-oC-cak"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <animations/>
-                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="i6F-Oe-4xR" secondAttribute="trailing" id="1vY-Sv-N2G"/>
                             <constraint firstItem="PPA-gt-rZ4" firstAttribute="top" secondItem="Q0c-Ez-WJB" secondAttribute="bottom" constant="75" id="3L8-sb-LAC"/>
@@ -489,34 +502,34 @@
                                             <constraint firstAttribute="height" constant="120" id="mgE-Dx-7HC"/>
                                         </constraints>
                                     </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HdG-mr-PTo">
-                                        <rect key="frame" x="128" y="103" width="412" height="17"/>
-                                        <animations/>
-                                        <fontDescription key="fontDescription" name="Akkurat" family="Akkurat" pointSize="14"/>
-                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" lineBreakMode="wordWrap" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f6q-RS-lgS">
-                                        <rect key="frame" x="128" y="84" width="412" height="19"/>
+                                        <rect key="frame" x="128" y="82" width="412" height="20.5"/>
                                         <animations/>
-                                        <fontDescription key="fontDescription" name="Akkurat" family="Akkurat" pointSize="16"/>
-                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" name="Akkurat" family="Akkurat" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oCt-vd-4RS">
-                                        <rect key="frame" x="516" y="0.0" width="36" height="30"/>
+                                        <rect key="frame" x="502" y="0.0" width="50" height="30"/>
                                         <animations/>
                                         <fontDescription key="fontDescription" name="Akkurat" family="Akkurat" pointSize="15"/>
-                                        <state key="normal" title="Done">
+                                        <state key="normal" title="  Done  ">
                                             <color key="titleColor" red="0.98580998180000001" green="0.62003214620000002" blue="0.067037612610000005" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
                                         <connections>
                                             <action selector="doneEditingTapped:" destination="aXS-um-aw2" eventType="touchUpInside" id="Yvg-fL-af4"/>
                                         </connections>
                                     </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HdG-mr-PTo">
+                                        <rect key="frame" x="128" y="103" width="412" height="17"/>
+                                        <animations/>
+                                        <fontDescription key="fontDescription" name="Akkurat" family="Akkurat" pointSize="14"/>
+                                        <color key="textColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <animations/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <constraints>
                                     <constraint firstItem="HdG-mr-PTo" firstAttribute="top" secondItem="f6q-RS-lgS" secondAttribute="bottom" id="2Li-DK-Gsd"/>
                                     <constraint firstAttribute="trailing" secondItem="oCt-vd-4RS" secondAttribute="trailing" constant="8" id="4sW-VU-zvV"/>
@@ -549,7 +562,7 @@
                                     <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0G1-Em-Jng">
                                         <rect key="frame" x="464" y="0.0" width="106" height="50"/>
                                         <animations/>
-                                        <state key="normal" backgroundImage="rating_star"/>
+                                        <state key="normal" backgroundImage="rating_star2"/>
                                         <connections>
                                             <action selector="fiveStarTapped:" destination="aXS-um-aw2" eventType="touchUpInside" id="lF4-Jk-XCm"/>
                                         </connections>
@@ -557,7 +570,7 @@
                                     <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hue-C5-PHW">
                                         <rect key="frame" x="348" y="0.0" width="106" height="50"/>
                                         <animations/>
-                                        <state key="normal" backgroundImage="rating_star"/>
+                                        <state key="normal" backgroundImage="rating_star2"/>
                                         <connections>
                                             <action selector="fourStarTapped:" destination="aXS-um-aw2" eventType="touchUpInside" id="pCL-4u-Duz"/>
                                         </connections>
@@ -565,7 +578,7 @@
                                     <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZP9-Qg-4Le">
                                         <rect key="frame" x="232" y="0.0" width="106" height="50"/>
                                         <animations/>
-                                        <state key="normal" backgroundImage="rating_star"/>
+                                        <state key="normal" backgroundImage="rating_star2"/>
                                         <connections>
                                             <action selector="threeStarTapped:" destination="aXS-um-aw2" eventType="touchUpInside" id="F0g-su-LVO"/>
                                         </connections>
@@ -574,7 +587,7 @@
                                         <rect key="frame" x="0.0" y="0.0" width="106" height="50"/>
                                         <animations/>
                                         <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                        <state key="normal" image="rating_star"/>
+                                        <state key="normal" image="rating_star2"/>
                                         <state key="highlighted" image="rating_star_filled"/>
                                         <connections>
                                             <action selector="oneStarTapped:" destination="aXS-um-aw2" eventType="touchUpInside" id="5jC-Qf-LPh"/>
@@ -583,7 +596,7 @@
                                     <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ofM-BY-Yzj">
                                         <rect key="frame" x="116" y="0.0" width="106" height="50"/>
                                         <animations/>
-                                        <state key="normal" backgroundImage="rating_star">
+                                        <state key="normal" backgroundImage="rating_star2">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <state key="selected" backgroundImage="rating_star_filled"/>
@@ -594,7 +607,7 @@
                                     </button>
                                 </subviews>
                                 <animations/>
-                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <constraints>
                                     <constraint firstItem="Hue-C5-PHW" firstAttribute="width" secondItem="0G1-Em-Jng" secondAttribute="width" id="2FZ-ZI-T0C"/>
                                     <constraint firstItem="ZP9-Qg-4Le" firstAttribute="top" secondItem="BCK-ON-IjJ" secondAttribute="top" id="2p6-Tb-6HP"/>
@@ -629,10 +642,10 @@
                                 <rect key="frame" x="0.0" y="411" width="600" height="60"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bIK-7d-Vfl">
-                                        <rect key="frame" x="251" y="15" width="99" height="30"/>
+                                        <rect key="frame" x="233" y="13" width="134" height="33"/>
                                         <animations/>
-                                        <fontDescription key="fontDescription" name="Akkurat-Bold" family="Akkurat" pointSize="15"/>
-                                        <state key="normal" title="Log To Journal">
+                                        <fontDescription key="fontDescription" name="Akkurat-Bold" family="Akkurat" pointSize="17"/>
+                                        <state key="normal" title="   Log To Journal   ">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
@@ -641,7 +654,7 @@
                                     </button>
                                 </subviews>
                                 <animations/>
-                                <color key="backgroundColor" red="0.98580998180000001" green="0.62003214620000002" blue="0.067037612610000005" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="3us-vq-HY3"/>
                                     <constraint firstItem="bIK-7d-Vfl" firstAttribute="centerX" secondItem="ccY-ot-FYH" secondAttribute="centerX" id="67t-uq-gMg"/>
@@ -651,12 +664,13 @@
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="gMh-cq-aTG">
                                 <rect key="frame" x="20" y="219" width="560" height="176"/>
                                 <animations/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <fontDescription key="fontDescription" name="Akkurat-Bold" family="Akkurat" pointSize="25"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                         </subviews>
                         <animations/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                         <constraints>
                             <constraint firstItem="3Hz-RL-Ugz" firstAttribute="trailing" secondItem="p3u-dw-cX6" secondAttribute="trailingMargin" id="1b0-Cy-sHW"/>
                             <constraint firstItem="3Hz-RL-Ugz" firstAttribute="top" secondItem="35G-Te-D94" secondAttribute="bottom" id="CcV-Ir-Nos"/>
@@ -724,11 +738,11 @@
         <scene sceneID="WUv-ax-PAc">
             <objects>
                 <tableViewController title="Wish List" id="WZe-UX-wgc" customClass="WishListTableViewController" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="64" sectionHeaderHeight="28" sectionFooterHeight="28" id="YJ5-uB-Kgw">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="64" sectionHeaderHeight="28" sectionFooterHeight="28" id="YJ5-uB-Kgw">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <animations/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                         <view key="tableHeaderView" contentMode="scaleToFill" id="t7Q-Vo-vCQ">
                             <rect key="frame" x="0.0" y="0.0" width="600" height="150"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -753,7 +767,7 @@
                                     <nil key="highlightedColor"/>
                                 </label>
                             </subviews>
-                            <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                             <constraints>
                                 <constraint firstItem="oKs-Fj-h2E" firstAttribute="top" secondItem="Df0-BF-gAU" secondAttribute="bottom" constant="-23" id="3fL-JR-23W"/>
                                 <constraint firstItem="Pix-v9-EmC" firstAttribute="centerX" secondItem="t7Q-Vo-vCQ" secondAttribute="centerX" id="9KS-hu-Ysd"/>
@@ -771,11 +785,11 @@
                             </variation>
                         </view>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" accessoryType="disclosureIndicator" indentationWidth="10" shouldIndentWhileEditing="NO" reuseIdentifier="WishListIdentifier" rowHeight="64" id="Ej0-R4-rXa">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" accessoryType="disclosureIndicator" indentationWidth="10" shouldIndentWhileEditing="NO" rowHeight="64" id="Ej0-R4-rXa">
                                 <rect key="frame" x="0.0" y="178" width="600" height="64"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Ej0-R4-rXa" id="ezU-vk-VRT">
-                                    <rect key="frame" x="0.0" y="0.0" width="567" height="63.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="567" height="64"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="346-CT-Uvl">
@@ -875,17 +889,18 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bI1-9Y-Lhn" userLabel="Blue View">
-                                <rect key="frame" x="20" y="325" width="560" height="101"/>
+                                <rect key="frame" x="20" y="325" width="560" height="91"/>
                                 <subviews>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" usesAttributedText="YES" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="riX-qw-M2j">
-                                        <rect key="frame" x="5" y="5" width="550" height="91"/>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="riX-qw-M2j">
+                                        <rect key="frame" x="5" y="5" width="550" height="81"/>
                                         <animations/>
-                                        <attributedString key="attributedText"/>
+                                        <color key="textColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                        <fontDescription key="fontDescription" name="Akkurat" family="Akkurat" pointSize="25"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
                                 </subviews>
                                 <animations/>
-                                <color key="backgroundColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <constraints>
                                     <constraint firstItem="riX-qw-M2j" firstAttribute="leading" secondItem="bI1-9Y-Lhn" secondAttribute="leading" constant="5" id="9qy-ow-Nql"/>
                                     <constraint firstAttribute="trailing" secondItem="riX-qw-M2j" secondAttribute="trailing" constant="5" id="Gsp-CD-sDk"/>
@@ -894,7 +909,7 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ly8-tU-R6b">
-                                <rect key="frame" x="35" y="426" width="530" height="50"/>
+                                <rect key="frame" x="35" y="416" width="530" height="50"/>
                                 <subviews>
                                     <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M7h-zf-QrN">
                                         <rect key="frame" x="216" y="0.0" width="98" height="50"/>
@@ -918,7 +933,7 @@
                                     </button>
                                 </subviews>
                                 <animations/>
-                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <constraints>
                                     <constraint firstItem="JU3-mC-wxo" firstAttribute="top" secondItem="Ly8-tU-R6b" secondAttribute="top" id="2Tf-0t-JRM"/>
                                     <constraint firstItem="zLL-Ls-a62" firstAttribute="width" secondItem="M7h-zf-QrN" secondAttribute="width" id="BHh-BK-YdV"/>
@@ -955,12 +970,12 @@
                                 <rect key="frame" x="20" y="476" width="280" height="75"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1br-zx-rKo">
-                                        <rect key="frame" x="98" y="23" width="84" height="30"/>
+                                        <rect key="frame" x="92" y="21" width="96" height="33"/>
                                         <animations/>
-                                        <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
-                                        <fontDescription key="fontDescription" name="Akkurat-Bold" family="Akkurat" pointSize="15"/>
+                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" name="Akkurat-Bold" family="Akkurat" pointSize="17"/>
                                         <state key="normal" title="    RETURN    ">
-                                            <color key="titleColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                            <color key="titleColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
                                         <connections>
                                             <action selector="deleteButtonTapped:" destination="z1K-z0-Vef" eventType="touchUpInside" id="umA-zo-2bu"/>
@@ -968,7 +983,7 @@
                                     </button>
                                 </subviews>
                                 <animations/>
-                                <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="100" id="4cP-Gz-KpJ"/>
                                     <constraint firstItem="1br-zx-rKo" firstAttribute="centerX" secondItem="x4f-Ym-z1V" secondAttribute="centerX" id="97n-xh-93f"/>
@@ -985,9 +1000,9 @@
                                 <rect key="frame" x="300" y="476" width="280" height="75"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Facebook" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qia-hv-Okp">
-                                        <rect key="frame" x="103" y="27" width="74.5" height="20.5"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <rect key="frame" x="102" y="27" width="76.5" height="20.5"/>
+                                        <fontDescription key="fontDescription" name="Akkurat" family="Akkurat" pointSize="17"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
@@ -1007,60 +1022,41 @@
                                 <rect key="frame" x="20" y="250" width="560" height="75"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RUW-ww-VHC">
-                                        <rect key="frame" x="10" y="31" width="540" height="17"/>
+                                        <rect key="frame" x="10" y="25" width="540" height="17"/>
                                         <animations/>
                                         <fontDescription key="fontDescription" name="Akkurat" family="Akkurat" pointSize="14"/>
-                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <color key="textColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="IKw-fC-6K4">
-                                        <rect key="frame" x="10" y="5" width="540" height="21"/>
-                                        <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uPb-Kv-PyA">
-                                                <rect key="frame" x="0.0" y="0.0" width="540" height="21"/>
-                                                <animations/>
-                                                <fontDescription key="fontDescription" name="Akkurat-Bold" family="Akkurat" pointSize="19"/>
-                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                        </subviews>
-                                        <constraints>
-                                            <constraint firstItem="uPb-Kv-PyA" firstAttribute="centerX" secondItem="IKw-fC-6K4" secondAttribute="centerX" id="hS6-oM-b42"/>
-                                        </constraints>
-                                        <variation key="default">
-                                            <mask key="constraints">
-                                                <exclude reference="hS6-oM-b42"/>
-                                            </mask>
-                                        </variation>
-                                    </stackView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eHa-Fq-bcU">
-                                        <rect key="frame" x="10" y="53" width="540" height="17"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uPb-Kv-PyA">
+                                        <rect key="frame" x="10" y="0.0" width="540" height="20.5"/>
+                                        <animations/>
+                                        <fontDescription key="fontDescription" name="Akkurat-Bold" family="Akkurat" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eHa-Fq-bcU">
+                                        <rect key="frame" x="10" y="48" width="540" height="22"/>
                                         <animations/>
                                         <fontDescription key="fontDescription" name="Akkurat" family="Akkurat" pointSize="14"/>
-                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <color key="textColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
-                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <constraints>
-                                    <constraint firstItem="IKw-fC-6K4" firstAttribute="leading" secondItem="DLn-Kf-i7J" secondAttribute="leading" constant="10" id="1bi-eY-etH"/>
-                                    <constraint firstItem="eHa-Fq-bcU" firstAttribute="top" secondItem="RUW-ww-VHC" secondAttribute="bottom" constant="5" id="8xJ-q0-da2"/>
+                                    <constraint firstAttribute="trailing" secondItem="uPb-Kv-PyA" secondAttribute="trailing" constant="10" id="9dy-H7-3rx"/>
+                                    <constraint firstItem="eHa-Fq-bcU" firstAttribute="top" secondItem="RUW-ww-VHC" secondAttribute="bottom" constant="5.5" id="HxD-t4-nxH"/>
                                     <constraint firstAttribute="trailing" secondItem="RUW-ww-VHC" secondAttribute="trailing" constant="10" id="I81-DF-sUO"/>
                                     <constraint firstAttribute="height" constant="75" id="IVL-4V-IKI"/>
+                                    <constraint firstItem="RUW-ww-VHC" firstAttribute="top" secondItem="uPb-Kv-PyA" secondAttribute="bottom" constant="5" id="NCU-bN-sFr"/>
+                                    <constraint firstItem="eHa-Fq-bcU" firstAttribute="leading" secondItem="DLn-Kf-i7J" secondAttribute="leading" constant="10" id="NfX-5o-5nc"/>
                                     <constraint firstItem="RUW-ww-VHC" firstAttribute="leading" secondItem="DLn-Kf-i7J" secondAttribute="leading" constant="10" id="T4f-b2-xi4"/>
-                                    <constraint firstItem="IKw-fC-6K4" firstAttribute="top" secondItem="DLn-Kf-i7J" secondAttribute="top" constant="5" id="U5O-h5-H0h"/>
-                                    <constraint firstItem="eHa-Fq-bcU" firstAttribute="leading" secondItem="DLn-Kf-i7J" secondAttribute="leading" constant="10" id="jfn-IA-DMZ"/>
-                                    <constraint firstAttribute="trailing" secondItem="IKw-fC-6K4" secondAttribute="trailing" constant="10" id="lCg-Ll-5sL"/>
-                                    <constraint firstItem="RUW-ww-VHC" firstAttribute="top" secondItem="IKw-fC-6K4" secondAttribute="bottom" constant="5" id="lmz-rv-5s8"/>
-                                    <constraint firstItem="IKw-fC-6K4" firstAttribute="centerX" secondItem="DLn-Kf-i7J" secondAttribute="centerX" id="qnS-3b-zLI"/>
-                                    <constraint firstAttribute="bottom" secondItem="eHa-Fq-bcU" secondAttribute="bottom" constant="5" id="v1t-Hh-ylQ"/>
-                                    <constraint firstAttribute="trailing" secondItem="eHa-Fq-bcU" secondAttribute="trailing" constant="10" id="yQ9-AI-sK9"/>
+                                    <constraint firstAttribute="trailing" secondItem="eHa-Fq-bcU" secondAttribute="trailing" constant="10" id="Vl9-PL-v5V"/>
+                                    <constraint firstItem="uPb-Kv-PyA" firstAttribute="top" secondItem="DLn-Kf-i7J" secondAttribute="top" id="cPx-3F-rDr"/>
+                                    <constraint firstAttribute="bottom" secondItem="eHa-Fq-bcU" secondAttribute="bottom" constant="5" id="dzZ-gQ-gFU"/>
+                                    <constraint firstItem="uPb-Kv-PyA" firstAttribute="leading" secondItem="DLn-Kf-i7J" secondAttribute="leading" constant="10" id="hqU-eA-14x"/>
                                 </constraints>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="qnS-3b-zLI"/>
-                                    </mask>
-                                </variation>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2sS-fd-D0X" userLabel="Pink View">
                                 <rect key="frame" x="20" y="20" width="560" height="230"/>
@@ -1081,7 +1077,7 @@
                                     </imageView>
                                 </subviews>
                                 <animations/>
-                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <constraints>
                                     <constraint firstItem="P8h-8Q-AZm" firstAttribute="top" secondItem="2sS-fd-D0X" secondAttribute="top" constant="5" id="4Iw-Mk-e5C"/>
                                     <constraint firstItem="P8h-8Q-AZm" firstAttribute="centerY" secondItem="2sS-fd-D0X" secondAttribute="centerY" id="4vp-EM-f9w"/>
@@ -1123,19 +1119,19 @@
                             </view>
                         </subviews>
                         <animations/>
-                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                         <constraints>
                             <constraint firstItem="Ly8-tU-R6b" firstAttribute="leading" secondItem="EZl-sI-Vwl" secondAttribute="leadingMargin" constant="15" id="1T0-Ze-kQC"/>
                             <constraint firstItem="iJa-08-1GE" firstAttribute="width" secondItem="x4f-Ym-z1V" secondAttribute="width" id="2eT-qx-CF9"/>
                             <constraint firstItem="bI1-9Y-Lhn" firstAttribute="top" secondItem="2sS-fd-D0X" secondAttribute="bottom" id="3c5-ik-Auq"/>
                             <constraint firstItem="DF9-8P-jQU" firstAttribute="top" secondItem="x4f-Ym-z1V" secondAttribute="bottom" id="4Fa-3M-oyp"/>
                             <constraint firstItem="bI1-9Y-Lhn" firstAttribute="top" secondItem="2sS-fd-D0X" secondAttribute="bottom" id="4JK-ES-1ri"/>
-                            <constraint firstItem="x4f-Ym-z1V" firstAttribute="top" secondItem="Ly8-tU-R6b" secondAttribute="bottom" id="5op-S4-Rvd"/>
+                            <constraint firstItem="x4f-Ym-z1V" firstAttribute="top" secondItem="Ly8-tU-R6b" secondAttribute="bottom" constant="10" id="5op-S4-Rvd"/>
                             <constraint firstItem="2sS-fd-D0X" firstAttribute="top" secondItem="hxi-Oa-IvU" secondAttribute="bottom" id="6j7-Pw-W91"/>
                             <constraint firstItem="P8h-8Q-AZm" firstAttribute="top" secondItem="hxi-Oa-IvU" secondAttribute="bottom" constant="15" id="8ZM-iZ-FzX"/>
                             <constraint firstItem="DLn-Kf-i7J" firstAttribute="leading" secondItem="EZl-sI-Vwl" secondAttribute="leadingMargin" id="EXX-9N-Oxk"/>
                             <constraint firstItem="2sS-fd-D0X" firstAttribute="trailing" secondItem="EZl-sI-Vwl" secondAttribute="trailingMargin" id="HN0-Bi-dhn"/>
-                            <constraint firstItem="iJa-08-1GE" firstAttribute="top" secondItem="Ly8-tU-R6b" secondAttribute="bottom" id="HUk-f2-mkx"/>
+                            <constraint firstItem="iJa-08-1GE" firstAttribute="top" secondItem="Ly8-tU-R6b" secondAttribute="bottom" constant="10" id="HUk-f2-mkx"/>
                             <constraint firstItem="2sS-fd-D0X" firstAttribute="top" secondItem="hxi-Oa-IvU" secondAttribute="bottom" id="KCf-gF-e0e"/>
                             <constraint firstItem="bI1-9Y-Lhn" firstAttribute="trailing" secondItem="EZl-sI-Vwl" secondAttribute="trailingMargin" id="N93-6I-U69"/>
                             <constraint firstItem="P8h-8Q-AZm" firstAttribute="width" secondItem="EZl-sI-Vwl" secondAttribute="width" id="OFO-ZK-Q4N"/>
@@ -1207,10 +1203,10 @@
         </scene>
     </scenes>
     <resources>
-        <image name="rating_star" width="128" height="128"/>
+        <image name="rating_star2" width="128" height="128"/>
         <image name="rating_star_filled" width="128" height="128"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Ggq-sb-ccX"/>
+        <segue reference="a4i-zx-cvK"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -34,17 +34,19 @@
                         <rect key="frame" x="86" y="62" width="254" height="46"/>
                         <animations/>
                         <fontDescription key="fontDescription" name="Akkurat" family="Akkurat" pointSize="14"/>
-                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="textColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TITLE" lineBreakMode="wordWrap" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sl4-bL-ILp">
                         <rect key="frame" x="86" y="16" width="254" height="46"/>
                         <animations/>
-                        <fontDescription key="fontDescription" name="Akkurat-Bold" family="Akkurat" pointSize="16"/>
+                        <fontDescription key="fontDescription" name="Akkurat-Bold" family="Akkurat" pointSize="17"/>
+                        <color key="textColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
                 <animations/>
+                <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                 <constraints>
                     <constraint firstAttribute="bottomMargin" secondItem="y9p-St-OV6" secondAttribute="bottom" constant="8" id="77R-9I-uAO"/>
                     <constraint firstItem="Fq8-dI-Pdu" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="10" id="BKX-nf-3UF"/>

@@ -29,19 +29,20 @@
                             <constraint firstAttribute="width" constant="60" id="fag-dr-LW7"/>
                         </constraints>
                     </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TR1-Ae-Cd4">
-                        <rect key="frame" x="86" y="62.5" width="238" height="46"/>
-                        <fontDescription key="fontDescription" name="Akkurat" family="Akkurat" pointSize="14"/>
-                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                        <nil key="highlightedColor"/>
-                    </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ywi-Ne-nLf">
                         <rect key="frame" x="86" y="16" width="238" height="46.5"/>
-                        <fontDescription key="fontDescription" name="Akkurat-Bold" family="Akkurat" pointSize="16"/>
-                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <fontDescription key="fontDescription" name="Akkurat-Bold" family="Akkurat" pointSize="17"/>
+                        <color key="textColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TR1-Ae-Cd4">
+                        <rect key="frame" x="86" y="63" width="238" height="46"/>
+                        <fontDescription key="fontDescription" name="Akkurat" family="Akkurat" pointSize="14"/>
+                        <color key="textColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
+                <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                 <constraints>
                     <constraint firstItem="Vb0-5u-rmQ" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="05Q-DJ-JMP"/>
                     <constraint firstItem="TR1-Ae-Cd4" firstAttribute="leading" secondItem="Vb0-5u-rmQ" secondAttribute="trailing" constant="8" id="4aK-xN-uGi"/>

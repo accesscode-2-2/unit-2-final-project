@@ -87,12 +87,8 @@ UITextFieldDelegate
 
 #pragma mark - add to list buttons
 
-- (IBAction)createJournalEntryButtonTapped:(id)sender {
- 
-}
-
 - (IBAction)addToWishListButtonTapped:(id)sender {
-
+    
     JournalPost *myJournalPost = [[JournalPost alloc] init];
     
     myJournalPost[@"title"] = self.passSearchResult.albumOrMovieName;
@@ -103,10 +99,38 @@ UITextFieldDelegate
     myJournalPost[@"reviewed"] = [NSNumber numberWithBool:NO];
     
     [myJournalPost saveEventually]; // save your entry, even if offline
-
+    
     [self.tabBarController setSelectedIndex:0];
     
+    // clear search text view and reset tableView once data is passed
+    self.searchTextField.text = nil;
+    [self.searchResults removeAllObjects];
+    [self.tableView reloadData];
+    
 }
+
+// these are the fancy tab bar buttons - need to figure out how to make them vanish on the createJournalViewController
+
+//- (void)extraLeftItemDidPress {
+//    NSLog(@"left button tapped");
+//    
+//    JournalPost *myJournalPost = [[JournalPost alloc] init];
+//    
+//    myJournalPost[@"title"] = self.passSearchResult.albumOrMovieName;
+//    myJournalPost[@"creator"] = self.passSearchResult.artistName;
+//    myJournalPost[@"dateEntered"] = [NSDate date];
+//    myJournalPost[@"typeOfMedia"] = self.passSearchResult.mediaType;
+//    myJournalPost[@"imageForMedia"] = self.passSearchResult.artworkURL;
+//    myJournalPost[@"reviewed"] = [NSNumber numberWithBool:NO];
+//    
+//    [myJournalPost saveEventually]; // save your entry, even if offline
+//    
+//    [self.tabBarController setSelectedIndex:0];
+//}
+//
+//- (void)extraRightItemDidPress {
+//    NSLog(@"right button tapped");
+//}
 
 #pragma mark - API request
 
@@ -300,7 +324,7 @@ UITextFieldDelegate
     return cell;
 }
 
--(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{ //  here is where the data is passed
    
     iTunesSearchResult *searchResult = self.searchResults[indexPath.row];
     
@@ -314,6 +338,12 @@ UITextFieldDelegate
      if ([[segue identifier]isEqualToString:@"pushToCreateJournalEntry"]) {
      CreateJournalEntryViewController *viewController = segue.destinationViewController;
      viewController.postSearchResult = self.passSearchResult;
+         
+         // clear text view and reset tableView once data is passed
+         self.searchTextField.text = nil;
+         [self.searchResults removeAllObjects];
+         [self.tableView reloadData];
+         
      }
  }
 @end

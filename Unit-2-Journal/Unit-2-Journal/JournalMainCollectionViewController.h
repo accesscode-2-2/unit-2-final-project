@@ -10,6 +10,8 @@
 #import "JournalPost.h"
 #import "CreateJournalEntryViewController.h"
 
+
+
 @interface JournalMainCollectionViewController : UICollectionViewController
 {
     NSMutableArray *collectionImages;
