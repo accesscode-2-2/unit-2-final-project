@@ -54,7 +54,6 @@ CATransform3D rotationTransform1[PHOTONUM];
         [self presentViewController:vc animated:YES completion:nil];
         
         
-        
     }
     else if (self.currentTag == 1001) { //Visited
         VisitedViewController * vc = [self.storyboard instantiateViewControllerWithIdentifier:@"visited"];

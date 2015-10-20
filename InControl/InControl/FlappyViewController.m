@@ -15,6 +15,7 @@
 @implementation FlappyViewController
 
 - (void)viewDidLoad {
+    [self.view setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"flappyBack"]]];
     
     HighScoreNumber = [[NSUserDefaults standardUserDefaults] integerForKey:@"HighScoreSaved"];
     HighScore.text = [NSString stringWithFormat:@"High Score: %li", (long)HighScoreNumber];

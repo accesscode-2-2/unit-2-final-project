@@ -117,7 +117,7 @@
                                 </constraints>
                                 <state key="normal" title="Cancel"/>
                                 <connections>
-                                    <segue destination="Llf-7N-ptg" kind="show" id="pU7-Mv-mbd"/>
+                                    <segue destination="Llf-7N-ptg" kind="presentation" modalTransitionStyle="flipHorizontal" id="pU7-Mv-mbd"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -960,38 +960,60 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Flappy Bird" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="chp-jQ-cFq">
-                                <rect key="frame" x="235" y="90" width="86" height="21"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uZN-xU-1qr">
+                                <rect key="frame" x="200" y="225" width="200" height="150"/>
                                 <animations/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Tapping, Flapping, and Getting Angry" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5gE-kQ-x0N">
-                                <rect key="frame" x="76" y="170" width="285" height="21"/>
-                                <animations/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="High Score:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mns-lg-di6">
-                                <rect key="frame" x="231" y="419" width="90" height="21"/>
-                                <animations/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uZN-xU-1qr">
-                                <rect key="frame" x="240" y="333" width="73" height="30"/>
-                                <animations/>
-                                <state key="normal" title="Play Game"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="0eT-ku-bFm"/>
+                                    <constraint firstAttribute="width" constant="200" id="nRg-bN-7dP"/>
+                                </constraints>
+                                <state key="normal" image="flappyPlayButton"/>
                                 <connections>
-                                    <segue destination="fC0-NN-pAX" kind="presentation" id="gDz-h4-GCJ"/>
+                                    <segue destination="fC0-NN-pAX" kind="presentation" modalTransitionStyle="crossDissolve" id="gDz-h4-GCJ"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="elx-K7-Si0">
+                                <rect key="frame" x="30" y="10" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="0FM-wj-7Xl"/>
+                                    <constraint firstAttribute="width" constant="50" id="lq3-AX-6Fz"/>
+                                </constraints>
+                                <state key="normal" image="backButton"/>
+                                <connections>
+                                    <segue destination="2Oo-zj-tBU" kind="presentation" modalTransitionStyle="crossDissolve" id="W7M-AH-HXk"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="flappyName" translatesAutoresizingMaskIntoConstraints="NO" id="Fbx-3J-dt3">
+                                <rect key="frame" x="147" y="60" width="306" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="306" id="W6g-YM-tgb"/>
+                                    <constraint firstAttribute="height" constant="200" id="aFp-Xy-KGw"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="High Score:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mns-lg-di6">
+                                <rect key="frame" x="235" y="415" width="131" height="52"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="131" id="asE-hD-yqb"/>
+                                    <constraint firstAttribute="height" constant="52" id="o8C-8m-bT6"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Palatino-Roman" family="Palatino" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Mns-lg-di6" firstAttribute="top" secondItem="uZN-xU-1qr" secondAttribute="bottom" constant="40" id="7TZ-xW-6j8"/>
+                            <constraint firstItem="elx-K7-Si0" firstAttribute="top" secondItem="hjc-Us-hyH" secondAttribute="topMargin" constant="10" id="P8O-KG-7zt"/>
+                            <constraint firstItem="uZN-xU-1qr" firstAttribute="centerX" secondItem="hjc-Us-hyH" secondAttribute="centerX" id="R0d-jh-kCP"/>
+                            <constraint firstItem="elx-K7-Si0" firstAttribute="leading" secondItem="hjc-Us-hyH" secondAttribute="leadingMargin" constant="10" id="Ssx-EI-SbJ"/>
+                            <constraint firstItem="Fbx-3J-dt3" firstAttribute="top" secondItem="aHc-vU-roW" secondAttribute="bottom" constant="40" id="fNj-Ak-DeZ"/>
+                            <constraint firstItem="Mns-lg-di6" firstAttribute="centerX" secondItem="hjc-Us-hyH" secondAttribute="centerX" id="lM4-J9-XPO"/>
+                            <constraint firstItem="uZN-xU-1qr" firstAttribute="centerY" secondItem="hjc-Us-hyH" secondAttribute="centerY" id="o7o-ec-5nj"/>
+                            <constraint firstItem="Fbx-3J-dt3" firstAttribute="centerX" secondItem="hjc-Us-hyH" secondAttribute="centerX" id="r3Y-wb-UUM"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="HighScore" destination="Mns-lg-di6" id="vKp-4x-1hI"/>
@@ -999,7 +1021,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cI8-Ve-lL0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4776" y="-409"/>
+            <point key="canvasLocation" x="4761" y="-349"/>
         </scene>
         <!--Flappy Game-->
         <scene sceneID="Ivd-Yw-4DO">
@@ -1021,10 +1043,14 @@
                                 <rect key="frame" x="40" y="264" width="40" height="40"/>
                                 <animations/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8SE-vT-BJI">
-                                <rect key="frame" x="94" y="184" width="132" height="71"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8SE-vT-BJI">
+                                <rect key="frame" x="150" y="140" width="300" height="80"/>
                                 <animations/>
-                                <state key="normal" title="Start Game"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="g6G-Qd-QsR"/>
+                                    <constraint firstAttribute="width" constant="300" id="lpE-j3-D3a"/>
+                                </constraints>
+                                <state key="normal" image="flappyGetReady"/>
                                 <connections>
                                     <action selector="StartGame:" destination="fC0-NN-pAX" eventType="touchUpInside" id="UxY-H7-Qub"/>
                                 </connections>
@@ -1034,7 +1060,7 @@
                                 <animations/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Tunnel.png" translatesAutoresizingMaskIntoConstraints="NO" id="dWL-Ry-Umh">
-                                <rect key="frame" x="500" y="500" width="53" height="415"/>
+                                <rect key="frame" x="500" y="360" width="53" height="555"/>
                                 <animations/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Tunnel.png" translatesAutoresizingMaskIntoConstraints="NO" id="AoY-KK-TzR">
@@ -1051,30 +1077,44 @@
                                     <constraint firstAttribute="height" constant="22" id="sBH-35-hhR"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XUZ-dt-JGx">
-                                <rect key="frame" x="13" y="30" width="295" height="123"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XUZ-dt-JGx">
+                                <rect key="frame" x="30" y="32" width="121" height="123"/>
                                 <animations/>
-                                <fontDescription key="fontDescription" type="system" pointSize="70"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="121" id="f6R-Le-HeR"/>
+                                    <constraint firstAttribute="height" constant="123" id="o4N-cs-8ie"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Palatino-Roman" family="Palatino" pointSize="70"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ekc-4O-PGN">
-                                <rect key="frame" x="118" y="314" width="85" height="52"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ekc-4O-PGN">
+                                <rect key="frame" x="150" y="260" width="300" height="80"/>
                                 <animations/>
-                                <state key="normal" title="Exit">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="qcV-AD-3yd"/>
+                                    <constraint firstAttribute="width" constant="300" id="y6E-zB-XnQ"/>
+                                </constraints>
+                                <state key="normal" image="flappyGameOver">
                                     <color key="titleShadowColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="NCQ-5h-pmp" kind="presentation" id="uy4-x5-2D8"/>
+                                    <segue destination="NCQ-5h-pmp" kind="presentation" modalTransitionStyle="crossDissolve" id="uy4-x5-2D8"/>
                                 </connections>
                             </button>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="8SE-vT-BJI" firstAttribute="centerX" secondItem="pyN-Jf-S8L" secondAttribute="centerX" id="1aU-fx-Vl5"/>
+                            <constraint firstItem="ekc-4O-PGN" firstAttribute="centerX" secondItem="pyN-Jf-S8L" secondAttribute="centerX" id="2C4-kb-GLh"/>
                             <constraint firstItem="RcK-xi-dHU" firstAttribute="leading" secondItem="pyN-Jf-S8L" secondAttribute="leadingMargin" id="7oY-ld-Uvw"/>
                             <constraint firstItem="HcS-PW-shZ" firstAttribute="top" secondItem="AoY-KK-TzR" secondAttribute="bottom" id="Dxs-nH-okj"/>
+                            <constraint firstItem="XUZ-dt-JGx" firstAttribute="top" secondItem="RcK-xi-dHU" secondAttribute="bottom" constant="10" id="Eby-Az-mH6"/>
                             <constraint firstItem="RcK-xi-dHU" firstAttribute="leading" secondItem="pyN-Jf-S8L" secondAttribute="leading" id="S1e-nN-b5C"/>
+                            <constraint firstItem="XUZ-dt-JGx" firstAttribute="leading" secondItem="pyN-Jf-S8L" secondAttribute="leadingMargin" constant="10" id="TsM-WC-PHU"/>
+                            <constraint firstItem="ekc-4O-PGN" firstAttribute="centerY" secondItem="pyN-Jf-S8L" secondAttribute="centerY" id="VsQ-BN-aNa"/>
+                            <constraint firstItem="8SE-vT-BJI" firstAttribute="top" secondItem="pyN-Jf-S8L" secondAttribute="topMargin" constant="140" id="WID-0f-mBR"/>
                             <constraint firstAttribute="trailing" secondItem="RcK-xi-dHU" secondAttribute="trailing" id="ZJf-eR-mFH"/>
                             <constraint firstItem="HcS-PW-shZ" firstAttribute="top" secondItem="XPX-6B-xaO" secondAttribute="bottom" id="dx9-bh-E8Y"/>
                             <constraint firstItem="XPX-6B-xaO" firstAttribute="top" secondItem="MRd-dB-Fnx" secondAttribute="bottom" id="p65-Vj-9uO"/>
@@ -1108,7 +1148,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xFb-cm-DxC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5447" y="-409"/>
+            <point key="canvasLocation" x="5589" y="-426"/>
         </scene>
         <!--Games View Controller-->
         <scene sceneID="dOd-xF-Ffl">
@@ -1122,32 +1162,37 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6K8-iz-6hE">
-                                <rect key="frame" x="68" y="50" width="80" height="60"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6K8-iz-6hE">
+                                <rect key="frame" x="30" y="30" width="50" height="50"/>
                                 <animations/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="60" id="acY-vc-kIS"/>
-                                    <constraint firstAttribute="width" constant="80" id="l5w-5O-Jdo"/>
+                                    <constraint firstAttribute="height" constant="50" id="acY-vc-kIS"/>
+                                    <constraint firstAttribute="width" constant="50" id="l5w-5O-Jdo"/>
                                 </constraints>
-                                <state key="normal" backgroundImage="homeButton.png"/>
+                                <state key="normal" image="backButton"/>
                                 <connections>
-                                    <segue destination="Llf-7N-ptg" kind="show" id="Gf5-oo-kyB"/>
+                                    <segue destination="Llf-7N-ptg" kind="presentation" modalTransitionStyle="flipHorizontal" id="Gf5-oo-kyB"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hJt-FW-x0J">
-                                <rect key="frame" x="163" y="225" width="77" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hJt-FW-x0J">
+                                <rect key="frame" x="225" y="225" width="150" height="150"/>
                                 <animations/>
-                                <state key="normal" title="Flappy Bird"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="7w9-wr-kc3"/>
+                                    <constraint firstAttribute="width" constant="150" id="8hz-lc-Ia9"/>
+                                </constraints>
+                                <state key="normal" image="flappyIcon"/>
                                 <connections>
-                                    <segue destination="NCQ-5h-pmp" kind="modal" id="aGj-8u-3bd"/>
+                                    <segue destination="NCQ-5h-pmp" kind="presentation" modalTransitionStyle="crossDissolve" id="aGj-8u-3bd"/>
                                 </connections>
                             </button>
                         </subviews>
                         <animations/>
-                        <color key="backgroundColor" red="1" green="0.7243808491" blue="0.71085348520000002" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="6K8-iz-6hE" firstAttribute="top" secondItem="J5w-v5-Dwq" secondAttribute="bottom" constant="30" id="2g7-ud-frf"/>
-                            <constraint firstItem="6K8-iz-6hE" firstAttribute="leading" secondItem="b10-xq-BN2" secondAttribute="leadingMargin" constant="48" id="jlc-4W-hDM"/>
+                            <constraint firstItem="6K8-iz-6hE" firstAttribute="top" secondItem="J5w-v5-Dwq" secondAttribute="bottom" constant="10" id="2g7-ud-frf"/>
+                            <constraint firstItem="hJt-FW-x0J" firstAttribute="centerY" secondItem="b10-xq-BN2" secondAttribute="centerY" id="W87-PL-oD0"/>
+                            <constraint firstItem="6K8-iz-6hE" firstAttribute="leading" secondItem="b10-xq-BN2" secondAttribute="leadingMargin" constant="10" id="jlc-4W-hDM"/>
+                            <constraint firstItem="hJt-FW-x0J" firstAttribute="centerX" secondItem="b10-xq-BN2" secondAttribute="centerX" id="ry0-hR-7iZ"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -1311,7 +1356,7 @@
                                 <animations/>
                                 <state key="normal" title="Back"/>
                                 <connections>
-                                    <segue destination="Llf-7N-ptg" kind="show" id="d0P-gd-MM3"/>
+                                    <segue destination="Llf-7N-ptg" kind="presentation" modalTransitionStyle="flipHorizontal" id="d0P-gd-MM3"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Visited places" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y2O-rC-dtG">
@@ -1458,13 +1503,18 @@
         <image name="OkNewTrip" width="720" height="200"/>
         <image name="Tunnel.png" width="50" height="100"/>
         <image name="WhiteStar" width="1979" height="1962"/>
+        <image name="backButton" width="256" height="256"/>
         <image name="burger.png" width="19" height="17"/>
-        <image name="homeButton.png" width="2084" height="1580"/>
+        <image name="flappyGameOver" width="510" height="132"/>
+        <image name="flappyGetReady" width="692" height="233"/>
+        <image name="flappyIcon" width="256" height="256"/>
+        <image name="flappyName" width="453" height="250"/>
+        <image name="flappyPlayButton" width="400" height="400"/>
         <image name="settings" width="21" height="22"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="d0P-gd-MM3"/>
         <segue reference="uy4-x5-2D8"/>
+        <segue reference="Gf5-oo-kyB"/>
         <segue reference="ofM-AI-3BJ"/>
     </inferredMetricsTieBreakers>
 </document>
