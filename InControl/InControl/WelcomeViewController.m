@@ -28,6 +28,7 @@ NSInteger array [PHOTONUM][PHOTONUM] = {
 
 
 @property (nonatomic, assign) NSInteger currentTag;
+@property (weak, nonatomic) IBOutlet UIButton *okButton;
 
 @end
 
@@ -44,6 +45,7 @@ CATransform3D rotationTransform1[PHOTONUM];
 - (IBAction)okButtonTapped:(UIButton *)sender {
     
     NSLog(@"index ok %ld ",self.currentTag);
+    
     if (self.currentTag == 1000) {  //new
         
         
@@ -114,10 +116,26 @@ CATransform3D rotationTransform1[PHOTONUM];
 
 - (void)didTapped:(NSInteger)index {
     
+    
+    if (index == 1000){
+    [self.okButton setBackgroundImage:[UIImage imageNamed:@"OkNewTrip" ] forState:UIControlStateNormal];
+    
+    }
+    if (index == 1001){
+        [self.okButton setBackgroundImage:[UIImage imageNamed:@"OkMyJourney" ] forState:UIControlStateNormal];
+        
+    }
+    if (index == 1002){
+        [self.okButton setBackgroundImage:[UIImage imageNamed:@"OkGames" ] forState:UIControlStateNormal];
+        
+    }
+    
+    
     if (self.currentTag  == index) {
         NSLog(@"self.currentTag %ld", (long)self.currentTag);
         return;
     }
+    
     
     NSInteger t = [self getIemViewTag:index];
     
