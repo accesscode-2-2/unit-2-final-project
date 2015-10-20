@@ -16,6 +16,10 @@
 #import "CheckProgressViewController.h"
 #import "QuestionDetailVC.h"
 #import "MyHabitsTVC.h"
+#import <AFNetworking/AFNetworking.h>
+
+NSString const *WEATHERAPIKEY = @"6cc63d13a4dd0826b7383ef753a32";
+
 
 @interface MainPageVC ()
 <
@@ -79,10 +83,22 @@ QuestionDetailVCDelegate
             [[SharedManager sharedModel].answersDictionary setObject:answer forKey:tagString];
             
             self.entry = [Entry new];
+            
             self.entry.entryLog = answer;
+            
             [self.habit.entries addObject:self.entry];
         }
     }
+}
+
+-(NSString *)formattedDateStringForAPI:(NSDate *)date{
+    
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    [dateFormatter setDateFormat:@"YYYY-MM-dd"];
+    
+    NSString *dateString = [dateFormatter stringFromDate:date];
+    
+    return dateString;
 }
 
 #pragma mark
@@ -154,7 +170,7 @@ QuestionDetailVCDelegate
     NSMutableDictionary *entryDictionary = [[NSMutableDictionary alloc] init];
     for(int i=0; i < self.questionsArray.count; i++)
     {
-        UIButton *currentButton = (UIButton *)self.questionsArray[i];
+       // UIButton *currentButton = (UIButton *)self.questionsArray[i];
         UILabel *label = (UILabel *)self.reply[i];
         
         NSString *key = [NSString stringWithFormat:@"%d", i];
@@ -164,29 +180,36 @@ QuestionDetailVCDelegate
     }
     
     newEntry.logs = entryDictionary;
-    [selectedHabit.entries addObject:newEntry];
-    [selectedHabit saveInBackground];
+    NSString *dateString = [self formattedDateStringForAPI:newEntry.createdAt];
     
+    NSString *urlString = [NSString stringWithFormat:@"https://api.worldweatheronline.com/free/v2/past-weather.ashx?q=22%%2C22&format=json&date=%@&tp=24&key=%@",dateString,WEATHERAPIKEY];
     
-    
-//    [self.habitsArray addObject:self.habitTextField.text];
-    //[[SharedManager sharedModel].habitArray addObject:self.habitTextField.text];
-//    [self.habitPickerView reloadAllComponents];
-//    
-//    self.habit = [Habit new];
-//    self.habit.name = self.habitTextField.text;
-//    
-//    if([self.user objectForKey:@"habits"]==nil)
-//    {
-//        self.user.habits = [NSMutableArray<Habit *> new];
-//        [self.user.habits addObject:self.habit];
-//    }else{
-//        [self.user.habits addObject:self.habit];
-//    }
+    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
+    [manager GET:urlString parameters:nil success:^(AFHTTPRequestOperation * _Nonnull operation, id  _Nonnull responseObject) {
+        
+        NSDictionary *data = responseObject[@"data"];
+        NSArray *weatherData = data[@"weather"];
+        NSLog(@"%@", weatherData);
+        
+        NSDictionary *dict = weatherData[0];
+        NSArray *hourlyDataArray = dict[@"hourly"];
+        NSDictionary *hourlyDataDictionary = hourlyDataArray[0];
+        NSString *tempF = hourlyDataDictionary[@"tempF"];
+        newEntry.temperature = tempF;
+        NSLog(@"%@",newEntry);
+        
+        [selectedHabit.entries addObject:newEntry];
+        [selectedHabit saveInBackground];
+        
+    } failure:^(AFHTTPRequestOperation * _Nonnull operation, NSError * _Nonnull error) {
+        NSLog(@"Could not get weather data:-");
+        NSLog(@"%@",error.localizedDescription);
+    }];
+
+   
 }
 
-
--(void)answersFromPreviousScreen{
+- (void)answersFromPreviousScreen{
     NSArray *allkeys = [[[SharedManager sharedModel] answersDictionary] allKeys];
     for(NSString *key in allkeys)
     {
@@ -271,9 +294,6 @@ QuestionDetailVCDelegate
     return cell;
 }
 
-
-
-
 #pragma mark
 #pragma Life Cycle Methods
 
@@ -311,27 +331,6 @@ QuestionDetailVCDelegate
     [[self.navigationController navigationBar]setHidden:YES];
     
     self.habitLabel.hidden = YES;
-
-//    self.habitsArray = [NSMutableArray new];
-//    HabitList *hl = [HabitList new];
-//    self.habitsArray = hl.habitsList;
-    
-    //[self.habitPickerView selectRow:[SharedManager sharedModel].selectedRow inComponent:0 animated:YES];
-    
-//    BBUser *currentUser = (BBUser *)[PFUser currentUser];
-//        [currentUser objectForKey:@"habits"];
-//        [currentUser fetchIfNeededInBackgroundWithBlock:^(PFObject * _Nullable object, NSError * _Nullable error) {
-//          NSLog(@"%@",object);
-//        }];
-//    PFQuery *query = [PFUser query];
-//    
-//    [query whereKey:@"username" equalTo:[currentUser username]];
-//    
-//    [query getFirstObjectInBackgroundWithBlock:^(PFObject * _Nullable object, NSError * _Nullable error) {
-//        NSLog(@"Object: %@", object);
-//        NSLog(@"Habits: %@", [object objectForKey:@"habtis"]);
-//    }];
-    
     
     __weak typeof(self) weakSelf = self;
     PFQuery *query = [PFQuery queryWithClassName:@"Habit"];
@@ -358,20 +357,13 @@ QuestionDetailVCDelegate
 }
 
 - (void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component{
-//    [SharedManager sharedModel].selectedRow = row;
-//    
-//    NSString *habitString = self.habitsArray[row];
-//    self.habit = [Habit new];
-//    self.habit.name = habitString;
-//    
-//    if([self.user objectForKey:@"habits"]==nil)
-//    {
-//        self.user.habits = [NSMutableArray<Habit *> new];
-//        [self.user.habits addObject:self.habit];
-//    }else{
-//        [self.user.habits addObject:self.habit];
-//    }
     
+    for(int i=0; i<self.questionsArray.count;i++){
+        UILabel *currentLabel = self.reply[i];
+        if(!(currentLabel.text == nil)){
+            currentLabel.text = @" ";
+        }
+    }
 }
 
 -(void)prepareForSegue:(nonnull UIStoryboardSegue *)segue sender:(nullable id)sender {

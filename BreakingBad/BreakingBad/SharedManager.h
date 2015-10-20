@@ -10,6 +10,7 @@
 #import "HabitList.h"
 #import "ViewController.h"
 #import "BBUser.h"
+#import "Habit.h"
 
 @interface SharedManager : NSObject
 
@@ -20,6 +21,8 @@
 @property (nonatomic) NSMutableDictionary *answersDictionary;
 
 @property (nonatomic) BBUser *currentUser;
+
+@property (nonatomic) Habit *habit;
 
 
 + (SharedManager *)sharedModel;
