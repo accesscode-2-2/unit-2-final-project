@@ -646,7 +646,7 @@
                     </collectionView>
                     <navigationItem key="navigationItem" id="C7W-8H-elj">
                         <nil key="title"/>
-                        <textField key="titleView" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" usesAttributedText="YES" borderStyle="roundedRect" placeholder="Enter Search" minimumFontSize="17" clearButtonMode="whileEditing" id="a6v-7T-QSA">
+                        <textField key="titleView" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" usesAttributedText="YES" borderStyle="roundedRect" placeholder="Enter Search, City, State" minimumFontSize="17" clearButtonMode="whileEditing" id="a6v-7T-QSA">
                             <rect key="frame" x="180" y="7" width="240" height="30"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <animations/>
