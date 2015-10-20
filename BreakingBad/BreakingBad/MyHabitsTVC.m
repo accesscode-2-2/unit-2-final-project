@@ -7,11 +7,11 @@
 //
 
 #import "MyHabitsTVC.h"
-#import "SharedManager.h"
 #import "Habit.h"
 #import "FetchWeatherData.h"
 #import "EntryLogsTableViewController.h"
 #import <Parse/Parse.h>
+#import <AFNetworking/AFNetworking.h>
 
 @interface MyHabitsTVC ()
 
@@ -25,9 +25,6 @@
     self.navigationItem.title = @"My Habits";
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-}
 
 #pragma mark - Table view data source
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
@@ -46,6 +43,7 @@
     
     return cell;
 }
+
 
 - (IBAction)doneButtonTapped:(UIBarButtonItem *)sender {
     [self dismissViewControllerAnimated:YES completion:nil];

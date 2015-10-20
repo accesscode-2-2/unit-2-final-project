@@ -10,7 +10,7 @@
 #import "SharedManager.h"
 #import <AFNetworking/AFNetworking.h>
 
-//NSString const *WEATHERAPIKEY = @"6cc63d13a4dd0826b7383ef753a32";
+
 
 @implementation FetchWeatherData
 

@@ -16,10 +16,11 @@
 #import "CheckProgressViewController.h"
 #import "QuestionDetailVC.h"
 #import "MyHabitsTVC.h"
+#import "HabitInfoTVC.h"
+#import <CoreLocation/CoreLocation.h>
 #import <AFNetworking/AFNetworking.h>
 
 NSString const *WEATHERAPIKEY = @"6cc63d13a4dd0826b7383ef753a32";
-
 
 @interface MainPageVC ()
 <
@@ -27,7 +28,8 @@ UIPickerViewDataSource,
 UIPickerViewDelegate,
 UITableViewDataSource,
 UITableViewDelegate,
-QuestionDetailVCDelegate
+QuestionDetailVCDelegate,
+CLLocationManagerDelegate
 >
 
 @property (weak, nonatomic) IBOutlet UIPickerView *habitPickerView;
@@ -48,7 +50,9 @@ QuestionDetailVCDelegate
 
 @end
 
-@implementation MainPageVC
+@implementation MainPageVC{
+    CLLocationManager *locationManager;
+}
 
 #pragma mark
 #pragma Question Buttons Method
@@ -170,7 +174,7 @@ QuestionDetailVCDelegate
     NSMutableDictionary *entryDictionary = [[NSMutableDictionary alloc] init];
     for(int i=0; i < self.questionsArray.count; i++)
     {
-       // UIButton *currentButton = (UIButton *)self.questionsArray[i];
+        // UIButton *currentButton = (UIButton *)self.questionsArray[i];
         UILabel *label = (UILabel *)self.reply[i];
         
         NSString *key = [NSString stringWithFormat:@"%d", i];
@@ -182,7 +186,18 @@ QuestionDetailVCDelegate
     newEntry.logs = entryDictionary;
     NSString *dateString = [self formattedDateStringForAPI:newEntry.createdAt];
     
-    NSString *urlString = [NSString stringWithFormat:@"https://api.worldweatheronline.com/free/v2/past-weather.ashx?q=22%%2C22&format=json&date=%@&tp=24&key=%@",dateString,WEATHERAPIKEY];
+    float latitude = locationManager.location.coordinate.latitude;
+    float longitude = locationManager.location.coordinate.longitude;
+    
+    NSLog(@"lat: %f, long: %f",latitude, longitude);
+    
+    //@"api.worldweatheronline.com/free/v2/past-weather.ashx?&format=json&date=2015-08-18&tp=24"
+
+    
+//    NSString *urlString = [NSString stringWithFormat:@"https://api.worldweatheronline.com/free/v2/past-weather.ashx?q=%20%@%%2C%@&format=json&date=%@&tp=24&key=%@",latString,longString,dateString, WEATHERAPIKEY];
+    NSString *urlString = [NSString stringWithFormat:@"https://api.worldweatheronline.com/free/v2/past-weather.ashx?q=%20%f%%2C%f&format=json&date=%@&tp=24&key=%@",latitude,longitude,dateString,WEATHERAPIKEY];
+    
+    NSLog(@"%@",urlString);
     
     AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
     [manager GET:urlString parameters:nil success:^(AFHTTPRequestOperation * _Nonnull operation, id  _Nonnull responseObject) {
@@ -205,8 +220,8 @@ QuestionDetailVCDelegate
         NSLog(@"Could not get weather data:-");
         NSLog(@"%@",error.localizedDescription);
     }];
-
-   
+    
+    
 }
 
 - (void)answersFromPreviousScreen{
@@ -253,12 +268,28 @@ QuestionDetailVCDelegate
         CheckProgressViewController *cp = (CheckProgressViewController *)[self.storyboard instantiateViewControllerWithIdentifier:@"checkProgressID"];
         [self presentViewController:cp animated:YES completion:nil];
     }
+    
+    else if (indexPath.row == 4) {
+        
+        [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(showHabitsInfo) userInfo:nil repeats:NO];
+        
+    }
     else if (indexPath.row ==  5){
         [self.user saveInBackground];
     }
     
     [tableView dismisWithIndexPath:indexPath];
     
+}
+
+- (void)showHabitsInfo{
+    UINavigationController *navigationController = [self.storyboard instantiateViewControllerWithIdentifier:@"HabitInfoNav"];
+    
+    HabitInfoTVC *hInfo = (HabitInfoTVC *) navigationController.topViewController;
+    
+    hInfo.habitsArray = self.habitsArray;
+    
+    [self presentViewController:navigationController animated:YES completion:nil];
 }
 
 - (void)showMyHabits{
@@ -331,6 +362,7 @@ QuestionDetailVCDelegate
     [[self.navigationController navigationBar]setHidden:YES];
     
     self.habitLabel.hidden = YES;
+    [self setUpLocationManager];
     
     __weak typeof(self) weakSelf = self;
     PFQuery *query = [PFQuery queryWithClassName:@"Habit"];
@@ -339,6 +371,29 @@ QuestionDetailVCDelegate
         weakSelf.habitsArray = objects;
         [weakSelf.habitPickerView reloadAllComponents];
     }];
+}
+
+- (void)locationManager:(CLLocationManager *)manager
+    didUpdateToLocation:(CLLocation *)newLocation
+           fromLocation:(CLLocation *)oldLocation
+{
+    [locationManager stopUpdatingLocation];
+    
+    CLGeocoder * geoCoder = [[CLGeocoder alloc] init];
+    [geoCoder reverseGeocodeLocation:newLocation
+                   completionHandler:^(NSArray *placemarks, NSError *error) {
+                       NSString *locString = placemarks.count ? [placemarks.firstObject locality] : @"Not Found";
+                       NSLog(@"This is your city: %@",locString);
+                   }];
+}
+
+- (void)setUpLocationManager{
+    locationManager = [[CLLocationManager alloc] init];
+    locationManager.distanceFilter = kCLDistanceFilterNone;
+    locationManager.desiredAccuracy = kCLLocationAccuracyBest;
+    [locationManager startUpdatingLocation];
+    locationManager.delegate = self;
+    [locationManager requestWhenInUseAuthorization];
 }
 #pragma mark
 #pragma UIPickerView DataSource Methods

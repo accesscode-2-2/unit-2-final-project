@@ -19,6 +19,11 @@
 		5F9B082F1BCC9ECD00460FF2 /* QuestionDetailVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F9B082E1BCC9ECC00460FF2 /* QuestionDetailVC.m */; };
 		5F9B08321BCDAD1500460FF2 /* MainPageVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F9B08311BCDAD1500460FF2 /* MainPageVC.m */; };
 		5FDF1A2C1BD1B7E200720A44 /* EntryLogsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FDF1A2B1BD1B7E200720A44 /* EntryLogsTableViewController.m */; settings = {ASSET_TAGS = (); }; };
+		5FE7B03A1BD3EF3200C5E163 /* HabitInfoData.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FE7B0391BD3EF3200C5E163 /* HabitInfoData.m */; settings = {ASSET_TAGS = (); }; };
+		5FE7B0431BD41E1500C5E163 /* HabitInfoTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FE7B0421BD41E1500C5E163 /* HabitInfoTVC.m */; settings = {ASSET_TAGS = (); }; };
+		5FE7B04C1BD5178D00C5E163 /* HabitNewsTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FE7B04B1BD5178D00C5E163 /* HabitNewsTVC.m */; settings = {ASSET_TAGS = (); }; };
+		5FE7B0501BD51F4B00C5E163 /* HabitsNewsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FE7B04E1BD51F4B00C5E163 /* HabitsNewsTableViewCell.m */; settings = {ASSET_TAGS = (); }; };
+		5FE7B0511BD51F4B00C5E163 /* HabitsNewsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5FE7B04F1BD51F4B00C5E163 /* HabitsNewsTableViewCell.xib */; settings = {ASSET_TAGS = (); }; };
 		5FEAE2611BCB053F00201A0E /* CustomVCTransitionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FEAE2601BCB053F00201A0E /* CustomVCTransitionViewController.m */; };
 		5FEAE2641BCB055A00201A0E /* CustomModalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FEAE2631BCB055A00201A0E /* CustomModalViewController.m */; };
 		5FEAE26E1BCB125A00201A0E /* PresentingAnimationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FEAE26D1BCB125A00201A0E /* PresentingAnimationController.m */; };
@@ -35,6 +40,7 @@
 		DC2FFC5E1BD2EF2700A876F8 /* EntryLogsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DC2FFC5C1BD2EF2700A876F8 /* EntryLogsTableViewCell.xib */; settings = {ASSET_TAGS = (); }; };
 		DC51A76B1BCC4CD60044984B /* HabitList.m in Sources */ = {isa = PBXBuildFile; fileRef = DC51A76A1BCC4CD60044984B /* HabitList.m */; settings = {ASSET_TAGS = (); }; };
 		DCB5888F1BD562BA00777FF9 /* FetchWeatherData.m in Sources */ = {isa = PBXBuildFile; fileRef = DCB5888E1BD562BA00777FF9 /* FetchWeatherData.m */; settings = {ASSET_TAGS = (); }; };
+		DCB588911BD5E65D00777FF9 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DCB588901BD5E65D00777FF9 /* CoreLocation.framework */; };
 		DCBA27C21BCDE85800E61721 /* SharedManager.m in Sources */ = {isa = PBXBuildFile; fileRef = DCBA27C11BCDE85800E61721 /* SharedManager.m */; settings = {ASSET_TAGS = (); }; };
 		DCBA27C61BCED16E00E61721 /* CustomContextTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DCBA27C41BCED16E00E61721 /* CustomContextTableViewCell.m */; settings = {ASSET_TAGS = (); }; };
 		DCBA27C71BCED16E00E61721 /* CustomContextTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DCBA27C51BCED16E00E61721 /* CustomContextTableViewCell.xib */; settings = {ASSET_TAGS = (); }; };
@@ -62,6 +68,15 @@
 		5F9B08311BCDAD1500460FF2 /* MainPageVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainPageVC.m; sourceTree = "<group>"; };
 		5FDF1A2A1BD1B7E200720A44 /* EntryLogsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EntryLogsTableViewController.h; sourceTree = "<group>"; };
 		5FDF1A2B1BD1B7E200720A44 /* EntryLogsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EntryLogsTableViewController.m; sourceTree = "<group>"; };
+		5FE7B0381BD3EF3200C5E163 /* HabitInfoData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HabitInfoData.h; sourceTree = "<group>"; };
+		5FE7B0391BD3EF3200C5E163 /* HabitInfoData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HabitInfoData.m; sourceTree = "<group>"; };
+		5FE7B0411BD41E1500C5E163 /* HabitInfoTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HabitInfoTVC.h; sourceTree = "<group>"; };
+		5FE7B0421BD41E1500C5E163 /* HabitInfoTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HabitInfoTVC.m; sourceTree = "<group>"; };
+		5FE7B04A1BD5178D00C5E163 /* HabitNewsTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HabitNewsTVC.h; sourceTree = "<group>"; };
+		5FE7B04B1BD5178D00C5E163 /* HabitNewsTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HabitNewsTVC.m; sourceTree = "<group>"; };
+		5FE7B04D1BD51F4B00C5E163 /* HabitsNewsTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HabitsNewsTableViewCell.h; sourceTree = "<group>"; };
+		5FE7B04E1BD51F4B00C5E163 /* HabitsNewsTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HabitsNewsTableViewCell.m; sourceTree = "<group>"; };
+		5FE7B04F1BD51F4B00C5E163 /* HabitsNewsTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HabitsNewsTableViewCell.xib; sourceTree = "<group>"; };
 		5FEAE25F1BCB053F00201A0E /* CustomVCTransitionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomVCTransitionViewController.h; sourceTree = "<group>"; };
 		5FEAE2601BCB053F00201A0E /* CustomVCTransitionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomVCTransitionViewController.m; sourceTree = "<group>"; };
 		5FEAE2621BCB055A00201A0E /* CustomModalViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomModalViewController.h; sourceTree = "<group>"; };
@@ -94,6 +109,7 @@
 		DC51A76A1BCC4CD60044984B /* HabitList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HabitList.m; sourceTree = "<group>"; };
 		DCB5888D1BD562BA00777FF9 /* FetchWeatherData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FetchWeatherData.h; sourceTree = "<group>"; };
 		DCB5888E1BD562BA00777FF9 /* FetchWeatherData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FetchWeatherData.m; sourceTree = "<group>"; };
+		DCB588901BD5E65D00777FF9 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		DCBA27C01BCDE85800E61721 /* SharedManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SharedManager.h; sourceTree = "<group>"; };
 		DCBA27C11BCDE85800E61721 /* SharedManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SharedManager.m; sourceTree = "<group>"; };
 		DCBA27C31BCED16E00E61721 /* CustomContextTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomContextTableViewCell.h; sourceTree = "<group>"; };
@@ -106,6 +122,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DCB588911BD5E65D00777FF9 /* CoreLocation.framework in Frameworks */,
 				4A5A43BBA13FCB718327B866 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -160,6 +177,7 @@
 				DCBA27C51BCED16E00E61721 /* CustomContextTableViewCell.xib */,
 				DCBA27C01BCDE85800E61721 /* SharedManager.h */,
 				DCBA27C11BCDE85800E61721 /* SharedManager.m */,
+				5FE7B0371BD3EEF200C5E163 /* NYTimesAPI */,
 				DC51A7651BCC1D4A0044984B /* BBModel */,
 				5FEAE26B1BCB0D7C00201A0E /* PopAnimation */,
 				5F8FF9A01BC9A9CD00855DFB /* Main.storyboard */,
@@ -178,6 +196,22 @@
 				5F8FF9981BC9A9CD00855DFB /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		5FE7B0371BD3EEF200C5E163 /* NYTimesAPI */ = {
+			isa = PBXGroup;
+			children = (
+				5FE7B0381BD3EF3200C5E163 /* HabitInfoData.h */,
+				5FE7B0391BD3EF3200C5E163 /* HabitInfoData.m */,
+				5FE7B0411BD41E1500C5E163 /* HabitInfoTVC.h */,
+				5FE7B0421BD41E1500C5E163 /* HabitInfoTVC.m */,
+				5FE7B04A1BD5178D00C5E163 /* HabitNewsTVC.h */,
+				5FE7B04B1BD5178D00C5E163 /* HabitNewsTVC.m */,
+				5FE7B04D1BD51F4B00C5E163 /* HabitsNewsTableViewCell.h */,
+				5FE7B04E1BD51F4B00C5E163 /* HabitsNewsTableViewCell.m */,
+				5FE7B04F1BD51F4B00C5E163 /* HabitsNewsTableViewCell.xib */,
+			);
+			name = NYTimesAPI;
 			sourceTree = "<group>";
 		};
 		5FEAE26B1BCB0D7C00201A0E /* PopAnimation */ = {
@@ -211,6 +245,7 @@
 		C7D24797CBE441A3A8CF05A9 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				DCB588901BD5E65D00777FF9 /* CoreLocation.framework */,
 				288369826A80E7C37FA68C71 /* libPods.a */,
 			);
 			name = Frameworks;
@@ -298,6 +333,7 @@
 				5F8FF9A71BC9A9CD00855DFB /* Assets.xcassets in Resources */,
 				DCBA27C71BCED16E00E61721 /* CustomContextTableViewCell.xib in Resources */,
 				5F8FF9A21BC9A9CD00855DFB /* Main.storyboard in Resources */,
+				5FE7B0511BD51F4B00C5E163 /* HabitsNewsTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -342,14 +378,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				DC2DC1881BCAC00500A627E2 /* Habit.m in Sources */,
+				5FE7B0431BD41E1500C5E163 /* HabitInfoTVC.m in Sources */,
 				5FEAE2611BCB053F00201A0E /* CustomVCTransitionViewController.m in Sources */,
 				5F9B08321BCDAD1500460FF2 /* MainPageVC.m in Sources */,
 				DC2DC1911BCAE7E600A627E2 /* Step.m in Sources */,
+				5FE7B0501BD51F4B00C5E163 /* HabitsNewsTableViewCell.m in Sources */,
+				5FE7B04C1BD5178D00C5E163 /* HabitNewsTVC.m in Sources */,
 				DC22D4A51BD0221200D1E214 /* LoginViewController.m in Sources */,
 				DC22D4A81BD1435000D1E214 /* SignUpViewController.m in Sources */,
 				5FEAE2641BCB055A00201A0E /* CustomModalViewController.m in Sources */,
 				DC2DC18B1BCAC08700A627E2 /* Goal.m in Sources */,
 				5FEAE26E1BCB125A00201A0E /* PresentingAnimationController.m in Sources */,
+				5FE7B03A1BD3EF3200C5E163 /* HabitInfoData.m in Sources */,
 				5F8FF99F1BC9A9CD00855DFB /* ViewController.m in Sources */,
 				5F9B082F1BCC9ECD00460FF2 /* QuestionDetailVC.m in Sources */,
 				DC22D49F1BCEE95A00D1E214 /* CheckProgressViewController.m in Sources */,

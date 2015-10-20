@@ -29,6 +29,78 @@
             </objects>
             <point key="canvasLocation" x="-1103" y="996"/>
         </scene>
+        <!--Habit InfoTVC-->
+        <scene sceneID="HtT-a5-cBp">
+            <objects>
+                <tableViewController storyboardIdentifier="habitInfoTVC" id="uR0-Uh-CAP" customClass="HabitInfoTVC" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="acf-dQ-vuc">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="detailButton" indentationWidth="10" reuseIdentifier="habitInfoCell" id="rFS-g8-X8Z">
+                                <rect key="frame" x="0.0" y="92" width="600" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="rFS-g8-X8Z" id="dKV-8a-ksr">
+                                    <rect key="frame" x="0.0" y="0.0" width="553" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="uR0-Uh-CAP" id="uOM-4C-BbJ"/>
+                            <outlet property="delegate" destination="uR0-Uh-CAP" id="SNs-YW-3im"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="S6H-Ws-Tbm">
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="UR7-e5-mgr">
+                            <connections>
+                                <action selector="doneButtonTapped:" destination="uR0-Uh-CAP" id="VLD-Tl-qis"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dvK-XP-H3Z" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3" y="2407"/>
+        </scene>
+        <!--Title-->
+        <scene sceneID="YYb-lR-S6t">
+            <objects>
+                <tableViewController storyboardIdentifier="habitsNewsTVC" id="13f-uX-114" customClass="HabitNewsTVC" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="1L3-4o-0ZT">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="detailButton" indentationWidth="10" reuseIdentifier="HabitsNewsCellID" id="hXZ-S2-xEU">
+                                <rect key="frame" x="0.0" y="28" width="600" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="hXZ-S2-xEU" id="yOs-ti-O9u">
+                                    <rect key="frame" x="0.0" y="0.0" width="553" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="13f-uX-114" id="sUs-mm-XYa"/>
+                            <outlet property="delegate" destination="13f-uX-114" id="Dml-7S-LhU"/>
+                        </connections>
+                    </tableView>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="Title" id="qJ7-EG-nVH">
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="RBC-v4-dii">
+                            <connections>
+                                <action selector="doneButtonTapped:" destination="13f-uX-114" id="Bll-h6-A2C"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dAB-yM-8aL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="665" y="2407"/>
+        </scene>
         <!--View Controller-->
         <scene sceneID="2XW-uj-uc2">
             <objects>
@@ -1196,6 +1268,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lBC-KO-IO0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-441" y="1691"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="6Vy-mJ-0Yv">
+            <objects>
+                <navigationController storyboardIdentifier="HabitInfoNav" automaticallyAdjustsScrollViewInsets="NO" id="RsL-j6-Gsm" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="MTU-Mw-er4">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="uR0-Uh-CAP" kind="relationship" relationship="rootViewController" id="gF4-gu-Ka2"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9Wg-v7-wW2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-655" y="2407"/>
         </scene>
     </scenes>
     <resources>
