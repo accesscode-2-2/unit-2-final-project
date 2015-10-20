@@ -8,7 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
+#import "YALTabBarInteracting.h"
 
-@interface SearchAPIViewController : UIViewController 
+@interface SearchAPIViewController : UIViewController <YALTabBarInteracting>
 
 @end

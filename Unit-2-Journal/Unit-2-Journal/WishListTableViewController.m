@@ -25,7 +25,7 @@
     self.allJournalPosts = [[NSMutableArray alloc]init];
     }
     
-    NSLog(@"Wish List Result: %@",self.searchResult);
+    // NSLog(@"Wish List Result: %@",self.searchResult);
     
     //    [self setUpSwipeGestures];
     
@@ -35,9 +35,14 @@
     
     self.tableView.rowHeight = UITableViewAutomaticDimension;
     self.tableView.estimatedRowHeight = 35.0;
+    //[self.tableView setSeparatorColor:[UIColor whiteColor]];
+    [self.tableView setTableFooterView:[UIView new]]; // hide extra lines in empty tableview cells
+
     
     [self pullEntriesFromParse];
 }
+
+
 
 - (void)pullEntriesFromParse {
     
@@ -110,6 +115,12 @@
     UIImage *image = [UIImage imageWithData:imageData];
     
     cell.artworkImage.image = image;
+    
+    // format table view lines
+    cell.preservesSuperviewLayoutMargins = false;
+    cell.separatorInset = UIEdgeInsetsZero;
+    cell.layoutMargins = UIEdgeInsetsZero;
+    
     
     return cell;
 }

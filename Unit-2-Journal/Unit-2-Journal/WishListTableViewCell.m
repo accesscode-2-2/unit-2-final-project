@@ -18,6 +18,7 @@
     self.artworkImage.layer.borderColor = [UIColor blackColor].CGColor;
     self.artworkImage.layer.borderWidth = 2.0;
     self.artworkImage.layer.cornerRadius = 25.0;
+
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
