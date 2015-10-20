@@ -48,6 +48,8 @@
 		DC2FFC5D1BD2EF2700A876F8 /* EntryLogsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DC2FFC5B1BD2EF2700A876F8 /* EntryLogsTableViewCell.m */; settings = {ASSET_TAGS = (); }; };
 		DC2FFC5E1BD2EF2700A876F8 /* EntryLogsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DC2FFC5C1BD2EF2700A876F8 /* EntryLogsTableViewCell.xib */; settings = {ASSET_TAGS = (); }; };
 		DC51A76B1BCC4CD60044984B /* HabitList.m in Sources */ = {isa = PBXBuildFile; fileRef = DC51A76A1BCC4CD60044984B /* HabitList.m */; settings = {ASSET_TAGS = (); }; };
+		DCB5888F1BD562BA00777FF9 /* FetchWeatherData.m in Sources */ = {isa = PBXBuildFile; fileRef = DCB5888E1BD562BA00777FF9 /* FetchWeatherData.m */; settings = {ASSET_TAGS = (); }; };
+		DCB588911BD5E65D00777FF9 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DCB588901BD5E65D00777FF9 /* CoreLocation.framework */; };
 		DCBA27C21BCDE85800E61721 /* SharedManager.m in Sources */ = {isa = PBXBuildFile; fileRef = DCBA27C11BCDE85800E61721 /* SharedManager.m */; settings = {ASSET_TAGS = (); }; };
 		DCBA27C61BCED16E00E61721 /* CustomContextTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DCBA27C41BCED16E00E61721 /* CustomContextTableViewCell.m */; settings = {ASSET_TAGS = (); }; };
 		DCBA27C71BCED16E00E61721 /* CustomContextTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DCBA27C51BCED16E00E61721 /* CustomContextTableViewCell.xib */; settings = {ASSET_TAGS = (); }; };
@@ -125,6 +127,9 @@
 		DC2FFC5C1BD2EF2700A876F8 /* EntryLogsTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EntryLogsTableViewCell.xib; sourceTree = "<group>"; };
 		DC51A7691BCC4CD60044984B /* HabitList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HabitList.h; sourceTree = "<group>"; };
 		DC51A76A1BCC4CD60044984B /* HabitList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HabitList.m; sourceTree = "<group>"; };
+		DCB5888D1BD562BA00777FF9 /* FetchWeatherData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FetchWeatherData.h; sourceTree = "<group>"; };
+		DCB5888E1BD562BA00777FF9 /* FetchWeatherData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FetchWeatherData.m; sourceTree = "<group>"; };
+		DCB588901BD5E65D00777FF9 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		DCBA27C01BCDE85800E61721 /* SharedManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SharedManager.h; sourceTree = "<group>"; };
 		DCBA27C11BCDE85800E61721 /* SharedManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SharedManager.m; sourceTree = "<group>"; };
 		DCBA27C31BCED16E00E61721 /* CustomContextTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomContextTableViewCell.h; sourceTree = "<group>"; };
@@ -137,6 +142,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DCB588911BD5E65D00777FF9 /* CoreLocation.framework in Frameworks */,
 				4A5A43BBA13FCB718327B866 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -215,6 +221,8 @@
 				5F9B08311BCDAD1500460FF2 /* MainPageVC.m */,
 				5F058DEE1BD1912C001D93B2 /* MyHabitsTVC.h */,
 				5F058DEF1BD1912C001D93B2 /* MyHabitsTVC.m */,
+				DCB5888D1BD562BA00777FF9 /* FetchWeatherData.h */,
+				DCB5888E1BD562BA00777FF9 /* FetchWeatherData.m */,
 				5FDF1A2A1BD1B7E200720A44 /* EntryLogsTableViewController.h */,
 				5FDF1A2B1BD1B7E200720A44 /* EntryLogsTableViewController.m */,
 				DC2FFC5A1BD2EF2700A876F8 /* EntryLogsTableViewCell.h */,
@@ -293,6 +301,7 @@
 		C7D24797CBE441A3A8CF05A9 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				DCB588901BD5E65D00777FF9 /* CoreLocation.framework */,
 				288369826A80E7C37FA68C71 /* libPods.a */,
 			);
 			name = Frameworks;
@@ -458,6 +467,7 @@
 				5F8FF9A51BC9A9CD00855DFB /* BreakingBad.xcdatamodeld in Sources */,
 				5FEAE2711BCB126700201A0E /* DismissingAnimationController.m in Sources */,
 				DC2DC1941BCAEB8D00A627E2 /* BBUser.m in Sources */,
+				DCB5888F1BD562BA00777FF9 /* FetchWeatherData.m in Sources */,
 				DC2FFC5D1BD2EF2700A876F8 /* EntryLogsTableViewCell.m in Sources */,
 				DC51A76B1BCC4CD60044984B /* HabitList.m in Sources */,
 				5F8FF9991BC9A9CD00855DFB /* main.m in Sources */,

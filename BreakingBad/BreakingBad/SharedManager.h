@@ -10,6 +10,7 @@
 #import "HabitList.h"
 #import "ViewController.h"
 #import "BBUser.h"
+#import "Habit.h"
 
 @interface SharedManager : NSObject
 
@@ -21,30 +22,7 @@
 
 @property (nonatomic) BBUser *currentUser;
 
-//Pompeii Palette
-@property (nonatomic) UIColor *icyNight;
-@property (nonatomic) UIColor *blueSky;
-@property (nonatomic) UIColor *tropicalDream; //darker blue/green
-@property (nonatomic) UIColor *brownForest;
-@property (nonatomic) UIColor *brickRed;
-@property (nonatomic) UIColor *colesiumGrey;
-
-//Color Entrance Color Palette
-//@property (nonatomic) UIColor *iceGrey;
-//@property (nonatomic) UIColor *mintGreen;
-//@property (nonatomic) UIColor *blueSteel;
-//@property (nonatomic) UIColor *chocolateBrown;
-//@property (nonatomic) UIColor *caramelToffee;
-//@property (nonatomic) UIColor *pastelPink;
-
-//Scandinavian Hues Color Palette
-//@property (nonatomic) UIColor *aquaBlue;
-//@property (nonatomic) UIColor *eggplantPurple;
-//@property (nonatomic) UIColor *maroon;
-//@property (nonatomic) UIColor *sherbert;
-//@property (nonatomic) UIColor *caramelToffee;
-//@property (nonatomic) UIColor *vanillaSky;
-
+@property (nonatomic) Habit *habit;
 
 
 + (SharedManager *)sharedModel;

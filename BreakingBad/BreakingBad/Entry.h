@@ -13,5 +13,6 @@
 
 @property (nonatomic) NSString *entryLog;
 @property (nonatomic) NSDictionary *logs;
+@property (nonatomic) NSString *temperature;
 
 @end

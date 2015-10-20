@@ -8,6 +8,7 @@
 
 #import "MyHabitsTVC.h"
 #import "Habit.h"
+#import "FetchWeatherData.h"
 #import "EntryLogsTableViewController.h"
 #import <Parse/Parse.h>
 #import <AFNetworking/AFNetworking.h>
@@ -28,26 +29,15 @@
     [super viewDidLoad];
     
     self.navigationItem.title = @"My Habits";
-    
-     self.tableView.backgroundColor = [SharedManager sharedModel].icyNight;
-    
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
-    
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
 
 
 #pragma mark - Table view data source
-
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-#warning Incomplete implementation, return the number of sections
     return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-#warning Incomplete implementation, return the number of rows
     return self.habitsArray.count;
 }
 
@@ -73,4 +63,7 @@
     [self.navigationController pushViewController:eltvc animated:YES];
     
 }
+
+
+
 @end

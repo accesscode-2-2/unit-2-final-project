@@ -11,7 +11,8 @@
 @implementation Entry
 
 @dynamic entryLog;
-
+@dynamic temperature;
+@dynamic logs;
 
 + (NSString *)parseClassName{
     return @"Entry";

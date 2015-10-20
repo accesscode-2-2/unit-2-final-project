@@ -8,11 +8,11 @@
 
 #import <UIKit/UIKit.h>
 #import "Habit.h"
+#import "FetchWeatherData.h"
 
 @interface EntryLogsTableViewController : UITableViewController
 
 @property (nonatomic) Habit *habit;
 
--(void)addColorEntryLog; 
-
+@property (nonatomic) FetchWeatherData *weatherData;
 @end

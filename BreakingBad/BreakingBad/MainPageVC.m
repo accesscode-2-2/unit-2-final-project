@@ -17,7 +17,10 @@
 #import "QuestionDetailVC.h"
 #import "MyHabitsTVC.h"
 #import "HabitInfoTVC.h"
+#import <CoreLocation/CoreLocation.h>
+#import <AFNetworking/AFNetworking.h>
 
+NSString const *WEATHERAPIKEY = @"6cc63d13a4dd0826b7383ef753a32";
 
 @interface MainPageVC ()
 <
@@ -25,7 +28,8 @@ UIPickerViewDataSource,
 UIPickerViewDelegate,
 UITableViewDataSource,
 UITableViewDelegate,
-QuestionDetailVCDelegate
+QuestionDetailVCDelegate,
+CLLocationManagerDelegate
 >
 
 @property (weak, nonatomic) IBOutlet UIPickerView *habitPickerView;
@@ -61,7 +65,9 @@ QuestionDetailVCDelegate
 
 @end
 
-@implementation MainPageVC
+@implementation MainPageVC{
+    CLLocationManager *locationManager;
+}
 
 #pragma mark- viewDidLoad 
 
@@ -174,10 +180,22 @@ QuestionDetailVCDelegate
             [[SharedManager sharedModel].answersDictionary setObject:answer forKey:tagString];
             
             self.entry = [Entry new];
+            
             self.entry.entryLog = answer;
+            
             [self.habit.entries addObject:self.entry];
         }
     }
+}
+
+-(NSString *)formattedDateStringForAPI:(NSDate *)date{
+    
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    [dateFormatter setDateFormat:@"YYYY-MM-dd"];
+    
+    NSString *dateString = [dateFormatter stringFromDate:date];
+    
+    return dateString;
 }
 
 #pragma mark
@@ -249,7 +267,7 @@ QuestionDetailVCDelegate
     NSMutableDictionary *entryDictionary = [[NSMutableDictionary alloc] init];
     for(int i=0; i < self.questionsArray.count; i++)
     {
-        UIButton *currentButton = (UIButton *)self.questionsArray[i];
+        // UIButton *currentButton = (UIButton *)self.questionsArray[i];
         UILabel *label = (UILabel *)self.reply[i];
         
         NSString *key = [NSString stringWithFormat:@"%d", i];
@@ -259,29 +277,47 @@ QuestionDetailVCDelegate
     }
     
     newEntry.logs = entryDictionary;
-    [selectedHabit.entries addObject:newEntry];
-    [selectedHabit saveInBackground];
+    NSString *dateString = [self formattedDateStringForAPI:newEntry.createdAt];
+    
+    float latitude = locationManager.location.coordinate.latitude;
+    float longitude = locationManager.location.coordinate.longitude;
+    
+    NSLog(@"lat: %f, long: %f",latitude, longitude);
+    
+    //@"api.worldweatheronline.com/free/v2/past-weather.ashx?&format=json&date=2015-08-18&tp=24"
+
+    
+//    NSString *urlString = [NSString stringWithFormat:@"https://api.worldweatheronline.com/free/v2/past-weather.ashx?q=%20%@%%2C%@&format=json&date=%@&tp=24&key=%@",latString,longString,dateString, WEATHERAPIKEY];
+    NSString *urlString = [NSString stringWithFormat:@"https://api.worldweatheronline.com/free/v2/past-weather.ashx?q=%20%f%%2C%f&format=json&date=%@&tp=24&key=%@",latitude,longitude,dateString,WEATHERAPIKEY];
+    
+    NSLog(@"%@",urlString);
+    
+    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
+    [manager GET:urlString parameters:nil success:^(AFHTTPRequestOperation * _Nonnull operation, id  _Nonnull responseObject) {
+        
+        NSDictionary *data = responseObject[@"data"];
+        NSArray *weatherData = data[@"weather"];
+        NSLog(@"%@", weatherData);
+        
+        NSDictionary *dict = weatherData[0];
+        NSArray *hourlyDataArray = dict[@"hourly"];
+        NSDictionary *hourlyDataDictionary = hourlyDataArray[0];
+        NSString *tempF = hourlyDataDictionary[@"tempF"];
+        newEntry.temperature = tempF;
+        NSLog(@"%@",newEntry);
+        
+        [selectedHabit.entries addObject:newEntry];
+        [selectedHabit saveInBackground];
+        
+    } failure:^(AFHTTPRequestOperation * _Nonnull operation, NSError * _Nonnull error) {
+        NSLog(@"Could not get weather data:-");
+        NSLog(@"%@",error.localizedDescription);
+    }];
     
     
-    
-//    [self.habitsArray addObject:self.habitTextField.text];
-    //[[SharedManager sharedModel].habitArray addObject:self.habitTextField.text];
-//    [self.habitPickerView reloadAllComponents];
-//    
-//    self.habit = [Habit new];
-//    self.habit.name = self.habitTextField.text;
-//    
-//    if([self.user objectForKey:@"habits"]==nil)
-//    {
-//        self.user.habits = [NSMutableArray<Habit *> new];
-//        [self.user.habits addObject:self.habit];
-//    }else{
-//        [self.user.habits addObject:self.habit];
-//    }
 }
 
-
--(void)answersFromPreviousScreen{
+- (void)answersFromPreviousScreen{
     NSArray *allkeys = [[[SharedManager sharedModel] answersDictionary] allKeys];
     for(NSString *key in allkeys)
     {
@@ -328,13 +364,8 @@ QuestionDetailVCDelegate
     
     else if (indexPath.row == 4) {
         
-        UINavigationController *navigationController = [self.storyboard instantiateViewControllerWithIdentifier:@"HabitInfoNav"];
+        [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(showHabitsInfo) userInfo:nil repeats:NO];
         
-        HabitInfoTVC *hInfo = (HabitInfoTVC *) navigationController.topViewController;
-        
-        hInfo.habitsArray = self.habitsArray;
-        
-        [self presentViewController:navigationController animated:YES completion:nil];
     }
     else if (indexPath.row ==  5){
         [self.user saveInBackground];
@@ -344,7 +375,15 @@ QuestionDetailVCDelegate
     
 }
 
-
+- (void)showHabitsInfo{
+    UINavigationController *navigationController = [self.storyboard instantiateViewControllerWithIdentifier:@"HabitInfoNav"];
+    
+    HabitInfoTVC *hInfo = (HabitInfoTVC *) navigationController.topViewController;
+    
+    hInfo.habitsArray = self.habitsArray;
+    
+    [self presentViewController:navigationController animated:YES completion:nil];
+}
 
 - (void)showMyHabits{
     
@@ -379,9 +418,6 @@ QuestionDetailVCDelegate
     return cell;
 }
 
-
-
-
 #pragma mark
 #pragma Life Cycle Methods
 
@@ -411,7 +447,47 @@ QuestionDetailVCDelegate
     }
 }
 
+- (void)viewDidLoad{
+    [super viewDidLoad];
+    self.habitPickerView.delegate = self;
+    [self answersFromPreviousScreen];
+    [self initiateMenuOptions];
+    [[self.navigationController navigationBar]setHidden:YES];
+    
+    self.habitLabel.hidden = YES;
+    [self setUpLocationManager];
+    
+    __weak typeof(self) weakSelf = self;
+    PFQuery *query = [PFQuery queryWithClassName:@"Habit"];
+    [query includeKey:@"entries"];
+    [query findObjectsInBackgroundWithBlock:^(NSArray * _Nullable objects, NSError * _Nullable error) {
+        weakSelf.habitsArray = objects;
+        [weakSelf.habitPickerView reloadAllComponents];
+    }];
+}
 
+- (void)locationManager:(CLLocationManager *)manager
+    didUpdateToLocation:(CLLocation *)newLocation
+           fromLocation:(CLLocation *)oldLocation
+{
+    [locationManager stopUpdatingLocation];
+    
+    CLGeocoder * geoCoder = [[CLGeocoder alloc] init];
+    [geoCoder reverseGeocodeLocation:newLocation
+                   completionHandler:^(NSArray *placemarks, NSError *error) {
+                       NSString *locString = placemarks.count ? [placemarks.firstObject locality] : @"Not Found";
+                       NSLog(@"This is your city: %@",locString);
+                   }];
+}
+
+- (void)setUpLocationManager{
+    locationManager = [[CLLocationManager alloc] init];
+    locationManager.distanceFilter = kCLDistanceFilterNone;
+    locationManager.desiredAccuracy = kCLLocationAccuracyBest;
+    [locationManager startUpdatingLocation];
+    locationManager.delegate = self;
+    [locationManager requestWhenInUseAuthorization];
+}
 #pragma mark
 #pragma UIPickerView DataSource Methods
 
@@ -429,20 +505,13 @@ QuestionDetailVCDelegate
 }
 
 - (void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component{
-//    [SharedManager sharedModel].selectedRow = row;
-//    
-//    NSString *habitString = self.habitsArray[row];
-//    self.habit = [Habit new];
-//    self.habit.name = habitString;
-//    
-//    if([self.user objectForKey:@"habits"]==nil)
-//    {
-//        self.user.habits = [NSMutableArray<Habit *> new];
-//        [self.user.habits addObject:self.habit];
-//    }else{
-//        [self.user.habits addObject:self.habit];
-//    }
     
+    for(int i=0; i<self.questionsArray.count;i++){
+        UILabel *currentLabel = self.reply[i];
+        if(!(currentLabel.text == nil)){
+            currentLabel.text = @" ";
+        }
+    }
 }
 
 -(void)prepareForSegue:(nonnull UIStoryboardSegue *)segue sender:(nullable id)sender {

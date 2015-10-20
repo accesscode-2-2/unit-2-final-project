@@ -14,15 +14,20 @@
 #import <AFNetworking/AFNetworking.h>
 #import "SharedManager.h"
 
-//@dynamic tableView;
+
+
 
 @interface EntryLogsTableViewController ()
 
 @property (nonatomic) NSArray *data;
 
-////properties to add color to
-@property (strong, nonatomic) IBOutlet UITableView *entryTableView;
+@property (nonatomic) NSDate *entryCreationDate;
 
+@property (nonatomic) NSArray *urlStringsArray;
+
+@property (nonatomic) NSMutableArray *temps;
+
+@property (nonatomic)  NSInteger index;
 
 @end
 
@@ -37,9 +42,9 @@
     
     UINib *nib = [UINib nibWithNibName:@"EntryLogsTableViewCell" bundle:nil];
     [self.tableView registerNib:nib forCellReuseIdentifier:@"entryLogCellID"];
+    self.urlStringsArray = [self urlStringsArray];
     
-    [self fetchWeatherData];
-    [self addColorEntryLog];
+    //[self fetchWeatherData];
 }
 
 
@@ -52,7 +57,9 @@
 -(NSString *)stringFromTimeInterval:(NSTimeInterval)time{
     NSDate *date = [NSDate dateWithTimeIntervalSinceReferenceDate:time];
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
-    [dateFormatter setDateFormat:@"EEEE"];
+    //[dateFormatter setDateFormat:@"EEEE"];
+    [dateFormatter setDateStyle:NSDateFormatterShortStyle];
+    
     NSString *dateName = [dateFormatter stringFromDate:date];
     
     return dateName;
@@ -68,52 +75,34 @@
     return self.habit.entries.count;
 }
 
-
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-//    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"entryCell" forIndexPath:indexPath];
-//    
-//    
-//    Entry *entry = self.habit.entries[indexPath.row];
-//    
-//    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
-//    dateFormatter.dateStyle = NSDateFormatterShortStyle;
-//    
-//    NSString *dateString = [dateFormatter stringFromDate:entry.createdAt];
-//    
-//    cell.textLabel.text = dateString;
-    
-    
     
     EntryLogsTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"entryLogCellID" forIndexPath:indexPath];
     
-    NSDictionary *dict = self.data[indexPath.row];
-    
-    //NSTimeInterval timeInterval = [dict[@"time"] doubleValue];
-    
-    NSString *minTemp = [NSString stringWithFormat:@"%@",dict[@"temperatureMin"]];
-    NSString *minTempShort = [NSString stringWithFormat:@"%.02f",[minTemp doubleValue]];
-    
-    NSString *maxTemp = [NSString stringWithFormat:@"%@",dict[@"temperatureMax"] ];
-    NSString *maxTempShort = [NSString stringWithFormat:@"%.02f",[maxTemp doubleValue]];
-    
-    double avgTempDouble = ([minTempShort doubleValue] + [maxTempShort doubleValue])/2 ;
-    
-    NSString *avgTemp = [NSString stringWithFormat:@"%.01f",avgTempDouble];
-    
-    
     Entry *entry = self.habit.entries[indexPath.row];
+    self.entryCreationDate = entry.createdAt;
+    NSString *dateString = [self dateStringFromDate:entry.createdAt];
     
-        NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
-        dateFormatter.dateStyle = NSDateFormatterShortStyle;
     
-        NSString *dateString = [dateFormatter stringFromDate:entry.createdAt];
+    NSString *tempF = entry.temperature;
+    cell.tempInfoLabel.text = tempF;
     
-    cell.weatherIconImageView.image = [UIImage imageNamed:dict[@"icon"]];
-    cell.tempInfoLabel.text = avgTemp;
+    //cell.weatherIconImageView.image = [UIImage imageNamed:dict[@"icon"]];
+    
     cell.entryDateLabel.text = dateString;
     
     return cell;
 }
+
+-(NSString *)dateStringFromDate:(NSDate *)date{
+    NSDateFormatter *dateFormatter = [NSDateFormatter new];
+    dateFormatter.dateStyle = NSDateFormatterShortStyle;
+    
+    NSString *dateString = [dateFormatter stringFromDate:date];
+    return dateString;
+}
+
+
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     MainPageVC *mainPageVC = (MainPageVC *)[self.storyboard instantiateViewControllerWithIdentifier:@"showMainPgVC"];
@@ -123,37 +112,73 @@
     mainPageVC.habitName = self.habit.name;
     
     [self.navigationController pushViewController:mainPageVC animated:YES];
-    
-    
 }
 
--(void)fetchWeatherData{
-    AFHTTPRequestOperationManager *manager = [[AFHTTPRequestOperationManager alloc] init];
-    NSDictionary *latitudeLongitudeDict = [[NSUserDefaults standardUserDefaults] objectForKey:@"dict"];
+//- (void)fetchWeatherData{
+//
+//    for(int i=0; i < self.urlStringsArray.count; i++){
+//        AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
+//        if(!self.temps){
+//            self.temps = [NSMutableArray new];
+//        }
+//        NSLog(@"%@",self.urlStringsArray);
+//
+//        [manager GET:self.urlStringsArray[0] parameters:nil success:^(AFHTTPRequestOperation * _Nonnull operation, id  _Nonnull responseObject) {
+//
+//            NSDictionary *data = responseObject[@"data"];
+//            NSArray *weatherData = data[@"weather"];
+//            NSLog(@"%@", weatherData);
+//            self.data = weatherData;
+//
+//            NSDictionary *dict = self.data[0];
+//            NSArray *hourlyDataArray = dict[@"hourly"];
+//            NSDictionary *hourlyDataDictionary = hourlyDataArray[0];
+//            NSString *tempF = hourlyDataDictionary[@"tempF"];
+//            // NSString *tempC = hourlyDataDictionary[@"tempC"];
+//
+//            [self.temps addObject:tempF];
+//            [self.tableView reloadData];
+//        } failure:^(AFHTTPRequestOperation * _Nonnull operation, NSError * _Nonnull error) {
+//            NSLog(@"Error: %@", error.localizedDescription);
+//        }];
+//    }
+//}
+
+//-(NSArray<NSString *> *)urlStringsArray{
+//    NSArray *array = [self arrayWithFormattedDateStrings];
+//    NSLog(@"Date Strings in array%@",array);
+//
+//    NSMutableArray *urlStringsArray = [NSMutableArray new];
+//
+//    for(NSString *string in array){
+//
+//        NSString *urlString = [NSString stringWithFormat:@"https://api.worldweatheronline.com/free/v2/past-weather.ashx?q=22%%2C22&format=json&date=%@&tp=24&key=%@",string,WEATHERAPIKEY];
+//        [urlStringsArray addObject:urlString];
+//    }
+//    return urlStringsArray;
+//
+//}
+
+-(NSString *)formattedDateStringForAPI:(NSDate *)date{
     
-    NSString *latitude = [latitudeLongitudeDict objectForKey:@"latitude"];
-    NSString *longitude = [latitudeLongitudeDict objectForKey:@"longitude"];
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    [dateFormatter setDateFormat:@"YYYY-MM-dd"];
     
-    NSString *url;
-    if(latitude && longitude && latitude.length && longitude.length)
-    {
-      //  url =[NSString stringWithFormat:@"https://api.forecast.io/forecast/95ac0e76481513d58b808d31fba3a227/%@,%@",latitude,longitude];
-    }
-    else
-    {
-     //   url = [NSString stringWithFormat:@"https://api.forecast.io/forecast/95ac0e76481513d58b808d31fba3a227/%@,%@",self.latitude,self.longitude];
-    }
-    url  = @"https://api.forecast.io/forecast/95ac0e76481513d58b808d31fba3a227/-22,47";
-    [manager GET:url parameters:nil success:^(AFHTTPRequestOperation * _Nonnull operation, id  _Nonnull responseObject) {
-        
-        
-        NSDictionary *daily = responseObject[@"daily"];
-        NSArray *data = daily[@"data"];
-        self.data = data;
-        [self.tableView reloadData];
-    } failure:^(AFHTTPRequestOperation * _Nonnull operation, NSError * _Nonnull error) {
-        NSLog(@"Error: %@", error.localizedDescription);
-    }];
+    NSString *dateString = [dateFormatter stringFromDate:date];
+    
+    return dateString;
 }
+
+-(NSArray<NSString *> *)arrayWithFormattedDateStrings{
+    NSMutableArray *dateStrings = [[NSMutableArray alloc] init];
+    for(Entry *entry in self.habit.entries){
+        NSString *formattedString = [self formattedDateStringForAPI:entry.createdAt];
+        [dateStrings addObject:formattedString];
+    }
+    return dateStrings;
+}
+
+
+
 
 @end
