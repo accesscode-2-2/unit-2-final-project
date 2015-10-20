@@ -7,6 +7,8 @@
 //
 
 #import "ViewCompletedEntryViewController.h"
+#import <FBSDKCoreKit/FBSDKCoreKit.h>
+#import <FBSDKShareKit/FBSDKShareKit.h>
 
 @interface ViewCompletedEntryViewController ()
 
@@ -15,6 +17,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *completedCreatorLabel;
 @property (weak, nonatomic) IBOutlet UILabel *completedDateLabel; // review written on
 @property (weak, nonatomic) IBOutlet UITextView *completedReviewTextView;
+@property (strong, nonatomic) IBOutlet UIView *facebookView;
 
 @property (weak, nonatomic) IBOutlet UIButton *starOne;
 @property (weak, nonatomic) IBOutlet UIButton *starTwo;
@@ -29,6 +32,8 @@
 
 - (void)viewDidLoad{
     [super viewDidLoad];
+    
+    [self setupFacebookShare];
     
     self.completedTitleLabel.text = self.journalPostDetail.title;
     self.completedCreatorLabel.text = self.journalPostDetail.creator;
@@ -64,7 +69,23 @@
     
     [self setupStars];
 }
-
+- (void) setupFacebookShare {
+    FBSDKShareLinkContent *content = [[FBSDKShareLinkContent alloc]init];
+    NSString *titleString = [NSString stringWithFormat:@"Check out my review of %@!",self.journalPostDetail.title];
+    NSString *descriptionString = [NSString stringWithFormat:@"%@",self.journalPostDetail.postText];
+    
+    content.contentTitle = titleString;
+    content.contentDescription = descriptionString;
+    content.imageURL = [NSURL URLWithString:self.journalPostDetail.imageForMedia];
+    
+    
+    FBSDKShareButton *shareButton = [[FBSDKShareButton alloc]initWithFrame:CGRectMake(0, 0, self.facebookView.frame.size.width, self.facebookView.frame.size.height)];
+    shareButton.shareContent = content;
+    //shareButton.center = self.view.center;
+    
+    [self.facebookView addSubview:shareButton];
+    
+}
 #pragma mark - stars
 
 - (void)setupStars {
