@@ -1050,7 +1050,7 @@
                                 <animations/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8SE-vT-BJI">
-                                <rect key="frame" x="150" y="140" width="300" height="80"/>
+                                <rect key="frame" x="150" y="260" width="300" height="80"/>
                                 <animations/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="80" id="g6G-Qd-QsR"/>
@@ -1125,6 +1125,7 @@
                             <constraint firstItem="HcS-PW-shZ" firstAttribute="top" secondItem="XPX-6B-xaO" secondAttribute="bottom" id="dx9-bh-E8Y"/>
                             <constraint firstItem="XPX-6B-xaO" firstAttribute="top" secondItem="MRd-dB-Fnx" secondAttribute="bottom" id="p65-Vj-9uO"/>
                             <constraint firstAttribute="trailing" secondItem="XPX-6B-xaO" secondAttribute="trailing" id="p6p-sC-beQ"/>
+                            <constraint firstItem="8SE-vT-BJI" firstAttribute="centerY" secondItem="pyN-Jf-S8L" secondAttribute="centerY" id="q6u-Xd-Ogm"/>
                             <constraint firstAttribute="trailingMargin" secondItem="RcK-xi-dHU" secondAttribute="trailing" id="qSV-OC-MCd"/>
                             <constraint firstItem="RcK-xi-dHU" firstAttribute="top" secondItem="pyN-Jf-S8L" secondAttribute="topMargin" id="qb9-nu-zmk"/>
                             <constraint firstAttribute="trailing" secondItem="AoY-KK-TzR" secondAttribute="trailing" id="tzF-FP-gvN"/>
@@ -1135,6 +1136,7 @@
                             <mask key="constraints">
                                 <exclude reference="7oY-ld-Uvw"/>
                                 <exclude reference="qSV-OC-MCd"/>
+                                <exclude reference="WID-0f-mBR"/>
                             </mask>
                         </variation>
                     </view>
@@ -1519,7 +1521,7 @@
         <image name="settings" width="21" height="22"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="aGj-8u-3bd"/>
+        <segue reference="uy4-x5-2D8"/>
         <segue reference="Gf5-oo-kyB"/>
         <segue reference="ofM-AI-3BJ"/>
     </inferredMetricsTieBreakers>
