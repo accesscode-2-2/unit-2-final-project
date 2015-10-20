@@ -15,13 +15,61 @@
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nwt-Xj-IaG">
+                                <rect key="frame" x="0.0" y="85" width="600" height="47"/>
+                                <animations/>
+                                <attributedString key="attributedText">
+                                    <fragment content="NOMAD">
+                                        <attributes>
+                                            <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="41" name="Baskerville-BoldItalic"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cover2" translatesAutoresizingMaskIntoConstraints="NO" id="qZ8-QU-8Dh">
+                                <rect key="frame" x="207" y="198" width="187" height="307"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="187" id="D2A-w9-ZVP"/>
+                                    <constraint firstAttribute="height" constant="307" id="ROt-Y0-SWw"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="qZ8-QU-8Dh" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="Div-Fs-pMI"/>
+                            <constraint firstItem="Nwt-Xj-IaG" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="Jng-Zt-S4z"/>
+                            <constraint firstItem="qZ8-QU-8Dh" firstAttribute="top" secondItem="Nwt-Xj-IaG" secondAttribute="bottom" constant="66" id="aJ3-VK-0sW"/>
+                            <constraint firstAttribute="trailing" secondItem="qZ8-QU-8Dh" secondAttribute="trailing" constant="105" id="fMx-WN-Jhw"/>
+                            <constraint firstItem="qZ8-QU-8Dh" firstAttribute="top" secondItem="Nwt-Xj-IaG" secondAttribute="bottom" constant="66" id="iDH-j8-iwD"/>
+                            <constraint firstAttribute="trailing" secondItem="Nwt-Xj-IaG" secondAttribute="trailing" id="kLp-NU-jLK"/>
+                            <constraint firstItem="Nwt-Xj-IaG" firstAttribute="top" secondItem="Llm-lL-Icb" secondAttribute="bottom" constant="65" id="qhr-MX-Tgy"/>
+                            <constraint firstItem="qZ8-QU-8Dh" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" constant="105" id="rAf-vZ-LBU"/>
+                            <constraint firstItem="qZ8-QU-8Dh" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="sdy-RC-Kk8"/>
+                            <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="qZ8-QU-8Dh" secondAttribute="bottom" constant="135" id="y1U-lG-g5r"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="Div-Fs-pMI"/>
+                                <exclude reference="aJ3-VK-0sW"/>
+                                <exclude reference="fMx-WN-Jhw"/>
+                                <exclude reference="rAf-vZ-LBU"/>
+                                <exclude reference="y1U-lG-g5r"/>
+                            </mask>
+                        </variation>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="53" y="375"/>
+            <point key="canvasLocation" x="354" y="123"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="cover2" width="1060" height="1747"/>
+    </resources>
 </document>

@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0021CAC71BD5E777002EED7B /* MapKitViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0021CAC61BD5E777002EED7B /* MapKitViewController.m */; settings = {ASSET_TAGS = (); }; };
+		0021CAC91BD5F157002EED7B /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0021CAC81BD5F157002EED7B /* MapKit.framework */; };
+		0021CACB1BD5F17F002EED7B /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0021CACA1BD5F17F002EED7B /* CoreLocation.framework */; };
 		78882C0759DAABCCBBF267D6 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 196536DFD13DA4A9B2F67F70 /* libPods.a */; };
 		AB0F265E1BCC5387006685AB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AB0F265D1BCC5387006685AB /* main.m */; };
 		AB0F26611BCC5387006685AB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AB0F26601BCC5387006685AB /* AppDelegate.m */; };
@@ -29,6 +32,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0021CAC51BD5E777002EED7B /* MapKitViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapKitViewController.h; sourceTree = "<group>"; };
+		0021CAC61BD5E777002EED7B /* MapKitViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapKitViewController.m; sourceTree = "<group>"; };
+		0021CAC81BD5F157002EED7B /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		0021CACA1BD5F17F002EED7B /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		0F0A099F832F2DA3DDCF3FCC /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		196536DFD13DA4A9B2F67F70 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		2DE94031048D68D9CB939801 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
@@ -73,6 +80,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0021CACB1BD5F17F002EED7B /* CoreLocation.framework in Frameworks */,
+				0021CAC91BD5F157002EED7B /* MapKit.framework in Frameworks */,
 				78882C0759DAABCCBBF267D6 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -80,9 +89,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0021CAC41BD5E6E4002EED7B /* MapKit */ = {
+			isa = PBXGroup;
+			children = (
+				0021CAC51BD5E777002EED7B /* MapKitViewController.h */,
+				0021CAC61BD5E777002EED7B /* MapKitViewController.m */,
+			);
+			name = MapKit;
+			path = ..;
+			sourceTree = "<group>";
+		};
 		2A249663F855D47B8CC825A3 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				0021CACA1BD5F17F002EED7B /* CoreLocation.framework */,
+				0021CAC81BD5F157002EED7B /* MapKit.framework */,
 				196536DFD13DA4A9B2F67F70 /* libPods.a */,
 			);
 			name = Frameworks;
@@ -131,6 +152,7 @@
 				ABF8076D1BD4444E00853411 /* Singletons */,
 				AB626ED31BD01B26005BC70B /* Journal Entry Creation */,
 				AB626ED21BD01B10005BC70B /* Entry List TableView */,
+				0021CAC41BD5E6E4002EED7B /* MapKit */,
 				AB0F266E1BCC5387006685AB /* Assets.xcassets */,
 				AB0F26701BCC5387006685AB /* LaunchScreen.storyboard */,
 				AB0F26731BCC5387006685AB /* Info.plist */,
@@ -229,6 +251,7 @@
 				TargetAttributes = {
 					AB0F26581BCC5387006685AB = {
 						CreatedOnToolsVersion = 7.0.1;
+						DevelopmentTeam = 9V5VY2T8PQ;
 					};
 				};
 			};
@@ -322,6 +345,7 @@
 				AB0F26671BCC5387006685AB /* DataViewController.m in Sources */,
 				AB0F26611BCC5387006685AB /* AppDelegate.m in Sources */,
 				AB0F266A1BCC5387006685AB /* ModelController.m in Sources */,
+				0021CAC71BD5E777002EED7B /* MapKitViewController.m in Sources */,
 				EBB12DD71BD5C945001027B8 /* CollectionViewCell.m in Sources */,
 				EBB12DDD1BD5C9F2001027B8 /* ObjectsInMeetUp.m in Sources */,
 				AB0F265E1BCC5387006685AB /* main.m in Sources */,
@@ -443,10 +467,13 @@
 			baseConfigurationReference = 0F0A099F832F2DA3DDCF3FCC /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = UNIT2PracticeProject/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = bereketsHW.UNIT2PracticeProject;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -455,10 +482,13 @@
 			baseConfigurationReference = 2DE94031048D68D9CB939801 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = UNIT2PracticeProject/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = bereketsHW.UNIT2PracticeProject;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
