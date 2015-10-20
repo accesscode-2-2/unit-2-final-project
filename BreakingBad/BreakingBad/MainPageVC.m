@@ -29,7 +29,7 @@ QuestionDetailVCDelegate
 >
 
 @property (weak, nonatomic) IBOutlet UIPickerView *habitPickerView;
-@property (weak, nonatomic) IBOutlet UIButton *doneButton;
+//@property (weak, nonatomic) IBOutlet UIButton *doneButton;
 
 @property (strong, nonatomic) IBOutletCollection(UILabel) NSArray *reply;
 @property (nonatomic) YALContextMenuTableView *contextMenuTableView;
@@ -42,13 +42,106 @@ QuestionDetailVCDelegate
 @property (nonatomic) BBUser *user;
 @property (nonatomic) Habit *habit;
 
+//@property (weak, nonatomic) IBOutlet UILabel *habitLabel;
+
+
+////properties to add color to
+@property (weak, nonatomic) IBOutlet UIView *habitView;
+@property (weak, nonatomic) IBOutlet UIButton *doneButton;
 @property (weak, nonatomic) IBOutlet UILabel *habitLabel;
+@property (weak, nonatomic) IBOutlet UILabel *habitLftLabel;
+@property (weak, nonatomic) IBOutlet UIButton *menuIconButton;
+@property (strong, nonatomic) IBOutletCollection(UIView) NSArray *oddViews;
+@property (strong, nonatomic) IBOutletCollection(UIView) NSArray *evenViews;
+@property (strong, nonatomic) IBOutletCollection(UIButton) NSArray *oddButtons;
+@property (strong, nonatomic) IBOutletCollection(UIButton) NSArray *evenButtons;
+@property (strong, nonatomic) IBOutletCollection(UILabel) NSArray *oddLabels;
+@property (strong, nonatomic) IBOutletCollection(UILabel) NSArray *evenLabels;
+
 
 @end
 
 @implementation MainPageVC
 
-#pragma mark
+#pragma mark- viewDidLoad 
+
+- (void)viewDidLoad{
+    [super viewDidLoad];
+    self.habitPickerView.delegate = self;
+    [self answersFromPreviousScreen];
+    [self initiateMenuOptions];
+    [[self.navigationController navigationBar]setHidden:YES];
+    
+    self.habitLabel.hidden = YES;
+    
+    [self addColorsMainPg];
+    
+    //    self.habitsArray = [NSMutableArray new];
+    //    HabitList *hl = [HabitList new];
+    //    self.habitsArray = hl.habitsList;
+    
+    //[self.habitPickerView selectRow:[SharedManager sharedModel].selectedRow inComponent:0 animated:YES];
+    
+    //    BBUser *currentUser = (BBUser *)[PFUser currentUser];
+    //        [currentUser objectForKey:@"habits"];
+    //        [currentUser fetchIfNeededInBackgroundWithBlock:^(PFObject * _Nullable object, NSError * _Nullable error) {
+    //          NSLog(@"%@",object);
+    //        }];
+    //    PFQuery *query = [PFUser query];
+    //
+    //    [query whereKey:@"username" equalTo:[currentUser username]];
+    //
+    //    [query getFirstObjectInBackgroundWithBlock:^(PFObject * _Nullable object, NSError * _Nullable error) {
+    //        NSLog(@"Object: %@", object);
+    //        NSLog(@"Habits: %@", [object objectForKey:@"habtis"]);
+    //    }];
+    
+    
+    __weak typeof(self) weakSelf = self;
+    PFQuery *query = [PFQuery queryWithClassName:@"Habit"];
+    [query includeKey:@"entries"];
+    [query findObjectsInBackgroundWithBlock:^(NSArray * _Nullable objects, NSError * _Nullable error) {
+        weakSelf.habitsArray = objects;
+        [weakSelf.habitPickerView reloadAllComponents];
+    }];
+}
+
+
+
+#pragma mark- Add colors
+
+-(void)addColorsMainPg {
+    
+   self.habitView.backgroundColor = [SharedManager sharedModel].icyNight;
+    
+    for (UIView *aquaView in self.oddViews)
+    {
+        aquaView.backgroundColor = [SharedManager sharedModel].icyNight;
+    }
+    
+    for (UIView *aquaView in self.evenViews)
+    {
+        aquaView.backgroundColor = [SharedManager sharedModel].blueSky;
+    }
+    
+}
+
+//self.headerBackgroundView.backgroundColor = [PresetTimerData sharedModel].ghostGrey;
+//self.lapButton.layer.borderWidth = 2.5;
+//self.lapButton.layer.borderColor = [PresetTimerData sharedModel].glacierBlue.CGColor;
+//self.lapButton.backgroundColor = [PresetTimerData sharedModel].glacierBlue;
+//self.lapButton.layer.cornerRadius = 25;
+//self.lapButton.tintColor = [PresetTimerData sharedModel].burntOrange;
+//self.timeLabel.textColor = [PresetTimerData sharedModel].eggplant;
+//self.timeLabel.layer.borderWidth = 15;
+//self.timeLabel.layer.borderColor = [PresetTimerData sharedModel].steelBlueGrey.CGColor;
+//self.timeLabel.layer.cornerRadius =10;
+//
+//self.lapTimeLabel.textColor = [PresetTimerData sharedModel].burntOrange;
+//self.lapTableView.backgroundColor = [PresetTimerData sharedModel].ghostGrey;
+
+
+
 #pragma Question Buttons Method
 
 - (IBAction)questionButtonTapped:(UIButton *)sender {
@@ -280,7 +373,7 @@ QuestionDetailVCDelegate
         cell.backgroundColor = [UIColor clearColor];
         cell.menuTitleLabel.text = [self.menuTitles objectAtIndex:indexPath.row];
         cell.menuTitleImage.image = [self.menuIcons objectAtIndex:indexPath.row];
-        cell.viewHoldingImageView.backgroundColor = [UIColor whiteColor];
+        cell.viewHoldingImageView.backgroundColor =  [SharedManager sharedModel].brickRed;
     }
     
     return cell;
@@ -318,44 +411,7 @@ QuestionDetailVCDelegate
     }
 }
 
-- (void)viewDidLoad{
-    [super viewDidLoad];
-    self.habitPickerView.delegate = self;
-    [self answersFromPreviousScreen];
-    [self initiateMenuOptions];
-    [[self.navigationController navigationBar]setHidden:YES];
-    
-    self.habitLabel.hidden = YES;
 
-//    self.habitsArray = [NSMutableArray new];
-//    HabitList *hl = [HabitList new];
-//    self.habitsArray = hl.habitsList;
-    
-    //[self.habitPickerView selectRow:[SharedManager sharedModel].selectedRow inComponent:0 animated:YES];
-    
-//    BBUser *currentUser = (BBUser *)[PFUser currentUser];
-//        [currentUser objectForKey:@"habits"];
-//        [currentUser fetchIfNeededInBackgroundWithBlock:^(PFObject * _Nullable object, NSError * _Nullable error) {
-//          NSLog(@"%@",object);
-//        }];
-//    PFQuery *query = [PFUser query];
-//    
-//    [query whereKey:@"username" equalTo:[currentUser username]];
-//    
-//    [query getFirstObjectInBackgroundWithBlock:^(PFObject * _Nullable object, NSError * _Nullable error) {
-//        NSLog(@"Object: %@", object);
-//        NSLog(@"Habits: %@", [object objectForKey:@"habtis"]);
-//    }];
-    
-    
-    __weak typeof(self) weakSelf = self;
-    PFQuery *query = [PFQuery queryWithClassName:@"Habit"];
-    [query includeKey:@"entries"];
-    [query findObjectsInBackgroundWithBlock:^(NSArray * _Nullable objects, NSError * _Nullable error) {
-        weakSelf.habitsArray = objects;
-        [weakSelf.habitPickerView reloadAllComponents];
-    }];
-}
 #pragma mark
 #pragma UIPickerView DataSource Methods
 

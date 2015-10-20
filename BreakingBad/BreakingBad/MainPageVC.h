@@ -14,4 +14,6 @@
 @property (nonatomic) BOOL readOnly;
 @property (nonatomic) NSString *habitName;
 
+-(void)addColorsMainPg;
+
 @end

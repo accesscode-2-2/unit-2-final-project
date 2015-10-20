@@ -11,8 +11,14 @@
 #import "EntryLogsTableViewController.h"
 #import <Parse/Parse.h>
 #import <AFNetworking/AFNetworking.h>
+#import "SharedManager.h"
 
 @interface MyHabitsTVC ()
+
+////properties to add color to
+@property (strong, nonatomic) IBOutlet UITableView *myHabitsTableView;
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *doneButton;
+
 
 @end
 
@@ -23,6 +29,7 @@
     
     self.navigationItem.title = @"My Habits";
     
+     self.tableView.backgroundColor = [SharedManager sharedModel].icyNight;
     
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
@@ -49,6 +56,7 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"myHabitsCell" forIndexPath:indexPath];
     Habit *habit = self.habitsArray[indexPath.row];
     cell.textLabel.text = habit.name;
+    cell.backgroundColor = [SharedManager sharedModel].icyNight;
     
     return cell;
 }

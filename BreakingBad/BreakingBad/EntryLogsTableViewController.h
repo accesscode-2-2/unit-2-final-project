@@ -13,4 +13,6 @@
 
 @property (nonatomic) Habit *habit;
 
+-(void)addColorEntryLog; 
+
 @end

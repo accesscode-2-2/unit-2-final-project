@@ -8,6 +8,7 @@
 
 #import "QuestionDetailVC.h"
 #import "ViewController.h"
+#import "SharedManager.h"
 
 @interface QuestionDetailVC ()
 
@@ -25,8 +26,20 @@
     if (self.answer) {
         self.answerTextView.text = self.answer;
     }
+    
+    [self addColorQuestionDetail];
 
 }
+
+
+-(void)addColorQuestionDetail {
+    
+    self.questionDetailView.backgroundColor = [SharedManager sharedModel].colesiumGrey;
+    self.answerTextView.backgroundColor = [SharedManager sharedModel].brickRed;
+    
+}
+
+
 
 -(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
     

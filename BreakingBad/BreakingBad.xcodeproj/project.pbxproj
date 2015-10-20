@@ -9,6 +9,15 @@
 /* Begin PBXBuildFile section */
 		4A5A43BBA13FCB718327B866 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 288369826A80E7C37FA68C71 /* libPods.a */; };
 		5F058DF01BD1912C001D93B2 /* MyHabitsTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F058DEF1BD1912C001D93B2 /* MyHabitsTVC.m */; };
+		5F87502B1BD6871300B14CA6 /* jaapokkienchance-regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5F8750141BD6871300B14CA6 /* jaapokkienchance-regular.ttf */; settings = {ASSET_TAGS = (); }; };
+		5F87502C1BD6871300B14CA6 /* Jaapokkienchance-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 5F8750151BD6871300B14CA6 /* Jaapokkienchance-Regular.otf */; settings = {ASSET_TAGS = (); }; };
+		5F87502D1BD6871300B14CA6 /* jaapokki-regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5F8750161BD6871300B14CA6 /* jaapokki-regular.ttf */; settings = {ASSET_TAGS = (); }; };
+		5F87502E1BD6871300B14CA6 /* Jaapokki-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 5F8750171BD6871300B14CA6 /* Jaapokki-Regular.otf */; settings = {ASSET_TAGS = (); }; };
+		5F87502F1BD6871300B14CA6 /* Jaapokkisubtract-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 5F8750181BD6871300B14CA6 /* Jaapokkisubtract-Regular.otf */; settings = {ASSET_TAGS = (); }; };
+		5F8750701BD6879800B14CA6 /* bariol_regular-webfont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5F8750531BD6879800B14CA6 /* bariol_regular-webfont.ttf */; settings = {ASSET_TAGS = (); }; };
+		5F8750711BD6879800B14CA6 /* bariol_regular_italic-webfont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5F8750541BD6879800B14CA6 /* bariol_regular_italic-webfont.ttf */; settings = {ASSET_TAGS = (); }; };
+		5F8750721BD6879800B14CA6 /* Bariol_Regular_Italic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 5F8750551BD6879800B14CA6 /* Bariol_Regular_Italic.otf */; settings = {ASSET_TAGS = (); }; };
+		5F8750731BD6879800B14CA6 /* Bariol_Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 5F8750561BD6879800B14CA6 /* Bariol_Regular.otf */; settings = {ASSET_TAGS = (); }; };
 		5F8FF9991BC9A9CD00855DFB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F8FF9981BC9A9CD00855DFB /* main.m */; };
 		5F8FF99C1BC9A9CD00855DFB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F8FF99B1BC9A9CD00855DFB /* AppDelegate.m */; };
 		5F8FF99F1BC9A9CD00855DFB /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F8FF99E1BC9A9CD00855DFB /* ViewController.m */; };
@@ -49,6 +58,17 @@
 		288369826A80E7C37FA68C71 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		5F058DEE1BD1912C001D93B2 /* MyHabitsTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyHabitsTVC.h; sourceTree = "<group>"; };
 		5F058DEF1BD1912C001D93B2 /* MyHabitsTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyHabitsTVC.m; sourceTree = "<group>"; };
+		5F8750141BD6871300B14CA6 /* jaapokkienchance-regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "jaapokkienchance-regular.ttf"; sourceTree = "<group>"; };
+		5F8750151BD6871300B14CA6 /* Jaapokkienchance-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Jaapokkienchance-Regular.otf"; sourceTree = "<group>"; };
+		5F8750161BD6871300B14CA6 /* jaapokki-regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "jaapokki-regular.ttf"; sourceTree = "<group>"; };
+		5F8750171BD6871300B14CA6 /* Jaapokki-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Jaapokki-Regular.otf"; sourceTree = "<group>"; };
+		5F8750181BD6871300B14CA6 /* Jaapokkisubtract-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Jaapokkisubtract-Regular.otf"; sourceTree = "<group>"; };
+		5F8750301BD6873500B14CA6 /* Lobster_1.3.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Lobster_1.3.otf; sourceTree = "<group>"; };
+		5F8750531BD6879800B14CA6 /* bariol_regular-webfont.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "bariol_regular-webfont.ttf"; sourceTree = "<group>"; };
+		5F8750541BD6879800B14CA6 /* bariol_regular_italic-webfont.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "bariol_regular_italic-webfont.ttf"; sourceTree = "<group>"; };
+		5F8750551BD6879800B14CA6 /* Bariol_Regular_Italic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Bariol_Regular_Italic.otf; sourceTree = "<group>"; };
+		5F8750561BD6879800B14CA6 /* Bariol_Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Bariol_Regular.otf; sourceTree = "<group>"; };
+		5F8750741BD687E500B14CA6 /* Oranienbaum.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Oranienbaum.ttf; sourceTree = "<group>"; };
 		5F8FF9941BC9A9CD00855DFB /* BreakingBad.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BreakingBad.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5F8FF9981BC9A9CD00855DFB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		5F8FF99A1BC9A9CD00855DFB /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -124,10 +144,46 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5F874FF21BD6825300B14CA6 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				5F874FFB1BD6871300B14CA6 /* Jaapokki-font-package-1.0 */,
+				5F8750141BD6871300B14CA6 /* jaapokkienchance-regular.ttf */,
+				5F8750151BD6871300B14CA6 /* Jaapokkienchance-Regular.otf */,
+				5F8750161BD6871300B14CA6 /* jaapokki-regular.ttf */,
+				5F8750171BD6871300B14CA6 /* Jaapokki-Regular.otf */,
+				5F8750181BD6871300B14CA6 /* Jaapokkisubtract-Regular.otf */,
+				5F8750301BD6873500B14CA6 /* Lobster_1.3.otf */,
+				5F8750311BD6879800B14CA6 /* Bariol_Regular&Italic */,
+				5F8750531BD6879800B14CA6 /* bariol_regular-webfont.ttf */,
+				5F8750541BD6879800B14CA6 /* bariol_regular_italic-webfont.ttf */,
+				5F8750551BD6879800B14CA6 /* Bariol_Regular_Italic.otf */,
+				5F8750561BD6879800B14CA6 /* Bariol_Regular.otf */,
+				5F8750741BD687E500B14CA6 /* Oranienbaum.ttf */,
+			);
+			name = Fonts;
+			path = BreakingBad;
+			sourceTree = "<group>";
+		};
+		5F874FFB1BD6871300B14CA6 /* Jaapokki-font-package-1.0 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Jaapokki-font-package-1.0";
+			sourceTree = "<group>";
+		};
+		5F8750311BD6879800B14CA6 /* Bariol_Regular&Italic */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Bariol_Regular&Italic";
+			sourceTree = "<group>";
+		};
 		5F8FF98B1BC9A9CD00855DFB = {
 			isa = PBXGroup;
 			children = (
 				5F8FF9961BC9A9CD00855DFB /* BreakingBad */,
+				5F874FF21BD6825300B14CA6 /* Fonts */,
 				5F8FF9951BC9A9CD00855DFB /* Products */,
 				63F0AFE9BD856CE062BFF317 /* Pods */,
 				C7D24797CBE441A3A8CF05A9 /* Frameworks */,
@@ -324,7 +380,16 @@
 				5F8FF9A71BC9A9CD00855DFB /* Assets.xcassets in Resources */,
 				DCBA27C71BCED16E00E61721 /* CustomContextTableViewCell.xib in Resources */,
 				5F8FF9A21BC9A9CD00855DFB /* Main.storyboard in Resources */,
+				5F87502C1BD6871300B14CA6 /* Jaapokkienchance-Regular.otf in Resources */,
 				5FE7B0511BD51F4B00C5E163 /* HabitsNewsTableViewCell.xib in Resources */,
+				5F87502E1BD6871300B14CA6 /* Jaapokki-Regular.otf in Resources */,
+				5F8750701BD6879800B14CA6 /* bariol_regular-webfont.ttf in Resources */,
+				5F8750711BD6879800B14CA6 /* bariol_regular_italic-webfont.ttf in Resources */,
+				5F8750731BD6879800B14CA6 /* Bariol_Regular.otf in Resources */,
+				5F87502D1BD6871300B14CA6 /* jaapokki-regular.ttf in Resources */,
+				5F87502B1BD6871300B14CA6 /* jaapokkienchance-regular.ttf in Resources */,
+				5F87502F1BD6871300B14CA6 /* Jaapokkisubtract-Regular.otf in Resources */,
+				5F8750721BD6879800B14CA6 /* Bariol_Regular_Italic.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

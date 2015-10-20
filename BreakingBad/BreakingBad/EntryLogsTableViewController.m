@@ -12,14 +12,24 @@
 #import "MainPageVC.h"
 #import "EntryLogsTableViewCell.h"
 #import <AFNetworking/AFNetworking.h>
+#import "SharedManager.h"
+
+//@dynamic tableView;
 
 @interface EntryLogsTableViewController ()
 
 @property (nonatomic) NSArray *data;
 
+////properties to add color to
+@property (strong, nonatomic) IBOutlet UITableView *entryTableView;
+
+
 @end
 
+
 @implementation EntryLogsTableViewController
+
+@dynamic entryTableView;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -29,8 +39,15 @@
     [self.tableView registerNib:nib forCellReuseIdentifier:@"entryLogCellID"];
     
     [self fetchWeatherData];
-    
+    [self addColorEntryLog];
 }
+
+
+-(void)addColorEntryLog {
+    self.entryTableView.backgroundColor = [SharedManager sharedModel].tropicalDream;
+}
+
+
 
 -(NSString *)stringFromTimeInterval:(NSTimeInterval)time{
     NSDate *date = [NSDate dateWithTimeIntervalSinceReferenceDate:time];

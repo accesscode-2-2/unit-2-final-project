@@ -12,4 +12,6 @@
 
 @property (nonatomic) NSArray *habitsArray;
 
+-(void)addColorHabitInfo;
+
 @end
