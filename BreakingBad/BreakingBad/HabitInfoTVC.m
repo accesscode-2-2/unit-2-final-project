@@ -35,9 +35,9 @@
 }
 
 
-//-(void)addColorHabitInfo {
-//    self.habitInfoTableView.backgroundColor = [SharedManager sharedModel].icyNight;
-//}
+-(void)addColorHabitInfo {
+    self.habitInfoTableView.backgroundColor = [SharedManager sharedModel].icyNight;
+}
 
 
 #pragma mark - Table view data source

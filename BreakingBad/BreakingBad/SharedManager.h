@@ -5,7 +5,6 @@
 //  Created by Zoufishan Mehdi on 10/13/15.
 //  Copyright © 2015 Zoufishan Mehdi. All rights reserved.
 //
-
 #import <Foundation/Foundation.h>
 #import "HabitList.h"
 #import "ViewController.h"
@@ -26,6 +25,15 @@
 
 
 + (SharedManager *)sharedModel;
+
+
+//color properties for Pompeii Palette
+@property (nonatomic) UIColor *icyNight;
+@property (nonatomic) UIColor *blueSky;
+@property (nonatomic) UIColor *tropicalDream;
+@property (nonatomic) UIColor *brownForest;
+@property (nonatomic) UIColor *brickRed;
+@property (nonatomic) UIColor *colesiumGrey;
 
 +(UIColor *)makeColorWithRed:(NSInteger)red
                        green:(NSInteger)green

@@ -37,10 +37,10 @@ UITableViewDelegate>
     [self addColorHabitNews];
 }
 
-//
-//-(void)addColorHabitNews {
-//    self.habitNewsTableView.backgroundColor = [SharedManager sharedModel].colesiumGrey;
-//}
+
+-(void)addColorHabitNews {
+    self.habitNewsTableView.backgroundColor = [SharedManager sharedModel].colesiumGrey;
+}
 
 
 

@@ -28,13 +28,13 @@
 @property (nonatomic) NSMutableArray *temps;
 
 @property (nonatomic)  NSInteger index;
+@property (strong, nonatomic) IBOutlet UITableView *entryTableView;
 
 @end
 
 
 @implementation EntryLogsTableViewController
 
-//@dynamic entryTableView;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -43,14 +43,13 @@
     UINib *nib = [UINib nibWithNibName:@"EntryLogsTableViewCell" bundle:nil];
     [self.tableView registerNib:nib forCellReuseIdentifier:@"entryLogCellID"];
     self.urlStringsArray = [self urlStringsArray];
-    
-    //[self fetchWeatherData];
+
 }
 
 
-//-(void)addColorEntryLog {
-//    self.entryTableView.backgroundColor = [SharedManager sharedModel].tropicalDream;
-//}
+-(void)addColorEntryLog {
+    self.entryTableView.backgroundColor = [SharedManager sharedModel].tropicalDream;
+}
 
 
 

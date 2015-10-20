@@ -81,7 +81,7 @@ CLLocationManagerDelegate
 //    
 //    self.habitLabel.hidden = YES;
 //    
-//    [self addColorsMainPg];
+//
 //    
 //    //    self.habitsArray = [NSMutableArray new];
 //    //    HabitList *hl = [HabitList new];
@@ -117,21 +117,21 @@ CLLocationManagerDelegate
 
 #pragma mark- Add colors
 
-//-(void)addColorsMainPg {
-//    
-//   self.habitView.backgroundColor = [SharedManager sharedModel].icyNight;
-//    
-//    for (UIView *aquaView in self.oddViews)
-//    {
-//        aquaView.backgroundColor = [SharedManager sharedModel].icyNight;
-//    }
-//    
-//    for (UIView *aquaView in self.evenViews)
-//    {
-//        aquaView.backgroundColor = [SharedManager sharedModel].blueSky;
-//    }
-//    
-//}
+-(void)addColorsMainPg {
+    
+   self.habitView.backgroundColor = [SharedManager sharedModel].icyNight;
+    
+    for (UIView *aquaView in self.oddViews)
+    {
+        aquaView.backgroundColor = [SharedManager sharedModel].icyNight;
+    }
+    
+    for (UIView *aquaView in self.evenViews)
+    {
+        aquaView.backgroundColor = [SharedManager sharedModel].blueSky;
+    }
+    
+}
 
 //self.headerBackgroundView.backgroundColor = [PresetTimerData sharedModel].ghostGrey;
 //self.lapButton.layer.borderWidth = 2.5;
@@ -454,6 +454,7 @@ CLLocationManagerDelegate
 
 - (void)viewDidLoad{
     [super viewDidLoad];
+    [self addColorsMainPg];
     self.habitPickerView.delegate = self;
     [self answersFromPreviousScreen];
     [self initiateMenuOptions];
