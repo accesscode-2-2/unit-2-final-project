@@ -24,7 +24,7 @@
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
-    self.dataLabel.text = [self.photoDataObject description];
+   // self.dataLabel.text = [self.photoDataObject description];
     
     //    for (int count=0; count<[PhotoAlbum sharedPhotoAlbum].photoEntries.count; count++) {
     //
@@ -34,9 +34,10 @@
     //       // NSLog(@"%@",[PhotoAlbum sharedPhotoAlbum].photoEntries);
     //    }
     //
+    
     self.imageView.image = (UIImage *)self.photoDataObject;
-    self.titleLabel.text= (NSString*)self.titleDataObject;
-    self.textView.text = (NSString*)self.textEntrydataObject;
+    self.titleLabel.text = (NSString*)self.titleDataObject;
+    self.textView.text   = (NSString*)self.textEntrydataObject;
     
 }
 

@@ -47,17 +47,18 @@
     // Create a new view controller and pass suitable data.
     DataViewController *dataViewController = [storyboard instantiateViewControllerWithIdentifier:@"DataViewController"];
     
+       dataViewController.dataObject          = self.pageData[index];
        dataViewController.photoDataObject     = [self.pageData[index] savedImageEntry];
        dataViewController.titleDataObject     = [self.pageData[index] savedTitle];
        dataViewController.textEntrydataObject = [self.pageData[index] savedTextEntry];
-    
+//
     return dataViewController;
 }
 
 - (NSUInteger)indexOfViewController:(DataViewController *)viewController {
     // Return the index of the given data view controller.
     // For simplicity, this implementation uses a static array of model objects and the view controller stores the model object; you can therefore use the model object to identify the index.
-    return [self.pageData indexOfObject:viewController.photoDataObject];
+    return [self.pageData indexOfObject:viewController.dataObject];
 
 }
 

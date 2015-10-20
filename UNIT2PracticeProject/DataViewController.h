@@ -30,6 +30,7 @@
 
 @property (nonatomic) NSUInteger indexOfSelectedRow;
 
+@property (nonatomic) id dataObject;
 
 @end
 

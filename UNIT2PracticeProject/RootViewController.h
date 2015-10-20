@@ -16,7 +16,7 @@
 
 //@property (nonatomic) NSMutableArray* pageEntries;
 
-@property (nonatomic) NSUInteger index;
+//@property (nonatomic) NSUInteger index;
 
 @property (nonatomic) NSString* titleSelected;
 

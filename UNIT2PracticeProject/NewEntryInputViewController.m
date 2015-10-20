@@ -57,15 +57,15 @@
     
     [[PhotoAlbum sharedPhotoAlbum].photoEntries addObject:self.entryObject];
     
-    JournalEntryObject* someObject = [[PhotoAlbum sharedPhotoAlbum].photoEntries objectAtIndex:0];
-    NSLog(@"SAVED TITLE : %@", someObject.savedTitle);
+ //   JournalEntryObject* someObject = [[PhotoAlbum sharedPhotoAlbum].photoEntries objectAtIndex:0];
+ //   NSLog(@"SAVED TITLE : %@", someObject.savedImageEntry);
     
-   // UINavigationController *navController = [self.tabBarController.viewControllers objectAtIndex:1];
-    
-  //  EntryListTableViewController* viewcontroller = [navController.viewControllers firstObject];
-   
-    
-    
+//    UINavigationController *navController = [self.tabBarController.viewControllers objectAtIndex:1];
+//    
+//    EntryListTableViewController* viewcontroller = [navController.viewControllers firstObject];
+//   
+//    
+//    
     
     [self dismissViewControllerAnimated:NO completion:nil];
     
