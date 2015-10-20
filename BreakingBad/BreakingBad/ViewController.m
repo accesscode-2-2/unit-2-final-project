@@ -34,6 +34,8 @@
 @property (nonatomic) Entry *entry;
 @property (nonatomic) Habit *habit;
 
+
+
 @end
 
 @implementation ViewController

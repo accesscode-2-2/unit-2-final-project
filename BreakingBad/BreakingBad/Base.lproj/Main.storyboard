@@ -59,6 +59,10 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="doneButton" destination="UR7-e5-mgr" id="MeV-UJ-3kv"/>
+                        <outlet property="habitInfoTableView" destination="acf-dQ-vuc" id="mSp-0I-xRd"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dvK-XP-H3Z" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -96,6 +100,9 @@
                         </barButtonItem>
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="habitNewsTableView" destination="1L3-4o-0ZT" id="oby-O9-7Pq"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dAB-yM-8aL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -559,6 +566,8 @@
                     </navigationItem>
                     <connections>
                         <outlet property="answerTextView" destination="gFB-FW-Zzb" id="mlq-Rx-uGe"/>
+                        <outlet property="doneButton" destination="PNY-lO-8iE" id="Yub-6g-Iff"/>
+                        <outlet property="questionDetailView" destination="H4s-7m-BIi" id="bTO-8p-WgJ"/>
                         <outlet property="questionLabel" destination="9a1-sz-t4E" id="OVe-sZ-Wse"/>
                     </connections>
                 </viewController>
@@ -1069,9 +1078,12 @@
                     </view>
                     <navigationItem key="navigationItem" id="rU7-BH-cT4"/>
                     <connections>
-                        <outlet property="doneButton" destination="G33-A8-17E" id="Ugz-FL-RZ2"/>
+                        <outlet property="doneButton" destination="G33-A8-17E" id="bWX-KN-00v"/>
                         <outlet property="habitLabel" destination="3qg-oq-Fun" id="vdV-Y9-RoV"/>
+                        <outlet property="habitLftLabel" destination="6LJ-at-dIk" id="q6b-dC-sjD"/>
                         <outlet property="habitPickerView" destination="Wpk-Cq-kES" id="bg3-Ow-Bk4"/>
+                        <outlet property="habitView" destination="vAX-db-DRg" id="3qM-9F-hpJ"/>
+                        <outlet property="menuIconButton" destination="m5z-qO-VUR" id="Wcj-Hs-TG6"/>
                         <outletCollection property="reply" destination="l9q-fl-lA0" id="MbS-5P-5oc"/>
                         <outletCollection property="reply" destination="dQ3-JH-NAX" id="Ne4-EM-UYP"/>
                         <outletCollection property="reply" destination="mXt-Fy-z6C" id="bdC-kG-zof"/>
@@ -1084,6 +1096,24 @@
                         <outletCollection property="questionsArray" destination="fDC-Wn-1NC" id="E3O-Jl-PIJ"/>
                         <outletCollection property="questionsArray" destination="KVQ-x9-UAp" id="Scg-pI-qdd"/>
                         <outletCollection property="questionsArray" destination="m0W-qZ-idP" id="4an-dE-04r"/>
+                        <outletCollection property="oddViews" destination="L4X-uh-5Pi" id="KsR-1t-mg5"/>
+                        <outletCollection property="oddViews" destination="To7-Cj-hpR" id="n5B-4x-Ysd"/>
+                        <outletCollection property="oddViews" destination="9Vs-6G-C6S" id="zFH-fF-2op"/>
+                        <outletCollection property="evenViews" destination="5pz-wY-aH4" id="9ud-yY-THT"/>
+                        <outletCollection property="evenViews" destination="wyU-kN-7YX" id="yr2-Md-G9S"/>
+                        <outletCollection property="evenViews" destination="m0W-qZ-idP" id="Krr-Tk-DLz"/>
+                        <outletCollection property="oddButtons" destination="yd8-x1-vSk" id="hSr-wT-OZw"/>
+                        <outletCollection property="oddButtons" destination="KVQ-x9-UAp" id="Frz-vB-QKa"/>
+                        <outletCollection property="oddButtons" destination="5Vc-X7-dwe" id="br7-UA-PcS"/>
+                        <outletCollection property="evenButtons" destination="fDC-Wn-1NC" id="MIo-Mk-06w"/>
+                        <outletCollection property="evenButtons" destination="IDC-Ei-BOs" id="48k-Ye-AJy"/>
+                        <outletCollection property="evenButtons" destination="m0W-qZ-idP" id="tu3-Wa-YmF"/>
+                        <outletCollection property="oddLabels" destination="l9q-fl-lA0" id="eAO-ns-ndw"/>
+                        <outletCollection property="oddLabels" destination="7mB-TC-4SZ" id="6E5-gl-AtI"/>
+                        <outletCollection property="oddLabels" destination="mXt-Fy-z6C" id="0hY-Tk-UaE"/>
+                        <outletCollection property="evenLabels" destination="Pbo-7W-DUH" id="r5Q-uH-oob"/>
+                        <outletCollection property="evenLabels" destination="dQ3-JH-NAX" id="IxU-zQ-ad7"/>
+                        <outletCollection property="evenLabels" destination="Dk7-FL-43J" id="Pfd-sk-LNS"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3tJ-xw-kL1" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1120,6 +1150,10 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="doneButton" destination="qnU-TN-7Yl" id="265-jp-Afe"/>
+                        <outlet property="myHabitsTableView" destination="RxL-ku-Vrm" id="3iU-ba-h2r"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fch-Dw-Z5p" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationBar contentMode="scaleToFill" id="EVY-Zh-Sel">
@@ -1164,6 +1198,9 @@
                             <outlet property="delegate" destination="mjJ-Xv-gUe" id="IVv-eY-gbF"/>
                         </connections>
                     </tableView>
+                    <connections>
+                        <outlet property="entryTableView" destination="p4E-HJ-0Z1" id="IfB-HY-Zlb"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wz3-dC-bU0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1267,7 +1304,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lBC-KO-IO0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-441" y="1691"/>
+            <point key="canvasLocation" x="-483" y="1691"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="6Vy-mJ-0Yv">

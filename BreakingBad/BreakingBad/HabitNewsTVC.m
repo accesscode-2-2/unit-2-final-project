@@ -13,10 +13,12 @@
 #import "HabitInfoData.h"
 #import "HabitsNewsTableViewCell.h"
 #import "Habit.h"
+#import "SharedManager.h"
 
 @interface HabitNewsTVC () <UITableViewDataSource,
 UITableViewDelegate>
 
+@property (strong, nonatomic) IBOutlet UITableView *habitNewsTableView;
 
 @end
 
@@ -30,24 +32,23 @@ UITableViewDelegate>
     UINib *nib = [UINib nibWithNibName:@"HabitsNewsTableViewCell" bundle:nil];
     [self.tableView registerNib:nib forCellReuseIdentifier:@"HabitsNewsCellID"];
     
-       [self fetchHabitInfo];
+    [self fetchHabitInfo];
+
+    [self addColorHabitNews];
 }
+
+//
+//-(void)addColorHabitNews {
+//    self.habitNewsTableView.backgroundColor = [SharedManager sharedModel].colesiumGrey;
+//}
+
 
 
 #pragma mark- NYTimes API Request
-//- (void)fetchHabitInfoData:(NSString *)searchTerm
-//             callbackBlock:(void(^)())block {
+
 - (void)fetchHabitInfo{
-    
-    //  NSString *urlString = [NSString stringWithFormat:@"https://api.nytimes.com/svc/search/v2/articlesearch.json?fq=smoking&api-key=4aaf719230b21874acd05c657c680643:18:73243649", searchTerm];
-    
-    
-    NSString *url = @"http://api.nytimes.com/svc/search/v2/articlesearch.json?fq=drinking&api-key=4aaf719230b21874acd05c657c680643:18:73243649" ;
-    
-    //    NSString *encodedString = [urlString stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLQueryAllowedCharacterSet]];
-    //
-    //    NSURL *forecastURL = [NSURL URLWithString:encodedString];
-    //    NSString *myString = [forecastURL absoluteString];
+
+  NSString *url = @"http://api.nytimes.com/svc/search/v2/articlesearch.json?fq=drinking&api-key=4aaf719230b21874acd05c657c680643:18:73243649" ;
     
     
     AFHTTPRequestOperationManager *manager = [[AFHTTPRequestOperationManager alloc] init];
@@ -58,7 +59,6 @@ UITableViewDelegate>
         NSDictionary *results = responseObject[@"response"];
         NSArray *docs = results[@"docs"];
         
-     
         
         // reset my array
         self.searchResults = [[NSMutableArray alloc] init];
@@ -74,7 +74,7 @@ UITableViewDelegate>
         
         
         [self.tableView reloadData];
-         NSLog(@"%@", results);
+        NSLog(@"%@", results);
         
     } failure:^(AFHTTPRequestOperation * _Nonnull operation, NSError * _Nonnull error) {
         NSLog(@"Error: %@", error.localizedDescription);
@@ -103,7 +103,7 @@ UITableViewDelegate>
     
     cell.newsHeadlineLabel.text = data.nyHeadline;
     cell.newsSnippetTextView.text = data.nySnippet;
-    
+    //cell.backgroundColor = [SharedManager sharedModel].colesiumGrey;
     
     return cell;
 }

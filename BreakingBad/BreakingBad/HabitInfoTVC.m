@@ -15,9 +15,12 @@
 #import "EntryLogsTableViewController.h"
 #import <Parse/Parse.h>
 #import "HabitNewsTVC.h"
+#import "SharedManager.h"
 
 
 @interface HabitInfoTVC ()
+@property (strong, nonatomic) IBOutlet UITableView *habitInfoTableView;
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *doneButton;
 
 @end
 
@@ -28,7 +31,13 @@
     
     self.navigationItem.title = @"Habits Info";
  
+    [self addColorHabitInfo];
 }
+
+
+//-(void)addColorHabitInfo {
+//    self.habitInfoTableView.backgroundColor = [SharedManager sharedModel].icyNight;
+//}
 
 
 #pragma mark - Table view data source
@@ -47,6 +56,7 @@
     
     Habit *habit = self.habitsArray[indexPath.row];
     cell.textLabel.text = habit.name;
+    //cell.backgroundColor = [SharedManager sharedModel].icyNight;
     
     return cell;
     

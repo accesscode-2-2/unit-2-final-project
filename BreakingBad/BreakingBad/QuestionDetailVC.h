@@ -17,14 +17,20 @@
 
 @interface QuestionDetailVC : UIViewController
 
-@property (nonatomic) IBOutlet UILabel *questionLabel;
-@property (weak, nonatomic) IBOutlet UITextView *answerTextView;
-
 @property (nonatomic) NSString *question;
 @property (nonatomic) NSString *answer;
 
 @property (nonatomic, retain) NSString *data;
 @property (nonatomic, weak) id<QuestionDetailVCDelegate> delegate;
 @property (nonatomic) NSInteger tag;
+
+
+////properties to add color to
+@property (nonatomic) IBOutlet UILabel *questionLabel;
+@property (weak, nonatomic) IBOutlet UITextView *answerTextView;
+@property (weak, nonatomic) IBOutlet UIButton *doneButton;
+@property (strong, nonatomic) IBOutlet UIView *questionDetailView;
+
+-(void)addColorQuestionDetail; 
 
 @end

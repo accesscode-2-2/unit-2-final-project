@@ -27,6 +27,13 @@
 
 + (SharedManager *)sharedModel;
 
--(void)initializeData; 
++(UIColor *)makeColorWithRed:(NSInteger)red
+                       green:(NSInteger)green
+                        blue:(NSInteger)blue
+                       alpha:(NSInteger)alpha;
+
+-(void)initializeData;
+
+-(void)initializeColorData;
 
 @end
