@@ -297,7 +297,7 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="journalEntryTextView" destination="dJQ-Cw-fKt" id="Fb6-Cl-pFK"/>
+                        <outlet property="journalEntryTextView" destination="dJQ-Cw-fKt" id="33N-ID-DdR"/>
                         <outlet property="titleTextField" destination="wfw-yc-bVC" id="xIu-Rb-deA"/>
                     </connections>
                 </viewController>
