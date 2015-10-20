@@ -31,7 +31,6 @@
     [super viewDidLoad];
     
     // border radius
-//    [self.mapView.layer setCornerRadius:30.0f];
     [self.pinLocationButton.layer setCornerRadius:30.0f];
     
     
@@ -61,9 +60,9 @@
     self.placesVisited = [NSMutableArray arrayWithArray:[[NSUserDefaults standardUserDefaults] objectForKey:@"destinations"]];
     
     
-//    CLLocationCoordinate2D center = CLLocationCoordinate2DMake(40.7, -74);
-//    MKCoordinateSpan span = MKCoordinateSpanMake(0.8, 0.8);
-//    [self.mapView setRegion:MKCoordinateRegionMake(center, span)];
+    CLLocationCoordinate2D center = CLLocationCoordinate2DMake(40.7, -74);
+    MKCoordinateSpan span = MKCoordinateSpanMake(0.8, 0.8);
+    [self.mapView setRegion:MKCoordinateRegionMake(center, span)];
     
     //create location manager
     self.locationManager = [[CLLocationManager alloc]init];
@@ -105,7 +104,6 @@
 - (IBAction)pinLocationButtonTapped:(id)sender
 {
     MKPointAnnotation *mapPin = [[MKPointAnnotation alloc]init];
-    //    mapPin.title = @"The Location";
     mapPin.coordinate = CLLocationCoordinate2DMake(self.locationManager.location.coordinate.latitude, self.locationManager.location.coordinate.longitude);
     
     [self.mapView addAnnotation:mapPin];

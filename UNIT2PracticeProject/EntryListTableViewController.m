@@ -14,6 +14,8 @@
     
     [super viewDidLoad];
     
+    self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"background.jpg"]];
+
     
     [self.tableView reloadData];
     
@@ -54,7 +56,10 @@
      UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"EntryCellIdentifier" forIndexPath:indexPath];
      
      JournalEntryObject* journalEntry = [PhotoAlbum sharedPhotoAlbum].photoEntries[indexPath.row];
-     cell.textLabel.text = journalEntry.savedTitle; 
+     cell.textLabel.text = journalEntry.savedTitle;
+     cell.textLabel.textColor = [UIColor whiteColor];
+     cell.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"background.jpg"]];
+
      
      
  return cell;
