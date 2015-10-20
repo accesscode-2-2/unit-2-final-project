@@ -28,11 +28,14 @@
     }
     [self.view endEditing:YES];
     
-    self.journalEntryTextView.text = @"Journal Entry";
+    self.journalEntryTextView.text = @"Enter Text Here";
     self.journalEntryTextView.textColor = [UIColor lightGrayColor];
     self.journalEntryTextView.delegate = self;
     
 }
+
+#pragma placeholder text for journalEntryTextView
+
 - (BOOL) textViewShouldBeginEditing:(UITextView *)textView
 {
     self.journalEntryTextView.text = @"";
@@ -45,25 +48,13 @@
     
     if(self.journalEntryTextView.text.length == 0){
         self.journalEntryTextView.textColor = [UIColor lightGrayColor];
-        self.journalEntryTextView.text = @"Journal Entry";
+        self.journalEntryTextView.text = @"Enter Text Here";
         [self.journalEntryTextView resignFirstResponder];
     }
-}   
+}
 
 
-
-
-
-/*
- #pragma mark - Navigation
- 
- // In a storyboard-based application, you will often want to do a little preparation before navigation
- - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
- // Get the new view controller using [segue destinationViewController].
- // Pass the selected object to the new view controller.
- }
- */
-
+#pragma saveEntry
 - (IBAction)saveEntryButtonTapped:(id)sender {
     
     NSLog(@"%@", self.journalEntryTextView.text);
