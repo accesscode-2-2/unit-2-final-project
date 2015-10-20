@@ -318,7 +318,7 @@
                                         <state key="normal" title="Button"/>
                                     </button>
                                 </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" red="0.25882352941176473" green="0.54509803921568623" blue="0.89411764705882357" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstItem="a4W-78-2Xp" firstAttribute="top" secondItem="oJQ-k4-Cpj" secondAttribute="bottom" constant="15" id="1He-3P-AHY"/>
                                     <constraint firstItem="oJQ-k4-Cpj" firstAttribute="top" secondItem="Xwv-TM-8RJ" secondAttribute="bottom" id="70Y-Hi-WVB"/>
@@ -337,7 +337,7 @@
                                 </constraints>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" red="0.97826086960000003" green="0.91848131079999995" blue="0.73914263440000005" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.054901960784313725" green="0.14509803921568629" blue="0.42745098039215684" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="s1b-V9-EN7" secondAttribute="trailing" constant="20" symbolic="YES" id="333-Jl-G0r"/>
                             <constraint firstItem="s1b-V9-EN7" firstAttribute="leading" secondItem="ZwX-cT-FIQ" secondAttribute="leading" constant="20" symbolic="YES" id="CIC-qa-9gW"/>
