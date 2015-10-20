@@ -77,8 +77,8 @@ CATransform3D rotationTransform1[PHOTONUM];
 
 - (void)configViews {
     
-    self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"common_background"]];
-    NSArray *dataArray = @[@"newTrip", @"visited", @"games"];
+    self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"orrr"]];
+    NSArray *dataArray = @[@"neew", @"visi", @"g"];
     
     //new 1000
     //visited 1001
