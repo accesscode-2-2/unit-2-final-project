@@ -50,6 +50,20 @@
     }];
 }
 
+- (void) viewWillAppear:(BOOL)animated
+{
+    
+    [self.navigationController setNavigationBarHidden:NO animated:animated];
+    
+}
+
+
+- (void) viewWillDisappear:(BOOL)animated
+{
+    [self.navigationController setNavigationBarHidden:YES animated:animated];
+    
+}
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
