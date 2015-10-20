@@ -13,6 +13,7 @@
 @dynamic entryLog;
 @dynamic temperature;
 @dynamic logs;
+@dynamic location;
 
 + (NSString *)parseClassName{
     return @"Entry";

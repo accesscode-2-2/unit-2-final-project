@@ -9,8 +9,8 @@
 #import <UIKit/UIKit.h>
 
 @interface EntryLogsTableViewCell : UITableViewCell
+@property (weak, nonatomic) IBOutlet UILabel *locationLabel;
 
-@property (weak, nonatomic) IBOutlet UIImageView *weatherIconImageView;
 @property (weak, nonatomic) IBOutlet UILabel *tempInfoLabel;
 @property (weak, nonatomic) IBOutlet UILabel *entryDateLabel;
 

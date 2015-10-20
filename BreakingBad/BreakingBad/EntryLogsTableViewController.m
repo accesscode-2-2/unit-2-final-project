@@ -72,11 +72,8 @@
     self.entryCreationDate = entry.createdAt;
     NSString *dateString = [self dateStringFromDate:entry.createdAt];
     
-    
-    NSString *tempF = entry.temperature;
-    cell.tempInfoLabel.text = tempF;
-    
-    //cell.weatherIconImageView.image = [UIImage imageNamed:dict[@"icon"]];
+    cell.tempInfoLabel.text = entry.temperature;
+    cell.locationLabel.text = entry.location;
     
     cell.entryDateLabel.text = dateString;
     

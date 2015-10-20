@@ -47,6 +47,7 @@ CLLocationManagerDelegate
 @property (nonatomic) Habit *habit;
 
 @property (weak, nonatomic) IBOutlet UILabel *habitLabel;
+@property (nonatomic) NSString *entryLocationString;
 
 @end
 
@@ -184,18 +185,21 @@ CLLocationManagerDelegate
     }
     
     newEntry.logs = entryDictionary;
+    NSLog(@"%@",newEntry.createdAt);
     NSString *dateString = [self formattedDateStringForAPI:newEntry.createdAt];
+    NSLog(@"This is the date: %@",dateString);
     
     float latitude = locationManager.location.coordinate.latitude;
     float longitude = locationManager.location.coordinate.longitude;
     
     NSLog(@"lat: %f, long: %f",latitude, longitude);
     
-    //@"api.worldweatheronline.com/free/v2/past-weather.ashx?&format=json&date=2015-08-18&tp=24"
-
+    NSString *latString = [NSString stringWithFormat:@"%f",latitude];
+    NSString *longString = [NSString stringWithFormat:@"%f",longitude];
     
-//    NSString *urlString = [NSString stringWithFormat:@"https://api.worldweatheronline.com/free/v2/past-weather.ashx?q=%20%@%%2C%@&format=json&date=%@&tp=24&key=%@",latString,longString,dateString, WEATHERAPIKEY];
-    NSString *urlString = [NSString stringWithFormat:@"https://api.worldweatheronline.com/free/v2/past-weather.ashx?q=%20%f%%2C%f&format=json&date=%@&tp=24&key=%@",latitude,longitude,dateString,WEATHERAPIKEY];
+    NSLog(@"Lat String: %@, Long String: %@",latString, longString);
+    
+    NSString *urlString = [NSString stringWithFormat:@"https://api.worldweatheronline.com/free/v2/past-weather.ashx?q=%@,%@&format=json&date=today&tp=24&key=6cc63d13a4dd0826b7383ef753a32",latString,longString];
     
     NSLog(@"%@",urlString);
     
@@ -211,6 +215,7 @@ CLLocationManagerDelegate
         NSDictionary *hourlyDataDictionary = hourlyDataArray[0];
         NSString *tempF = hourlyDataDictionary[@"tempF"];
         newEntry.temperature = tempF;
+        newEntry.location = self.entryLocationString;
         NSLog(@"%@",newEntry);
         
         [selectedHabit.entries addObject:newEntry];
@@ -382,9 +387,17 @@ CLLocationManagerDelegate
     CLGeocoder * geoCoder = [[CLGeocoder alloc] init];
     [geoCoder reverseGeocodeLocation:newLocation
                    completionHandler:^(NSArray *placemarks, NSError *error) {
-                       NSString *locString = placemarks.count ? [placemarks.firstObject locality] : @"Not Found";
+                       NSString *locString = placemarks.count ? [placemarks.lastObject locality] : @"Not Found";
                        NSLog(@"This is your city: %@",locString);
+                       if(![locString isEqualToString:@"Not Found"]){
+                           self.entryLocationString = locString;
+                       }
+
+                       
                    }];
+    
+    
+
 }
 
 - (void)setUpLocationManager{
