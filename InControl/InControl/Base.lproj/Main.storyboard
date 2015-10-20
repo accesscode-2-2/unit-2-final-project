@@ -973,7 +973,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="elx-K7-Si0">
-                                <rect key="frame" x="30" y="10" width="50" height="50"/>
+                                <rect key="frame" x="30" y="30" width="50" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="0FM-wj-7Xl"/>
                                     <constraint firstAttribute="width" constant="50" id="lq3-AX-6Fz"/>
@@ -1006,6 +1006,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="Mns-lg-di6" firstAttribute="top" secondItem="uZN-xU-1qr" secondAttribute="bottom" constant="40" id="7TZ-xW-6j8"/>
+                            <constraint firstItem="elx-K7-Si0" firstAttribute="top" secondItem="hjc-Us-hyH" secondAttribute="topMargin" constant="30" id="Aa2-Nx-gdF"/>
                             <constraint firstItem="elx-K7-Si0" firstAttribute="top" secondItem="hjc-Us-hyH" secondAttribute="topMargin" constant="10" id="P8O-KG-7zt"/>
                             <constraint firstItem="uZN-xU-1qr" firstAttribute="centerX" secondItem="hjc-Us-hyH" secondAttribute="centerX" id="R0d-jh-kCP"/>
                             <constraint firstItem="elx-K7-Si0" firstAttribute="leading" secondItem="hjc-Us-hyH" secondAttribute="leadingMargin" constant="10" id="Ssx-EI-SbJ"/>
@@ -1014,6 +1015,11 @@
                             <constraint firstItem="uZN-xU-1qr" firstAttribute="centerY" secondItem="hjc-Us-hyH" secondAttribute="centerY" id="o7o-ec-5nj"/>
                             <constraint firstItem="Fbx-3J-dt3" firstAttribute="centerX" secondItem="hjc-Us-hyH" secondAttribute="centerX" id="r3Y-wb-UUM"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="P8O-KG-7zt"/>
+                            </mask>
+                        </variation>
                     </view>
                     <connections>
                         <outlet property="HighScore" destination="Mns-lg-di6" id="vKp-4x-1hI"/>
@@ -1021,7 +1027,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cI8-Ve-lL0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4761" y="-349"/>
+            <point key="canvasLocation" x="4767" y="-400"/>
         </scene>
         <!--Flappy Game-->
         <scene sceneID="Ivd-Yw-4DO">
@@ -1060,7 +1066,7 @@
                                 <animations/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Tunnel.png" translatesAutoresizingMaskIntoConstraints="NO" id="dWL-Ry-Umh">
-                                <rect key="frame" x="500" y="410" width="54" height="506"/>
+                                <rect key="frame" x="500" y="497" width="54" height="419"/>
                                 <animations/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Tunnel.png" translatesAutoresizingMaskIntoConstraints="NO" id="AoY-KK-TzR">
@@ -1513,7 +1519,7 @@
         <image name="settings" width="21" height="22"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="uy4-x5-2D8"/>
+        <segue reference="aGj-8u-3bd"/>
         <segue reference="Gf5-oo-kyB"/>
         <segue reference="ofM-AI-3BJ"/>
     </inferredMetricsTieBreakers>
