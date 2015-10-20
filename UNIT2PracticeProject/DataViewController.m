@@ -38,7 +38,7 @@
     self.imageView.image = (UIImage *)self.photoDataObject;
     self.titleLabel.text = (NSString*)self.titleDataObject;
     self.textView.text   = (NSString*)self.textEntrydataObject;
-    
+        
 }
 
 

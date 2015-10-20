@@ -9,6 +9,7 @@
 #import "NewJournalEntryViewController.h"
 
 @interface NewJournalEntryViewController ()
+@property (weak, nonatomic) IBOutlet UIView *takeAPicButton;
 
 @end
 
@@ -63,7 +64,6 @@
     picker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
     
     [self presentViewController:picker animated:YES completion:NULL];
-    
     
 }
 

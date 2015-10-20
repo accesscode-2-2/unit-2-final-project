@@ -13,6 +13,7 @@
 
 @interface NewEntryInputViewController ()
 
+@property (weak, nonatomic) IBOutlet UILabel *addTitle;
 
 
 @end
@@ -22,6 +23,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
   
+    [self.addTitle.layer setCornerRadius:30.0f];
 
     
     // Do any additional setup after loading the view.
@@ -30,6 +32,8 @@
     if (self.selectedPhoto.image != nil) {
         NSLog(@"We have Photo Data");
     }
+    [self.view endEditing:YES];
+
 }
 
 
@@ -68,7 +72,6 @@
 //    
     
     [self dismissViewControllerAnimated:NO completion:nil];
-    
     
 }
 

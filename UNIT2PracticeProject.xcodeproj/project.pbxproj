@@ -181,8 +181,8 @@
 		AB626ED31BD01B26005BC70B /* Journal Entry Creation */ = {
 			isa = PBXGroup;
 			children = (
-				AB626ED81BD01C01005BC70B /* JournalEntryObject.m */,
 				AB626ED71BD01C01005BC70B /* JournalEntryObject.h */,
+				AB626ED81BD01C01005BC70B /* JournalEntryObject.m */,
 				AB626EC91BD00F65005BC70B /* NewJournalEntryViewController.h */,
 				AB626ECA1BD00F65005BC70B /* NewJournalEntryViewController.m */,
 				AB626ECC1BD014BD005BC70B /* NewEntryInputViewController.h */,
