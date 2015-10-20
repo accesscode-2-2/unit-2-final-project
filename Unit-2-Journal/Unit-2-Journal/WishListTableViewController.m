@@ -17,6 +17,10 @@
 
 @implementation WishListTableViewController
 
+- (void) viewDidAppear:(BOOL)animated{
+    [self pullEntriesFromParse];
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
