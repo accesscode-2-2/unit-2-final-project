@@ -13,8 +13,6 @@
 
 @interface NewEntryInputViewController ()
 
-@property (weak, nonatomic) IBOutlet UILabel *addTitle;
-
 
 @end
 
