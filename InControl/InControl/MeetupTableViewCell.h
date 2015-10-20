@@ -10,4 +10,8 @@
 
 @interface MeetupTableViewCell : UITableViewCell
 
+@property (weak, nonatomic) IBOutlet UILabel *nameLabel;
+@property (weak, nonatomic) IBOutlet UILabel *whoLabel;
+@property (weak, nonatomic) IBOutlet UILabel *cityAndCountryLabel;
+@property (weak, nonatomic) IBOutlet UILabel *descriptionMeetup;
 @end

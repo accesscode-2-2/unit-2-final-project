@@ -7,22 +7,49 @@
 //
 
 #import "MeetupTableViewController.h"
+#import "APIManager.h"
+#import "MeetupTableViewCell.h"
 
 @interface MeetupTableViewController ()
 
+@property (nonatomic) NSMutableArray *meetupData;
 @end
 
 @implementation MeetupTableViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
-    
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    self.navigationItem.title = @"Meetup";
+
+    [self makeApPIRequestWithNewTerm:self.city cityName:self.city callbackBlock:^{
+        [self.tableView reloadData];
+    }];
 }
+
+- (void)makeApPIRequestWithNewTerm:(NSString *)searchTerm cityName:(NSString *)location
+                     callbackBlock:(void(^)())block {
+    
+    NSString *meetupURL = [NSString stringWithFormat:@"https://api.meetup.com/2/groups?lat=51&lon=-0.1&page=20&key=1f5718c16a7fb3a5452f45193232"];
+    
+    
+    
+    NSString *encodedString = [meetupURL stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLQueryAllowedCharacterSet]];
+    
+    NSURL *url = [NSURL URLWithString:encodedString];
+    
+    NSLog(@"%@", url);
+    
+    [APIManager GETRequestWithURL:url completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
+        NSDictionary *json = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
+        self.meetupData = [json objectForKey:@"results"];
+        
+        NSLog(@"%@", json);
+
+        
+        [self.tableView reloadData];
+    }];
+}
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -32,24 +59,34 @@
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-#warning Incomplete implementation, return the number of sections
-    return 0;
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-#warning Incomplete implementation, return the number of rows
-    return 0;
+    return self.meetupData.count;
 }
 
-/*
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
+    MeetupTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
     
-    // Configure the cell...
+    NSDictionary *eachOrganizer = self.meetupData[indexPath.row];
+    NSString *name = [eachOrganizer objectForKey:@"name"];
+    NSString *who = [eachOrganizer objectForKey:@"who"];
+    NSString *descriptionMeetup = [eachOrganizer objectForKey:@"description"];
+    
+    NSString *cityCountry = [NSString stringWithFormat:@"%@,%@", [eachOrganizer objectForKey:@"city"], [eachOrganizer objectForKey:@"country"]];
+
+    
+    cell.nameLabel.text = name;
+    cell.whoLabel.text = who;
+    cell.descriptionMeetup.text = descriptionMeetup;
+    cell.cityAndCountryLabel.text = cityCountry;
+    
     
     return cell;
 }
-*/
+
 
 /*
 // Override to support conditional editing of the table view.
