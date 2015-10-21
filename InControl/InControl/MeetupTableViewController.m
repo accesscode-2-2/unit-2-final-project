@@ -87,10 +87,10 @@
     NSDictionary *eachOrganizer = self.meetupData[indexPath.row];
     NSString *name = [eachOrganizer objectForKey:@"name"];
     NSString *who = [eachOrganizer objectForKey:@"who"];
-    NSString *descriptionMeetup = [eachOrganizer objectForKey:@"description"];
-    
     NSString *cityCountry = [NSString stringWithFormat:@"%@,%@", [eachOrganizer objectForKey:@"city"], [eachOrganizer objectForKey:@"country"]];
 
+    double rate = [[eachOrganizer objectForKey:@"rating"] doubleValue];
+    NSString *descriptionMeetup = [NSString stringWithFormat:@"Rate: %0.2f", rate];
     
     cell.nameLabel.text = name;
     cell.whoLabel.text = who;
@@ -101,6 +101,16 @@
     return cell;
 }
 
+- (void)tableView:(UITableView *)tableView didDeselectRowAtIndexPath:(NSIndexPath *)indexPath {
+    NSDictionary *eachOrganizer = self.meetupData[indexPath.row];
+    NSString *hyperlinkUrl = [eachOrganizer objectForKey:@"link"];
+    NSURL *url = [NSURL URLWithString:hyperlinkUrl];
+
+    
+    [[UIApplication sharedApplication]openURL:url];
+    NSLog(@"%@", hyperlinkUrl);
+
+}
 
 /*
 // Override to support conditional editing of the table view.
