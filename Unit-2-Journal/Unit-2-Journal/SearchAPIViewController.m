@@ -295,13 +295,17 @@ UITextFieldDelegate
     return self.searchResults.count;
 }
 
--(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
-{
+-(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    
     SearchAPITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"SearchAPITableViewCellIdentifier" forIndexPath:indexPath];
    
     iTunesSearchResult *searchResult = self.searchResults[indexPath.row];
     
     cell.titleLabel.text = searchResult.albumOrMovieName;
+    
+    if (searchResult.artistName == nil){
+        searchResult.artistName =@"";
+    }
     cell.authorArtistDirectorLabel.text = searchResult.artistName;
     
     NSString *artworkString = searchResult.artworkURL;

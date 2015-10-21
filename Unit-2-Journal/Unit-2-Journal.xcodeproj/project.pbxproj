@@ -539,7 +539,7 @@
 				INFOPLIST_FILE = "Unit-2-Journal/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.shenayoshida.Unit-2-Journal";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.jamaalsedayao.Unit-2-Journal";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};
@@ -555,7 +555,7 @@
 				INFOPLIST_FILE = "Unit-2-Journal/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.shenayoshida.Unit-2-Journal";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.jamaalsedayao.Unit-2-Journal";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};

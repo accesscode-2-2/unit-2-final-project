@@ -75,7 +75,7 @@
     NSString *descriptionString = [NSString stringWithFormat:@"%@",self.journalPostDetail.postText];
     
     content.contentTitle = titleString;
-    content.contentDescription = descriptionString;
+    content.contentDescription = [NSString stringWithFormat:@"%@ Rating: %@/5 Stars",descriptionString, self.journalPostDetail.starRating];
     content.imageURL = [NSURL URLWithString:self.journalPostDetail.imageForMedia];
     
     
