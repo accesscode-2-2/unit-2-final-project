@@ -14,7 +14,6 @@
 @dynamic artworkURL;
 @dynamic albumOrMovieName;
 @dynamic addedDate;
-
 @dynamic mediaType;
 
 

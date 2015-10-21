@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4D0030BC1BD6AF7C00BC7BD9 /* WatchedWishListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D0030BB1BD6AF7C00BC7BD9 /* WatchedWishListViewController.m */; settings = {ASSET_TAGS = (); }; };
 		4D7FE2941BCC12050036E58E /* TabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D7FE2931BCC12050036E58E /* TabBarViewController.m */; settings = {ASSET_TAGS = (); }; };
 		4D7FE29D1BCC32170036E58E /* SearchAPITableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D7FE29B1BCC32170036E58E /* SearchAPITableViewCell.m */; settings = {ASSET_TAGS = (); }; };
 		4D7FE29E1BCC32170036E58E /* SearchAPITableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D7FE29C1BCC32170036E58E /* SearchAPITableViewCell.xib */; settings = {ASSET_TAGS = (); }; };
@@ -52,6 +53,8 @@
 /* Begin PBXFileReference section */
 		1F41A29CEEC52ED6A148CCE5 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		2BC0A6490F88476E5C31E3B1 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		4D0030BA1BD6AF7C00BC7BD9 /* WatchedWishListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WatchedWishListViewController.h; sourceTree = "<group>"; };
+		4D0030BB1BD6AF7C00BC7BD9 /* WatchedWishListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WatchedWishListViewController.m; sourceTree = "<group>"; };
 		4D7FE2921BCC12050036E58E /* TabBarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TabBarViewController.h; sourceTree = "<group>"; };
 		4D7FE2931BCC12050036E58E /* TabBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TabBarViewController.m; sourceTree = "<group>"; };
 		4D7FE29A1BCC32170036E58E /* SearchAPITableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchAPITableViewCell.h; sourceTree = "<group>"; };
@@ -243,6 +246,8 @@
 				4DCBE1491BC9ADAE0075BA2C /* CreateJournalEntryViewController.m */,
 				4DCBE14B1BC9ADE00075BA2C /* WishListTableViewController.h */,
 				4DCBE14C1BC9ADE00075BA2C /* WishListTableViewController.m */,
+				4D0030BA1BD6AF7C00BC7BD9 /* WatchedWishListViewController.h */,
+				4D0030BB1BD6AF7C00BC7BD9 /* WatchedWishListViewController.m */,
 				4DCBE14E1BC9BD800075BA2C /* ViewCompletedEntryViewController.h */,
 				4DCBE14F1BC9BD800075BA2C /* ViewCompletedEntryViewController.m */,
 				4D7FE2921BCC12050036E58E /* TabBarViewController.h */,
@@ -300,7 +305,7 @@
 				TargetAttributes = {
 					9A2FFC291BC84BF100E880D3 = {
 						CreatedOnToolsVersion = 7.0;
-						DevelopmentTeam = Z6GBYPK592;
+						DevelopmentTeam = 5F2A5ZZ575;
 					};
 				};
 			};
@@ -406,6 +411,7 @@
 			files = (
 				9A2FFC321BC84BF200E880D3 /* AppDelegate.m in Sources */,
 				9A34656D1BCACDF40049337C /* iTunesSearchResult.m in Sources */,
+				4D0030BC1BD6AF7C00BC7BD9 /* WatchedWishListViewController.m in Sources */,
 				5A6A22911BD43A4A006E9FE7 /* CustomFontViewController.m in Sources */,
 				4D7FE2941BCC12050036E58E /* TabBarViewController.m in Sources */,
 				4DCBE14A1BC9ADAE0075BA2C /* CreateJournalEntryViewController.m in Sources */,
@@ -533,7 +539,7 @@
 				INFOPLIST_FILE = "Unit-2-Journal/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.jamaalsedayao.Unit-2-Journal";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.shenayoshida.Unit-2-Journal";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};
@@ -549,7 +555,7 @@
 				INFOPLIST_FILE = "Unit-2-Journal/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.jamaalsedayao.Unit-2-Journal";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.shenayoshida.Unit-2-Journal";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};

@@ -15,7 +15,6 @@
 @property (nonatomic) NSString *albumOrMovieName;
 @property (nonatomic) NSString *artworkURL;
 @property (nonatomic) NSDate *addedDate;
-
 @property (nonatomic) NSString *mediaType; 
 
 
