@@ -15,6 +15,7 @@
 @property (nonatomic) HabitInfoData *data;
 //@property (nonatomic) NSString *habitDataPicked;
 @property (nonatomic) NSMutableArray *searchResults;
+@property (nonatomic) Habit *habit;
 
 -(void)addColorHabitNews; 
 

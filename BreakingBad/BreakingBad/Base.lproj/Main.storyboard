@@ -9,7 +9,32 @@
         <mutableArray key="Avenir.ttc">
             <string>Avenir-Light</string>
             <string>Avenir-Light</string>
-            <string>Avenir-Light</string>
+        </mutableArray>
+        <mutableArray key="Bariol_Regular.otf">
+            <string>Bariol-Regular</string>
+            <string>Bariol-Regular</string>
+            <string>Bariol-Regular</string>
+            <string>Bariol-Regular</string>
+            <string>Bariol-Regular</string>
+            <string>Bariol-Regular</string>
+            <string>Bariol-Regular</string>
+        </mutableArray>
+        <mutableArray key="Jaapokki-Regular.otf">
+            <string>Jaapokki-Regular</string>
+        </mutableArray>
+        <mutableArray key="Jaapokkisubtract-Regular.otf">
+            <string>Jaapokkisubtract-Regular</string>
+            <string>Jaapokkisubtract-Regular</string>
+            <string>Jaapokkisubtract-Regular</string>
+        </mutableArray>
+        <mutableArray key="Oranienbaum.ttf">
+            <string>Oranienbaum</string>
+            <string>Oranienbaum</string>
+            <string>Oranienbaum</string>
+            <string>Oranienbaum</string>
+            <string>Oranienbaum</string>
+            <string>Oranienbaum</string>
+            <string>Oranienbaum</string>
         </mutableArray>
     </customFonts>
     <scenes>
@@ -520,12 +545,13 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="45" id="cL9-km-Fsi"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <fontDescription key="fontDescription" name="Jaapokkisubtract-Regular" family="Jaapokki subtract" pointSize="20"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PNY-lO-8iE">
-                                <rect key="frame" x="0.0" y="562" width="600" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PNY-lO-8iE">
+                                <rect key="frame" x="0.0" y="563" width="600" height="29"/>
+                                <fontDescription key="fontDescription" name="Jaapokkisubtract-Regular" family="Jaapokki subtract" pointSize="17"/>
                                 <state key="normal" title="Done"/>
                                 <connections>
                                     <action selector="doneButtonTapped:" destination="c4Q-wr-6iF" eventType="touchUpInside" id="9kn-pK-kwx"/>
@@ -534,7 +560,7 @@
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gFB-FW-Zzb">
                                 <rect key="frame" x="0.0" y="120" width="600" height="425"/>
                                 <color key="backgroundColor" red="0.85924393880000005" green="0.8895822149" blue="0.94631865530000003" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <fontDescription key="fontDescription" name="Oranienbaum" family="Oranienbaum" pointSize="16"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences" secureTextEntry="YES"/>
                             </textView>
                         </subviews>
@@ -737,12 +763,6 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vAX-db-DRg" userLabel="HabitView">
                                 <rect key="frame" x="0.0" y="64" width="600" height="240"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Habit:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6LJ-at-dIk">
-                                        <rect key="frame" x="8" y="16" width="46" height="24"/>
-                                        <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="17"/>
-                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZAy-pm-NYS">
                                         <rect key="frame" x="188" y="8" width="225" height="216"/>
                                         <subviews>
@@ -750,8 +770,8 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="225" height="216"/>
                                             </pickerView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3qg-oq-Fun">
-                                                <rect key="frame" x="80" y="90" width="64" height="36"/>
-                                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="26"/>
+                                                <rect key="frame" x="80" y="93" width="65" height="30"/>
+                                                <fontDescription key="fontDescription" name="Bariol-Regular" family="Bariol" pointSize="30"/>
                                                 <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
@@ -774,8 +794,12 @@
                                             </mask>
                                         </variation>
                                     </view>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G33-A8-17E">
-                                        <rect key="frame" x="553" y="194" width="37" height="30"/>
+                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G33-A8-17E">
+                                        <rect key="frame" x="520" y="194" width="70" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="70" id="b4T-TB-LPh"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Jaapokkisubtract-Regular" family="Jaapokki subtract" pointSize="17"/>
                                         <state key="normal" title="Done"/>
                                         <connections>
                                             <action selector="doneButtonTapped:" destination="MBI-FE-AUg" eventType="touchUpInside" id="roa-uE-BUh"/>
@@ -792,6 +816,20 @@
                                             <action selector="menuButtonTapped:" destination="MBI-FE-AUg" eventType="touchUpInside" id="rYv-F8-ZnI"/>
                                         </connections>
                                     </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Habit:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6LJ-at-dIk">
+                                        <rect key="frame" x="8" y="16" width="106" height="61"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="95" id="85J-RW-g2S"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Jaapokki-Regular" family="Jaapokki" pointSize="40"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="85J-RW-g2S"/>
+                                            </mask>
+                                        </variation>
+                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
@@ -819,7 +857,7 @@
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="yd8-x1-vSk">
                                                 <rect key="frame" x="0.0" y="0.0" width="200" height="148"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                <fontDescription key="fontDescription" name="Bariol-Regular" family="Bariol" pointSize="15"/>
                                                 <state key="normal" title="How are you feeling today?"/>
                                                 <connections>
                                                     <action selector="questionButtonTapped:" destination="MBI-FE-AUg" eventType="touchUpInside" id="FHD-nb-hU6"/>
@@ -830,7 +868,7 @@
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="30" id="Ky8-HI-S4O"/>
                                                 </constraints>
-                                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                <fontDescription key="fontDescription" name="Oranienbaum" family="Oranienbaum" pointSize="14"/>
                                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
@@ -851,7 +889,7 @@
                                         <subviews>
                                             <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="5Vc-X7-dwe">
                                                 <rect key="frame" x="0.0" y="0.0" width="200" height="148"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                <fontDescription key="fontDescription" name="Bariol-Regular" family="Bariol" pointSize="15"/>
                                                 <state key="normal" title="What will your mantra be?"/>
                                                 <connections>
                                                     <action selector="questionButtonTapped:" destination="MBI-FE-AUg" eventType="touchUpInside" id="faU-58-YqP"/>
@@ -862,7 +900,7 @@
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="30" id="75C-US-iNL"/>
                                                 </constraints>
-                                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                <fontDescription key="fontDescription" name="Oranienbaum" family="Oranienbaum" pointSize="14"/>
                                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
@@ -883,7 +921,7 @@
                                         <subviews>
                                             <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="fDC-Wn-1NC">
                                                 <rect key="frame" x="0.0" y="0.0" width="200" height="148"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                <fontDescription key="fontDescription" name="Bariol-Regular" family="Bariol" pointSize="15"/>
                                                 <state key="normal" title="What's one road block that you seek to tackle?"/>
                                                 <connections>
                                                     <action selector="questionButtonTapped:" destination="MBI-FE-AUg" eventType="touchUpInside" id="Da1-Ak-7w2"/>
@@ -894,7 +932,7 @@
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="30" id="LcX-vR-q2z"/>
                                                 </constraints>
-                                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                <fontDescription key="fontDescription" name="Oranienbaum" family="Oranienbaum" pointSize="14"/>
                                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
@@ -915,7 +953,7 @@
                                         <subviews>
                                             <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="KVQ-x9-UAp">
                                                 <rect key="frame" x="0.0" y="0.0" width="200" height="148"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                <fontDescription key="fontDescription" name="Bariol-Regular" family="Bariol" pointSize="15"/>
                                                 <state key="normal" title="Share a feel good moment from yesterday"/>
                                                 <connections>
                                                     <action selector="questionButtonTapped:" destination="MBI-FE-AUg" eventType="touchUpInside" id="SDi-sN-bFh"/>
@@ -926,7 +964,7 @@
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="30" id="qGf-Br-GtK"/>
                                                 </constraints>
-                                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                <fontDescription key="fontDescription" name="Oranienbaum" family="Oranienbaum" pointSize="14"/>
                                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
@@ -947,7 +985,7 @@
                                         <subviews>
                                             <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="IDC-Ei-BOs">
                                                 <rect key="frame" x="0.0" y="0.0" width="200" height="148"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                <fontDescription key="fontDescription" name="Bariol-Regular" family="Bariol" pointSize="15"/>
                                                 <state key="normal" title="What steps will you take to inch closer to your goal?"/>
                                                 <connections>
                                                     <action selector="questionButtonTapped:" destination="MBI-FE-AUg" eventType="touchUpInside" id="zhc-43-9vZ"/>
@@ -958,7 +996,7 @@
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="30" id="4l1-lu-Isa"/>
                                                 </constraints>
-                                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                <fontDescription key="fontDescription" name="Oranienbaum" family="Oranienbaum" pointSize="14"/>
                                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
@@ -979,7 +1017,7 @@
                                         <subviews>
                                             <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="m0W-qZ-idP">
                                                 <rect key="frame" x="0.0" y="0.0" width="200" height="148"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                <fontDescription key="fontDescription" name="Bariol-Regular" family="Bariol" pointSize="15"/>
                                                 <state key="normal" title="Reflect on how you surrounded yourself with positive vibes"/>
                                                 <connections>
                                                     <action selector="questionButtonTapped:" destination="MBI-FE-AUg" eventType="touchUpInside" id="0eg-Ry-SOU"/>
@@ -990,7 +1028,7 @@
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="30" id="0J6-QF-Arw"/>
                                                 </constraints>
-                                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                <fontDescription key="fontDescription" name="Oranienbaum" family="Oranienbaum" pointSize="14"/>
                                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>

@@ -119,33 +119,50 @@ CLLocationManagerDelegate
 
 -(void)addColorsMainPg {
     
+    //Habit View Colors
    self.habitView.backgroundColor = [SharedManager sharedModel].icyNight;
     
-    for (UIView *aquaView in self.oddViews)
+    for (UIView *icyView in self.oddViews)
     {
-        aquaView.backgroundColor = [SharedManager sharedModel].icyNight;
+        icyView.backgroundColor = [SharedManager sharedModel].icyNight;
     }
     
-    for (UIView *aquaView in self.evenViews)
+    for (UIView *blueView in self.evenViews)
     {
-        aquaView.backgroundColor = [SharedManager sharedModel].blueSky;
+        blueView.backgroundColor = [SharedManager sharedModel].blueSky;
     }
+    
+    //Done Button
+    self.doneButton.layer.borderWidth = 2.5;
+    self.doneButton.layer.borderColor = [SharedManager sharedModel].brickRed.CGColor;
+    self.doneButton.backgroundColor = [SharedManager sharedModel].colesiumGrey;
+    self.doneButton.layer.cornerRadius = 6;
+    self.doneButton.tintColor = [SharedManager sharedModel].brickRed;
+    
+    //Habit Heading Font- Jappoki
+//       self.habitLftLabel.font = [UIFont fontWithName:@"Jaapoki-Regular" size:33.0];
+        self.habitLftLabel.textColor = [SharedManager sharedModel].brickRed;
+    
+    self.habitLabel.textColor = [SharedManager sharedModel].brownForest;
+    //self.habitLabel.font = [UIFont fontWithName:@"Bariol_Regular" size:50.0];
+    
+    //Question Font- Bariol
+    for (UIButton *oddQuestionButton in self.oddButtons) {
+       // oddQuestionButton.font = [UIFont fontWithName:@"Bariol_Regular" size:8.0];
+        oddQuestionButton.tintColor =[SharedManager sharedModel].brownForest;
+    }
+    
+    for (UIButton *evenQuestionButton in self.evenButtons) {
+       // evenQuestionButton.font = [UIFont fontWithName:@"Bariol_Regular" size:8.0];
+         evenQuestionButton.tintColor =[SharedManager sharedModel].brownForest;
+    }
+    
+    self.habitPickerView.tintColor = [SharedManager sharedModel].brickRed;
     
 }
 
-//self.headerBackgroundView.backgroundColor = [PresetTimerData sharedModel].ghostGrey;
-//self.lapButton.layer.borderWidth = 2.5;
-//self.lapButton.layer.borderColor = [PresetTimerData sharedModel].glacierBlue.CGColor;
-//self.lapButton.backgroundColor = [PresetTimerData sharedModel].glacierBlue;
-//self.lapButton.layer.cornerRadius = 25;
-//self.lapButton.tintColor = [PresetTimerData sharedModel].burntOrange;
-//self.timeLabel.textColor = [PresetTimerData sharedModel].eggplant;
-//self.timeLabel.layer.borderWidth = 15;
-//self.timeLabel.layer.borderColor = [PresetTimerData sharedModel].steelBlueGrey.CGColor;
-//self.timeLabel.layer.cornerRadius =10;
-//
-//self.lapTimeLabel.textColor = [PresetTimerData sharedModel].burntOrange;
-//self.lapTableView.backgroundColor = [PresetTimerData sharedModel].ghostGrey;
+    
+
 
 
 
@@ -417,7 +434,7 @@ CLLocationManagerDelegate
         cell.backgroundColor = [UIColor clearColor];
         cell.menuTitleLabel.text = [self.menuTitles objectAtIndex:indexPath.row];
         cell.menuTitleImage.image = [self.menuIcons objectAtIndex:indexPath.row];
-      //  cell.viewHoldingImageView.backgroundColor =  [SharedManager sharedModel].brickRed;
+        cell.viewHoldingImageView.backgroundColor =  [SharedManager sharedModel].tropicalDream;
     }
     
     return cell;

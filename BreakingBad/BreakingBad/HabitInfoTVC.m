@@ -34,6 +34,7 @@
     [self addColorHabitInfo];
 }
 
+#pragma mark - Add Color
 
 -(void)addColorHabitInfo {
     self.habitInfoTableView.backgroundColor = [SharedManager sharedModel].icyNight;
@@ -56,7 +57,9 @@
     
     Habit *habit = self.habitsArray[indexPath.row];
     cell.textLabel.text = habit.name;
-    //cell.backgroundColor = [SharedManager sharedModel].icyNight;
+    cell.textLabel.textColor = [SharedManager sharedModel].brickRed;
+    cell.textLabel.font = [UIFont fontWithName:@"Bariol" size:22.0];
+    cell.backgroundColor = [SharedManager sharedModel].icyNight;
     
     return cell;
     
@@ -68,7 +71,7 @@
     
     HabitNewsTVC *habNewsTVC = (HabitNewsTVC *)[self.storyboard instantiateViewControllerWithIdentifier:@"habitsNewsTVC"];
     
-    habNewsTVC.data = self.habitsArray[indexPath.row];
+    habNewsTVC.habit = self.habitsArray[indexPath.row];
     
     [self.navigationController pushViewController:habNewsTVC animated:YES];
     

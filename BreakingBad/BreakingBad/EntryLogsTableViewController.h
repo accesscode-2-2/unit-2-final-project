@@ -15,4 +15,7 @@
 @property (nonatomic) Habit *habit;
 
 @property (nonatomic) FetchWeatherData *weatherData;
+
+-(void)addColorEntryLog;
+
 @end

@@ -43,12 +43,15 @@
     UINib *nib = [UINib nibWithNibName:@"EntryLogsTableViewCell" bundle:nil];
     [self.tableView registerNib:nib forCellReuseIdentifier:@"entryLogCellID"];
     self.urlStringsArray = [self urlStringsArray];
+    
+    [self addColorEntryLog];
 
 }
 
 
+#pragma mark- Add Color
 -(void)addColorEntryLog {
-    self.entryTableView.backgroundColor = [SharedManager sharedModel].tropicalDream;
+    self.entryTableView.backgroundColor = [SharedManager sharedModel].blueSky;
 }
 
 
@@ -86,6 +89,9 @@
     cell.locationLabel.text = entry.location;
     
     cell.entryDateLabel.text = dateString;
+    cell.backgroundColor = [SharedManager sharedModel].tropicalDream;
+    cell.textLabel.textColor = [SharedManager sharedModel].brownForest;
+    cell.textLabel.font = [UIFont fontWithName:@"Bariol" size:22.0];
     
     return cell;
 }

@@ -48,12 +48,16 @@ UITableViewDelegate>
 
 - (void)fetchHabitInfo{
 
-  NSString *url = @"http://api.nytimes.com/svc/search/v2/articlesearch.json?fq=drinking&api-key=4aaf719230b21874acd05c657c680643:18:73243649" ;
+    Habit *habit = self.habit;
+    
+    NSString *url = [NSString stringWithFormat:@"http://api.nytimes.com/svc/search/v2/articlesearch.json?fq=%@&api-key=4aaf719230b21874acd05c657c680643:18:73243649", habit.name];
+    
+    NSString *encodedString = [url stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLQueryAllowedCharacterSet]];
     
     
     AFHTTPRequestOperationManager *manager = [[AFHTTPRequestOperationManager alloc] init];
     
-    [manager GET:url parameters:nil success:^(AFHTTPRequestOperation * _Nonnull operation, id  _Nonnull responseObject) {
+    [manager GET:encodedString parameters:nil success:^(AFHTTPRequestOperation * _Nonnull operation, id  _Nonnull responseObject) {
         
         
         NSDictionary *results = responseObject[@"response"];
@@ -103,7 +107,9 @@ UITableViewDelegate>
     
     cell.newsHeadlineLabel.text = data.nyHeadline;
     cell.newsSnippetTextView.text = data.nySnippet;
-    //cell.backgroundColor = [SharedManager sharedModel].colesiumGrey;
+    cell.backgroundColor = [SharedManager sharedModel].colesiumGrey;
+    cell.textLabel.textColor = [SharedManager sharedModel].brownForest;
+    cell.textLabel.font = [UIFont fontWithName:@"Oranienbaum" size:22.0];
     
     return cell;
 }

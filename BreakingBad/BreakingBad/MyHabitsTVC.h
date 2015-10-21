@@ -13,4 +13,7 @@
 @interface MyHabitsTVC : UITableViewController
 
 @property (nonatomic) NSArray *habitsArray;
+
+-(void)addColorMyHabits; 
+
 @end

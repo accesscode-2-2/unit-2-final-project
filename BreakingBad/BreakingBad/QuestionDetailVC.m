@@ -35,7 +35,15 @@
 -(void)addColorQuestionDetail {
     
     self.questionDetailView.backgroundColor = [SharedManager sharedModel].colesiumGrey;
-    self.answerTextView.backgroundColor = [SharedManager sharedModel].brickRed;
+    self.questionLabel.textColor = [SharedManager sharedModel].brickRed;
+
+    self.answerTextView.backgroundColor = [SharedManager sharedModel].blueSky;
+    
+    self.doneButton.layer.borderWidth = 3.5;
+    self.doneButton.layer.borderColor = [SharedManager sharedModel].tropicalDream.CGColor;
+    self.doneButton.backgroundColor = [SharedManager sharedModel].brickRed;
+    self.doneButton.layer.cornerRadius = 22;
+    self.doneButton.tintColor = [SharedManager sharedModel].brownForest;
     
 }
 

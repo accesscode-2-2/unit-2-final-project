@@ -29,6 +29,15 @@
     [super viewDidLoad];
     
     self.navigationItem.title = @"My Habits";
+    
+    [self addColorMyHabits];
+}
+
+
+-(void)addColorMyHabits {
+    
+   self.myHabitsTableView.backgroundColor = [SharedManager sharedModel].icyNight;
+    
 }
 
 
@@ -46,6 +55,8 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"myHabitsCell" forIndexPath:indexPath];
     Habit *habit = self.habitsArray[indexPath.row];
     cell.textLabel.text = habit.name;
+    cell.textLabel.textColor = [SharedManager sharedModel].brownForest;
+    cell.textLabel.font = [UIFont fontWithName:@"Bariol" size:22.0];
     cell.backgroundColor = [SharedManager sharedModel].icyNight;
     
     return cell;
