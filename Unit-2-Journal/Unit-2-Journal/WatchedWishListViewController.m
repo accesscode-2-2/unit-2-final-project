@@ -39,8 +39,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.journalPostArray = [[NSMutableArray alloc] init]; 
-   
+    self.journalPostArray = [[NSMutableArray alloc] init];
+    
     self.mediaTitleLabel.text = self.journalPostDetail.title;
     self.mediaCreatorLabel.text = self.journalPostDetail.creator;
     self.doneButton.hidden = YES;
@@ -66,12 +66,11 @@
     self.textView.layer.borderWidth = 1.0f;
     self.textView.layer.cornerRadius = 5.0f;
     self.textView.layer.borderColor = [UIColor blackColor].CGColor;
-    
 }
 
-- (void) textViewDidBeginEditing:(UITextView *)textView{
-    self.textView.text = @"";
+- (void) textViewDidBeginEditing:(UITextView *)textView {
     
+    self.textView.text = @"";
     self.doneButton.hidden = NO;
 }
 
@@ -95,7 +94,7 @@
     myJournalPost[@"typeOfMedia"] = self.mediaType;
     myJournalPost[@"imageForMedia"] = self.journalPostDetail.imageForMedia;
     myJournalPost[@"reviewed"] = [NSNumber numberWithBool:YES];
- 
+    
     NSLog(@"my Journal post %@", myJournalPost);
     
     [myJournalPost saveEventually]; // save entry
@@ -111,11 +110,13 @@
 #pragma mark - stars
 
 - (IBAction)starOneTapped:(id)sender {
+    
     [self resetStars];
     [self oneStarRating];
     [self startAnimation];
 }
 - (IBAction)starTwoTapped:(id)sender {
+    
     [self resetStars];
     [self twoStarRating];
     [self startAnimation];
@@ -125,29 +126,36 @@
     [self threeStarRating];
     [self startAnimation];
 }
+
 - (IBAction)starFourTapped:(id)sender {
+    
     [self resetStars];
     [self fourStarRating];
     [self startAnimation];
 }
+
 - (IBAction)starFiveTapped:(id)sender {
+    
     [self resetStars];
     [self fiveStarRating];
     [self startAnimation];
 }
 
 - (void)oneStarRating {
+    
     self.rating = @1; // assign rating for parse
     [self.starOne setBackgroundImage:[UIImage imageNamed:@"rating_star_filled2.png"] forState:UIControlStateNormal];
 }
 
 - (void)twoStarRating {
+    
     self.rating = @2; // assign rating for parse
     [self.starOne setBackgroundImage:[UIImage imageNamed:@"rating_star_filled2.png"] forState:UIControlStateNormal];
     [self.starTwo setBackgroundImage:[UIImage imageNamed:@"rating_star_filled2.png"] forState:UIControlStateNormal];
 }
 
 - (void)threeStarRating {
+    
     self.rating = @3; // assign rating for parse
     [self.starOne setBackgroundImage:[UIImage imageNamed:@"rating_star_filled2.png"] forState:UIControlStateNormal];
     [self.starTwo setBackgroundImage:[UIImage imageNamed:@"rating_star_filled2.png"] forState:UIControlStateNormal];
@@ -155,6 +163,7 @@
 }
 
 - (void)fourStarRating {
+    
     self.rating = @4; // assign rating for parse
     [self.starOne setBackgroundImage:[UIImage imageNamed:@"rating_star_filled2.png"] forState:UIControlStateNormal];
     [self.starTwo setBackgroundImage:[UIImage imageNamed:@"rating_star_filled2.png"] forState:UIControlStateNormal];
@@ -163,6 +172,7 @@
 }
 
 - (void)fiveStarRating {
+    
     self.rating = @5; // assign rating for parse
     [self.starOne setBackgroundImage:[UIImage imageNamed:@"rating_star_filled2.png"] forState:UIControlStateNormal];
     [self.starTwo setBackgroundImage:[UIImage imageNamed:@"rating_star_filled2.png"] forState:UIControlStateNormal];
@@ -172,6 +182,7 @@
 }
 
 - (void)resetStars {
+    
     [self.starOne setBackgroundImage:[UIImage imageNamed:@"rating_star2.png"] forState:UIControlStateNormal];
     [self.starTwo setBackgroundImage:[UIImage imageNamed:@"rating_star2.png"] forState:UIControlStateNormal];
     [self.starThree setBackgroundImage:[UIImage imageNamed:@"rating_star2.png"] forState:UIControlStateNormal];

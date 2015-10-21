@@ -10,7 +10,6 @@
 #import <FBSDKCoreKit/FBSDKCoreKit.h>
 #import <FBSDKLoginKit/FBSDKLoginKit.h>
 
-
 @interface SettingsViewController ()
 
 @end
@@ -18,6 +17,7 @@
 @implementation SettingsViewController
 
 - (void)viewDidLoad {
+    
     [super viewDidLoad];
     
     FBSDKLoginButton *loginButton = [[FBSDKLoginButton alloc]init];
@@ -27,8 +27,8 @@
 }
 
 - (void)didReceiveMemoryWarning {
+
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 
