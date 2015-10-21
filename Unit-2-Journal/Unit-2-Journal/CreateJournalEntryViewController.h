@@ -9,8 +9,6 @@
 #import <UIKit/UIKit.h>
 #import "iTunesSearchResult.h"
 
-
-
 @interface CreateJournalEntryViewController : UIViewController
 
 @property (nonatomic) iTunesSearchResult *postSearchResult;

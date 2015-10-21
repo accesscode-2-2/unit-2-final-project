@@ -13,7 +13,6 @@
 #import <pop/POP.h>
 #import <Parse/Parse.h>
 
-
 @interface CreateJournalEntryViewController () <UITextViewDelegate>
 
 @property (strong, nonatomic) IBOutlet UILabel *movieOrAlbumNameLabel;
@@ -37,11 +36,12 @@
 @implementation CreateJournalEntryViewController
 
 - (void)viewDidLoad {
+    
     [super viewDidLoad];
     
     self.journalPostArray = [[NSMutableArray alloc]init];
     
-  //  NSLog(@"Data has been passed: %@",self.postSearchResult);
+    //  NSLog(@"Data has been passed: %@",self.postSearchResult);
     
     self.doneEditingButton.hidden = YES;
     
@@ -51,7 +51,7 @@
     self.textView.layer.borderWidth = 1.0f;
     self.textView.layer.cornerRadius = 5.0f;
     self.textView.layer.borderColor = [UIColor blackColor].CGColor;
-   
+    
     //populate journal header
     self.movieOrAlbumNameLabel.text = self.postSearchResult.albumOrMovieName;
     self.artistNameLabel.text = self.postSearchResult.artistName;
@@ -65,9 +65,10 @@
     self.artworkImageView.layer.borderColor = [UIColor blackColor].CGColor;
     self.artworkImageView.layer.borderWidth = 2.0;
     self.artworkImageView.layer.cornerRadius = 25.0;
-    
 }
-- (void) textViewDidBeginEditing:(UITextView *)textView{
+
+- (void) textViewDidBeginEditing:(UITextView *)textView {
+    
     self.textView.text = @"";
     
     self.doneEditingButton.hidden = NO;
@@ -82,43 +83,42 @@
 
 #pragma mark - star rating
 
-- (IBAction)oneStarTapped:(id)sender
-{
+- (IBAction)oneStarTapped:(id)sender {
+    
     [self resetStars];
     [self oneStarRating];
     [self startAnimation];
-    
 }
 
-- (IBAction)twoStarTapped:(id)sender
-{
+- (IBAction)twoStarTapped:(id)sender {
+    
     [self resetStars];
     [self twoStarRating];
     [self startAnimation];
 }
 
-- (IBAction)threeStarTapped:(id)sender
-{
+- (IBAction)threeStarTapped:(id)sender {
+    
     [self resetStars];
     [self threeStarRating];
     [self startAnimation];
 }
 
-- (IBAction)fourStarTapped:(id)sender
-{
+- (IBAction)fourStarTapped:(id)sender {
+    
     [self resetStars];
     [self fourStarRating];
     [self startAnimation];
 }
-- (IBAction)fiveStarTapped:(id)sender
-{
+- (IBAction)fiveStarTapped:(id)sender {
+    
     [self resetStars];
     [self fiveStarRating];
     [self startAnimation];
 }
 
-- (void)resetStars
-{
+- (void)resetStars {
+    
     [self.starButtonOne setBackgroundImage:[UIImage imageNamed:@"rating_star2.png"] forState:UIControlStateNormal];
     [self.starButtonTwo setBackgroundImage:[UIImage imageNamed:@"rating_star2.png"] forState:UIControlStateNormal];
     [self.starButtonThree setBackgroundImage:[UIImage imageNamed:@"rating_star2.png"] forState:UIControlStateNormal];
@@ -127,17 +127,20 @@
 }
 
 - (void)oneStarRating {
+    
     self.rating = @1; // assign rating for parse
     [self.starButtonOne setBackgroundImage:[UIImage imageNamed:@"rating_star_filled2.png"] forState:UIControlStateNormal];
 }
 
 - (void)twoStarRating {
+    
     self.rating = @2; // assign rating for parse
     [self.starButtonOne setBackgroundImage:[UIImage imageNamed:@"rating_star_filled2.png"] forState:UIControlStateNormal];
     [self.starButtonTwo setBackgroundImage:[UIImage imageNamed:@"rating_star_filled2.png"] forState:UIControlStateNormal];
 }
 
 - (void)threeStarRating {
+    
     self.rating = @3; // assign rating for parse
     [self.starButtonOne setBackgroundImage:[UIImage imageNamed:@"rating_star_filled2.png"] forState:UIControlStateNormal];
     [self.starButtonTwo setBackgroundImage:[UIImage imageNamed:@"rating_star_filled2.png"] forState:UIControlStateNormal];
@@ -145,6 +148,7 @@
 }
 
 - (void)fourStarRating {
+    
     self.rating = @4; // assign rating for parse
     [self.starButtonOne setBackgroundImage:[UIImage imageNamed:@"rating_star_filled2.png"] forState:UIControlStateNormal];
     [self.starButtonTwo setBackgroundImage:[UIImage imageNamed:@"rating_star_filled2.png"] forState:UIControlStateNormal];
@@ -188,20 +192,17 @@
     journalPost.postText = self.textView.text;
     journalPost.postSubject = self.postSearchResult;
     
-    //journalPost.reviewed = YES;
-    
     self.journalPost = journalPost;
     
-    
     [self.journalPostArray addObject:self.journalPost];
-                               
-   // NSLog(@"Journal Post: %@",self.journalPost);
+    
+    // NSLog(@"Journal Post: %@",self.journalPost);
     
     [self.navigationController popToRootViewControllerAnimated:YES]; // pop back to root controller
-
+    
     [self.tabBarController setSelectedIndex:2]; // send to correct tab
     
-  //  NSLog(@"my journal text is: %@", self.textView.text);
+    //  NSLog(@"my journal text is: %@", self.textView.text);
     
     // when we log the journal entry, SAVE it all to Parse
     JournalPost *myJournalPost = [[JournalPost alloc] init]; // most of this is a repeat of above.
@@ -216,37 +217,6 @@
     myJournalPost[@"reviewed"] = [NSNumber numberWithBool:YES];
     
     [myJournalPost saveEventually]; // save your entry, even if offline
-    
 }
-
-
-
- #pragma mark - Navigation
- 
-// - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-//
-//     NSLog(@"Segue");
-//     
-////     if ([[segue identifier]isEqualToString:@"logToJournalSegue"]) {
-////      
-////         NSLog(@"Segue to Tab");
-////         JournalMainCollectionViewController *viewController = [[JournalMainCollectionViewController alloc]init];
-//     
-//         TabBarViewController *tabVC = segue.destinationViewController; // this creates a new tab bar
-//     
-//         JournalMainCollectionViewController *viewController = [[tabVC viewControllers] objectAtIndex:2];
-//     
-//         //[viewController.allJournalPosts addObjectsFromArray:self.journalPostArray];
-//     
-//        viewController.journalPostToAdd = self. journalPost;
-//        [tabVC setSelectedIndex:2];
-//     
-//    
-// //    }
-// }
-
-//locationsHome* vc = [[locationsHome alloc] init];
-//UITabBarController* tbc = [segue destinationViewController];
-//vc = (locationsHome *)[[tbc customizableViewControllers] objectAtIndex:0];
 
 @end

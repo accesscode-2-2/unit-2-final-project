@@ -1221,30 +1221,6 @@
                                     </mask>
                                 </variation>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iJa-08-1GE">
-                                <rect key="frame" x="300" y="476" width="280" height="75"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Facebook" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qia-hv-Okp">
-                                        <rect key="frame" x="102" y="27" width="77" height="21"/>
-                                        <animations/>
-                                        <fontDescription key="fontDescription" name="Akkurat" family="Akkurat" pointSize="17"/>
-                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
-                                <animations/>
-                                <color key="backgroundColor" red="0.99607843139999996" green="0.79215686269999996" blue="0.086274509799999996" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="100" id="DnT-BB-V1g"/>
-                                    <constraint firstItem="Qia-hv-Okp" firstAttribute="centerX" secondItem="iJa-08-1GE" secondAttribute="centerX" id="Hf4-By-8MH"/>
-                                    <constraint firstItem="Qia-hv-Okp" firstAttribute="centerY" secondItem="iJa-08-1GE" secondAttribute="centerY" id="MBF-Xt-pRY"/>
-                                </constraints>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="DnT-BB-V1g"/>
-                                    </mask>
-                                </variation>
-                            </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DLn-Kf-i7J" userLabel="Red View">
                                 <rect key="frame" x="20" y="250" width="560" height="75"/>
                                 <subviews>
@@ -1342,6 +1318,30 @@
                                         <exclude reference="eIg-rl-hTN"/>
                                         <exclude reference="sBD-Zu-u6U"/>
                                         <exclude reference="ziG-OY-chr"/>
+                                    </mask>
+                                </variation>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iJa-08-1GE">
+                                <rect key="frame" x="300" y="476" width="280" height="75"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Facebook" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qia-hv-Okp">
+                                        <rect key="frame" x="102" y="27" width="77" height="21"/>
+                                        <animations/>
+                                        <fontDescription key="fontDescription" name="Akkurat" family="Akkurat" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <animations/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="DnT-BB-V1g"/>
+                                    <constraint firstItem="Qia-hv-Okp" firstAttribute="centerX" secondItem="iJa-08-1GE" secondAttribute="centerX" id="Hf4-By-8MH"/>
+                                    <constraint firstItem="Qia-hv-Okp" firstAttribute="centerY" secondItem="iJa-08-1GE" secondAttribute="centerY" id="MBF-Xt-pRY"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="DnT-BB-V1g"/>
                                     </mask>
                                 </variation>
                             </view>

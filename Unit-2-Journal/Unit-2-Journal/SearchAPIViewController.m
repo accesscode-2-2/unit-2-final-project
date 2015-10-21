@@ -17,9 +17,6 @@
 #import <Parse/Parse.h>
 #import "JournalPost.h" // for parse
 
-
-//#import "JournalPost.h"
-
 @interface SearchAPIViewController ()
 <
 UITableViewDataSource,
@@ -38,7 +35,6 @@ UITextFieldDelegate
 @property (nonatomic) NSMutableArray *searchResults;
 @property (nonatomic) NSMutableArray *wishListItems;
 @property (nonatomic) iTunesSearchResult *passSearchResult;
-
 @property (nonatomic) JournalPost *journalPost; // for parse
 @property (nonatomic) NSString *mediaType; // for parse
 
@@ -46,10 +42,10 @@ UITextFieldDelegate
 
 @implementation SearchAPIViewController
 
-- (void)viewDidLoad
-{
+- (void)viewDidLoad {
+    
     [super viewDidLoad];
-
+    
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
     self.searchTextField.delegate = self;
@@ -75,14 +71,14 @@ UITextFieldDelegate
         
     } else if (self.televisionButton.isTouchInside){
         self.media = @"television";
-    
-   // } else if (self.podcastButton.isTouchInside) {
-       
+        
+        // } else if (self.podcastButton.isTouchInside) {
+        
     } else {
         self.media = [sender currentTitle];
     }
-
-   // NSLog(@"Media button tapped: %@",self.media);
+    
+    // NSLog(@"Media button tapped: %@",self.media);
 }
 
 #pragma mark - add to list buttons
@@ -113,18 +109,18 @@ UITextFieldDelegate
 
 //- (void)extraLeftItemDidPress {
 //    NSLog(@"left button tapped");
-//    
+//
 //    JournalPost *myJournalPost = [[JournalPost alloc] init];
-//    
+//
 //    myJournalPost[@"title"] = self.passSearchResult.albumOrMovieName;
 //    myJournalPost[@"creator"] = self.passSearchResult.artistName;
 //    myJournalPost[@"dateEntered"] = [NSDate date];
 //    myJournalPost[@"typeOfMedia"] = self.passSearchResult.mediaType;
 //    myJournalPost[@"imageForMedia"] = self.passSearchResult.artworkURL;
 //    myJournalPost[@"reviewed"] = [NSNumber numberWithBool:NO];
-//    
+//
 //    [myJournalPost saveEventually]; // save your entry, even if offline
-//    
+//
 //    [self.tabBarController setSelectedIndex:0];
 //}
 //
@@ -134,12 +130,12 @@ UITextFieldDelegate
 
 #pragma mark - API request
 
-- (void) makeNewAPIRequestWithSearchTerm:(NSString *)term
-                                       inMedia:(NSString *)media{
- 
+- (void)makeNewAPIRequestWithSearchTerm:(NSString *)term
+                                inMedia:(NSString *)media {
+    
     self.searchResults = [[NSMutableArray alloc]init];
     
-// First API Request - iTunes (music, ebooks, podcast)
+    // First API Request - iTunes (music, ebooks, podcast)
     
     NSString *urlString = [NSString stringWithFormat:
                            @"https://itunes.apple.com/search?media=%@&term=%@",media,term];
@@ -149,8 +145,7 @@ UITextFieldDelegate
     [APIManager GETRequestWithURL:url
                 completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
                     
-                    
-                    if (data != nil){
+                    if (data != nil) {
                         NSDictionary *json = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
                         
                         NSArray *results = [json objectForKey:@"results"];
@@ -164,7 +159,7 @@ UITextFieldDelegate
                             
                             iTunesSearchResult *resultsObject = [[iTunesSearchResult alloc]init];
                             
-                            if ([self.media isEqualToString:@"movie"]){
+                            if ([self.media isEqualToString:@"movie"]) {
                                 resultsObject.artistName = artistName;
                                 resultsObject.albumOrMovieName = movieName;
                                 resultsObject.artworkURL = artworkURL;
@@ -175,15 +170,15 @@ UITextFieldDelegate
                                 resultsObject.albumOrMovieName = movieName;
                                 resultsObject.artworkURL = artworkURL;
                                 resultsObject.mediaType = @"podcast";
-            
                                 
-                            } else if ([self.media isEqualToString:@"music&entity=album"]){
+                                
+                            } else if ([self.media isEqualToString:@"music&entity=album"]) {
                                 resultsObject.artistName = artistName;
                                 resultsObject.albumOrMovieName = albumName;
                                 resultsObject.artworkURL = artworkURL;
                                 resultsObject.mediaType = @"album";
                                 
-                            } else if ([self.media isEqualToString:@"ebook"]){
+                            } else if ([self.media isEqualToString:@"ebook"]) {
                                 resultsObject.artistName = artistName;
                                 resultsObject.albumOrMovieName = movieName;
                                 resultsObject.artworkURL = artworkURL;
@@ -195,8 +190,8 @@ UITextFieldDelegate
                         [self.tableView reloadData];
                     }}];
     
-// Second API Request - for television
-   
+    // Second API Request - for television
+    
     NSString *urlStringTwo = [NSString stringWithFormat:@"http://api.tvmaze.com/search/shows?q=%@",term];
     NSString *encodedStringTwo = [urlStringTwo stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLQueryAllowedCharacterSet]];
     NSURL *urlTwo = [NSURL URLWithString:encodedStringTwo];
@@ -204,14 +199,14 @@ UITextFieldDelegate
     [APIManager GETRequestWithURL:urlTwo
                 completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
                     
-                    if (data != nil){
+                    if (data != nil) {
                         NSArray *jsonTwo = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
                         
-                      //  NSLog(@"TV results: %@",jsonTwo);
+                        //  NSLog(@"TV results: %@",jsonTwo);
                         
                         NSDictionary *shows = [jsonTwo valueForKey:@"show"];
                         
-                        for (NSDictionary *show in shows){
+                        for (NSDictionary *show in shows) {
                             
                             NSString *name = [show valueForKey:@"name"];
                             NSArray *image = [show valueForKey:@"image"];
@@ -219,7 +214,7 @@ UITextFieldDelegate
                             NSArray *network = [show valueForKey:@"network"];
                             NSString *channel = [network valueForKey:@"name"];
                             
-                            if ([self.media isEqualToString:@"television"]){
+                            if ([self.media isEqualToString:@"television"]) {
                                 
                                 iTunesSearchResult *searchResult = [[iTunesSearchResult alloc]init];
                                 searchResult.artistName = channel;
@@ -234,38 +229,38 @@ UITextFieldDelegate
                     [self.tableView reloadData];
                 }];
     
-// Third API Request - for movies, including in-theatre
-
-// https://api.themoviedb.org/3/search/movie?api_key=a958839150c7c7c6333fd335128ea066&query=django
+    // Third API Request - for movies, including in-theatre
+    
+    // https://api.themoviedb.org/3/search/movie?api_key=a958839150c7c7c6333fd335128ea066&query=django
     
     NSString *urlStringThree = [NSString stringWithFormat:@"https://api.themoviedb.org/3/search/%@?api_key=a958839150c7c7c6333fd335128ea066&query=%@",media,term];
     
     NSString *encodedStringThree = [urlStringThree stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLQueryAllowedCharacterSet]];
     
     NSURL *urlThree = [NSURL URLWithString:encodedStringThree];
-
+    
     [APIManager GETRequestWithURL:urlThree
                 completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
                     
-                    if (data != nil){
+                    if (data != nil) {
                         NSArray *jsonThree = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
                         
                         NSDictionary *results = [jsonThree valueForKey:@"results"];
                         
-                        for (NSDictionary *result in results){
+                        for (NSDictionary *result in results) {
                             
                             NSString *name = [result valueForKey:@"title"];
                             NSString *releaseDate = [result valueForKey:@"release_date"];
                             NSString *posterPath = [result valueForKey:@"poster_path"];
-                        
+                            
                             //http://image.tmdb.org/t/p/w500
                             
-                            if ([self.media isEqualToString:@"movie"]){
-
-                               iTunesSearchResult *movieResult = [[iTunesSearchResult alloc]init];
+                            if ([self.media isEqualToString:@"movie"]) {
+                                
+                                iTunesSearchResult *movieResult = [[iTunesSearchResult alloc]init];
                                 
                                 movieResult.albumOrMovieName = name;
-                            movieResult.artistName = releaseDate;
+                                movieResult.artistName = releaseDate;
                                 movieResult.artworkURL = [NSString stringWithFormat:@"http://image.tmdb.org/t/p/w500%@",posterPath];
                                 movieResult.mediaType = @"movie";
                                 
@@ -275,13 +270,13 @@ UITextFieldDelegate
                         }
                     }
                 }];
-    }
+}
 
 - (BOOL)textFieldShouldReturn:(UITextField *)textField {
     
     [self.view endEditing:YES];
     [self makeNewAPIRequestWithSearchTerm:textField.text
-                                        inMedia:self.media];
+                                  inMedia:self.media];
     return YES;
 }
 
@@ -298,7 +293,7 @@ UITextFieldDelegate
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     SearchAPITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"SearchAPITableViewCellIdentifier" forIndexPath:indexPath];
-   
+    
     iTunesSearchResult *searchResult = self.searchResults[indexPath.row];
     
     cell.titleLabel.text = searchResult.albumOrMovieName;
@@ -309,10 +304,10 @@ UITextFieldDelegate
     NSData *artworkData = [NSData dataWithContentsOfURL:artworkURL];
     UIImage *artworkImage = [UIImage imageWithData:artworkData];
     
-//    NSLog(@"Image String: %@", searchResult.artworkURL);
-//    NSLog(@"Image URL: %@", artworkURL);
-//    NSLog(@"Image Data: %@", artworkData);
-//    NSLog(@"Image: %@", artworkImage);
+    //    NSLog(@"Image String: %@", searchResult.artworkURL);
+    //    NSLog(@"Image URL: %@", artworkURL);
+    //    NSLog(@"Image Data: %@", artworkData);
+    //    NSLog(@"Image: %@", artworkImage);
     
     cell.artworkImage.image = artworkImage;
     
@@ -324,26 +319,26 @@ UITextFieldDelegate
     return cell;
 }
 
--(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{ //  here is where the data is passed
-   
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath { //  here is where the data is passed
+    
     iTunesSearchResult *searchResult = self.searchResults[indexPath.row];
     
     self.passSearchResult = searchResult;
 }
 
- #pragma mark - Navigation
+#pragma mark - Navigation
 
- - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     
-     if ([[segue identifier]isEqualToString:@"pushToCreateJournalEntry"]) {
-     CreateJournalEntryViewController *viewController = segue.destinationViewController;
-     viewController.postSearchResult = self.passSearchResult;
-         
-         // clear text view and reset tableView once data is passed
-         self.searchTextField.text = nil;
-         [self.searchResults removeAllObjects];
-         [self.tableView reloadData];
-         
-     }
- }
+    if ([[segue identifier]isEqualToString:@"pushToCreateJournalEntry"]) {
+        CreateJournalEntryViewController *viewController = segue.destinationViewController;
+        viewController.postSearchResult = self.passSearchResult;
+        
+        // clear text view and reset tableView once data is passed
+        self.searchTextField.text = nil;
+        [self.searchResults removeAllObjects];
+        [self.tableView reloadData];
+    }
+}
+
 @end

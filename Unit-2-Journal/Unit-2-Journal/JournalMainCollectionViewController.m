@@ -10,41 +10,37 @@
 #import <Parse/Parse.h>
 #import "ViewCompletedEntryViewController.h"
 
-
-
 @interface JournalMainCollectionViewController ()
 
 @end
 
 @implementation JournalMainCollectionViewController
 
-//static NSString * const reuseIdentifier = @"Cell";
-
-- (void) viewDidAppear:(BOOL)animated{
+- (void) viewDidAppear:(BOOL)animated {
     
     [self runQuery];
 }
 
-- (void)viewDidLoad
-{
+- (void)viewDidLoad {
+    
     [super viewDidLoad];
     
     if (self.allJournalPosts == nil){
-   self.allJournalPosts = [[NSMutableArray alloc]init];
+        self.allJournalPosts = [[NSMutableArray alloc]init];
     } else {
         nil;
     }
-
-  //  NSLog(@"Current Journal Post: %@", self.journalPostToAdd);
+    
+    //  NSLog(@"Current Journal Post: %@", self.journalPostToAdd);
     
     if (self.journalPostToAdd != nil){
-    [self. allJournalPosts addObject:self.journalPostToAdd];
+        [self. allJournalPosts addObject:self.journalPostToAdd];
     }
     
-   // NSLog(@"All Journal Posts: %@", self.allJournalPosts);
+    // NSLog(@"All Journal Posts: %@", self.allJournalPosts);
     
     self.collectionView.alwaysBounceVertical = YES;
-     
+    
     [self runQuery]; // run Parse query to fetch saved data
 }
 
@@ -52,12 +48,12 @@
 
 - (void)runQuery {
     
-   // __weak typeof(self) weakSelf = self; // prevent memory leakage?
+    // __weak typeof(self) weakSelf = self; // prevent memory leakage?
     
     PFQuery *query = [PFQuery queryWithClassName:@"JournalPost"];
-
+    
     [query findObjectsInBackgroundWithBlock:^(NSArray * _Nullable objects, NSError * _Nullable error) {
-     
+        
         // create a for loop and iterate through the objects array and push only the posts that are marked with True to "self.allJournalPosts"
         
         [self.allJournalPosts removeAllObjects]; // clear to prevent doubles
@@ -68,7 +64,7 @@
             }
         }
         
-       // NSLog(@"info fetched from parse: %@", self.allJournalPosts); // test it!
+        // NSLog(@"info fetched from parse: %@", self.allJournalPosts); // test it!
         
         [self.collectionView reloadData]; // reload tableView
     }];
@@ -85,7 +81,7 @@
     return self.allJournalPosts.count;
 }
 
-- (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
+- (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     static NSString *identifier = @"Cell";
     
     UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:identifier forIndexPath:indexPath];
@@ -111,7 +107,7 @@
     NSString *imageString = iTunes.artworkURL;
     NSURL *imageURL = [NSURL URLWithString:imageString];
     NSData *imageData = [NSData dataWithContentsOfURL:imageURL];
-   // UIImage *image = [UIImage imageWithData:imageData];
+    // UIImage *image = [UIImage imageWithData:imageData];
     
     collectionImageView.image = fileImage;
     
@@ -127,12 +123,11 @@
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
     
     if ([[segue identifier] isEqualToString:@"ViewCompletedEntrySegue"]){
-    NSIndexPath *selectedIndexPath = [self.collectionView indexPathForCell:sender];
-    ViewCompletedEntryViewController *viewController = segue.destinationViewController;
-    JournalPost *thisPost = self.allJournalPosts[selectedIndexPath.row];
-    viewController.journalPostDetail = thisPost;
+        NSIndexPath *selectedIndexPath = [self.collectionView indexPathForCell:sender];
+        ViewCompletedEntryViewController *viewController = segue.destinationViewController;
+        JournalPost *thisPost = self.allJournalPosts[selectedIndexPath.row];
+        viewController.journalPostDetail = thisPost;
     }
-    
 }
 
 @end

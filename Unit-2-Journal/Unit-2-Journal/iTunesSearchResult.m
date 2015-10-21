@@ -16,7 +16,6 @@
 @dynamic addedDate;
 @dynamic mediaType;
 
-
 +(NSString *)parseClassName {
     return @"iTunesSearchResult";
 }

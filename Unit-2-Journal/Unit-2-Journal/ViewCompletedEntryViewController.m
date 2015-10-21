@@ -25,12 +25,12 @@
 @property (weak, nonatomic) IBOutlet UIButton *starFour;
 @property (weak, nonatomic) IBOutlet UIButton *starFive;
 
-
 @end
 
 @implementation ViewCompletedEntryViewController
 
-- (void)viewDidLoad{
+- (void)viewDidLoad {
+    
     [super viewDidLoad];
     
     [self setupFacebookShare];
@@ -42,7 +42,6 @@
     self.completedReviewTextView.backgroundColor = [UIColor blackColor];
     [self.completedReviewTextView setTextColor:[UIColor whiteColor]];
     [self.completedReviewTextView setFont:[UIFont fontWithName:@"Akkurat" size:25]];
-    
     
     NSLog(@"stars: %@", self.journalPostDetail.starRating);
     
@@ -69,7 +68,9 @@
     
     [self setupStars];
 }
+
 - (void) setupFacebookShare {
+    
     FBSDKShareLinkContent *content = [[FBSDKShareLinkContent alloc]init];
     NSString *titleString = [NSString stringWithFormat:@"Check out my review of %@!",self.journalPostDetail.title];
     NSString *descriptionString = [NSString stringWithFormat:@"%@",self.journalPostDetail.postText];
@@ -78,14 +79,13 @@
     content.contentDescription = descriptionString;
     content.imageURL = [NSURL URLWithString:self.journalPostDetail.imageForMedia];
     
-    
     FBSDKShareButton *shareButton = [[FBSDKShareButton alloc]initWithFrame:CGRectMake(0, 0, self.facebookView.frame.size.width, self.facebookView.frame.size.height)];
     shareButton.shareContent = content;
     //shareButton.center = self.view.center;
     
     [self.facebookView addSubview:shareButton];
-    
 }
+
 #pragma mark - stars
 
 - (void)setupStars {
@@ -105,6 +105,7 @@
         [self.starFour setBackgroundImage:[UIImage imageNamed:@"rating_star2.png"] forState:UIControlStateNormal];
         [self.starFive setBackgroundImage:[UIImage imageNamed:@"rating_star2.png"] forState:UIControlStateNormal];
     }
+    
     else if ([self.journalPostDetail.starRating isEqual:@3]) {
         [self.starOne setBackgroundImage:[UIImage imageNamed:@"rating_star_filled2.png"] forState:UIControlStateNormal];
         [self.starTwo setBackgroundImage:[UIImage imageNamed:@"rating_star_filled2.png"] forState:UIControlStateNormal];
@@ -112,6 +113,7 @@
         [self.starFour setBackgroundImage:[UIImage imageNamed:@"rating_star2.png"] forState:UIControlStateNormal];
         [self.starFive setBackgroundImage:[UIImage imageNamed:@"rating_star2.png"] forState:UIControlStateNormal];
     }
+    
     else if ([self.journalPostDetail.starRating isEqual:@4]) {
         [self.starOne setBackgroundImage:[UIImage imageNamed:@"rating_star_filled2.png"] forState:UIControlStateNormal];
         [self.starTwo setBackgroundImage:[UIImage imageNamed:@"rating_star_filled2.png"] forState:UIControlStateNormal];
@@ -119,6 +121,7 @@
         [self.starFour setBackgroundImage:[UIImage imageNamed:@"rating_star_filled2.png"] forState:UIControlStateNormal];
         [self.starFive setBackgroundImage:[UIImage imageNamed:@"rating_star2.png"] forState:UIControlStateNormal];
     }
+    
     else if ([self.journalPostDetail.starRating isEqual:@5]) {
         [self.starOne setBackgroundImage:[UIImage imageNamed:@"rating_star_filled2.png"] forState:UIControlStateNormal];
         [self.starTwo setBackgroundImage:[UIImage imageNamed:@"rating_star_filled2.png"] forState:UIControlStateNormal];
@@ -130,12 +133,11 @@
 
 #pragma mark - delete item
 
-- (IBAction)deleteButtonTapped:(id)sender
-{
+- (IBAction)deleteButtonTapped:(id)sender {
+    
     // delete item from memory and storyboard
     
     [self dismissViewControllerAnimated:YES completion:nil];
 }
-
 
 @end
