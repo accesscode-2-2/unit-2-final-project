@@ -20,6 +20,11 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    
+    
+    self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"cc"]];
+
 //    [self setupNavigationBar];
     self.cityLabel.text = self.city.name;
     self.rateLabel.text = [NSString stringWithFormat:@"%@", self.city.rate];

@@ -38,6 +38,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    
+    
+    
     self.whiteStarBackground = [UIImage imageNamed:@"WhiteStar"];
     self.yellowStarBackground = [UIImage imageNamed:@"YellowStar"];
     self.rateSelected = @1;
@@ -48,6 +51,12 @@
     
     self.city = [NSEntityDescription insertNewObjectForEntityForName:@"City" inManagedObjectContext:delegate.managedObjectContext];
     
+}
+
+-(void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:YES ];
+    self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"cc"]];
+
 }
 
 - (void)setupNavigationBar {

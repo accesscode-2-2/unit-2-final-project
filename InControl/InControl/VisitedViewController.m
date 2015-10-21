@@ -11,6 +11,7 @@
 #import <CoreData/CoreData.h>
 #import "City.h"
 #import "DetailVisitedViewController.h"
+#import "VisitedTableViewCell.h"
 
 @interface VisitedViewController ()
 <
@@ -31,6 +32,17 @@ UITableViewDelegate
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"cc"]];
+    
+    
+    self.navigationController.view.backgroundColor =
+    [UIColor colorWithPatternImage:[UIImage imageNamed:@"cc"]];
+    self.tableView.backgroundColor = [UIColor clearColor];
+
+    
+    
+    
     [self sorting];
     self.tableView.dataSource = self;
     self.tableView.delegate = self;
@@ -96,12 +108,12 @@ UITableViewDelegate
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"VisitedCellIdentifier" forIndexPath:indexPath];
+    VisitedTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"VisitedCellIdentifier" forIndexPath:indexPath];
     
     City *city = self.fetchedResultsController.fetchedObjects[indexPath.row];
-    cell.textLabel.text = city.name;
-    cell.detailTextLabel.text = [NSString stringWithFormat:@"%@", city.rate ];
-    cell.imageView.image = [UIImage imageWithData:city.photo];
+    cell.cityNameLabel.text = city.name;
+    cell.cityRateLabel.text = [NSString stringWithFormat:@"%@", city.rate ];
+    cell.cityImageView.image = [UIImage imageWithData:city.photo];
     
     return cell;
 }

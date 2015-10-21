@@ -64,6 +64,7 @@
 		84CF46B51BD0681800EAA3BF /* FlappyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84CF46B41BD0681800EAA3BF /* FlappyViewController.m */; settings = {ASSET_TAGS = (); }; };
 		84CF46B81BD0683000EAA3BF /* FlappyGame.m in Sources */ = {isa = PBXBuildFile; fileRef = 84CF46B71BD0683000EAA3BF /* FlappyGame.m */; settings = {ASSET_TAGS = (); }; };
 		84E6D4561BD08CCE00ECAE47 /* homeButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 84E6D4551BD08CCE00ECAE47 /* homeButton.png */; settings = {ASSET_TAGS = (); }; };
+		84E6D4D41BD6F93200ECAE47 /* VisitedTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 84E6D4D31BD6F93200ECAE47 /* VisitedTableViewCell.m */; settings = {ASSET_TAGS = (); }; };
 		D9389C3B1BD1E173009A8A15 /* DetailVisitedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D9389C3A1BD1E173009A8A15 /* DetailVisitedViewController.m */; settings = {ASSET_TAGS = (); }; };
 		D9682D5D1BCD4E1600647FD8 /* APIManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D9682D5C1BCD4E1600647FD8 /* APIManager.m */; settings = {ASSET_TAGS = (); }; };
 		D9682D601BCD501700647FD8 /* Venue.m in Sources */ = {isa = PBXBuildFile; fileRef = D9682D5F1BCD501700647FD8 /* Venue.m */; settings = {ASSET_TAGS = (); }; };
@@ -171,6 +172,8 @@
 		84CF46B61BD0683000EAA3BF /* FlappyGame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlappyGame.h; sourceTree = "<group>"; };
 		84CF46B71BD0683000EAA3BF /* FlappyGame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FlappyGame.m; sourceTree = "<group>"; };
 		84E6D4551BD08CCE00ECAE47 /* homeButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = homeButton.png; sourceTree = "<group>"; };
+		84E6D4D21BD6F93200ECAE47 /* VisitedTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VisitedTableViewCell.h; sourceTree = "<group>"; };
+		84E6D4D31BD6F93200ECAE47 /* VisitedTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VisitedTableViewCell.m; sourceTree = "<group>"; };
 		CA12CD6286D3D05E336A1706 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA3CA915C16CD3F8F7FFC788 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		D9389C391BD1E173009A8A15 /* DetailVisitedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailVisitedViewController.h; sourceTree = "<group>"; };
@@ -435,6 +438,8 @@
 				D9389C3A1BD1E173009A8A15 /* DetailVisitedViewController.m */,
 				D9E6A8641BD3F2710092BFA7 /* City+CoreDataProperties.h */,
 				D9E6A8651BD3F2710092BFA7 /* City+CoreDataProperties.m */,
+				84E6D4D21BD6F93200ECAE47 /* VisitedTableViewCell.h */,
+				84E6D4D31BD6F93200ECAE47 /* VisitedTableViewCell.m */,
 				D9E6A8661BD3F2710092BFA7 /* City.h */,
 				D9E6A8671BD3F2710092BFA7 /* City.m */,
 			);
@@ -699,6 +704,7 @@
 				84CF452B1BCAD0EA00EAA3BF /* main.m in Sources */,
 				0BAA7ABC1BD34A4D00CB7443 /* CustomTableViewCell.m in Sources */,
 				0B8208CC1BD5F68100117BE1 /* LatAndLngViewController.m in Sources */,
+				84E6D4D41BD6F93200ECAE47 /* VisitedTableViewCell.m in Sources */,
 				D9682D5D1BCD4E1600647FD8 /* APIManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
