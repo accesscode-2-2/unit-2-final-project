@@ -9,10 +9,12 @@
 #import "MeetupTableViewController.h"
 #import "APIManager.h"
 #import "MeetupTableViewCell.h"
+#import <CoreLocation/CoreLocation.h>
 
 @interface MeetupTableViewController ()
 
 @property (nonatomic) NSMutableArray *meetupData;
+@property (nonatomic) CLLocationCoordinate2D location;
 @end
 
 @implementation MeetupTableViewController
@@ -21,12 +23,12 @@
     [super viewDidLoad];
     self.navigationItem.title = @"Meetup";
 
-    [self makeApPIRequestWithNewTerm:self.city cityName:self.city callbackBlock:^{
+    [self makeApPIRequestWithNewTerm:self.city callbackBlock:^{
         [self.tableView reloadData];
     }];
 }
 
-- (void)makeApPIRequestWithNewTerm:(NSString *)searchTerm cityName:(NSString *)location
+- (void)makeApPIRequestWithNewTerm:(NSString *)searchTerm
                      callbackBlock:(void(^)())block {
     
     NSString *meetupURL = [NSString stringWithFormat:@"https://api.meetup.com/2/groups?lat=51&lon=-0.1&page=20&key=1f5718c16a7fb3a5452f45193232"];
@@ -97,7 +99,11 @@
     cell.descriptionMeetup.text = descriptionMeetup;
     cell.cityAndCountryLabel.text = cityCountry;
     
+    NSLog(@"%@", self.city);
     
+
+    [self getLocationFromAddressString:self.city];
+
     return cell;
 }
 
@@ -108,8 +114,32 @@
 
     
     [[UIApplication sharedApplication]openURL:url];
-    NSLog(@"%@", hyperlinkUrl);
 
+}
+
+-(CLLocationCoordinate2D) getLocationFromAddressString: (NSString*) addressStr {
+    double latitude = 0, longitude = 0;
+    NSString *esc_addr =  [addressStr stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+    NSString *req = [NSString stringWithFormat:@"http://maps.google.com/maps/api/geocode/json?sensor=false&address=%@", esc_addr];
+    NSString *result = [NSString stringWithContentsOfURL:[NSURL URLWithString:req] encoding:NSUTF8StringEncoding error:NULL];
+    
+    NSLog(@"%@", result);
+    if (result) {
+        NSScanner *scanner = [NSScanner scannerWithString:result];
+        if ([scanner scanUpToString:@"\"lat\" :" intoString:nil] && [scanner scanString:@"\"lat\" :" intoString:nil]) {
+            [scanner scanDouble:&latitude];
+            if ([scanner scanUpToString:@"\"lng\" :" intoString:nil] && [scanner scanString:@"\"lng\" :" intoString:nil]) {
+                [scanner scanDouble:&longitude];
+            }
+        }
+    }
+    CLLocationCoordinate2D center;
+    center.latitude=latitude;
+    center.longitude = longitude;
+    NSLog(@"View Controller get Location Logitute : %f",center.latitude);
+    NSLog(@"View Controller get Location Latitute : %f",center.longitude);
+    return center;
+    
 }
 
 /*
