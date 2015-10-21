@@ -18,7 +18,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="lkZ-Uk-HTD">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="old-compass-paper-8272981_720" translatesAutoresizingMaskIntoConstraints="NO" id="lkZ-Uk-HTD">
                                 <rect key="frame" x="0.0" y="64" width="600" height="487"/>
                                 <animations/>
                             </imageView>
@@ -49,7 +49,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="Akt-zk-Ax3">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="lt_antiquepaper_02_720" translatesAutoresizingMaskIntoConstraints="NO" id="Akt-zk-Ax3">
                                 <rect key="frame" x="0.0" y="64" width="600" height="487"/>
                                 <animations/>
                             </imageView>
@@ -75,20 +75,20 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="USL-oF-8rd">
                                         <rect key="frame" x="0.0" y="365" width="600" height="122"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Oh1-N5-RrS">
-                                                <rect key="frame" x="50" y="50" width="105" height="22"/>
+                                            <button opaque="NO" contentMode="scaleAspectFit" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Oh1-N5-RrS">
+                                                <rect key="frame" x="71" y="28" width="64" height="64"/>
                                                 <animations/>
                                                 <fontDescription key="fontDescription" name="Baskerville-SemiBoldItalic" family="Baskerville" pointSize="18"/>
-                                                <state key="normal" title="Take a Photo"/>
+                                                <state key="normal" image="camera-64"/>
                                                 <connections>
                                                     <action selector="takeAphotoButtonTapped:" destination="Mq1-cR-hCZ" eventType="touchUpInside" id="AXb-9W-kDN"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4bR-jp-mcp">
-                                                <rect key="frame" x="463" y="50" width="87" height="22"/>
+                                            <button opaque="NO" contentMode="scaleAspectFit" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4bR-jp-mcp">
+                                                <rect key="frame" x="475" y="29" width="64" height="64"/>
                                                 <animations/>
                                                 <fontDescription key="fontDescription" name="Baskerville-SemiBoldItalic" family="Baskerville" pointSize="18"/>
-                                                <state key="normal" title="New Entry"/>
+                                                <state key="normal" image="add-64"/>
                                                 <connections>
                                                     <action selector="newEntryButtonTapped:" destination="Mq1-cR-hCZ" eventType="touchUpInside" id="MCM-Ui-s0B"/>
                                                     <segue destination="Wh5-Xh-m60" kind="show" identifier="InputEntryIdentifier" id="UVf-WB-kfe"/>
@@ -189,7 +189,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="vlU-19-KFj">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="lt_antiquepaper_02_720" translatesAutoresizingMaskIntoConstraints="NO" id="vlU-19-KFj">
                                 <rect key="frame" x="0.0" y="64" width="600" height="492"/>
                                 <animations/>
                             </imageView>
@@ -323,7 +323,7 @@
             </objects>
             <point key="canvasLocation" x="-420" y="-1724"/>
         </scene>
-        <!--Map Kit View Controller-->
+        <!--Map-->
         <scene sceneID="4ee-vl-iMh">
             <objects>
                 <viewController id="D80-fM-4IR" customClass="MapKitViewController" sceneMemberID="viewController">
@@ -363,7 +363,7 @@
                             <constraint firstItem="HOI-Jf-EQD" firstAttribute="leading" secondItem="HJC-VP-qB4" secondAttribute="leading" id="zeG-GA-XkO"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="" image="globe-48" id="xiw-gW-7Wy"/>
+                    <tabBarItem key="tabBarItem" title="Map" image="globe-48" id="xiw-gW-7Wy"/>
                     <connections>
                         <outlet property="mapView" destination="HOI-Jf-EQD" id="Dmj-ed-hBV"/>
                         <outlet property="pinLocationButton" destination="Cdn-m0-1ui" id="14g-vd-4UC"/>
@@ -406,7 +406,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="Upw-2v-UIn">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="lt_antiquepaper_02_720" translatesAutoresizingMaskIntoConstraints="NO" id="Upw-2v-UIn">
                                 <rect key="frame" x="0.0" y="-778" width="600" height="1334"/>
                                 <animations/>
                             </imageView>
@@ -514,11 +514,11 @@
             </objects>
             <point key="canvasLocation" x="458" y="-1225"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Meet Up-->
         <scene sceneID="rSb-yN-8am">
             <objects>
                 <navigationController id="Ocm-A1-ZYO" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="" image="info-48" id="JaF-My-9cb"/>
+                    <tabBarItem key="tabBarItem" title="Meet Up" image="info-48" id="JaF-My-9cb"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="t49-Vh-CIv">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -546,7 +546,7 @@
                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
                             <inset key="sectionInset" minX="0.0" minY="50" maxX="0.0" maxY="10"/>
                         </collectionViewFlowLayout>
-                        <imageView key="backgroundView" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" id="dTW-Il-ID1">
+                        <imageView key="backgroundView" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="old-compass-paper-8272981_720" id="dTW-Il-ID1">
                             <rect key="frame" x="0.0" y="-64" width="600" height="600"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <animations/>
@@ -671,7 +671,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="2WU-4Q-XKX">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="old-compass-paper-8272981_720" translatesAutoresizingMaskIntoConstraints="NO" id="2WU-4Q-XKX">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <animations/>
                             </imageView>
@@ -729,11 +729,11 @@
             </objects>
             <point key="canvasLocation" x="-420" y="-134"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Entries-->
         <scene sceneID="1nG-ie-RNT">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="QEc-ro-KiD" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="" image="folder-48" id="wEn-Lp-9sy"/>
+                    <tabBarItem key="tabBarItem" title="Entries" image="folder-48" id="wEn-Lp-9sy"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="AUS-D4-5vS">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -749,11 +749,11 @@
             </objects>
             <point key="canvasLocation" x="-1855" y="-981"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--New Entry-->
         <scene sceneID="pd6-Qq-iXu">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="dsq-wH-rHT" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="" image="note-48" id="lCs-gJ-nBi"/>
+                    <tabBarItem key="tabBarItem" title="New Entry" image="note-48" id="lCs-gJ-nBi"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="HcQ-oG-AEm">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -771,11 +771,14 @@
         </scene>
     </scenes>
     <resources>
-        <image name="background" width="1280" height="1334"/>
+        <image name="add-64" width="64" height="64"/>
+        <image name="camera-64" width="64" height="64"/>
         <image name="folder-48" width="24" height="24"/>
         <image name="globe-48" width="24" height="24"/>
         <image name="info-48" width="24" height="24"/>
+        <image name="lt_antiquepaper_02_720" width="720" height="480"/>
         <image name="note-48" width="24" height="24"/>
+        <image name="old-compass-paper-8272981_720" width="673" height="720"/>
         <image name="pin" width="512" height="411"/>
     </resources>
     <inferredMetricsTieBreakers>
