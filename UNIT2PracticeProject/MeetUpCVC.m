@@ -166,7 +166,7 @@ static NSString * const reuseIdentifier = @"Cell";
     
     [cell.layer setCornerRadius:25.0f];
     [cell.layer setBorderWidth:5.0f];
-    [cell.layer setBorderColor:[UIColor whiteColor].CGColor];
+    [cell.layer setBorderColor:[UIColor blackColor].CGColor];
     
     return cell;
 }
