@@ -52,7 +52,7 @@
                           URLWithString:@"https://www.facebook.com/FacebookDevelopers"];
     FBSDKShareButton *shareButton = [[FBSDKShareButton alloc] init];
     shareButton.shareContent = content;
-    shareButton.accessibilityFrame = topLeft;
+   // shareButton.accessibilityFrame = topLeft;
     [self.view addSubview:shareButton];
     
     

@@ -323,7 +323,7 @@
             </objects>
             <point key="canvasLocation" x="-420" y="-1724"/>
         </scene>
-        <!--Map-->
+        <!--Map Kit View Controller-->
         <scene sceneID="4ee-vl-iMh">
             <objects>
                 <viewController id="D80-fM-4IR" customClass="MapKitViewController" sceneMemberID="viewController">
@@ -363,7 +363,7 @@
                             <constraint firstItem="HOI-Jf-EQD" firstAttribute="leading" secondItem="HJC-VP-qB4" secondAttribute="leading" id="zeG-GA-XkO"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Map" id="xiw-gW-7Wy"/>
+                    <tabBarItem key="tabBarItem" title="" image="globe-48" id="xiw-gW-7Wy"/>
                     <connections>
                         <outlet property="mapView" destination="HOI-Jf-EQD" id="Dmj-ed-hBV"/>
                         <outlet property="pinLocationButton" destination="Cdn-m0-1ui" id="14g-vd-4UC"/>
@@ -514,11 +514,11 @@
             </objects>
             <point key="canvasLocation" x="458" y="-1225"/>
         </scene>
-        <!--Meet Up-->
+        <!--Navigation Controller-->
         <scene sceneID="rSb-yN-8am">
             <objects>
                 <navigationController id="Ocm-A1-ZYO" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Meet Up" id="JaF-My-9cb"/>
+                    <tabBarItem key="tabBarItem" title="" image="info-48" id="JaF-My-9cb"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="t49-Vh-CIv">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -729,11 +729,11 @@
             </objects>
             <point key="canvasLocation" x="-420" y="-134"/>
         </scene>
-        <!--Entries-->
+        <!--Navigation Controller-->
         <scene sceneID="1nG-ie-RNT">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="QEc-ro-KiD" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Entries" id="wEn-Lp-9sy"/>
+                    <tabBarItem key="tabBarItem" title="" image="folder-48" id="wEn-Lp-9sy"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="AUS-D4-5vS">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -749,11 +749,11 @@
             </objects>
             <point key="canvasLocation" x="-1855" y="-981"/>
         </scene>
-        <!--New Entry-->
+        <!--Navigation Controller-->
         <scene sceneID="pd6-Qq-iXu">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="dsq-wH-rHT" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="New Entry" id="lCs-gJ-nBi"/>
+                    <tabBarItem key="tabBarItem" title="" image="note-48" id="lCs-gJ-nBi"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="HcQ-oG-AEm">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -772,10 +772,14 @@
     </scenes>
     <resources>
         <image name="background" width="1280" height="1334"/>
+        <image name="folder-48" width="24" height="24"/>
+        <image name="globe-48" width="24" height="24"/>
+        <image name="info-48" width="24" height="24"/>
+        <image name="note-48" width="24" height="24"/>
         <image name="pin" width="512" height="411"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="KkO-2B-E5k"/>
+        <segue reference="qqX-aw-kHI"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
 </document>
