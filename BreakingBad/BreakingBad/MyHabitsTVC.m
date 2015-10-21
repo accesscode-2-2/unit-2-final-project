@@ -29,6 +29,15 @@
     [super viewDidLoad];
     
     self.navigationItem.title = @"My Habits";
+    NSDictionary *titleAttributes =@{
+                                  NSFontAttributeName :[UIFont fontWithName:@"Bariol" size:25.0],
+                                  NSForegroundColorAttributeName : [SharedManager sharedModel].brownForest,
+                                  //NSBackgroundColorAttributeName : [SharedManager sharedModel].tropicalDream
+                                  
+                                  };
+
+    self.navigationController.navigationBar.titleTextAttributes = titleAttributes;
+    
     
     [self addColorMyHabits];
 }

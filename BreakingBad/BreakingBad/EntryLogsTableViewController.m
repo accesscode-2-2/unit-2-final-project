@@ -51,7 +51,7 @@
 
 #pragma mark- Add Color
 -(void)addColorEntryLog {
-    self.entryTableView.backgroundColor = [SharedManager sharedModel].blueSky;
+    self.entryTableView.backgroundColor = [SharedManager sharedModel].tropicalDream;
 }
 
 
@@ -89,10 +89,16 @@
     cell.locationLabel.text = entry.location;
     
     cell.entryDateLabel.text = dateString;
-    cell.backgroundColor = [SharedManager sharedModel].tropicalDream;
-    cell.textLabel.textColor = [SharedManager sharedModel].brownForest;
-    cell.textLabel.font = [UIFont fontWithName:@"Bariol" size:22.0];
+    cell.backgroundColor = [SharedManager sharedModel].blueSky;
+    cell.tempInfoLabel.textColor = [SharedManager sharedModel].brickRed;
+    cell.tempInfoLabel.font = [UIFont fontWithName:@"Bariol" size:22.0];
     
+    cell.locationLabel.textColor = [SharedManager sharedModel].brickRed;
+    cell.locationLabel.font = [UIFont fontWithName:@"Bariol" size:22.0];
+    
+    cell.entryDateLabel.textColor = [SharedManager sharedModel].brownForest;
+    cell.entryDateLabel.font = [UIFont fontWithName:@"Bariol" size:22.0];
+  
     return cell;
 }
 

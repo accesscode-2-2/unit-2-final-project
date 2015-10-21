@@ -265,12 +265,13 @@ CLLocationManagerDelegate
                         @"Info",
                         @"Save"];
     
-    self.menuIcons = @[[UIImage imageNamed:@"cancel"],
-                       [UIImage imageNamed:@"my_habits"],
-                       [UIImage imageNamed:@"check_progress"],
-                       [UIImage imageNamed:@"goals"],
-                       [UIImage imageNamed:@"info"],
-                       [UIImage imageNamed:@"save"]];
+    
+    self.menuIcons = @[[UIImage imageNamed:@"cancel1"],
+                       [UIImage imageNamed:@"my_habits1"],
+                       [UIImage imageNamed:@"check_progress1"],
+                       [UIImage imageNamed:@"goals1"],
+                       [UIImage imageNamed:@"info1"],
+                       [UIImage imageNamed:@"save1"]];
 }
 
 #pragma mark
@@ -432,7 +433,10 @@ CLLocationManagerDelegate
     
     if (cell) {
         cell.backgroundColor = [UIColor clearColor];
+                                //[SharedManager sharedModel].blueSky;
         cell.menuTitleLabel.text = [self.menuTitles objectAtIndex:indexPath.row];
+        cell.menuTitleLabel.font = [UIFont fontWithName:@"Oranienbaum" size:22.0];
+        cell.menuTitleLabel.textColor = [SharedManager sharedModel].brickRed;
         cell.menuTitleImage.image = [self.menuIcons objectAtIndex:indexPath.row];
         cell.viewHoldingImageView.backgroundColor =  [SharedManager sharedModel].tropicalDream;
     }
