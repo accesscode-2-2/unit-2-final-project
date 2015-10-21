@@ -30,7 +30,7 @@
     self.budgetView.hidden = YES;
     
     UIGraphicsBeginImageContext(self.view.frame.size);
-    [[UIImage imageNamed:@"back"] drawInRect:self.view.bounds];
+    [[UIImage imageNamed:@"newBackOk"] drawInRect:self.view.bounds];
     UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
     UIGraphicsEndImageContext();
     
