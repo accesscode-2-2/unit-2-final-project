@@ -242,7 +242,7 @@
                             </label>
                         </subviews>
                         <animations/>
-                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                         <constraints>
                             <constraint firstItem="qLr-OV-7JA" firstAttribute="centerX" secondItem="qWh-Hz-BDE" secondAttribute="centerX" id="els-Ct-0Lj"/>
                             <constraint firstItem="qLr-OV-7JA" firstAttribute="centerY" secondItem="qWh-Hz-BDE" secondAttribute="centerY" id="iFg-8y-wzh"/>
