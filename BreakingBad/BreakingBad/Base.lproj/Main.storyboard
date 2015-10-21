@@ -10,15 +10,6 @@
             <string>Avenir-Light</string>
             <string>Avenir-Light</string>
         </mutableArray>
-        <mutableArray key="Bariol_Regular.otf">
-            <string>Bariol-Regular</string>
-            <string>Bariol-Regular</string>
-            <string>Bariol-Regular</string>
-            <string>Bariol-Regular</string>
-            <string>Bariol-Regular</string>
-            <string>Bariol-Regular</string>
-            <string>Bariol-Regular</string>
-        </mutableArray>
         <mutableArray key="Jaapokkisubtract-Regular.otf">
             <string>Jaapokkisubtract-Regular</string>
             <string>Jaapokkisubtract-Regular</string>
@@ -33,6 +24,15 @@
             <string>Oranienbaum</string>
             <string>Oranienbaum</string>
             <string>Oranienbaum</string>
+        </mutableArray>
+        <mutableArray key="bariol_regular-webfont.ttf">
+            <string>Bariol-Regular</string>
+            <string>Bariol-Regular</string>
+            <string>Bariol-Regular</string>
+            <string>Bariol-Regular</string>
+            <string>Bariol-Regular</string>
+            <string>Bariol-Regular</string>
+            <string>Bariol-Regular</string>
         </mutableArray>
     </customFonts>
     <scenes>
@@ -1320,7 +1320,7 @@
                                             <rect key="frame" x="15" y="0.0" width="570" height="127"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>

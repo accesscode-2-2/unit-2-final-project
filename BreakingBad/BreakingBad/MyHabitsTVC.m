@@ -8,7 +8,6 @@
 
 #import "MyHabitsTVC.h"
 #import "Habit.h"
-#import "FetchWeatherData.h"
 #import "EntryLogsTableViewController.h"
 #import <Parse/Parse.h>
 #import <AFNetworking/AFNetworking.h>

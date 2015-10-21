@@ -13,6 +13,7 @@
 #import "EntryLogsTableViewCell.h"
 #import <AFNetworking/AFNetworking.h>
 #import "SharedManager.h"
+#import "NSDate+TimeAgo.h"
 
 
 
@@ -83,12 +84,14 @@
     
     Entry *entry = self.habit.entries[indexPath.row];
     self.entryCreationDate = entry.createdAt;
-    NSString *dateString = [self dateStringFromDate:entry.createdAt];
+    NSLog(@"Output for date is: %@",[entry.createdAt timeAgo]);
+    NSString *dateString = [entry.createdAt timeAgo];
     
     cell.tempInfoLabel.text = entry.temperature;
     cell.locationLabel.text = entry.location;
     
     cell.entryDateLabel.text = dateString;
+    
     cell.backgroundColor = [SharedManager sharedModel].blueSky;
     cell.tempInfoLabel.textColor = [SharedManager sharedModel].brickRed;
     cell.tempInfoLabel.font = [UIFont fontWithName:@"Bariol" size:22.0];
@@ -122,51 +125,6 @@
     [self.navigationController pushViewController:mainPageVC animated:YES];
 }
 
-//- (void)fetchWeatherData{
-//
-//    for(int i=0; i < self.urlStringsArray.count; i++){
-//        AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
-//        if(!self.temps){
-//            self.temps = [NSMutableArray new];
-//        }
-//        NSLog(@"%@",self.urlStringsArray);
-//
-//        [manager GET:self.urlStringsArray[0] parameters:nil success:^(AFHTTPRequestOperation * _Nonnull operation, id  _Nonnull responseObject) {
-//
-//            NSDictionary *data = responseObject[@"data"];
-//            NSArray *weatherData = data[@"weather"];
-//            NSLog(@"%@", weatherData);
-//            self.data = weatherData;
-//
-//            NSDictionary *dict = self.data[0];
-//            NSArray *hourlyDataArray = dict[@"hourly"];
-//            NSDictionary *hourlyDataDictionary = hourlyDataArray[0];
-//            NSString *tempF = hourlyDataDictionary[@"tempF"];
-//            // NSString *tempC = hourlyDataDictionary[@"tempC"];
-//
-//            [self.temps addObject:tempF];
-//            [self.tableView reloadData];
-//        } failure:^(AFHTTPRequestOperation * _Nonnull operation, NSError * _Nonnull error) {
-//            NSLog(@"Error: %@", error.localizedDescription);
-//        }];
-//    }
-//}
-
-//-(NSArray<NSString *> *)urlStringsArray{
-//    NSArray *array = [self arrayWithFormattedDateStrings];
-//    NSLog(@"Date Strings in array%@",array);
-//
-//    NSMutableArray *urlStringsArray = [NSMutableArray new];
-//
-//    for(NSString *string in array){
-//
-//        NSString *urlString = [NSString stringWithFormat:@"https://api.worldweatheronline.com/free/v2/past-weather.ashx?q=22%%2C22&format=json&date=%@&tp=24&key=%@",string,WEATHERAPIKEY];
-//        [urlStringsArray addObject:urlString];
-//    }
-//    return urlStringsArray;
-//
-//}
-
 -(NSString *)formattedDateStringForAPI:(NSDate *)date{
     
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
@@ -185,8 +143,5 @@
     }
     return dateStrings;
 }
-
-
-
 
 @end
