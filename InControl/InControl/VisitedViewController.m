@@ -12,6 +12,8 @@
 #import "City.h"
 #import "DetailVisitedViewController.h"
 #import "VisitedTableViewCell.h"
+#import "Photo.h"
+#import "Photo+CoreDataProperties.h"
 
 @interface VisitedViewController ()
 <
@@ -113,7 +115,13 @@ UITableViewDelegate
     City *city = self.fetchedResultsController.fetchedObjects[indexPath.row];
     cell.cityNameLabel.text = city.name;
     cell.cityRateLabel.text = [NSString stringWithFormat:@"%@", city.rate ];
-    cell.cityImageView.image = [UIImage imageWithData:city.photo];
+    
+    if (city.photos.count > 0) {
+        cell.cityImageView.image = [UIImage imageWithData:[city.photos[0] imageData]];
+    } else {
+        NSLog(@"No photo!");
+    }
+    
     
     return cell;
 }

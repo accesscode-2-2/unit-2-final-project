@@ -75,8 +75,11 @@
 		D9682D631BCD665200647FD8 /* HotelViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D9682D621BCD665200647FD8 /* HotelViewController.m */; settings = {ASSET_TAGS = (); }; };
 		D9682D661BCD671000647FD8 /* FoodViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D9682D651BCD671000647FD8 /* FoodViewController.m */; settings = {ASSET_TAGS = (); }; };
 		D9682E681BD1DD9C00647FD8 /* AddVisitedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D9682E671BD1DD9C00647FD8 /* AddVisitedViewController.m */; settings = {ASSET_TAGS = (); }; };
-		D9E6A8681BD3F2710092BFA7 /* City+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = D9E6A8651BD3F2710092BFA7 /* City+CoreDataProperties.m */; settings = {ASSET_TAGS = (); }; };
-		D9E6A8691BD3F2710092BFA7 /* City.m in Sources */ = {isa = PBXBuildFile; fileRef = D9E6A8671BD3F2710092BFA7 /* City.m */; settings = {ASSET_TAGS = (); }; };
+		D9CF57E01BD86CA6001B24F9 /* City+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = D9CF57D91BD86CA6001B24F9 /* City+CoreDataProperties.m */; settings = {ASSET_TAGS = (); }; };
+		D9CF57E11BD86CA6001B24F9 /* City.m in Sources */ = {isa = PBXBuildFile; fileRef = D9CF57DB1BD86CA6001B24F9 /* City.m */; settings = {ASSET_TAGS = (); }; };
+		D9CF57E21BD86CA6001B24F9 /* Photo+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = D9CF57DD1BD86CA6001B24F9 /* Photo+CoreDataProperties.m */; settings = {ASSET_TAGS = (); }; };
+		D9CF57E31BD86CA6001B24F9 /* Photo.m in Sources */ = {isa = PBXBuildFile; fileRef = D9CF57DF1BD86CA6001B24F9 /* Photo.m */; settings = {ASSET_TAGS = (); }; };
+		D9CF57E61BD877E3001B24F9 /* PhotoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D9CF57E51BD877E3001B24F9 /* PhotoCell.m */; settings = {ASSET_TAGS = (); }; };
 		D9E6A86C1BD43BCC0092BFA7 /* FoursquareAPIManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D9E6A86B1BD43BCC0092BFA7 /* FoursquareAPIManager.m */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
@@ -198,10 +201,16 @@
 		D9682D651BCD671000647FD8 /* FoodViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FoodViewController.m; sourceTree = "<group>"; };
 		D9682E661BD1DD9C00647FD8 /* AddVisitedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddVisitedViewController.h; sourceTree = "<group>"; };
 		D9682E671BD1DD9C00647FD8 /* AddVisitedViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddVisitedViewController.m; sourceTree = "<group>"; };
-		D9E6A8641BD3F2710092BFA7 /* City+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "City+CoreDataProperties.h"; sourceTree = "<group>"; };
-		D9E6A8651BD3F2710092BFA7 /* City+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "City+CoreDataProperties.m"; sourceTree = "<group>"; };
-		D9E6A8661BD3F2710092BFA7 /* City.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = City.h; sourceTree = "<group>"; };
-		D9E6A8671BD3F2710092BFA7 /* City.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = City.m; sourceTree = "<group>"; };
+		D9CF57D81BD86CA6001B24F9 /* City+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "City+CoreDataProperties.h"; sourceTree = "<group>"; };
+		D9CF57D91BD86CA6001B24F9 /* City+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "City+CoreDataProperties.m"; sourceTree = "<group>"; };
+		D9CF57DA1BD86CA6001B24F9 /* City.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = City.h; sourceTree = "<group>"; };
+		D9CF57DB1BD86CA6001B24F9 /* City.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = City.m; sourceTree = "<group>"; };
+		D9CF57DC1BD86CA6001B24F9 /* Photo+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Photo+CoreDataProperties.h"; sourceTree = "<group>"; };
+		D9CF57DD1BD86CA6001B24F9 /* Photo+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Photo+CoreDataProperties.m"; sourceTree = "<group>"; };
+		D9CF57DE1BD86CA6001B24F9 /* Photo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Photo.h; sourceTree = "<group>"; };
+		D9CF57DF1BD86CA6001B24F9 /* Photo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Photo.m; sourceTree = "<group>"; };
+		D9CF57E41BD877E3001B24F9 /* PhotoCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoCell.h; sourceTree = "<group>"; };
+		D9CF57E51BD877E3001B24F9 /* PhotoCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoCell.m; sourceTree = "<group>"; };
 		D9E6A86A1BD43BCC0092BFA7 /* FoursquareAPIManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FoursquareAPIManager.h; sourceTree = "<group>"; };
 		D9E6A86B1BD43BCC0092BFA7 /* FoursquareAPIManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FoursquareAPIManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -442,16 +451,22 @@
 			children = (
 				84CF46641BCE2B4600EAA3BF /* VisitedViewController.h */,
 				84CF46651BCE2B4600EAA3BF /* VisitedViewController.m */,
+				D9CF57D81BD86CA6001B24F9 /* City+CoreDataProperties.h */,
+				D9CF57D91BD86CA6001B24F9 /* City+CoreDataProperties.m */,
+				D9CF57DA1BD86CA6001B24F9 /* City.h */,
+				D9CF57DB1BD86CA6001B24F9 /* City.m */,
+				D9CF57DC1BD86CA6001B24F9 /* Photo+CoreDataProperties.h */,
+				D9CF57DD1BD86CA6001B24F9 /* Photo+CoreDataProperties.m */,
+				D9CF57DE1BD86CA6001B24F9 /* Photo.h */,
+				D9CF57DF1BD86CA6001B24F9 /* Photo.m */,
 				D9682E661BD1DD9C00647FD8 /* AddVisitedViewController.h */,
 				D9682E671BD1DD9C00647FD8 /* AddVisitedViewController.m */,
 				D9389C391BD1E173009A8A15 /* DetailVisitedViewController.h */,
 				D9389C3A1BD1E173009A8A15 /* DetailVisitedViewController.m */,
-				D9E6A8641BD3F2710092BFA7 /* City+CoreDataProperties.h */,
-				D9E6A8651BD3F2710092BFA7 /* City+CoreDataProperties.m */,
+				D9CF57E41BD877E3001B24F9 /* PhotoCell.h */,
+				D9CF57E51BD877E3001B24F9 /* PhotoCell.m */,
 				84E6D4D21BD6F93200ECAE47 /* VisitedTableViewCell.h */,
 				84E6D4D31BD6F93200ECAE47 /* VisitedTableViewCell.m */,
-				D9E6A8661BD3F2710092BFA7 /* City.h */,
-				D9E6A8671BD3F2710092BFA7 /* City.m */,
 			);
 			name = Visited;
 			sourceTree = "<group>";
@@ -705,6 +720,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D9CF57E31BD86CA6001B24F9 /* Photo.m in Sources */,
+				D9CF57E11BD86CA6001B24F9 /* City.m in Sources */,
 				84CF45CB1BCC51C200EAA3BF /* VideoViewController.m in Sources */,
 				D9682E681BD1DD9C00647FD8 /* AddVisitedViewController.m in Sources */,
 				84CF45311BCAD0EA00EAA3BF /* ViewController.m in Sources */,
@@ -715,22 +732,20 @@
 				D9389C3B1BD1E173009A8A15 /* DetailVisitedViewController.m in Sources */,
 				D9E6A86C1BD43BCC0092BFA7 /* FoursquareAPIManager.m in Sources */,
 				84CF46661BCE2B4600EAA3BF /* VisitedViewController.m in Sources */,
-				D9E6A8681BD3F2710092BFA7 /* City+CoreDataProperties.m in Sources */,
 				84CF46B81BD0683000EAA3BF /* FlappyGame.m in Sources */,
 				84CF45CE1BCD8F7200EAA3BF /* Youtube.m in Sources */,
 				D9682D661BCD671000647FD8 /* FoodViewController.m in Sources */,
 				84E6D4E11BD86D0800ECAE47 /* InstagramPostTableViewCell.m in Sources */,
 				84CF45371BCAD0EB00EAA3BF /* InControl.xcdatamodeld in Sources */,
 				84CF45B61BCB057600EAA3BF /* WelcomeViewController.m in Sources */,
+				D9CF57E01BD86CA6001B24F9 /* City+CoreDataProperties.m in Sources */,
 				84CF46621BCE29DB00EAA3BF /* GamesViewController.m in Sources */,
-				D9E6A8691BD3F2710092BFA7 /* City.m in Sources */,
 				84CF46B51BD0681800EAA3BF /* FlappyViewController.m in Sources */,
 				0B8208931BD43A5B00117BE1 /* MeetupTableViewController.m in Sources */,
 				0B8208961BD43CC500117BE1 /* MeetupTableViewCell.m in Sources */,
-				84E6D4DE1BD86CFB00ECAE47 /* InstagramPost.m in Sources */,
-				84E6D4E61BD872D700ECAE47 /* InstaTableViewController.m in Sources */,
 				D9682D601BCD501700647FD8 /* Venue.m in Sources */,
 				84CF452B1BCAD0EA00EAA3BF /* main.m in Sources */,
+				D9CF57E61BD877E3001B24F9 /* PhotoCell.m in Sources */,
 				0BAA7ABC1BD34A4D00CB7443 /* CustomTableViewCell.m in Sources */,
 				84E6D4D41BD6F93200ECAE47 /* VisitedTableViewCell.m in Sources */,
 				D9682D5D1BCD4E1600647FD8 /* APIManager.m in Sources */,

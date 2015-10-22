@@ -10,6 +10,8 @@
 #import "AppDelegate.h"
 #import "City.h"
 #import "AddVisitedViewController.h"
+#import "Photo.h"
+#import "Photo+CoreDataProperties.h"
 
 @interface AddVisitedViewController ()
 @property (weak, nonatomic) IBOutlet UITextField *cityTextField;
@@ -29,7 +31,11 @@
 @property (nonatomic) UIImagePickerController *picker2;
 @property (nonatomic) UIImage *image;
 
-@property (nonatomic) City *city;
+//@property (nonatomic) City *city;
+
+@property (nonatomic) NSMutableArray *photos;
+
+@property (nonatomic) Photo *photo;
 
 @end
 
@@ -38,8 +44,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    
-    
+    if (!self.photos) {
+        self.photos = [NSMutableArray new];
+    }
     
     self.whiteStarBackground = [UIImage imageNamed:@"WhiteStar"];
     self.yellowStarBackground = [UIImage imageNamed:@"YellowStar"];
@@ -83,7 +90,9 @@
     
     self.city.impression = self.impressionTextField.text;
     
-    self.city.photo = UIImagePNGRepresentation(self.imageView.image);
+    self.city.photos = [NSOrderedSet orderedSetWithArray:self.photos];
+    
+ //   self.city.photo = UIImagePNGRepresentation(self.imageView.image);
     
     AppDelegate *delegate = [UIApplication sharedApplication].delegate;
     [delegate.managedObjectContext save:nil];
@@ -110,8 +119,16 @@
 }
 
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info{
+    
+    AppDelegate *delegate = [UIApplication sharedApplication].delegate;
+    Photo *newPhoto = [NSEntityDescription insertNewObjectForEntityForName:@"Photo" inManagedObjectContext:delegate.managedObjectContext];
+    
+    
     self.image = [info objectForKey:UIImagePickerControllerOriginalImage];
     [self.imageView setImage:self.image];
+    newPhoto.imageData = UIImagePNGRepresentation (self.image);
+    [self.photos addObject:newPhoto];
+    
     [self dismissViewControllerAnimated:YES completion:NULL];
 }
 

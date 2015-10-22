@@ -1404,14 +1404,6 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Mk9-wx-zen">
-                                <rect key="frame" x="175" y="203" width="250" height="250"/>
-                                <animations/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="250" id="QyA-du-bOS"/>
-                                    <constraint firstAttribute="width" constant="250" id="Ueb-E8-uyI"/>
-                                </constraints>
-                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Axd-TS-O6t">
                                 <rect key="frame" x="30" y="30" width="50" height="50"/>
                                 <animations/>
@@ -1435,6 +1427,41 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="60v-6M-kti">
+                                <rect key="frame" x="0.0" y="191" width="600" height="409"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="tci-eT-R7d">
+                                    <size key="itemSize" width="371" height="388"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Cell" id="Ktt-pJ-6xW" customClass="PhotoCell">
+                                        <rect key="frame" x="0.0" y="11" width="371" height="388"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="371" height="388"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Mk9-wx-zen">
+                                                    <rect key="frame" x="8" y="8" width="355" height="372"/>
+                                                    <animations/>
+                                                </imageView>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstItem="Mk9-wx-zen" firstAttribute="leading" secondItem="Ktt-pJ-6xW" secondAttribute="leadingMargin" id="9GI-k5-XZa"/>
+                                            <constraint firstAttribute="bottomMargin" secondItem="Mk9-wx-zen" secondAttribute="bottom" id="J6L-or-0ud"/>
+                                            <constraint firstItem="Mk9-wx-zen" firstAttribute="top" secondItem="Ktt-pJ-6xW" secondAttribute="topMargin" id="Vaj-lP-duW"/>
+                                            <constraint firstAttribute="trailingMargin" secondItem="Mk9-wx-zen" secondAttribute="trailing" id="VhE-pY-gj0"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="imageView" destination="Mk9-wx-zen" id="YHs-fz-u0u"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -1444,16 +1471,12 @@
                             <constraint firstItem="Jfo-wS-4mr" firstAttribute="leading" secondItem="ZtM-Ao-AII" secondAttribute="leadingMargin" constant="80" id="6GM-bv-70J"/>
                             <constraint firstItem="Axd-TS-O6t" firstAttribute="leading" secondItem="ZtM-Ao-AII" secondAttribute="leadingMargin" constant="10" id="BbH-4m-6Fn"/>
                             <constraint firstItem="Axd-TS-O6t" firstAttribute="top" secondItem="ZtM-Ao-AII" secondAttribute="topMargin" constant="30" id="CuN-ef-p8D"/>
-                            <constraint firstItem="Mk9-wx-zen" firstAttribute="centerX" secondItem="ZtM-Ao-AII" secondAttribute="centerX" id="DJ1-UE-YYj"/>
                             <constraint firstItem="Yan-ZO-mnZ" firstAttribute="trailing" secondItem="Ipw-Ze-JiQ" secondAttribute="trailing" id="Rab-Vf-JFk"/>
-                            <constraint firstItem="Mk9-wx-zen" firstAttribute="top" secondItem="sGZ-ZA-APg" secondAttribute="bottom" constant="20" id="SAl-xm-p5J"/>
                             <constraint firstItem="Axd-TS-O6t" firstAttribute="top" secondItem="FlO-oV-umQ" secondAttribute="bottom" id="Ssm-ta-fm4"/>
                             <constraint firstItem="Ipw-Ze-JiQ" firstAttribute="trailing" secondItem="Jfo-wS-4mr" secondAttribute="trailing" id="WqN-cT-oB8"/>
                             <constraint firstItem="Jfo-wS-4mr" firstAttribute="top" secondItem="FlO-oV-umQ" secondAttribute="bottom" constant="70" id="cdH-0D-0qI"/>
                             <constraint firstItem="KoC-ZF-B1n" firstAttribute="leading" secondItem="Ipw-Ze-JiQ" secondAttribute="trailing" constant="10" id="dyr-a5-1G8"/>
                             <constraint firstItem="Ipw-Ze-JiQ" firstAttribute="top" secondItem="Jfo-wS-4mr" secondAttribute="bottom" constant="20" id="gOq-SQ-8ix"/>
-                            <constraint firstItem="Mk9-wx-zen" firstAttribute="centerX" secondItem="ZtM-Ao-AII" secondAttribute="centerX" id="iig-p8-EEv"/>
-                            <constraint firstItem="Mk9-wx-zen" firstAttribute="centerY" secondItem="ZtM-Ao-AII" secondAttribute="centerY" constant="100" id="nm4-6x-Xqv"/>
                             <constraint firstItem="sGZ-ZA-APg" firstAttribute="leading" secondItem="Yan-ZO-mnZ" secondAttribute="trailing" constant="10" id="sEL-C0-kCT"/>
                             <constraint firstItem="Yan-ZO-mnZ" firstAttribute="top" secondItem="Ipw-Ze-JiQ" secondAttribute="bottom" constant="10" id="sdc-VU-bBx"/>
                             <constraint firstItem="Axd-TS-O6t" firstAttribute="leading" secondItem="ZtM-Ao-AII" secondAttribute="leadingMargin" constant="6" id="ujI-1A-9hT"/>
@@ -1464,15 +1487,13 @@
                             <mask key="constraints">
                                 <exclude reference="Ssm-ta-fm4"/>
                                 <exclude reference="ujI-1A-9hT"/>
-                                <exclude reference="DJ1-UE-YYj"/>
-                                <exclude reference="nm4-6x-Xqv"/>
                             </mask>
                         </variation>
                     </view>
                     <navigationItem key="navigationItem" id="ss0-U8-YLG"/>
                     <connections>
                         <outlet property="cityLabel" destination="Ol7-n6-Vg7" id="33q-OU-rNd"/>
-                        <outlet property="imageView" destination="Mk9-wx-zen" id="b56-dL-ccV"/>
+                        <outlet property="collectionView" destination="60v-6M-kti" id="Fty-wQ-CfW"/>
                         <outlet property="impressionLabel" destination="sGZ-ZA-APg" id="TK6-1m-yMp"/>
                         <outlet property="rateLabel" destination="KoC-ZF-B1n" id="e40-nd-jDQ"/>
                     </connections>
