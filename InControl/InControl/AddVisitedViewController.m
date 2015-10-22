@@ -13,7 +13,7 @@
 #import "Photo.h"
 #import "Photo+CoreDataProperties.h"
 
-@interface AddVisitedViewController ()
+@interface AddVisitedViewController () <UITextFieldDelegate>
 @property (weak, nonatomic) IBOutlet UITextField *cityTextField;
 @property (weak, nonatomic) IBOutlet UITextField *impressionTextField;
 @property (weak, nonatomic) IBOutlet UIImageView *imageView;
@@ -81,12 +81,14 @@
 
 - (void)save {
     self.city.name = self.cityTextField.text;
+    [self.cityTextField resignFirstResponder];
     
     NSNumberFormatter *f = [[NSNumberFormatter alloc] init];
     f.numberStyle = NSNumberFormatterDecimalStyle;
     self.city.rate = self.rateSelected;
     
     self.city.impression = self.impressionTextField.text;
+    [self.impressionTextField resignFirstResponder];
     
     self.city.photos = [NSOrderedSet orderedSetWithArray:self.photos];
     

@@ -606,6 +606,7 @@
 				TargetAttributes = {
 					84CF45251BCAD0EA00EAA3BF = {
 						CreatedOnToolsVersion = 7.0;
+						DevelopmentTeam = 85VFEKU7M5;
 					};
 					84CF45411BCAD0EB00EAA3BF = {
 						CreatedOnToolsVersion = 7.0;
@@ -903,10 +904,13 @@
 			baseConfigurationReference = 4B5D5618892B20D168B80EB1 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = InControl/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = nyc.c4q.dianaelezaj.InControl;
+				PRODUCT_BUNDLE_IDENTIFIER = nyc.c4q.xiulanshi.InControl;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -915,10 +919,13 @@
 			baseConfigurationReference = CA3CA915C16CD3F8F7FFC788 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = InControl/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = nyc.c4q.dianaelezaj.InControl;
+				PRODUCT_BUNDLE_IDENTIFIER = nyc.c4q.xiulanshi.InControl;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};

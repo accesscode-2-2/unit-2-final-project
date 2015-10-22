@@ -14,7 +14,7 @@
 #import "MeetupTableViewController.h"
 #import "InstaTableViewController.h"
 
-@interface ViewController ()
+@interface ViewController () <UISearchBarDelegate>
 
 @property (weak, nonatomic) IBOutlet UIButton *goButton;
 @property (weak, nonatomic) IBOutlet UIView *budgetView;
@@ -113,6 +113,7 @@
     if (index == 0) { //search Bar
         
         self.searchBar.hidden = NO;
+        [self.searchBar resignFirstResponder];
         self.goButton.hidden = NO;
         [sidebar dismissAnimated:YES completion:nil];
         
