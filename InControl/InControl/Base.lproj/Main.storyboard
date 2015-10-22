@@ -959,7 +959,6 @@
                                 <segue destination="BYZ-38-t0r" kind="presentation" modalTransitionStyle="crossDissolve" id="ofM-AI-3BJ"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" image="settings" id="gRQ-HR-Atp"/>
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                 </tableViewController>
@@ -2280,12 +2279,11 @@
         <image name="flappyPlayButton" width="400" height="400"/>
         <image name="goButton" width="512" height="512"/>
         <image name="homeButton.png" width="2084" height="1580"/>
-        <image name="settings" width="21" height="22"/>
         <image name="takePhoto" width="512" height="512"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="uy4-x5-2D8"/>
         <segue reference="ofM-AI-3BJ"/>
         <segue reference="pU7-Mv-mbd"/>
+        <segue reference="uy4-x5-2D8"/>
     </inferredMetricsTieBreakers>
 </document>
