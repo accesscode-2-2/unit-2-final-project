@@ -517,17 +517,17 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DWN-3U-CrL">
-                                        <rect key="frame" x="138" y="79" width="442" height="21"/>
+                                        <rect key="frame" x="138" y="79" width="442" height="20.5"/>
                                         <animations/>
                                         <fontDescription key="fontDescription" name="Akkurat-Bold" family="Akkurat" pointSize="17"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QXz-a4-RR1">
-                                        <rect key="frame" x="549" y="15" width="36" height="30"/>
+                                        <rect key="frame" x="530" y="15" width="55" height="30"/>
                                         <animations/>
                                         <fontDescription key="fontDescription" name="Akkurat" family="Akkurat" pointSize="15"/>
-                                        <state key="normal" title="Done">
+                                        <state key="normal" title="Dismiss">
                                             <color key="titleColor" red="0.97254901960784312" green="0.5490196078431373" blue="0.062745098039215685" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
                                         <connections>
@@ -726,7 +726,7 @@
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" lineBreakMode="wordWrap" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f6q-RS-lgS">
-                                        <rect key="frame" x="128" y="82" width="412" height="21"/>
+                                        <rect key="frame" x="128" y="82" width="412" height="20.5"/>
                                         <animations/>
                                         <fontDescription key="fontDescription" name="Akkurat" family="Akkurat" pointSize="17"/>
                                         <color key="textColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
@@ -740,10 +740,10 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oCt-vd-4RS">
-                                        <rect key="frame" x="502" y="0.0" width="50" height="30"/>
+                                        <rect key="frame" x="483" y="0.0" width="69" height="30"/>
                                         <animations/>
                                         <fontDescription key="fontDescription" name="Akkurat" family="Akkurat" pointSize="15"/>
-                                        <state key="normal" title="  Done  ">
+                                        <state key="normal" title="  Dismiss  ">
                                             <color key="titleColor" red="0.98580998180000001" green="0.62003214620000002" blue="0.067037612610000005" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
                                         <connections>
