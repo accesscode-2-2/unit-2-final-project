@@ -30,7 +30,7 @@
                                 </connections>
                             </button>
                             <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="ssM-UF-cY3">
-                                <rect key="frame" x="43" y="159" width="450" height="44"/>
+                                <rect key="frame" x="43" y="132" width="458" height="44"/>
                                 <animations/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="plY-g1-kVh"/>
@@ -38,19 +38,19 @@
                                 <textInputTraits key="textInputTraits"/>
                             </searchBar>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z2X-Ic-XBN">
-                                <rect key="frame" x="516" y="136" width="30" height="30"/>
+                                <rect key="frame" x="506" y="134" width="40" height="40"/>
                                 <animations/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="30" id="75n-uS-shO"/>
-                                    <constraint firstAttribute="height" constant="30" id="uI6-Iv-dzd"/>
+                                    <constraint firstAttribute="width" constant="40" id="75n-uS-shO"/>
+                                    <constraint firstAttribute="height" constant="40" id="uI6-Iv-dzd"/>
                                 </constraints>
-                                <state key="normal" title="GO"/>
+                                <state key="normal" backgroundImage="goButton"/>
                                 <connections>
                                     <action selector="goButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VcA-P7-Py1"/>
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JLQ-ub-OJf" userLabel="budgetView">
-                                <rect key="frame" x="163" y="220" width="274" height="254"/>
+                                <rect key="frame" x="163" y="193" width="274" height="254"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EAm-Uj-RRI">
                                         <rect key="frame" x="0.0" y="67" width="274" height="121"/>
@@ -124,18 +124,24 @@
                         <animations/>
                         <color key="backgroundColor" red="0.86440472898230092" green="0.86440472898230092" blue="0.86440472898230092" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="ssM-UF-cY3" firstAttribute="top" secondItem="5c2-eB-x2F" secondAttribute="bottom" constant="67" id="3C7-GZ-jiB"/>
-                            <constraint firstItem="Z2X-Ic-XBN" firstAttribute="leading" secondItem="ssM-UF-cY3" secondAttribute="trailing" constant="23" id="4QW-lu-7om"/>
+                            <constraint firstItem="ssM-UF-cY3" firstAttribute="top" secondItem="5c2-eB-x2F" secondAttribute="bottom" constant="40" id="3C7-GZ-jiB"/>
+                            <constraint firstItem="Z2X-Ic-XBN" firstAttribute="leading" secondItem="ssM-UF-cY3" secondAttribute="trailing" constant="5" id="4QW-lu-7om"/>
                             <constraint firstItem="ssM-UF-cY3" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="23" id="61g-m3-rzI"/>
                             <constraint firstItem="iUh-7n-btN" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="30" id="BY3-sb-6y0"/>
                             <constraint firstItem="5c2-eB-x2F" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="Fgf-n6-bK6"/>
                             <constraint firstItem="JLQ-ub-OJf" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Lvy-JC-BuY"/>
                             <constraint firstItem="JLQ-ub-OJf" firstAttribute="top" secondItem="ssM-UF-cY3" secondAttribute="bottom" constant="17" id="PPg-nm-XfA"/>
+                            <constraint firstItem="Z2X-Ic-XBN" firstAttribute="centerY" secondItem="ssM-UF-cY3" secondAttribute="centerY" id="W4n-FR-STA"/>
                             <constraint firstItem="5c2-eB-x2F" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="30" id="hqL-DW-gRj"/>
                             <constraint firstItem="Z2X-Ic-XBN" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="116" id="iQZ-Q8-Cs5"/>
                             <constraint firstAttribute="trailingMargin" secondItem="iUh-7n-btN" secondAttribute="trailing" constant="10" id="lel-c1-smU"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Z2X-Ic-XBN" secondAttribute="trailing" constant="34" id="rZa-OA-NI8"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="iQZ-Q8-Cs5"/>
+                            </mask>
+                        </variation>
                     </view>
                     <navigationItem key="navigationItem" id="F2z-nJ-DFm"/>
                     <connections>
@@ -1686,6 +1692,7 @@
         <image name="flappyIcon" width="256" height="256"/>
         <image name="flappyName" width="453" height="250"/>
         <image name="flappyPlayButton" width="400" height="400"/>
+        <image name="goButton" width="512" height="512"/>
         <image name="homeButton.png" width="2084" height="1580"/>
         <image name="settings" width="21" height="22"/>
         <image name="takePhoto" width="512" height="512"/>
