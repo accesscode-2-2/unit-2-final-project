@@ -12,6 +12,7 @@
 #import "ImageTableViewController.h"
 #import "VideoViewController.h"
 #import "MeetupTableViewController.h"
+#import "InstaTableViewController.h"
 
 @interface ViewController ()
 
@@ -190,8 +191,8 @@
         }
         else {
             
-            VideoViewController * vc = [self.storyboard instantiateViewControllerWithIdentifier:@"InstaID"];
-            vc.city = self.searchBar.text;
+            InstaTableViewController * vc = [self.storyboard instantiateViewControllerWithIdentifier:@"InstaID"];
+            vc.placeName = self.searchBar.text;
             
             [self presentViewController:vc animated:YES completion:nil];
             

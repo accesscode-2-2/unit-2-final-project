@@ -302,14 +302,14 @@
         <!--Root View Controller-->
         <scene sceneID="LVS-Yo-2YO">
             <objects>
-                <tableViewController storyboardIdentifier="InstaID" id="cUN-ba-i5G" customClass="DetailsTableViewController" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="InstaID" id="cUN-ba-i5G" customClass="InstaTableViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="3Gs-Nh-ZfB">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="InstagramCellIdentifier" id="1Zq-eX-NWX">
-                                <rect key="frame" x="0.0" y="92" width="600" height="44"/>
+                                <rect key="frame" x="0.0" y="28" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="1Zq-eX-NWX" id="ikR-Az-QT6">
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
@@ -327,22 +327,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SyL-9B-Cl3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1110" y="2241"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="ysA-8H-rzR">
-            <objects>
-                <navigationController id="pLu-qC-dQ4" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="BEq-KN-0lz">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <connections>
-                        <segue destination="cUN-ba-i5G" kind="relationship" relationship="rootViewController" id="y23-Zv-E9w"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ze1-7B-2mk" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="292" y="2241"/>
         </scene>
         <!--Lat And Lng View Controller-->
         <scene sceneID="X8Y-LV-T8h">

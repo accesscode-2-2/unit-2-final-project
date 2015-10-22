@@ -1,12 +1,12 @@
 //
-//  DetailsTableViewController.m
-//  TalkinToTheNet
+//  InstaTableViewController.m
+//  InControl
 //
-//  Created by Diana Elezaj on 9/26/15.
-//  Copyright © 2015 Mike Kavouras. All rights reserved.
+//  Created by Diana Elezaj on 10/21/15.
+//  Copyright © 2015 Diana Elezaj. All rights reserved.
 //
 
-#import "DetailsTableViewController.h"
+#import "InstaTableViewController.h"
 #import <AFNetworking/AFNetworking.h>
 #import <SDWebImage/UIImageView+WebCache.h>
 #import "APIManager.h"
@@ -14,12 +14,13 @@
 #import "InstagramPostTableViewCell.h"
 
 
-@interface DetailsTableViewController ()
+
+@interface InstaTableViewController ()
 @property (nonatomic) NSMutableArray *detailsResults;
 
 @end
 
-@implementation DetailsTableViewController
+@implementation InstaTableViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -53,18 +54,20 @@
     
     
 }
-- (IBAction)refreshTapped:(id)sender {
-    [self fetchInstagramData];
-}
+//- (IBAction)refreshTapped:(id)sender {
+//    [self fetchInstagramData];
+//}
 
 
 - (void)fetchInstagramData {
- 
     
-     // create an instagram url
-    NSString *urlString = [NSString stringWithFormat:@"https://api.instagram.com/v1/tags/%@/media/recent?client_id=a2c55d5958864f32a2b1af4f8b01c8db", self.placeName];
     
-
+    //     // create an instagram url
+    //    NSString *urlString = [NSString stringWithFormat:@"https://api.instagram.com/v1/tags/%@/media/recent?client_id=a2c55d5958864f32a2b1af4f8b01c8db", self.placeName];
+    // create an instagram url
+    NSString *urlString = [NSString stringWithFormat:@"https://api.instagram.com/v1/tags/paris/media/recent?client_id=a2c55d5958864f32a2b1af4f8b01c8db"];
+    
+    
     
     
     
@@ -109,7 +112,7 @@
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
- }
+}
 
 #pragma mark - Table view data source
 
@@ -125,7 +128,7 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-     return 1;
+    return 1;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -160,3 +163,4 @@
 
 
 @end
+
