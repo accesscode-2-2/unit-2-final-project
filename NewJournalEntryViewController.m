@@ -73,7 +73,7 @@
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info {
     
     
-//   UIImage *chosenImage = info[UIImagePickerControllerEditedImage];
+    //   UIImage *chosenImage = info[UIImagePickerControllerEditedImage];
     
     self.capturedPicImageView.image = info[UIImagePickerControllerEditedImage];
     
@@ -81,7 +81,7 @@
     
     //[[PhotoAlbum sharedPhotoAlbum].photoEntries addObject:chosenImage];
     UIImageWriteToSavedPhotosAlbum(self.capturedPicImageView.image, nil, nil, nil);
-
+    
     
     [picker dismissViewControllerAnimated:YES completion:NULL];
     
@@ -97,11 +97,12 @@
     //[[PhotoAlbum sharedPhotoAlbum].photoEntries addObject:chosenImage];
     
     UIImageWriteToSavedPhotosAlbum(image, nil, nil, nil);
-
+    
     [picker dismissViewControllerAnimated:YES completion:NULL];
     
-
+    
 }
+
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
     
