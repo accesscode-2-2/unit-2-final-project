@@ -11,6 +11,7 @@
 @interface MeetupTableViewController : UITableViewController
 
 @property (nonatomic) NSString *city;
-
+@property (nonatomic) NSInteger cityLng;
+@property (nonatomic) NSInteger cityLat;
 
 @end

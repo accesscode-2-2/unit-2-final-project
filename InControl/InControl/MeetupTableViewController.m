@@ -10,11 +10,17 @@
 #import "APIManager.h"
 #import "MeetupTableViewCell.h"
 #import <CoreLocation/CoreLocation.h>
+#import "FoursquareAPIManager.h"
+
+
 
 @interface MeetupTableViewController ()
 
 @property (nonatomic) NSMutableArray *meetupData;
 @property (nonatomic) CLLocationCoordinate2D location;
+@property (nonatomic) NSMutableArray *searchResults;
+@property (nonatomic) NSString *lat;
+@property (nonatomic) NSString *lng;
 @end
 
 @implementation MeetupTableViewController
@@ -23,18 +29,61 @@
     [super viewDidLoad];
     self.navigationItem.title = @"Meetup";
 
-    [self makeApPIRequestWithNewTerm:self.city callbackBlock:^{
-        [self.tableView reloadData];
-    }];
+     [self fetchFoursquareVenues];
 }
+
+
+
+
+- (void)fetchFoursquareVenues {
+    
+    
+    [FoursquareAPIManager fetchResultsWithSearchTerm:@"food" location:self.city callbackBlock:^(id json){
+        
+        NSArray *results = json[@"response"][@"venues"];
+        
+        self.searchResults =[[NSMutableArray alloc] init];
+        
+        for (NSDictionary *result in results) {
+            
+            self.lat = result[@"location"][@"lat"];
+            self.lng = result[@"location"][@"lng"];
+            
+            
+        }
+        
+        
+        NSLog(@"lat %@", self.lat);
+        NSLog(@"lng %@", self.lng);
+        
+        self.cityLat = [self.lat integerValue];
+        NSLog(@"convertedCityyyyy %ld", (long)self.cityLat);
+        
+        self.cityLng = [self.lng integerValue];
+        NSLog(@"convertedCityyyyy %ld", (long)self.cityLng);
+        
+        
+        
+        [self makeApPIRequestWithNewTerm:self.city callbackBlock:^{
+            [self.tableView reloadData];
+        }];
+        
+        
+    }];
+    
+    
+}
+
 
 - (void)makeApPIRequestWithNewTerm:(NSString *)searchTerm
                      callbackBlock:(void(^)())block {
     NSLog(@"cityyyyyyyy meetup %@", self.city);
     
     
+    NSString *meetupURL = [NSString stringWithFormat:@"https://api.meetup.com/2/groups?lat=%ld&lon=%ld&page=20&key=1f5718c16a7fb3a5452f45193232",(long)self.cityLat, (long)self.cityLng];
     
-    NSString *meetupURL = [NSString stringWithFormat:@"https://api.meetup.com/2/groups?lat=51&lon=-0.1&page=20&key=1f5718c16a7fb3a5452f45193232"];
+    
+    
     
 //    NSString *meetupURL = [NSString stringWithFormat:@"https://api.meetup.com/find/groups?city=%@&page=200&offset=1&key=1f5718c16a7fb3a5452f45193232",self.city];
     
