@@ -31,8 +31,6 @@
 @property (nonatomic) UIImagePickerController *picker2;
 @property (nonatomic) UIImage *image;
 
-//@property (nonatomic) City *city;
-
 @property (nonatomic) NSMutableArray *photos;
 
 @property (nonatomic) Photo *photo;
@@ -91,8 +89,6 @@
     self.city.impression = self.impressionTextField.text;
     
     self.city.photos = [NSOrderedSet orderedSetWithArray:self.photos];
-    
- //   self.city.photo = UIImagePNGRepresentation(self.imageView.image);
     
     AppDelegate *delegate = [UIApplication sharedApplication].delegate;
     [delegate.managedObjectContext save:nil];
