@@ -147,7 +147,7 @@
     
     //identifier: moveFromWishToJournalEntry
     
-    if ([[segue identifier] isEqualToString:@"ViewCompletedEntrySegue"]) {
+    if ([[segue identifier] isEqualToString:@"moveFromWishToJournalEntry"]) {
         NSIndexPath *selectedIndexPath = [self.tableView indexPathForCell:sender];
         WatchedWishListViewController *viewController = segue.destinationViewController;
         JournalPost *thisPost = self.allJournalPosts[selectedIndexPath.row];
