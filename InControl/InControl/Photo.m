@@ -1,15 +1,15 @@
 //
-//  City.m
+//  Photo.m
 //  InControl
 //
 //  Created by Xiulan Shi on 10/21/15.
 //  Copyright © 2015 Diana Elezaj. All rights reserved.
 //
 
-#import "City.h"
 #import "Photo.h"
+#import "City.h"
 
-@implementation City
+@implementation Photo
 
 // Insert code here to add functionality to your managed object subclass
 

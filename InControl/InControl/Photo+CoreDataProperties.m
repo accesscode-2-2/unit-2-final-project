@@ -1,5 +1,5 @@
 //
-//  City+CoreDataProperties.m
+//  Photo+CoreDataProperties.m
 //  InControl
 //
 //  Created by Xiulan Shi on 10/21/15.
@@ -9,14 +9,12 @@
 //  to delete and recreate this implementation file for your updated model.
 //
 
-#import "City+CoreDataProperties.h"
+#import "Photo+CoreDataProperties.h"
 
-@implementation City (CoreDataProperties)
+@implementation Photo (CoreDataProperties)
 
-@dynamic impression;
-@dynamic name;
-@dynamic rate;
+@dynamic imageData;
 @dynamic createdAt;
-@dynamic photos;
+@dynamic city;
 
 @end
