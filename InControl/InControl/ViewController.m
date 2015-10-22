@@ -184,6 +184,21 @@
             }];
         }
     }
+    if (index == 6) { //insta
+        if ([self.searchBar.text isEqualToString:@""]) {
+            [self EmptySearchBarAlert];
+        }
+        else {
+            
+            VideoViewController * vc = [self.storyboard instantiateViewControllerWithIdentifier:@"InstaID"];
+            vc.city = self.searchBar.text;
+            
+            [self presentViewController:vc animated:YES completion:nil];
+            
+            [sidebar dismissAnimated:YES completion:^(BOOL finished) {
+            }];
+        }
+    }
     if (index == 7) { //meetup
         if ([self.searchBar.text isEqualToString:@""]) {
             [self EmptySearchBarAlert];
@@ -225,6 +240,9 @@
     self.budgetView.hidden=YES;
     [self ShowMenu];
 }
+
+
+
 
 - (void)sidebar:(RNFrostedSidebar *)sidebar didEnable:(BOOL)itemEnabled itemAtIndex:(NSUInteger)index {
     if (itemEnabled) {

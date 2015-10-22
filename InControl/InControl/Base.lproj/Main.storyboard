@@ -225,7 +225,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="v3v-Xl-LF2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2334" y="2158"/>
+            <point key="canvasLocation" x="1102" y="1474"/>
         </scene>
         <!--Root View Controller-->
         <scene sceneID="ZND-Ok-Rth">
@@ -280,7 +280,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QxR-gz-6lt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1102" y="2198"/>
+            <point key="canvasLocation" x="1102" y="498"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="SQd-xx-Pna">
@@ -297,7 +297,52 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Rwx-Gi-81r" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="198" y="2198"/>
+            <point key="canvasLocation" x="198" y="498"/>
+        </scene>
+        <!--Root View Controller-->
+        <scene sceneID="LVS-Yo-2YO">
+            <objects>
+                <tableViewController storyboardIdentifier="InstaID" id="cUN-ba-i5G" customClass="DetailsTableViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="3Gs-Nh-ZfB">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="InstagramCellIdentifier" id="1Zq-eX-NWX">
+                                <rect key="frame" x="0.0" y="92" width="600" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="1Zq-eX-NWX" id="ikR-Az-QT6">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="cUN-ba-i5G" id="GDB-Nn-7JQ"/>
+                            <outlet property="delegate" destination="cUN-ba-i5G" id="GCE-4H-eO3"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Root View Controller" id="ul7-h1-5dO"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SyL-9B-Cl3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1110" y="2241"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="ysA-8H-rzR">
+            <objects>
+                <navigationController id="pLu-qC-dQ4" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="BEq-KN-0lz">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="cUN-ba-i5G" kind="relationship" relationship="rootViewController" id="y23-Zv-E9w"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ze1-7B-2mk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="292" y="2241"/>
         </scene>
         <!--Lat And Lng View Controller-->
         <scene sceneID="X8Y-LV-T8h">
@@ -386,7 +431,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OGT-Ew-vEh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="384" y="243"/>
+            <point key="canvasLocation" x="366" y="3012"/>
         </scene>
         <!--Hotel View Controller-->
         <scene sceneID="alR-2g-khq">
@@ -466,7 +511,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4tY-aX-Igq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1102" y="194"/>
+            <point key="canvasLocation" x="1102" y="-426"/>
         </scene>
         <!--Food View Controller-->
         <scene sceneID="8l4-nh-Ktd">
@@ -546,7 +591,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3BH-oi-CrG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1102" y="-586"/>
+            <point key="canvasLocation" x="1102" y="-1130"/>
         </scene>
         <!--Welcome View Controller-->
         <scene sceneID="r1B-xf-me1">
@@ -865,11 +910,11 @@
                         <variation key="default">
                             <mask key="constraints">
                                 <exclude reference="Vz0-mI-gfu"/>
+                                <exclude reference="jkx-Wa-kHQ"/>
+                                <exclude reference="usb-MB-Vre"/>
                                 <exclude reference="65U-49-eBK"/>
                                 <exclude reference="Ypl-Sb-pL6"/>
                                 <exclude reference="qT8-SM-64s"/>
-                                <exclude reference="jkx-Wa-kHQ"/>
-                                <exclude reference="usb-MB-Vre"/>
                                 <exclude reference="Kia-Nb-E6q"/>
                                 <exclude reference="rlj-dc-rnI"/>
                                 <exclude reference="9PN-dt-mw4"/>
@@ -996,7 +1041,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="n55-lj-qYh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1102" y="1200"/>
+            <point key="canvasLocation" x="2014" y="3012"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="SA9-13-fpl">
@@ -1013,7 +1058,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fWr-dU-Eaj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="198" y="1200"/>
+            <point key="canvasLocation" x="1110" y="3012"/>
         </scene>
         <!--Flappy View Controller-->
         <scene sceneID="lyX-HQ-82D">
@@ -1635,8 +1680,8 @@
         <image name="takePhoto" width="512" height="512"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="uy4-x5-2D8"/>
-        <segue reference="1Vs-ur-H6P"/>
+        <segue reference="ofM-AI-3BJ"/>
         <segue reference="pU7-Mv-mbd"/>
+        <segue reference="uy4-x5-2D8"/>
     </inferredMetricsTieBreakers>
 </document>

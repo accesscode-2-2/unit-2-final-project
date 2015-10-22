@@ -65,6 +65,10 @@
 		84CF46B81BD0683000EAA3BF /* FlappyGame.m in Sources */ = {isa = PBXBuildFile; fileRef = 84CF46B71BD0683000EAA3BF /* FlappyGame.m */; settings = {ASSET_TAGS = (); }; };
 		84E6D4561BD08CCE00ECAE47 /* homeButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 84E6D4551BD08CCE00ECAE47 /* homeButton.png */; settings = {ASSET_TAGS = (); }; };
 		84E6D4D41BD6F93200ECAE47 /* VisitedTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 84E6D4D31BD6F93200ECAE47 /* VisitedTableViewCell.m */; settings = {ASSET_TAGS = (); }; };
+		84E6D4DD1BD86CFB00ECAE47 /* DetailsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84E6D4DA1BD86CFB00ECAE47 /* DetailsTableViewController.m */; settings = {ASSET_TAGS = (); }; };
+		84E6D4DE1BD86CFB00ECAE47 /* InstagramPost.m in Sources */ = {isa = PBXBuildFile; fileRef = 84E6D4DC1BD86CFB00ECAE47 /* InstagramPost.m */; settings = {ASSET_TAGS = (); }; };
+		84E6D4E11BD86D0800ECAE47 /* InstagramPostTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 84E6D4E01BD86D0800ECAE47 /* InstagramPostTableViewCell.m */; settings = {ASSET_TAGS = (); }; };
+		84E6D4E31BD86D7400ECAE47 /* InstagramPostTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84E6D4E21BD86D7400ECAE47 /* InstagramPostTableViewCell.xib */; settings = {ASSET_TAGS = (); }; };
 		D9389C3B1BD1E173009A8A15 /* DetailVisitedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D9389C3A1BD1E173009A8A15 /* DetailVisitedViewController.m */; settings = {ASSET_TAGS = (); }; };
 		D9682D5D1BCD4E1600647FD8 /* APIManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D9682D5C1BCD4E1600647FD8 /* APIManager.m */; settings = {ASSET_TAGS = (); }; };
 		D9682D601BCD501700647FD8 /* Venue.m in Sources */ = {isa = PBXBuildFile; fileRef = D9682D5F1BCD501700647FD8 /* Venue.m */; settings = {ASSET_TAGS = (); }; };
@@ -173,6 +177,13 @@
 		84E6D4551BD08CCE00ECAE47 /* homeButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = homeButton.png; sourceTree = "<group>"; };
 		84E6D4D21BD6F93200ECAE47 /* VisitedTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VisitedTableViewCell.h; sourceTree = "<group>"; };
 		84E6D4D31BD6F93200ECAE47 /* VisitedTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VisitedTableViewCell.m; sourceTree = "<group>"; };
+		84E6D4D91BD86CFB00ECAE47 /* DetailsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailsTableViewController.h; sourceTree = "<group>"; };
+		84E6D4DA1BD86CFB00ECAE47 /* DetailsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailsTableViewController.m; sourceTree = "<group>"; };
+		84E6D4DB1BD86CFB00ECAE47 /* InstagramPost.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InstagramPost.h; sourceTree = "<group>"; };
+		84E6D4DC1BD86CFB00ECAE47 /* InstagramPost.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InstagramPost.m; sourceTree = "<group>"; };
+		84E6D4DF1BD86D0800ECAE47 /* InstagramPostTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InstagramPostTableViewCell.h; sourceTree = "<group>"; };
+		84E6D4E01BD86D0800ECAE47 /* InstagramPostTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InstagramPostTableViewCell.m; sourceTree = "<group>"; };
+		84E6D4E21BD86D7400ECAE47 /* InstagramPostTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InstagramPostTableViewCell.xib; sourceTree = "<group>"; };
 		CA12CD6286D3D05E336A1706 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA3CA915C16CD3F8F7FFC788 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		D9389C391BD1E173009A8A15 /* DetailVisitedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailVisitedViewController.h; sourceTree = "<group>"; };
@@ -278,6 +289,7 @@
 				84CF452D1BCAD0EA00EAA3BF /* AppDelegate.m */,
 				D9682D5B1BCD4E1600647FD8 /* APIManager.h */,
 				D9682D5C1BCD4E1600647FD8 /* APIManager.m */,
+				84E6D4D81BD8687000ECAE47 /* Insta */,
 				D9E6A86D1BD44C5E0092BFA7 /* Foursquare */,
 				84CF45C11BCB4F0300EAA3BF /* NewTrip */,
 				84CF45C81BCC519800EAA3BF /* Video */,
@@ -455,6 +467,20 @@
 			name = FlappyBird;
 			sourceTree = "<group>";
 		};
+		84E6D4D81BD8687000ECAE47 /* Insta */ = {
+			isa = PBXGroup;
+			children = (
+				84E6D4D91BD86CFB00ECAE47 /* DetailsTableViewController.h */,
+				84E6D4DA1BD86CFB00ECAE47 /* DetailsTableViewController.m */,
+				84E6D4E21BD86D7400ECAE47 /* InstagramPostTableViewCell.xib */,
+				84E6D4DF1BD86D0800ECAE47 /* InstagramPostTableViewCell.h */,
+				84E6D4E01BD86D0800ECAE47 /* InstagramPostTableViewCell.m */,
+				84E6D4DB1BD86CFB00ECAE47 /* InstagramPost.h */,
+				84E6D4DC1BD86CFB00ECAE47 /* InstagramPost.m */,
+			);
+			name = Insta;
+			sourceTree = "<group>";
+		};
 		B2BC0F9C4153A1759E333F8D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -600,6 +626,7 @@
 				84CF46AE1BD0678700EAA3BF /* Tunnel.png in Resources */,
 				84CF457D1BCAD16400EAA3BF /* gear@2x.png in Resources */,
 				84CF45391BCAD0EB00EAA3BF /* Assets.xcassets in Resources */,
+				84E6D4E31BD86D7400ECAE47 /* InstagramPostTableViewCell.xib in Resources */,
 				84CF46AF1BD0678700EAA3BF /* GameBack.png in Resources */,
 				84CF46B01BD0678700EAA3BF /* BirdUp.png in Resources */,
 				84CF45861BCAD2AE00EAA3BF /* Profile_image.png in Resources */,
@@ -692,6 +719,7 @@
 				84CF46B81BD0683000EAA3BF /* FlappyGame.m in Sources */,
 				84CF45CE1BCD8F7200EAA3BF /* Youtube.m in Sources */,
 				D9682D661BCD671000647FD8 /* FoodViewController.m in Sources */,
+				84E6D4E11BD86D0800ECAE47 /* InstagramPostTableViewCell.m in Sources */,
 				84CF45371BCAD0EB00EAA3BF /* InControl.xcdatamodeld in Sources */,
 				84CF45B61BCB057600EAA3BF /* WelcomeViewController.m in Sources */,
 				84CF46621BCE29DB00EAA3BF /* GamesViewController.m in Sources */,
@@ -699,9 +727,11 @@
 				84CF46B51BD0681800EAA3BF /* FlappyViewController.m in Sources */,
 				0B8208931BD43A5B00117BE1 /* MeetupTableViewController.m in Sources */,
 				0B8208961BD43CC500117BE1 /* MeetupTableViewCell.m in Sources */,
+				84E6D4DE1BD86CFB00ECAE47 /* InstagramPost.m in Sources */,
 				D9682D601BCD501700647FD8 /* Venue.m in Sources */,
 				84CF452B1BCAD0EA00EAA3BF /* main.m in Sources */,
 				0BAA7ABC1BD34A4D00CB7443 /* CustomTableViewCell.m in Sources */,
+				84E6D4DD1BD86CFB00ECAE47 /* DetailsTableViewController.m in Sources */,
 				84E6D4D41BD6F93200ECAE47 /* VisitedTableViewCell.m in Sources */,
 				D9682D5D1BCD4E1600647FD8 /* APIManager.m in Sources */,
 			);
