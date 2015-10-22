@@ -141,15 +141,26 @@
     [self.navigationController pushViewController:detailViewController animated:YES];
 }
 
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    if (editingStyle == UITableViewCellEditingStyleDelete)
-    {
+
+- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    if (editingStyle == UITableViewCellEditingStyleDelete) {
+        
+        // Delete cell from Parse
+        PFQuery *object = [self.allJournalPosts objectAtIndex:indexPath.row];
+        [object delete:nil];
+        
+        // then remove the reference from the table view
         [self.allJournalPosts removeObjectAtIndex:indexPath.row];
         // Delete the row from the data source
         [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
+        
+        // reload table view with new data
+        [self.tableView reloadData];
+        
     }
 }
+         
 #pragma mark - segue
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
