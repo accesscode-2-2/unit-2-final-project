@@ -10,6 +10,6 @@
 
 @interface InstaTableViewController : UITableViewController
 @property (nonatomic) NSMutableArray *searchResults;
-@property (nonatomic) NSString *placeName;
+@property (nonatomic) NSString *city;
 
 @end

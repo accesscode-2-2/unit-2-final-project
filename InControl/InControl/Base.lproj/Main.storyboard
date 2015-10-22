@@ -299,20 +299,36 @@
             </objects>
             <point key="canvasLocation" x="198" y="498"/>
         </scene>
-        <!--Root View Controller-->
+        <!--Navigation Controller-->
+        <scene sceneID="00o-Fr-A0R">
+            <objects>
+                <navigationController id="7KQ-L0-vC7" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="ARH-Y9-YfB">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="cUN-ba-i5G" kind="relationship" relationship="rootViewController" id="A8O-LR-gxD"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kTt-YD-bCS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="381" y="2241"/>
+        </scene>
+        <!--InstaTableViewController-->
         <scene sceneID="LVS-Yo-2YO">
             <objects>
-                <tableViewController storyboardIdentifier="InstaID" id="cUN-ba-i5G" customClass="InstaTableViewController" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="3Gs-Nh-ZfB">
+                <tableViewController storyboardIdentifier="InstaID" id="cUN-ba-i5G" userLabel="InstaTableViewController" customClass="InstaTableViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="15" sectionHeaderHeight="28" sectionFooterHeight="28" id="3Gs-Nh-ZfB">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="InstagramCellIdentifier" id="1Zq-eX-NWX">
-                                <rect key="frame" x="0.0" y="28" width="600" height="44"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="InstagramCellIdentifier" rowHeight="15" id="1Zq-eX-NWX">
+                                <rect key="frame" x="0.0" y="92" width="600" height="15"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="1Zq-eX-NWX" id="ikR-Az-QT6">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="14"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
@@ -322,7 +338,18 @@
                             <outlet property="delegate" destination="cUN-ba-i5G" id="GCE-4H-eO3"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="ul7-h1-5dO"/>
+                    <navigationItem key="navigationItem" title="Root View Controller" id="ul7-h1-5dO">
+                        <barButtonItem key="leftBarButtonItem" image="backButtonSmall" id="oYK-fz-8xp">
+                            <connections>
+                                <segue destination="BYZ-38-t0r" kind="presentation" modalTransitionStyle="crossDissolve" id="cKy-Jj-8HY"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="refresh" id="x6Y-ve-CbE">
+                            <connections>
+                                <action selector="refreshTapped:" destination="cUN-ba-i5G" id="JTa-li-io9"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SyL-9B-Cl3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1664,8 +1691,8 @@
         <image name="takePhoto" width="512" height="512"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="ofM-AI-3BJ"/>
-        <segue reference="pU7-Mv-mbd"/>
         <segue reference="uy4-x5-2D8"/>
+        <segue reference="cKy-Jj-8HY"/>
+        <segue reference="pU7-Mv-mbd"/>
     </inferredMetricsTieBreakers>
 </document>

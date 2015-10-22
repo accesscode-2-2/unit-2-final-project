@@ -177,6 +177,7 @@
         else {
             
             VideoViewController * vc = [self.storyboard instantiateViewControllerWithIdentifier:@"VideoID"];
+           
             vc.city = self.searchBar.text;
             
             [self presentViewController:vc animated:YES completion:nil];
@@ -192,9 +193,10 @@
         else {
             
             InstaTableViewController * vc = [self.storyboard instantiateViewControllerWithIdentifier:@"InstaID"];
-            vc.placeName = self.searchBar.text;
+             UINavigationController *nc = [[UINavigationController alloc] initWithRootViewController:vc];
+            vc.city = self.searchBar.text;
             
-            [self presentViewController:vc animated:YES completion:nil];
+            [self presentViewController:nc animated:YES completion:nil];
             
             [sidebar dismissAnimated:YES completion:^(BOOL finished) {
             }];

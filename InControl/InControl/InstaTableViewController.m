@@ -25,8 +25,11 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    UIImageView* img = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"insta"]];
-    self.navigationItem.titleView = img;
+    self.navigationItem.title = @"Insta";
+
+    [[self navigationController] setNavigationBarHidden:NO animated:YES];
+
+   
     
     
     [self fetchInstagramData];
@@ -46,26 +49,29 @@
     // register the nib for the cell identifer
     [self.tableView registerNib:nib forCellReuseIdentifier:@"InstagramCellIdentifier"];
     
-    // grab the header nib from the main bundle
-    UINib *headerNib = [UINib nibWithNibName:@"InstagramPostHeaderView" bundle:nil];
-    
-    // register the header nib for the header identifier
-    [self.tableView registerNib:headerNib forHeaderFooterViewReuseIdentifier:@"InstagramHeaderIdentifier"];
+   
     
     
 }
-//- (IBAction)refreshTapped:(id)sender {
-//    [self fetchInstagramData];
-//}
+
+-(void) viewWillAppear:(BOOL)animated {
+    [[self navigationController] setNavigationBarHidden:NO animated:YES];
+}
+
+
+- (IBAction)refreshTapped:(id)sender {
+    [self fetchInstagramData];
+}
 
 
 - (void)fetchInstagramData {
     
+    NSString *cityName_City = [NSString stringWithFormat:@"%@city",self.city];
+    NSLog(@"cityName_City %@", cityName_City);
     
-    //     // create an instagram url
-    //    NSString *urlString = [NSString stringWithFormat:@"https://api.instagram.com/v1/tags/%@/media/recent?client_id=a2c55d5958864f32a2b1af4f8b01c8db", self.placeName];
-    // create an instagram url
-    NSString *urlString = [NSString stringWithFormat:@"https://api.instagram.com/v1/tags/paris/media/recent?client_id=a2c55d5958864f32a2b1af4f8b01c8db"];
+          // create an instagram url
+        NSString *urlString = [NSString stringWithFormat:@"https://api.instagram.com/v1/tags/%@/media/recent?client_id=a2c55d5958864f32a2b1af4f8b01c8db", cityName_City];
+   
     
     
     
@@ -116,14 +122,7 @@
 
 #pragma mark - Table view data source
 
-
-- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
-    return 50.0;
-}
-
-
-
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+ - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     return self.detailsResults.count;
 }
 
@@ -139,7 +138,7 @@
     
     cell.likeCountLabel.text = [NSString stringWithFormat:@"%ld likes", post.likeCount];
     
-    cell.tagCountLabel.text = [NSString stringWithFormat:@"Tags: %ld", post.tags.count];
+//    cell.tagCountLabel.text = [NSString stringWithFormat:@"Tags: %ld", post.tags.count];
     
     cell.captionLabel.text = post.caption[@"text"];
     
