@@ -6,16 +6,16 @@
 //  Copyright © 2015 Bereket . All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+#import <CoreData/CoreData.h>
 #import "NewJournalEntryViewController.h"
 #import "NewEntryInputViewController.h"
 
 
-@interface JournalEntryObject : NSObject <UITextViewDelegate, UITextFieldDelegate>
+@interface JournalEntryObject : NSManagedObject <UITextViewDelegate, UITextFieldDelegate>
 
-@property (nonatomic) UIImage* savedImageEntry;
 @property (nonatomic) NSString*  savedTextEntry;
 @property (nonatomic) NSString* savedTitle;
-
+@property (nonatomic) NSDate* timeOfEntry;
+@property (nonatomic) UIImage* savedImageEntry;
 
 @end

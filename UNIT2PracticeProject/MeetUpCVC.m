@@ -79,7 +79,7 @@ static NSString * const reuseIdentifier = @"Cell";
 
 -(void)apiRequestForSearchTerm:(NSString*)searchTerm {
     
-    
+    [self.meetUpData removeAllObjects];
     
     NSString *encodingString = [searchTerm stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLQueryAllowedCharacterSet]];
     

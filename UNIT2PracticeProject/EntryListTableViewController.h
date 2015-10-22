@@ -11,10 +11,14 @@
 #import "JournalEntryObject.h"
 #import "PhotoAlbum.h"
 #import "RootViewController.h"
-
-@interface EntryListTableViewController : UITableViewController
+#import "AppDelegate.h"
+@interface EntryListTableViewController : UITableViewController <NSFetchedResultsControllerDelegate>
 
 @property (nonatomic) PhotoAlbum* myAlbum;
 
 @property (nonatomic) NSNumber* count;
+
+@property (nonatomic) NSFetchedResultsController *fetchedResultsController;
+
+
 @end

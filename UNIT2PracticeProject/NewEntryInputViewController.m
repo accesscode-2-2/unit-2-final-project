@@ -10,6 +10,7 @@
 #import "EntryListTableViewController.h"
 #import "JournalEntryObject.h"
 #import "PhotoAlbum.h"
+#import "AppDelegate.h"
 
 @interface NewEntryInputViewController ()
 
@@ -21,7 +22,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    self.entryObject = [[JournalEntryObject alloc] init];
+    AppDelegate *delegate = [UIApplication sharedApplication].delegate;
+    
+    self.entryObject = [NSEntityDescription insertNewObjectForEntityForName:@"JournalEntryObject" inManagedObjectContext:delegate.managedObjectContext];
     
     if (self.selectedPhoto.image != nil) {
         NSLog(@"We have Photo Data");
@@ -32,12 +35,21 @@
     self.journalEntryTextView.textColor = [UIColor lightGrayColor];
     self.journalEntryTextView.delegate = self;
     
+//    NSArray *savedJournalEntries = [[NSUserDefaults standardUserDefaults] objectForKey:@"journalEntriesKey"];
+//
+//    if (savedJournalEntries) {
+//        [PhotoAlbum sharedPhotoAlbum].photoEntries = savedJournalEntries.mutableCopy;
+//    }
+//    
+    
 }
 
 #pragma placeholder text for journalEntryTextView
 
 - (BOOL) textViewShouldBeginEditing:(UITextView *)textView
 {
+   
+    
     self.journalEntryTextView.text = @"";
     self.journalEntryTextView.textColor = [UIColor blackColor];
     return YES;
@@ -63,24 +75,25 @@
     self.entryObject.savedTextEntry = self.journalEntryTextView.text;
     self.entryObject.savedTitle = self.titleTextField.text;
     
+    self.entryObject.timeOfEntry = [[NSDate alloc] init];
+    
+    
     self.entryObject.savedImageEntry = [ImageSingleton myImage].image;
     
     
     [[PhotoAlbum sharedPhotoAlbum].photoEntries addObject:self.entryObject];
     
-    //   JournalEntryObject* someObject = [[PhotoAlbum sharedPhotoAlbum].photoEntries objectAtIndex:0];
-    //   NSLog(@"SAVED TITLE : %@", someObject.savedImageEntry);
+    AppDelegate *delegate = [UIApplication sharedApplication].delegate;
+    [delegate saveContext];        //saves into the "database"
     
-    //    UINavigationController *navController = [self.tabBarController.viewControllers objectAtIndex:1];
-    //
-    //    EntryListTableViewController* viewcontroller = [navController.viewControllers firstObject];
-    //
-    //
-    //
     
-    [self dismissViewControllerAnimated:NO completion:nil];
+    [self.navigationController popToRootViewControllerAnimated:YES]; //<---yo remember this
+    
+
     
 }
+
+
 
 
 @end

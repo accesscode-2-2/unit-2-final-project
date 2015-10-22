@@ -14,6 +14,28 @@
     
     [super viewDidLoad];
     
+    
+    AppDelegate *delegate = [UIApplication sharedApplication].delegate;
+    
+    // 1) create an instance of NSFetchRequest with an entity name
+    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] initWithEntityName:@"JournalEntryObject"];
+    
+    
+    // 2) create a sort descriptor
+    NSSortDescriptor *sort = [[NSSortDescriptor alloc] initWithKey:@"timeOfEntry" ascending:NO];
+    
+    // 3) set the sortDescriptors on the fetchRequest
+    fetchRequest.sortDescriptors = @[sort];
+    
+    // 4) create a fetchedResultsController with a fetchRequest and a managedObjectContext,
+    self.fetchedResultsController = [[NSFetchedResultsController alloc] initWithFetchRequest:fetchRequest managedObjectContext:delegate.managedObjectContext sectionNameKeyPath:nil cacheName:nil];
+    
+    self.fetchedResultsController.delegate = self;
+    
+    [self.fetchedResultsController performFetch:nil];
+    
+
+    
     self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"background.jpg"]];
 
     
@@ -48,14 +70,15 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return [PhotoAlbum sharedPhotoAlbum].photoEntries.count;
+    //return [PhotoAlbum sharedPhotoAlbum].photoEntries.count;
+    return self.fetchedResultsController.fetchedObjects.count;
 }
 
  - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     // [self.tableView reloadData];
      UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"EntryCellIdentifier" forIndexPath:indexPath];
      
-     JournalEntryObject* journalEntry = [PhotoAlbum sharedPhotoAlbum].photoEntries[indexPath.row];
+     JournalEntryObject* journalEntry = self.fetchedResultsController.fetchedObjects[indexPath.row];
      cell.textLabel.text = journalEntry.savedTitle;
      cell.textLabel.textColor = [UIColor whiteColor];
      cell.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"background.jpg"]];
@@ -100,6 +123,12 @@
  }
  */
 
+- (void)controller:(NSFetchedResultsController *)controller didChangeObject:(id)anObject atIndexPath:(NSIndexPath *)indexPath forChangeType:(NSFetchedResultsChangeType)type newIndexPath:(NSIndexPath *)newIndexPath {
+    
+    [self.tableView reloadData];
+}
+
+
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
     
     
@@ -109,13 +138,17 @@
     {
         NSIndexPath* indexPath = [self.tableView indexPathForSelectedRow];
         
-        JournalEntryObject* journalEntry = [PhotoAlbum sharedPhotoAlbum].photoEntries[indexPath.row];
+        JournalEntryObject* journalEntry = self.fetchedResultsController.fetchedObjects[indexPath.row];
 
         RootViewController* viewController = [segue destinationViewController];
         viewController.titleSelected = journalEntry.savedTitle;
         viewController.pageViewController = sender;
         
         NSLog(@"title %@ ",viewController.titleSelected);
+        
+        
+        
+        
         
     }
     

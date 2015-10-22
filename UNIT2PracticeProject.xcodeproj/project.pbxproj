@@ -24,6 +24,7 @@
 		AB626ECE1BD014BD005BC70B /* NewEntryInputViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AB626ECD1BD014BD005BC70B /* NewEntryInputViewController.m */; settings = {ASSET_TAGS = (); }; };
 		AB626ED11BD016D6005BC70B /* EntryListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AB626ED01BD016D6005BC70B /* EntryListTableViewController.m */; settings = {ASSET_TAGS = (); }; };
 		AB626ED61BD01BA4005BC70B /* PhotoAlbum.m in Sources */ = {isa = PBXBuildFile; fileRef = AB626ED51BD01BA4005BC70B /* PhotoAlbum.m */; settings = {ASSET_TAGS = (); }; };
+		ABE7FB341BD864B500091730 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = ABE7FB321BD864B500091730 /* Model.xcdatamodeld */; settings = {ASSET_TAGS = (); }; };
 		ABF8076C1BD401A400853411 /* ImageSingleton.m in Sources */ = {isa = PBXBuildFile; fileRef = ABF8076B1BD401A400853411 /* ImageSingleton.m */; settings = {ASSET_TAGS = (); }; };
 		EBB12DD71BD5C945001027B8 /* CollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EBB12DD61BD5C945001027B8 /* CollectionViewCell.m */; settings = {ASSET_TAGS = (); }; };
 		EBB12DDA1BD5C9E1001027B8 /* MeetUpCVC.m in Sources */ = {isa = PBXBuildFile; fileRef = EBB12DD91BD5C9E1001027B8 /* MeetUpCVC.m */; settings = {ASSET_TAGS = (); }; };
@@ -63,6 +64,7 @@
 		AB626ED51BD01BA4005BC70B /* PhotoAlbum.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoAlbum.m; sourceTree = "<group>"; };
 		AB626ED71BD01C01005BC70B /* JournalEntryObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JournalEntryObject.h; sourceTree = "<group>"; };
 		AB626ED81BD01C01005BC70B /* JournalEntryObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JournalEntryObject.m; sourceTree = "<group>"; };
+		ABE7FB331BD864B500091730 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 		ABF8076A1BD401A400853411 /* ImageSingleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageSingleton.h; sourceTree = "<group>"; };
 		ABF8076B1BD401A400853411 /* ImageSingleton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageSingleton.m; sourceTree = "<group>"; };
 		EBB12DD51BD5C945001027B8 /* CollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollectionViewCell.h; sourceTree = "<group>"; };
@@ -148,6 +150,7 @@
 				AB0F26661BCC5387006685AB /* DataViewController.m */,
 				AB0F26681BCC5387006685AB /* ModelController.h */,
 				AB0F26691BCC5387006685AB /* ModelController.m */,
+				ABE7FB321BD864B500091730 /* Model.xcdatamodeld */,
 				EBB12DD41BD5C8E1001027B8 /* MeetUp */,
 				ABF8076D1BD4444E00853411 /* Singletons */,
 				AB626ED31BD01B26005BC70B /* Journal Entry Creation */,
@@ -347,6 +350,7 @@
 				AB0F266A1BCC5387006685AB /* ModelController.m in Sources */,
 				0021CAC71BD5E777002EED7B /* MapKitViewController.m in Sources */,
 				EBB12DD71BD5C945001027B8 /* CollectionViewCell.m in Sources */,
+				ABE7FB341BD864B500091730 /* Model.xcdatamodeld in Sources */,
 				EBB12DDD1BD5C9F2001027B8 /* ObjectsInMeetUp.m in Sources */,
 				AB0F265E1BCC5387006685AB /* main.m in Sources */,
 				AB0F26641BCC5387006685AB /* RootViewController.m in Sources */,
@@ -514,6 +518,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		ABE7FB321BD864B500091730 /* Model.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				ABE7FB331BD864B500091730 /* Model.xcdatamodel */,
+			);
+			currentVersion = ABE7FB331BD864B500091730 /* Model.xcdatamodel */;
+			path = Model.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = AB0F26511BCC5387006685AB /* Project object */;
 }
