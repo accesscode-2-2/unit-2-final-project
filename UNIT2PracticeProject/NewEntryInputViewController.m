@@ -78,6 +78,7 @@
     //
     //
     
+    [[[UIApplication sharedApplication] keyWindow] endEditing:YES];
     [self dismissViewControllerAnimated:NO completion:nil];
     
 }
