@@ -10,7 +10,6 @@
 #import <Parse/Parse.h>
 #import "MainPageVC.h"
 #import "LoginViewController.h"
-#import "ViewController.h"
 #import "SharedManager.h"
 
 @implementation CustomModalViewController

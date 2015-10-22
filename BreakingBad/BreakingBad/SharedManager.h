@@ -6,14 +6,11 @@
 //  Copyright © 2015 Zoufishan Mehdi. All rights reserved.
 //
 #import <Foundation/Foundation.h>
-#import "HabitList.h"
-#import "ViewController.h"
 #import "BBUser.h"
 #import "Habit.h"
 
 @interface SharedManager : NSObject
 
-@property (nonatomic) HabitList *habitListData;
 
 @property (nonatomic) NSMutableArray *habitArray;
 @property (nonatomic) NSInteger selectedRow;

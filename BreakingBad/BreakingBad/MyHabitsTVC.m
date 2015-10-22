@@ -97,13 +97,16 @@
     
     
     UIView *inspQuoteView = [[UIView alloc] init];
-    inspQuoteView.frame = CGRectMake(23, 459, 332, 130);
+    inspQuoteView.frame = CGRectMake(0, self.view.bounds.size.height-185, self.view.bounds.size.width, 130);
+    //CGRectMake(23, 459, 332, 130);
+    
+    
     inspQuoteView.backgroundColor = [SharedManager sharedModel].colesiumGrey;
     
     UILabel *quotesLabel = [[UILabel alloc] init];
     quotesLabel.frame = inspQuoteView.bounds;
     quotesLabel.textColor = [SharedManager sharedModel].brownForest;
-     quotesLabel.frame = CGRectMake(15, 12, 310, 87);
+     quotesLabel.frame = CGRectMake(5, 25, self.view.bounds.size.width-5, 80);
     [quotesLabel setLineBreakMode:NSLineBreakByWordWrapping];
     quotesLabel.numberOfLines  = 0;
     
@@ -137,10 +140,6 @@
                                                             }];
                               }];
 }
-
-
-
-
 
 
 -(void)addColorMyHabits {

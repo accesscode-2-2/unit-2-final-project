@@ -7,7 +7,6 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "ViewController.h"
 #import <UIKit/UIKit.h>
 #import <AVFoundation/AVFoundation.h>
 
@@ -25,6 +24,8 @@
 @property (nonatomic, retain) NSString *data;
 @property (nonatomic, weak) id<QuestionDetailVCDelegate> delegate;
 @property (nonatomic) NSInteger tag;
+@property (nonatomic) BOOL readOnly;
+
 
 
 ////properties to add color to
