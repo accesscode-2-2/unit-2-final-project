@@ -48,6 +48,7 @@
     //manage textview
     self.textView.delegate = self;
     self.textView.text = @"Write your thoughts here...";
+    self.textView.textColor = [UIColor grayColor];
     self.textView.layer.borderWidth = 1.0f;
     self.textView.layer.cornerRadius = 5.0f;
     self.textView.layer.borderColor = [UIColor blackColor].CGColor;
@@ -70,6 +71,8 @@
 - (void) textViewDidBeginEditing:(UITextView *)textView {
     
     self.textView.text = @"";
+    
+    self.textView.textColor = [UIColor whiteColor];
     
     self.doneEditingButton.hidden = NO;
 }
@@ -206,9 +209,13 @@
     
     // when we log the journal entry, SAVE it all to Parse
     JournalPost *myJournalPost = [[JournalPost alloc] init]; // most of this is a repeat of above.
+
+    if ([self.textView.text isEqualToString:@"Write your thoughts here..."]){
+        self.textView.text = @"";
+    }
     
-    myJournalPost[@"starRating"] = self.rating;
     myJournalPost[@"postText"] = self.textView.text;
+    myJournalPost[@"starRating"] = self.rating;
     myJournalPost[@"title"] = self.postSearchResult.albumOrMovieName;
     myJournalPost[@"creator"] = self.postSearchResult.artistName;
     myJournalPost[@"dateEntered"] = [NSDate date];

@@ -84,20 +84,37 @@
 
 - (IBAction)logToJournalButtonTapped:(id)sender {
     
-    JournalPost *myJournalPost = [[JournalPost alloc]init];
+    PFQuery *query = [PFQuery queryWithClassName:@"JournalPost"];
+    [query whereKey:@"title" equalTo:self.journalPostDetail.title];
+    [query findObjectsInBackgroundWithBlock:^(NSArray * _Nullable objects, NSError * _Nullable error) {
     
-    myJournalPost[@"postText"] = self.textView.text;
-    myJournalPost[@"starRating"] = self.rating;
-    myJournalPost[@"title"] = self.journalPostDetail.title;
-    myJournalPost[@"creator"] = self.journalPostDetail.creator;
-    myJournalPost[@"dateEntered"] = [NSDate date];
-    myJournalPost[@"typeOfMedia"] = self.mediaType;
-    myJournalPost[@"imageForMedia"] = self.journalPostDetail.imageForMedia;
-    myJournalPost[@"reviewed"] = [NSNumber numberWithBool:YES];
+        NSLog(@"%@", objects);
+        
+        JournalPost *existingPost = [objects firstObject];
+        existingPost[@"postText"] = self.textView.text;
+        existingPost[@"starRating"] = self.rating;
+        existingPost[@"dateEntered"] = [NSDate date];
+        existingPost[@"reviewed"] = [NSNumber numberWithBool:YES];
+        
+        [existingPost saveEventually]; // save entry
+    }];
     
-    NSLog(@"my Journal post %@", myJournalPost);
     
-    [myJournalPost saveEventually]; // save entry
+    
+//    JournalPost *myJournalPost = [[JournalPost alloc]init];
+//    
+//    myJournalPost[@"postText"] = self.textView.text;
+//    myJournalPost[@"starRating"] = self.rating;
+//    myJournalPost[@"title"] = self.journalPostDetail.title;
+//    myJournalPost[@"creator"] = self.journalPostDetail.creator;
+//    myJournalPost[@"dateEntered"] = [NSDate date];
+//    myJournalPost[@"typeOfMedia"] = self.mediaType;
+//    myJournalPost[@"imageForMedia"] = self.journalPostDetail.imageForMedia;
+//    myJournalPost[@"reviewed"] = [NSNumber numberWithBool:YES];
+//
+//    NSLog(@"my Journal post %@", myJournalPost);
+//    
+//    [myJournalPost saveEventually]; // save entry
     
     [self.navigationController popToRootViewControllerAnimated:YES]; // pop back to root controller
     

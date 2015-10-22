@@ -242,7 +242,7 @@
                             </label>
                         </subviews>
                         <animations/>
-                        <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="qLr-OV-7JA" firstAttribute="centerX" secondItem="qWh-Hz-BDE" secondAttribute="centerX" id="els-Ct-0Lj"/>
                             <constraint firstItem="qLr-OV-7JA" firstAttribute="centerY" secondItem="qWh-Hz-BDE" secondAttribute="centerY" id="iFg-8y-wzh"/>
@@ -472,12 +472,14 @@
                     <navigationItem key="navigationItem" id="gPV-bk-VJf"/>
                     <connections>
                         <outlet property="booksButton" destination="VhT-rh-Xlh" id="lft-lw-MG6"/>
+                        <outlet property="journalEntryButton" destination="Q0c-Ez-WJB" id="Tvu-tK-ucU"/>
                         <outlet property="moviesButton" destination="4y1-WC-sKi" id="MrR-aE-OEy"/>
                         <outlet property="musicButton" destination="EJ6-uf-zLo" id="uE7-0x-fSK"/>
                         <outlet property="podcastButton" destination="XjD-vV-PU3" id="056-o8-aEu"/>
                         <outlet property="searchTextField" destination="zob-sY-qha" id="CSN-S0-Rzp"/>
                         <outlet property="tableView" destination="twc-ko-3Rx" id="4Cw-TH-Ai6"/>
                         <outlet property="televisionButton" destination="pgh-XG-GUn" id="VIW-gO-3XS"/>
+                        <outlet property="wishListButton" destination="i6F-Oe-4xR" id="Xi4-vP-rOj"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jtX-Jk-aNy" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -507,18 +509,22 @@
                                             <constraint firstAttribute="height" constant="120" id="Odq-ff-11v"/>
                                         </constraints>
                                     </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1AF-cw-sG5">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1AF-cw-sG5">
                                         <rect key="frame" x="138" y="108" width="442" height="17"/>
                                         <animations/>
                                         <fontDescription key="fontDescription" name="Akkurat" family="Akkurat" pointSize="14"/>
-                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+<<<<<<< HEAD
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DWN-3U-CrL">
+=======
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DWN-3U-CrL">
+>>>>>>> 9e3a1683429819900e20b8f4172226da37bbaf63
                                         <rect key="frame" x="138" y="79" width="442" height="21"/>
                                         <animations/>
                                         <fontDescription key="fontDescription" name="Akkurat-Bold" family="Akkurat" pointSize="17"/>
-                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QXz-a4-RR1">
@@ -534,7 +540,11 @@
                                     </button>
                                 </subviews>
                                 <animations/>
+<<<<<<< HEAD
                                 <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+=======
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+>>>>>>> 9e3a1683429819900e20b8f4172226da37bbaf63
                                 <constraints>
                                     <constraint firstAttribute="bottom" secondItem="1AF-cw-sG5" secondAttribute="bottom" id="5GX-Tt-REu"/>
                                     <constraint firstAttribute="height" constant="125" id="Bjb-7L-TcT"/>
@@ -555,13 +565,21 @@
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="5dG-Gc-FlR">
                                         <rect key="frame" x="8" y="8" width="544" height="158"/>
                                         <animations/>
+<<<<<<< HEAD
                                         <color key="textColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+=======
+                                        <color key="textColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+>>>>>>> 9e3a1683429819900e20b8f4172226da37bbaf63
                                         <fontDescription key="fontDescription" name="Akkurat-Bold" family="Akkurat" pointSize="25"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
                                 </subviews>
                                 <animations/>
+<<<<<<< HEAD
                                 <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+=======
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+>>>>>>> 9e3a1683429819900e20b8f4172226da37bbaf63
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="5dG-Gc-FlR" secondAttribute="trailing" constant="8" id="Hh1-So-hwM"/>
                                     <constraint firstItem="5dG-Gc-FlR" firstAttribute="top" secondItem="KTC-y5-v8E" secondAttribute="top" constant="8" id="VQs-d1-Hne"/>
@@ -614,7 +632,11 @@
                                     </button>
                                 </subviews>
                                 <animations/>
+<<<<<<< HEAD
                                 <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+=======
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+>>>>>>> 9e3a1683429819900e20b8f4172226da37bbaf63
                                 <constraints>
                                     <constraint firstAttribute="bottom" secondItem="Jzq-uK-0EF" secondAttribute="bottom" id="1ND-Ln-y7I"/>
                                     <constraint firstAttribute="bottom" secondItem="sLK-NH-rvK" secondAttribute="bottom" id="2hF-t7-7wW"/>
@@ -666,7 +688,11 @@
                             </view>
                         </subviews>
                         <animations/>
+<<<<<<< HEAD
                         <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+=======
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+>>>>>>> 9e3a1683429819900e20b8f4172226da37bbaf63
                         <constraints>
                             <constraint firstItem="tNJ-35-n33" firstAttribute="top" secondItem="KTC-y5-v8E" secondAttribute="bottom" constant="10" id="5zc-ey-MkX"/>
                             <constraint firstItem="tNJ-35-n33" firstAttribute="leading" secondItem="XbP-Rr-3ea" secondAttribute="leadingMargin" id="AN1-xe-uD8"/>
@@ -1345,12 +1371,12 @@
                                         <rect key="frame" x="102" y="27" width="77" height="21"/>
                                         <animations/>
                                         <fontDescription key="fontDescription" name="Akkurat" family="Akkurat" pointSize="17"/>
-                                        <color key="textColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                        <color key="textColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
                                 <animations/>
-                                <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="100" id="DnT-BB-V1g"/>
                                     <constraint firstItem="Qia-hv-Okp" firstAttribute="centerX" secondItem="iJa-08-1GE" secondAttribute="centerX" id="Hf4-By-8MH"/>

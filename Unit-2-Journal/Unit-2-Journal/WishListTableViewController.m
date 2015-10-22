@@ -14,14 +14,11 @@
 
 @interface WishListTableViewController ()
 
+@property (nonatomic) NSString *objectID;
+
 @end
 
 @implementation WishListTableViewController
-
-- (void)viewDidAppear:(BOOL)animated {
-    
-    [self pullEntriesFromParse];
-}
 
 - (void)viewDidLoad {
     
@@ -41,6 +38,10 @@
     
     [self pullEntriesFromParse];
 }
+- (void)viewDidAppear:(BOOL)animated {
+    
+    [self pullEntriesFromParse];
+}
 
 - (void)pullEntriesFromParse {
     
@@ -53,12 +54,16 @@
         // create a for loop and iterate through the objects array and push only the posts that are marked with True to "self.allJournalPosts"
         for (JournalPost *object in objects) {
             if (!object.reviewed) {
-                [self.allJournalPosts addObject:object];
+                
+                [self.allJournalPosts insertObject:object atIndex:0];
+
+                //[self.allJournalPosts addObject:object];
+                
             }
         }
-        //       self.allJournalPosts = objects; // pull all images from Parse
+        // self.allJournalPosts = objects; // pull all images from Parse
         
-        NSLog(@"info fetched from parse: %@", self.allJournalPosts); // test it!
+       // NSLog(@"info fetched from parse: %@", self.allJournalPosts); // test it!
         
         [self.tableView reloadData]; // reload tableView
     }];
@@ -100,7 +105,7 @@
     WishListTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"WishListTableViewCellIdentifier" forIndexPath:indexPath];
     
     JournalPost *thisEntry = self.allJournalPosts[indexPath.row];
-    
+  
     cell.titleLabel.text = thisEntry.title;
     cell.authorArtistDirectorLabel.text = thisEntry.creator;
     
@@ -113,7 +118,7 @@
     
     // format table view lines
     cell.preservesSuperviewLayoutMargins = false;
-    cell.separatorInset = UIEdgeInsetsZero;
+  //  cell.separatorInset = UIEdgeInsetsZero;
     cell.layoutMargins = UIEdgeInsetsZero;
     
     return cell;
@@ -151,7 +156,7 @@
     
     //identifier: moveFromWishToJournalEntry
     
-    if ([[segue identifier] isEqualToString:@"ViewCompletedEntrySegue"]) {
+    if ([[segue identifier] isEqualToString:@"moveFromWishToJournalEntry"]) {
         NSIndexPath *selectedIndexPath = [self.tableView indexPathForCell:sender];
         WatchedWishListViewController *viewController = segue.destinationViewController;
         JournalPost *thisPost = self.allJournalPosts[selectedIndexPath.row];

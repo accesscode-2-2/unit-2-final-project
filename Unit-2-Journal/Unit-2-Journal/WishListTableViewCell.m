@@ -2,17 +2,18 @@
 //  WishListTableViewCell.m
 //  Unit-2-Journal
 //
-//  Created by Shena Yoshida on 10/12/15.
+//  Created by Shena Yoshida on 10/21/15.
 //  Copyright © 2015 Jamaal Sedayao. All rights reserved.
 //
 
 #import "WishListTableViewCell.h"
-#import <pop/POP.h>
+#import <Pop/POP.h>
 
 @implementation WishListTableViewCell
 
 - (void)awakeFromNib {
     
+    // round corners
     self.artworkImage.clipsToBounds = YES;
     self.artworkImage.layer.borderColor = [UIColor blackColor].CGColor;
     self.artworkImage.layer.borderWidth = 2.0;
@@ -20,7 +21,6 @@
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
-    
     [super setSelected:selected animated:animated];
 }
 
@@ -49,3 +49,4 @@
 }
 
 @end
+
