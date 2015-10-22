@@ -17,10 +17,10 @@
 @interface MeetupTableViewController ()
 
 @property (nonatomic) NSMutableArray *meetupData;
-@property (nonatomic) CLLocationCoordinate2D location;
-@property (nonatomic) NSMutableArray *searchResults;
+@property (nonatomic) CLLocationCoordinate2D center;
 @property (nonatomic) NSString *lat;
 @property (nonatomic) NSString *lng;
+
 @end
 
 @implementation MeetupTableViewController
@@ -28,67 +28,20 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.navigationItem.title = @"Meetup";
-
-     [self fetchFoursquareVenues];
-}
-
-
-
-
-- (void)fetchFoursquareVenues {
     
     
-    [FoursquareAPIManager fetchResultsWithSearchTerm:@"food" location:self.city callbackBlock:^(id json){
-        
-        NSArray *results = json[@"response"][@"venues"];
-        
-        self.searchResults =[[NSMutableArray alloc] init];
-        
-        for (NSDictionary *result in results) {
-            
-            self.lat = result[@"location"][@"lat"];
-            self.lng = result[@"location"][@"lng"];
-            
-            
-        }
-        
-        
-        NSLog(@"lat %@", self.lat);
-        NSLog(@"lng %@", self.lng);
-        
-        self.cityLat = [self.lat integerValue];
-        NSLog(@"convertedCityyyyy %ld", (long)self.cityLat);
-        
-        self.cityLng = [self.lng integerValue];
-        NSLog(@"convertedCityyyyy %ld", (long)self.cityLng);
-        
-        
-        
+    [self getLocationFromAddressString:self.city withCompletionHandler:^{
         [self makeApPIRequestWithNewTerm:self.city callbackBlock:^{
             [self.tableView reloadData];
         }];
-        
-        
     }];
-    
-    
 }
-
 
 - (void)makeApPIRequestWithNewTerm:(NSString *)searchTerm
                      callbackBlock:(void(^)())block {
-    NSLog(@"cityyyyyyyy meetup %@", self.city);
     
     
-    NSString *meetupURL = [NSString stringWithFormat:@"https://api.meetup.com/2/groups?lat=%ld&lon=%ld&page=20&key=1f5718c16a7fb3a5452f45193232",(long)self.cityLat, (long)self.cityLng];
-    
-    
-    
-    
-//    NSString *meetupURL = [NSString stringWithFormat:@"https://api.meetup.com/find/groups?city=%@&page=200&offset=1&key=1f5718c16a7fb3a5452f45193232",self.city];
-    
-    
-    
+    NSString *meetupURL = [NSString stringWithFormat:@"https://api.meetup.com/2/groups?lat=%@&lon=%@&page=20&key=1f5718c16a7fb3a5452f45193232",self.lat,self.lng];
     
     NSString *encodedString = [meetupURL stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLQueryAllowedCharacterSet]];
     
@@ -101,7 +54,7 @@
         self.meetupData = [json objectForKey:@"results"];
         
         NSLog(@"%@", json);
-
+        
         
         [self.tableView reloadData];
     }];
@@ -148,11 +101,6 @@
     double rate = [[eachOrganizer objectForKey:@"rating"] doubleValue];
     NSString *descriptionMeetup = [NSString stringWithFormat:@"Rate: %0.2f", rate];
     
-    
-    
-    
-    
-    
     cell.nameLabel.text = name;
     cell.whoLabel.text = who;
     cell.descriptionMeetup.text = descriptionMeetup;
@@ -160,9 +108,6 @@
     
     NSLog(@"%@", self.city);
     
-
-    [self getLocationFromAddressString:self.city];
-
     return cell;
 }
 
@@ -170,19 +115,20 @@
     NSDictionary *eachOrganizer = self.meetupData[indexPath.row];
     NSString *hyperlinkUrl = [eachOrganizer objectForKey:@"link"];
     NSURL *url = [NSURL URLWithString:hyperlinkUrl];
-
+    
     
     [[UIApplication sharedApplication]openURL:url];
-
+    
 }
 
--(CLLocationCoordinate2D) getLocationFromAddressString: (NSString*) addressStr {
+-(void) getLocationFromAddressString: (NSString*) addressStr withCompletionHandler:(void(^)())completion {
+    
+    
     double latitude = 0, longitude = 0;
     NSString *esc_addr =  [addressStr stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
     NSString *req = [NSString stringWithFormat:@"http://maps.google.com/maps/api/geocode/json?sensor=false&address=%@", esc_addr];
     NSString *result = [NSString stringWithContentsOfURL:[NSURL URLWithString:req] encoding:NSUTF8StringEncoding error:NULL];
     
-//    NSLog(@"%@", result);
     if (result) {
         NSScanner *scanner = [NSScanner scannerWithString:result];
         if ([scanner scanUpToString:@"\"lat\" :" intoString:nil] && [scanner scanString:@"\"lat\" :" intoString:nil]) {
@@ -195,10 +141,18 @@
     CLLocationCoordinate2D center;
     center.latitude=latitude;
     center.longitude = longitude;
-//    NSLog(@"View Controller get Location Logitute : %f",center.latitude);
-//    NSLog(@"View Controller get Location Latitute : %f",center.longitude);
-    return center;
     
+    
+    NSString *latitudeString = [NSString stringWithFormat:@"%f", center.latitude];
+    NSString *longitudeString = [NSString stringWithFormat:@"%f", center.longitude];
+    
+    self.lat = latitudeString;
+    self.lng = longitudeString;
+    
+    NSLog(@"View Controller get Location Logitute : %f",center.latitude);
+    NSLog(@"View Controller get Location Latitute : %f",center.longitude);
+    
+    completion();
 }
 
 
