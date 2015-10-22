@@ -361,95 +361,6 @@
             </objects>
             <point key="canvasLocation" x="1110" y="2241"/>
         </scene>
-        <!--Lat And Lng View Controller-->
-        <scene sceneID="X8Y-LV-T8h">
-            <objects>
-                <viewController id="18N-SG-R2O" customClass="LatAndLngViewController" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="GWz-yp-aHp"/>
-                        <viewControllerLayoutGuide type="bottom" id="rAK-FJ-9lp"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="vgL-1a-vZ1">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1fX-Cd-hYr">
-                                <rect key="frame" x="0.0" y="79" width="298" height="130"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="lat:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9xo-wZ-09M">
-                                        <rect key="frame" x="0.0" y="54" width="45" height="21"/>
-                                        <animations/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="45" id="GTj-qT-Gyh"/>
-                                            <constraint firstAttribute="height" constant="21" id="oDd-Fs-aoI"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ukH-Pp-IA1">
-                                        <rect key="frame" x="101" y="50" width="97" height="30"/>
-                                        <animations/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                    </textField>
-                                </subviews>
-                                <animations/>
-                                <constraints>
-                                    <constraint firstItem="ukH-Pp-IA1" firstAttribute="centerY" secondItem="1fX-Cd-hYr" secondAttribute="centerY" id="LGq-RE-fsU"/>
-                                    <constraint firstItem="9xo-wZ-09M" firstAttribute="leading" secondItem="1fX-Cd-hYr" secondAttribute="leading" id="QF1-lv-UCB"/>
-                                    <constraint firstItem="ukH-Pp-IA1" firstAttribute="centerX" secondItem="1fX-Cd-hYr" secondAttribute="centerX" id="W9h-m8-2r1"/>
-                                    <constraint firstItem="9xo-wZ-09M" firstAttribute="top" secondItem="1fX-Cd-hYr" secondAttribute="top" constant="54" id="zJN-h3-x4x"/>
-                                </constraints>
-                            </view>
-                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sIx-GK-JrG">
-                                <rect key="frame" x="298" y="79" width="298" height="130"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="lng:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vp0-Tv-8Ca">
-                                        <rect key="frame" x="0.0" y="54" width="45" height="21"/>
-                                        <animations/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="21" id="574-Yb-8qc"/>
-                                            <constraint firstAttribute="width" constant="45" id="c52-Qp-Eyd"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="o9j-nv-wkF">
-                                        <rect key="frame" x="101" y="50" width="97" height="30"/>
-                                        <animations/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                    </textField>
-                                </subviews>
-                                <animations/>
-                                <constraints>
-                                    <constraint firstItem="o9j-nv-wkF" firstAttribute="centerX" secondItem="sIx-GK-JrG" secondAttribute="centerX" id="6l6-l9-aXk"/>
-                                    <constraint firstItem="vp0-Tv-8Ca" firstAttribute="top" secondItem="sIx-GK-JrG" secondAttribute="top" constant="54" id="N13-us-Lmv"/>
-                                    <constraint firstItem="o9j-nv-wkF" firstAttribute="centerY" secondItem="sIx-GK-JrG" secondAttribute="centerY" id="QAf-QM-XPq"/>
-                                    <constraint firstItem="vp0-Tv-8Ca" firstAttribute="leading" secondItem="sIx-GK-JrG" secondAttribute="leading" id="t4z-BC-3ZX"/>
-                                </constraints>
-                            </view>
-                        </subviews>
-                        <animations/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="1fX-Cd-hYr" firstAttribute="leading" secondItem="vgL-1a-vZ1" secondAttribute="leading" id="Ddn-E3-zYs"/>
-                            <constraint firstItem="sIx-GK-JrG" firstAttribute="leading" secondItem="1fX-Cd-hYr" secondAttribute="trailing" id="Fae-Bc-zDz"/>
-                            <constraint firstItem="1fX-Cd-hYr" firstAttribute="width" secondItem="sIx-GK-JrG" secondAttribute="width" id="MeA-w5-EUH"/>
-                            <constraint firstItem="1fX-Cd-hYr" firstAttribute="top" secondItem="GWz-yp-aHp" secondAttribute="bottom" constant="15" id="Oi1-vY-aFN"/>
-                            <constraint firstItem="sIx-GK-JrG" firstAttribute="leading" secondItem="1fX-Cd-hYr" secondAttribute="trailing" id="R0b-bU-BqU"/>
-                            <constraint firstItem="sIx-GK-JrG" firstAttribute="top" secondItem="GWz-yp-aHp" secondAttribute="bottom" constant="15" id="Xh7-39-VDM"/>
-                            <constraint firstAttribute="trailing" secondItem="sIx-GK-JrG" secondAttribute="trailing" constant="4" id="Ytl-nN-fTG"/>
-                        </constraints>
-                    </view>
-                    <toolbarItems/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="OGT-Ew-vEh" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="366" y="3012"/>
-        </scene>
         <!--Hotel View Controller-->
         <scene sceneID="alR-2g-khq">
             <objects>
@@ -990,7 +901,7 @@
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="City, Country" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cf3-td-9Nu">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cf3-td-9Nu">
                                             <rect key="frame" x="432" y="8" width="150" height="30"/>
                                             <animations/>
                                             <constraints>
@@ -1048,11 +959,7 @@
                                 <segue destination="BYZ-38-t0r" kind="presentation" modalTransitionStyle="crossDissolve" id="ofM-AI-3BJ"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" image="settings" id="gRQ-HR-Atp">
-                            <connections>
-                                <segue destination="18N-SG-R2O" kind="presentation" modalTransitionStyle="crossDissolve" id="VWk-5G-lgk"/>
-                            </connections>
-                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" image="settings" id="gRQ-HR-Atp"/>
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                 </tableViewController>
@@ -1157,6 +1064,645 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cI8-Ve-lL0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="4767" y="-400"/>
+        </scene>
+        <!--Candy View Controller-->
+        <scene sceneID="YPi-LU-vEd">
+            <objects>
+                <viewController id="GhM-7A-LLe" customClass="CandyViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Yot-y1-T4d"/>
+                        <viewControllerLayoutGuide type="bottom" id="Uj2-6g-QeH"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="zl1-mg-oKf">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rsT-yv-XXe">
+                                <rect key="frame" x="160" y="562" width="280" height="33"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="280" id="nKK-0u-LZv"/>
+                                    <constraint firstAttribute="height" constant="33" id="o4i-Rm-lsv"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <state key="normal" title="Shuffle! (Costs 2 Moves!)">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="Shuffle:" destination="GhM-7A-LLe" eventType="touchUpInside" id="QZS-QE-rRg"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Moves Left:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Qp-c6-0la">
+                                <rect key="frame" x="221" y="370" width="159" height="33"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="33" id="AMd-lK-6Bx"/>
+                                    <constraint firstAttribute="width" constant="159" id="Sm3-QW-eR1"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P8n-nr-ZCC">
+                                <rect key="frame" x="242" y="408" width="116" height="37"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="37" id="Jh4-hr-p56"/>
+                                    <constraint firstAttribute="width" constant="116" id="kVD-5K-sjb"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="High Score:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Htt-aG-vnJ">
+                                <rect key="frame" x="225" y="450" width="151" height="39"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="151" id="IrF-4f-gHv"/>
+                                    <constraint firstAttribute="height" constant="39" id="MI5-AB-h8T"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="SelectedCandy" translatesAutoresizingMaskIntoConstraints="NO" id="vjp-rd-Mr8" userLabel="Candy1">
+                                <rect key="frame" x="150" y="60" width="60" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="Wyt-6l-iTO"/>
+                                    <constraint firstAttribute="width" constant="60" id="c4N-5m-oC6"/>
+                                    <constraint firstAttribute="height" constant="60" id="sJh-4p-OYA"/>
+                                    <constraint firstAttribute="width" constant="60" id="w7X-dV-QgE"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="Wyt-6l-iTO"/>
+                                        <exclude reference="w7X-dV-QgE"/>
+                                    </mask>
+                                </variation>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HMq-oh-ZVC" userLabel="1">
+                                <rect key="frame" x="155" y="65" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="CKx-it-XNC"/>
+                                    <constraint firstAttribute="width" constant="50" id="UAl-BX-FXi"/>
+                                </constraints>
+                                <state key="normal" image="BlueCandy"/>
+                                <connections>
+                                    <action selector="Candy1Button:" destination="GhM-7A-LLe" eventType="touchUpInside" id="aR2-k2-tgJ"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="SelectedCandy" translatesAutoresizingMaskIntoConstraints="NO" id="JTg-1y-A7w" userLabel="Candy2">
+                                <rect key="frame" x="230" y="60" width="60" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="4U1-9Y-SUd"/>
+                                    <constraint firstAttribute="width" constant="60" id="RbW-zT-T0H"/>
+                                    <constraint firstAttribute="width" constant="60" id="Tr0-jh-a3s"/>
+                                    <constraint firstAttribute="height" constant="60" id="sgj-iE-tvw"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="4U1-9Y-SUd"/>
+                                        <exclude reference="Tr0-jh-a3s"/>
+                                    </mask>
+                                </variation>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rCF-Fg-FPe" userLabel="2">
+                                <rect key="frame" x="235" y="65" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="MzB-Ze-SdY"/>
+                                    <constraint firstAttribute="width" constant="50" id="Q7T-dG-12e"/>
+                                </constraints>
+                                <state key="normal" title="Button" image="GreenCandy"/>
+                                <connections>
+                                    <action selector="Candy2Button:" destination="GhM-7A-LLe" eventType="touchUpInside" id="dmU-Gx-Sug"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="SelectedCandy" translatesAutoresizingMaskIntoConstraints="NO" id="qfK-Hg-8OT" userLabel="Candy3">
+                                <rect key="frame" x="310" y="60" width="60" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="60" id="5Lu-ox-i29"/>
+                                    <constraint firstAttribute="height" constant="60" id="6VW-Ch-Ivp"/>
+                                    <constraint firstAttribute="width" constant="60" id="Fmy-3L-fCr"/>
+                                    <constraint firstAttribute="height" constant="60" id="bCD-5Q-UIf"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="5Lu-ox-i29"/>
+                                        <exclude reference="6VW-Ch-Ivp"/>
+                                    </mask>
+                                </variation>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5O2-yh-Npi" userLabel="3">
+                                <rect key="frame" x="315" y="65" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="7VJ-wd-djc"/>
+                                    <constraint firstAttribute="height" constant="50" id="QeU-Hy-rHZ"/>
+                                </constraints>
+                                <state key="normal" title="Button" image="BlueCandy"/>
+                                <connections>
+                                    <action selector="Candy3Button:" destination="GhM-7A-LLe" eventType="touchUpInside" id="NNW-0w-eEm"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="SelectedCandy" translatesAutoresizingMaskIntoConstraints="NO" id="xK9-In-8Ap" userLabel="Candy4">
+                                <rect key="frame" x="390" y="60" width="60" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="9QL-l5-tEu"/>
+                                    <constraint firstAttribute="width" constant="60" id="dM0-Ve-2yv"/>
+                                    <constraint firstAttribute="width" constant="60" id="j9Y-hU-QpJ"/>
+                                    <constraint firstAttribute="height" constant="60" id="nzZ-b2-Imm"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="9QL-l5-tEu"/>
+                                        <exclude reference="j9Y-hU-QpJ"/>
+                                    </mask>
+                                </variation>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="95j-JT-wGD" userLabel="4">
+                                <rect key="frame" x="395" y="65" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="3Cn-r9-5Ww"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="9li-YX-lQW"/>
+                                    <constraint firstAttribute="height" constant="50" id="auE-ZR-xwU"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="50" id="t64-M6-ppi"/>
+                                </constraints>
+                                <state key="normal" title="Button" image="PinkCandy"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="9li-YX-lQW"/>
+                                        <exclude reference="t64-M6-ppi"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <action selector="Candy4Button:" destination="GhM-7A-LLe" eventType="touchUpInside" id="7Kh-81-Sye"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="SelectedCandy" translatesAutoresizingMaskIntoConstraints="NO" id="CrD-xz-hMH" userLabel="Candy5">
+                                <rect key="frame" x="150" y="140" width="60" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="Ax5-Y3-1iV"/>
+                                    <constraint firstAttribute="width" constant="60" id="eZz-6a-OKs"/>
+                                    <constraint firstAttribute="width" constant="60" id="lz0-3I-kts"/>
+                                    <constraint firstAttribute="height" constant="60" id="nYY-RU-diM"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="Ax5-Y3-1iV"/>
+                                        <exclude reference="lz0-3I-kts"/>
+                                    </mask>
+                                </variation>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rUm-YN-vQ3" userLabel="5">
+                                <rect key="frame" x="155" y="145" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="9xy-zt-M9g"/>
+                                    <constraint firstAttribute="height" constant="50" id="WMZ-LI-hKB"/>
+                                </constraints>
+                                <state key="normal" title="Button" image="PinkCandy"/>
+                                <connections>
+                                    <action selector="Candy5Button:" destination="GhM-7A-LLe" eventType="touchUpInside" id="Thd-D7-VCh"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="SelectedCandy" translatesAutoresizingMaskIntoConstraints="NO" id="vu6-c2-w9g" userLabel="Candy6">
+                                <rect key="frame" x="230" y="140" width="60" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="60" id="75h-NN-Uva"/>
+                                    <constraint firstAttribute="height" constant="60" id="ZWI-91-jaQ"/>
+                                    <constraint firstAttribute="height" constant="60" id="dLB-0L-Efb"/>
+                                    <constraint firstAttribute="width" constant="60" id="upQ-ls-OOz"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="ZWI-91-jaQ"/>
+                                        <exclude reference="upQ-ls-OOz"/>
+                                    </mask>
+                                </variation>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uh4-Nm-fR2" userLabel="6">
+                                <rect key="frame" x="235" y="145" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="Rgg-f5-iuF"/>
+                                    <constraint firstAttribute="width" constant="50" id="w6A-B9-NsC"/>
+                                </constraints>
+                                <state key="normal" title="Button" image="OrangeCandy"/>
+                                <connections>
+                                    <action selector="Candy6Button:" destination="GhM-7A-LLe" eventType="touchUpInside" id="mEj-vO-wyl"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="SelectedCandy" translatesAutoresizingMaskIntoConstraints="NO" id="zAQ-iL-u5h" userLabel="Candy7">
+                                <rect key="frame" x="310" y="140" width="60" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="60" id="0eH-7A-adK"/>
+                                    <constraint firstAttribute="height" constant="60" id="T9c-KY-LQP"/>
+                                    <constraint firstAttribute="height" constant="60" id="UQS-rT-MXN"/>
+                                    <constraint firstAttribute="width" constant="60" id="dZz-vi-f1W"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="0eH-7A-adK"/>
+                                        <exclude reference="T9c-KY-LQP"/>
+                                    </mask>
+                                </variation>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TJC-5V-RFr" userLabel="7">
+                                <rect key="frame" x="315" y="145" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="ctd-om-cfs"/>
+                                    <constraint firstAttribute="height" constant="50" id="yMQ-2T-Pjz"/>
+                                </constraints>
+                                <state key="normal" title="Button" image="OrangeCandy"/>
+                                <connections>
+                                    <action selector="Candy7Button:" destination="GhM-7A-LLe" eventType="touchUpInside" id="HXa-Jj-rfB"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="SelectedCandy" translatesAutoresizingMaskIntoConstraints="NO" id="IVm-VS-8UZ" userLabel="Candy8">
+                                <rect key="frame" x="390" y="140" width="60" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="60" id="57p-DV-naL"/>
+                                    <constraint firstAttribute="height" constant="60" id="fvt-HK-dET"/>
+                                    <constraint firstAttribute="height" constant="60" id="jBP-GX-At6"/>
+                                    <constraint firstAttribute="width" constant="60" id="ycR-up-Jzz"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="jBP-GX-At6"/>
+                                        <exclude reference="ycR-up-Jzz"/>
+                                    </mask>
+                                </variation>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="SelectedCandy" translatesAutoresizingMaskIntoConstraints="NO" id="lVg-ak-pAQ" userLabel="Candy10">
+                                <rect key="frame" x="230" y="220" width="60" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="1Ee-9S-ht2"/>
+                                    <constraint firstAttribute="width" constant="60" id="56t-m6-leu"/>
+                                    <constraint firstAttribute="height" constant="60" id="dJ5-0Z-3IR"/>
+                                    <constraint firstAttribute="width" constant="60" id="dtH-vl-BDY"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="1Ee-9S-ht2"/>
+                                        <exclude reference="56t-m6-leu"/>
+                                    </mask>
+                                </variation>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rzu-q2-qdE" userLabel="10">
+                                <rect key="frame" x="235" y="225" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="Km3-aw-i7i"/>
+                                    <constraint firstAttribute="height" constant="50" id="Saf-tn-oYI"/>
+                                </constraints>
+                                <state key="normal" title="Button" image="GreenCandy"/>
+                                <connections>
+                                    <action selector="Candy10Button:" destination="GhM-7A-LLe" eventType="touchUpInside" id="abD-7O-Q4y"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="SelectedCandy" translatesAutoresizingMaskIntoConstraints="NO" id="AqA-fp-q7b" userLabel="Candy11">
+                                <rect key="frame" x="310" y="220" width="60" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="0hk-Lk-HBE"/>
+                                    <constraint firstAttribute="width" constant="60" id="JOH-KJ-c0g"/>
+                                    <constraint firstAttribute="width" constant="60" id="flj-rk-Bjz"/>
+                                    <constraint firstAttribute="height" constant="60" id="xsi-1d-eCC"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="flj-rk-Bjz"/>
+                                        <exclude reference="xsi-1d-eCC"/>
+                                    </mask>
+                                </variation>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="SelectedCandy" translatesAutoresizingMaskIntoConstraints="NO" id="dQP-jd-9W2" userLabel="Candy13">
+                                <rect key="frame" x="150" y="300" width="60" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="60" id="Rcm-lR-qQf"/>
+                                    <constraint firstAttribute="height" constant="60" id="q8r-DE-6vo"/>
+                                    <constraint firstAttribute="width" constant="60" id="ypE-Kz-e4X"/>
+                                    <constraint firstAttribute="height" constant="60" id="znR-Zz-UHq"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="Rcm-lR-qQf"/>
+                                        <exclude reference="znR-Zz-UHq"/>
+                                    </mask>
+                                </variation>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="SelectedCandy" translatesAutoresizingMaskIntoConstraints="NO" id="GJc-11-EVY" userLabel="Candy15">
+                                <rect key="frame" x="310" y="300" width="60" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="htZ-gc-t4Y"/>
+                                    <constraint firstAttribute="width" constant="60" id="oQF-hU-ggA"/>
+                                    <constraint firstAttribute="height" constant="60" id="p8j-dc-szq"/>
+                                    <constraint firstAttribute="width" constant="60" id="qOh-Pi-yeh"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="oQF-hU-ggA"/>
+                                        <exclude reference="p8j-dc-szq"/>
+                                    </mask>
+                                </variation>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gCJ-Vb-rWA">
+                                <rect key="frame" x="269" y="531" width="63" height="26"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="63" id="52q-6W-PJh"/>
+                                    <constraint firstAttribute="height" constant="26" id="WKw-i0-1VD"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <state key="normal" title="Exit">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tJO-jh-ZNH" userLabel="8">
+                                <rect key="frame" x="395" y="145" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="5xa-N6-Qxf"/>
+                                    <constraint firstAttribute="height" constant="50" id="NzH-Ef-OjT"/>
+                                </constraints>
+                                <state key="normal" title="Button" image="PinkCandy"/>
+                                <connections>
+                                    <action selector="Candy8Button:" destination="GhM-7A-LLe" eventType="touchUpInside" id="D8W-IH-yxL"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="SelectedCandy" translatesAutoresizingMaskIntoConstraints="NO" id="jP7-1S-9Kt" userLabel="Candy9">
+                                <rect key="frame" x="150" y="220" width="60" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="0gS-jR-zla"/>
+                                    <constraint firstAttribute="height" constant="60" id="83S-iV-inz"/>
+                                    <constraint firstAttribute="width" constant="60" id="9pH-8v-b5f"/>
+                                    <constraint firstAttribute="width" constant="60" id="jDw-4A-KlY"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="0gS-jR-zla"/>
+                                        <exclude reference="9pH-8v-b5f"/>
+                                    </mask>
+                                </variation>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a3M-V9-fd7" userLabel="9">
+                                <rect key="frame" x="155" y="225" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="78M-mz-GGI"/>
+                                    <constraint firstAttribute="width" constant="50" id="dl3-3w-nEf"/>
+                                </constraints>
+                                <state key="normal" title="Button" image="GreenCandy"/>
+                                <connections>
+                                    <action selector="Candy9Button:" destination="GhM-7A-LLe" eventType="touchUpInside" id="ibx-Yr-FWK"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wbx-cG-da5" userLabel="10">
+                                <rect key="frame" x="235" y="225" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="M87-iY-YTh"/>
+                                    <constraint firstAttribute="height" constant="50" id="kXY-6l-9xI"/>
+                                </constraints>
+                                <state key="normal" title="Button" image="GreenCandy"/>
+                                <connections>
+                                    <action selector="Candy10Button:" destination="GhM-7A-LLe" eventType="touchUpInside" id="ekJ-jd-MkT"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gjN-fp-DCn" userLabel="11">
+                                <rect key="frame" x="315" y="225" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="6Nr-PY-diZ"/>
+                                    <constraint firstAttribute="height" constant="50" id="uLT-I2-NlE"/>
+                                </constraints>
+                                <state key="normal" title="Button" image="BlueCandy"/>
+                                <connections>
+                                    <action selector="Candy11Button:" destination="GhM-7A-LLe" eventType="touchUpInside" id="5Tn-jw-NSH"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="SelectedCandy" translatesAutoresizingMaskIntoConstraints="NO" id="X4N-3O-Wbf" userLabel="Candy12">
+                                <rect key="frame" x="390" y="220" width="60" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="A9f-au-KdZ"/>
+                                    <constraint firstAttribute="width" constant="60" id="UBa-ar-30M"/>
+                                    <constraint firstAttribute="width" constant="60" id="VWN-8P-K5i"/>
+                                    <constraint firstAttribute="height" constant="60" id="bbY-Sv-NlX"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="A9f-au-KdZ"/>
+                                        <exclude reference="UBa-ar-30M"/>
+                                    </mask>
+                                </variation>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A4l-4I-T9U" userLabel="12">
+                                <rect key="frame" x="395" y="225" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="SgQ-xZ-GcG"/>
+                                    <constraint firstAttribute="width" constant="50" id="e98-QF-xST"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="50" id="jII-AM-hwa"/>
+                                    <constraint firstAttribute="height" constant="50" id="kL9-w3-2q1"/>
+                                </constraints>
+                                <state key="normal" title="Button" image="GreenCandy"/>
+                                <connections>
+                                    <action selector="Candy12Button:" destination="GhM-7A-LLe" eventType="touchUpInside" id="FR9-pV-Jg3"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YVN-Jc-IGd" userLabel="13">
+                                <rect key="frame" x="155" y="305" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="cXx-br-Qyv"/>
+                                    <constraint firstAttribute="height" constant="50" id="f2d-CB-AmQ"/>
+                                </constraints>
+                                <state key="normal" title="Button" image="GreenCandy"/>
+                                <connections>
+                                    <action selector="Candy13Button:" destination="GhM-7A-LLe" eventType="touchUpInside" id="g6Y-Ev-7q5"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="SelectedCandy" translatesAutoresizingMaskIntoConstraints="NO" id="z6F-jY-aeh" userLabel="Candy14">
+                                <rect key="frame" x="230" y="300" width="60" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="GNy-q5-ohH"/>
+                                    <constraint firstAttribute="width" constant="60" id="Jal-43-xHH"/>
+                                    <constraint firstAttribute="height" constant="60" id="fMN-Z5-gPI"/>
+                                    <constraint firstAttribute="width" constant="60" id="l1A-Vg-MRU"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="GNy-q5-ohH"/>
+                                        <exclude reference="Jal-43-xHH"/>
+                                    </mask>
+                                </variation>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4p7-kQ-pAE" userLabel="14">
+                                <rect key="frame" x="235" y="305" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="Foz-kL-rEv"/>
+                                    <constraint firstAttribute="height" constant="50" id="WQi-a5-tx4"/>
+                                </constraints>
+                                <state key="normal" title="Button" image="BlueCandy"/>
+                                <connections>
+                                    <action selector="Candy14Button:" destination="GhM-7A-LLe" eventType="touchUpInside" id="ZvN-ZD-4gt"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="SelectedCandy" translatesAutoresizingMaskIntoConstraints="NO" id="oT6-82-t1v" userLabel="Candy16">
+                                <rect key="frame" x="390" y="300" width="60" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="60" id="2Wa-zc-CMj"/>
+                                    <constraint firstAttribute="width" constant="60" id="LsG-Xy-1hm"/>
+                                    <constraint firstAttribute="height" constant="60" id="MpR-hc-e8u"/>
+                                    <constraint firstAttribute="height" constant="60" id="U7e-jM-eHf"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="2Wa-zc-CMj"/>
+                                        <exclude reference="U7e-jM-eHf"/>
+                                    </mask>
+                                </variation>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BcR-H4-5iD" userLabel="16">
+                                <rect key="frame" x="395" y="305" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="EjS-jc-Tnv"/>
+                                    <constraint firstAttribute="width" constant="50" id="jjU-0i-jv9"/>
+                                </constraints>
+                                <state key="normal" title="Button" image="BlueCandy"/>
+                                <connections>
+                                    <action selector="Candy16Button:" destination="GhM-7A-LLe" eventType="touchUpInside" id="irZ-pw-KgL"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bPF-5t-RNc" userLabel="15">
+                                <rect key="frame" x="315" y="305" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="Dx7-dz-Bp1"/>
+                                    <constraint firstAttribute="height" constant="50" id="Ecy-kt-tf0"/>
+                                </constraints>
+                                <state key="normal" title="Button" image="OrangeCandy"/>
+                                <connections>
+                                    <action selector="Candy15Button:" destination="GhM-7A-LLe" eventType="touchUpInside" id="VMx-Q3-fPW"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.81176477670669556" blue="0.95686280727386475" alpha="0.57999999999999996" colorSpace="deviceRGB"/>
+                        <constraints>
+                            <constraint firstItem="BcR-H4-5iD" firstAttribute="leading" secondItem="GJc-11-EVY" secondAttribute="trailing" constant="25" id="0R6-xP-HLU"/>
+                            <constraint firstItem="dQP-jd-9W2" firstAttribute="top" secondItem="jP7-1S-9Kt" secondAttribute="bottom" constant="20" id="0cL-Dp-aDs"/>
+                            <constraint firstItem="rCF-Fg-FPe" firstAttribute="top" secondItem="Yot-y1-T4d" secondAttribute="bottom" constant="45" id="0mB-BS-kgr"/>
+                            <constraint firstItem="oT6-82-t1v" firstAttribute="leading" secondItem="GJc-11-EVY" secondAttribute="trailing" constant="20" id="15X-xF-hkJ"/>
+                            <constraint firstItem="JTg-1y-A7w" firstAttribute="top" secondItem="Yot-y1-T4d" secondAttribute="bottom" constant="40" id="1Qm-Ge-aEf"/>
+                            <constraint firstItem="4p7-kQ-pAE" firstAttribute="top" secondItem="lVg-ak-pAQ" secondAttribute="bottom" constant="25" id="1R1-CC-63j"/>
+                            <constraint firstItem="tJO-jh-ZNH" firstAttribute="leading" secondItem="zAQ-iL-u5h" secondAttribute="trailing" constant="25" id="1rE-aV-KbA"/>
+                            <constraint firstItem="IVm-VS-8UZ" firstAttribute="leading" secondItem="zAQ-iL-u5h" secondAttribute="trailing" constant="20" id="1yr-cE-A1m"/>
+                            <constraint firstItem="TJC-5V-RFr" firstAttribute="leading" secondItem="vu6-c2-w9g" secondAttribute="trailing" constant="25" id="2sw-oS-cYW"/>
+                            <constraint firstItem="P8n-nr-ZCC" firstAttribute="top" secondItem="3Qp-c6-0la" secondAttribute="bottom" constant="5" id="32E-QU-lZG"/>
+                            <constraint firstItem="lVg-ak-pAQ" firstAttribute="centerX" secondItem="vu6-c2-w9g" secondAttribute="centerX" id="3yZ-xP-oMS"/>
+                            <constraint firstItem="vjp-rd-Mr8" firstAttribute="top" secondItem="Yot-y1-T4d" secondAttribute="bottom" constant="40" id="49v-yB-YrM"/>
+                            <constraint firstItem="wbx-cG-da5" firstAttribute="top" secondItem="vu6-c2-w9g" secondAttribute="bottom" constant="25" id="5dn-6Q-TYk"/>
+                            <constraint firstItem="lVg-ak-pAQ" firstAttribute="top" secondItem="vu6-c2-w9g" secondAttribute="bottom" constant="20" id="5hw-qK-czb"/>
+                            <constraint firstItem="CrD-xz-hMH" firstAttribute="top" secondItem="vjp-rd-Mr8" secondAttribute="bottom" constant="20" id="6HR-TH-7sG"/>
+                            <constraint firstItem="qfK-Hg-8OT" firstAttribute="leading" secondItem="JTg-1y-A7w" secondAttribute="trailing" constant="20" id="6ax-xI-dea"/>
+                            <constraint firstItem="lVg-ak-pAQ" firstAttribute="leading" secondItem="a3M-V9-fd7" secondAttribute="trailing" constant="25" id="7NW-WB-2nh"/>
+                            <constraint firstItem="zAQ-iL-u5h" firstAttribute="leading" secondItem="vu6-c2-w9g" secondAttribute="trailing" constant="20" id="7vw-OA-esQ"/>
+                            <constraint firstItem="gjN-fp-DCn" firstAttribute="leading" secondItem="lVg-ak-pAQ" secondAttribute="trailing" constant="25" id="8BL-5u-mHX"/>
+                            <constraint firstItem="TJC-5V-RFr" firstAttribute="top" secondItem="qfK-Hg-8OT" secondAttribute="bottom" constant="25" id="8ZH-UB-7Tr"/>
+                            <constraint firstItem="A4l-4I-T9U" firstAttribute="top" secondItem="IVm-VS-8UZ" secondAttribute="bottom" constant="25" id="Aie-Qb-ogd"/>
+                            <constraint firstItem="qfK-Hg-8OT" firstAttribute="centerY" secondItem="rCF-Fg-FPe" secondAttribute="centerY" id="BAN-wo-di5"/>
+                            <constraint firstItem="Uh4-Nm-fR2" firstAttribute="top" secondItem="JTg-1y-A7w" secondAttribute="bottom" constant="25" id="BEx-F6-wTD"/>
+                            <constraint firstItem="95j-JT-wGD" firstAttribute="leading" secondItem="qfK-Hg-8OT" secondAttribute="trailing" constant="25" id="BiX-IR-hiH"/>
+                            <constraint firstItem="BcR-H4-5iD" firstAttribute="top" secondItem="X4N-3O-Wbf" secondAttribute="bottom" constant="25" id="Cxf-Go-6fR"/>
+                            <constraint firstItem="HMq-oh-ZVC" firstAttribute="centerY" secondItem="rCF-Fg-FPe" secondAttribute="centerY" id="DHM-K8-Vc4"/>
+                            <constraint firstItem="xK9-In-8Ap" firstAttribute="leading" secondItem="qfK-Hg-8OT" secondAttribute="trailing" constant="20" id="DWn-TL-EHG"/>
+                            <constraint firstItem="AqA-fp-q7b" firstAttribute="leading" secondItem="lVg-ak-pAQ" secondAttribute="trailing" constant="20" id="E9x-5I-0sj"/>
+                            <constraint firstItem="rCF-Fg-FPe" firstAttribute="centerX" secondItem="zl1-mg-oKf" secondAttribute="centerX" constant="-40" id="ETl-wV-cM9"/>
+                            <constraint firstItem="rzu-q2-qdE" firstAttribute="top" secondItem="vu6-c2-w9g" secondAttribute="bottom" constant="25" id="Fl3-Xi-L0p"/>
+                            <constraint firstItem="xK9-In-8Ap" firstAttribute="top" secondItem="Yot-y1-T4d" secondAttribute="bottom" constant="40" id="G9k-Yk-Z3N"/>
+                            <constraint firstItem="qfK-Hg-8OT" firstAttribute="top" secondItem="Yot-y1-T4d" secondAttribute="bottom" constant="40" id="K3z-6S-IvV"/>
+                            <constraint firstItem="rzu-q2-qdE" firstAttribute="leading" secondItem="jP7-1S-9Kt" secondAttribute="trailing" constant="25" id="LL9-8D-LRA"/>
+                            <constraint firstItem="qfK-Hg-8OT" firstAttribute="leading" secondItem="JTg-1y-A7w" secondAttribute="trailing" constant="20" id="OJa-JJ-ApA"/>
+                            <constraint firstItem="jP7-1S-9Kt" firstAttribute="top" secondItem="CrD-xz-hMH" secondAttribute="bottom" constant="20" id="PA4-ci-6YE"/>
+                            <constraint firstItem="bPF-5t-RNc" firstAttribute="leading" secondItem="z6F-jY-aeh" secondAttribute="trailing" constant="25" id="RA9-M2-Npo"/>
+                            <constraint firstItem="5O2-yh-Npi" firstAttribute="leading" secondItem="JTg-1y-A7w" secondAttribute="trailing" constant="25" id="REu-H9-d3C"/>
+                            <constraint firstItem="wbx-cG-da5" firstAttribute="centerX" secondItem="Uh4-Nm-fR2" secondAttribute="centerX" id="SYR-Of-HTV"/>
+                            <constraint firstItem="z6F-jY-aeh" firstAttribute="top" secondItem="lVg-ak-pAQ" secondAttribute="bottom" constant="20" id="SdX-SB-ci3"/>
+                            <constraint firstItem="a3M-V9-fd7" firstAttribute="top" secondItem="CrD-xz-hMH" secondAttribute="bottom" constant="25" id="Sib-jc-fmx"/>
+                            <constraint firstItem="Uj2-6g-QeH" firstAttribute="top" secondItem="rsT-yv-XXe" secondAttribute="bottom" constant="5" id="U4j-xn-k5P"/>
+                            <constraint firstItem="vu6-c2-w9g" firstAttribute="leading" secondItem="rUm-YN-vQ3" secondAttribute="trailing" constant="25" id="U8l-Hv-zR1"/>
+                            <constraint firstItem="zAQ-iL-u5h" firstAttribute="top" secondItem="qfK-Hg-8OT" secondAttribute="bottom" constant="20" id="VZj-5r-2W1"/>
+                            <constraint firstItem="YVN-Jc-IGd" firstAttribute="top" secondItem="jP7-1S-9Kt" secondAttribute="bottom" constant="25" id="VlX-bd-P16"/>
+                            <constraint firstItem="gCJ-Vb-rWA" firstAttribute="centerX" secondItem="zl1-mg-oKf" secondAttribute="centerX" id="Vxs-us-Sce"/>
+                            <constraint firstItem="lVg-ak-pAQ" firstAttribute="leading" secondItem="jP7-1S-9Kt" secondAttribute="trailing" constant="20" id="Wb8-iI-oqE"/>
+                            <constraint firstItem="JTg-1y-A7w" firstAttribute="leading" secondItem="HMq-oh-ZVC" secondAttribute="trailing" constant="25" id="XCQ-Hv-p8G"/>
+                            <constraint firstItem="IVm-VS-8UZ" firstAttribute="top" secondItem="xK9-In-8Ap" secondAttribute="bottom" constant="20" id="Yiq-n8-iwQ"/>
+                            <constraint firstItem="5O2-yh-Npi" firstAttribute="top" secondItem="Yot-y1-T4d" secondAttribute="bottom" constant="45" id="ZUA-Qj-fxd"/>
+                            <constraint firstItem="Htt-aG-vnJ" firstAttribute="top" secondItem="P8n-nr-ZCC" secondAttribute="bottom" constant="5" id="ZiL-51-NkS"/>
+                            <constraint firstItem="GJc-11-EVY" firstAttribute="top" secondItem="AqA-fp-q7b" secondAttribute="bottom" constant="20" id="a1d-eN-U7J"/>
+                            <constraint firstItem="z6F-jY-aeh" firstAttribute="leading" secondItem="YVN-Jc-IGd" secondAttribute="trailing" constant="25" id="aSC-kS-zp4"/>
+                            <constraint firstItem="95j-JT-wGD" firstAttribute="top" secondItem="Yot-y1-T4d" secondAttribute="bottom" constant="45" id="d4w-pu-vIZ"/>
+                            <constraint firstItem="X4N-3O-Wbf" firstAttribute="leading" secondItem="AqA-fp-q7b" secondAttribute="trailing" constant="20" id="d8N-yJ-3tR"/>
+                            <constraint firstItem="rUm-YN-vQ3" firstAttribute="top" secondItem="vjp-rd-Mr8" secondAttribute="bottom" constant="25" id="dCf-gx-N2z"/>
+                            <constraint firstItem="Uh4-Nm-fR2" firstAttribute="centerX" secondItem="rCF-Fg-FPe" secondAttribute="centerX" id="dlC-4X-yJ5"/>
+                            <constraint firstItem="gjN-fp-DCn" firstAttribute="top" secondItem="zAQ-iL-u5h" secondAttribute="bottom" constant="25" id="e2v-Pa-fdQ"/>
+                            <constraint firstItem="tJO-jh-ZNH" firstAttribute="top" secondItem="xK9-In-8Ap" secondAttribute="bottom" constant="25" id="gs5-Vq-pjU"/>
+                            <constraint firstItem="bPF-5t-RNc" firstAttribute="top" secondItem="AqA-fp-q7b" secondAttribute="bottom" constant="25" id="hTv-6i-H7h"/>
+                            <constraint firstItem="CrD-xz-hMH" firstAttribute="centerX" secondItem="HMq-oh-ZVC" secondAttribute="centerX" id="hvU-NP-Xpr"/>
+                            <constraint firstItem="JTg-1y-A7w" firstAttribute="leading" secondItem="vjp-rd-Mr8" secondAttribute="trailing" constant="20" id="iuL-21-gYx"/>
+                            <constraint firstItem="4p7-kQ-pAE" firstAttribute="centerX" secondItem="wbx-cG-da5" secondAttribute="centerX" id="j0M-Ck-sbU"/>
+                            <constraint firstItem="A4l-4I-T9U" firstAttribute="leading" secondItem="AqA-fp-q7b" secondAttribute="trailing" constant="25" id="jKh-Md-zRj"/>
+                            <constraint firstItem="gCJ-Vb-rWA" firstAttribute="top" secondItem="Htt-aG-vnJ" secondAttribute="bottom" constant="5" id="kC6-mc-kdp"/>
+                            <constraint firstItem="GJc-11-EVY" firstAttribute="leading" secondItem="z6F-jY-aeh" secondAttribute="trailing" constant="20" id="kg0-EK-3NE"/>
+                            <constraint firstItem="X4N-3O-Wbf" firstAttribute="top" secondItem="IVm-VS-8UZ" secondAttribute="bottom" constant="20" id="lEy-LR-Hgf"/>
+                            <constraint firstItem="oT6-82-t1v" firstAttribute="top" secondItem="X4N-3O-Wbf" secondAttribute="bottom" constant="20" id="m4O-bf-8yv"/>
+                            <constraint firstItem="vu6-c2-w9g" firstAttribute="top" secondItem="JTg-1y-A7w" secondAttribute="bottom" constant="20" id="mdJ-Up-6Cl"/>
+                            <constraint firstItem="z6F-jY-aeh" firstAttribute="leading" secondItem="dQP-jd-9W2" secondAttribute="trailing" constant="20" id="odf-3Y-Vqt"/>
+                            <constraint firstItem="JTg-1y-A7w" firstAttribute="centerX" secondItem="zl1-mg-oKf" secondAttribute="centerX" constant="-40" id="piR-Dc-P52"/>
+                            <constraint firstItem="Htt-aG-vnJ" firstAttribute="centerX" secondItem="zl1-mg-oKf" secondAttribute="centerX" id="qzq-3K-oLb"/>
+                            <constraint firstItem="rsT-yv-XXe" firstAttribute="top" secondItem="gCJ-Vb-rWA" secondAttribute="bottom" constant="5" id="r1m-9E-LFb"/>
+                            <constraint firstItem="vu6-c2-w9g" firstAttribute="centerX" secondItem="rCF-Fg-FPe" secondAttribute="centerX" id="sTE-Ej-Ynx"/>
+                            <constraint firstItem="P8n-nr-ZCC" firstAttribute="centerX" secondItem="zl1-mg-oKf" secondAttribute="centerX" id="suF-4d-EoK"/>
+                            <constraint firstItem="3Qp-c6-0la" firstAttribute="centerX" secondItem="zl1-mg-oKf" secondAttribute="centerX" id="tLc-Cp-cLP"/>
+                            <constraint firstItem="3Qp-c6-0la" firstAttribute="top" secondItem="z6F-jY-aeh" secondAttribute="bottom" constant="10" id="uUg-OB-4Nt"/>
+                            <constraint firstItem="AqA-fp-q7b" firstAttribute="top" secondItem="zAQ-iL-u5h" secondAttribute="bottom" constant="20" id="ulT-qJ-Zn1"/>
+                            <constraint firstItem="rsT-yv-XXe" firstAttribute="centerX" secondItem="zl1-mg-oKf" secondAttribute="centerX" id="v0g-S9-c8t"/>
+                            <constraint firstItem="z6F-jY-aeh" firstAttribute="centerX" secondItem="wbx-cG-da5" secondAttribute="centerX" id="wly-eC-LV3"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="6ax-xI-dea"/>
+                                <exclude reference="BAN-wo-di5"/>
+                                <exclude reference="kC6-mc-kdp"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="Candy1" destination="HMq-oh-ZVC" id="QC6-ps-4Qf"/>
+                        <outlet property="Candy10" destination="rzu-q2-qdE" id="4ix-Dq-Zi4"/>
+                        <outlet property="Candy10Selected" destination="lVg-ak-pAQ" id="DiH-Ke-Mop"/>
+                        <outlet property="Candy11" destination="gjN-fp-DCn" id="5id-co-HDg"/>
+                        <outlet property="Candy11Selected" destination="AqA-fp-q7b" id="Upg-gk-6TM"/>
+                        <outlet property="Candy12" destination="A4l-4I-T9U" id="RQP-Dn-Ehw"/>
+                        <outlet property="Candy12Selected" destination="X4N-3O-Wbf" id="rnd-o7-UB1"/>
+                        <outlet property="Candy13" destination="YVN-Jc-IGd" id="o3w-Zo-JLh"/>
+                        <outlet property="Candy13Selected" destination="dQP-jd-9W2" id="kLs-dm-ynE"/>
+                        <outlet property="Candy14" destination="4p7-kQ-pAE" id="Tgc-O6-GGE"/>
+                        <outlet property="Candy14Selected" destination="z6F-jY-aeh" id="jDv-db-bef"/>
+                        <outlet property="Candy15" destination="bPF-5t-RNc" id="5vo-b2-pOm"/>
+                        <outlet property="Candy15Selected" destination="GJc-11-EVY" id="bIt-5K-Fi4"/>
+                        <outlet property="Candy16" destination="BcR-H4-5iD" id="CcC-C9-yjE"/>
+                        <outlet property="Candy16Selected" destination="oT6-82-t1v" id="B4c-dm-QU9"/>
+                        <outlet property="Candy1Selected" destination="vjp-rd-Mr8" id="bXu-YM-i0q"/>
+                        <outlet property="Candy2" destination="rCF-Fg-FPe" id="FqO-zy-FqH"/>
+                        <outlet property="Candy2Selected" destination="JTg-1y-A7w" id="NCj-bY-c8o"/>
+                        <outlet property="Candy3" destination="5O2-yh-Npi" id="Ivu-Jw-R6X"/>
+                        <outlet property="Candy3Selected" destination="qfK-Hg-8OT" id="NuQ-p7-ZoJ"/>
+                        <outlet property="Candy4" destination="95j-JT-wGD" id="UEc-wP-lyx"/>
+                        <outlet property="Candy4Selected" destination="xK9-In-8Ap" id="eyX-yd-GHE"/>
+                        <outlet property="Candy5" destination="rUm-YN-vQ3" id="j5o-eS-p44"/>
+                        <outlet property="Candy5Selected" destination="CrD-xz-hMH" id="Dq9-QQ-auO"/>
+                        <outlet property="Candy6" destination="Uh4-Nm-fR2" id="8gO-Wo-0OI"/>
+                        <outlet property="Candy6Selected" destination="vu6-c2-w9g" id="9bF-so-Vbs"/>
+                        <outlet property="Candy7" destination="TJC-5V-RFr" id="Qly-kw-z9R"/>
+                        <outlet property="Candy7Selected" destination="zAQ-iL-u5h" id="n83-TR-mMA"/>
+                        <outlet property="Candy8" destination="tJO-jh-ZNH" id="pfb-fl-2aO"/>
+                        <outlet property="Candy8Selected" destination="IVm-VS-8UZ" id="Ozn-uS-1J2"/>
+                        <outlet property="Candy9" destination="a3M-V9-fd7" id="RX3-lO-IyD"/>
+                        <outlet property="Candy9Selected" destination="jP7-1S-9Kt" id="Bte-cJ-imB"/>
+                        <outlet property="Exit" destination="gCJ-Vb-rWA" id="YNa-QU-M81"/>
+                        <outlet property="HighScore" destination="Htt-aG-vnJ" id="fEp-FC-j4X"/>
+                        <outlet property="MovesLeft" destination="3Qp-c6-0la" id="GAS-xv-tQi"/>
+                        <outlet property="Score" destination="P8n-nr-ZCC" id="b6O-lR-1C3"/>
+                        <outlet property="Shuffle" destination="rsT-yv-XXe" id="QDf-qx-oUg"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4Yw-qT-CPV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4715" y="-1358"/>
         </scene>
         <!--Flappy Game-->
         <scene sceneID="Ivd-Yw-4DO">
@@ -1312,7 +1858,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hJt-FW-x0J">
-                                <rect key="frame" x="225" y="225" width="150" height="150"/>
+                                <rect key="frame" x="225" y="295" width="150" height="150"/>
                                 <animations/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="150" id="7w9-wr-kc3"/>
@@ -1323,11 +1869,24 @@
                                     <segue destination="NCQ-5h-pmp" kind="presentation" modalTransitionStyle="crossDissolve" id="aGj-8u-3bd"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Be4-he-U4u">
+                                <rect key="frame" x="225" y="75" width="150" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="cDd-3o-8AG"/>
+                                    <constraint firstAttribute="height" constant="150" id="hmS-wu-Xny"/>
+                                </constraints>
+                                <state key="normal" image="candyCrushLogo"/>
+                                <connections>
+                                    <segue destination="GhM-7A-LLe" kind="presentation" modalTransitionStyle="crossDissolve" id="kfD-Qb-Hih"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <animations/>
                         <constraints>
                             <constraint firstItem="6K8-iz-6hE" firstAttribute="top" secondItem="J5w-v5-Dwq" secondAttribute="bottom" constant="10" id="2g7-ud-frf"/>
-                            <constraint firstItem="hJt-FW-x0J" firstAttribute="centerY" secondItem="b10-xq-BN2" secondAttribute="centerY" id="W87-PL-oD0"/>
+                            <constraint firstItem="hJt-FW-x0J" firstAttribute="top" secondItem="Be4-he-U4u" secondAttribute="bottom" constant="70" id="FEy-E8-ZJs"/>
+                            <constraint firstItem="Be4-he-U4u" firstAttribute="centerX" secondItem="b10-xq-BN2" secondAttribute="centerX" id="K4l-qA-fbU"/>
+                            <constraint firstItem="hJt-FW-x0J" firstAttribute="centerY" secondItem="b10-xq-BN2" secondAttribute="centerY" constant="70" id="W87-PL-oD0"/>
                             <constraint firstItem="6K8-iz-6hE" firstAttribute="leading" secondItem="b10-xq-BN2" secondAttribute="leadingMargin" constant="10" id="jlc-4W-hDM"/>
                             <constraint firstItem="hJt-FW-x0J" firstAttribute="centerX" secondItem="b10-xq-BN2" secondAttribute="centerX" id="ry0-hR-7iZ"/>
                         </constraints>
@@ -1699,13 +2258,19 @@
     </scenes>
     <resources>
         <image name="BirdUp.png" width="40" height="40"/>
+        <image name="BlueCandy" width="297" height="299"/>
         <image name="GameBack.png" width="320" height="480"/>
+        <image name="GreenCandy" width="297" height="299"/>
         <image name="OkNewTrip" width="720" height="200"/>
+        <image name="OrangeCandy" width="297" height="299"/>
+        <image name="PinkCandy" width="297" height="299"/>
+        <image name="SelectedCandy" width="50" height="50"/>
         <image name="Tunnel.png" width="50" height="100"/>
         <image name="WhiteStar" width="1979" height="1962"/>
         <image name="backButton" width="256" height="256"/>
         <image name="backButtonSmall" width="36" height="36"/>
         <image name="burger.png" width="19" height="17"/>
+        <image name="candyCrushLogo" width="300" height="300"/>
         <image name="choosePhoto" width="256" height="256"/>
         <image name="emptyImage" width="300" height="250"/>
         <image name="flappyGameOver" width="510" height="132"/>
@@ -1719,8 +2284,8 @@
         <image name="takePhoto" width="512" height="512"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="uy4-x5-2D8"/>
-        <segue reference="cKy-Jj-8HY"/>
-        <segue reference="pU7-Mv-mbd"/>
+        <segue reference="Gf5-oo-kyB"/>
+        <segue reference="aGj-8u-3bd"/>
+        <segue reference="ofM-AI-3BJ"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -14,6 +14,7 @@
 		44FA49C8E2DCD94AB1DEA855 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CA12CD6286D3D05E336A1706 /* libPods.a */; };
 		8474039D1BD8A18700A460D8 /* InstaTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84E6D4E51BD872D700ECAE47 /* InstaTableViewController.m */; };
 		8474039E1BD8A18F00A460D8 /* InstagramPost.m in Sources */ = {isa = PBXBuildFile; fileRef = 84E6D4DC1BD86CFB00ECAE47 /* InstagramPost.m */; };
+		847403A31BD8BA6800A460D8 /* CandyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 847403A21BD8BA6800A460D8 /* CandyViewController.m */; settings = {ASSET_TAGS = (); }; };
 		84CF452B1BCAD0EA00EAA3BF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 84CF452A1BCAD0EA00EAA3BF /* main.m */; };
 		84CF452E1BCAD0EA00EAA3BF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 84CF452D1BCAD0EA00EAA3BF /* AppDelegate.m */; };
 		84CF45311BCAD0EA00EAA3BF /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84CF45301BCAD0EA00EAA3BF /* ViewController.m */; };
@@ -108,6 +109,8 @@
 		0BAA7ABA1BD34A4D00CB7443 /* CustomTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomTableViewCell.h; sourceTree = "<group>"; };
 		0BAA7ABB1BD34A4D00CB7443 /* CustomTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomTableViewCell.m; sourceTree = "<group>"; };
 		4B5D5618892B20D168B80EB1 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		847403A11BD8BA6800A460D8 /* CandyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CandyViewController.h; sourceTree = "<group>"; };
+		847403A21BD8BA6800A460D8 /* CandyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CandyViewController.m; sourceTree = "<group>"; };
 		84CF45261BCAD0EA00EAA3BF /* InControl.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InControl.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84CF452A1BCAD0EA00EAA3BF /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		84CF452C1BCAD0EA00EAA3BF /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -255,6 +258,15 @@
 				0B8208951BD43CC500117BE1 /* MeetupTableViewCell.m */,
 			);
 			name = Meetup;
+			sourceTree = "<group>";
+		};
+		847403A41BD8BA6C00A460D8 /* Candy */ = {
+			isa = PBXGroup;
+			children = (
+				847403A11BD8BA6800A460D8 /* CandyViewController.h */,
+				847403A21BD8BA6800A460D8 /* CandyViewController.m */,
+			);
+			name = Candy;
 			sourceTree = "<group>";
 		};
 		84CF451D1BCAD0EA00EAA3BF = {
@@ -440,6 +452,7 @@
 			children = (
 				84CF46601BCE29DB00EAA3BF /* GamesViewController.h */,
 				84CF46611BCE29DB00EAA3BF /* GamesViewController.m */,
+				847403A41BD8BA6C00A460D8 /* Candy */,
 				84CF46B21BD067FC00EAA3BF /* FlappyBird */,
 			);
 			name = Games;
@@ -749,6 +762,7 @@
 				D9CF57E61BD877E3001B24F9 /* PhotoCell.m in Sources */,
 				0BAA7ABC1BD34A4D00CB7443 /* CustomTableViewCell.m in Sources */,
 				84E6D4D41BD6F93200ECAE47 /* VisitedTableViewCell.m in Sources */,
+				847403A31BD8BA6800A460D8 /* CandyViewController.m in Sources */,
 				D9682D5D1BCD4E1600647FD8 /* APIManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

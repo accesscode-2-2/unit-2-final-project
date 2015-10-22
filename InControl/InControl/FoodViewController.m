@@ -84,6 +84,7 @@ UITableViewDelegate
     
     result.photoUpdateListener = ^{
         [cell.imageView sd_setImageWithURL:result.photoURL];
+        NSLog(@"result.photoURL %@",result.photoURL);
     };
     
     [cell.imageView sd_setImageWithURL:result.photoURL placeholderImage:[UIImage imageNamed:@"foodimg"]];
