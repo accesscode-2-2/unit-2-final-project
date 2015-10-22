@@ -2284,14 +2284,8 @@
         <image name="takePhoto" width="512" height="512"/>
     </resources>
     <inferredMetricsTieBreakers>
-<<<<<<< HEAD
-        <segue reference="Gf5-oo-kyB"/>
-        <segue reference="aGj-8u-3bd"/>
-        <segue reference="ofM-AI-3BJ"/>
-=======
         <segue reference="uy4-x5-2D8"/>
         <segue reference="ofM-AI-3BJ"/>
         <segue reference="pU7-Mv-mbd"/>
->>>>>>> 2c84798fb95a83b9f5ef241e787d6002a01fd8d0
     </inferredMetricsTieBreakers>
 </document>
