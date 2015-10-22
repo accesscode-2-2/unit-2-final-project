@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 #import "ViewController.h"
+#import <UIKit/UIKit.h>
+#import <AVFoundation/AVFoundation.h>
 
 @class QuestionDetailVC;
 
@@ -31,6 +33,8 @@
 @property (weak, nonatomic) IBOutlet UIButton *doneButton;
 @property (strong, nonatomic) IBOutlet UIView *questionDetailView;
 
--(void)addColorQuestionDetail; 
+-(void)addColorQuestionDetail;
+
+@property (strong, nonatomic) AVSpeechSynthesizer *synthesizer;
 
 @end

@@ -28,6 +28,10 @@
 		5F9B082F1BCC9ECD00460FF2 /* QuestionDetailVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F9B082E1BCC9ECC00460FF2 /* QuestionDetailVC.m */; };
 		5F9B08321BCDAD1500460FF2 /* MainPageVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F9B08311BCDAD1500460FF2 /* MainPageVC.m */; };
 		5FDF1A2C1BD1B7E200720A44 /* EntryLogsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FDF1A2B1BD1B7E200720A44 /* EntryLogsTableViewController.m */; settings = {ASSET_TAGS = (); }; };
+		5FE787311BD840590008E0FC /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5FE787301BD840590008E0FC /* AudioToolbox.framework */; };
+		5FE787331BD8406C0008E0FC /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5FE787321BD8406C0008E0FC /* AVFoundation.framework */; };
+		5FE787351BD840AD0008E0FC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5FE787341BD840AD0008E0FC /* Foundation.framework */; };
+		5FE787371BD840B90008E0FC /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5FE787361BD840B90008E0FC /* UIKit.framework */; };
 		5FE7B03A1BD3EF3200C5E163 /* HabitInfoData.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FE7B0391BD3EF3200C5E163 /* HabitInfoData.m */; settings = {ASSET_TAGS = (); }; };
 		5FE7B0431BD41E1500C5E163 /* HabitInfoTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FE7B0421BD41E1500C5E163 /* HabitInfoTVC.m */; settings = {ASSET_TAGS = (); }; };
 		5FE7B04C1BD5178D00C5E163 /* HabitNewsTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FE7B04B1BD5178D00C5E163 /* HabitNewsTVC.m */; settings = {ASSET_TAGS = (); }; };
@@ -87,6 +91,10 @@
 		5F9B08311BCDAD1500460FF2 /* MainPageVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainPageVC.m; sourceTree = "<group>"; };
 		5FDF1A2A1BD1B7E200720A44 /* EntryLogsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EntryLogsTableViewController.h; sourceTree = "<group>"; };
 		5FDF1A2B1BD1B7E200720A44 /* EntryLogsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EntryLogsTableViewController.m; sourceTree = "<group>"; };
+		5FE787301BD840590008E0FC /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		5FE787321BD8406C0008E0FC /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		5FE787341BD840AD0008E0FC /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		5FE787361BD840B90008E0FC /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		5FE7B0381BD3EF3200C5E163 /* HabitInfoData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HabitInfoData.h; sourceTree = "<group>"; };
 		5FE7B0391BD3EF3200C5E163 /* HabitInfoData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HabitInfoData.m; sourceTree = "<group>"; };
 		5FE7B0411BD41E1500C5E163 /* HabitInfoTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HabitInfoTVC.h; sourceTree = "<group>"; };
@@ -139,6 +147,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5FE787371BD840B90008E0FC /* UIKit.framework in Frameworks */,
+				5FE787351BD840AD0008E0FC /* Foundation.framework in Frameworks */,
+				5FE787331BD8406C0008E0FC /* AVFoundation.framework in Frameworks */,
+				5FE787311BD840590008E0FC /* AudioToolbox.framework in Frameworks */,
 				DCB588911BD5E65D00777FF9 /* CoreLocation.framework in Frameworks */,
 				4A5A43BBA13FCB718327B866 /* libPods.a in Frameworks */,
 			);
@@ -304,6 +316,10 @@
 		C7D24797CBE441A3A8CF05A9 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				5FE787361BD840B90008E0FC /* UIKit.framework */,
+				5FE787341BD840AD0008E0FC /* Foundation.framework */,
+				5FE787321BD8406C0008E0FC /* AVFoundation.framework */,
+				5FE787301BD840590008E0FC /* AudioToolbox.framework */,
 				DCB588901BD5E65D00777FF9 /* CoreLocation.framework */,
 				288369826A80E7C37FA68C71 /* libPods.a */,
 			);

@@ -18,6 +18,27 @@
 #pragma mark
 #pragma LifeCycle Methods
 
+- (void)viewDidLoad{
+    [super viewDidLoad];
+    
+    self.view.backgroundColor = [SharedManager sharedModel].colesiumGrey;
+    
+    self.dareToTryButton.layer.borderWidth = 3.3;
+    self.dareToTryButton.layer.borderColor = [SharedManager sharedModel].brickRed.CGColor;
+    self.dareToTryButton.backgroundColor = [SharedManager sharedModel].colesiumGrey;
+    self.dareToTryButton.layer.cornerRadius = 18;
+    self.dareToTryButton.tintColor = [SharedManager sharedModel].brickRed;
+    
+}
+
+- (IBAction)dareToTry:(id)sender {
+    MainPageVC *mvc = (MainPageVC *)[self.storyboard instantiateViewControllerWithIdentifier:@"showMainPgVC"];
+    [self presentViewController:mvc animated:YES completion:nil];
+}
+
+
+
+
 //- (void)viewDidAppear:(BOOL)animated {
 //    [super viewDidAppear:animated];
 //    
@@ -43,59 +64,56 @@
 //        [self presentViewController:logInViewController animated:YES completion:NULL];
 //    }
 //}
+
+
+//- (IBAction)cancelButtonTapped:(UIButton *)sender {
+//    [self dismissViewControllerAnimated:YES completion:nil];
+//}
 //
-//- (void)viewDidLoad{
-//    [super viewDidLoad];
+//- (IBAction)signUpButtonTapped:(UIButton *)sender {
+//    
+//    PFUser *thisUser = [PFUser user];
+//    if(![[thisUser objectForKey:@"emailVerified"] boolValue]){
+//        [thisUser fetch];
+//    }
+//    
+//    if ([self.passwordTextField.text isEqualToString:self.confirmPasswordTextField.text] && self.passwordTextField.text.length !=0) {
+//        PFUser *thisUser = [PFUser user];
+//        thisUser.email = self.emailTextField.text;
+//        thisUser.username = self.usernameTextField.text;
+//        thisUser.password = self.passwordTextField.text;
+//        
+//        [thisUser signUpInBackgroundWithBlock:^(BOOL succeeded, NSError * _Nullable error) {
+//            
+//            [[SharedManager sharedModel].currentUser saveInBackground];
+//            
+//            MainPageVC *mvc = (MainPageVC *)[self.storyboard instantiateViewControllerWithIdentifier:@"showMainPgVC"];
+//            [self presentViewController:mvc animated:YES completion:nil];
+//        }];
+//        
+//        
+//    } else {
+//        
+//        UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"Error" message:@"The password field is either empty or does not match the confirm password field" preferredStyle:UIAlertControllerStyleAlert];
+//        
+//        UIAlertAction *okAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+//            [alertController dismissViewControllerAnimated:YES completion:nil];
+//        }];
+//        
+//        [alertController addAction:okAction];
+//        
+//        [self presentViewController:alertController animated:YES completion:nil];
+//    }
+//    
 //}
 
-- (IBAction)cancelButtonTapped:(UIButton *)sender {
-    [self dismissViewControllerAnimated:YES completion:nil];
-}
-
-- (IBAction)signUpButtonTapped:(UIButton *)sender {
-    
-    PFUser *thisUser = [PFUser user];
-    if(![[thisUser objectForKey:@"emailVerified"] boolValue]){
-        [thisUser fetch];
-    }
-    
-    if ([self.passwordTextField.text isEqualToString:self.confirmPasswordTextField.text] && self.passwordTextField.text.length !=0) {
-        PFUser *thisUser = [PFUser user];
-        thisUser.email = self.emailTextField.text;
-        thisUser.username = self.usernameTextField.text;
-        thisUser.password = self.passwordTextField.text;
-        
-        [thisUser signUpInBackgroundWithBlock:^(BOOL succeeded, NSError * _Nullable error) {
-            
-            [[SharedManager sharedModel].currentUser saveInBackground];
-            
-            MainPageVC *mvc = (MainPageVC *)[self.storyboard instantiateViewControllerWithIdentifier:@"showMainPgVC"];
-            [self presentViewController:mvc animated:YES completion:nil];
-        }];
-        
-        
-    } else {
-        
-        UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"Error" message:@"The password field is either empty or does not match the confirm password field" preferredStyle:UIAlertControllerStyleAlert];
-        
-        UIAlertAction *okAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
-            [alertController dismissViewControllerAnimated:YES completion:nil];
-        }];
-        
-        [alertController addAction:okAction];
-        
-        [self presentViewController:alertController animated:YES completion:nil];
-    }
-    
-}
-
--(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
-    
-    [self.emailTextField resignFirstResponder];
-    [self.usernameTextField resignFirstResponder];
-    [self.passwordTextField resignFirstResponder];
-    [self.confirmPasswordTextField resignFirstResponder];
-}
+//-(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
+//    
+//    [self.emailTextField resignFirstResponder];
+//    [self.usernameTextField resignFirstResponder];
+//    [self.passwordTextField resignFirstResponder];
+//    [self.confirmPasswordTextField resignFirstResponder];
+//}
 
 
 

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="eFl-bJ-oI1">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="D9B-em-f8a">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
@@ -10,7 +10,18 @@
             <string>Avenir-Light</string>
             <string>Avenir-Light</string>
         </mutableArray>
+        <mutableArray key="Bariol_Regular.otf">
+            <string>Bariol-Regular</string>
+            <string>Bariol-Regular</string>
+            <string>Bariol-Regular</string>
+            <string>Bariol-Regular</string>
+            <string>Bariol-Regular</string>
+            <string>Bariol-Regular</string>
+            <string>Bariol-Regular</string>
+        </mutableArray>
         <mutableArray key="Jaapokkisubtract-Regular.otf">
+            <string>Jaapokkisubtract-Regular</string>
+            <string>Jaapokkisubtract-Regular</string>
             <string>Jaapokkisubtract-Regular</string>
             <string>Jaapokkisubtract-Regular</string>
             <string>Jaapokkisubtract-Regular</string>
@@ -24,15 +35,7 @@
             <string>Oranienbaum</string>
             <string>Oranienbaum</string>
             <string>Oranienbaum</string>
-        </mutableArray>
-        <mutableArray key="bariol_regular-webfont.ttf">
-            <string>Bariol-Regular</string>
-            <string>Bariol-Regular</string>
-            <string>Bariol-Regular</string>
-            <string>Bariol-Regular</string>
-            <string>Bariol-Regular</string>
-            <string>Bariol-Regular</string>
-            <string>Bariol-Regular</string>
+            <string>Oranienbaum</string>
         </mutableArray>
     </customFonts>
     <scenes>
@@ -606,10 +609,10 @@
             </objects>
             <point key="canvasLocation" x="227" y="1005"/>
         </scene>
-        <!--CustomVC Transition View Controller-->
+        <!--View Controller-->
         <scene sceneID="RRj-ne-QXh">
             <objects>
-                <viewController storyboardIdentifier="customVC" id="wYD-HK-GAx" customClass="CustomVCTransitionViewController" sceneMemberID="viewController">
+                <viewController id="wYD-HK-GAx" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="wAU-Cr-F1E"/>
                         <viewControllerLayoutGuide type="bottom" id="GLR-Kb-6nY"/>
@@ -639,10 +642,10 @@
             </objects>
             <point key="canvasLocation" x="934" y="324"/>
         </scene>
-        <!--Custom Modal View Controller-->
+        <!--View Controller-->
         <scene sceneID="ZoE-cm-10B">
             <objects>
-                <viewController storyboardIdentifier="customModal" useStoryboardIdentifierAsRestorationIdentifier="YES" id="wOd-6P-EI5" customClass="CustomModalViewController" sceneMemberID="viewController">
+                <viewController useStoryboardIdentifierAsRestorationIdentifier="YES" id="wOd-6P-EI5" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="2j3-Mt-Qbj"/>
                         <viewControllerLayoutGuide type="bottom" id="o59-vE-pww"/>
@@ -1254,6 +1257,57 @@
             </objects>
             <point key="canvasLocation" x="-454" y="996"/>
         </scene>
+        <!--Custom Modal View Controller-->
+        <scene sceneID="lj1-4i-lbH">
+            <objects>
+                <viewController storyboardIdentifier="customModal" id="5Jl-ew-Fiu" customClass="CustomModalViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="5Zp-0N-nmP"/>
+                        <viewControllerLayoutGuide type="bottom" id="W2K-s6-ozR"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="u6z-kw-HoW">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Habits" textAlignment="natural" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0zl-Pb-fkK">
+                                <rect key="frame" x="241" y="425" width="118" height="53"/>
+                                <fontDescription key="fontDescription" name="Oranienbaum" family="Oranienbaum" pointSize="46"/>
+                                <color key="textColor" red="0.23921568630000001" green="0.2156862745" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6pJ-wc-3rU">
+                                <rect key="frame" x="234" y="517" width="133" height="51"/>
+                                <fontDescription key="fontDescription" name="Jaapokkisubtract-Regular" family="Jaapokki subtract" pointSize="25"/>
+                                <state key="normal" title=" Dare to try! ">
+                                    <color key="titleColor" red="0.62352941179999999" green="0.41960784309999999" blue="0.35294117650000001" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="dareToTry:" destination="5Jl-ew-Fiu" eventType="touchUpInside" id="rnw-UO-xwO"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="6pJ-wc-3rU" firstAttribute="top" secondItem="0zl-Pb-fkK" secondAttribute="bottom" constant="39" id="C6I-86-EaA"/>
+                            <constraint firstItem="W2K-s6-ozR" firstAttribute="top" secondItem="0zl-Pb-fkK" secondAttribute="bottom" constant="50" id="VrW-xe-nk8"/>
+                            <constraint firstItem="W2K-s6-ozR" firstAttribute="top" secondItem="6pJ-wc-3rU" secondAttribute="bottom" constant="32" id="kbI-HL-pa9"/>
+                            <constraint firstItem="0zl-Pb-fkK" firstAttribute="centerX" secondItem="u6z-kw-HoW" secondAttribute="centerX" id="kxD-ud-QSA"/>
+                            <constraint firstItem="6pJ-wc-3rU" firstAttribute="centerX" secondItem="u6z-kw-HoW" secondAttribute="centerX" id="n4R-0Z-6Q8"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="VrW-xe-nk8"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="dareToTryButton" destination="6pJ-wc-3rU" id="h6B-lK-Koe"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TJE-h4-IHP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1079" y="1697"/>
+        </scene>
         <!--My HabitsTVC-->
         <scene sceneID="g7f-TO-mHj">
             <objects>
@@ -1433,12 +1487,53 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="ICh-wM-NpV" kind="relationship" relationship="rootViewController" id="2cH-RN-lgT"/>
+                        <segue destination="ICh-wM-NpV" kind="relationship" relationship="rootViewController" id="ugu-go-GJ6"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lBC-KO-IO0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-483" y="1691"/>
+            <point key="canvasLocation" x="-419" y="1691"/>
+        </scene>
+        <!--CustomVC Transition View Controller-->
+        <scene sceneID="NDV-r4-XgD">
+            <objects>
+                <viewController storyboardIdentifier="customVC" id="D9B-em-f8a" customClass="CustomVCTransitionViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Hof-FP-FGW"/>
+                        <viewControllerLayoutGuide type="bottom" id="stR-CD-Ubu"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="lNZ-YB-esB">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Breaking BAD" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E22-vg-A5B">
+                                <rect key="frame" x="157" y="264" width="286" height="72"/>
+                                <fontDescription key="fontDescription" name="Jaapokkisubtract-Regular" family="Jaapokki subtract" pointSize="47"/>
+                                <color key="textColor" red="0.23921568630000001" green="0.2156862745" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="E22-vg-A5B" firstAttribute="leading" secondItem="lNZ-YB-esB" secondAttribute="leading" constant="30" id="3ga-c5-fdE"/>
+                            <constraint firstAttribute="trailing" secondItem="E22-vg-A5B" secondAttribute="trailing" constant="30" id="HhL-oE-e4Q"/>
+                            <constraint firstItem="E22-vg-A5B" firstAttribute="centerX" secondItem="lNZ-YB-esB" secondAttribute="centerX" id="OHX-qY-GKL"/>
+                            <constraint firstItem="E22-vg-A5B" firstAttribute="centerX" secondItem="lNZ-YB-esB" secondAttribute="centerX" id="d98-9S-3du"/>
+                            <constraint firstItem="E22-vg-A5B" firstAttribute="centerY" secondItem="lNZ-YB-esB" secondAttribute="centerY" id="ykL-Aq-1nH"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="3ga-c5-fdE"/>
+                                <exclude reference="HhL-oE-e4Q"/>
+                                <exclude reference="OHX-qY-GKL"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <navigationItem key="navigationItem" id="mOz-dr-Gfx"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="AmJ-3Y-sbG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1737" y="1697"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="6Vy-mJ-0Yv">

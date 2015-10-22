@@ -14,19 +14,45 @@
 #import "LoginViewController.h"
 #import "SignUpViewController.h"
 #import <pop/POP.h>
+#import "SharedManager.h"
 
 @implementation CustomVCTransitionViewController
 
-- (IBAction)didClickEnter:(id)sender {
-    //    CustomModalViewController *modalVC = [self.storyboard instantiateViewControllerWithIdentifier:@"customModal"];
-    //
-    //
-    //    modalVC.transitioningDelegate = self;
-    //
-    //    modalVC.modalPresentationStyle = UIModalPresentationCustom;
-    //
-    //    [self presentViewController:modalVC animated:YES completion:nil];
+-(void)viewDidLoad {
+    [super viewDidLoad];
     
+    self.view.backgroundColor = [SharedManager sharedModel].brickRed;
+    
+    
+     [self performSelector:@selector(threeSecondDelay) withObject:self afterDelay:3.0];
+
+}
+
+
+- (void)threeSecondDelay {
+    
+     CustomModalViewController *modalVC = [self.storyboard instantiateViewControllerWithIdentifier:@"customModal"];
+    
+    modalVC.transitioningDelegate = self;
+
+    modalVC.modalPresentationStyle = UIModalPresentationCustom;
+
+    [self presentViewController:modalVC animated:YES completion:nil];
+
+}
+
+
+
+//- (IBAction)didClickEnter:(id)sender {
+//        CustomModalViewController *modalVC = [self.storyboard instantiateViewControllerWithIdentifier:@"customModal"];
+//    
+//    
+//        modalVC.transitioningDelegate = self;
+//    
+//        modalVC.modalPresentationStyle = UIModalPresentationCustom;
+//    
+//        [self presentViewController:modalVC animated:YES completion:nil];
+//    
     //    LoginViewController *lvc = [self.storyboard instantiateViewControllerWithIdentifier:@"loginVC"];
     //    lvc.transitioningDelegate = self;
     //    lvc.modalPresentationStyle = UIModalPresentationCustom;
@@ -50,15 +76,15 @@
     //                [self presentViewController:logInViewController animated:YES completion:NULL];
     //            }
     
-}
+//}
 
--(void)viewWillAppear:(BOOL)animated{
-    [super viewWillAppear:animated];
-    LoginViewController *lvc = [self.storyboard instantiateViewControllerWithIdentifier:@"loginVC"];
-    lvc.transitioningDelegate = self;
-    lvc.modalPresentationStyle = UIModalPresentationCustom;
-    [self presentViewController:lvc animated:YES completion:nil];
-}
+//-(void)viewWillAppear:(BOOL)animated{
+//    [super viewWillAppear:animated];
+//    LoginViewController *lvc = [self.storyboard instantiateViewControllerWithIdentifier:@"loginVC"];
+//    lvc.transitioningDelegate = self;
+//    lvc.modalPresentationStyle = UIModalPresentationCustom;
+//    [self presentViewController:lvc animated:YES completion:nil];
+//}
 
 
 

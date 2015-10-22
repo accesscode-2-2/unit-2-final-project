@@ -10,7 +10,7 @@
 #import "ViewController.h"
 #import "SharedManager.h"
 
-@interface QuestionDetailVC ()
+@interface QuestionDetailVC () <AVSpeechSynthesizerDelegate>
 
 
 @end
@@ -25,9 +25,27 @@
     self.questionLabel.text = self.question;
     if (self.answer) {
         self.answerTextView.text = self.answer;
+        
+        
+        AVSpeechSynthesizer *synthesizer = [[AVSpeechSynthesizer alloc] init];
+        synthesizer.delegate = self;
+        
+        AVSpeechUtterance *utterance = [[AVSpeechUtterance alloc] initWithString:self.question];
+        utterance.pitchMultiplier = 1.25; // higher pitch
+        utterance.voice = [AVSpeechSynthesisVoice voiceWithLanguage:@"fr-FR"];
+        
+        [synthesizer speakUtterance:utterance];
     }
     
     [self addColorQuestionDetail];
+    
+    //READ QUESTION
+//   [self.questionLabel resignFirstResponder];
+//    AVSpeechUtterance *utterance = [[AVSpeechUtterance alloc] initWithString:self.questionLabel.text];
+//    //[self.synthesizer speakUtterance:utterance];
+//    utterance.rate = AVSpeechUtteranceMinimumSpeechRate*( 10.0);
+//    utterance.voice = [AVSpeechSynthesisVoice voiceWithLanguage:@"en-au"];
+//    [self.synthesizer speakUtterance:utterance];
 
 }
 
@@ -58,6 +76,7 @@
 - (IBAction)doneButtonTapped:(UIButton *)sender {
     [self.delegate finishedAnswering:self withAnswer:self.answerTextView.text];
     [self dismissViewControllerAnimated:YES completion:nil];
+
 }
 
 

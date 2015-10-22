@@ -177,6 +177,9 @@ CLLocationManagerDelegate
     UILabel *currentAnswerLabel = self.reply[sender.tag];
     if (currentAnswerLabel.text) {
         qvc.answer = currentAnswerLabel.text;
+        
+        
+        
     }
     
     [self presentViewController:qvc animated:YES completion:nil];

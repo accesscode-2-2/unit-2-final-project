@@ -20,4 +20,7 @@ PFSignUpViewControllerDelegate
 @property (weak, nonatomic) IBOutlet UITextField *passwordTextField;
 @property (weak, nonatomic) IBOutlet UITextField *confirmPasswordTextField;
 
+@property (weak, nonatomic) IBOutlet UIButton *dareToTryButton;
+
+
 @end

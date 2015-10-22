@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 #import "Entry.h"
+//#import <AVFoundation/AVFoundation.h>
+
 @interface MainPageVC : UIViewController
 
 @property (nonatomic) Entry *entry;
