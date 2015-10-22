@@ -40,7 +40,6 @@
 
 -(void)initializeData{
     
-    self.habitListData = [[HabitList alloc] init];
     
     self.habitArray = @[@"Smoking",
                         @"Biting your nails",

@@ -20,7 +20,6 @@
 		5F8750731BD6879800B14CA6 /* Bariol_Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 5F8750561BD6879800B14CA6 /* Bariol_Regular.otf */; settings = {ASSET_TAGS = (); }; };
 		5F8FF9991BC9A9CD00855DFB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F8FF9981BC9A9CD00855DFB /* main.m */; };
 		5F8FF99C1BC9A9CD00855DFB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F8FF99B1BC9A9CD00855DFB /* AppDelegate.m */; };
-		5F8FF99F1BC9A9CD00855DFB /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F8FF99E1BC9A9CD00855DFB /* ViewController.m */; };
 		5F8FF9A21BC9A9CD00855DFB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5F8FF9A01BC9A9CD00855DFB /* Main.storyboard */; };
 		5F8FF9A51BC9A9CD00855DFB /* BreakingBad.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5F8FF9A31BC9A9CD00855DFB /* BreakingBad.xcdatamodeld */; };
 		5F8FF9A71BC9A9CD00855DFB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5F8FF9A61BC9A9CD00855DFB /* Assets.xcassets */; };
@@ -51,7 +50,6 @@
 		DC2DC1941BCAEB8D00A627E2 /* BBUser.m in Sources */ = {isa = PBXBuildFile; fileRef = DC2DC1931BCAEB8D00A627E2 /* BBUser.m */; settings = {ASSET_TAGS = (); }; };
 		DC2FFC5D1BD2EF2700A876F8 /* EntryLogsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DC2FFC5B1BD2EF2700A876F8 /* EntryLogsTableViewCell.m */; settings = {ASSET_TAGS = (); }; };
 		DC2FFC5E1BD2EF2700A876F8 /* EntryLogsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DC2FFC5C1BD2EF2700A876F8 /* EntryLogsTableViewCell.xib */; settings = {ASSET_TAGS = (); }; };
-		DC51A76B1BCC4CD60044984B /* HabitList.m in Sources */ = {isa = PBXBuildFile; fileRef = DC51A76A1BCC4CD60044984B /* HabitList.m */; settings = {ASSET_TAGS = (); }; };
 		DCB588911BD5E65D00777FF9 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DCB588901BD5E65D00777FF9 /* CoreLocation.framework */; };
 		DCBA27C21BCDE85800E61721 /* SharedManager.m in Sources */ = {isa = PBXBuildFile; fileRef = DCBA27C11BCDE85800E61721 /* SharedManager.m */; settings = {ASSET_TAGS = (); }; };
 		DCBA27C61BCED16E00E61721 /* CustomContextTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DCBA27C41BCED16E00E61721 /* CustomContextTableViewCell.m */; settings = {ASSET_TAGS = (); }; };
@@ -78,8 +76,6 @@
 		5F8FF9981BC9A9CD00855DFB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		5F8FF99A1BC9A9CD00855DFB /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		5F8FF99B1BC9A9CD00855DFB /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		5F8FF99D1BC9A9CD00855DFB /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		5F8FF99E1BC9A9CD00855DFB /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		5F8FF9A11BC9A9CD00855DFB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5F8FF9A41BC9A9CD00855DFB /* BreakingBad.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = BreakingBad.xcdatamodel; sourceTree = "<group>"; };
 		5F8FF9A61BC9A9CD00855DFB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -132,8 +128,6 @@
 		DC2FFC5A1BD2EF2700A876F8 /* EntryLogsTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EntryLogsTableViewCell.h; sourceTree = "<group>"; };
 		DC2FFC5B1BD2EF2700A876F8 /* EntryLogsTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EntryLogsTableViewCell.m; sourceTree = "<group>"; };
 		DC2FFC5C1BD2EF2700A876F8 /* EntryLogsTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EntryLogsTableViewCell.xib; sourceTree = "<group>"; };
-		DC51A7691BCC4CD60044984B /* HabitList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HabitList.h; sourceTree = "<group>"; };
-		DC51A76A1BCC4CD60044984B /* HabitList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HabitList.m; sourceTree = "<group>"; };
 		DCB588901BD5E65D00777FF9 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		DCBA27C01BCDE85800E61721 /* SharedManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SharedManager.h; sourceTree = "<group>"; };
 		DCBA27C11BCDE85800E61721 /* SharedManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SharedManager.m; sourceTree = "<group>"; };
@@ -226,10 +220,6 @@
 			children = (
 				5F8FF99A1BC9A9CD00855DFB /* AppDelegate.h */,
 				5F8FF99B1BC9A9CD00855DFB /* AppDelegate.m */,
-				DC51A7691BCC4CD60044984B /* HabitList.h */,
-				DC51A76A1BCC4CD60044984B /* HabitList.m */,
-				5F8FF99D1BC9A9CD00855DFB /* ViewController.h */,
-				5F8FF99E1BC9A9CD00855DFB /* ViewController.m */,
 				5F9B082D1BCC9ECC00460FF2 /* QuestionDetailVC.h */,
 				5F9B082E1BCC9ECC00460FF2 /* QuestionDetailVC.m */,
 				DC22D49D1BCEE95A00D1E214 /* CheckProgressViewController.h */,
@@ -474,7 +464,6 @@
 				DC2DC18B1BCAC08700A627E2 /* Goal.m in Sources */,
 				5FEAE26E1BCB125A00201A0E /* PresentingAnimationController.m in Sources */,
 				5FE7B03A1BD3EF3200C5E163 /* HabitInfoData.m in Sources */,
-				5F8FF99F1BC9A9CD00855DFB /* ViewController.m in Sources */,
 				5F9B082F1BCC9ECD00460FF2 /* QuestionDetailVC.m in Sources */,
 				DC22D49F1BCEE95A00D1E214 /* CheckProgressViewController.m in Sources */,
 				DC2DC18E1BCAC0A700A627E2 /* Entry.m in Sources */,
@@ -487,7 +476,6 @@
 				5FEAE2711BCB126700201A0E /* DismissingAnimationController.m in Sources */,
 				DC2DC1941BCAEB8D00A627E2 /* BBUser.m in Sources */,
 				DC2FFC5D1BD2EF2700A876F8 /* EntryLogsTableViewCell.m in Sources */,
-				DC51A76B1BCC4CD60044984B /* HabitList.m in Sources */,
 				5F8FF9991BC9A9CD00855DFB /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

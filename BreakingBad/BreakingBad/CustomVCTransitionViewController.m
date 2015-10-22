@@ -24,7 +24,7 @@
     self.view.backgroundColor = [SharedManager sharedModel].brickRed;
     
     
-     [self performSelector:@selector(threeSecondDelay) withObject:self afterDelay:3.0];
+     [self performSelector:@selector(threeSecondDelay) withObject:self afterDelay:0.4];
 
 }
 

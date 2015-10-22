@@ -177,9 +177,10 @@ CLLocationManagerDelegate
     UILabel *currentAnswerLabel = self.reply[sender.tag];
     if (currentAnswerLabel.text) {
         qvc.answer = currentAnswerLabel.text;
-        
-        
-        
+    }
+    if(self.readOnly)
+    {
+        [qvc setReadOnly:YES];
     }
     
     [self presentViewController:qvc animated:YES completion:nil];

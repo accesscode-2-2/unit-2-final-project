@@ -8,7 +8,6 @@
 
 #import "LoginViewController.h"
 #import "MainPageVC.h"
-#import "ViewController.h"
 #import "SignUpViewController.h"
 #import "SharedManager.h"
 

@@ -10,15 +10,6 @@
             <string>Avenir-Light</string>
             <string>Avenir-Light</string>
         </mutableArray>
-        <mutableArray key="Bariol_Regular.otf">
-            <string>Bariol-Regular</string>
-            <string>Bariol-Regular</string>
-            <string>Bariol-Regular</string>
-            <string>Bariol-Regular</string>
-            <string>Bariol-Regular</string>
-            <string>Bariol-Regular</string>
-            <string>Bariol-Regular</string>
-        </mutableArray>
         <mutableArray key="Jaapokkisubtract-Regular.otf">
             <string>Jaapokkisubtract-Regular</string>
             <string>Jaapokkisubtract-Regular</string>
@@ -36,6 +27,15 @@
             <string>Oranienbaum</string>
             <string>Oranienbaum</string>
             <string>Oranienbaum</string>
+        </mutableArray>
+        <mutableArray key="bariol_regular-webfont.ttf">
+            <string>Bariol-Regular</string>
+            <string>Bariol-Regular</string>
+            <string>Bariol-Regular</string>
+            <string>Bariol-Regular</string>
+            <string>Bariol-Regular</string>
+            <string>Bariol-Regular</string>
+            <string>Bariol-Regular</string>
         </mutableArray>
     </customFonts>
     <scenes>
