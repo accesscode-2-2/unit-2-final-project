@@ -124,7 +124,8 @@
             [self EmptySearchBarAlert];
         }
         else {
-            self.budgetView.hidden = NO;
+            [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"http://www.budgetyourtrip.com/budgetreportadv.php?country_code=&startdate=&enddate=&categoryid=&budgettype=1&triptype=&travelerno=&geonameid=4887398"]];
+            self.budgetView.hidden = YES;
             [sidebar dismissAnimated:YES completion:nil];
         }
     }

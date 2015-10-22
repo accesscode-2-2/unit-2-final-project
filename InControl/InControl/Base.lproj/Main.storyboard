@@ -385,20 +385,20 @@
                                     <segue destination="BYZ-38-t0r" kind="show" id="BpD-vS-Ql5"/>
                                 </connections>
                             </button>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Nbj-Yv-wdg">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="66" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Nbj-Yv-wdg">
                                 <rect key="frame" x="0.0" y="50" width="600" height="550"/>
                                 <animations/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="HotelCellIdentifier" textLabel="itw-Hx-HPg" detailTextLabel="VjN-DY-ZSU" style="IBUITableViewCellStyleSubtitle" id="l8g-kz-nee">
-                                        <rect key="frame" x="0.0" y="28" width="600" height="44"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="HotelCellIdentifier" textLabel="itw-Hx-HPg" detailTextLabel="VjN-DY-ZSU" rowHeight="66" style="IBUITableViewCellStyleSubtitle" id="l8g-kz-nee">
+                                        <rect key="frame" x="0.0" y="28" width="600" height="66"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="l8g-kz-nee" id="dLl-qc-Jsa">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="65"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="itw-Hx-HPg">
-                                                    <rect key="frame" x="15" y="5" width="32" height="20"/>
+                                                    <rect key="frame" x="15" y="16" width="32" height="20"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <animations/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
@@ -406,7 +406,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="VjN-DY-ZSU">
-                                                    <rect key="frame" x="15" y="25" width="41" height="14"/>
+                                                    <rect key="frame" x="15" y="36" width="41" height="14"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <animations/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="11"/>
@@ -865,7 +865,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yp6-tS-XUm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6028" y="1209"/>
+            <point key="canvasLocation" x="5188" y="1997"/>
         </scene>
         <!--Root View Controller-->
         <scene sceneID="hxP-Bh-W7U">
@@ -2059,7 +2059,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0fn-Cw-tUk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4639" y="2219"/>
+            <point key="canvasLocation" x="5211" y="1209"/>
         </scene>
         <!--Visited View Controller-->
         <scene sceneID="kJf-56-jVf">
@@ -2253,7 +2253,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1C2-wx-dvr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5176" y="1209"/>
+            <point key="canvasLocation" x="4434" y="1997"/>
         </scene>
     </scenes>
     <resources>
@@ -2284,8 +2284,14 @@
         <image name="takePhoto" width="512" height="512"/>
     </resources>
     <inferredMetricsTieBreakers>
+<<<<<<< HEAD
         <segue reference="Gf5-oo-kyB"/>
         <segue reference="aGj-8u-3bd"/>
         <segue reference="ofM-AI-3BJ"/>
+=======
+        <segue reference="uy4-x5-2D8"/>
+        <segue reference="ofM-AI-3BJ"/>
+        <segue reference="pU7-Mv-mbd"/>
+>>>>>>> 2c84798fb95a83b9f5ef241e787d6002a01fd8d0
     </inferredMetricsTieBreakers>
 </document>
