@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="sU9-FA-LDO">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="sU9-FA-LDO">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -51,7 +51,7 @@
                                 <rect key="frame" x="0.0" y="28" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="4Uu-0J-i5z" id="a3N-Xk-wkT">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <animations/>
                                 </tableViewCellContentView>
@@ -280,7 +280,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="wn8-3w-eKd">
-                                                    <rect key="frame" x="15" y="6" width="31.5" height="19.5"/>
+                                                    <rect key="frame" x="15" y="5" width="32" height="20"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <animations/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
@@ -288,7 +288,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Subtitle" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="DsP-zu-9UZ">
-                                                    <rect key="frame" x="15" y="25.5" width="40.5" height="13.5"/>
+                                                    <rect key="frame" x="15" y="25" width="41" height="14"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <animations/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="11"/>
@@ -501,6 +501,7 @@
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="TLh-Y5-rQa">
                                         <rect key="frame" x="10" y="5" width="120" height="120"/>
+                                        <animations/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="120" id="F3F-8P-fTh"/>
                                             <constraint firstAttribute="height" constant="120" id="Odq-ff-11v"/>
@@ -508,18 +509,21 @@
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1AF-cw-sG5">
                                         <rect key="frame" x="138" y="108" width="442" height="17"/>
+                                        <animations/>
                                         <fontDescription key="fontDescription" name="Akkurat" family="Akkurat" pointSize="14"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DWN-3U-CrL">
-                                        <rect key="frame" x="138" y="79" width="442" height="20.5"/>
+                                        <rect key="frame" x="138" y="79" width="442" height="21"/>
+                                        <animations/>
                                         <fontDescription key="fontDescription" name="Akkurat-Bold" family="Akkurat" pointSize="17"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QXz-a4-RR1">
                                         <rect key="frame" x="549" y="15" width="36" height="30"/>
+                                        <animations/>
                                         <fontDescription key="fontDescription" name="Akkurat" family="Akkurat" pointSize="15"/>
                                         <state key="normal" title="Done">
                                             <color key="titleColor" red="0.97254901960784312" green="0.5490196078431373" blue="0.062745098039215685" alpha="1" colorSpace="calibratedRGB"/>
@@ -529,6 +533,7 @@
                                         </connections>
                                     </button>
                                 </subviews>
+                                <animations/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <constraints>
                                     <constraint firstAttribute="bottom" secondItem="1AF-cw-sG5" secondAttribute="bottom" id="5GX-Tt-REu"/>
@@ -549,11 +554,13 @@
                                 <subviews>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="5dG-Gc-FlR">
                                         <rect key="frame" x="8" y="8" width="544" height="158"/>
+                                        <animations/>
                                         <color key="textColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                         <fontDescription key="fontDescription" name="Akkurat-Bold" family="Akkurat" pointSize="25"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
                                 </subviews>
+                                <animations/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="5dG-Gc-FlR" secondAttribute="trailing" constant="8" id="Hh1-So-hwM"/>
@@ -567,6 +574,7 @@
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RPL-cy-o0G" userLabel="star1">
                                         <rect key="frame" x="0.0" y="0.0" width="98" height="50"/>
+                                        <animations/>
                                         <state key="normal" image="rating_star2"/>
                                         <connections>
                                             <action selector="starOneTapped:" destination="BAI-dU-dy0" eventType="touchUpInside" id="Hxv-dr-2Yg"/>
@@ -574,6 +582,7 @@
                                     </button>
                                     <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eqY-tM-EkF" userLabel="star2">
                                         <rect key="frame" x="108" y="0.0" width="98" height="50"/>
+                                        <animations/>
                                         <state key="normal" image="rating_star2"/>
                                         <connections>
                                             <action selector="starTwoTapped:" destination="BAI-dU-dy0" eventType="touchUpInside" id="5H7-Qq-ml0"/>
@@ -581,6 +590,7 @@
                                     </button>
                                     <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sLK-NH-rvK" userLabel="star3">
                                         <rect key="frame" x="216" y="0.0" width="98" height="50"/>
+                                        <animations/>
                                         <state key="normal" image="rating_star2"/>
                                         <connections>
                                             <action selector="starThreeTapped:" destination="BAI-dU-dy0" eventType="touchUpInside" id="J6b-uA-EaE"/>
@@ -588,6 +598,7 @@
                                     </button>
                                     <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fd9-H9-lzG" userLabel="star4">
                                         <rect key="frame" x="324" y="0.0" width="98" height="50"/>
+                                        <animations/>
                                         <state key="normal" image="rating_star2"/>
                                         <connections>
                                             <action selector="starFourTapped:" destination="BAI-dU-dy0" eventType="touchUpInside" id="VdS-rq-HCy"/>
@@ -595,12 +606,14 @@
                                     </button>
                                     <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jzq-uK-0EF" userLabel="star5">
                                         <rect key="frame" x="432" y="0.0" width="98" height="50"/>
+                                        <animations/>
                                         <state key="normal" image="rating_star2"/>
                                         <connections>
                                             <action selector="starFiveTapped:" destination="BAI-dU-dy0" eventType="touchUpInside" id="KDM-T7-hVz"/>
                                         </connections>
                                     </button>
                                 </subviews>
+                                <animations/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <constraints>
                                     <constraint firstAttribute="bottom" secondItem="Jzq-uK-0EF" secondAttribute="bottom" id="1ND-Ln-y7I"/>
@@ -633,6 +646,7 @@
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1oM-DR-MwP">
                                         <rect key="frame" x="213" y="13" width="134" height="33"/>
+                                        <animations/>
                                         <fontDescription key="fontDescription" name="Akkurat-Bold" family="Akkurat" pointSize="17"/>
                                         <state key="normal" title="   Log To Journal   ">
                                             <color key="titleColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
@@ -642,6 +656,7 @@
                                         </connections>
                                     </button>
                                 </subviews>
+                                <animations/>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstItem="1oM-DR-MwP" firstAttribute="centerY" secondItem="tNJ-35-n33" secondAttribute="centerY" id="4aa-nt-gCQ"/>
@@ -650,6 +665,7 @@
                                 </constraints>
                             </view>
                         </subviews>
+                        <animations/>
                         <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                         <constraints>
                             <constraint firstItem="tNJ-35-n33" firstAttribute="top" secondItem="KTC-y5-v8E" secondAttribute="bottom" constant="10" id="5zc-ey-MkX"/>
@@ -947,6 +963,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="kHi-Rv-LpC">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <animations/>
                     </navigationBar>
                     <connections>
                         <segue destination="WZe-UX-wgc" kind="relationship" relationship="rootViewController" id="c1X-Zg-b9I"/>
