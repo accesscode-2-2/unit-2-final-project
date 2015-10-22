@@ -1082,9 +1082,11 @@
                                     <constraint firstAttribute="width" constant="280" id="nKK-0u-LZv"/>
                                     <constraint firstAttribute="height" constant="33" id="o4i-Rm-lsv"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="23"/>
+                                <size key="titleShadowOffset" width="2" height="2"/>
                                 <state key="normal" title="Shuffle! (Costs 2 Moves!)">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleColor" red="0.13716526449066993" green="0.36930742646556658" blue="0.92550470132743368" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" red="0.84935287240000001" green="0.9643627441" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="Shuffle:" destination="GhM-7A-LLe" eventType="touchUpInside" id="QZS-QE-rRg"/>
@@ -1402,9 +1404,9 @@
                                     <constraint firstAttribute="width" constant="63" id="52q-6W-PJh"/>
                                     <constraint firstAttribute="height" constant="26" id="WKw-i0-1VD"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="27"/>
                                 <state key="normal" title="Exit">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleColor" red="0.98950441919999998" green="0.0" blue="0.073243796390000004" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
                                     <segue destination="2Oo-zj-tBU" kind="presentation" modalTransitionStyle="crossDissolve" id="q8A-Ij-RYw"/>
