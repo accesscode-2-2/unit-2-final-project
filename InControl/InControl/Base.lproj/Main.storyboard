@@ -1077,7 +1077,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rsT-yv-XXe">
-                                <rect key="frame" x="160" y="562" width="280" height="33"/>
+                                <rect key="frame" x="160" y="552" width="280" height="33"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="280" id="nKK-0u-LZv"/>
                                     <constraint firstAttribute="height" constant="33" id="o4i-Rm-lsv"/>
@@ -1091,32 +1091,32 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Moves Left:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Qp-c6-0la">
-                                <rect key="frame" x="221" y="370" width="159" height="33"/>
+                                <rect key="frame" x="221" y="400" width="159" height="33"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="33" id="AMd-lK-6Bx"/>
                                     <constraint firstAttribute="width" constant="159" id="Sm3-QW-eR1"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" name="Palatino-Roman" family="Palatino" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P8n-nr-ZCC">
-                                <rect key="frame" x="242" y="408" width="116" height="37"/>
+                                <rect key="frame" x="242" y="438" width="116" height="37"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="37" id="Jh4-hr-p56"/>
                                     <constraint firstAttribute="width" constant="116" id="kVD-5K-sjb"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" name="Palatino-Roman" family="Palatino" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="High Score:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Htt-aG-vnJ">
-                                <rect key="frame" x="225" y="450" width="151" height="39"/>
+                                <rect key="frame" x="225" y="480" width="151" height="39"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="151" id="IrF-4f-gHv"/>
                                     <constraint firstAttribute="height" constant="39" id="MI5-AB-h8T"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" name="Palatino-Roman" family="Palatino" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -1397,7 +1397,7 @@
                                 </variation>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gCJ-Vb-rWA">
-                                <rect key="frame" x="269" y="531" width="63" height="26"/>
+                                <rect key="frame" x="269" y="521" width="63" height="26"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="63" id="52q-6W-PJh"/>
                                     <constraint firstAttribute="height" constant="26" id="WKw-i0-1VD"/>
@@ -1406,6 +1406,9 @@
                                 <state key="normal" title="Exit">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <segue destination="2Oo-zj-tBU" kind="presentation" modalTransitionStyle="crossDissolve" id="q8A-Ij-RYw"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tJO-jh-ZNH" userLabel="8">
                                 <rect key="frame" x="395" y="145" width="50" height="50"/>
@@ -1569,7 +1572,7 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" red="0.0" green="0.81176477670669556" blue="0.95686280727386475" alpha="0.57999999999999996" colorSpace="deviceRGB"/>
+                        <color key="backgroundColor" red="0.90561109229833237" green="0.8120112647274137" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="BcR-H4-5iD" firstAttribute="leading" secondItem="GJc-11-EVY" secondAttribute="trailing" constant="25" id="0R6-xP-HLU"/>
                             <constraint firstItem="dQP-jd-9W2" firstAttribute="top" secondItem="jP7-1S-9Kt" secondAttribute="bottom" constant="20" id="0cL-Dp-aDs"/>
@@ -1611,7 +1614,7 @@
                             <constraint firstItem="wbx-cG-da5" firstAttribute="centerX" secondItem="Uh4-Nm-fR2" secondAttribute="centerX" id="SYR-Of-HTV"/>
                             <constraint firstItem="z6F-jY-aeh" firstAttribute="top" secondItem="lVg-ak-pAQ" secondAttribute="bottom" constant="20" id="SdX-SB-ci3"/>
                             <constraint firstItem="a3M-V9-fd7" firstAttribute="top" secondItem="CrD-xz-hMH" secondAttribute="bottom" constant="25" id="Sib-jc-fmx"/>
-                            <constraint firstItem="Uj2-6g-QeH" firstAttribute="top" secondItem="rsT-yv-XXe" secondAttribute="bottom" constant="5" id="U4j-xn-k5P"/>
+                            <constraint firstItem="Uj2-6g-QeH" firstAttribute="top" secondItem="rsT-yv-XXe" secondAttribute="bottom" constant="15" id="U4j-xn-k5P"/>
                             <constraint firstItem="vu6-c2-w9g" firstAttribute="leading" secondItem="rUm-YN-vQ3" secondAttribute="trailing" constant="25" id="U8l-Hv-zR1"/>
                             <constraint firstItem="zAQ-iL-u5h" firstAttribute="top" secondItem="qfK-Hg-8OT" secondAttribute="bottom" constant="20" id="VZj-5r-2W1"/>
                             <constraint firstItem="YVN-Jc-IGd" firstAttribute="top" secondItem="jP7-1S-9Kt" secondAttribute="bottom" constant="25" id="VlX-bd-P16"/>
@@ -1646,7 +1649,7 @@
                             <constraint firstItem="vu6-c2-w9g" firstAttribute="centerX" secondItem="rCF-Fg-FPe" secondAttribute="centerX" id="sTE-Ej-Ynx"/>
                             <constraint firstItem="P8n-nr-ZCC" firstAttribute="centerX" secondItem="zl1-mg-oKf" secondAttribute="centerX" id="suF-4d-EoK"/>
                             <constraint firstItem="3Qp-c6-0la" firstAttribute="centerX" secondItem="zl1-mg-oKf" secondAttribute="centerX" id="tLc-Cp-cLP"/>
-                            <constraint firstItem="3Qp-c6-0la" firstAttribute="top" secondItem="z6F-jY-aeh" secondAttribute="bottom" constant="10" id="uUg-OB-4Nt"/>
+                            <constraint firstItem="3Qp-c6-0la" firstAttribute="top" secondItem="z6F-jY-aeh" secondAttribute="bottom" constant="40" id="uUg-OB-4Nt"/>
                             <constraint firstItem="AqA-fp-q7b" firstAttribute="top" secondItem="zAQ-iL-u5h" secondAttribute="bottom" constant="20" id="ulT-qJ-Zn1"/>
                             <constraint firstItem="rsT-yv-XXe" firstAttribute="centerX" secondItem="zl1-mg-oKf" secondAttribute="centerX" id="v0g-S9-c8t"/>
                             <constraint firstItem="z6F-jY-aeh" firstAttribute="centerX" secondItem="wbx-cG-da5" secondAttribute="centerX" id="wly-eC-LV3"/>
@@ -2284,6 +2287,7 @@
     <inferredMetricsTieBreakers>
         <segue reference="ofM-AI-3BJ"/>
         <segue reference="pU7-Mv-mbd"/>
+        <segue reference="q8A-Ij-RYw"/>
         <segue reference="uy4-x5-2D8"/>
     </inferredMetricsTieBreakers>
 </document>
