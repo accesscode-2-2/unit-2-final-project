@@ -30,8 +30,14 @@
 
 - (void)makeApPIRequestWithNewTerm:(NSString *)searchTerm
                      callbackBlock:(void(^)())block {
+    NSLog(@"cityyyyyyyy meetup %@", self.city);
+    
+    
     
     NSString *meetupURL = [NSString stringWithFormat:@"https://api.meetup.com/2/groups?lat=51&lon=-0.1&page=20&key=1f5718c16a7fb3a5452f45193232"];
+    
+//    NSString *meetupURL = [NSString stringWithFormat:@"https://api.meetup.com/find/groups?city=%@&page=200&offset=1&key=1f5718c16a7fb3a5452f45193232",self.city];
+    
     
     
     
