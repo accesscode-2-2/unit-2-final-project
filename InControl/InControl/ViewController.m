@@ -124,7 +124,10 @@
             [self EmptySearchBarAlert];
         }
         else {
-            [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"http://www.budgetyourtrip.com/budgetreportadv.php?country_code=&startdate=&enddate=&categoryid=&budgettype=1&triptype=&travelerno=&geonameid=4887398"]];
+            
+            NSString *url = [NSString stringWithFormat:@"http://www.budgetyourtrip.com/united-states-of-america/%@", self.searchBar.text];
+            
+            [[UIApplication sharedApplication] openURL:[NSURL URLWithString:url]];
             self.budgetView.hidden = YES;
             [sidebar dismissAnimated:YES completion:nil];
         }
