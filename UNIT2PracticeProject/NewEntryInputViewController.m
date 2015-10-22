@@ -55,6 +55,9 @@
     return YES;
 }
 
+
+
+
 -(void) textViewDidChange:(UITextView *)textView
 {
     
@@ -64,6 +67,7 @@
         [self.journalEntryTextView resignFirstResponder];
     }
 }
+
 
 
 #pragma saveEntry

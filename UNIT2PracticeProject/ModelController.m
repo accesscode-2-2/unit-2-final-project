@@ -33,7 +33,7 @@
     if (self) {
         // Create the data model.
         //NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
-        _pageData = [PhotoAlbum sharedPhotoAlbum].photoEntries;;
+        _pageData = [PhotoAlbum sharedPhotoAlbum].photoEntries;
     }
     return self;
 }
