@@ -23,6 +23,8 @@ UITableViewDataSource,
 UITableViewDelegate,
 UITextFieldDelegate
 >
+@property (strong, nonatomic) IBOutlet UIButton *wishListButton;
+@property (strong, nonatomic) IBOutlet UIButton *journalEntryButton;
 
 @property (weak, nonatomic) IBOutlet UITextField *searchTextField;
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
@@ -46,6 +48,10 @@ UITextFieldDelegate
     
     [super viewDidLoad];
     
+    self.searchTextField.userInteractionEnabled = NO;
+    self.searchTextField.alpha = .5;
+    [self disableButtons];
+    
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
     self.searchTextField.delegate = self;
@@ -57,6 +63,24 @@ UITextFieldDelegate
     self.tableView.rowHeight = UITableViewAutomaticDimension;
     self.tableView.estimatedRowHeight = 35.0;
     [self.tableView setSeparatorColor:[UIColor whiteColor]];
+}
+- (void) viewDidAppear:(BOOL)animated{
+    [self disableButtons];
+    self.searchTextField.userInteractionEnabled = NO;
+    self.searchTextField.alpha =.5;
+}
+
+- (void) disableButtons {
+    self.wishListButton.userInteractionEnabled = NO;
+    self.journalEntryButton.userInteractionEnabled = NO;
+    self.wishListButton.alpha = .5;
+    self.journalEntryButton.alpha = .5;
+}
+- (void) enableButtons {
+    self.wishListButton.userInteractionEnabled = YES;
+    self.journalEntryButton.userInteractionEnabled = YES;
+    self.wishListButton.alpha = 1.0;
+    self.journalEntryButton.alpha = 1.0;
 }
 
 #pragma mark - setup buttons
@@ -78,6 +102,8 @@ UITextFieldDelegate
         self.media = [sender currentTitle];
     }
     
+    self.searchTextField.userInteractionEnabled = YES;
+    self.searchTextField.alpha = 1.0;
     // NSLog(@"Media button tapped: %@",self.media);
 }
 
@@ -328,6 +354,8 @@ UITextFieldDelegate
     iTunesSearchResult *searchResult = self.searchResults[indexPath.row];
     
     self.passSearchResult = searchResult;
+    
+    [self enableButtons];
 }
 
 #pragma mark - Navigation
@@ -345,4 +373,18 @@ UITextFieldDelegate
     }
 }
 
+//- (void) postAlert {
+//    
+//    UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Wait..."
+//                                                                   message:@"Choose something to talk about!"
+//                                                            preferredStyle:UIAlertControllerStyleAlert];
+//    
+//    UIAlertAction *ok = [UIAlertAction actionWithTitle:@"Oh yeah!" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+//        [alert dismissViewControllerAnimated:YES completion:nil];
+//        
+//    }];
+//    
+//    [alert addAction:ok];
+//    [self presentViewController:alert animated:YES completion:nil];
+//}
 @end

@@ -20,11 +20,6 @@
 
 @implementation WishListTableViewController
 
-- (void)viewDidAppear:(BOOL)animated {
-    
-    [self pullEntriesFromParse];
-}
-
 - (void)viewDidLoad {
     
     [super viewDidLoad];
@@ -40,6 +35,10 @@
     self.tableView.rowHeight = UITableViewAutomaticDimension;
     self.tableView.estimatedRowHeight = 35.0;
     [self.tableView setTableFooterView:[UIView new]]; // hide extra lines in empty tableview cells
+    
+    [self pullEntriesFromParse];
+}
+- (void)viewDidAppear:(BOOL)animated {
     
     [self pullEntriesFromParse];
 }
