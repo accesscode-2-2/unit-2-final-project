@@ -12,6 +12,7 @@
 #import "ImageTableViewController.h"
 #import "VideoViewController.h"
 #import "MeetupTableViewController.h"
+#import "InstaTableViewController.h"
 
 @interface ViewController ()
 
@@ -176,9 +177,26 @@
         else {
             
             VideoViewController * vc = [self.storyboard instantiateViewControllerWithIdentifier:@"VideoID"];
+           
             vc.city = self.searchBar.text;
             
             [self presentViewController:vc animated:YES completion:nil];
+            
+            [sidebar dismissAnimated:YES completion:^(BOOL finished) {
+            }];
+        }
+    }
+    if (index == 6) { //insta
+        if ([self.searchBar.text isEqualToString:@""]) {
+            [self EmptySearchBarAlert];
+        }
+        else {
+            
+            InstaTableViewController * vc = [self.storyboard instantiateViewControllerWithIdentifier:@"InstaID"];
+             UINavigationController *nc = [[UINavigationController alloc] initWithRootViewController:vc];
+            vc.city = self.searchBar.text;
+            
+            [self presentViewController:nc animated:YES completion:nil];
             
             [sidebar dismissAnimated:YES completion:^(BOOL finished) {
             }];
@@ -225,6 +243,9 @@
     self.budgetView.hidden=YES;
     [self ShowMenu];
 }
+
+
+
 
 - (void)sidebar:(RNFrostedSidebar *)sidebar didEnable:(BOOL)itemEnabled itemAtIndex:(NSUInteger)index {
     if (itemEnabled) {
