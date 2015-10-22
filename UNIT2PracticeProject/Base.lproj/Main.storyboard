@@ -406,8 +406,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="lt_antiquepaper_02_720" translatesAutoresizingMaskIntoConstraints="NO" id="Upw-2v-UIn">
-                                <rect key="frame" x="0.0" y="-778" width="600" height="1334"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="lt_antiquepaper_02_720" translatesAutoresizingMaskIntoConstraints="NO" id="Upw-2v-UIn">
+                                <rect key="frame" x="0.0" y="76" width="600" height="480"/>
                                 <animations/>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="s1b-V9-EN7">
@@ -437,13 +437,13 @@
                                         </variation>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="a4W-78-2Xp">
-                                        <rect key="frame" x="253" y="508" width="55" height="30"/>
+                                        <rect key="frame" x="248" y="508" width="65" height="30"/>
                                         <animations/>
                                         <state key="normal">
                                             <attributedString key="attributedTitle">
                                                 <fragment content="Button">
                                                     <attributes>
-                                                        <font key="NSFont" size="18" name="Baskerville-SemiBoldItalic"/>
+                                                        <font key="NSFont" size="18" name="CourierNewPS-BoldItalicMT"/>
                                                     </attributes>
                                                 </fragment>
                                             </attributedString>
@@ -475,6 +475,7 @@
                                 <animations/>
                                 <constraints>
                                     <constraint firstItem="a4W-78-2Xp" firstAttribute="top" secondItem="oJQ-k4-Cpj" secondAttribute="bottom" constant="8" id="1He-3P-AHY"/>
+                                    <constraint firstItem="a4W-78-2Xp" firstAttribute="centerX" secondItem="s1b-V9-EN7" secondAttribute="centerX" id="51s-Qh-FF2"/>
                                     <constraint firstItem="oJQ-k4-Cpj" firstAttribute="top" secondItem="Xwv-TM-8RJ" secondAttribute="bottom" constant="3" id="70Y-Hi-WVB"/>
                                     <constraint firstItem="a4W-78-2Xp" firstAttribute="leading" secondItem="s1b-V9-EN7" secondAttribute="leading" constant="253" id="AVb-il-Mr9"/>
                                     <constraint firstItem="Heu-Pt-IZM" firstAttribute="centerX" secondItem="s1b-V9-EN7" secondAttribute="centerX" id="E2Z-Fu-Z7n"/>
@@ -489,6 +490,12 @@
                                     <constraint firstItem="Heu-Pt-IZM" firstAttribute="top" secondItem="s1b-V9-EN7" secondAttribute="top" constant="28" id="zTH-uo-ef2"/>
                                     <constraint firstAttribute="bottom" secondItem="oJQ-k4-Cpj" secondAttribute="bottom" constant="60" id="zgA-eA-mso"/>
                                 </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="AVb-il-Mr9"/>
+                                        <exclude reference="k7q-Oo-fyH"/>
+                                    </mask>
+                                </variation>
                             </view>
                         </subviews>
                         <animations/>
