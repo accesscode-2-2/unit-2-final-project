@@ -196,8 +196,8 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CNM-cP-vlR">
                                 <rect key="frame" x="0.0" y="72" width="600" height="492"/>
                                 <subviews>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" usesAttributedText="YES" borderStyle="line" placeholder="Add Title" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wfw-yc-bVC">
-                                        <rect key="frame" x="100" y="50" width="400" height="30"/>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" usesAttributedText="YES" borderStyle="line" placeholder="Add Title" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wfw-yc-bVC">
+                                        <rect key="frame" x="100" y="50" width="400" height="45"/>
                                         <animations/>
                                         <attributedString key="attributedText"/>
                                         <textInputTraits key="textInputTraits"/>
@@ -228,22 +228,6 @@
                                             <constraint firstAttribute="bottom" secondItem="dJQ-Cw-fKt" secondAttribute="bottom" id="j8b-IY-7IA"/>
                                         </constraints>
                                     </view>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="otd-wO-DUD">
-                                        <rect key="frame" x="276" y="359" width="48" height="33"/>
-                                        <animations/>
-                                        <state key="normal">
-                                            <attributedString key="attributedTitle">
-                                                <fragment content="SAVE!">
-                                                    <attributes>
-                                                        <font key="NSFont" size="18" name="Baskerville-SemiBoldItalic"/>
-                                                    </attributes>
-                                                </fragment>
-                                            </attributedString>
-                                        </state>
-                                        <connections>
-                                            <action selector="saveEntryButtonTapped:" destination="Wh5-Xh-m60" eventType="touchUpInside" id="kLg-oM-SWo"/>
-                                        </connections>
-                                    </button>
                                     <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WVd-CE-2Hg">
                                         <rect key="frame" x="547" y="8" width="45" height="45"/>
                                         <animations/>
@@ -257,6 +241,22 @@
                                             <segue destination="D80-fM-4IR" kind="show" id="ptF-WD-pNd"/>
                                         </connections>
                                     </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="otd-wO-DUD">
+                                        <rect key="frame" x="537" y="57" width="55" height="32"/>
+                                        <animations/>
+                                        <state key="normal">
+                                            <attributedString key="attributedTitle">
+                                                <fragment content="SAVE!">
+                                                    <attributes>
+                                                        <font key="NSFont" size="18" name="CourierNewPS-BoldItalicMT"/>
+                                                    </attributes>
+                                                </fragment>
+                                            </attributedString>
+                                        </state>
+                                        <connections>
+                                            <action selector="saveEntryButtonTapped:" destination="Wh5-Xh-m60" eventType="touchUpInside" id="kLg-oM-SWo"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <animations/>
                                 <constraints>
@@ -264,13 +264,13 @@
                                     <constraint firstItem="wfw-yc-bVC" firstAttribute="leading" secondItem="CNM-cP-vlR" secondAttribute="leading" constant="100" id="0dj-Xu-IVg"/>
                                     <constraint firstItem="Nfy-zk-f4z" firstAttribute="height" secondItem="CNM-cP-vlR" secondAttribute="height" multiplier="0.5" id="Cng-Yg-hn5"/>
                                     <constraint firstItem="Nfy-zk-f4z" firstAttribute="top" secondItem="WVd-CE-2Hg" secondAttribute="bottom" constant="92" id="Kw9-oT-sCe"/>
-                                    <constraint firstItem="otd-wO-DUD" firstAttribute="centerX" secondItem="CNM-cP-vlR" secondAttribute="centerX" id="MWV-IJ-6Zb"/>
+                                    <constraint firstItem="otd-wO-DUD" firstAttribute="centerX" secondItem="CNM-cP-vlR" secondAttribute="centerX" constant="264.5" id="MWV-IJ-6Zb"/>
                                     <constraint firstItem="Nfy-zk-f4z" firstAttribute="centerX" secondItem="CNM-cP-vlR" secondAttribute="centerX" id="Pe6-4Z-6WX"/>
                                     <constraint firstItem="wfw-yc-bVC" firstAttribute="top" secondItem="CNM-cP-vlR" secondAttribute="top" constant="50" id="PhW-qi-L9q"/>
                                     <constraint firstItem="Nfy-zk-f4z" firstAttribute="centerX" secondItem="CNM-cP-vlR" secondAttribute="centerX" id="TLm-f7-xK3"/>
                                     <constraint firstAttribute="trailing" secondItem="Nfy-zk-f4z" secondAttribute="trailing" id="TMK-Ac-Jq9"/>
                                     <constraint firstItem="Nfy-zk-f4z" firstAttribute="centerY" secondItem="CNM-cP-vlR" secondAttribute="centerY" id="UYm-Ja-56h"/>
-                                    <constraint firstItem="otd-wO-DUD" firstAttribute="top" secondItem="Nfy-zk-f4z" secondAttribute="bottom" constant="30" id="VAL-DD-iQ8"/>
+                                    <constraint firstItem="otd-wO-DUD" firstAttribute="top" secondItem="Nfy-zk-f4z" secondAttribute="bottom" constant="-272" id="VAL-DD-iQ8"/>
                                     <constraint firstItem="Nfy-zk-f4z" firstAttribute="leading" secondItem="CNM-cP-vlR" secondAttribute="leading" id="Zcp-er-twW"/>
                                     <constraint firstAttribute="trailing" secondItem="WVd-CE-2Hg" secondAttribute="trailing" constant="8" id="bdL-TZ-7Zx"/>
                                     <constraint firstItem="Nfy-zk-f4z" firstAttribute="leading" secondItem="CNM-cP-vlR" secondAttribute="leading" id="d4y-qp-K4d"/>
