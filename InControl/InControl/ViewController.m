@@ -14,7 +14,7 @@
 #import "MeetupTableViewController.h"
 #import "InstaTableViewController.h"
 
-@interface ViewController () <UISearchBarDelegate>
+@interface ViewController ()
 
 @property (weak, nonatomic) IBOutlet UIButton *goButton;
 @property (weak, nonatomic) IBOutlet UIView *budgetView;
@@ -45,6 +45,7 @@
     [self ShowMenu];
     self.goButton.hidden = YES;
     self.searchBar.hidden = YES;
+    [self.view endEditing:YES];
     
     //save user's input
     NSString *saveString = self.searchBar.text;
@@ -113,7 +114,6 @@
     if (index == 0) { //search Bar
         
         self.searchBar.hidden = NO;
-        [self.searchBar resignFirstResponder];
         self.goButton.hidden = NO;
         [sidebar dismissAnimated:YES completion:nil];
         

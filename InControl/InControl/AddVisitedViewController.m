@@ -81,14 +81,14 @@
 
 - (void)save {
     self.city.name = self.cityTextField.text;
-    [self.cityTextField resignFirstResponder];
+ //   [self.cityTextField resignFirstResponder];
     
     NSNumberFormatter *f = [[NSNumberFormatter alloc] init];
     f.numberStyle = NSNumberFormatterDecimalStyle;
     self.city.rate = self.rateSelected;
     
     self.city.impression = self.impressionTextField.text;
-    [self.impressionTextField resignFirstResponder];
+//    [self.impressionTextField resignFirstResponder];
     
     self.city.photos = [NSOrderedSet orderedSetWithArray:self.photos];
     
@@ -105,6 +105,7 @@
     self.picker2.delegate = self;
     [self.picker2 setSourceType:UIImagePickerControllerSourceTypePhotoLibrary];
     [self presentViewController:self.picker2 animated:YES completion:NULL];
+    [self.view endEditing:YES];
 
 }
 
@@ -114,6 +115,7 @@
     self.picker.delegate = self;
     [self.picker setSourceType:UIImagePickerControllerSourceTypeCamera];
     [self presentViewController:self.picker animated:YES completion:NULL];
+    [self.view endEditing:YES];
 }
 
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info{
