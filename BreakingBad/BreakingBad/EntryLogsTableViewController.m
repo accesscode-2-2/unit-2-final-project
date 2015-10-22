@@ -31,6 +31,7 @@
 @property (nonatomic)  NSInteger index;
 @property (strong, nonatomic) IBOutlet UITableView *entryTableView;
 
+
 @end
 
 
@@ -48,6 +49,7 @@
     [self addColorEntryLog];
 
 }
+
 
 
 #pragma mark- Add Color
@@ -143,5 +145,7 @@
     }
     return dateStrings;
 }
+
+
 
 @end
