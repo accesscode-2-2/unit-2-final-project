@@ -30,16 +30,7 @@
                             <constraint firstAttribute="width" constant="60" id="fag-dr-LW7"/>
                         </constraints>
                     </imageView>
-<<<<<<< HEAD
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ywi-Ne-nLf">
-                        <rect key="frame" x="86" y="16" width="238" height="47"/>
-                        <animations/>
-                        <fontDescription key="fontDescription" name="Akkurat-Bold" family="Akkurat" pointSize="17"/>
-                        <color key="textColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
-                        <nil key="highlightedColor"/>
-                    </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TR1-Ae-Cd4">
-=======
+
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TR1-Ae-Cd4">
 >>>>>>> 9e3a1683429819900e20b8f4172226da37bbaf63
                         <rect key="frame" x="86" y="63" width="238" height="46"/>
@@ -88,11 +79,9 @@
                     </mask>
                 </variation>
             </tableViewCellContentView>
-<<<<<<< HEAD
+
             <animations/>
-=======
-            <accessibility key="accessibilityConfiguration" identifier="WishListTableViewCellIdentifier"/>
->>>>>>> 9e3a1683429819900e20b8f4172226da37bbaf63
+
             <connections>
                 <outlet property="artworkImage" destination="Vb0-5u-rmQ" id="YH4-Ar-buq"/>
                 <outlet property="authorArtistDirectorLabel" destination="TR1-Ae-Cd4" id="MLM-qU-syZ"/>

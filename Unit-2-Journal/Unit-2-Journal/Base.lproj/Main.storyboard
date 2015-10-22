@@ -516,9 +516,7 @@
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-<<<<<<< HEAD
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DWN-3U-CrL">
-=======
+
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DWN-3U-CrL">
 >>>>>>> 9e3a1683429819900e20b8f4172226da37bbaf63
                                         <rect key="frame" x="138" y="79" width="442" height="21"/>
@@ -540,9 +538,6 @@
                                     </button>
                                 </subviews>
                                 <animations/>
-<<<<<<< HEAD
-                                <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
-=======
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
 >>>>>>> 9e3a1683429819900e20b8f4172226da37bbaf63
                                 <constraints>
@@ -565,9 +560,6 @@
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="5dG-Gc-FlR">
                                         <rect key="frame" x="8" y="8" width="544" height="158"/>
                                         <animations/>
-<<<<<<< HEAD
-                                        <color key="textColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
-=======
                                         <color key="textColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
 >>>>>>> 9e3a1683429819900e20b8f4172226da37bbaf63
                                         <fontDescription key="fontDescription" name="Akkurat-Bold" family="Akkurat" pointSize="25"/>
@@ -575,9 +567,7 @@
                                     </textView>
                                 </subviews>
                                 <animations/>
-<<<<<<< HEAD
-                                <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
-=======
+
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
 >>>>>>> 9e3a1683429819900e20b8f4172226da37bbaf63
                                 <constraints>
@@ -632,9 +622,7 @@
                                     </button>
                                 </subviews>
                                 <animations/>
-<<<<<<< HEAD
-                                <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
-=======
+
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
 >>>>>>> 9e3a1683429819900e20b8f4172226da37bbaf63
                                 <constraints>
@@ -688,9 +676,7 @@
                             </view>
                         </subviews>
                         <animations/>
-<<<<<<< HEAD
-                        <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
-=======
+
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
 >>>>>>> 9e3a1683429819900e20b8f4172226da37bbaf63
                         <constraints>
