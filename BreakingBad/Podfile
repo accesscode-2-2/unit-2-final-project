@@ -1,0 +1,13 @@
+pod ‘pop’, ‘~> 1.0’
+
+pod 'Parse'
+
+pod 'ContextMenu.iOS', '~> 1.0.0'
+
+pod 'ContextMenu.iOS', '~> 1.0.0'
+
+pod 'ParseUI'
+
+pod 'NSDate+TimeAgo'
+
+pod "AFNetworking", "~> 2.0" 
