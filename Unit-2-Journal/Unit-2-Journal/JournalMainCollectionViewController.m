@@ -9,8 +9,11 @@
 #import "JournalMainCollectionViewController.h"
 #import <Parse/Parse.h>
 #import "ViewCompletedEntryViewController.h"
+#import "JournalHeaderView.h"
 
 @interface JournalMainCollectionViewController ()
+
+//<UICollectionViewDelegateFlowLayout>
 
 @end
 
@@ -41,6 +44,13 @@
     
     self.collectionView.alwaysBounceVertical = YES;
     
+    UICollectionViewFlowLayout *layout = (UICollectionViewFlowLayout *)self.collectionViewLayout;
+    layout.headerReferenceSize = CGSizeMake(0, 150.0);
+    
+    // set up custom cell .xib
+    UINib *nib = [UINib nibWithNibName:@"JournalHeaderView" bundle:nil];
+    [self.collectionView registerNib:nib forSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"HeaderView"];
+    
     [self runQuery]; // run Parse query to fetch saved data
 }
 
@@ -51,6 +61,8 @@
     // __weak typeof(self) weakSelf = self; // prevent memory leakage?
     
     PFQuery *query = [PFQuery queryWithClassName:@"JournalPost"];
+    [query whereKey:@"reviewed" equalTo:[NSNumber numberWithBool:YES]];
+    [query orderByDescending:@"updatedAt"];
     
     [query findObjectsInBackgroundWithBlock:^(NSArray * _Nullable objects, NSError * _Nullable error) {
         
@@ -59,9 +71,10 @@
         [self.allJournalPosts removeAllObjects]; // clear to prevent doubles
         
         for (JournalPost *object in objects) {
-            if (object.reviewed) {
+//            if (object.reviewed) {
                 [self.allJournalPosts addObject:object];
-            }
+//                [self.allJournalPosts insertObject:object atIndex:0];
+//            }
         }
         
         // NSLog(@"info fetched from parse: %@", self.allJournalPosts); // test it!
@@ -69,6 +82,25 @@
         [self.collectionView reloadData]; // reload tableView
     }];
 }
+
+
+//- (UICollectionReusableView *)collectionView:(UICollectionView *)collectionView viewForSupplementaryElementOfKind:(NSString *)kind atIndexPath:(NSIndexPath *)indexPath {
+//    
+//    UICollectionReusableView *reusableview = nil;
+//    
+//    if (kind == UICollectionElementKindSectionHeader) {
+//        
+//        JournalHeaderView *headerView = [collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"HeaderView" forIndexPath:indexPath];
+//        
+////        NSString *title = [[NSString alloc]initWithFormat:@"Recipe Group #%i", indexPath.section + 1];
+////        headerView.title.text = title;
+////        UIImage *headerImage = [UIImage imageNamed:@"header_banner.png"];
+////        headerView.backgroundImage.image = headerImage;
+//        
+//        reusableview = headerView;
+//    }
+//    return reusableview; 
+//}
 
 #pragma mark <UICollectionViewDataSource>
 
@@ -118,6 +150,18 @@
     
     return cell;
 }
+
+- (UICollectionReusableView *)collectionView:(UICollectionView *)collectionView viewForSupplementaryElementOfKind:(NSString *)kind atIndexPath:(NSIndexPath *)indexPath {
+    if ([kind isEqualToString:UICollectionElementKindSectionHeader]) {
+        JournalHeaderView *headerView = [collectionView dequeueReusableSupplementaryViewOfKind:kind withReuseIdentifier:@"HeaderView" forIndexPath:indexPath];
+        
+        // configure outlets for .xib here if necessary
+        
+        return headerView;
+    }
+    return nil;
+}
+
 #pragma mark Navigation
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
