@@ -254,7 +254,7 @@
                                         </constraints>
                                         <state key="normal" title="Button" image="pin" backgroundImage="lt_antiquepaper_02_720"/>
                                         <connections>
-                                            <segue destination="D80-fM-4IR" kind="show" id="KkO-2B-E5k"/>
+                                            <segue destination="D80-fM-4IR" kind="show" id="ptF-WD-pNd"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -335,11 +335,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HOI-Jf-EQD">
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HOI-Jf-EQD">
                                 <rect key="frame" x="0.0" y="20" width="600" height="531"/>
                                 <animations/>
                             </mapView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cdn-m0-1ui">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cdn-m0-1ui">
                                 <rect key="frame" x="275" y="481" width="50" height="50"/>
                                 <animations/>
                                 <constraints>
@@ -760,7 +760,7 @@
         <image name="pin" width="512" height="411"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="qqX-aw-kHI"/>
+        <segue reference="ptF-WD-pNd"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
 </document>

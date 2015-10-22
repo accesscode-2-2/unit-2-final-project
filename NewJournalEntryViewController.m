@@ -49,6 +49,8 @@
     picker.allowsEditing = YES;
     picker.sourceType = UIImagePickerControllerSourceTypeCamera;
     
+        UIImageWriteToSavedPhotosAlbum(self.capturedPicImageView.image, nil, nil, nil);
+        
     [self presentViewController: picker animated:YES completion: NULL];
     
     }
@@ -78,11 +80,28 @@
     [ImageSingleton myImage].image = self.capturedPicImageView.image;
     
     //[[PhotoAlbum sharedPhotoAlbum].photoEntries addObject:chosenImage];
+    UIImageWriteToSavedPhotosAlbum(self.capturedPicImageView.image, nil, nil, nil);
+
     
     [picker dismissViewControllerAnimated:YES completion:NULL];
     
 }
 
+- (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingImage:(UIImage *)image editingInfo:(NSDictionary *)editingInfo {
+    
+    
+    self.capturedPicImageView.image = image;
+    
+    [ImageSingleton myImage].image = self.capturedPicImageView.image;
+    
+    //[[PhotoAlbum sharedPhotoAlbum].photoEntries addObject:chosenImage];
+    
+    UIImageWriteToSavedPhotosAlbum(image, nil, nil, nil);
+
+    [picker dismissViewControllerAnimated:YES completion:NULL];
+    
+
+}
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
     
