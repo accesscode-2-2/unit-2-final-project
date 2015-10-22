@@ -71,6 +71,7 @@
                                     <rect key="frame" x="0.0" y="0.0" width="553" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
+                                <color key="tintColor" red="0.62352941179999999" green="0.41960784309999999" blue="0.35294117650000001" alpha="1" colorSpace="calibratedRGB"/>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -80,6 +81,7 @@
                     </tableView>
                     <navigationItem key="navigationItem" id="S6H-Ws-Tbm">
                         <barButtonItem key="rightBarButtonItem" systemItem="done" id="UR7-e5-mgr">
+                            <color key="tintColor" red="0.23921568630000001" green="0.2156862745" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
                                 <action selector="doneButtonTapped:" destination="uR0-Uh-CAP" id="VLD-Tl-qis"/>
                             </connections>
@@ -110,6 +112,7 @@
                                     <rect key="frame" x="0.0" y="0.0" width="553" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
+                                <color key="tintColor" red="0.62352941179999999" green="0.41960784309999999" blue="0.35294117650000001" alpha="1" colorSpace="calibratedRGB"/>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -569,6 +572,7 @@
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gFB-FW-Zzb">
                                 <rect key="frame" x="0.0" y="105" width="600" height="440"/>
                                 <color key="backgroundColor" red="0.85924393880000005" green="0.8895822149" blue="0.94631865530000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="0.23921568630000001" green="0.2156862745" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="Oranienbaum" family="Oranienbaum" pointSize="16"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences" secureTextEntry="YES"/>
                             </textView>
@@ -784,11 +788,12 @@
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l9q-fl-lA0">
                                                 <rect key="frame" x="6" y="91" width="188" height="30"/>
+                                                <color key="tintColor" red="0.23921568630000001" green="0.2156862745" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="30" id="Ky8-HI-S4O"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" name="Oranienbaum" family="Oranienbaum" pointSize="14"/>
-                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                <color key="textColor" red="0.23921568630000001" green="0.2156862745" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
@@ -832,11 +837,12 @@
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" tag="2" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mXt-Fy-z6C">
                                                 <rect key="frame" x="6" y="90" width="188" height="30"/>
+                                                <color key="tintColor" red="0.23921568630000001" green="0.2156862745" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="30" id="75C-US-iNL"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" name="Oranienbaum" family="Oranienbaum" pointSize="14"/>
-                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                <color key="textColor" red="0.23921568630000001" green="0.2156862745" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
@@ -874,11 +880,12 @@
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" tag="3" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pbo-7W-DUH">
                                                 <rect key="frame" x="6" y="94" width="188" height="30"/>
+                                                <color key="tintColor" red="0.23921568630000001" green="0.2156862745" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="30" id="LcX-vR-q2z"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" name="Oranienbaum" family="Oranienbaum" pointSize="14"/>
-                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                <color key="textColor" red="0.23921568630000001" green="0.2156862745" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
@@ -922,7 +929,7 @@
                                                     <constraint firstAttribute="height" constant="30" id="qGf-Br-GtK"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" name="Oranienbaum" family="Oranienbaum" pointSize="14"/>
-                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                <color key="textColor" red="0.23921568630000001" green="0.2156862745" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
@@ -958,27 +965,29 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wyU-kN-7YX">
                                         <rect key="frame" x="200" y="0.0" width="200" height="148"/>
                                         <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dQ3-JH-NAX">
+                                                <rect key="frame" x="6" y="92" width="188" height="30"/>
+                                                <color key="tintColor" red="0.23921568630000001" green="0.2156862745" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="30" id="4l1-lu-Isa"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="Oranienbaum" family="Oranienbaum" pointSize="14"/>
+                                                <color key="textColor" red="0.23921568630000001" green="0.2156862745" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
                                             <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="IDC-Ei-BOs">
-                                                <rect key="frame" x="4" y="22" width="192" height="70"/>
+                                                <rect key="frame" x="4" y="22" width="192" height="64"/>
                                                 <fontDescription key="fontDescription" name="Bariol-Regular" family="Bariol" pointSize="14"/>
                                                 <state key="normal" title="What steps will you take to inch closer to your goal?"/>
                                                 <connections>
                                                     <action selector="questionButtonTapped:" destination="MBI-FE-AUg" eventType="touchUpInside" id="zhc-43-9vZ"/>
                                                 </connections>
                                             </button>
-                                            <label opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dQ3-JH-NAX">
-                                                <rect key="frame" x="6" y="100" width="188" height="30"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="30" id="4l1-lu-Isa"/>
-                                                </constraints>
-                                                <fontDescription key="fontDescription" name="Oranienbaum" family="Oranienbaum" pointSize="14"/>
-                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
                                         </subviews>
                                         <color key="backgroundColor" red="0.63035872790000003" green="1" blue="0.51983276099999998" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstItem="IDC-Ei-BOs" firstAttribute="leading" secondItem="wyU-kN-7YX" secondAttribute="leading" id="BhQ-C6-FGv"/>
+                                            <constraint firstItem="dQ3-JH-NAX" firstAttribute="top" secondItem="IDC-Ei-BOs" secondAttribute="bottom" constant="6" id="CxW-QT-Lxp"/>
                                             <constraint firstAttribute="bottom" secondItem="dQ3-JH-NAX" secondAttribute="bottom" constant="5" id="GMw-QH-OyL"/>
                                             <constraint firstItem="IDC-Ei-BOs" firstAttribute="leading" secondItem="wyU-kN-7YX" secondAttribute="leading" constant="4" id="Khc-SN-Mze"/>
                                             <constraint firstItem="dQ3-JH-NAX" firstAttribute="leading" secondItem="wyU-kN-7YX" secondAttribute="leading" constant="6" id="Lzo-nb-Kr6"/>
@@ -986,10 +995,10 @@
                                             <constraint firstAttribute="bottom" secondItem="IDC-Ei-BOs" secondAttribute="bottom" id="VeG-EA-GLq"/>
                                             <constraint firstAttribute="trailing" secondItem="IDC-Ei-BOs" secondAttribute="trailing" id="k6U-ro-bxD"/>
                                             <constraint firstItem="IDC-Ei-BOs" firstAttribute="top" secondItem="wyU-kN-7YX" secondAttribute="top" id="oJT-bX-9eF"/>
-                                            <constraint firstItem="dQ3-JH-NAX" firstAttribute="top" secondItem="IDC-Ei-BOs" secondAttribute="bottom" constant="8" id="pTQ-NU-bWQ"/>
+                                            <constraint firstItem="dQ3-JH-NAX" firstAttribute="top" secondItem="IDC-Ei-BOs" secondAttribute="bottom" constant="2" id="pTQ-NU-bWQ"/>
                                             <constraint firstItem="IDC-Ei-BOs" firstAttribute="top" secondItem="wyU-kN-7YX" secondAttribute="top" constant="22" id="tpt-cr-aEC"/>
                                             <constraint firstAttribute="trailing" secondItem="IDC-Ei-BOs" secondAttribute="trailing" constant="4" id="xoo-U7-wyT"/>
-                                            <constraint firstAttribute="bottom" secondItem="dQ3-JH-NAX" secondAttribute="bottom" constant="18" id="yEI-D0-N9W"/>
+                                            <constraint firstAttribute="bottom" secondItem="dQ3-JH-NAX" secondAttribute="bottom" constant="26" id="yEI-D0-N9W"/>
                                         </constraints>
                                         <variation key="default">
                                             <mask key="constraints">
@@ -998,6 +1007,7 @@
                                                 <exclude reference="k6U-ro-bxD"/>
                                                 <exclude reference="oJT-bX-9eF"/>
                                                 <exclude reference="GMw-QH-OyL"/>
+                                                <exclude reference="pTQ-NU-bWQ"/>
                                             </mask>
                                         </variation>
                                     </view>
@@ -1014,11 +1024,12 @@
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" tag="5" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dk7-FL-43J">
                                                 <rect key="frame" x="6" y="96" width="188" height="30"/>
+                                                <color key="tintColor" red="0.23921568630000001" green="0.2156862745" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="30" id="6Hh-So-76y"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" name="Oranienbaum" family="Oranienbaum" pointSize="14"/>
-                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                <color key="textColor" red="0.23921568630000001" green="0.2156862745" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
@@ -1146,12 +1157,12 @@
                                             <action selector="menuButtonTapped:" destination="MBI-FE-AUg" eventType="touchUpInside" id="rYv-F8-ZnI"/>
                                         </connections>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Habit:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6LJ-at-dIk">
-                                        <rect key="frame" x="8" y="16" width="106" height="52"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Habit:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6LJ-at-dIk">
+                                        <rect key="frame" x="8" y="16" width="89" height="44"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="95" id="85J-RW-g2S"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" name="Oranienbaum" family="Oranienbaum" pointSize="40"/>
+                                        <fontDescription key="fontDescription" name="Oranienbaum" family="Oranienbaum" pointSize="38"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                         <variation key="default">
@@ -1270,14 +1281,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Habits" textAlignment="natural" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0zl-Pb-fkK">
-                                <rect key="frame" x="241" y="425" width="118" height="53"/>
-                                <fontDescription key="fontDescription" name="Oranienbaum" family="Oranienbaum" pointSize="46"/>
+                                <rect key="frame" x="243" y="432" width="115" height="52"/>
+                                <fontDescription key="fontDescription" name="Oranienbaum" family="Oranienbaum" pointSize="45"/>
                                 <color key="textColor" red="0.23921568630000001" green="0.2156862745" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6pJ-wc-3rU">
-                                <rect key="frame" x="234" y="517" width="133" height="51"/>
-                                <fontDescription key="fontDescription" name="Jaapokkisubtract-Regular" family="Jaapokki subtract" pointSize="25"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6pJ-wc-3rU">
+                                <rect key="frame" x="238" y="523" width="124" height="45"/>
+                                <fontDescription key="fontDescription" name="Jaapokkisubtract-Regular" family="Jaapokki subtract" pointSize="21"/>
                                 <state key="normal" title=" Dare to try! ">
                                     <color key="titleColor" red="0.62352941179999999" green="0.41960784309999999" blue="0.35294117650000001" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
@@ -1333,6 +1344,7 @@
                     </tableView>
                     <navigationItem key="navigationItem" id="yhb-ws-30c">
                         <barButtonItem key="rightBarButtonItem" systemItem="done" id="qnU-TN-7Yl">
+                            <color key="tintColor" red="0.23921568630000001" green="0.2156862745" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
                                 <action selector="doneButtonTapped:" destination="ICh-wM-NpV" id="4Om-Qz-7Ot"/>
                             </connections>
@@ -1507,8 +1519,8 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Breaking BAD" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E22-vg-A5B">
-                                <rect key="frame" x="157" y="264" width="286" height="72"/>
-                                <fontDescription key="fontDescription" name="Jaapokkisubtract-Regular" family="Jaapokki subtract" pointSize="47"/>
+                                <rect key="frame" x="136" y="184" width="329" height="83"/>
+                                <fontDescription key="fontDescription" name="Jaapokkisubtract-Regular" family="Jaapokki subtract" pointSize="54"/>
                                 <color key="textColor" red="0.23921568630000001" green="0.2156862745" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -1520,12 +1532,14 @@
                             <constraint firstItem="E22-vg-A5B" firstAttribute="centerX" secondItem="lNZ-YB-esB" secondAttribute="centerX" id="OHX-qY-GKL"/>
                             <constraint firstItem="E22-vg-A5B" firstAttribute="centerX" secondItem="lNZ-YB-esB" secondAttribute="centerX" id="d98-9S-3du"/>
                             <constraint firstItem="E22-vg-A5B" firstAttribute="centerY" secondItem="lNZ-YB-esB" secondAttribute="centerY" id="ykL-Aq-1nH"/>
+                            <constraint firstItem="E22-vg-A5B" firstAttribute="top" secondItem="Hof-FP-FGW" secondAttribute="bottom" constant="164" id="zPT-yw-3zN"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
                                 <exclude reference="3ga-c5-fdE"/>
                                 <exclude reference="HhL-oE-e4Q"/>
                                 <exclude reference="OHX-qY-GKL"/>
+                                <exclude reference="ykL-Aq-1nH"/>
                             </mask>
                         </variation>
                     </view>

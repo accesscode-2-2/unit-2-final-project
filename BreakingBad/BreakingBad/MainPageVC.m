@@ -148,15 +148,29 @@ CLLocationManagerDelegate
     
     //Question Font- Bariol
     for (UIButton *oddQuestionButton in self.oddButtons) {
-       // oddQuestionButton.font = [UIFont fontWithName:@"Bariol_Regular" size:8.0];
+       oddQuestionButton.font = [UIFont fontWithName:@"Bariol" size:14.0];
         oddQuestionButton.tintColor =[SharedManager sharedModel].brownForest;
     }
     
     for (UIButton *evenQuestionButton in self.evenButtons) {
-       // evenQuestionButton.font = [UIFont fontWithName:@"Bariol_Regular" size:8.0];
+       evenQuestionButton.font = [UIFont fontWithName:@"Bariol" size:14.0];
          evenQuestionButton.tintColor =[SharedManager sharedModel].brownForest;
     }
     
+    
+    
+    for (UILabel *oddQuestionLabel in self.oddLabels) {
+         oddQuestionLabel.font = [UIFont fontWithName:@"Bariol" size:13.0];
+        oddQuestionLabel.tintColor =[SharedManager sharedModel].brownForest;
+    }
+         
+    
+      for (UILabel *evenQuestionLabel in self.evenLabels) {
+          evenQuestionLabel.font = [UIFont fontWithName:@"Bariol" size:13.0];
+        evenQuestionLabel.tintColor =[SharedManager sharedModel].brownForest;
+    }
+              
+              
     self.habitPickerView.tintColor = [SharedManager sharedModel].brickRed;
     
 }
@@ -551,6 +565,32 @@ CLLocationManagerDelegate
         }
     }
 }
+
+
+- (NSAttributedString *)pickerView:(UIPickerView *)pickerView attributedTitleForRow:(NSInteger)row forComponent:(NSInteger)component
+{
+    NSString *title = ((Habit *)self.habitsArray[row]).name;
+
+        NSAttributedString *attString = [[NSAttributedString alloc] initWithString:title attributes:@{NSForegroundColorAttributeName:[SharedManager sharedModel].brownForest}];
+
+            //NSFontAttributeName:[UIFont fontWithName:@"Oranienbaum" size:6]
+    return attString;
+  
+}
+ 
+   // return attString;
+//}
+
+
+//-(UIView *)pickerView:(UIPickerView *)pickerView viewForRow:(NSInteger)row forComponent:(NSInteger)component reusingView:(UIView *)view{
+//    
+//    UILabel *label = [[UILabel alloc] init];
+//    label.backgroundColor = [SharedManager sharedModel].icyNight;
+//    label.textColor = [SharedManager sharedModel].brownForest;
+//    label.font = [UIFont fontWithName:@"Bariol" size:22];
+//    
+//     return label;
+//}
 
 -(void)prepareForSegue:(nonnull UIStoryboardSegue *)segue sender:(nullable id)sender {
     

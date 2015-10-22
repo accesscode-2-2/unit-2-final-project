@@ -56,6 +56,7 @@
     self.questionLabel.textColor = [SharedManager sharedModel].brickRed;
 
     self.answerTextView.backgroundColor = [SharedManager sharedModel].blueSky;
+    self.answerTextView.textColor = [SharedManager sharedModel].brownForest; 
     
     self.doneButton.layer.borderWidth = 3.5;
     self.doneButton.layer.borderColor = [SharedManager sharedModel].tropicalDream.CGColor;

@@ -24,12 +24,12 @@
     self.view.backgroundColor = [SharedManager sharedModel].brickRed;
     
     
-     [self performSelector:@selector(threeSecondDelay) withObject:self afterDelay:1.5];
+     [self performSelector:@selector(oneSecondDelay) withObject:self afterDelay:1.5];
 
 }
 
 
-- (void)threeSecondDelay {
+- (void)oneSecondDelay {
     
      CustomModalViewController *modalVC = [self.storyboard instantiateViewControllerWithIdentifier:@"customModal"];
     
